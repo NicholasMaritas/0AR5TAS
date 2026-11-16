@@ -17,7 +17,7 @@
       const parts = Object.fromEntries(formatter.formatToParts(new Date())
         .filter(part => part.type !== 'literal')
         .map(part => [part.type, part.value]));
-      clock.textContent = `${parts.month}/${parts.day}/${parts.year} ${parts.hour}:${parts.minute}${parts.dayPeriod.toLowerCase()} NYC`;
+      clock.textContent = `${parts.month}/${parts.day}/${parts.year} ${parts.hour.padStart(2, '0')}:${parts.minute}${parts.dayPeriod.toLowerCase()} NYC`;
     }
     if (logoLink) {
       logoLink.href = window.matchMedia('(max-width: 767px)').matches
