@@ -1,7 +1,7 @@
 {
   "url": "https://supreme.com/",
   "title": "Supreme",
-  "bodyText": "skip to content\n11/16/2026 12:59pm NYC\nSupreme\nnews\nfall/winter 2026 preview\nfall/winter 2026 lookbook\nshop\nrandom\nabout\nstores\ncontact\nmailing list\nterms\nprivacy\nfaq\naccessibility",
+  "bodyText": "skip to content\n11/16/2026 01:08pm NYC\nSupreme\nnews\nfall/winter 2026 preview\nfall/winter 2026 lookbook\nshop\nrandom\nabout\nstores\ncontact\nmailing list\nterms\nprivacy\nfaq\naccessibility",
   "readyState": "complete",
   "bodyBackground": "rgb(255, 255, 255)",
   "htmlBackground": "rgba(0, 0, 0, 0)",
@@ -179,10 +179,6 @@
       "initiatorType": "script"
     },
     {
-      "name": "https://supreme.com/_next/static/immutable/chunks/2_umaltfwvhd1.js",
-      "initiatorType": "script"
-    },
-    {
       "name": "https://supreme.com/_next/static/immutable/chunks/0av5lm-73junm.js",
       "initiatorType": "script"
     },
@@ -191,11 +187,19 @@
       "initiatorType": "script"
     },
     {
-      "name": "https://supreme.com/_next/static/immutable/chunks/3n5alsbv41xho.js",
+      "name": "https://supreme.com/_next/static/immutable/chunks/2_umaltfwvhd1.js",
       "initiatorType": "script"
     },
     {
       "name": "https://supreme.com/_next/static/immutable/chunks/3tvnlwsfcf8-d.js",
+      "initiatorType": "script"
+    },
+    {
+      "name": "https://supreme.com/_next/static/immutable/chunks/3n5alsbv41xho.js",
+      "initiatorType": "script"
+    },
+    {
+      "name": "https://supreme.com/_next/static/immutable/chunks/0ay5lwt6ew6gz.js",
       "initiatorType": "script"
     },
     {
@@ -204,10 +208,6 @@
     },
     {
       "name": "https://supreme.com/_next/static/immutable/chunks/13ousx0z1muk9.js",
-      "initiatorType": "script"
-    },
-    {
-      "name": "https://supreme.com/_next/static/immutable/chunks/0ay5lwt6ew6gz.js",
       "initiatorType": "script"
     },
     {
@@ -239,11 +239,7 @@
       "initiatorType": "fetch"
     },
     {
-      "name": "https://www.googletagmanager.com/gtag/js?id=G-YXLMT5H68B&cx=c&gtm=4e6bc0",
-      "initiatorType": "script"
-    },
-    {
-      "name": "https://www.google-analytics.com/g/collect?v=2&tid=G-YXLMT5H68B&gtm=45je6bc0v9129935825za20ozb9127130690zd9127130690xf1&_p=1794851955492&gcd=13l3l3l3l1l1&npa=0&dma=0&cid=738298135.1794851956&frm=0&ngs=1&pscdl=noapi&rcb=17&sr=1440x900&uaa=x86&uab=64&uafvl=HeadlessChrome%3B159.0.8154.6%7CNot%252FA)Brand%3B8.0.0.0%7CChromium%3B159.0.8154.6&uam=&uamb=0&uap=Linux&uapv=&uaw=0&ul=en-us&_s=1&tag_exp=115938466~115938468~118897920~118897930~120213116~120385423~120412526~120420414~120469145~120469153~121246026~121246034&sid=1794851955&sct=1&seg=0&dl=https%3A%2F%2Fsupreme.com%2F&dt=Supreme&en=page_view&_fv=1&_nsi=1&_ss=1&tfd=519",
+      "name": "https://www.google-analytics.com/g/collect?v=2&tid=G-YXLMT5H68B&gtm=45je6bc0v9129935825za208zd9129935825xf1&_p=1794852539643&gcd=13l3l3l3l1l1&npa=0&dma=0&cid=704240784.1794852540&frm=0&ngs=1&pscdl=noapi&rcb=16&sr=1440x900&uaa=x86&uab=64&uafvl=HeadlessChrome%3B159.0.8154.6%7CNot%252FA)Brand%3B8.0.0.0%7CChromium%3B159.0.8154.6&uam=&uamb=0&uap=Linux&uapv=&uaw=0&ul=en-us&_s=1&tag_exp=115938466~115938469~118897920~118897930~120213116~120385423~120412528~120420416~120469145~120469153~121246026~121246034&sid=1794852539&sct=1&seg=0&dl=https%3A%2F%2Fsupreme.com%2F&dt=Supreme&en=page_view&_fv=1&_nsi=1&_ss=1&tfd=535",
       "initiatorType": "fetch"
     },
     {
@@ -291,6 +287,10 @@
       "initiatorType": "fetch"
     },
     {
+      "name": "https://supreme.com/lookbook/46?_rsc=ijpx987PFU-S-Nj3",
+      "initiatorType": "fetch"
+    },
+    {
       "name": "https://supreme.com/_next/static/immutable/chunks/15vcgm0icgxgv.js",
       "initiatorType": "script"
     },
@@ -303,19 +303,7 @@
       "initiatorType": "script"
     },
     {
-      "name": "https://supreme.com/lookbook/46?_rsc=ijpx987PFU-S-Nj3",
-      "initiatorType": "fetch"
-    },
-    {
       "name": "https://supreme.com/random/mini-ramp?_rsc=tfSM-hOfJ34PAmnZ",
-      "initiatorType": "fetch"
-    },
-    {
-      "name": "https://supreme.com/_next/static/immutable/chunks/2n-960lzieizy.js",
-      "initiatorType": "script"
-    },
-    {
-      "name": "https://supreme.com/about?_rsc=G32MfIMP0e_dyod-",
       "initiatorType": "fetch"
     },
     {
@@ -323,7 +311,19 @@
       "initiatorType": "script"
     },
     {
+      "name": "https://supreme.com/about?_rsc=G32MfIMP0e_dyod-",
+      "initiatorType": "fetch"
+    },
+    {
       "name": "https://supreme.com/stores?_rsc=VBr8C1TKO9wLWMpi",
+      "initiatorType": "fetch"
+    },
+    {
+      "name": "https://supreme.com/_next/static/immutable/chunks/2n-960lzieizy.js",
+      "initiatorType": "script"
+    },
+    {
+      "name": "https://supreme.com/contact?_rsc=IDygQERZK4qsoooF",
       "initiatorType": "fetch"
     },
     {
@@ -335,7 +335,11 @@
       "initiatorType": "fetch"
     },
     {
-      "name": "https://supreme.com/contact?_rsc=IDygQERZK4qsoooF",
+      "name": "https://supreme.com/_next/static/immutable/chunks/3bb14x-9omq0k.js",
+      "initiatorType": "script"
+    },
+    {
+      "name": "https://supreme.com/?_rsc=IH7uf7dB0kEAAG_H",
       "initiatorType": "fetch"
     },
     {
@@ -347,15 +351,7 @@
       "initiatorType": "script"
     },
     {
-      "name": "https://supreme.com/?_rsc=IH7uf7dB0kEAAG_H",
-      "initiatorType": "fetch"
-    },
-    {
       "name": "https://supreme.com/_next/static/immutable/chunks/1etddaqqv7sp8.js",
-      "initiatorType": "script"
-    },
-    {
-      "name": "https://supreme.com/_next/static/immutable/chunks/3bb14x-9omq0k.js",
       "initiatorType": "script"
     },
     {
@@ -383,6 +379,10 @@
       "initiatorType": "img"
     },
     {
+      "name": "https://us.supreme.com/cdn/shop/files/T30_720x.jpg?v=1794345235",
+      "initiatorType": "img"
+    },
+    {
       "name": "https://us.supreme.com/cdn/shop/files/T29_720x.jpg?v=1794345231",
       "initiatorType": "img"
     },
@@ -391,11 +391,7 @@
       "initiatorType": "img"
     },
     {
-      "name": "https://us.supreme.com/cdn/shop/files/T73_720x.jpg?v=1794345242",
-      "initiatorType": "img"
-    },
-    {
-      "name": "https://us.supreme.com/cdn/shop/files/T30_720x.jpg?v=1794345235",
+      "name": "https://us.supreme.com/cdn/shop/files/J98_720x.jpg?v=1794345255",
       "initiatorType": "img"
     },
     {
@@ -403,15 +399,7 @@
       "initiatorType": "img"
     },
     {
-      "name": "https://us.supreme.com/cdn/shop/files/J98_720x.jpg?v=1794345255",
-      "initiatorType": "img"
-    },
-    {
-      "name": "https://us.supreme.com/cdn/shop/files/J72_720x.jpg?v=1793742880",
-      "initiatorType": "img"
-    },
-    {
-      "name": "https://us.supreme.com/cdn/shop/files/J81_ddb83470-ba56-4e76-9d41-ec70d3b59e01_720x.jpg?v=1793804521",
+      "name": "https://us.supreme.com/cdn/shop/files/T73_720x.jpg?v=1794345242",
       "initiatorType": "img"
     },
     {
@@ -419,7 +407,11 @@
       "initiatorType": "img"
     },
     {
-      "name": "https://us.supreme.com/cdn/shop/files/SK35_79542426-2f23-426d-96b1-022a2bab2417_720x.jpg?v=1794344597",
+      "name": "https://us.supreme.com/cdn/shop/files/J81_ddb83470-ba56-4e76-9d41-ec70d3b59e01_720x.jpg?v=1793804521",
+      "initiatorType": "img"
+    },
+    {
+      "name": "https://us.supreme.com/cdn/shop/files/J72_720x.jpg?v=1793742880",
       "initiatorType": "img"
     },
     {
@@ -427,11 +419,7 @@
       "initiatorType": "img"
     },
     {
-      "name": "https://us.supreme.com/cdn/shop/files/S35_21856889-7843-434a-b2dd-58755c23b67e_720x.jpg?v=1794344606",
-      "initiatorType": "img"
-    },
-    {
-      "name": "https://us.supreme.com/cdn/shop/files/SW2_818734dc-169b-4b1e-a1fa-c8d57a3d99f1_720x.jpg?v=1794344602",
+      "name": "https://us.supreme.com/cdn/shop/files/SK35_79542426-2f23-426d-96b1-022a2bab2417_720x.jpg?v=1794344597",
       "initiatorType": "img"
     },
     {
@@ -439,11 +427,23 @@
       "initiatorType": "img"
     },
     {
+      "name": "https://us.supreme.com/cdn/shop/files/S35_21856889-7843-434a-b2dd-58755c23b67e_720x.jpg?v=1794344606",
+      "initiatorType": "img"
+    },
+    {
       "name": "https://us.supreme.com/cdn/shop/files/SW7_720x.jpg?v=1794345286",
       "initiatorType": "img"
     },
     {
+      "name": "https://us.supreme.com/cdn/shop/files/SW2_818734dc-169b-4b1e-a1fa-c8d57a3d99f1_720x.jpg?v=1794344602",
+      "initiatorType": "img"
+    },
+    {
       "name": "https://us.supreme.com/cdn/shop/files/KN9_720x.jpg?v=1794345291",
+      "initiatorType": "img"
+    },
+    {
+      "name": "https://us.supreme.com/cdn/shop/files/P51_720x.jpg?v=1794345307",
       "initiatorType": "img"
     },
     {
@@ -455,11 +455,7 @@
       "initiatorType": "img"
     },
     {
-      "name": "https://us.supreme.com/cdn/shop/files/P51_720x.jpg?v=1794345307",
-      "initiatorType": "img"
-    },
-    {
-      "name": "https://us.supreme.com/cdn/shop/files/P14_71ce8a95-7d8f-4c47-80cb-b9debc86fa9a_720x.jpg?v=1794345311",
+      "name": "https://us.supreme.com/cdn/shop/files/H36CC_1835253d-11d5-4823-a0c0-b806d028f854_720x.jpg?v=1794407140",
       "initiatorType": "img"
     },
     {
@@ -467,15 +463,19 @@
       "initiatorType": "img"
     },
     {
+      "name": "https://us.supreme.com/cdn/shop/files/P14_71ce8a95-7d8f-4c47-80cb-b9debc86fa9a_720x.jpg?v=1794345311",
+      "initiatorType": "img"
+    },
+    {
       "name": "https://us.supreme.com/cdn/shop/files/H82PILL_720x.jpg?v=1794345325",
       "initiatorType": "img"
     },
     {
-      "name": "https://us.supreme.com/cdn/shop/files/H36CC_1835253d-11d5-4823-a0c0-b806d028f854_720x.jpg?v=1794407140",
+      "name": "https://us.supreme.com/cdn/shop/files/H215P_720x.jpg?v=1793742968",
       "initiatorType": "img"
     },
     {
-      "name": "https://us.supreme.com/cdn/shop/files/H215P_720x.jpg?v=1793742968",
+      "name": "https://us.supreme.com/cdn/shop/files/A22__3x_1ce6b821-f190-4c52-be37-8e3eca6a63a8_720x.png?v=1764103422",
       "initiatorType": "img"
     },
     {
@@ -488,10 +488,6 @@
     },
     {
       "name": "https://us.supreme.com/cdn/shop/files/BN37_ff600b43-5c22-477b-ae0c-82df19d03626_720x.jpg?v=1794345334",
-      "initiatorType": "img"
-    },
-    {
-      "name": "https://us.supreme.com/cdn/shop/files/A22__3x_1ce6b821-f190-4c52-be37-8e3eca6a63a8_720x.png?v=1764103422",
       "initiatorType": "img"
     },
     {
@@ -515,11 +511,11 @@
       "initiatorType": "img"
     },
     {
-      "name": "https://us.supreme.com/cdn/shop/files/SB20_720x.jpg?v=1793131925",
+      "name": "https://us.supreme.com/cdn/shop/files/A92_720x.jpg?v=1788973116",
       "initiatorType": "img"
     },
     {
-      "name": "https://us.supreme.com/cdn/shop/files/A92_720x.jpg?v=1788973116",
+      "name": "https://us.supreme.com/cdn/shop/files/SB20_720x.jpg?v=1793131925",
       "initiatorType": "img"
     },
     {
@@ -2304,7 +2300,7 @@
       "attrs": {
         "class": "sc-b9bd7696-1 fXsspp"
       },
-      "directText": "11/16/2026 12:59pm NYC",
+      "directText": "11/16/2026 01:08pm NYC",
       "rect": {
         "x": 0,
         "y": 244.71875,

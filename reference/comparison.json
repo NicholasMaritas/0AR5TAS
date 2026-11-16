@@ -1,0 +1,119 @@
+{
+  "date": "2026-11-16",
+  "method": "Supreme and GitHub Pages captured by same Playwright Chromium browser at identical viewport sizes; JPEG screenshots decoded with sharp and RGB compared pixelwise; element positions from getBoundingClientRect",
+  "status": "both_sites_rendered_and_compared",
+  "measurements": {
+    "desktop": {
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "originalHttpStatus": 200,
+      "cloneHttpStatus": 200,
+      "originalTitle": "Supreme",
+      "cloneTitle": "Supreme",
+      "originalText": "skip to content\n11/16/2026 01:08pm NYC\nSupreme\nnews\nfall/winter 2026 preview\nfall/winter 2026 lookbook\nshop\nrandom\nabout\nstores\ncontact\nmailing list\nterms\npriva",
+      "cloneText": "skip to content\n11/16/2026 1:09pm NYC\nSupreme\nnews\nfall/winter 2026 preview\nfall/winter 2026 lookbook\nshop\nrandom\nabout\nstores\ncontact\nmailing list\nterms\nprivac",
+      "originalNodeCount": 140,
+      "cloneNodeCount": 138,
+      "sameScreenshotDimensions": true,
+      "meanAbsoluteError": 0.1100542695473251,
+      "pixelMismatchAbove15": 0.0010848765432098766,
+      "pixelMismatchAbove5": 0.001761574074074074,
+      "rectDifferencesInPixels": {
+        "nav": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        "logo": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        "main": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        "footer": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        "firstMenu": {
+          "matched": false,
+          "originalFound": false,
+          "cloneFound": false
+        }
+      },
+      "missingResourceErrors": [],
+      "fontFamilies": [
+        "\"Courier New\", Courier, monospace"
+      ]
+    },
+    "mobile": {
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "originalHttpStatus": 200,
+      "cloneHttpStatus": 200,
+      "originalTitle": "Supreme",
+      "cloneTitle": "Supreme",
+      "originalText": "skip to content\n11/16/2026 01:09pm NYC\nSupreme\nnews\nfall/winter 2026 preview\nfall/winter 2026 lookbook\nshop\nrandom\nabout\nstores\ncontact\nmailing list\nterms\npriva",
+      "cloneText": "skip to content\n11/16/2026 1:09pm NYC\nSupreme\nnews\nfall/winter 2026 preview\nfall/winter 2026 lookbook\nshop\nrandom\nabout\nstores\ncontact\nmailing list\nterms\nprivac",
+      "originalNodeCount": 134,
+      "cloneNodeCount": 138,
+      "sameScreenshotDimensions": true,
+      "meanAbsoluteError": 0.4346194353303358,
+      "pixelMismatchAbove15": 0.0042107181917608455,
+      "pixelMismatchAbove5": 0.00688419005954551,
+      "rectDifferencesInPixels": {
+        "nav": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        "logo": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        "main": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        "footer": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        "firstMenu": {
+          "matched": false,
+          "originalFound": false,
+          "cloneFound": false
+        }
+      },
+      "missingResourceErrors": [],
+      "fontFamilies": [
+        "\"Courier New\", Courier, monospace"
+      ]
+    }
+  },
+  "limitations": [
+    "Clock may change between captures",
+    "JPEG encoding introduces small pixel errors",
+    "Computed layouts are browser- and time-specific",
+    "This measures the homepage only, not interactive secondary pages"
+  ]
+}

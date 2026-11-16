@@ -1,7 +1,7 @@
 {
   "url": "https://supreme.com/",
   "title": "Supreme",
-  "bodyText": "skip to content\n11/16/2026 12:59pm NYC\nSupreme\nnews\nfall/winter 2026 preview\nfall/winter 2026 lookbook\nshop\nrandom\nabout\nstores\ncontact\nmailing list\nterms\nprivacy\nfaq\naccessibility",
+  "bodyText": "skip to content\n11/16/2026 01:09pm NYC\nSupreme\nnews\nfall/winter 2026 preview\nfall/winter 2026 lookbook\nshop\nrandom\nabout\nstores\ncontact\nmailing list\nterms\nprivacy\nfaq\naccessibility",
   "readyState": "complete",
   "bodyBackground": "rgb(255, 255, 255)",
   "htmlBackground": "rgba(0, 0, 0, 0)",
@@ -171,11 +171,15 @@
       "initiatorType": "script"
     },
     {
+      "name": "https://supreme.com/_next/static/immutable/chunks/0oo3_-j3-gl6j.js",
+      "initiatorType": "script"
+    },
+    {
       "name": "https://supreme.com/_next/static/immutable/chunks/2_umaltfwvhd1.js",
       "initiatorType": "script"
     },
     {
-      "name": "https://supreme.com/_next/static/immutable/chunks/0oo3_-j3-gl6j.js",
+      "name": "https://supreme.com/_next/static/immutable/chunks/0av5lm-73junm.js",
       "initiatorType": "script"
     },
     {
@@ -187,15 +191,11 @@
       "initiatorType": "script"
     },
     {
-      "name": "https://supreme.com/_next/static/immutable/chunks/0av5lm-73junm.js",
-      "initiatorType": "script"
-    },
-    {
       "name": "https://supreme.com/_next/static/immutable/chunks/3n5alsbv41xho.js",
       "initiatorType": "script"
     },
     {
-      "name": "https://supreme.com/_next/static/immutable/chunks/0q--o7mpdibj5.js",
+      "name": "https://supreme.com/_next/static/immutable/chunks/0ay5lwt6ew6gz.js",
       "initiatorType": "script"
     },
     {
@@ -203,7 +203,7 @@
       "initiatorType": "script"
     },
     {
-      "name": "https://supreme.com/_next/static/immutable/chunks/0ay5lwt6ew6gz.js",
+      "name": "https://supreme.com/_next/static/immutable/chunks/0q--o7mpdibj5.js",
       "initiatorType": "script"
     },
     {
@@ -235,11 +235,7 @@
       "initiatorType": "fetch"
     },
     {
-      "name": "https://www.googletagmanager.com/gtag/js?id=G-YXLMT5H68B&cx=c&gtm=4e6bc0h1",
-      "initiatorType": "script"
-    },
-    {
-      "name": "https://www.google-analytics.com/g/collect?v=2&tid=G-YXLMT5H68B&gtm=45je6bc0v9129935825za20ozb9127130690zd9127130690xf1&_p=1794851968997&gcd=13l3l3l3l1l1&npa=0&dma=0&cid=51478164.1794851969&frm=0&ngs=1&pscdl=noapi&rcb=17&sr=390x844&uaa=x86&uab=64&uafvl=HeadlessChrome%3B159.0.8154.6%7CNot%252FA)Brand%3B8.0.0.0%7CChromium%3B159.0.8154.6&uam=&uamb=0&uap=Linux&uapv=&uaw=0&ul=en-us&_s=1&tag_exp=115938465~115938469~118897920~118897930~119860442~120213116~120385422~120412526~120420416~120469145~120469153~121246026~121246034&sid=1794851969&sct=1&seg=0&dl=https%3A%2F%2Fsupreme.com%2F&dt=Supreme&en=page_view&_fv=1&_nsi=1&_ss=1&tfd=360",
+      "name": "https://www.google-analytics.com/g/collect?v=2&tid=G-YXLMT5H68B&gtm=45je6bc0v9129935825za208zd9129935825xf1&_p=1794852553314&gcd=13l3l3l3l1l1&npa=0&dma=0&cid=1810578115.1794852553&frm=0&ngs=1&pscdl=noapi&rcb=5&sr=390x844&uaa=x86&uab=64&uafvl=HeadlessChrome%3B159.0.8154.6%7CNot%252FA)Brand%3B8.0.0.0%7CChromium%3B159.0.8154.6&uam=&uamb=0&uap=Linux&uapv=&uaw=0&ul=en-us&_s=1&tag_exp=100940091~115938466~115938469~118897920~118897930~120213116~120385423~120412526~120420416~120469145~120469153~121246026~121246034~123630400~123988485&sid=1794852553&sct=1&seg=0&dl=https%3A%2F%2Fsupreme.com%2F&dt=Supreme&en=page_view&_fv=1&_nsi=1&_ss=1&tfd=277",
       "initiatorType": "fetch"
     },
     {
@@ -247,11 +243,11 @@
       "initiatorType": "fetch"
     },
     {
-      "name": "https://supreme.com/lookbook/46?_rsc=5CB68i4pnAekjehf",
+      "name": "https://supreme.com/news?_rsc=5CB68i4pnAekjehf",
       "initiatorType": "fetch"
     },
     {
-      "name": "https://supreme.com/news?_rsc=5CB68i4pnAekjehf",
+      "name": "https://supreme.com/lookbook/46?_rsc=5CB68i4pnAekjehf",
       "initiatorType": "fetch"
     },
     {
@@ -275,6 +271,10 @@
       "initiatorType": "fetch"
     },
     {
+      "name": "https://supreme.com/news?_rsc=W22mj7Nd2VUK8_wC",
+      "initiatorType": "fetch"
+    },
+    {
       "name": "https://supreme.com/previews/fallwinter2026?_rsc=kIjJma3CQ5MaqiaR",
       "initiatorType": "fetch"
     },
@@ -283,35 +283,7 @@
       "initiatorType": "fetch"
     },
     {
-      "name": "https://supreme.com/news?_rsc=W22mj7Nd2VUK8_wC",
-      "initiatorType": "fetch"
-    },
-    {
-      "name": "https://supreme.com/random/mini-ramp?_rsc=tfSM-hOfJ34PAmnZ",
-      "initiatorType": "fetch"
-    },
-    {
-      "name": "https://supreme.com/_next/static/immutable/chunks/3ojebgsioza3r.js",
-      "initiatorType": "script"
-    },
-    {
-      "name": "https://supreme.com/about?_rsc=G32MfIMP0e_dyod-",
-      "initiatorType": "fetch"
-    },
-    {
-      "name": "https://supreme.com/_next/static/immutable/chunks/2n-960lzieizy.js",
-      "initiatorType": "script"
-    },
-    {
-      "name": "https://supreme.com/_next/static/immutable/chunks/0rvb1fn74wrx5.js",
-      "initiatorType": "script"
-    },
-    {
-      "name": "https://supreme.com/stores?_rsc=VBr8C1TKO9wLWMpi",
-      "initiatorType": "fetch"
-    },
-    {
-      "name": "https://supreme.com/_next/static/immutable/chunks/2wf0y7grw00no.js",
+      "name": "https://supreme.com/_next/static/immutable/chunks/15vcgm0icgxgv.js",
       "initiatorType": "script"
     },
     {
@@ -319,7 +291,27 @@
       "initiatorType": "script"
     },
     {
-      "name": "https://supreme.com/contact?_rsc=IDygQERZK4qsoooF",
+      "name": "https://supreme.com/_next/static/immutable/chunks/0rvb1fn74wrx5.js",
+      "initiatorType": "script"
+    },
+    {
+      "name": "https://supreme.com/random/mini-ramp?_rsc=tfSM-hOfJ34PAmnZ",
+      "initiatorType": "fetch"
+    },
+    {
+      "name": "https://supreme.com/_next/static/immutable/chunks/2n-960lzieizy.js",
+      "initiatorType": "script"
+    },
+    {
+      "name": "https://supreme.com/about?_rsc=G32MfIMP0e_dyod-",
+      "initiatorType": "fetch"
+    },
+    {
+      "name": "https://supreme.com/_next/static/immutable/chunks/2wf0y7grw00no.js",
+      "initiatorType": "script"
+    },
+    {
+      "name": "https://supreme.com/stores?_rsc=VBr8C1TKO9wLWMpi",
       "initiatorType": "fetch"
     },
     {
@@ -331,11 +323,15 @@
       "initiatorType": "script"
     },
     {
+      "name": "https://supreme.com/contact?_rsc=IDygQERZK4qsoooF",
+      "initiatorType": "fetch"
+    },
+    {
       "name": "https://supreme.com/mailinglist?_rsc=t4qOsvNycmrcKjf-",
       "initiatorType": "fetch"
     },
     {
-      "name": "https://supreme.com/_next/static/immutable/chunks/15vcgm0icgxgv.js",
+      "name": "https://supreme.com/_next/static/immutable/chunks/3ojebgsioza3r.js",
       "initiatorType": "script"
     },
     {
@@ -347,11 +343,11 @@
       "initiatorType": "script"
     },
     {
-      "name": "https://supreme.com/_next/static/immutable/chunks/1etddaqqv7sp8.js",
+      "name": "https://supreme.com/_next/static/immutable/chunks/0_pwfn8318vj6.js",
       "initiatorType": "script"
     },
     {
-      "name": "https://supreme.com/_next/static/immutable/chunks/0_pwfn8318vj6.js",
+      "name": "https://supreme.com/_next/static/immutable/chunks/1etddaqqv7sp8.js",
       "initiatorType": "script"
     }
   ],
@@ -2132,7 +2128,7 @@
       "attrs": {
         "class": "sc-b9bd7696-1 fXsspp"
       },
-      "directText": "11/16/2026 12:59pm NYC",
+      "directText": "11/16/2026 01:09pm NYC",
       "rect": {
         "x": 0,
         "y": 174.71875,
