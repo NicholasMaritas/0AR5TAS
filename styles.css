@@ -1,1 +1,99 @@
-
+:root { color-scheme: dark; }
+* { box-sizing: border-box; }
+html { min-height: 100%; background: #000; }
+body {
+  min-width: 280px;
+  min-height: 100vh;
+  min-height: 100svh;
+  margin: 0;
+  background: #000;
+  color: #f5f5f5;
+  font-family: "Courier New", Courier, monospace;
+  -webkit-font-smoothing: antialiased;
+}
+.homepage {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+  min-height: 100svh;
+  padding: clamp(70px, 18.5vh, 160px) 16px 20px;
+}
+.masthead { display: flex; flex-direction: column; align-items: center; }
+.wordmark {
+  display: inline-block;
+  background: #f00;
+  color: #fff;
+  padding: 1px 8px 2px 5px;
+  font: italic 900 29px/.99 Arial, Helvetica, sans-serif;
+  letter-spacing: -1.8px;
+  white-space: nowrap;
+  transform: skew(-3deg);
+  user-select: none;
+}
+.nyc-clock {
+  display: block;
+  margin-top: 8px;
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: .02em;
+  white-space: nowrap;
+}
+.primary-menu {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 178px;
+  margin-top: clamp(74px, 16vh, 138px);
+  padding-left: 34px;
+}
+a {
+  color: #f5f5f5;
+  text-decoration: none;
+}
+.primary-menu a {
+  display: block;
+  width: max-content;
+  font-size: 11px;
+  font-weight: 700;
+  line-height: 1.98;
+  white-space: nowrap;
+}
+a:hover, a:focus-visible { color: #fa2929; }
+a:focus-visible { outline: 1px solid #fa2929; outline-offset: 3px; }
+.footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  margin-top: auto;
+  padding-top: 52px;
+}
+.footer-menu {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  column-gap: 12px;
+  row-gap: 8px;
+}
+.footer-menu a {
+  font-size: 9px;
+  font-weight: 700;
+  white-space: nowrap;
+}
+.disclaimer {
+  margin: 0;
+  color: #777;
+  font-size: 8px;
+  letter-spacing: .02em;
+  text-align: center;
+}
+@media (max-height: 540px) {
+  .homepage { padding-top: 32px; }
+  .primary-menu { margin-top: 35px; }
+  .footer { padding-top: 25px; }
+}
+@media (max-width: 400px) {
+  .homepage { padding-top: clamp(76px, 17vh, 112px); }
+  .primary-menu { margin-top: 74px; }
+}
