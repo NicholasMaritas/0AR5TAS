@@ -1,0 +1,171 @@
+{
+  "schema_version": "1.0.0",
+  "checked_on": "2026-11-16",
+  "project": "Supreme homepage recreation",
+  "target": "https://supreme.com/",
+  "deployment_target": "https://nicholasmaritas.github.io/0AR5TAS/",
+  "repository": "NicholasMaritas/0AR5TAS",
+  "evidence": {
+    "supplied_file": {
+      "name": "Pasted markdown.md",
+      "sha256": "5ae08371d8d1adba30bccb01159dd8565e9d4e2a313d1c3b0f53f14a634fb797",
+      "kind": "Markdown-escaped HTML source with inline Next.js payload, not a browser-rendered DOM snapshot"
+    },
+    "live_target": {
+      "checked": true,
+      "content_seen": [
+        "Supreme",
+        "news",
+        "fall/winter 2026 preview",
+        "fall/winter 2026 lookbook",
+        "shop",
+        "random",
+        "about",
+        "stores",
+        "contact",
+        "NYC date/time"
+      ],
+      "rendered_screenshot_captured": false
+    },
+    "existing_repo": {
+      "default_branch": "main",
+      "permissions_write_verified": true,
+      "files": {
+        "index.html": "Empty body; references styles.css and script.js",
+        "styles.css": "One-byte empty placeholder",
+        "script.js": "One-byte empty placeholder",
+        "index.json": "Resource catalog index"
+      },
+      "catalogs": [
+        "resources/html/github_html_resources.json",
+        "resources/css/github_css_resources.json",
+        "resources/javascript/github_javascript_resources.json",
+        "resources/frontend/github_frontend_resources.json"
+      ],
+      "catalog_json_validation": "All four parsed successfully",
+      "screenshots_in_repository": false
+    },
+    "attachment_inventory": {
+      "supplied_html": true,
+      "original_homepage_screenshots": false,
+      "original_binary_assets": false
+    }
+  },
+  "source_verified": {
+    "document_title": "Supreme",
+    "meta_description": "Supreme. The official website of Supreme. EST 1994. NYC.",
+    "meta_theme_color": "#f2f2f2",
+    "note_theme_color": "Metadata theme color is not proof of CSS body background color",
+    "framework_evidence": "Next.js streaming payload and /_next/static/immutable/chunks/ references",
+    "home_navigation_US": [
+      {
+        "title": "news",
+        "url": "/news"
+      },
+      {
+        "title": "fall/winter 2026 preview",
+        "url": "/previews/fallwinter2026"
+      },
+      {
+        "title": "fall/winter 2026 lookbook",
+        "url": "/lookbook/46"
+      },
+      {
+        "title": "shop",
+        "url": "https://us.supreme.com/pages/shop"
+      },
+      {
+        "title": "random",
+        "url": "/random/mini-ramp"
+      },
+      {
+        "title": "about",
+        "url": "/about"
+      },
+      {
+        "title": "stores",
+        "url": "/stores"
+      },
+      {
+        "title": "contact",
+        "url": "/contact"
+      },
+      {
+        "title": "mailing list",
+        "url": "/mailinglist"
+      }
+    ],
+    "footer_navigation_US": [
+      {
+        "title": "terms",
+        "url": "https://us.supreme.com/pages/terms"
+      },
+      {
+        "title": "privacy",
+        "url": "https://us.supreme.com/pages/privacy"
+      },
+      {
+        "title": "faq",
+        "url": "https://us.supreme.com/pages/faq"
+      },
+      {
+        "title": "accessibility",
+        "url": "https://us.supreme.com/pages/accessibility"
+      }
+    ],
+    "scripts_referenced": [
+      "https://supreme.com/_next/static/immutable/chunks/0av5lm-73junm.js",
+      "https://supreme.com/_next/static/immutable/chunks/0ay5lwt6ew6gz.js",
+      "https://supreme.com/_next/static/immutable/chunks/0c0hxoamwjsbw.js",
+      "https://supreme.com/_next/static/immutable/chunks/0oo3_-j3-gl6j.js",
+      "https://supreme.com/_next/static/immutable/chunks/0q--o7mpdibj5.js",
+      "https://supreme.com/_next/static/immutable/chunks/13ousx0z1muk9.js",
+      "https://supreme.com/_next/static/immutable/chunks/19yn-vuaqp-lj.js",
+      "https://supreme.com/_next/static/immutable/chunks/2_umaltfwvhd1.js",
+      "https://supreme.com/_next/static/immutable/chunks/2k8_w3z_qybzj.js",
+      "https://supreme.com/_next/static/immutable/chunks/2oeg7d7omf1mw.js",
+      "https://supreme.com/_next/static/immutable/chunks/3n5alsbv41xho.js",
+      "https://supreme.com/_next/static/immutable/chunks/3tvnlwsfcf8-d.js",
+      "https://supreme.com/_next/static/immutable/chunks/3wumpa36nunxp.js",
+      "https://supreme.com/_next/static/immutable/chunks/turbopack-08lbftg0s2go_.js"
+    ],
+    "external_services_referenced": [
+      "https://cdn.sanity.io",
+      "https://www.googletagmanager.com/gtm.js?id=GTM-NXLQMWW",
+      "https://www.googletagmanager.com/gtag/js?id=G-YXLMT5H68B"
+    ],
+    "favicon_reference": "https://supreme.com/favicon.ico?favicon.1j_s12btnbeav.ico",
+    "apple_touch_icon_dimensions": [
+      57,
+      60,
+      72,
+      76,
+      114,
+      120,
+      144,
+      152
+    ],
+    "css_stylesheet_links_in_supplied_html": 0,
+    "font_files_declared_in_supplied_html": 0
+  },
+  "missing_or_unverified": {
+    "screenshots": "Not present among accessible attachments or repository files",
+    "reference_viewport_dimensions": "Not supplied",
+    "computed_styles_and_layout_coordinates": "Not available from the source or accessible live-page text",
+    "logo_asset_and_dimensions": "Not independently extracted or verified",
+    "fonts_and_font_metrics": "No source font declarations provided",
+    "images_and_media": "Not available as supplied assets; no rendered media snapshot",
+    "responsive_layout_and_interactions": "Not verified",
+    "dynamic_javascript_chunks": "Identified by URL but not retrievable through available browser-text inspection",
+    "deployed_site_render": "Live GitHub Pages URL could not be rendered by available browsing tool",
+    "pixel_comparison": "Not performed; no matching original and replica screenshots at identical dimensions"
+  },
+  "implementation": {
+    "html_changed": false,
+    "css_changed": false,
+    "javascript_changed": false,
+    "visual_accuracy_verified": false,
+    "completion_claim": false,
+    "reason": "Changing the visual layout without original screenshot, assets, or computed styles would require guesses explicitly prohibited by the project brief."
+  }
+}
