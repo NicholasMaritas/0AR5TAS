@@ -1,0 +1,3025 @@
+{
+  "schema_version": "1.0.0",
+  "catalog_type": "github_html_static_site_resource_research",
+  "research_date": "2026-11-16",
+  "source": {
+    "starting_url": "https://github.com/topics/html",
+    "method": "Github HTML topic review, GitHub repository search, repository metadata API, package.json checks and targeted README/docs inspection. Related repositories searched beyond topic where needed.",
+    "scope": "Curated selection; not an exhaustive crawl of the HTML topic",
+    "read_only": true,
+    "github_repositories_modified": false,
+    "excluded_page_types": [
+      "About",
+      "Policy",
+      "Terms of Service",
+      "Legal Notice",
+      "similar policy/legal pages"
+    ]
+  },
+  "evaluation_method": {
+    "stars": "Snapshot retrieved 2026-11-16 from the repository API; fluctuates over time",
+    "last_update": "last_repository_push_at is GitHub pushed_at, not proof of latest published stable release",
+    "maintained": "archived status and last push reviewed; vulnerabilities, maintainer bus factor and release cadence were not fully audited",
+    "score_scale": "1=poor, 5=excellent. Editorial scores are fit-for-purpose judgments, not GitHub data.",
+    "overall_score_formula": "5*usefulness + 5*reliability + 4*simplicity + 6*github_pages_fit (max=100)",
+    "unknown_values": "null denotes not verified; missing manifest inspection is not equivalent to having no dependencies",
+    "security_and_performance": "No independent security scan, dependency advisory query, bundle measurement, or Lighthouse run was performed.",
+    "rankings_context": "Ranked for lightweight, maintainable, publicly served static sites; not for a complex application backend."
+  },
+  "recommended_technology_stack": {
+    "name": "minimal_static_github_pages",
+    "preferred": true,
+    "language_and_runtime": {
+      "html": "HTML5",
+      "styles": "CSS3",
+      "behavior": "Vanilla JavaScript (ES modules as needed)",
+      "server_runtime": null
+    },
+    "source_template": "h5bp/html5-boilerplate",
+    "css_framework": "pure-css/pure",
+    "css_framework_alternatives": [
+      "jgthms/bulma",
+      "twbs/bootstrap"
+    ],
+    "icons": "twbs/icons",
+    "optional_interactions": "alpinejs/alpine",
+    "optional_animation": "CSS transitions first; juliangarnier/anime only if needed",
+    "seo": "Manual HTML head metadata informed by joshbuchea/HEAD; sitemap.xml and robots.txt authored as static files when needed",
+    "accessibility": "Semantic HTML plus w3c/aria-practices guidance, axe-core testing and manual keyboard checks",
+    "code_quality": [
+      "htmlhint/HTMLHint",
+      "prettier/prettier",
+      "GoogleChrome/lighthouse"
+    ],
+    "deployment": "GitHub Pages serves committed HTML/CSS/JS assets from a selected publishing source; no backend and no build needed for base stack.",
+    "build_requirement": false,
+    "principles": [
+      "Use only one base CSS framework",
+      "Prefer first-party hosted and version-pinned assets",
+      "Keep scripts optional",
+      "Do not expose secrets in frontend",
+      "Use relative/project-base-aware asset URLs"
+    ]
+  },
+  "alternative_stacks": [
+    {
+      "name": "component_rich_no_build",
+      "when": "Many prebuilt controls and layouts are needed",
+      "components": [
+        "h5bp/html5-boilerplate",
+        "twbs/bootstrap",
+        "twbs/icons",
+        "htmlhint/HTMLHint",
+        "prettier/prettier"
+      ],
+      "build_requirement": false,
+      "caveat": "Use a pinned stable Bootstrap distribution; repository default branch currently documents a 6 alpha development line."
+    },
+    {
+      "name": "content_or_blog_jekyll",
+      "when": "Many pages, Markdown posts, and shared layouts",
+      "components": [
+        "jekyll/jekyll",
+        "jekyll/jekyll-seo-tag",
+        "jekyll/jekyll-sitemap"
+      ],
+      "build_requirement": "Native supported Jekyll pipeline or local build",
+      "caveat": "GitHub Pages pins versions and supported plugins; compare pages-gem dependency list before adding plugins."
+    },
+    {
+      "name": "modern_custom_css_build",
+      "when": "Custom utility-first designs and copyable UI snippets",
+      "components": [
+        "tailwindlabs/tailwindcss",
+        "markmead/hyperui",
+        "prettier/prettier"
+      ],
+      "build_requirement": true,
+      "caveat": "Compile CSS before publish; avoid production reliance on a development-only CDN."
+    },
+    {
+      "name": "componentized_static_site",
+      "when": "Many reusable content components outweigh added tooling",
+      "components": [
+        "withastro/astro",
+        "prettier/prettier",
+        "GoogleChrome/lighthouse"
+      ],
+      "build_requirement": true,
+      "caveat": "Configure static output and repository base path and publish build output via GitHub Actions."
+    }
+  ],
+  "prioritized_implementation_resources": [
+    {
+      "priority": 1,
+      "repository": "h5bp/html5-boilerplate",
+      "purpose": "Baseline static-site structure"
+    },
+    {
+      "priority": 2,
+      "repository": "pure-css/pure",
+      "purpose": "Lightweight layout and forms, or choose one CSS alternative"
+    },
+    {
+      "priority": 3,
+      "repository": "joshbuchea/HEAD",
+      "purpose": "Review document metadata and social previews"
+    },
+    {
+      "priority": 4,
+      "repository": "w3c/aria-practices",
+      "purpose": "Design accessible keyboard interaction patterns"
+    },
+    {
+      "priority": 5,
+      "repository": "htmlhint/HTMLHint",
+      "purpose": "Validate HTML source"
+    },
+    {
+      "priority": 6,
+      "repository": "prettier/prettier",
+      "purpose": "Standardize formatting"
+    },
+    {
+      "priority": 7,
+      "repository": "dequelabs/axe-core",
+      "purpose": "Automate selected accessibility checks"
+    },
+    {
+      "priority": 8,
+      "repository": "GoogleChrome/lighthouse",
+      "purpose": "Audit deployed site before launch"
+    },
+    {
+      "priority": 9,
+      "repository": "twbs/icons",
+      "purpose": "Add optional lightweight iconography"
+    },
+    {
+      "priority": 10,
+      "repository": "alpinejs/alpine",
+      "purpose": "Add client-side interaction only when requested"
+    }
+  ],
+  "categories": {
+    "html_templates": {
+      "label": "HTML templates",
+      "ranked_resources": [
+        {
+          "repository": "h5bp/html5-boilerplate",
+          "url": "https://github.com/h5bp/html5-boilerplate",
+          "description": "A professional front-end template for building fast, robust, and adaptable web apps or sites.",
+          "category": "html_templates",
+          "github_stars": 57684,
+          "last_repository_push_at": "2026-11-15T11:22:58Z",
+          "archived": false,
+          "license": {
+            "spdx_id": "MIT",
+            "github_api_value": "MIT"
+          },
+          "documentation": {
+            "verified": true,
+            "readme_or_docs_url": "https://github.com/h5bp/html5-boilerplate/blob/main/README.md",
+            "quality_review": "README or repository documentation inspected; end-to-end tutorial completeness not independently tested"
+          },
+          "dependencies": {
+            "repository_package_json_runtime_dependencies": [],
+            "manifest_inspected": true,
+            "deployment_requires_server_runtime": false
+          },
+          "github_pages": {
+            "compatible": true,
+            "mode": "direct_static_assets",
+            "requires_build_before_publishing": false,
+            "static_hosting_fit": "direct"
+          },
+          "practical_applications": [
+            "New simple sites",
+            "HTML/CSS/JS starting directory"
+          ],
+          "reusable_code_or_assets": [
+            "Published /dist/ contents",
+            "HTML/CSS baseline"
+          ],
+          "integration_requirements": [
+            "Copy the published dist assets rather than using authoring-only build files",
+            "Adjust relative paths and metadata for GitHub Pages"
+          ],
+          "limitations": [
+            "Not a predesigned visual theme; supply content and design"
+          ],
+          "potential_conflicts": [
+            "Avoid stacking another full HTML reset or duplicate boilerplate"
+          ],
+          "security": {
+            "documented_considerations": "Review custom JavaScript and third-party assets before inclusion",
+            "independent_vulnerability_audit": null
+          },
+          "performance": {
+            "documented_or_qualitative_considerations": "No asset-size benchmark was performed",
+            "measured_bundle_bytes": null,
+            "measured_lighthouse_score": null
+          },
+          "maintenance": {
+            "last_push_at": "2026-11-15T11:22:58Z",
+            "archived": false,
+            "assessment": "recent_repository_push"
+          },
+          "ranking": {
+            "usefulness_1_to_5": 5,
+            "reliability_1_to_5": 5,
+            "simplicity_1_to_5": 5,
+            "github_pages_fit_1_to_5": 5,
+            "overall_100": 100,
+            "category_rank": 1
+          },
+          "recommendation": "adopt",
+          "evidence_urls": [
+            "https://api.github.com/repos/h5bp/html5-boilerplate",
+            "https://github.com/h5bp/html5-boilerplate/blob/main/README.md",
+            "https://api.github.com/repos/h5bp/html5-boilerplate/contents/package.json",
+            "https://github.com/h5bp/html5-boilerplate/tree/main/dist"
+          ]
+        },
+        {
+          "repository": "StartBootstrap/startbootstrap-landing-page",
+          "url": "https://github.com/StartBootstrap/startbootstrap-landing-page",
+          "description": "Responsive Bootstrap landing-page template with editable distributable HTML/CSS.",
+          "category": "html_templates",
+          "github_stars": 1673,
+          "last_repository_push_at": "2024-07-08T18:51:16Z",
+          "archived": false,
+          "license": {
+            "spdx_id": "MIT",
+            "github_api_value": "MIT"
+          },
+          "documentation": {
+            "verified": true,
+            "readme_or_docs_url": "https://github.com/StartBootstrap/startbootstrap-landing-page/blob/master/README.md",
+            "quality_review": "README or repository documentation inspected; end-to-end tutorial completeness not independently tested"
+          },
+          "dependencies": {
+            "repository_package_json_runtime_dependencies": [
+              "bootstrap"
+            ],
+            "manifest_inspected": true,
+            "deployment_requires_server_runtime": false
+          },
+          "github_pages": {
+            "compatible": true,
+            "mode": "direct_static_assets",
+            "requires_build_before_publishing": false,
+            "static_hosting_fit": "direct"
+          },
+          "practical_applications": [
+            "Marketing landing pages",
+            "Hero and newsletter/signup layouts"
+          ],
+          "reusable_code_or_assets": [
+            "dist HTML, CSS, and client-side assets"
+          ],
+          "integration_requirements": [
+            "Edit published dist/index.html and CSS",
+            "Use pinned Bootstrap assets or packaged files",
+            "Replace any nonfunctional form submission"
+          ],
+          "limitations": [
+            "Last repository push in 2024",
+            "Source customization uses Node tooling; published dist does not"
+          ],
+          "potential_conflicts": [
+            "Avoid parallel CSS frameworks"
+          ],
+          "security": {
+            "documented_considerations": "No server-side lead capture supplied by GitHub Pages",
+            "independent_vulnerability_audit": null
+          },
+          "performance": {
+            "documented_or_qualitative_considerations": "Audit images and third-party assets before deploying",
+            "measured_bundle_bytes": null,
+            "measured_lighthouse_score": null
+          },
+          "maintenance": {
+            "last_push_at": "2024-07-08T18:51:16Z",
+            "archived": false,
+            "assessment": "low_recent_commit_activity"
+          },
+          "ranking": {
+            "usefulness_1_to_5": 4,
+            "reliability_1_to_5": 3,
+            "simplicity_1_to_5": 5,
+            "github_pages_fit_1_to_5": 5,
+            "overall_100": 85,
+            "category_rank": 2
+          },
+          "recommendation": "conditional",
+          "evidence_urls": [
+            "https://api.github.com/repos/StartBootstrap/startbootstrap-landing-page",
+            "https://github.com/StartBootstrap/startbootstrap-landing-page/blob/master/README.md",
+            "https://api.github.com/repos/StartBootstrap/startbootstrap-landing-page/contents/package.json"
+          ]
+        },
+        {
+          "repository": "StartBootstrap/startbootstrap-agency",
+          "url": "https://github.com/StartBootstrap/startbootstrap-agency",
+          "description": "One-page Bootstrap agency portfolio theme with sections, portfolio grid and modals.",
+          "category": "html_templates",
+          "github_stars": 2036,
+          "last_repository_push_at": "2024-07-15T17:10:23Z",
+          "archived": false,
+          "license": {
+            "spdx_id": "MIT",
+            "github_api_value": "MIT"
+          },
+          "documentation": {
+            "verified": true,
+            "readme_or_docs_url": "https://github.com/StartBootstrap/startbootstrap-agency/blob/master/README.md",
+            "quality_review": "README or repository documentation inspected; end-to-end tutorial completeness not independently tested"
+          },
+          "dependencies": {
+            "repository_package_json_runtime_dependencies": [
+              "bootstrap"
+            ],
+            "manifest_inspected": true,
+            "deployment_requires_server_runtime": false
+          },
+          "github_pages": {
+            "compatible": true,
+            "mode": "direct_static_assets",
+            "requires_build_before_publishing": false,
+            "static_hosting_fit": "direct"
+          },
+          "practical_applications": [
+            "One-page agency and portfolio layouts"
+          ],
+          "reusable_code_or_assets": [
+            "dist HTML, sections, portfolio grid, modal markup"
+          ],
+          "integration_requirements": [
+            "Use prebuilt dist files for static pages",
+            "Replace the documented PHP contact form with an external service or remove it"
+          ],
+          "limitations": [
+            "PHP form cannot run on GitHub Pages",
+            "Last repository push in 2024"
+          ],
+          "potential_conflicts": [
+            "Bootstrap CSS duplication",
+            "PHP backend unsupported on static hosting"
+          ],
+          "security": {
+            "documented_considerations": "Contact forms need trusted external processing and spam protection",
+            "independent_vulnerability_audit": null
+          },
+          "performance": {
+            "documented_or_qualitative_considerations": "Check modal and image asset payload",
+            "measured_bundle_bytes": null,
+            "measured_lighthouse_score": null
+          },
+          "maintenance": {
+            "last_push_at": "2024-07-15T17:10:23Z",
+            "archived": false,
+            "assessment": "low_recent_commit_activity"
+          },
+          "ranking": {
+            "usefulness_1_to_5": 3,
+            "reliability_1_to_5": 3,
+            "simplicity_1_to_5": 4,
+            "github_pages_fit_1_to_5": 4,
+            "overall_100": 70,
+            "category_rank": 3
+          },
+          "recommendation": "conditional",
+          "evidence_urls": [
+            "https://api.github.com/repos/StartBootstrap/startbootstrap-agency",
+            "https://github.com/StartBootstrap/startbootstrap-agency/blob/master/README.md",
+            "https://api.github.com/repos/StartBootstrap/startbootstrap-agency/contents/package.json"
+          ]
+        },
+        {
+          "repository": "cobiwave/simplefolio",
+          "url": "https://github.com/cobiwave/simplefolio",
+          "description": "One-page responsive developer portfolio template using SCSS and Parcel.",
+          "category": "html_templates",
+          "github_stars": 14224,
+          "last_repository_push_at": "2026-01-21T18:54:35Z",
+          "archived": false,
+          "license": {
+            "spdx_id": "MIT",
+            "github_api_value": "MIT"
+          },
+          "documentation": {
+            "verified": true,
+            "readme_or_docs_url": "https://github.com/cobiwave/simplefolio/blob/master/README.md",
+            "quality_review": "README or repository documentation inspected; end-to-end tutorial completeness not independently tested"
+          },
+          "dependencies": {
+            "repository_package_json_runtime_dependencies": [
+              "@popperjs/core",
+              "bootstrap",
+              "jquery",
+              "popper.js",
+              "vanilla-tilt"
+            ],
+            "manifest_inspected": true,
+            "deployment_requires_server_runtime": false
+          },
+          "github_pages": {
+            "compatible": true,
+            "mode": "compile_before_publish",
+            "requires_build_before_publishing": true,
+            "static_hosting_fit": "conditional_build"
+          },
+          "practical_applications": [
+            "Developer portfolio inspiration",
+            "Single-page portfolio sections"
+          ],
+          "reusable_code_or_assets": [
+            "HTML templates",
+            "SCSS",
+            "reveal animations"
+          ],
+          "integration_requirements": [
+            "Install Node and Parcel dependencies and build before publishing static output"
+          ],
+          "limitations": [
+            "Uses older Bootstrap 4, jQuery, and Parcel setup",
+            "Readme states explicit older Node/npm prerequisites"
+          ],
+          "potential_conflicts": [
+            "Bootstrap 4 components differ from Bootstrap 5/6",
+            "Do not combine conflicting Bootstrap versions"
+          ],
+          "security": {
+            "documented_considerations": "Review legacy client dependencies when reusing",
+            "independent_vulnerability_audit": null
+          },
+          "performance": {
+            "documented_or_qualitative_considerations": "Legacy JS dependencies increase payload",
+            "measured_bundle_bytes": null,
+            "measured_lighthouse_score": null
+          },
+          "maintenance": {
+            "last_push_at": "2026-01-21T18:54:35Z",
+            "archived": false,
+            "assessment": "recent_repository_push"
+          },
+          "ranking": {
+            "usefulness_1_to_5": 3,
+            "reliability_1_to_5": 3,
+            "simplicity_1_to_5": 2,
+            "github_pages_fit_1_to_5": 4,
+            "overall_100": 62,
+            "category_rank": 4
+          },
+          "recommendation": "defer",
+          "evidence_urls": [
+            "https://api.github.com/repos/cobiwave/simplefolio",
+            "https://github.com/cobiwave/simplefolio/blob/master/README.md",
+            "https://api.github.com/repos/cobiwave/simplefolio/contents/package.json"
+          ]
+        }
+      ]
+    },
+    "css_frameworks": {
+      "label": "CSS frameworks",
+      "ranked_resources": [
+        {
+          "repository": "jgthms/bulma",
+          "url": "https://github.com/jgthms/bulma",
+          "description": "CSS-only responsive component and layout framework based on Flexbox.",
+          "category": "css_frameworks",
+          "github_stars": 50033,
+          "last_repository_push_at": "2026-09-21T09:56:34Z",
+          "archived": false,
+          "license": {
+            "spdx_id": "MIT",
+            "github_api_value": "MIT"
+          },
+          "documentation": {
+            "verified": true,
+            "readme_or_docs_url": "https://github.com/jgthms/bulma/blob/main/README.md",
+            "quality_review": "README or repository documentation inspected; end-to-end tutorial completeness not independently tested"
+          },
+          "dependencies": {
+            "repository_package_json_runtime_dependencies": null,
+            "manifest_inspected": false,
+            "deployment_requires_server_runtime": false
+          },
+          "github_pages": {
+            "compatible": true,
+            "mode": "direct_static_assets",
+            "requires_build_before_publishing": false,
+            "static_hosting_fit": "direct"
+          },
+          "practical_applications": [
+            "Responsive layouts",
+            "Buttons",
+            "Forms",
+            "Cards"
+          ],
+          "reusable_code_or_assets": [
+            "Standalone bulma.css"
+          ],
+          "integration_requirements": [
+            "Include built CSS; add custom vanilla JavaScript only where interaction is required"
+          ],
+          "limitations": [
+            "No bundled JavaScript for interactive behaviors"
+          ],
+          "potential_conflicts": [
+            "Avoid combining with Bootstrap or Pure global classes"
+          ],
+          "security": {
+            "documented_considerations": "Interactive components need accessible scripting",
+            "independent_vulnerability_audit": null
+          },
+          "performance": {
+            "documented_or_qualitative_considerations": "Prebuilt CSS adds stylesheet bytes; measure final page",
+            "measured_bundle_bytes": null,
+            "measured_lighthouse_score": null
+          },
+          "maintenance": {
+            "last_push_at": "2026-09-21T09:56:34Z",
+            "archived": false,
+            "assessment": "recent_repository_push"
+          },
+          "ranking": {
+            "usefulness_1_to_5": 5,
+            "reliability_1_to_5": 5,
+            "simplicity_1_to_5": 5,
+            "github_pages_fit_1_to_5": 5,
+            "overall_100": 100,
+            "category_rank": 1
+          },
+          "recommendation": "adopt",
+          "evidence_urls": [
+            "https://api.github.com/repos/jgthms/bulma",
+            "https://github.com/jgthms/bulma/blob/main/README.md"
+          ]
+        },
+        {
+          "repository": "pure-css/pure",
+          "url": "https://github.com/pure-css/pure",
+          "description": "Small responsive CSS modules for grids, menus, buttons, forms, and tables.",
+          "category": "css_frameworks",
+          "github_stars": 23713,
+          "last_repository_push_at": "2026-11-16T12:55:41Z",
+          "archived": false,
+          "license": {
+            "spdx_id": null,
+            "github_api_value": "NOASSERTION"
+          },
+          "documentation": {
+            "verified": true,
+            "readme_or_docs_url": "https://github.com/pure-css/pure/blob/main/README.md",
+            "quality_review": "README or repository documentation inspected; end-to-end tutorial completeness not independently tested"
+          },
+          "dependencies": {
+            "repository_package_json_runtime_dependencies": [],
+            "manifest_inspected": true,
+            "deployment_requires_server_runtime": false
+          },
+          "github_pages": {
+            "compatible": true,
+            "mode": "direct_static_assets",
+            "requires_build_before_publishing": false,
+            "static_hosting_fit": "direct"
+          },
+          "practical_applications": [
+            "Lightweight grids",
+            "Forms",
+            "Tables",
+            "Menus"
+          ],
+          "reusable_code_or_assets": [
+            "Built CSS modules"
+          ],
+          "integration_requirements": [
+            "Link or self-host prebuilt pure CSS modules; avoid the source build unless customizing"
+          ],
+          "limitations": [
+            "Not a complete JavaScript component system"
+          ],
+          "potential_conflicts": [
+            "Choose one base framework; avoid duplicate reset/grid rules"
+          ],
+          "security": {
+            "documented_considerations": "No runtime JavaScript required for basic styling",
+            "independent_vulnerability_audit": null
+          },
+          "performance": {
+            "documented_or_qualitative_considerations": "Readme reports a small minified+gzip CSS build; not independently benchmarked",
+            "measured_bundle_bytes": null,
+            "measured_lighthouse_score": null
+          },
+          "maintenance": {
+            "last_push_at": "2026-11-16T12:55:41Z",
+            "archived": false,
+            "assessment": "recent_repository_push"
+          },
+          "ranking": {
+            "usefulness_1_to_5": 5,
+            "reliability_1_to_5": 5,
+            "simplicity_1_to_5": 5,
+            "github_pages_fit_1_to_5": 5,
+            "overall_100": 100,
+            "category_rank": 2
+          },
+          "recommendation": "adopt",
+          "evidence_urls": [
+            "https://api.github.com/repos/pure-css/pure",
+            "https://github.com/pure-css/pure/blob/main/README.md",
+            "https://api.github.com/repos/pure-css/pure/contents/package.json"
+          ]
+        },
+        {
+          "repository": "twbs/bootstrap",
+          "url": "https://github.com/twbs/bootstrap",
+          "description": "Responsive CSS components and optional JavaScript UI behaviors.",
+          "category": "css_frameworks",
+          "github_stars": 175069,
+          "last_repository_push_at": "2026-11-16T08:34:51Z",
+          "archived": false,
+          "license": {
+            "spdx_id": "MIT",
+            "github_api_value": "MIT"
+          },
+          "documentation": {
+            "verified": true,
+            "readme_or_docs_url": "https://github.com/twbs/bootstrap/blob/main/README.md",
+            "quality_review": "README or repository documentation inspected; end-to-end tutorial completeness not independently tested"
+          },
+          "dependencies": {
+            "repository_package_json_runtime_dependencies": null,
+            "manifest_inspected": false,
+            "deployment_requires_server_runtime": false
+          },
+          "github_pages": {
+            "compatible": true,
+            "mode": "direct_static_assets",
+            "requires_build_before_publishing": false,
+            "static_hosting_fit": "direct"
+          },
+          "practical_applications": [
+            "Responsive navigation",
+            "Modals",
+            "Grid systems",
+            "Forms"
+          ],
+          "reusable_code_or_assets": [
+            "Distribution CSS and browser JS bundles"
+          ],
+          "integration_requirements": [
+            "Use a pinned stable release distribution, not the default-branch Bootstrap 6 alpha source",
+            "Include optional JS bundle only for interactive components"
+          ],
+          "limitations": [
+            "Main README documents Bootstrap 6 alpha development; stable release needs separate pinning"
+          ],
+          "potential_conflicts": [
+            "Conflicts with Bulma/Pure/Tailwind resets and component classes",
+            "Duplicate utility styles"
+          ],
+          "security": {
+            "documented_considerations": "Avoid unpinned CDN scripts and audit third-party custom components",
+            "independent_vulnerability_audit": null
+          },
+          "performance": {
+            "documented_or_qualitative_considerations": "Include JS only if used; CSS/JS can add weight",
+            "measured_bundle_bytes": null,
+            "measured_lighthouse_score": null
+          },
+          "maintenance": {
+            "last_push_at": "2026-11-16T08:34:51Z",
+            "archived": false,
+            "assessment": "recent_repository_push"
+          },
+          "ranking": {
+            "usefulness_1_to_5": 5,
+            "reliability_1_to_5": 5,
+            "simplicity_1_to_5": 4,
+            "github_pages_fit_1_to_5": 5,
+            "overall_100": 96,
+            "category_rank": 3
+          },
+          "recommendation": "adopt_conditionally",
+          "evidence_urls": [
+            "https://api.github.com/repos/twbs/bootstrap",
+            "https://github.com/twbs/bootstrap/blob/main/README.md"
+          ]
+        },
+        {
+          "repository": "tailwindlabs/tailwindcss",
+          "url": "https://github.com/tailwindlabs/tailwindcss",
+          "description": "Utility-first CSS framework producing project-specific styles.",
+          "category": "css_frameworks",
+          "github_stars": 98672,
+          "last_repository_push_at": "2026-11-11T20:55:22Z",
+          "archived": false,
+          "license": {
+            "spdx_id": "MIT",
+            "github_api_value": "MIT"
+          },
+          "documentation": {
+            "verified": true,
+            "readme_or_docs_url": "https://github.com/tailwindlabs/tailwindcss/blob/main/README.md",
+            "quality_review": "README or repository documentation inspected; end-to-end tutorial completeness not independently tested"
+          },
+          "dependencies": {
+            "repository_package_json_runtime_dependencies": [],
+            "manifest_inspected": true,
+            "deployment_requires_server_runtime": false
+          },
+          "github_pages": {
+            "compatible": true,
+            "mode": "compile_before_publish",
+            "requires_build_before_publishing": true,
+            "static_hosting_fit": "conditional_build"
+          },
+          "practical_applications": [
+            "Utility-class styling",
+            "Responsive bespoke interfaces"
+          ],
+          "reusable_code_or_assets": [
+            "Generated utility CSS"
+          ],
+          "integration_requirements": [
+            "Configure Tailwind v4 build workflow",
+            "Generate and commit or deploy resulting static CSS via Actions"
+          ],
+          "limitations": [
+            "Not a zero-build production stylesheet",
+            "Requires utility-heavy HTML authoring"
+          ],
+          "potential_conflicts": [
+            "Do not stack full CSS frameworks by default",
+            "HyperUI requires matching Tailwind setup"
+          ],
+          "security": {
+            "documented_considerations": "Only deploy vetted compiled CSS and safe JavaScript",
+            "independent_vulnerability_audit": null
+          },
+          "performance": {
+            "documented_or_qualitative_considerations": "Content-aware compiled output can be small, but unmeasured here",
+            "measured_bundle_bytes": null,
+            "measured_lighthouse_score": null
+          },
+          "maintenance": {
+            "last_push_at": "2026-11-11T20:55:22Z",
+            "archived": false,
+            "assessment": "recent_repository_push"
+          },
+          "ranking": {
+            "usefulness_1_to_5": 4,
+            "reliability_1_to_5": 5,
+            "simplicity_1_to_5": 2,
+            "github_pages_fit_1_to_5": 4,
+            "overall_100": 77,
+            "category_rank": 4
+          },
+          "recommendation": "conditional",
+          "evidence_urls": [
+            "https://api.github.com/repos/tailwindlabs/tailwindcss",
+            "https://github.com/tailwindlabs/tailwindcss/blob/main/README.md",
+            "https://api.github.com/repos/tailwindlabs/tailwindcss/contents/package.json"
+          ]
+        }
+      ]
+    },
+    "ui_components_and_layouts": {
+      "label": "UI components and layouts",
+      "ranked_resources": [
+        {
+          "repository": "twbs/icons",
+          "url": "https://github.com/twbs/icons",
+          "description": "Official Bootstrap SVG icon library usable independently.",
+          "category": "ui_components_and_layouts",
+          "github_stars": 8184,
+          "last_repository_push_at": "2026-11-14T01:13:47Z",
+          "archived": false,
+          "license": {
+            "spdx_id": "MIT",
+            "github_api_value": "MIT"
+          },
+          "documentation": {
+            "verified": true,
+            "readme_or_docs_url": "https://github.com/twbs/icons/blob/main/README.md",
+            "quality_review": "README or repository documentation inspected; end-to-end tutorial completeness not independently tested"
+          },
+          "dependencies": {
+            "repository_package_json_runtime_dependencies": null,
+            "manifest_inspected": false,
+            "deployment_requires_server_runtime": false
+          },
+          "github_pages": {
+            "compatible": true,
+            "mode": "direct_static_assets",
+            "requires_build_before_publishing": false,
+            "static_hosting_fit": "direct"
+          },
+          "practical_applications": [
+            "Navigation icons",
+            "Status symbols",
+            "Buttons"
+          ],
+          "reusable_code_or_assets": [
+            "Individual SVGs",
+            "SVG sprite",
+            "Icon font"
+          ],
+          "integration_requirements": [
+            "Prefer local individual SVGs or a self-hosted sprite",
+            "Supply accessible labels for meaningful icons"
+          ],
+          "limitations": [
+            "External SVG sprite references can be restricted across origins"
+          ],
+          "potential_conflicts": [
+            "Avoid loading multiple icon libraries unnecessarily"
+          ],
+          "security": {
+            "documented_considerations": "Treat icon SVGs as trusted assets; label interactive icons",
+            "independent_vulnerability_audit": null
+          },
+          "performance": {
+            "documented_or_qualitative_considerations": "Use a subset of icons instead of full icon font",
+            "measured_bundle_bytes": null,
+            "measured_lighthouse_score": null
+          },
+          "maintenance": {
+            "last_push_at": "2026-11-14T01:13:47Z",
+            "archived": false,
+            "assessment": "recent_repository_push"
+          },
+          "ranking": {
+            "usefulness_1_to_5": 5,
+            "reliability_1_to_5": 5,
+            "simplicity_1_to_5": 5,
+            "github_pages_fit_1_to_5": 5,
+            "overall_100": 100,
+            "category_rank": 1
+          },
+          "recommendation": "adopt_conditionally",
+          "evidence_urls": [
+            "https://api.github.com/repos/twbs/icons",
+            "https://github.com/twbs/icons/blob/main/README.md"
+          ]
+        },
+        {
+          "repository": "lucide-icons/lucide",
+          "url": "https://github.com/lucide-icons/lucide",
+          "description": "Consistent reusable SVG icons and optional framework-specific packages.",
+          "category": "ui_components_and_layouts",
+          "github_stars": 25794,
+          "last_repository_push_at": "2026-11-16T16:00:10Z",
+          "archived": false,
+          "license": {
+            "spdx_id": null,
+            "github_api_value": "NOASSERTION"
+          },
+          "documentation": {
+            "verified": true,
+            "readme_or_docs_url": "https://github.com/lucide-icons/lucide/blob/main/README.md",
+            "quality_review": "README or repository documentation inspected; end-to-end tutorial completeness not independently tested"
+          },
+          "dependencies": {
+            "repository_package_json_runtime_dependencies": null,
+            "manifest_inspected": false,
+            "deployment_requires_server_runtime": false
+          },
+          "github_pages": {
+            "compatible": true,
+            "mode": "direct_static_assets",
+            "requires_build_before_publishing": false,
+            "static_hosting_fit": "direct"
+          },
+          "practical_applications": [
+            "Consistent interface icons",
+            "Standalone SVG markup"
+          ],
+          "reusable_code_or_assets": [
+            "Individual SVG icons",
+            "Optional JS packages"
+          ],
+          "integration_requirements": [
+            "Reuse individual trusted SVG files or browser package",
+            "Check icon license before redistribution because GitHub API reports NOASSERTION"
+          ],
+          "limitations": [
+            "GitHub API license expression is not asserted; final licensing needs independent verification"
+          ],
+          "potential_conflicts": [
+            "Redundant with Bootstrap Icons; choose one set"
+          ],
+          "security": {
+            "documented_considerations": "Prefer local vetted SVG content to arbitrary injected SVG",
+            "independent_vulnerability_audit": null
+          },
+          "performance": {
+            "documented_or_qualitative_considerations": "Inline selected SVG avoids unused icon bundle",
+            "measured_bundle_bytes": null,
+            "measured_lighthouse_score": null
+          },
+          "maintenance": {
+            "last_push_at": "2026-11-16T16:00:10Z",
+            "archived": false,
+            "assessment": "recent_repository_push"
+          },
+          "ranking": {
+            "usefulness_1_to_5": 5,
+            "reliability_1_to_5": 5,
+            "simplicity_1_to_5": 4,
+            "github_pages_fit_1_to_5": 5,
+            "overall_100": 96,
+            "category_rank": 2
+          },
+          "recommendation": "conditional",
+          "evidence_urls": [
+            "https://api.github.com/repos/lucide-icons/lucide",
+            "https://github.com/lucide-icons/lucide/blob/main/README.md"
+          ]
+        },
+        {
+          "repository": "tabler/tabler",
+          "url": "https://github.com/tabler/tabler",
+          "description": "Bootstrap 5-based dashboard layouts, components, and pages.",
+          "category": "ui_components_and_layouts",
+          "github_stars": 42070,
+          "last_repository_push_at": "2026-11-16T13:50:39Z",
+          "archived": false,
+          "license": {
+            "spdx_id": "MIT",
+            "github_api_value": "MIT"
+          },
+          "documentation": {
+            "verified": true,
+            "readme_or_docs_url": "https://github.com/tabler/tabler/blob/dev/README.md",
+            "quality_review": "README or repository documentation inspected; end-to-end tutorial completeness not independently tested"
+          },
+          "dependencies": {
+            "repository_package_json_runtime_dependencies": [
+              "picomatch",
+              "shx"
+            ],
+            "manifest_inspected": true,
+            "deployment_requires_server_runtime": false
+          },
+          "github_pages": {
+            "compatible": true,
+            "mode": "direct_static_assets",
+            "requires_build_before_publishing": false,
+            "static_hosting_fit": "direct"
+          },
+          "practical_applications": [
+            "Static dashboards",
+            "Data tables",
+            "Admin-style layouts"
+          ],
+          "reusable_code_or_assets": [
+            "Bootstrap 5-based compiled layouts and components"
+          ],
+          "integration_requirements": [
+            "Select distributable Tabler assets or build theme from source",
+            "Host as static files and provide client-only data or public APIs"
+          ],
+          "limitations": [
+            "Dashboard is visual layer only; no server-side data management on Pages"
+          ],
+          "potential_conflicts": [
+            "Bootstrap version collision",
+            "Large overlap with separate Bootstrap components"
+          ],
+          "security": {
+            "documented_considerations": "Never put private API keys in front-end code",
+            "independent_vulnerability_audit": null
+          },
+          "performance": {
+            "documented_or_qualitative_considerations": "Dashboard assets can be heavy; subset components",
+            "measured_bundle_bytes": null,
+            "measured_lighthouse_score": null
+          },
+          "maintenance": {
+            "last_push_at": "2026-11-16T13:50:39Z",
+            "archived": false,
+            "assessment": "recent_repository_push"
+          },
+          "ranking": {
+            "usefulness_1_to_5": 3,
+            "reliability_1_to_5": 5,
+            "simplicity_1_to_5": 3,
+            "github_pages_fit_1_to_5": 5,
+            "overall_100": 82,
+            "category_rank": 3
+          },
+          "recommendation": "conditional",
+          "evidence_urls": [
+            "https://api.github.com/repos/tabler/tabler",
+            "https://github.com/tabler/tabler/blob/dev/README.md",
+            "https://api.github.com/repos/tabler/tabler/contents/package.json"
+          ]
+        },
+        {
+          "repository": "markmead/hyperui",
+          "url": "https://github.com/markmead/hyperui",
+          "description": "Copyable Tailwind CSS v4 markup for site sections and interfaces.",
+          "category": "ui_components_and_layouts",
+          "github_stars": 12284,
+          "last_repository_push_at": "2026-11-15T22:19:24Z",
+          "archived": false,
+          "license": {
+            "spdx_id": "MIT",
+            "github_api_value": "MIT"
+          },
+          "documentation": {
+            "verified": true,
+            "readme_or_docs_url": "https://github.com/markmead/hyperui/blob/main/README.md",
+            "quality_review": "README or repository documentation inspected; end-to-end tutorial completeness not independently tested"
+          },
+          "dependencies": {
+            "repository_package_json_runtime_dependencies": [
+              "@astrojs/check",
+              "@astrojs/cloudflare",
+              "@astrojs/mdx",
+              "@astrojs/sitemap",
+              "@lucide/astro",
+              "astro",
+              "wrangler"
+            ],
+            "manifest_inspected": true,
+            "deployment_requires_server_runtime": false
+          },
+          "github_pages": {
+            "compatible": true,
+            "mode": "compile_before_publish",
+            "requires_build_before_publishing": true,
+            "static_hosting_fit": "conditional_build"
+          },
+          "practical_applications": [
+            "Copy/paste cards",
+            "Navigation",
+            "Marketing sections"
+          ],
+          "reusable_code_or_assets": [
+            "Tailwind v4 HTML snippets"
+          ],
+          "integration_requirements": [
+            "Copy individual markup snippets into a Tailwind v4 project",
+            "Build Tailwind CSS before publishing"
+          ],
+          "limitations": [
+            "Not a standalone CSS package for arbitrary HTML",
+            "Repository development dependencies are not requirements to paste a snippet"
+          ],
+          "potential_conflicts": [
+            "Tailwind major version mismatch",
+            "Other CSS frameworks may conflict"
+          ],
+          "security": {
+            "documented_considerations": "Audit copied components for keyboard behavior and scripts",
+            "independent_vulnerability_audit": null
+          },
+          "performance": {
+            "documented_or_qualitative_considerations": "Avoid adding many unused utility classes",
+            "measured_bundle_bytes": null,
+            "measured_lighthouse_score": null
+          },
+          "maintenance": {
+            "last_push_at": "2026-11-15T22:19:24Z",
+            "archived": false,
+            "assessment": "recent_repository_push"
+          },
+          "ranking": {
+            "usefulness_1_to_5": 4,
+            "reliability_1_to_5": 5,
+            "simplicity_1_to_5": 3,
+            "github_pages_fit_1_to_5": 4,
+            "overall_100": 81,
+            "category_rank": 4
+          },
+          "recommendation": "conditional",
+          "evidence_urls": [
+            "https://api.github.com/repos/markmead/hyperui",
+            "https://github.com/markmead/hyperui/blob/main/README.md",
+            "https://api.github.com/repos/markmead/hyperui/contents/package.json"
+          ]
+        }
+      ]
+    },
+    "javascript_libraries": {
+      "label": "JavaScript libraries",
+      "ranked_resources": [
+        {
+          "repository": "alpinejs/alpine",
+          "url": "https://github.com/alpinejs/alpine",
+          "description": "Declarative client-side interactions in HTML attributes.",
+          "category": "javascript_libraries",
+          "github_stars": 32025,
+          "last_repository_push_at": "2026-11-04T00:45:57Z",
+          "archived": false,
+          "license": {
+            "spdx_id": "MIT",
+            "github_api_value": "MIT"
+          },
+          "documentation": {
+            "verified": true,
+            "readme_or_docs_url": "https://github.com/alpinejs/alpine/blob/main/README.md",
+            "quality_review": "README or repository documentation inspected; end-to-end tutorial completeness not independently tested"
+          },
+          "dependencies": {
+            "repository_package_json_runtime_dependencies": [],
+            "manifest_inspected": true,
+            "deployment_requires_server_runtime": false
+          },
+          "github_pages": {
+            "compatible": true,
+            "mode": "direct_static_assets",
+            "requires_build_before_publishing": false,
+            "static_hosting_fit": "direct"
+          },
+          "practical_applications": [
+            "Dropdowns",
+            "Accordions",
+            "Simple client-side state"
+          ],
+          "reusable_code_or_assets": [
+            "Browser CDN bundle",
+            "x- HTML directives"
+          ],
+          "integration_requirements": [
+            "Include a pinned standalone browser bundle via script tag",
+            "Implement keyboard, focus, and ARIA behaviors"
+          ],
+          "limitations": [
+            "Complex client-side state can become difficult to manage in markup"
+          ],
+          "potential_conflicts": [
+            "Strict Content-Security-Policy configurations may need Alpine CSP build",
+            "Avoid overlapping behavior with Bootstrap JS"
+          ],
+          "security": {
+            "documented_considerations": "Prefer CSP-compatible distribution where required; do not interpolate untrusted HTML",
+            "independent_vulnerability_audit": null
+          },
+          "performance": {
+            "documented_or_qualitative_considerations": "Optional script adds weight; only load when interactions require it",
+            "measured_bundle_bytes": null,
+            "measured_lighthouse_score": null
+          },
+          "maintenance": {
+            "last_push_at": "2026-11-04T00:45:57Z",
+            "archived": false,
+            "assessment": "recent_repository_push"
+          },
+          "ranking": {
+            "usefulness_1_to_5": 5,
+            "reliability_1_to_5": 5,
+            "simplicity_1_to_5": 4,
+            "github_pages_fit_1_to_5": 5,
+            "overall_100": 96,
+            "category_rank": 1
+          },
+          "recommendation": "adopt_conditionally",
+          "evidence_urls": [
+            "https://api.github.com/repos/alpinejs/alpine",
+            "https://github.com/alpinejs/alpine/blob/main/README.md",
+            "https://api.github.com/repos/alpinejs/alpine/contents/package.json"
+          ]
+        },
+        {
+          "repository": "chartjs/Chart.js",
+          "url": "https://github.com/chartjs/Chart.js",
+          "description": "HTML canvas charts driven by client-side JavaScript data.",
+          "category": "javascript_libraries",
+          "github_stars": 67799,
+          "last_repository_push_at": "2026-11-09T02:22:25Z",
+          "archived": false,
+          "license": {
+            "spdx_id": "MIT",
+            "github_api_value": "MIT"
+          },
+          "documentation": {
+            "verified": true,
+            "readme_or_docs_url": "https://github.com/chartjs/Chart.js/blob/master/README.md",
+            "quality_review": "README or repository documentation inspected; end-to-end tutorial completeness not independently tested"
+          },
+          "dependencies": {
+            "repository_package_json_runtime_dependencies": [
+              "@kurkle/color"
+            ],
+            "manifest_inspected": true,
+            "deployment_requires_server_runtime": false
+          },
+          "github_pages": {
+            "compatible": true,
+            "mode": "direct_static_assets",
+            "requires_build_before_publishing": false,
+            "static_hosting_fit": "direct"
+          },
+          "practical_applications": [
+            "Public data charts",
+            "Analytics visualizations backed by static JSON"
+          ],
+          "reusable_code_or_assets": [
+            "Canvas chart widgets"
+          ],
+          "integration_requirements": [
+            "Use a prebuilt browser bundle",
+            "Provide static data or permitted public API endpoint",
+            "Provide accessible text/table alternative"
+          ],
+          "limitations": [
+            "Charts need client scripting; screen-reader alternatives required"
+          ],
+          "potential_conflicts": [
+            "Do not duplicate separate charting toolkits"
+          ],
+          "security": {
+            "documented_considerations": "Never expose private reporting tokens in client-side data requests",
+            "independent_vulnerability_audit": null
+          },
+          "performance": {
+            "documented_or_qualitative_considerations": "Load on chart pages only; animation can affect performance",
+            "measured_bundle_bytes": null,
+            "measured_lighthouse_score": null
+          },
+          "maintenance": {
+            "last_push_at": "2026-11-09T02:22:25Z",
+            "archived": false,
+            "assessment": "recent_repository_push"
+          },
+          "ranking": {
+            "usefulness_1_to_5": 4,
+            "reliability_1_to_5": 5,
+            "simplicity_1_to_5": 4,
+            "github_pages_fit_1_to_5": 5,
+            "overall_100": 91,
+            "category_rank": 2
+          },
+          "recommendation": "conditional",
+          "evidence_urls": [
+            "https://api.github.com/repos/chartjs/Chart.js",
+            "https://github.com/chartjs/Chart.js/blob/master/README.md",
+            "https://api.github.com/repos/chartjs/Chart.js/contents/package.json"
+          ]
+        },
+        {
+          "repository": "cure53/DOMPurify",
+          "url": "https://github.com/cure53/DOMPurify",
+          "description": "Browser-side HTML/SVG sanitization to reduce cross-site scripting risk.",
+          "category": "javascript_libraries",
+          "github_stars": 17532,
+          "last_repository_push_at": "2026-11-16T07:42:20Z",
+          "archived": false,
+          "license": {
+            "spdx_id": "Apache-2.0",
+            "github_api_value": "Apache-2.0"
+          },
+          "documentation": {
+            "verified": true,
+            "readme_or_docs_url": "https://github.com/cure53/DOMPurify/blob/main/README.md",
+            "quality_review": "README or repository documentation inspected; end-to-end tutorial completeness not independently tested"
+          },
+          "dependencies": {
+            "repository_package_json_runtime_dependencies": [],
+            "manifest_inspected": true,
+            "deployment_requires_server_runtime": false
+          },
+          "github_pages": {
+            "compatible": true,
+            "mode": "direct_static_assets",
+            "requires_build_before_publishing": false,
+            "static_hosting_fit": "direct"
+          },
+          "practical_applications": [
+            "Sanitize untrusted HTML before DOM insertion"
+          ],
+          "reusable_code_or_assets": [
+            "Browser-side sanitizer distribution"
+          ],
+          "integration_requirements": [
+            "Load maintained DOMPurify browser distribution and sanitize user-supplied HTML before injection"
+          ],
+          "limitations": [
+            "Not a substitute for server-side validation when an API/backend exists",
+            "Use only when rendering untrusted HTML"
+          ],
+          "potential_conflicts": [
+            "Do not treat DOMPurify as a replacement for safe DOM APIs"
+          ],
+          "security": {
+            "documented_considerations": "Repository README states dual MPL-2.0 OR Apache-2.0 while GitHub API reports Apache-2.0; check distribution and license before use",
+            "independent_vulnerability_audit": null
+          },
+          "performance": {
+            "documented_or_qualitative_considerations": "Unneeded on a simple site with static trusted text",
+            "measured_bundle_bytes": null,
+            "measured_lighthouse_score": null
+          },
+          "maintenance": {
+            "last_push_at": "2026-11-16T07:42:20Z",
+            "archived": false,
+            "assessment": "recent_repository_push"
+          },
+          "ranking": {
+            "usefulness_1_to_5": 4,
+            "reliability_1_to_5": 5,
+            "simplicity_1_to_5": 4,
+            "github_pages_fit_1_to_5": 5,
+            "overall_100": 91,
+            "category_rank": 3
+          },
+          "recommendation": "adopt_when_needed",
+          "evidence_urls": [
+            "https://api.github.com/repos/cure53/DOMPurify",
+            "https://github.com/cure53/DOMPurify/blob/main/README.md",
+            "https://api.github.com/repos/cure53/DOMPurify/contents/package.json"
+          ]
+        },
+        {
+          "repository": "GoogleChromeLabs/quicklink",
+          "url": "https://github.com/GoogleChromeLabs/quicklink",
+          "description": "Prefetches in-viewport links during browser idle time.",
+          "category": "javascript_libraries",
+          "github_stars": 11305,
+          "last_repository_push_at": "2026-11-01T01:43:56Z",
+          "archived": false,
+          "license": {
+            "spdx_id": "Apache-2.0",
+            "github_api_value": "Apache-2.0"
+          },
+          "documentation": {
+            "verified": true,
+            "readme_or_docs_url": "https://github.com/GoogleChromeLabs/quicklink/blob/main/README.md",
+            "quality_review": "README or repository documentation inspected; end-to-end tutorial completeness not independently tested"
+          },
+          "dependencies": {
+            "repository_package_json_runtime_dependencies": [
+              "route-manifest",
+              "throttles"
+            ],
+            "manifest_inspected": true,
+            "deployment_requires_server_runtime": false
+          },
+          "github_pages": {
+            "compatible": true,
+            "mode": "direct_static_assets",
+            "requires_build_before_publishing": false,
+            "static_hosting_fit": "direct"
+          },
+          "practical_applications": [
+            "Prefetch public same-origin navigation pages"
+          ],
+          "reusable_code_or_assets": [
+            "UMD and ESM browser builds"
+          ],
+          "integration_requirements": [
+            "Add and configure browser bundle only after profiling",
+            "Limit prefetch targets carefully"
+          ],
+          "limitations": [
+            "Prefetch can consume bandwidth and initiate requests before click"
+          ],
+          "potential_conflicts": [
+            "May conflict with custom prefetch handlers or analytics"
+          ],
+          "security": {
+            "documented_considerations": "Review privacy implications of unintended speculative fetches",
+            "independent_vulnerability_audit": null
+          },
+          "performance": {
+            "documented_or_qualitative_considerations": "Extra requests can worsen data use; run before/after field measurements",
+            "measured_bundle_bytes": null,
+            "measured_lighthouse_score": null
+          },
+          "maintenance": {
+            "last_push_at": "2026-11-01T01:43:56Z",
+            "archived": false,
+            "assessment": "recent_repository_push"
+          },
+          "ranking": {
+            "usefulness_1_to_5": 3,
+            "reliability_1_to_5": 5,
+            "simplicity_1_to_5": 3,
+            "github_pages_fit_1_to_5": 5,
+            "overall_100": 82,
+            "category_rank": 4
+          },
+          "recommendation": "defer",
+          "evidence_urls": [
+            "https://api.github.com/repos/GoogleChromeLabs/quicklink",
+            "https://github.com/GoogleChromeLabs/quicklink/blob/main/README.md",
+            "https://api.github.com/repos/GoogleChromeLabs/quicklink/contents/package.json"
+          ]
+        }
+      ]
+    },
+    "animations": {
+      "label": "Animations",
+      "ranked_resources": [
+        {
+          "repository": "juliangarnier/anime",
+          "url": "https://github.com/juliangarnier/anime",
+          "description": "JavaScript animation engine for DOM, CSS, SVG, and JS object values.",
+          "category": "animations",
+          "github_stars": 74805,
+          "last_repository_push_at": "2026-11-02T22:25:55Z",
+          "archived": false,
+          "license": {
+            "spdx_id": "MIT",
+            "github_api_value": "MIT"
+          },
+          "documentation": {
+            "verified": true,
+            "readme_or_docs_url": "https://github.com/juliangarnier/anime/blob/master/README.md",
+            "quality_review": "README or repository documentation inspected; end-to-end tutorial completeness not independently tested"
+          },
+          "dependencies": {
+            "repository_package_json_runtime_dependencies": [],
+            "manifest_inspected": true,
+            "deployment_requires_server_runtime": false
+          },
+          "github_pages": {
+            "compatible": true,
+            "mode": "direct_static_assets",
+            "requires_build_before_publishing": false,
+            "static_hosting_fit": "direct"
+          },
+          "practical_applications": [
+            "SVG animation",
+            "Animated hero elements",
+            "Timeline effects"
+          ],
+          "reusable_code_or_assets": [
+            "Browser-ready animation library output"
+          ],
+          "integration_requirements": [
+            "Use stable built assets or package bundle",
+            "Guard animations with prefers-reduced-motion"
+          ],
+          "limitations": [
+            "Animation is optional; avoid for primarily informational pages"
+          ],
+          "potential_conflicts": [
+            "Avoid two full animation runtimes simultaneously"
+          ],
+          "security": {
+            "documented_considerations": "Animated interfaces must remain usable for motion-sensitive users",
+            "independent_vulnerability_audit": null
+          },
+          "performance": {
+            "documented_or_qualitative_considerations": "Animating layout properties can cause reflow; favor transforms",
+            "measured_bundle_bytes": null,
+            "measured_lighthouse_score": null
+          },
+          "maintenance": {
+            "last_push_at": "2026-11-02T22:25:55Z",
+            "archived": false,
+            "assessment": "recent_repository_push"
+          },
+          "ranking": {
+            "usefulness_1_to_5": 4,
+            "reliability_1_to_5": 5,
+            "simplicity_1_to_5": 4,
+            "github_pages_fit_1_to_5": 5,
+            "overall_100": 91,
+            "category_rank": 1
+          },
+          "recommendation": "conditional",
+          "evidence_urls": [
+            "https://api.github.com/repos/juliangarnier/anime",
+            "https://github.com/juliangarnier/anime/blob/master/README.md",
+            "https://api.github.com/repos/juliangarnier/anime/contents/package.json"
+          ]
+        },
+        {
+          "repository": "motiondivision/motion",
+          "url": "https://github.com/motiondivision/motion",
+          "description": "Modern browser and framework animation library.",
+          "category": "animations",
+          "github_stars": 35255,
+          "last_repository_push_at": "2026-11-16T04:53:55Z",
+          "archived": false,
+          "license": {
+            "spdx_id": "MIT",
+            "github_api_value": "MIT"
+          },
+          "documentation": {
+            "verified": true,
+            "readme_or_docs_url": "https://github.com/motiondivision/motion/blob/main/README.md",
+            "quality_review": "README or repository documentation inspected; end-to-end tutorial completeness not independently tested"
+          },
+          "dependencies": {
+            "repository_package_json_runtime_dependencies": [],
+            "manifest_inspected": true,
+            "deployment_requires_server_runtime": false
+          },
+          "github_pages": {
+            "compatible": true,
+            "mode": "direct_static_assets",
+            "requires_build_before_publishing": false,
+            "static_hosting_fit": "direct"
+          },
+          "practical_applications": [
+            "Scroll-linked motion",
+            "Transitions",
+            "Web-Animations-based interactions"
+          ],
+          "reusable_code_or_assets": [
+            "Motion JavaScript package and browser usage"
+          ],
+          "integration_requirements": [
+            "Use vanilla JavaScript Motion implementation and a browser-compatible build",
+            "Do not require React for static sites"
+          ],
+          "limitations": [
+            "Package and deployment import choices require correct module entry"
+          ],
+          "potential_conflicts": [
+            "Do not combine with Anime.js without a demonstrated requirement"
+          ],
+          "security": {
+            "documented_considerations": "Honor prefers-reduced-motion and preserve interaction accessibility",
+            "independent_vulnerability_audit": null
+          },
+          "performance": {
+            "documented_or_qualitative_considerations": "Animation runtime is unnecessary for trivial fades",
+            "measured_bundle_bytes": null,
+            "measured_lighthouse_score": null
+          },
+          "maintenance": {
+            "last_push_at": "2026-11-16T04:53:55Z",
+            "archived": false,
+            "assessment": "recent_repository_push"
+          },
+          "ranking": {
+            "usefulness_1_to_5": 4,
+            "reliability_1_to_5": 5,
+            "simplicity_1_to_5": 3,
+            "github_pages_fit_1_to_5": 5,
+            "overall_100": 87,
+            "category_rank": 2
+          },
+          "recommendation": "conditional",
+          "evidence_urls": [
+            "https://api.github.com/repos/motiondivision/motion",
+            "https://github.com/motiondivision/motion/blob/main/README.md",
+            "https://api.github.com/repos/motiondivision/motion/contents/package.json"
+          ]
+        }
+      ]
+    },
+    "accessibility": {
+      "label": "Accessibility tools and patterns",
+      "ranked_resources": [
+        {
+          "repository": "w3c/aria-practices",
+          "url": "https://github.com/w3c/aria-practices",
+          "description": "WAI-ARIA Authoring Practices guidance and interaction patterns.",
+          "category": "accessibility",
+          "github_stars": 1364,
+          "last_repository_push_at": "2026-11-13T10:02:42Z",
+          "archived": false,
+          "license": {
+            "spdx_id": null,
+            "github_api_value": "NOASSERTION"
+          },
+          "documentation": {
+            "verified": true,
+            "readme_or_docs_url": "https://github.com/w3c/aria-practices/blob/main/README.md",
+            "quality_review": "README or repository documentation inspected; end-to-end tutorial completeness not independently tested"
+          },
+          "dependencies": {
+            "repository_package_json_runtime_dependencies": null,
+            "manifest_inspected": false,
+            "deployment_requires_server_runtime": false
+          },
+          "github_pages": {
+            "compatible": true,
+            "mode": "reference_only",
+            "requires_build_before_publishing": false,
+            "static_hosting_fit": "development_or_reference"
+          },
+          "practical_applications": [
+            "Implement accessible widgets",
+            "Keyboard and focus patterns"
+          ],
+          "reusable_code_or_assets": [
+            "Documented accessible behavior examples"
+          ],
+          "integration_requirements": [
+            "Use guide as implementation reference; adapt patterns to semantic HTML"
+          ],
+          "limitations": [
+            "ARIA does not automatically make poorly structured HTML accessible"
+          ],
+          "potential_conflicts": [],
+          "security": {
+            "documented_considerations": "Test real keyboard and assistive-technology behavior",
+            "independent_vulnerability_audit": null
+          },
+          "performance": {
+            "documented_or_qualitative_considerations": "Not a runtime dependency",
+            "measured_bundle_bytes": null,
+            "measured_lighthouse_score": null
+          },
+          "maintenance": {
+            "last_push_at": "2026-11-13T10:02:42Z",
+            "archived": false,
+            "assessment": "recent_repository_push"
+          },
+          "ranking": {
+            "usefulness_1_to_5": 5,
+            "reliability_1_to_5": 5,
+            "simplicity_1_to_5": 5,
+            "github_pages_fit_1_to_5": 5,
+            "overall_100": 100,
+            "category_rank": 1
+          },
+          "recommendation": "adopt",
+          "evidence_urls": [
+            "https://api.github.com/repos/w3c/aria-practices",
+            "https://github.com/w3c/aria-practices/blob/main/README.md"
+          ]
+        },
+        {
+          "repository": "dequelabs/axe-core",
+          "url": "https://github.com/dequelabs/axe-core",
+          "description": "Automated accessibility rule engine for web interfaces.",
+          "category": "accessibility",
+          "github_stars": 7832,
+          "last_repository_push_at": "2026-11-16T15:01:53Z",
+          "archived": false,
+          "license": {
+            "spdx_id": "MPL-2.0",
+            "github_api_value": "MPL-2.0"
+          },
+          "documentation": {
+            "verified": true,
+            "readme_or_docs_url": "https://github.com/dequelabs/axe-core/blob/develop/README.md",
+            "quality_review": "README or repository documentation inspected; end-to-end tutorial completeness not independently tested"
+          },
+          "dependencies": {
+            "repository_package_json_runtime_dependencies": null,
+            "manifest_inspected": false,
+            "deployment_requires_server_runtime": false
+          },
+          "github_pages": {
+            "compatible": true,
+            "mode": "development_audit_only",
+            "requires_build_before_publishing": false,
+            "static_hosting_fit": "development_or_reference"
+          },
+          "practical_applications": [
+            "Automated WCAG-focused rule checks",
+            "CI/browser test scripts"
+          ],
+          "reusable_code_or_assets": [
+            "Accessibility audit engine"
+          ],
+          "integration_requirements": [
+            "Run in local testing or CI against rendered pages"
+          ],
+          "limitations": [
+            "Automated findings cannot prove full accessibility"
+          ],
+          "potential_conflicts": [
+            "Avoid treating automated passing scores as human testing"
+          ],
+          "security": {
+            "documented_considerations": "Inspect generated reports; manual screen-reader and keyboard validation still needed",
+            "independent_vulnerability_audit": null
+          },
+          "performance": {
+            "documented_or_qualitative_considerations": "Does not need to ship with production website",
+            "measured_bundle_bytes": null,
+            "measured_lighthouse_score": null
+          },
+          "maintenance": {
+            "last_push_at": "2026-11-16T15:01:53Z",
+            "archived": false,
+            "assessment": "recent_repository_push"
+          },
+          "ranking": {
+            "usefulness_1_to_5": 5,
+            "reliability_1_to_5": 5,
+            "simplicity_1_to_5": 4,
+            "github_pages_fit_1_to_5": 5,
+            "overall_100": 96,
+            "category_rank": 2
+          },
+          "recommendation": "adopt",
+          "evidence_urls": [
+            "https://api.github.com/repos/dequelabs/axe-core",
+            "https://github.com/dequelabs/axe-core/blob/develop/README.md"
+          ]
+        },
+        {
+          "repository": "ffoodd/a11y.css",
+          "url": "https://github.com/ffoodd/a11y.css",
+          "description": "Diagnostic stylesheet that visually flags potential HTML accessibility issues.",
+          "category": "accessibility",
+          "github_stars": 1615,
+          "last_repository_push_at": "2026-04-24T07:33:25Z",
+          "archived": false,
+          "license": {
+            "spdx_id": "MIT",
+            "github_api_value": "MIT"
+          },
+          "documentation": {
+            "verified": true,
+            "readme_or_docs_url": "https://github.com/ffoodd/a11y.css/blob/main/README.md",
+            "quality_review": "README or repository documentation inspected; end-to-end tutorial completeness not independently tested"
+          },
+          "dependencies": {
+            "repository_package_json_runtime_dependencies": null,
+            "manifest_inspected": false,
+            "deployment_requires_server_runtime": false
+          },
+          "github_pages": {
+            "compatible": true,
+            "mode": "development_audit_only",
+            "requires_build_before_publishing": false,
+            "static_hosting_fit": "development_or_reference"
+          },
+          "practical_applications": [
+            "Visually highlight suspect markup in development"
+          ],
+          "reusable_code_or_assets": [
+            "Diagnostic CSS stylesheet"
+          ],
+          "integration_requirements": [
+            "Temporarily include stylesheet during development and remove before launch"
+          ],
+          "limitations": [
+            "Heuristic warnings only; not complete accessibility test"
+          ],
+          "potential_conflicts": [
+            "Must not ship diagnostic warning CSS in production"
+          ],
+          "security": {
+            "documented_considerations": "Diagnoses possible markup problems, not exploit security",
+            "independent_vulnerability_audit": null
+          },
+          "performance": {
+            "documented_or_qualitative_considerations": "Not intended as normal site styling",
+            "measured_bundle_bytes": null,
+            "measured_lighthouse_score": null
+          },
+          "maintenance": {
+            "last_push_at": "2026-04-24T07:33:25Z",
+            "archived": false,
+            "assessment": "recent_repository_push"
+          },
+          "ranking": {
+            "usefulness_1_to_5": 4,
+            "reliability_1_to_5": 4,
+            "simplicity_1_to_5": 5,
+            "github_pages_fit_1_to_5": 5,
+            "overall_100": 90,
+            "category_rank": 3
+          },
+          "recommendation": "adopt_conditionally",
+          "evidence_urls": [
+            "https://api.github.com/repos/ffoodd/a11y.css",
+            "https://github.com/ffoodd/a11y.css/blob/main/README.md"
+          ]
+        },
+        {
+          "repository": "ericwbailey/accessible-html-content-patterns",
+          "url": "https://github.com/ericwbailey/accessible-html-content-patterns",
+          "description": "Accessible semantic-HTML patterns and element reference examples.",
+          "category": "accessibility",
+          "github_stars": 194,
+          "last_repository_push_at": "2026-10-17T11:24:57Z",
+          "archived": false,
+          "license": {
+            "spdx_id": "MIT",
+            "github_api_value": "MIT"
+          },
+          "documentation": {
+            "verified": true,
+            "readme_or_docs_url": "https://github.com/ericwbailey/accessible-html-content-patterns/blob/main/README.md",
+            "quality_review": "README or repository documentation inspected; end-to-end tutorial completeness not independently tested"
+          },
+          "dependencies": {
+            "repository_package_json_runtime_dependencies": null,
+            "manifest_inspected": false,
+            "deployment_requires_server_runtime": false
+          },
+          "github_pages": {
+            "compatible": true,
+            "mode": "reference_only",
+            "requires_build_before_publishing": false,
+            "static_hosting_fit": "development_or_reference"
+          },
+          "practical_applications": [
+            "Semantic HTML reference",
+            "Accessible content patterns"
+          ],
+          "reusable_code_or_assets": [
+            "Markup examples"
+          ],
+          "integration_requirements": [
+            "Adapt example markup and verify semantics/keyboard use"
+          ],
+          "limitations": [
+            "Reference content may not capture every current WCAG nuance"
+          ],
+          "potential_conflicts": [],
+          "security": {
+            "documented_considerations": "Prefer semantic HTML and validated behavior over copying blindly",
+            "independent_vulnerability_audit": null
+          },
+          "performance": {
+            "documented_or_qualitative_considerations": "Reference resource only",
+            "measured_bundle_bytes": null,
+            "measured_lighthouse_score": null
+          },
+          "maintenance": {
+            "last_push_at": "2026-10-17T11:24:57Z",
+            "archived": false,
+            "assessment": "recent_repository_push"
+          },
+          "ranking": {
+            "usefulness_1_to_5": 4,
+            "reliability_1_to_5": 4,
+            "simplicity_1_to_5": 5,
+            "github_pages_fit_1_to_5": 5,
+            "overall_100": 90,
+            "category_rank": 4
+          },
+          "recommendation": "adopt_conditionally",
+          "evidence_urls": [
+            "https://api.github.com/repos/ericwbailey/accessible-html-content-patterns",
+            "https://github.com/ericwbailey/accessible-html-content-patterns/blob/main/README.md"
+          ]
+        },
+        {
+          "repository": "pa11y/pa11y",
+          "url": "https://github.com/pa11y/pa11y",
+          "description": "Command-line and Node.js accessibility test runner.",
+          "category": "accessibility",
+          "github_stars": 4601,
+          "last_repository_push_at": "2026-11-16T02:43:59Z",
+          "archived": false,
+          "license": {
+            "spdx_id": "LGPL-3.0",
+            "github_api_value": "LGPL-3.0"
+          },
+          "documentation": {
+            "verified": true,
+            "readme_or_docs_url": "https://github.com/pa11y/pa11y/blob/main/README.md",
+            "quality_review": "README or repository documentation inspected; end-to-end tutorial completeness not independently tested"
+          },
+          "dependencies": {
+            "repository_package_json_runtime_dependencies": null,
+            "manifest_inspected": false,
+            "deployment_requires_server_runtime": false
+          },
+          "github_pages": {
+            "compatible": true,
+            "mode": "development_audit_only",
+            "requires_build_before_publishing": false,
+            "static_hosting_fit": "development_or_reference"
+          },
+          "practical_applications": [
+            "Automated checks of rendered pages in CI"
+          ],
+          "reusable_code_or_assets": [
+            "Node CLI test runner"
+          ],
+          "integration_requirements": [
+            "Run Node and browser-backed checks after local build or on published Pages URL"
+          ],
+          "limitations": [
+            "Node/browser installation and testing environment required"
+          ],
+          "potential_conflicts": [
+            "Potential overlap with axe-core testing; choose tooling intentionally"
+          ],
+          "security": {
+            "documented_considerations": "Restrict scanning to URLs under your control",
+            "independent_vulnerability_audit": null
+          },
+          "performance": {
+            "documented_or_qualitative_considerations": "No production JavaScript required",
+            "measured_bundle_bytes": null,
+            "measured_lighthouse_score": null
+          },
+          "maintenance": {
+            "last_push_at": "2026-11-16T02:43:59Z",
+            "archived": false,
+            "assessment": "recent_repository_push"
+          },
+          "ranking": {
+            "usefulness_1_to_5": 4,
+            "reliability_1_to_5": 5,
+            "simplicity_1_to_5": 3,
+            "github_pages_fit_1_to_5": 5,
+            "overall_100": 87,
+            "category_rank": 5
+          },
+          "recommendation": "conditional",
+          "evidence_urls": [
+            "https://api.github.com/repos/pa11y/pa11y",
+            "https://github.com/pa11y/pa11y/blob/main/README.md"
+          ]
+        }
+      ]
+    },
+    "seo_utilities": {
+      "label": "SEO utilities",
+      "ranked_resources": [
+        {
+          "repository": "joshbuchea/HEAD",
+          "url": "https://github.com/joshbuchea/HEAD",
+          "description": "Reference for HTML head markup, metadata, and document hints.",
+          "category": "seo_utilities",
+          "github_stars": 30278,
+          "last_repository_push_at": "2026-05-28T02:33:42Z",
+          "archived": false,
+          "license": {
+            "spdx_id": null,
+            "github_api_value": null
+          },
+          "documentation": {
+            "verified": true,
+            "readme_or_docs_url": "https://github.com/joshbuchea/HEAD/blob/master/README.md",
+            "quality_review": "README or repository documentation inspected; end-to-end tutorial completeness not independently tested"
+          },
+          "dependencies": {
+            "repository_package_json_runtime_dependencies": null,
+            "manifest_inspected": false,
+            "deployment_requires_server_runtime": false
+          },
+          "github_pages": {
+            "compatible": true,
+            "mode": "reference_only",
+            "requires_build_before_publishing": false,
+            "static_hosting_fit": "development_or_reference"
+          },
+          "practical_applications": [
+            "Meta tags",
+            "Canonical URLs",
+            "Social previews",
+            "Document head ordering"
+          ],
+          "reusable_code_or_assets": [
+            "HTML head snippets and explanations"
+          ],
+          "integration_requirements": [
+            "Use relevant head elements and absolute canonical URLs",
+            "Avoid duplicate meta tags"
+          ],
+          "limitations": [
+            "Repo does not automatically generate metadata; license not available in GitHub API"
+          ],
+          "potential_conflicts": [
+            "Do not use both hand-authored and generated canonical/meta tags without deduplication"
+          ],
+          "security": {
+            "documented_considerations": "Avoid unsafe third-party inline script tags copied from general examples",
+            "independent_vulnerability_audit": null
+          },
+          "performance": {
+            "documented_or_qualitative_considerations": "Prune unnecessary preconnect/preload hints",
+            "measured_bundle_bytes": null,
+            "measured_lighthouse_score": null
+          },
+          "maintenance": {
+            "last_push_at": "2026-05-28T02:33:42Z",
+            "archived": false,
+            "assessment": "recent_repository_push"
+          },
+          "ranking": {
+            "usefulness_1_to_5": 5,
+            "reliability_1_to_5": 4,
+            "simplicity_1_to_5": 5,
+            "github_pages_fit_1_to_5": 5,
+            "overall_100": 95,
+            "category_rank": 1
+          },
+          "recommendation": "adopt",
+          "evidence_urls": [
+            "https://api.github.com/repos/joshbuchea/HEAD",
+            "https://github.com/joshbuchea/HEAD/blob/master/README.md"
+          ]
+        },
+        {
+          "repository": "jekyll/jekyll-seo-tag",
+          "url": "https://github.com/jekyll/jekyll-seo-tag",
+          "description": "Jekyll plugin generating SEO and social metadata tags.",
+          "category": "seo_utilities",
+          "github_stars": 1731,
+          "last_repository_push_at": "2026-09-29T23:58:38Z",
+          "archived": false,
+          "license": {
+            "spdx_id": "MIT",
+            "github_api_value": "MIT"
+          },
+          "documentation": {
+            "verified": true,
+            "readme_or_docs_url": "https://github.com/jekyll/jekyll-seo-tag/blob/master/docs/README.md",
+            "quality_review": "README or repository documentation inspected; end-to-end tutorial completeness not independently tested"
+          },
+          "dependencies": {
+            "repository_package_json_runtime_dependencies": null,
+            "manifest_inspected": false,
+            "deployment_requires_server_runtime": false
+          },
+          "github_pages": {
+            "compatible": true,
+            "mode": "jekyll_build_only",
+            "requires_build_before_publishing": true,
+            "static_hosting_fit": "conditional_build"
+          },
+          "practical_applications": [
+            "Jekyll title/description/canonical metadata",
+            "Open Graph and structured data"
+          ],
+          "reusable_code_or_assets": [
+            "Liquid SEO tag plugin"
+          ],
+          "integration_requirements": [
+            "Use only with Jekyll",
+            "Include jekyll-seo-tag in _config.yml plugins",
+            "Insert {% seo %} in template head"
+          ],
+          "limitations": [
+            "Not a plugin for plain HTML files",
+            "SEO plugin emits metadata, not SEO content audits"
+          ],
+          "potential_conflicts": [
+            "Avoid duplicate manually-coded meta/canonical tags",
+            "Not compatible with Astro without reimplementation"
+          ],
+          "security": {
+            "documented_considerations": "Validate emitted canonical origin and structured data",
+            "independent_vulnerability_audit": null
+          },
+          "performance": {
+            "documented_or_qualitative_considerations": "Build-time output only; zero front-end script footprint",
+            "measured_bundle_bytes": null,
+            "measured_lighthouse_score": null
+          },
+          "maintenance": {
+            "last_push_at": "2026-09-29T23:58:38Z",
+            "archived": false,
+            "assessment": "recent_repository_push"
+          },
+          "ranking": {
+            "usefulness_1_to_5": 4,
+            "reliability_1_to_5": 5,
+            "simplicity_1_to_5": 4,
+            "github_pages_fit_1_to_5": 5,
+            "overall_100": 91,
+            "category_rank": 2
+          },
+          "recommendation": "conditional",
+          "evidence_urls": [
+            "https://api.github.com/repos/jekyll/jekyll-seo-tag",
+            "https://github.com/jekyll/jekyll-seo-tag/blob/master/docs/README.md",
+            "https://github.com/jekyll/jekyll-seo-tag/blob/master/docs/installation.md",
+            "https://github.com/jekyll/jekyll-seo-tag/blob/master/docs/usage.md",
+            "https://github.com/github/pages-gem/blob/master/lib/github-pages/dependencies.rb"
+          ]
+        },
+        {
+          "repository": "jekyll/jekyll-sitemap",
+          "url": "https://github.com/jekyll/jekyll-sitemap",
+          "description": "Jekyll plugin generating a sitemap.xml file.",
+          "category": "seo_utilities",
+          "github_stars": 982,
+          "last_repository_push_at": "2024-08-08T22:28:41Z",
+          "archived": false,
+          "license": {
+            "spdx_id": "MIT",
+            "github_api_value": "MIT"
+          },
+          "documentation": {
+            "verified": true,
+            "readme_or_docs_url": "https://github.com/jekyll/jekyll-sitemap/blob/master/README.md",
+            "quality_review": "README or repository documentation inspected; end-to-end tutorial completeness not independently tested"
+          },
+          "dependencies": {
+            "repository_package_json_runtime_dependencies": null,
+            "manifest_inspected": false,
+            "deployment_requires_server_runtime": false
+          },
+          "github_pages": {
+            "compatible": true,
+            "mode": "jekyll_build_only",
+            "requires_build_before_publishing": true,
+            "static_hosting_fit": "conditional_build"
+          },
+          "practical_applications": [
+            "Generate sitemap.xml for Jekyll sites"
+          ],
+          "reusable_code_or_assets": [
+            "Jekyll plugin-generated sitemap"
+          ],
+          "integration_requirements": [
+            "Include jekyll-sitemap in _config.yml plugins",
+            "Provide site.url and correct baseurl"
+          ],
+          "limitations": [
+            "Does not apply to bare HTML without Jekyll",
+            "2024 last push signals slower maintenance"
+          ],
+          "potential_conflicts": [
+            "Avoid a second independently generated sitemap.xml"
+          ],
+          "security": {
+            "documented_considerations": "Ensure sitemap does not unintentionally expose unpublished paths",
+            "independent_vulnerability_audit": null
+          },
+          "performance": {
+            "documented_or_qualitative_considerations": "Build-time only; no runtime weight",
+            "measured_bundle_bytes": null,
+            "measured_lighthouse_score": null
+          },
+          "maintenance": {
+            "last_push_at": "2024-08-08T22:28:41Z",
+            "archived": false,
+            "assessment": "low_recent_commit_activity"
+          },
+          "ranking": {
+            "usefulness_1_to_5": 4,
+            "reliability_1_to_5": 4,
+            "simplicity_1_to_5": 4,
+            "github_pages_fit_1_to_5": 5,
+            "overall_100": 86,
+            "category_rank": 3
+          },
+          "recommendation": "conditional",
+          "evidence_urls": [
+            "https://api.github.com/repos/jekyll/jekyll-sitemap",
+            "https://github.com/jekyll/jekyll-sitemap/blob/master/README.md",
+            "https://github.com/github/pages-gem/blob/master/lib/github-pages/dependencies.rb"
+          ]
+        }
+      ]
+    },
+    "static_site_generators": {
+      "label": "Static site generators",
+      "ranked_resources": [
+        {
+          "repository": "jekyll/jekyll",
+          "url": "https://github.com/jekyll/jekyll",
+          "description": "Ruby/Liquid/Markdown static-site generator supported by GitHub Pages.",
+          "category": "static_site_generators",
+          "github_stars": 51785,
+          "last_repository_push_at": "2026-10-13T18:44:40Z",
+          "archived": false,
+          "license": {
+            "spdx_id": "MIT",
+            "github_api_value": "MIT"
+          },
+          "documentation": {
+            "verified": true,
+            "readme_or_docs_url": "https://github.com/jekyll/jekyll/blob/master/README.markdown",
+            "quality_review": "README or repository documentation inspected; end-to-end tutorial completeness not independently tested"
+          },
+          "dependencies": {
+            "repository_package_json_runtime_dependencies": null,
+            "manifest_inspected": false,
+            "deployment_requires_server_runtime": false
+          },
+          "github_pages": {
+            "compatible": true,
+            "mode": "github_pages_jekyll_build",
+            "requires_build_before_publishing": true,
+            "static_hosting_fit": "conditional_build"
+          },
+          "practical_applications": [
+            "Multi-page blogs",
+            "Shared layouts",
+            "Markdown content"
+          ],
+          "reusable_code_or_assets": [
+            "Layouts",
+            "Includes",
+            "Liquid templates",
+            "Collections"
+          ],
+          "integration_requirements": [
+            "Configure _config.yml and GitHub Pages-supported Jekyll dependencies",
+            "Use local Ruby/Bundler for reproducible preview if needed"
+          ],
+          "limitations": [
+            "Default Pages Jekyll environment pins plugin and engine versions",
+            "Extra plugin support is restricted under Pages native build"
+          ],
+          "potential_conflicts": [
+            "Avoid mixing Jekyll Liquid with Astro or other render pipelines",
+            "Use one static-site generator"
+          ],
+          "security": {
+            "documented_considerations": "Do not put secrets in source or Liquid data",
+            "independent_vulnerability_audit": null
+          },
+          "performance": {
+            "documented_or_qualitative_considerations": "Output is static once generated",
+            "measured_bundle_bytes": null,
+            "measured_lighthouse_score": null
+          },
+          "maintenance": {
+            "last_push_at": "2026-10-13T18:44:40Z",
+            "archived": false,
+            "assessment": "recent_repository_push"
+          },
+          "ranking": {
+            "usefulness_1_to_5": 4,
+            "reliability_1_to_5": 5,
+            "simplicity_1_to_5": 4,
+            "github_pages_fit_1_to_5": 5,
+            "overall_100": 91,
+            "category_rank": 1
+          },
+          "recommendation": "conditional",
+          "evidence_urls": [
+            "https://api.github.com/repos/jekyll/jekyll",
+            "https://github.com/jekyll/jekyll/blob/master/README.markdown",
+            "https://github.com/github/pages-gem/blob/master/lib/github-pages/dependencies.rb"
+          ]
+        },
+        {
+          "repository": "withastro/astro",
+          "url": "https://github.com/withastro/astro",
+          "description": "Static-capable content site generator requiring Node-based build workflow.",
+          "category": "static_site_generators",
+          "github_stars": 63997,
+          "last_repository_push_at": "2026-11-16T14:57:33Z",
+          "archived": false,
+          "license": {
+            "spdx_id": null,
+            "github_api_value": "NOASSERTION"
+          },
+          "documentation": {
+            "verified": true,
+            "readme_or_docs_url": "https://github.com/withastro/astro/blob/main/README.md",
+            "quality_review": "README or repository documentation inspected; end-to-end tutorial completeness not independently tested"
+          },
+          "dependencies": {
+            "repository_package_json_runtime_dependencies": null,
+            "manifest_inspected": false,
+            "deployment_requires_server_runtime": false
+          },
+          "github_pages": {
+            "compatible": true,
+            "mode": "compile_before_publish",
+            "requires_build_before_publishing": true,
+            "static_hosting_fit": "conditional_build"
+          },
+          "practical_applications": [
+            "Content-driven static sites",
+            "Reusable component templates"
+          ],
+          "reusable_code_or_assets": [
+            "Astro components",
+            "Generated static HTML"
+          ],
+          "integration_requirements": [
+            "Set static output",
+            "Use Node build and deploy generated directory through GitHub Actions",
+            "Configure project site base path when hosted under owner.github.io/repository"
+          ],
+          "limitations": [
+            "Not deployed from raw Astro source without build",
+            "Dynamic server endpoints require separate hosting"
+          ],
+          "potential_conflicts": [
+            "Do not run a parallel Jekyll build",
+            "Careful handling of asset base paths"
+          ],
+          "security": {
+            "documented_considerations": "Choose static-only integrations; do not expose server secrets in generated HTML",
+            "independent_vulnerability_audit": null
+          },
+          "performance": {
+            "documented_or_qualitative_considerations": "Static generation avoids mandatory framework hydration; audit added islands",
+            "measured_bundle_bytes": null,
+            "measured_lighthouse_score": null
+          },
+          "maintenance": {
+            "last_push_at": "2026-11-16T14:57:33Z",
+            "archived": false,
+            "assessment": "recent_repository_push"
+          },
+          "ranking": {
+            "usefulness_1_to_5": 4,
+            "reliability_1_to_5": 5,
+            "simplicity_1_to_5": 2,
+            "github_pages_fit_1_to_5": 4,
+            "overall_100": 77,
+            "category_rank": 2
+          },
+          "recommendation": "conditional",
+          "evidence_urls": [
+            "https://api.github.com/repos/withastro/astro",
+            "https://github.com/withastro/astro/blob/main/README.md"
+          ]
+        }
+      ]
+    },
+    "development_resources": {
+      "label": "Development and quality resources",
+      "ranked_resources": [
+        {
+          "repository": "thedaviddias/Front-End-Checklist",
+          "url": "https://github.com/thedaviddias/Front-End-Checklist",
+          "description": "Review checklist for web development quality and launch readiness.",
+          "category": "development_resources",
+          "github_stars": 74749,
+          "last_repository_push_at": "2026-10-31T05:44:22Z",
+          "archived": false,
+          "license": {
+            "spdx_id": "MIT",
+            "github_api_value": "MIT"
+          },
+          "documentation": {
+            "verified": true,
+            "readme_or_docs_url": "https://github.com/thedaviddias/Front-End-Checklist/blob/main/README.md",
+            "quality_review": "README or repository documentation inspected; end-to-end tutorial completeness not independently tested"
+          },
+          "dependencies": {
+            "repository_package_json_runtime_dependencies": null,
+            "manifest_inspected": false,
+            "deployment_requires_server_runtime": false
+          },
+          "github_pages": {
+            "compatible": true,
+            "mode": "reference_only",
+            "requires_build_before_publishing": false,
+            "static_hosting_fit": "development_or_reference"
+          },
+          "practical_applications": [
+            "Preflight review of HTML, CSS, usability, accessibility, performance"
+          ],
+          "reusable_code_or_assets": [
+            "Launch checklist"
+          ],
+          "integration_requirements": [
+            "Use as human/AI review reference before publishing"
+          ],
+          "limitations": [
+            "Checklist not automated enforcement"
+          ],
+          "potential_conflicts": [],
+          "security": {
+            "documented_considerations": "Use to prompt security and accessibility review",
+            "independent_vulnerability_audit": null
+          },
+          "performance": {
+            "documented_or_qualitative_considerations": "No production dependency",
+            "measured_bundle_bytes": null,
+            "measured_lighthouse_score": null
+          },
+          "maintenance": {
+            "last_push_at": "2026-10-31T05:44:22Z",
+            "archived": false,
+            "assessment": "recent_repository_push"
+          },
+          "ranking": {
+            "usefulness_1_to_5": 5,
+            "reliability_1_to_5": 5,
+            "simplicity_1_to_5": 5,
+            "github_pages_fit_1_to_5": 5,
+            "overall_100": 100,
+            "category_rank": 1
+          },
+          "recommendation": "adopt",
+          "evidence_urls": [
+            "https://api.github.com/repos/thedaviddias/Front-End-Checklist",
+            "https://github.com/thedaviddias/Front-End-Checklist/blob/main/README.md"
+          ]
+        },
+        {
+          "repository": "prettier/prettier",
+          "url": "https://github.com/prettier/prettier",
+          "description": "Formatter for HTML, CSS, JavaScript, Markdown, and related files.",
+          "category": "development_resources",
+          "github_stars": 52417,
+          "last_repository_push_at": "2026-11-14T08:59:34Z",
+          "archived": false,
+          "license": {
+            "spdx_id": "MIT",
+            "github_api_value": "MIT"
+          },
+          "documentation": {
+            "verified": true,
+            "readme_or_docs_url": "https://github.com/prettier/prettier/blob/main/README.md",
+            "quality_review": "README or repository documentation inspected; end-to-end tutorial completeness not independently tested"
+          },
+          "dependencies": {
+            "repository_package_json_runtime_dependencies": null,
+            "manifest_inspected": false,
+            "deployment_requires_server_runtime": false
+          },
+          "github_pages": {
+            "compatible": true,
+            "mode": "development_audit_only",
+            "requires_build_before_publishing": false,
+            "static_hosting_fit": "development_or_reference"
+          },
+          "practical_applications": [
+            "Consistent formatting across HTML, CSS, JS and JSON"
+          ],
+          "reusable_code_or_assets": [
+            "Formatter CLI and integrations"
+          ],
+          "integration_requirements": [
+            "Run during authoring or CI; do not ship formatter files with website"
+          ],
+          "limitations": [
+            "Opinionated formatting may differ from existing code style"
+          ],
+          "potential_conflicts": [
+            "Configure compatible HTMLHint rules",
+            "Avoid formatting vendored minified assets"
+          ],
+          "security": {
+            "documented_considerations": "Formatting is not a security audit",
+            "independent_vulnerability_audit": null
+          },
+          "performance": {
+            "documented_or_qualitative_considerations": "No production runtime cost",
+            "measured_bundle_bytes": null,
+            "measured_lighthouse_score": null
+          },
+          "maintenance": {
+            "last_push_at": "2026-11-14T08:59:34Z",
+            "archived": false,
+            "assessment": "recent_repository_push"
+          },
+          "ranking": {
+            "usefulness_1_to_5": 5,
+            "reliability_1_to_5": 5,
+            "simplicity_1_to_5": 5,
+            "github_pages_fit_1_to_5": 5,
+            "overall_100": 100,
+            "category_rank": 2
+          },
+          "recommendation": "adopt",
+          "evidence_urls": [
+            "https://api.github.com/repos/prettier/prettier",
+            "https://github.com/prettier/prettier/blob/main/README.md"
+          ]
+        },
+        {
+          "repository": "htmlhint/HTMLHint",
+          "url": "https://github.com/htmlhint/HTMLHint",
+          "description": "Configurable HTML static analysis and linting.",
+          "category": "development_resources",
+          "github_stars": 3321,
+          "last_repository_push_at": "2026-11-14T03:22:04Z",
+          "archived": false,
+          "license": {
+            "spdx_id": "MIT",
+            "github_api_value": "MIT"
+          },
+          "documentation": {
+            "verified": true,
+            "readme_or_docs_url": "https://github.com/htmlhint/HTMLHint/blob/main/README.md",
+            "quality_review": "README or repository documentation inspected; end-to-end tutorial completeness not independently tested"
+          },
+          "dependencies": {
+            "repository_package_json_runtime_dependencies": [
+              "async",
+              "commander",
+              "glob",
+              "is-glob",
+              "node-sarif-builder",
+              "strip-json-comments",
+              "xml"
+            ],
+            "manifest_inspected": true,
+            "deployment_requires_server_runtime": false
+          },
+          "github_pages": {
+            "compatible": true,
+            "mode": "development_audit_only",
+            "requires_build_before_publishing": false,
+            "static_hosting_fit": "development_or_reference"
+          },
+          "practical_applications": [
+            "Catch invalid or risky HTML markup patterns during development"
+          ],
+          "reusable_code_or_assets": [
+            "HTML linter CLI and rules"
+          ],
+          "integration_requirements": [
+            "Run linter locally or in GitHub Actions",
+            "Configure project-specific rules"
+          ],
+          "limitations": [
+            "Lint success does not guarantee semantic or accessibility correctness"
+          ],
+          "potential_conflicts": [
+            "Coordinate formatting with Prettier to avoid noisy rules"
+          ],
+          "security": {
+            "documented_considerations": "Helps catch selected suspicious markup; not a full security scanner",
+            "independent_vulnerability_audit": null
+          },
+          "performance": {
+            "documented_or_qualitative_considerations": "No production runtime cost",
+            "measured_bundle_bytes": null,
+            "measured_lighthouse_score": null
+          },
+          "maintenance": {
+            "last_push_at": "2026-11-14T03:22:04Z",
+            "archived": false,
+            "assessment": "recent_repository_push"
+          },
+          "ranking": {
+            "usefulness_1_to_5": 5,
+            "reliability_1_to_5": 5,
+            "simplicity_1_to_5": 5,
+            "github_pages_fit_1_to_5": 5,
+            "overall_100": 100,
+            "category_rank": 3
+          },
+          "recommendation": "adopt",
+          "evidence_urls": [
+            "https://api.github.com/repos/htmlhint/HTMLHint",
+            "https://github.com/htmlhint/HTMLHint/blob/main/README.md",
+            "https://api.github.com/repos/htmlhint/HTMLHint/contents/package.json"
+          ]
+        },
+        {
+          "repository": "GoogleChrome/lighthouse",
+          "url": "https://github.com/GoogleChrome/lighthouse",
+          "description": "Browser/CLI audit tooling for page performance and best practices.",
+          "category": "development_resources",
+          "github_stars": 31127,
+          "last_repository_push_at": "2026-11-15T12:03:50Z",
+          "archived": false,
+          "license": {
+            "spdx_id": "Apache-2.0",
+            "github_api_value": "Apache-2.0"
+          },
+          "documentation": {
+            "verified": true,
+            "readme_or_docs_url": "https://github.com/GoogleChrome/lighthouse/blob/main/readme.md",
+            "quality_review": "README or repository documentation inspected; end-to-end tutorial completeness not independently tested"
+          },
+          "dependencies": {
+            "repository_package_json_runtime_dependencies": null,
+            "manifest_inspected": false,
+            "deployment_requires_server_runtime": false
+          },
+          "github_pages": {
+            "compatible": true,
+            "mode": "development_audit_only",
+            "requires_build_before_publishing": false,
+            "static_hosting_fit": "development_or_reference"
+          },
+          "practical_applications": [
+            "Audit production-like pages",
+            "Performance, SEO, accessibility and best-practice signals"
+          ],
+          "reusable_code_or_assets": [
+            "Browser/CLI audit tools"
+          ],
+          "integration_requirements": [
+            "Run against published or local-built static pages",
+            "Compare before/after measurements"
+          ],
+          "limitations": [
+            "Scores vary with environment and do not replace manual testing"
+          ],
+          "potential_conflicts": [
+            "Overlaps with axe-core but evaluates additional dimensions"
+          ],
+          "security": {
+            "documented_considerations": "Read privacy/security issues flagged but treat as signals",
+            "independent_vulnerability_audit": null
+          },
+          "performance": {
+            "documented_or_qualitative_considerations": "Performance scores are not measured in this catalog",
+            "measured_bundle_bytes": null,
+            "measured_lighthouse_score": null
+          },
+          "maintenance": {
+            "last_push_at": "2026-11-15T12:03:50Z",
+            "archived": false,
+            "assessment": "recent_repository_push"
+          },
+          "ranking": {
+            "usefulness_1_to_5": 5,
+            "reliability_1_to_5": 5,
+            "simplicity_1_to_5": 4,
+            "github_pages_fit_1_to_5": 5,
+            "overall_100": 96,
+            "category_rank": 4
+          },
+          "recommendation": "adopt",
+          "evidence_urls": [
+            "https://api.github.com/repos/GoogleChrome/lighthouse",
+            "https://github.com/GoogleChrome/lighthouse/blob/main/readme.md"
+          ]
+        },
+        {
+          "repository": "thedaviddias/Front-End-Performance-Checklist",
+          "url": "https://github.com/thedaviddias/Front-End-Performance-Checklist",
+          "description": "Front-end performance optimization checklist.",
+          "category": "development_resources",
+          "github_stars": 17400,
+          "last_repository_push_at": "2026-10-13T10:27:13Z",
+          "archived": false,
+          "license": {
+            "spdx_id": "MIT",
+            "github_api_value": "MIT"
+          },
+          "documentation": {
+            "verified": true,
+            "readme_or_docs_url": "https://github.com/thedaviddias/Front-End-Performance-Checklist/blob/main/README.md",
+            "quality_review": "README or repository documentation inspected; end-to-end tutorial completeness not independently tested"
+          },
+          "dependencies": {
+            "repository_package_json_runtime_dependencies": null,
+            "manifest_inspected": false,
+            "deployment_requires_server_runtime": false
+          },
+          "github_pages": {
+            "compatible": true,
+            "mode": "reference_only",
+            "requires_build_before_publishing": false,
+            "static_hosting_fit": "development_or_reference"
+          },
+          "practical_applications": [
+            "Performance planning",
+            "Image/asset optimization review"
+          ],
+          "reusable_code_or_assets": [
+            "Optimization checklist"
+          ],
+          "integration_requirements": [
+            "Prioritize recommendations after real Lighthouse profiling"
+          ],
+          "limitations": [
+            "Some recommendations depend on site architecture"
+          ],
+          "potential_conflicts": [],
+          "security": {
+            "documented_considerations": "Review linked external advice independently",
+            "independent_vulnerability_audit": null
+          },
+          "performance": {
+            "documented_or_qualitative_considerations": "No production dependency",
+            "measured_bundle_bytes": null,
+            "measured_lighthouse_score": null
+          },
+          "maintenance": {
+            "last_push_at": "2026-10-13T10:27:13Z",
+            "archived": false,
+            "assessment": "recent_repository_push"
+          },
+          "ranking": {
+            "usefulness_1_to_5": 4,
+            "reliability_1_to_5": 5,
+            "simplicity_1_to_5": 5,
+            "github_pages_fit_1_to_5": 5,
+            "overall_100": 95,
+            "category_rank": 5
+          },
+          "recommendation": "adopt_conditionally",
+          "evidence_urls": [
+            "https://api.github.com/repos/thedaviddias/Front-End-Performance-Checklist",
+            "https://github.com/thedaviddias/Front-End-Performance-Checklist/blob/main/README.md"
+          ]
+        },
+        {
+          "repository": "mdn/learning-area",
+          "url": "https://github.com/mdn/learning-area",
+          "description": "Source examples for MDN web-development learning modules.",
+          "category": "development_resources",
+          "github_stars": 7651,
+          "last_repository_push_at": "2026-10-20T11:04:14Z",
+          "archived": false,
+          "license": {
+            "spdx_id": "CC0-1.0",
+            "github_api_value": "CC0-1.0"
+          },
+          "documentation": {
+            "verified": true,
+            "readme_or_docs_url": "https://github.com/mdn/learning-area/blob/main/README.md",
+            "quality_review": "README or repository documentation inspected; end-to-end tutorial completeness not independently tested"
+          },
+          "dependencies": {
+            "repository_package_json_runtime_dependencies": null,
+            "manifest_inspected": false,
+            "deployment_requires_server_runtime": false
+          },
+          "github_pages": {
+            "compatible": true,
+            "mode": "reference_only",
+            "requires_build_before_publishing": false,
+            "static_hosting_fit": "development_or_reference"
+          },
+          "practical_applications": [
+            "Learn and reuse semantic HTML/CSS/JavaScript exercises"
+          ],
+          "reusable_code_or_assets": [
+            "Educational examples"
+          ],
+          "integration_requirements": [
+            "Adapt examples to site; validate against project context"
+          ],
+          "limitations": [
+            "Teaching examples are not complete production templates"
+          ],
+          "potential_conflicts": [],
+          "security": {
+            "documented_considerations": "Review sample code before production inclusion",
+            "independent_vulnerability_audit": null
+          },
+          "performance": {
+            "documented_or_qualitative_considerations": "No mandatory dependencies for static examples",
+            "measured_bundle_bytes": null,
+            "measured_lighthouse_score": null
+          },
+          "maintenance": {
+            "last_push_at": "2026-10-20T11:04:14Z",
+            "archived": false,
+            "assessment": "recent_repository_push"
+          },
+          "ranking": {
+            "usefulness_1_to_5": 4,
+            "reliability_1_to_5": 5,
+            "simplicity_1_to_5": 5,
+            "github_pages_fit_1_to_5": 5,
+            "overall_100": 95,
+            "category_rank": 6
+          },
+          "recommendation": "adopt_conditionally",
+          "evidence_urls": [
+            "https://api.github.com/repos/mdn/learning-area",
+            "https://github.com/mdn/learning-area/blob/main/README.md"
+          ]
+        },
+        {
+          "repository": "microsoft/Web-Dev-For-Beginners",
+          "url": "https://github.com/microsoft/Web-Dev-For-Beginners",
+          "description": "24-lesson curriculum covering HTML, CSS, JavaScript, and accessibility.",
+          "category": "development_resources",
+          "github_stars": 97118,
+          "last_repository_push_at": "2026-11-11T11:06:59Z",
+          "archived": false,
+          "license": {
+            "spdx_id": "MIT",
+            "github_api_value": "MIT"
+          },
+          "documentation": {
+            "verified": true,
+            "readme_or_docs_url": "https://github.com/microsoft/Web-Dev-For-Beginners/blob/main/README.md",
+            "quality_review": "README or repository documentation inspected; end-to-end tutorial completeness not independently tested"
+          },
+          "dependencies": {
+            "repository_package_json_runtime_dependencies": null,
+            "manifest_inspected": false,
+            "deployment_requires_server_runtime": false
+          },
+          "github_pages": {
+            "compatible": true,
+            "mode": "reference_only",
+            "requires_build_before_publishing": false,
+            "static_hosting_fit": "development_or_reference"
+          },
+          "practical_applications": [
+            "Training on markup, styles and JavaScript behavior"
+          ],
+          "reusable_code_or_assets": [
+            "Lesson examples and exercises"
+          ],
+          "integration_requirements": [
+            "Use curriculum as supporting knowledge, not a website skeleton"
+          ],
+          "limitations": [
+            "Educational breadth can distract from focused production task"
+          ],
+          "potential_conflicts": [],
+          "security": {
+            "documented_considerations": "Exercise code requires evaluation before reuse",
+            "independent_vulnerability_audit": null
+          },
+          "performance": {
+            "documented_or_qualitative_considerations": "No production dependency",
+            "measured_bundle_bytes": null,
+            "measured_lighthouse_score": null
+          },
+          "maintenance": {
+            "last_push_at": "2026-11-11T11:06:59Z",
+            "archived": false,
+            "assessment": "recent_repository_push"
+          },
+          "ranking": {
+            "usefulness_1_to_5": 4,
+            "reliability_1_to_5": 5,
+            "simplicity_1_to_5": 4,
+            "github_pages_fit_1_to_5": 5,
+            "overall_100": 91,
+            "category_rank": 7
+          },
+          "recommendation": "adopt_conditionally",
+          "evidence_urls": [
+            "https://api.github.com/repos/microsoft/Web-Dev-For-Beginners",
+            "https://github.com/microsoft/Web-Dev-For-Beginners/blob/main/README.md"
+          ]
+        },
+        {
+          "repository": "GoogleChrome/web-vitals",
+          "url": "https://github.com/GoogleChrome/web-vitals",
+          "description": "Client-side library for measuring Core Web Vitals.",
+          "category": "development_resources",
+          "github_stars": 8689,
+          "last_repository_push_at": "2026-11-12T03:40:47Z",
+          "archived": false,
+          "license": {
+            "spdx_id": "Apache-2.0",
+            "github_api_value": "Apache-2.0"
+          },
+          "documentation": {
+            "verified": true,
+            "readme_or_docs_url": "https://github.com/GoogleChrome/web-vitals/blob/main/README.md",
+            "quality_review": "README or repository documentation inspected; end-to-end tutorial completeness not independently tested"
+          },
+          "dependencies": {
+            "repository_package_json_runtime_dependencies": null,
+            "manifest_inspected": false,
+            "deployment_requires_server_runtime": false
+          },
+          "github_pages": {
+            "compatible": true,
+            "mode": "optional_browser_instrumentation",
+            "requires_build_before_publishing": false,
+            "static_hosting_fit": "development_or_reference"
+          },
+          "practical_applications": [
+            "Measure LCP, CLS and interaction metrics in real-user browsers"
+          ],
+          "reusable_code_or_assets": [
+            "Small browser metrics library"
+          ],
+          "integration_requirements": [
+            "Include only if metrics collection is needed",
+            "Use approved endpoint or local observer for reporting"
+          ],
+          "limitations": [
+            "No built-in backend for storing/aggregating data on Pages"
+          ],
+          "potential_conflicts": [
+            "May duplicate third-party performance analytics"
+          ],
+          "security": {
+            "documented_considerations": "Avoid sending user metrics without appropriate consent/privacy analysis",
+            "independent_vulnerability_audit": null
+          },
+          "performance": {
+            "documented_or_qualitative_considerations": "Real-user measurement is not the same as Lighthouse lab audit",
+            "measured_bundle_bytes": null,
+            "measured_lighthouse_score": null
+          },
+          "maintenance": {
+            "last_push_at": "2026-11-12T03:40:47Z",
+            "archived": false,
+            "assessment": "recent_repository_push"
+          },
+          "ranking": {
+            "usefulness_1_to_5": 4,
+            "reliability_1_to_5": 5,
+            "simplicity_1_to_5": 3,
+            "github_pages_fit_1_to_5": 5,
+            "overall_100": 87,
+            "category_rank": 8
+          },
+          "recommendation": "conditional",
+          "evidence_urls": [
+            "https://api.github.com/repos/GoogleChrome/web-vitals",
+            "https://github.com/GoogleChrome/web-vitals/blob/main/README.md"
+          ]
+        }
+      ]
+    }
+  },
+  "excluded_resources": [
+    {
+      "repository": "picocss/pico",
+      "url": "https://github.com/picocss/pico",
+      "reason": "Archived as verified by repository API on 2026-11-16; not chosen for a maintainability-first default.",
+      "archived": true,
+      "github_stars": 16811,
+      "last_repository_push_at": "2026-10-04T04:00:49Z",
+      "evidence_urls": [
+        "https://api.github.com/repos/picocss/pico"
+      ]
+    },
+    {
+      "repository": "shoelace-style/shoelace",
+      "url": "https://github.com/shoelace-style/shoelace",
+      "reason": "Archived; repo description indicates project transition to Web Awesome; do not base new components on archived implementation.",
+      "archived": true,
+      "github_stars": 13819,
+      "last_repository_push_at": "2026-05-14T13:39:51Z",
+      "evidence_urls": [
+        "https://api.github.com/repos/shoelace-style/shoelace"
+      ]
+    },
+    {
+      "repository": "bigskysoftware/htmx",
+      "url": "https://github.com/bigskysoftware/htmx",
+      "reason": "Its server-driven HTML exchange use cases need HTTP endpoints; not a priority for a no-backend Pages site, although static/local data features may still work.",
+      "archived": false,
+      "github_stars": 49645,
+      "last_repository_push_at": "2026-11-13T12:49:56Z",
+      "evidence_urls": [
+        "https://api.github.com/repos/bigskysoftware/htmx",
+        "https://api.github.com/repos/bigskysoftware/htmx/contents/package.json"
+      ]
+    },
+    {
+      "repository": "electron/electron",
+      "url": "https://github.com/electron/electron",
+      "reason": "Desktop application runtime rather than deployable static website template.",
+      "archived": null,
+      "github_stars": null,
+      "last_repository_push_at": null,
+      "evidence_urls": [
+        "https://github.com/topics/html"
+      ]
+    },
+    {
+      "repository": "rails/rails",
+      "url": "https://github.com/rails/rails",
+      "reason": "Server-side Ruby framework cannot execute on static GitHub Pages hosting.",
+      "archived": null,
+      "github_stars": null,
+      "last_repository_push_at": null,
+      "evidence_urls": [
+        "https://github.com/topics/html"
+      ]
+    },
+    {
+      "repository": "animate-css/animate.css",
+      "url": "https://github.com/animate-css/animate.css",
+      "reason": "Optional animation stylesheet with last repo push in 2024; prefer browser CSS for minimal sites or maintained JavaScript motion when necessary.",
+      "archived": false,
+      "github_stars": 83014,
+      "last_repository_push_at": "2024-07-29T19:34:21Z",
+      "evidence_urls": [
+        "https://api.github.com/repos/animate-css/animate.css"
+      ]
+    },
+    {
+      "repository": "michalsnik/aos",
+      "url": "https://github.com/michalsnik/aos",
+      "reason": "Scroll animation library with last repo push in 2024; not necessary for baseline static site.",
+      "archived": false,
+      "github_stars": 28056,
+      "last_repository_push_at": "2024-03-26T15:58:43Z",
+      "evidence_urls": [
+        "https://api.github.com/repos/michalsnik/aos"
+      ]
+    }
+  ],
+  "global_integration_notes": {
+    "pages_static_only": "No PHP, Ruby application server, Node server, database, private API, or custom server-rendered routes execute at request time on ordinary GitHub Pages.",
+    "project_pages_paths": "For project sites served under /repo-name/, relative URLs or configured base paths are needed to prevent broken assets.",
+    "css_conflicts": [
+      "Use just one primary CSS framework",
+      "Do not layer Bootstrap and Bulma grids/reset defaults",
+      "HyperUI markup requires compiled compatible Tailwind"
+    ],
+    "javascript_conflicts": [
+      "Avoid loading overlapping UI JS frameworks",
+      "Use Alpine/Bootstrap JS only for needed behaviors",
+      "Do not ship testing CLIs as browser bundles"
+    ],
+    "seo_conflicts": [
+      "Do not duplicate canonical or Open Graph tags when using jekyll-seo-tag",
+      "Use one sitemap generator or single authored sitemap",
+      "Canonical origin must match deployment URL"
+    ],
+    "forms_and_data": "HTML forms can render but require a separately hosted form processor/service to receive submissions. Never embed confidential keys.",
+    "license_policy": "A GitHub API license of NOASSERTION or null is recorded as spdx_id null; review redistribution terms before reuse.",
+    "security_policy": "Metadata and README inspection are not a dependency or vulnerability audit; pin versions, use trusted assets and review advisories before production.",
+    "performance_policy": "Use Lighthouse and real device testing; no performance score, benchmark or bundle measurement was invented."
+  },
+  "verification_evidence": {
+    "topic_index": "https://github.com/topics/html",
+    "github_pages_jekyll_dependency_versions": "https://github.com/github/pages-gem/blob/master/lib/github-pages/dependencies.rb",
+    "github_pages_gem_readme": "https://github.com/github/pages-gem/blob/master/README.md",
+    "jekyll_seo_tag_documentation": "https://github.com/jekyll/jekyll-seo-tag/blob/master/docs/installation.md",
+    "jekyll_sitemap_pages_warning": "https://github.com/jekyll/jekyll-sitemap/blob/master/README.md"
+  },
+  "unverified": {
+    "license_terms_where_no_assertion": true,
+    "package_vulnerability_status": null,
+    "actual_build_success": null,
+    "actual_github_pages_deployment_test": null,
+    "lighthouse_scores": null,
+    "exact_website_requirements": null
+  }
+}
