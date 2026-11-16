@@ -1,0 +1,3002 @@
+{
+  "catalog_id": "github-frontend-pages-2026-11-16",
+  "catalog_version": "1.0.0",
+  "generated_at_utc": "2026-11-16",
+  "source": "https://github.com/topics/frontend",
+  "task": "Research/catalog only; no source repository or website was modified.",
+  "method": {
+    "discovery": [
+      "GitHub frontend topic page",
+      "GitHub connector repository search",
+      "GitHub REST repository metadata",
+      "Selected GitHub README files",
+      "Official framework/hosting deployment guides"
+    ],
+    "selection": "Editorial ranking prioritizing usefulness, up-to-date activity, simplicity, functional fit, accessibility potential, and compatibility with GitHub Pages. Rankings are not measurements.",
+    "direct_topic_scope": "github_topic_frontend=true indicates verified explicit topic tagging; false resources are contextual compatible additions from related GitHub projects.",
+    "metadata_snapshot": "2026-11-16; GitHub star counts and push timestamps change over time.",
+    "license_interpretation": "license_spdx is GitHub API metadata, not an independent license audit. NOASSERTION is stored as null in normalized license_spdx and retained in github_license_spdx_raw.",
+    "verification_limits": [
+      "No source code built or executed",
+      "No vulnerability scanners run",
+      "No actual Lighthouse or axe audits conducted",
+      "No mobile/device/browser compatibility testing executed",
+      "Package transitive dependency graph and current release pin not exhaustively verified",
+      "Do not infer license permissions from this file alone"
+    ],
+    "unknowns": "Unverified facts are null; evaluative text is labeled as assessment and must not be treated as lab results."
+  },
+  "hosting_constraints": {
+    "platform": "GitHub Pages",
+    "served_artifacts": [
+      "HTML",
+      "CSS",
+      "JavaScript",
+      "images",
+      "fonts",
+      "static JSON and other static files"
+    ],
+    "server_side_runtime_supported": false,
+    "unsupported_examples": [
+      "Persistent Node/Python/PHP server",
+      "Runtime SSR requiring server",
+      "Private secret storage",
+      "Server action or internal dynamic API routes",
+      "On-host database or user authentication service"
+    ],
+    "external_services_possible": "Browser-side requests to independently hosted APIs are possible when CORS, authentication and secrets are handled correctly.",
+    "project_site_url_pattern": "https://USERNAME.github.io/REPOSITORY/",
+    "user_site_url_pattern": "https://USERNAME.github.io/",
+    "base_path_requirement": "Project-page assets and links must respect /REPOSITORY/; root site and custom root domain generally use /.",
+    "deployment_modes": {
+      "uncompiled": "Publish static files from a branch or workflow",
+      "compiled": "Use GitHub Actions to install, build and upload generated output only"
+    },
+    "seo_considerations": [
+      "Use unique title and meta description per page",
+      "Set canonical URLs correctly for Pages path",
+      "Generate sitemap.xml if needed",
+      "Provide robots.txt where appropriate",
+      "Prefer static-rendered pages for content discoverability",
+      "Check Open Graph previews and structured data"
+    ],
+    "accessibility_minimum": [
+      "Semantic navigation and heading hierarchy",
+      "Keyboard focus visible and logical",
+      "Appropriate labels, names and image alternatives",
+      "Responsive viewport meta",
+      "Respect prefers-reduced-motion",
+      "Check contrast",
+      "Test with axe and manual keyboard checks"
+    ],
+    "evidence_urls": [
+      "https://docs.github.com/en/pages/getting-started-with-github-pages/creating-a-github-pages-site",
+      "https://vite.dev/guide/static-deploy",
+      "https://docs.astro.build/en/guides/deploy/github/"
+    ]
+  },
+  "recommended_frontend_stack": {
+    "primary": "HTML5 + precompiled Bulma CSS + custom CSS + vanilla JavaScript + individual Lucide SVG icons",
+    "goal": "Low-dependency, responsive, accessible static website without build step.",
+    "platform": "GitHub Pages",
+    "runtime_dependencies": [
+      "Bulma CSS (vendor a pinned stable release)"
+    ],
+    "optional_runtime_dependencies": [
+      "alpinejs/alpine for complex toggles only",
+      "KittyGiraudel/a11y-dialog if accessible modals are required",
+      "nolimits4web/swiper only if touch carousels are required"
+    ],
+    "asset_strategy": "Prefer vendored version-pinned CSS/JS and only selected SVGs for determinism; verify version-specific licenses and integrity.",
+    "development_tools": [
+      "ESLint (only if JS grows)",
+      "Prettier",
+      "Lighthouse",
+      "axe-core"
+    ],
+    "build_required": false,
+    "publishing_strategy": "Commit/publish static HTML/CSS/JS. Root index.html and correct /REPOSITORY/ relative assets for project sites.",
+    "why": [
+      "No backend or compilation requirement",
+      "Strong mobile layout primitives",
+      "Framework-agnostic markup",
+      "Avoids shipping a large app framework for brochure/content use cases"
+    ],
+    "alternatives": [
+      {
+        "situation": "Content-heavy multi-page/blog",
+        "stack": [
+          "11ty/buildawesome stable Eleventy v3",
+          "Bulma or own CSS",
+          "Vanilla JS"
+        ],
+        "requires_build": true,
+        "published_folder": "_site (usual default)"
+      },
+      {
+        "situation": "Content-rich site with component templates and islands",
+        "stack": [
+          "withastro/astro",
+          "Bulma or own CSS",
+          "Selective component islands"
+        ],
+        "requires_build": true,
+        "published_folder": "dist"
+      },
+      {
+        "situation": "Complex client app",
+        "stack": [
+          "vitejs/vite",
+          "vuejs/core or preactjs/preact",
+          "one CSS system"
+        ],
+        "requires_build": true,
+        "published_folder": "dist"
+      }
+    ],
+    "evidence_urls": [
+      "https://bulma.io/documentation/start/installation/",
+      "https://github.com/alpinejs/alpine/blob/main/README.md",
+      "https://docs.github.com/en/pages/getting-started-with-github-pages/creating-a-github-pages-site"
+    ]
+  },
+  "prioritized_implementation_resources": [
+    {
+      "priority": 1,
+      "name": "jgthms/bulma",
+      "purpose": "Responsive CSS for static HTML",
+      "mode": "direct_static"
+    },
+    {
+      "priority": 2,
+      "name": "thedaviddias/Front-End-Checklist",
+      "purpose": "Preflight HTML/SEO/accessibility checklist",
+      "mode": "reference"
+    },
+    {
+      "priority": 3,
+      "name": "lucide-icons/lucide",
+      "purpose": "Individual local SVG icons",
+      "mode": "direct_static"
+    },
+    {
+      "priority": 4,
+      "name": "alpinejs/alpine",
+      "purpose": "Optional no-build menu/tabs interactions",
+      "mode": "direct_static"
+    },
+    {
+      "priority": 5,
+      "name": "KittyGiraudel/a11y-dialog",
+      "purpose": "Accessible modal only if needed",
+      "mode": "direct_static"
+    },
+    {
+      "priority": 6,
+      "name": "dequelabs/axe-core",
+      "purpose": "Automated accessibility testing",
+      "mode": "development_only"
+    },
+    {
+      "priority": 7,
+      "name": "GoogleChrome/lighthouse",
+      "purpose": "Verify performance, SEO and good practices",
+      "mode": "development_only"
+    },
+    {
+      "priority": 8,
+      "name": "vitejs/vite",
+      "purpose": "Introduce build tooling only when complexity requires it",
+      "mode": "build_optional"
+    },
+    {
+      "priority": 9,
+      "name": "withastro/astro",
+      "purpose": "Replace hand-authored multi-page setup for content-heavy site",
+      "mode": "static_build"
+    },
+    {
+      "priority": 10,
+      "name": "nolimits4web/swiper",
+      "purpose": "Add touch carousel only if justified",
+      "mode": "direct_static"
+    }
+  ],
+  "categories": {
+    "build_tools_and_static_generators": [
+      {
+        "category_rank": 1,
+        "name": "vitejs/vite",
+        "url": "https://github.com/vitejs/vite",
+        "description": "Next generation frontend tooling. It's fast!",
+        "metadata": {
+          "stars": 83928,
+          "last_pushed_at_utc": "2026-11-16T07:18:46Z",
+          "license_spdx": "MIT",
+          "github_license_spdx_raw": "MIT",
+          "archived": false,
+          "github_topic_frontend": true
+        },
+        "category": "build_tools_and_static_generators",
+        "recommendation": "recommended",
+        "technology_model": "build_tool",
+        "static_site_classification": "static_build",
+        "usable_directly_without_compilation": false,
+        "requires_compilation_for_primary_workflow": true,
+        "compatibility": {
+          "html": "integrates_with_generated_html",
+          "css": "can_coexist_with_css",
+          "javascript": "used_or_generated",
+          "github_pages": "static_build",
+          "server_required_on_github_pages": false
+        },
+        "dependencies": [
+          "Node.js for build",
+          "npm or equivalent"
+        ],
+        "full_transitive_dependencies_verified": null,
+        "installation": "npm create vite@latest; npm install; npm run build",
+        "configuration": "Set base to /REPOSITORY/ for project pages, / for user pages or root-domain sites; deploy via GitHub Actions.",
+        "build_process": "Generates dist/ for publication.",
+        "deployment_notes": "Ship only generated/static browser files; do not assume GitHub Pages runs Node.js or API servers.",
+        "practical_applications": [
+          "Multi-page HTML+JS development",
+          "Bundling assets for Vue/React/Svelte or vanilla JS"
+        ],
+        "reusable_code": [
+          "HTML starter",
+          "Asset bundling",
+          "Development server"
+        ],
+        "limitations": [
+          "Not needed for a small hand-authored static site",
+          "Local development server cannot run on GitHub Pages"
+        ],
+        "quality_review": {
+          "maintenance": "recent_push_verified",
+          "security_review": {
+            "independent_security_audit": null,
+            "known_vulnerability_status": null,
+            "dependency_vulnerabilities_scanned": null
+          },
+          "accessibility": null,
+          "performance": "Production builds bundle and optimize assets; no independent bundle measurements.",
+          "responsive_mobile": null,
+          "verified_browser_support_matrix": null,
+          "measured_mobile_page_speed": null,
+          "measured_a11y_score": null
+        },
+        "evidence_urls": [
+          "https://github.com/vitejs/vite",
+          "https://api.github.com/repos/vitejs/vite",
+          "https://vite.dev/guide/static-deploy"
+        ]
+      },
+      {
+        "category_rank": 2,
+        "name": "withastro/astro",
+        "url": "https://github.com/withastro/astro",
+        "description": "The web framework for content-driven websites.",
+        "metadata": {
+          "stars": 63997,
+          "last_pushed_at_utc": "2026-11-16T14:57:33Z",
+          "license_spdx": null,
+          "github_license_spdx_raw": "NOASSERTION",
+          "archived": false,
+          "github_topic_frontend": false
+        },
+        "category": "build_tools_and_static_generators",
+        "recommendation": "recommended",
+        "technology_model": "static_site_generator",
+        "static_site_classification": "static_build",
+        "usable_directly_without_compilation": false,
+        "requires_compilation_for_primary_workflow": true,
+        "compatibility": {
+          "html": "integrates_with_generated_html",
+          "css": "can_coexist_with_css",
+          "javascript": "used_or_generated",
+          "github_pages": "static_build",
+          "server_required_on_github_pages": false
+        },
+        "dependencies": [
+          "Node.js build environment",
+          "npm or equivalent"
+        ],
+        "full_transitive_dependencies_verified": null,
+        "installation": "npm create astro@latest",
+        "configuration": "Use static/prerendered output and configure site/base for repository subpaths; avoid server adapters/features.",
+        "build_process": "Build static output to dist/; deploy via Astro GitHub Action or custom Actions.",
+        "deployment_notes": "Ship only generated/static browser files; do not assume GitHub Pages runs Node.js or API servers.",
+        "practical_applications": [
+          "SEO-oriented multi-page content sites",
+          "Blogs",
+          "Documentation",
+          "Component islands"
+        ],
+        "reusable_code": [
+          "Page layouts",
+          "Content collections",
+          "Blog examples"
+        ],
+        "limitations": [
+          "SSR routes, sessions, and server endpoints require different hosting",
+          "Interactive islands may add framework JS"
+        ],
+        "quality_review": {
+          "maintenance": "recent_push_verified",
+          "security_review": {
+            "independent_security_audit": null,
+            "known_vulnerability_status": null,
+            "dependency_vulnerabilities_scanned": null
+          },
+          "accessibility": "Static HTML enables semantic markup; templates must be audited.",
+          "performance": "Static prerendering reduces default runtime JS; page-specific measurements unverified.",
+          "responsive_mobile": "Responsive behavior depends on stylesheet and template.",
+          "verified_browser_support_matrix": null,
+          "measured_mobile_page_speed": null,
+          "measured_a11y_score": null
+        },
+        "evidence_urls": [
+          "https://github.com/withastro/astro",
+          "https://api.github.com/repos/withastro/astro",
+          "https://docs.astro.build/en/guides/deploy/github/",
+          "https://github.com/withastro/astro/tree/main/examples/blog"
+        ]
+      },
+      {
+        "category_rank": 3,
+        "name": "11ty/buildawesome",
+        "url": "https://github.com/11ty/buildawesome",
+        "description": "A simpler site generator. Transforms a directory of templates (of varying types) into HTML.",
+        "metadata": {
+          "stars": 20043,
+          "last_pushed_at_utc": "2026-11-13T23:38:53Z",
+          "license_spdx": "MIT",
+          "github_license_spdx_raw": "MIT",
+          "archived": false,
+          "github_topic_frontend": false
+        },
+        "category": "build_tools_and_static_generators",
+        "recommendation": "recommended",
+        "technology_model": "static_site_generator",
+        "static_site_classification": "static_build",
+        "usable_directly_without_compilation": false,
+        "requires_compilation_for_primary_workflow": true,
+        "compatibility": {
+          "html": "integrates_with_generated_html",
+          "css": "can_coexist_with_css",
+          "javascript": "used_or_generated",
+          "github_pages": "static_build",
+          "server_required_on_github_pages": false
+        },
+        "dependencies": [
+          "Node.js build environment",
+          "npm package"
+        ],
+        "full_transitive_dependencies_verified": null,
+        "installation": "Use stable Eleventy v3 package @11ty/eleventy; repository also houses renamed Build Awesome/v4 development.",
+        "configuration": "Configure Eleventy input/output and site URLs; pin stable package rather than alpha unless intentionally testing.",
+        "build_process": "npx @11ty/eleventy builds the generated static site (typically _site/).",
+        "deployment_notes": "Ship only generated/static browser files; do not assume GitHub Pages runs Node.js or API servers.",
+        "practical_applications": [
+          "HTML/Markdown content sites",
+          "Blogs",
+          "Templates without SPA hydration"
+        ],
+        "reusable_code": [
+          "Template engine",
+          "Content generation",
+          "Layouts"
+        ],
+        "limitations": [
+          "Repository was renamed from 11ty/eleventy",
+          "v4 Build Awesome alpha differs from stable v3"
+        ],
+        "quality_review": {
+          "maintenance": "recent_push_verified",
+          "security_review": {
+            "independent_security_audit": null,
+            "known_vulnerability_status": null,
+            "dependency_vulnerabilities_scanned": null
+          },
+          "accessibility": "Accessibility depends on authored templates.",
+          "performance": "Pre-rendered HTML avoids mandatory client framework payload.",
+          "responsive_mobile": null,
+          "verified_browser_support_matrix": null,
+          "measured_mobile_page_speed": null,
+          "measured_a11y_score": null
+        },
+        "evidence_urls": [
+          "https://github.com/11ty/buildawesome",
+          "https://api.github.com/repos/11ty/buildawesome",
+          "https://github.com/11ty/buildawesome/blob/main/README.md",
+          "https://www.11ty.dev/docs/versions/"
+        ]
+      }
+    ],
+    "frameworks_and_interactivity": [
+      {
+        "category_rank": 1,
+        "name": "alpinejs/alpine",
+        "url": "https://github.com/alpinejs/alpine",
+        "description": "Minimal declarative interactivity in HTML markup.",
+        "metadata": {
+          "stars": 32025,
+          "last_pushed_at_utc": "2026-11-04T00:45:57Z",
+          "license_spdx": "MIT",
+          "github_license_spdx_raw": "MIT",
+          "archived": false,
+          "github_topic_frontend": false
+        },
+        "category": "frameworks_and_interactivity",
+        "recommendation": "recommended",
+        "technology_model": "vanilla_js_markup_enhancement",
+        "static_site_classification": "direct_static",
+        "usable_directly_without_compilation": true,
+        "requires_compilation_for_primary_workflow": false,
+        "compatibility": {
+          "html": "native",
+          "css": "can_coexist_with_css",
+          "javascript": "used_or_generated",
+          "github_pages": "direct_static",
+          "server_required_on_github_pages": false
+        },
+        "dependencies": [],
+        "full_transitive_dependencies_verified": null,
+        "installation": "Use its published prebuilt CDN script or vendor a pinned dist file; npm optional.",
+        "configuration": "Load the deferred script and use x-data/x-show/x-on in HTML; audit CSP requirements.",
+        "build_process": "No consumer build required for CDN/distribution JS; source development uses npm build.",
+        "deployment_notes": "Ship only generated/static browser files; do not assume GitHub Pages runs Node.js or API servers.",
+        "practical_applications": [
+          "Navigation toggles",
+          "Tabs",
+          "Accordions",
+          "Small interactive widgets"
+        ],
+        "reusable_code": [
+          "HTML behavior directives",
+          "Small UI interactions"
+        ],
+        "limitations": [
+          "Inline expressions may require CSP-aware variant",
+          "Do not mix it with another library controlling same DOM nodes"
+        ],
+        "quality_review": {
+          "maintenance": "recent_push_verified",
+          "security_review": {
+            "independent_security_audit": null,
+            "known_vulnerability_status": null,
+            "dependency_vulnerabilities_scanned": null
+          },
+          "accessibility": "No automatic guarantee for keyboard or ARIA semantics.",
+          "performance": "Small enhancement layer compared with full SPA; no independently verified payload measurement.",
+          "responsive_mobile": "Depends on host CSS and accessible HTML.",
+          "verified_browser_support_matrix": null,
+          "measured_mobile_page_speed": null,
+          "measured_a11y_score": null
+        },
+        "evidence_urls": [
+          "https://github.com/alpinejs/alpine",
+          "https://api.github.com/repos/alpinejs/alpine",
+          "https://github.com/alpinejs/alpine/blob/main/README.md"
+        ]
+      },
+      {
+        "category_rank": 2,
+        "name": "vuejs/core",
+        "url": "https://github.com/vuejs/core",
+        "description": "Vue.js is a progressive, incrementally-adoptable JavaScript framework for building UI on the web.",
+        "metadata": {
+          "stars": 54992,
+          "last_pushed_at_utc": "2026-11-16T13:37:53Z",
+          "license_spdx": "MIT",
+          "github_license_spdx_raw": "MIT",
+          "archived": false,
+          "github_topic_frontend": false
+        },
+        "category": "frameworks_and_interactivity",
+        "recommendation": "recommended",
+        "technology_model": "framework_optional_build",
+        "static_site_classification": "static_build_or_direct_esm",
+        "usable_directly_without_compilation": true,
+        "requires_compilation_for_primary_workflow": false,
+        "compatibility": {
+          "html": "integrates_with_generated_html",
+          "css": "can_coexist_with_css",
+          "javascript": "used_or_generated",
+          "github_pages": "static_build_or_direct_esm",
+          "server_required_on_github_pages": false
+        },
+        "dependencies": [],
+        "full_transitive_dependencies_verified": null,
+        "installation": "npm create vue@latest with Vite; alternatively use Vue browser build via pinned CDN for limited progressive use.",
+        "configuration": "For repository pages set Vite base; prefer Vue 3 repo, not Vue 2 vuejs/vue.",
+        "build_process": "Build SPA bundles into dist/ for Pages; browser-global build can be included directly.",
+        "deployment_notes": "Ship only generated/static browser files; do not assume GitHub Pages runs Node.js or API servers.",
+        "practical_applications": [
+          "Complex reactive UI",
+          "Reusable client components"
+        ],
+        "reusable_code": [
+          "Reactive UI components",
+          "Composition API"
+        ],
+        "limitations": [
+          "SPA history-routing refresh can 404 on Pages",
+          "More JavaScript and tooling than simple static HTML"
+        ],
+        "quality_review": {
+          "maintenance": "recent_push_verified",
+          "security_review": {
+            "independent_security_audit": null,
+            "known_vulnerability_status": null,
+            "dependency_vulnerabilities_scanned": null
+          },
+          "accessibility": "Accessibility depends on component implementation.",
+          "performance": "Client rendering can increase JS and hydration work.",
+          "responsive_mobile": null,
+          "verified_browser_support_matrix": null,
+          "measured_mobile_page_speed": null,
+          "measured_a11y_score": null
+        },
+        "evidence_urls": [
+          "https://github.com/vuejs/core",
+          "https://api.github.com/repos/vuejs/core",
+          "https://github.com/vuejs/core/blob/main/README.md"
+        ]
+      },
+      {
+        "category_rank": 3,
+        "name": "preactjs/preact",
+        "url": "https://github.com/preactjs/preact",
+        "description": "Small React-compatible component library and virtual DOM.",
+        "metadata": {
+          "stars": 39009,
+          "last_pushed_at_utc": "2026-11-16T05:39:23Z",
+          "license_spdx": "MIT",
+          "github_license_spdx_raw": "MIT",
+          "archived": false,
+          "github_topic_frontend": false
+        },
+        "category": "frameworks_and_interactivity",
+        "recommendation": "recommended",
+        "technology_model": "framework_optional_build",
+        "static_site_classification": "static_build_or_direct_esm",
+        "usable_directly_without_compilation": true,
+        "requires_compilation_for_primary_workflow": false,
+        "compatibility": {
+          "html": "integrates_with_generated_html",
+          "css": "can_coexist_with_css",
+          "javascript": "used_or_generated",
+          "github_pages": "static_build_or_direct_esm",
+          "server_required_on_github_pages": false
+        },
+        "dependencies": [],
+        "full_transitive_dependencies_verified": null,
+        "installation": "npm install preact; use Vite for JSX, or browser modules with an appropriate CDN and no JSX compilation.",
+        "configuration": "Ensure base path and choose Preact imports/compat explicitly.",
+        "build_process": "JSX normally needs build/transformation; output is static client assets.",
+        "deployment_notes": "Ship only generated/static browser files; do not assume GitHub Pages runs Node.js or API servers.",
+        "practical_applications": [
+          "Lightweight reactive components",
+          "Interactive static applications"
+        ],
+        "reusable_code": [
+          "Component logic",
+          "Hooks",
+          "Signals via companion packages"
+        ],
+        "limitations": [
+          "React ecosystem compatibility is not universal",
+          "SPA routing needs static fallback handling"
+        ],
+        "quality_review": {
+          "maintenance": "recent_push_verified",
+          "security_review": {
+            "independent_security_audit": null,
+            "known_vulnerability_status": null,
+            "dependency_vulnerabilities_scanned": null
+          },
+          "accessibility": "A11y is author responsibility.",
+          "performance": "Smaller runtime than full React per project positioning; no local comparative benchmark.",
+          "responsive_mobile": null,
+          "verified_browser_support_matrix": null,
+          "measured_mobile_page_speed": null,
+          "measured_a11y_score": null
+        },
+        "evidence_urls": [
+          "https://github.com/preactjs/preact",
+          "https://api.github.com/repos/preactjs/preact",
+          "https://github.com/preactjs/preact/blob/main/README.md"
+        ]
+      },
+      {
+        "category_rank": 4,
+        "name": "react/react",
+        "url": "https://github.com/react/react",
+        "description": "The library for web and native user interfaces.",
+        "metadata": {
+          "stars": 252638,
+          "last_pushed_at_utc": "2026-11-13T10:28:38Z",
+          "license_spdx": "MIT",
+          "github_license_spdx_raw": "MIT",
+          "archived": false,
+          "github_topic_frontend": true
+        },
+        "category": "frameworks_and_interactivity",
+        "recommendation": "conditional",
+        "technology_model": "framework_build_expected",
+        "static_site_classification": "static_build",
+        "usable_directly_without_compilation": false,
+        "requires_compilation_for_primary_workflow": true,
+        "compatibility": {
+          "html": "integrates_with_generated_html",
+          "css": "can_coexist_with_css",
+          "javascript": "used_or_generated",
+          "github_pages": "static_build",
+          "server_required_on_github_pages": false
+        },
+        "dependencies": [],
+        "full_transitive_dependencies_verified": null,
+        "installation": "Use Vite + React package dependencies; npm install react react-dom.",
+        "configuration": "Configure router fallback and build base path for project URLs.",
+        "build_process": "Transpile JSX and publish generated HTML/CSS/JS only.",
+        "deployment_notes": "Ship only generated/static browser files; do not assume GitHub Pages runs Node.js or API servers.",
+        "practical_applications": [
+          "Feature-rich apps",
+          "Large component ecosystem"
+        ],
+        "reusable_code": [
+          "React components",
+          "Stateful UI"
+        ],
+        "limitations": [
+          "Not recommended for an otherwise simple brochure site",
+          "SSR and server actions require compatible external infrastructure"
+        ],
+        "quality_review": {
+          "maintenance": "recent_push_verified",
+          "security_review": {
+            "independent_security_audit": null,
+            "known_vulnerability_status": null,
+            "dependency_vulnerabilities_scanned": null
+          },
+          "accessibility": "Must implement semantic controls and accessible component behavior.",
+          "performance": "Hydration and bundle budgets require monitoring.",
+          "responsive_mobile": null,
+          "verified_browser_support_matrix": null,
+          "measured_mobile_page_speed": null,
+          "measured_a11y_score": null
+        },
+        "evidence_urls": [
+          "https://github.com/react/react",
+          "https://api.github.com/repos/react/react",
+          "https://github.com/react/react/blob/main/README.md"
+        ]
+      },
+      {
+        "category_rank": 5,
+        "name": "sveltejs/svelte",
+        "url": "https://github.com/sveltejs/svelte",
+        "description": "Compiler-oriented UI framework.",
+        "metadata": {
+          "stars": 88824,
+          "last_pushed_at_utc": "2026-11-16T14:08:15Z",
+          "license_spdx": "MIT",
+          "github_license_spdx_raw": "MIT",
+          "archived": false,
+          "github_topic_frontend": false
+        },
+        "category": "frameworks_and_interactivity",
+        "recommendation": "conditional",
+        "technology_model": "compiled_framework",
+        "static_site_classification": "static_build",
+        "usable_directly_without_compilation": false,
+        "requires_compilation_for_primary_workflow": true,
+        "compatibility": {
+          "html": "integrates_with_generated_html",
+          "css": "can_coexist_with_css",
+          "javascript": "used_or_generated",
+          "github_pages": "static_build",
+          "server_required_on_github_pages": false
+        },
+        "dependencies": [],
+        "full_transitive_dependencies_verified": null,
+        "installation": "Create a Svelte/Vite project; use SvelteKit only with static adapter for Pages.",
+        "configuration": "Set asset base paths; pre-render any routes requiring direct navigation.",
+        "build_process": "Compiles .svelte components to JavaScript; deployment is built static assets.",
+        "deployment_notes": "Ship only generated/static browser files; do not assume GitHub Pages runs Node.js or API servers.",
+        "practical_applications": [
+          "Reactive widgets",
+          "Component-driven sites"
+        ],
+        "reusable_code": [
+          "Compiled components",
+          "Transitions"
+        ],
+        "limitations": [
+          "Compilation required",
+          "Framework router/server features are not usable directly on Pages"
+        ],
+        "quality_review": {
+          "maintenance": "recent_push_verified",
+          "security_review": {
+            "independent_security_audit": null,
+            "known_vulnerability_status": null,
+            "dependency_vulnerabilities_scanned": null
+          },
+          "accessibility": "Accessibility checks are supported in Svelte tooling but component outputs still require review.",
+          "performance": "Compiler reduces some runtime abstraction; actual bundle depends on app.",
+          "responsive_mobile": null,
+          "verified_browser_support_matrix": null,
+          "measured_mobile_page_speed": null,
+          "measured_a11y_score": null
+        },
+        "evidence_urls": [
+          "https://github.com/sveltejs/svelte",
+          "https://api.github.com/repos/sveltejs/svelte",
+          "https://github.com/sveltejs/svelte/blob/main/README.md"
+        ]
+      },
+      {
+        "category_rank": 6,
+        "name": "lit/lit",
+        "url": "https://github.com/lit/lit",
+        "description": "Libraries for lightweight reusable web components.",
+        "metadata": {
+          "stars": 21896,
+          "last_pushed_at_utc": "2026-11-05T20:00:37Z",
+          "license_spdx": "BSD-3-Clause",
+          "github_license_spdx_raw": "BSD-3-Clause",
+          "archived": false,
+          "github_topic_frontend": false
+        },
+        "category": "frameworks_and_interactivity",
+        "recommendation": "conditional",
+        "technology_model": "web_components",
+        "static_site_classification": "static_build_or_direct_esm",
+        "usable_directly_without_compilation": true,
+        "requires_compilation_for_primary_workflow": false,
+        "compatibility": {
+          "html": "integrates_with_generated_html",
+          "css": "can_coexist_with_css",
+          "javascript": "used_or_generated",
+          "github_pages": "static_build_or_direct_esm",
+          "server_required_on_github_pages": false
+        },
+        "dependencies": [],
+        "full_transitive_dependencies_verified": null,
+        "installation": "npm install lit; bundle for production or import published browser-compatible ESM.",
+        "configuration": "Use custom-element names and check polyfill targets; avoid duplicate custom-element registrations.",
+        "build_process": "Typical production workflow bundles ESM, but browser ESM imports may be served statically.",
+        "deployment_notes": "Ship only generated/static browser files; do not assume GitHub Pages runs Node.js or API servers.",
+        "practical_applications": [
+          "Reusable design-system elements",
+          "Framework-neutral custom elements"
+        ],
+        "reusable_code": [
+          "Custom elements",
+          "Reactive templates"
+        ],
+        "limitations": [
+          "Shadow DOM styling/theme coordination",
+          "Custom components require explicit accessibility handling"
+        ],
+        "quality_review": {
+          "maintenance": "recent_push_verified",
+          "security_review": {
+            "independent_security_audit": null,
+            "known_vulnerability_status": null,
+            "dependency_vulnerabilities_scanned": null
+          },
+          "accessibility": "Accessibility depends on custom-element implementation.",
+          "performance": "Lightweight update model but no independent measurements.",
+          "responsive_mobile": null,
+          "verified_browser_support_matrix": null,
+          "measured_mobile_page_speed": null,
+          "measured_a11y_score": null
+        },
+        "evidence_urls": [
+          "https://github.com/lit/lit",
+          "https://api.github.com/repos/lit/lit",
+          "https://github.com/lit/lit/blob/main/README.md"
+        ]
+      }
+    ],
+    "css_layout_and_responsiveness": [
+      {
+        "category_rank": 1,
+        "name": "jgthms/bulma",
+        "url": "https://github.com/jgthms/bulma",
+        "description": "Modern CSS framework based on Flexbox.",
+        "metadata": {
+          "stars": 50033,
+          "last_pushed_at_utc": "2026-09-21T09:56:34Z",
+          "license_spdx": "MIT",
+          "github_license_spdx_raw": "MIT",
+          "archived": false,
+          "github_topic_frontend": false
+        },
+        "category": "css_layout_and_responsiveness",
+        "recommendation": "recommended",
+        "technology_model": "precompiled_css",
+        "static_site_classification": "direct_static",
+        "usable_directly_without_compilation": true,
+        "requires_compilation_for_primary_workflow": false,
+        "compatibility": {
+          "html": "native",
+          "css": "native_or_customizable",
+          "javascript": "optional",
+          "github_pages": "direct_static",
+          "server_required_on_github_pages": false
+        },
+        "dependencies": [],
+        "full_transitive_dependencies_verified": null,
+        "installation": "Add pinned precompiled bulma.min.css via CDN or local vendor file; npm install bulma optional.",
+        "configuration": "Include viewport meta tag; customize with own overrides or Sass build.",
+        "build_process": "None when using distributed CSS; Sass custom builds are optional.",
+        "deployment_notes": "Ship only generated/static browser files; do not assume GitHub Pages runs Node.js or API servers.",
+        "practical_applications": [
+          "Responsive layout",
+          "Navigation styling",
+          "Forms",
+          "Typography",
+          "Hero sections"
+        ],
+        "reusable_code": [
+          "CSS classes",
+          "Layout utilities",
+          "Form styles"
+        ],
+        "limitations": [
+          "Bulma is CSS-only: interactive menu behavior must be written separately",
+          "Avoid layering full Bootstrap styles over Bulma"
+        ],
+        "quality_review": {
+          "maintenance": "recent_push_verified",
+          "security_review": {
+            "independent_security_audit": null,
+            "known_vulnerability_status": null,
+            "dependency_vulnerabilities_scanned": null
+          },
+          "accessibility": "Styled controls do not replace keyboard behavior and semantic HTML.",
+          "performance": "Precompiled CSS can be self-hosted and cached; measure selected styles.",
+          "responsive_mobile": "Includes responsive layout and mobile-first patterns.",
+          "verified_browser_support_matrix": null,
+          "measured_mobile_page_speed": null,
+          "measured_a11y_score": null
+        },
+        "evidence_urls": [
+          "https://github.com/jgthms/bulma",
+          "https://api.github.com/repos/jgthms/bulma",
+          "https://github.com/jgthms/bulma/blob/main/README.md",
+          "https://bulma.io/documentation/start/installation/"
+        ]
+      },
+      {
+        "category_rank": 2,
+        "name": "twbs/bootstrap",
+        "url": "https://github.com/twbs/bootstrap",
+        "description": "Responsive HTML, CSS, and JavaScript framework.",
+        "metadata": {
+          "stars": 175069,
+          "last_pushed_at_utc": "2026-11-16T08:34:51Z",
+          "license_spdx": "MIT",
+          "github_license_spdx_raw": "MIT",
+          "archived": false,
+          "github_topic_frontend": false
+        },
+        "category": "css_layout_and_responsiveness",
+        "recommendation": "recommended",
+        "technology_model": "precompiled_css_and_optional_js",
+        "static_site_classification": "direct_static",
+        "usable_directly_without_compilation": true,
+        "requires_compilation_for_primary_workflow": false,
+        "compatibility": {
+          "html": "native",
+          "css": "native_or_customizable",
+          "javascript": "used_or_generated",
+          "github_pages": "direct_static",
+          "server_required_on_github_pages": false
+        },
+        "dependencies": [],
+        "full_transitive_dependencies_verified": null,
+        "installation": "Use pinned stable Bootstrap 5 compiled CSS; optionally load matching Bootstrap JS bundle for widgets.",
+        "configuration": "Use viewport meta; load Popper-capable bundle for dropdowns/tooltips; pin v5 rather than current v6-alpha main branch.",
+        "build_process": "No consumer build with CDN/compiled assets; optional Sass build.",
+        "deployment_notes": "Ship only generated/static browser files; do not assume GitHub Pages runs Node.js or API servers.",
+        "practical_applications": [
+          "Fast responsive websites",
+          "Navigation bars",
+          "Modals",
+          "Forms",
+          "Grids"
+        ],
+        "reusable_code": [
+          "Grid",
+          "Navbar",
+          "Forms",
+          "JS components"
+        ],
+        "limitations": [
+          "Bootstrap JS behavior may conflict with other component controllers",
+          "Avoid mixing component class names with other CSS frameworks"
+        ],
+        "quality_review": {
+          "maintenance": "recent_push_verified",
+          "security_review": {
+            "independent_security_audit": null,
+            "known_vulnerability_status": null,
+            "dependency_vulnerabilities_scanned": null
+          },
+          "accessibility": "Many documented ARIA patterns, but markup and keyboard testing remain necessary.",
+          "performance": "Larger style and component surface than targeted CSS; no local load test.",
+          "responsive_mobile": "Mobile-first responsive grid.",
+          "verified_browser_support_matrix": null,
+          "measured_mobile_page_speed": null,
+          "measured_a11y_score": null
+        },
+        "evidence_urls": [
+          "https://github.com/twbs/bootstrap",
+          "https://api.github.com/repos/twbs/bootstrap",
+          "https://github.com/twbs/bootstrap/blob/main/README.md",
+          "https://getbootstrap.com/docs/5.3/getting-started/introduction/"
+        ]
+      },
+      {
+        "category_rank": 3,
+        "name": "tailwindlabs/tailwindcss",
+        "url": "https://github.com/tailwindlabs/tailwindcss",
+        "description": "Utility-first CSS framework.",
+        "metadata": {
+          "stars": 98672,
+          "last_pushed_at_utc": "2026-11-11T20:55:22Z",
+          "license_spdx": "MIT",
+          "github_license_spdx_raw": "MIT",
+          "archived": false,
+          "github_topic_frontend": false
+        },
+        "category": "css_layout_and_responsiveness",
+        "recommendation": "recommended",
+        "technology_model": "css_compilation_required",
+        "static_site_classification": "static_build",
+        "usable_directly_without_compilation": false,
+        "requires_compilation_for_primary_workflow": true,
+        "compatibility": {
+          "html": "native",
+          "css": "native_or_customizable",
+          "javascript": "used_or_generated",
+          "github_pages": "static_build",
+          "server_required_on_github_pages": false
+        },
+        "dependencies": [],
+        "full_transitive_dependencies_verified": null,
+        "installation": "Install Tailwind v4 tooling and compile CSS from project source; do not rely on a development-only browser compiler in production.",
+        "configuration": "Configure source scanning, design tokens and generated stylesheet; v4 differs from v3 plugin/config instructions.",
+        "build_process": "Generate final CSS during CI and deploy only resulting .css.",
+        "deployment_notes": "Ship only generated/static browser files; do not assume GitHub Pages runs Node.js or API servers.",
+        "practical_applications": [
+          "Custom design systems",
+          "Consistent responsive utility classes"
+        ],
+        "reusable_code": [
+          "Utility class composition",
+          "Design tokens"
+        ],
+        "limitations": [
+          "Requires a stylesheet build for standard production use",
+          "Tailwind-dependent component libraries may assume specific major version"
+        ],
+        "quality_review": {
+          "maintenance": "recent_push_verified",
+          "security_review": {
+            "independent_security_audit": null,
+            "known_vulnerability_status": null,
+            "dependency_vulnerabilities_scanned": null
+          },
+          "accessibility": "Utilities alone do not give controls correct interaction semantics.",
+          "performance": "Unused utility CSS can be omitted by production build; measure final output.",
+          "responsive_mobile": "Responsive modifier utilities.",
+          "verified_browser_support_matrix": null,
+          "measured_mobile_page_speed": null,
+          "measured_a11y_score": null
+        },
+        "evidence_urls": [
+          "https://github.com/tailwindlabs/tailwindcss",
+          "https://api.github.com/repos/tailwindlabs/tailwindcss",
+          "https://github.com/tailwindlabs/tailwindcss/blob/main/README.md",
+          "https://tailwindcss.com/docs/installation"
+        ]
+      }
+    ],
+    "ui_components_and_design_systems": [
+      {
+        "category_rank": 1,
+        "name": "lucide-icons/lucide",
+        "url": "https://github.com/lucide-icons/lucide",
+        "description": "Consistent SVG icon toolkit with packages for multiple environments.",
+        "metadata": {
+          "stars": 25795,
+          "last_pushed_at_utc": "2026-11-16T16:00:10Z",
+          "license_spdx": null,
+          "github_license_spdx_raw": "NOASSERTION",
+          "archived": false,
+          "github_topic_frontend": false
+        },
+        "category": "ui_components_and_design_systems",
+        "recommendation": "recommended",
+        "technology_model": "svg_assets_and_optional_js",
+        "static_site_classification": "direct_static_or_build",
+        "usable_directly_without_compilation": true,
+        "requires_compilation_for_primary_workflow": false,
+        "compatibility": {
+          "html": "native",
+          "css": "can_coexist_with_css",
+          "javascript": "optional",
+          "github_pages": "direct_static_or_build",
+          "server_required_on_github_pages": false
+        },
+        "dependencies": [],
+        "full_transitive_dependencies_verified": null,
+        "installation": "Copy individual SVG markup or SVG files directly; alternatively install lucide packages for framework/vanilla integration.",
+        "configuration": "Apply accessible names to informative icons and hide decorative icons from assistive tech.",
+        "build_process": "No build required for checked-in SVGs; package integrations may need a build.",
+        "deployment_notes": "Ship only generated/static browser files; do not assume GitHub Pages runs Node.js or API servers.",
+        "practical_applications": [
+          "Consistent lightweight iconography",
+          "Navigation icons",
+          "Buttons"
+        ],
+        "reusable_code": [
+          "Individual SVGs",
+          "Icon component API"
+        ],
+        "limitations": [
+          "Icon names and API vary by package",
+          "Review individual icon asset licensing if GitHub metadata is NOASSERTION"
+        ],
+        "quality_review": {
+          "maintenance": "recent_push_verified",
+          "security_review": {
+            "independent_security_audit": null,
+            "known_vulnerability_status": null,
+            "dependency_vulnerabilities_scanned": null
+          },
+          "accessibility": "Decorative SVGs must use aria-hidden; icons used as controls need text labels.",
+          "performance": "Inline or local SVG avoids loading an entire icon font.",
+          "responsive_mobile": "SVG scales with device pixel ratio.",
+          "verified_browser_support_matrix": null,
+          "measured_mobile_page_speed": null,
+          "measured_a11y_score": null
+        },
+        "evidence_urls": [
+          "https://github.com/lucide-icons/lucide",
+          "https://api.github.com/repos/lucide-icons/lucide",
+          "https://github.com/lucide-icons/lucide/blob/main/README.md",
+          "https://lucide.dev/packages"
+        ]
+      },
+      {
+        "category_rank": 2,
+        "name": "markmead/hyperui",
+        "url": "https://github.com/markmead/hyperui",
+        "description": "Copyable Tailwind CSS v4 components.",
+        "metadata": {
+          "stars": 12284,
+          "last_pushed_at_utc": "2026-11-15T22:19:24Z",
+          "license_spdx": "MIT",
+          "github_license_spdx_raw": "MIT",
+          "archived": false,
+          "github_topic_frontend": true
+        },
+        "category": "ui_components_and_design_systems",
+        "recommendation": "recommended",
+        "technology_model": "tailwind_snippets",
+        "static_site_classification": "static_build",
+        "usable_directly_without_compilation": false,
+        "requires_compilation_for_primary_workflow": true,
+        "compatibility": {
+          "html": "integrates_with_generated_html",
+          "css": "can_coexist_with_css",
+          "javascript": "used_or_generated",
+          "github_pages": "static_build",
+          "server_required_on_github_pages": false
+        },
+        "dependencies": [
+          "Tailwind CSS v4 project"
+        ],
+        "full_transitive_dependencies_verified": null,
+        "installation": "Copy markup/CSS examples; repository states there is no library package to install.",
+        "configuration": "Integrate Tailwind v4 and validate any copied JS behavior/accessibility in your project.",
+        "build_process": "Compile Tailwind CSS for production; snippets are not a complete runnable library.",
+        "deployment_notes": "Ship only generated/static browser files; do not assume GitHub Pages runs Node.js or API servers.",
+        "practical_applications": [
+          "Landing sections",
+          "UI patterns",
+          "Cards",
+          "Forms"
+        ],
+        "reusable_code": [
+          "Tailwind markup snippets",
+          "Design patterns"
+        ],
+        "limitations": [
+          "Tailwind dependency",
+          "Copied UI still requires accessibility and responsive testing"
+        ],
+        "quality_review": {
+          "maintenance": "recent_push_verified",
+          "security_review": {
+            "independent_security_audit": null,
+            "known_vulnerability_status": null,
+            "dependency_vulnerabilities_scanned": null
+          },
+          "accessibility": "Repository advertises accessibility, not independently audited.",
+          "performance": "Output depends on Tailwind build and chosen components.",
+          "responsive_mobile": "Responsive patterns in examples.",
+          "verified_browser_support_matrix": null,
+          "measured_mobile_page_speed": null,
+          "measured_a11y_score": null
+        },
+        "evidence_urls": [
+          "https://github.com/markmead/hyperui",
+          "https://api.github.com/repos/markmead/hyperui",
+          "https://github.com/markmead/hyperui/blob/main/README.md"
+        ]
+      },
+      {
+        "category_rank": 3,
+        "name": "iconify/iconify",
+        "url": "https://github.com/iconify/iconify",
+        "description": "Unified icon framework across many icon sets.",
+        "metadata": {
+          "stars": 6405,
+          "last_pushed_at_utc": "2026-11-16T15:36:57Z",
+          "license_spdx": "MIT",
+          "github_license_spdx_raw": "MIT",
+          "archived": false,
+          "github_topic_frontend": false
+        },
+        "category": "ui_components_and_design_systems",
+        "recommendation": "recommended",
+        "technology_model": "icon_loader_or_components",
+        "static_site_classification": "direct_static_or_build",
+        "usable_directly_without_compilation": true,
+        "requires_compilation_for_primary_workflow": false,
+        "compatibility": {
+          "html": "native",
+          "css": "can_coexist_with_css",
+          "javascript": "used_or_generated",
+          "github_pages": "direct_static_or_build",
+          "server_required_on_github_pages": false
+        },
+        "dependencies": [],
+        "full_transitive_dependencies_verified": null,
+        "installation": "Use supported Iconify web runtime or install chosen framework package; pin icon sets used.",
+        "configuration": "Prefer curated local icons to avoid many sets and network dependencies.",
+        "build_process": "Browser loader can run directly; framework variants usually build.",
+        "deployment_notes": "Ship only generated/static browser files; do not assume GitHub Pages runs Node.js or API servers.",
+        "practical_applications": [
+          "Many icon families",
+          "Prototype icon selection"
+        ],
+        "reusable_code": [
+          "Icon API",
+          "SVG sets"
+        ],
+        "limitations": [
+          "Large variety may hinder design consistency",
+          "Individual collections carry different licenses"
+        ],
+        "quality_review": {
+          "maintenance": "recent_push_verified",
+          "security_review": {
+            "independent_security_audit": null,
+            "known_vulnerability_status": null,
+            "dependency_vulnerabilities_scanned": null
+          },
+          "accessibility": "Provide labels for functional icons.",
+          "performance": "Limit downloaded icon collections and runtime overhead.",
+          "responsive_mobile": "Scalable SVG output.",
+          "verified_browser_support_matrix": null,
+          "measured_mobile_page_speed": null,
+          "measured_a11y_score": null
+        },
+        "evidence_urls": [
+          "https://github.com/iconify/iconify",
+          "https://api.github.com/repos/iconify/iconify",
+          "https://github.com/iconify/iconify/blob/main/README.md"
+        ]
+      },
+      {
+        "category_rank": 4,
+        "name": "floating-ui/floating-ui",
+        "url": "https://github.com/floating-ui/floating-ui",
+        "description": "Positions floating elements and provides interaction primitives.",
+        "metadata": {
+          "stars": 32812,
+          "last_pushed_at_utc": "2026-11-12T08:46:37Z",
+          "license_spdx": "MIT",
+          "github_license_spdx_raw": "MIT",
+          "archived": false,
+          "github_topic_frontend": false
+        },
+        "category": "ui_components_and_design_systems",
+        "recommendation": "recommended",
+        "technology_model": "vanilla_js_optional_npm",
+        "static_site_classification": "direct_static_or_build",
+        "usable_directly_without_compilation": true,
+        "requires_compilation_for_primary_workflow": false,
+        "compatibility": {
+          "html": "native",
+          "css": "can_coexist_with_css",
+          "javascript": "used_or_generated",
+          "github_pages": "direct_static_or_build",
+          "server_required_on_github_pages": false
+        },
+        "dependencies": [],
+        "full_transitive_dependencies_verified": null,
+        "installation": "Install @floating-ui/dom or use documented CDN import of browser build.",
+        "configuration": "Compose pointer, focus, escape and dismissal behavior yourself; library only handles positioning and interaction primitives.",
+        "build_process": "ES modules may be bundled; CDN usage can be static.",
+        "deployment_notes": "Ship only generated/static browser files; do not assume GitHub Pages runs Node.js or API servers.",
+        "practical_applications": [
+          "Menus",
+          "Popovers",
+          "Tooltips"
+        ],
+        "reusable_code": [
+          "Positioning logic",
+          "Floating element primitives"
+        ],
+        "limitations": [
+          "Not a ready-made accessible menu widget",
+          "Must coordinate with any existing popover positioning library"
+        ],
+        "quality_review": {
+          "maintenance": "recent_push_verified",
+          "security_review": {
+            "independent_security_audit": null,
+            "known_vulnerability_status": null,
+            "dependency_vulnerabilities_scanned": null
+          },
+          "accessibility": "Helps implement positioning but does not replace end-to-end keyboard/ARIA review.",
+          "performance": "Small modular imports possible; actual output not benchmarked.",
+          "responsive_mobile": "Handles floating placement, including viewport constraints.",
+          "verified_browser_support_matrix": null,
+          "measured_mobile_page_speed": null,
+          "measured_a11y_score": null
+        },
+        "evidence_urls": [
+          "https://github.com/floating-ui/floating-ui",
+          "https://api.github.com/repos/floating-ui/floating-ui",
+          "https://github.com/floating-ui/floating-ui/blob/master/README.md"
+        ]
+      },
+      {
+        "category_rank": 5,
+        "name": "saadeghi/daisyui",
+        "url": "https://github.com/saadeghi/daisyui",
+        "description": "Tailwind CSS component library.",
+        "metadata": {
+          "stars": 42856,
+          "last_pushed_at_utc": "2026-11-16T07:56:18Z",
+          "license_spdx": "MIT",
+          "github_license_spdx_raw": "MIT",
+          "archived": false,
+          "github_topic_frontend": false
+        },
+        "category": "ui_components_and_design_systems",
+        "recommendation": "recommended",
+        "technology_model": "tailwind_plugin_or_css_layer",
+        "static_site_classification": "static_build",
+        "usable_directly_without_compilation": false,
+        "requires_compilation_for_primary_workflow": true,
+        "compatibility": {
+          "html": "integrates_with_generated_html",
+          "css": "native_or_customizable",
+          "javascript": "used_or_generated",
+          "github_pages": "static_build",
+          "server_required_on_github_pages": false
+        },
+        "dependencies": [
+          "Tailwind CSS compatible project"
+        ],
+        "full_transitive_dependencies_verified": null,
+        "installation": "Install daisyui using documented Tailwind v4 setup; use one design system, not multiple.",
+        "configuration": "Select themes and ensure HTML theme attributes are correct; check current Tailwind compatibility.",
+        "build_process": "Build Tailwind/CSS before publishing.",
+        "deployment_notes": "Ship only generated/static browser files; do not assume GitHub Pages runs Node.js or API servers.",
+        "practical_applications": [
+          "Themeable buttons/cards/forms",
+          "Rapid Tailwind UI"
+        ],
+        "reusable_code": [
+          "Component classes",
+          "Themes"
+        ],
+        "limitations": [
+          "Overlaps HyperUI/TW-Elements styling",
+          "Interactive behavior may still require JS"
+        ],
+        "quality_review": {
+          "maintenance": "recent_push_verified",
+          "security_review": {
+            "independent_security_audit": null,
+            "known_vulnerability_status": null,
+            "dependency_vulnerabilities_scanned": null
+          },
+          "accessibility": "Theme colors require contrast checks; component semantics depend on HTML.",
+          "performance": "Production compiled output should be measured.",
+          "responsive_mobile": "Responsive through Tailwind.",
+          "verified_browser_support_matrix": null,
+          "measured_mobile_page_speed": null,
+          "measured_a11y_score": null
+        },
+        "evidence_urls": [
+          "https://github.com/saadeghi/daisyui",
+          "https://api.github.com/repos/saadeghi/daisyui",
+          "https://github.com/saadeghi/daisyui/blob/master/README.md",
+          "https://daisyui.com/docs/install/"
+        ]
+      },
+      {
+        "category_rank": 6,
+        "name": "radix-ui/primitives",
+        "url": "https://github.com/radix-ui/primitives",
+        "description": "Accessible component primitives for React.",
+        "metadata": {
+          "stars": 19506,
+          "last_pushed_at_utc": "2026-10-14T21:52:47Z",
+          "license_spdx": "MIT",
+          "github_license_spdx_raw": "MIT",
+          "archived": false,
+          "github_topic_frontend": false
+        },
+        "category": "ui_components_and_design_systems",
+        "recommendation": "conditional",
+        "technology_model": "react_components",
+        "static_site_classification": "static_build",
+        "usable_directly_without_compilation": false,
+        "requires_compilation_for_primary_workflow": true,
+        "compatibility": {
+          "html": "integrates_with_generated_html",
+          "css": "can_coexist_with_css",
+          "javascript": "used_or_generated",
+          "github_pages": "static_build",
+          "server_required_on_github_pages": false
+        },
+        "dependencies": [
+          "React",
+          "React DOM",
+          "Bundler"
+        ],
+        "full_transitive_dependencies_verified": null,
+        "installation": "Install selected @radix-ui/react-* packages in React app.",
+        "configuration": "Compose unstyled primitives with one consistent styling system.",
+        "build_process": "React JSX compilation and static deployment of client bundle.",
+        "deployment_notes": "Ship only generated/static browser files; do not assume GitHub Pages runs Node.js or API servers.",
+        "practical_applications": [
+          "Accessible menus",
+          "Dialogs",
+          "Select controls for React"
+        ],
+        "reusable_code": [
+          "Unstyled components",
+          "Focus handling patterns"
+        ],
+        "limitations": [
+          "React-only",
+          "Not usable as direct HTML widget scripts",
+          "Styles not included"
+        ],
+        "quality_review": {
+          "maintenance": "recent_push_verified",
+          "security_review": {
+            "independent_security_audit": null,
+            "known_vulnerability_status": null,
+            "dependency_vulnerabilities_scanned": null
+          },
+          "accessibility": "Focus and ARIA behavior are core goals; application testing still necessary.",
+          "performance": "Add only imported primitives; no benchmark.",
+          "responsive_mobile": null,
+          "verified_browser_support_matrix": null,
+          "measured_mobile_page_speed": null,
+          "measured_a11y_score": null
+        },
+        "evidence_urls": [
+          "https://github.com/radix-ui/primitives",
+          "https://api.github.com/repos/radix-ui/primitives",
+          "https://github.com/radix-ui/primitives/blob/main/README.md"
+        ]
+      },
+      {
+        "category_rank": 7,
+        "name": "shadcn-ui/ui",
+        "url": "https://github.com/shadcn-ui/ui",
+        "description": "Customizable component source for accessible React apps.",
+        "metadata": {
+          "stars": 128319,
+          "last_pushed_at_utc": "2026-11-13T10:58:16Z",
+          "license_spdx": "MIT",
+          "github_license_spdx_raw": "MIT",
+          "archived": false,
+          "github_topic_frontend": false
+        },
+        "category": "ui_components_and_design_systems",
+        "recommendation": "conditional",
+        "technology_model": "react_tailwind_component_source",
+        "static_site_classification": "static_build",
+        "usable_directly_without_compilation": false,
+        "requires_compilation_for_primary_workflow": true,
+        "compatibility": {
+          "html": "integrates_with_generated_html",
+          "css": "can_coexist_with_css",
+          "javascript": "used_or_generated",
+          "github_pages": "static_build",
+          "server_required_on_github_pages": false
+        },
+        "dependencies": [
+          "React",
+          "Tailwind CSS",
+          "Project build system",
+          "Underlying component dependencies"
+        ],
+        "full_transitive_dependencies_verified": null,
+        "installation": "Use shadcn CLI to copy component source into a compatible React/Tailwind project.",
+        "configuration": "Maintain copied source and aliases, theme variables and dependency versions.",
+        "build_process": "Compile React and CSS; publish static output only.",
+        "deployment_notes": "Ship only generated/static browser files; do not assume GitHub Pages runs Node.js or API servers.",
+        "practical_applications": [
+          "Customizable dashboards",
+          "React app design system"
+        ],
+        "reusable_code": [
+          "Owned React component source",
+          "Themes"
+        ],
+        "limitations": [
+          "More moving parts than static HTML",
+          "Copying does not guarantee accessibility",
+          "Can overlap Radix or other shadcn-based components"
+        ],
+        "quality_review": {
+          "maintenance": "recent_push_verified",
+          "security_review": {
+            "independent_security_audit": null,
+            "known_vulnerability_status": null,
+            "dependency_vulnerabilities_scanned": null
+          },
+          "accessibility": "Intended to be accessible; verify final markup, focus and contrast.",
+          "performance": "Depends on component selection and bundling.",
+          "responsive_mobile": "Responsive behavior depends on chosen components.",
+          "verified_browser_support_matrix": null,
+          "measured_mobile_page_speed": null,
+          "measured_a11y_score": null
+        },
+        "evidence_urls": [
+          "https://github.com/shadcn-ui/ui",
+          "https://api.github.com/repos/shadcn-ui/ui",
+          "https://github.com/shadcn-ui/ui/blob/main/README.md"
+        ]
+      },
+      {
+        "category_rank": 8,
+        "name": "mdbootstrap/TW-Elements",
+        "url": "https://github.com/mdbootstrap/TW-Elements",
+        "description": "Tailwind-based components, sections, and templates.",
+        "metadata": {
+          "stars": 13194,
+          "last_pushed_at_utc": "2026-03-27T13:59:01Z",
+          "license_spdx": "MIT",
+          "github_license_spdx_raw": "MIT",
+          "archived": false,
+          "github_topic_frontend": true
+        },
+        "category": "ui_components_and_design_systems",
+        "recommendation": "conditional",
+        "technology_model": "tailwind_components_js",
+        "static_site_classification": "static_build",
+        "usable_directly_without_compilation": false,
+        "requires_compilation_for_primary_workflow": true,
+        "compatibility": {
+          "html": "integrates_with_generated_html",
+          "css": "can_coexist_with_css",
+          "javascript": "used_or_generated",
+          "github_pages": "static_build",
+          "server_required_on_github_pages": false
+        },
+        "dependencies": [
+          "Tailwind CSS",
+          "Supporting JS for interactive widgets"
+        ],
+        "full_transitive_dependencies_verified": null,
+        "installation": "Follow repository Tailwind-compatible installation and include required JS dependencies.",
+        "configuration": "Version-match Tailwind and initialize widgets per component documentation.",
+        "build_process": "CSS and JS generally built/bundled for production.",
+        "deployment_notes": "Ship only generated/static browser files; do not assume GitHub Pages runs Node.js or API servers.",
+        "practical_applications": [
+          "Complex Tailwind UI patterns",
+          "Forms",
+          "Navbar examples"
+        ],
+        "reusable_code": [
+          "Component source",
+          "Example sections"
+        ],
+        "limitations": [
+          "Overlaps DaisyUI/HyperUI",
+          "Extra runtime for interactive components",
+          "Verify selected major-version support"
+        ],
+        "quality_review": {
+          "maintenance": "recent_push_verified",
+          "security_review": {
+            "independent_security_audit": null,
+            "known_vulnerability_status": null,
+            "dependency_vulnerabilities_scanned": null
+          },
+          "accessibility": "A11y details must be audited per component.",
+          "performance": null,
+          "responsive_mobile": "Includes responsive examples.",
+          "verified_browser_support_matrix": null,
+          "measured_mobile_page_speed": null,
+          "measured_a11y_score": null
+        },
+        "evidence_urls": [
+          "https://github.com/mdbootstrap/TW-Elements",
+          "https://api.github.com/repos/mdbootstrap/TW-Elements",
+          "https://github.com/mdbootstrap/TW-Elements/blob/master/README.md"
+        ]
+      }
+    ],
+    "navigation_modals_and_animation": [
+      {
+        "category_rank": 1,
+        "name": "KittyGiraudel/a11y-dialog",
+        "url": "https://github.com/KittyGiraudel/a11y-dialog",
+        "description": "Lightweight accessible modal/dialog utility.",
+        "metadata": {
+          "stars": 2491,
+          "last_pushed_at_utc": "2026-11-16T04:28:00Z",
+          "license_spdx": "MIT",
+          "github_license_spdx_raw": "MIT",
+          "archived": false,
+          "github_topic_frontend": false
+        },
+        "category": "navigation_modals_and_animation",
+        "recommendation": "recommended",
+        "technology_model": "vanilla_js",
+        "static_site_classification": "direct_static_or_build",
+        "usable_directly_without_compilation": true,
+        "requires_compilation_for_primary_workflow": false,
+        "compatibility": {
+          "html": "native",
+          "css": "can_coexist_with_css",
+          "javascript": "used_or_generated",
+          "github_pages": "direct_static_or_build",
+          "server_required_on_github_pages": false
+        },
+        "dependencies": [],
+        "full_transitive_dependencies_verified": null,
+        "installation": "Use documented a11y-dialog distributable or npm package.",
+        "configuration": "Add dialog container, trigger, close controls and appropriate semantic labels.",
+        "build_process": "Distributed JS can be served statically; bundler optional.",
+        "deployment_notes": "Ship only generated/static browser files; do not assume GitHub Pages runs Node.js or API servers.",
+        "practical_applications": [
+          "Accessible modal navigation",
+          "Dialog windows"
+        ],
+        "reusable_code": [
+          "Modal controller",
+          "Focus behavior"
+        ],
+        "limitations": [
+          "Requires correct integration and focus testing",
+          "Avoid mixing with a second dialog manager"
+        ],
+        "quality_review": {
+          "maintenance": "recent_push_verified",
+          "security_review": {
+            "independent_security_audit": null,
+            "known_vulnerability_status": null,
+            "dependency_vulnerabilities_scanned": null
+          },
+          "accessibility": "Explicitly targets accessible dialogs; still test screen readers and focus return.",
+          "performance": "Small focused library per README; no local byte measurement.",
+          "responsive_mobile": "Style modal width/scroll behavior responsively.",
+          "verified_browser_support_matrix": null,
+          "measured_mobile_page_speed": null,
+          "measured_a11y_score": null
+        },
+        "evidence_urls": [
+          "https://github.com/KittyGiraudel/a11y-dialog",
+          "https://api.github.com/repos/KittyGiraudel/a11y-dialog",
+          "https://github.com/KittyGiraudel/a11y-dialog/blob/main/README.md",
+          "https://a11y-dialog.netlify.app/"
+        ]
+      },
+      {
+        "category_rank": 2,
+        "name": "nolimits4web/swiper",
+        "url": "https://github.com/nolimits4web/swiper",
+        "description": "Touch-friendly mobile slider and carousel.",
+        "metadata": {
+          "stars": 41910,
+          "last_pushed_at_utc": "2026-10-30T22:15:41Z",
+          "license_spdx": "MIT",
+          "github_license_spdx_raw": "MIT",
+          "archived": false,
+          "github_topic_frontend": false
+        },
+        "category": "navigation_modals_and_animation",
+        "recommendation": "recommended",
+        "technology_model": "browser_js_and_css",
+        "static_site_classification": "direct_static_or_build",
+        "usable_directly_without_compilation": true,
+        "requires_compilation_for_primary_workflow": false,
+        "compatibility": {
+          "html": "native",
+          "css": "native_or_customizable",
+          "javascript": "used_or_generated",
+          "github_pages": "direct_static_or_build",
+          "server_required_on_github_pages": false
+        },
+        "dependencies": [],
+        "full_transitive_dependencies_verified": null,
+        "installation": "Use stable distributed CSS/JS or npm swiper package.",
+        "configuration": "Initialize the carousel, include Swiper CSS and enable appropriate navigation, keyboard and a11y options.",
+        "build_process": "Can be used with distribution assets directly; package-based imports may need bundling.",
+        "deployment_notes": "Ship only generated/static browser files; do not assume GitHub Pages runs Node.js or API servers.",
+        "practical_applications": [
+          "Touch image galleries",
+          "Product carousels",
+          "Responsive sliders"
+        ],
+        "reusable_code": [
+          "Slider",
+          "Navigation controls",
+          "Touch gestures"
+        ],
+        "limitations": [
+          "Carousel content should remain operable without autoplay or inaccessible controls",
+          "Potential control conflicts with other slider libraries"
+        ],
+        "quality_review": {
+          "maintenance": "recent_push_verified",
+          "security_review": {
+            "independent_security_audit": null,
+            "known_vulnerability_status": null,
+            "dependency_vulnerabilities_scanned": null
+          },
+          "accessibility": "Provides a11y options but results depend on configuration.",
+          "performance": "Additional CSS/JS runtime; load only for pages needing a carousel.",
+          "responsive_mobile": "Mobile touch support is a primary feature.",
+          "verified_browser_support_matrix": null,
+          "measured_mobile_page_speed": null,
+          "measured_a11y_score": null
+        },
+        "evidence_urls": [
+          "https://github.com/nolimits4web/swiper",
+          "https://api.github.com/repos/nolimits4web/swiper",
+          "https://github.com/nolimits4web/swiper/blob/master/README.md"
+        ]
+      },
+      {
+        "category_rank": 3,
+        "name": "formkit/auto-animate",
+        "url": "https://github.com/formkit/auto-animate",
+        "description": "Drop-in animation utility for DOM changes.",
+        "metadata": {
+          "stars": 13971,
+          "last_pushed_at_utc": "2026-11-07T16:55:06Z",
+          "license_spdx": "MIT",
+          "github_license_spdx_raw": "MIT",
+          "archived": false,
+          "github_topic_frontend": false
+        },
+        "category": "navigation_modals_and_animation",
+        "recommendation": "recommended",
+        "technology_model": "vanilla_js_and_framework_integrations",
+        "static_site_classification": "direct_static_or_build",
+        "usable_directly_without_compilation": true,
+        "requires_compilation_for_primary_workflow": false,
+        "compatibility": {
+          "html": "native",
+          "css": "can_coexist_with_css",
+          "javascript": "used_or_generated",
+          "github_pages": "direct_static_or_build",
+          "server_required_on_github_pages": false
+        },
+        "dependencies": [],
+        "full_transitive_dependencies_verified": null,
+        "installation": "npm install @formkit/auto-animate or use a supported published browser bundle.",
+        "configuration": "Attach behavior to changing DOM lists; honor prefers-reduced-motion and test dynamic focus.",
+        "build_process": "Typically bundled via npm; browser bundle possibility depends on selected distribution.",
+        "deployment_notes": "Ship only generated/static browser files; do not assume GitHub Pages runs Node.js or API servers.",
+        "practical_applications": [
+          "Reorder animations",
+          "List expansion",
+          "Smooth DOM changes"
+        ],
+        "reusable_code": [
+          "DOM animation helper"
+        ],
+        "limitations": [
+          "Unneeded for static content",
+          "Visual animation must not disrupt reading/focus"
+        ],
+        "quality_review": {
+          "maintenance": "recent_push_verified",
+          "security_review": {
+            "independent_security_audit": null,
+            "known_vulnerability_status": null,
+            "dependency_vulnerabilities_scanned": null
+          },
+          "accessibility": "Check motion reduction setting and focus handling in final UI.",
+          "performance": "No benchmark.",
+          "responsive_mobile": null,
+          "verified_browser_support_matrix": null,
+          "measured_mobile_page_speed": null,
+          "measured_a11y_score": null
+        },
+        "evidence_urls": [
+          "https://github.com/formkit/auto-animate",
+          "https://api.github.com/repos/formkit/auto-animate",
+          "https://github.com/formkit/auto-animate/blob/master/README.md"
+        ]
+      },
+      {
+        "category_rank": 4,
+        "name": "motiondivision/motion",
+        "url": "https://github.com/motiondivision/motion",
+        "description": "Animation library for JavaScript and React.",
+        "metadata": {
+          "stars": 35255,
+          "last_pushed_at_utc": "2026-11-16T04:53:55Z",
+          "license_spdx": "MIT",
+          "github_license_spdx_raw": "MIT",
+          "archived": false,
+          "github_topic_frontend": false
+        },
+        "category": "navigation_modals_and_animation",
+        "recommendation": "conditional",
+        "technology_model": "animation_js_and_react",
+        "static_site_classification": "static_build_or_direct_esm",
+        "usable_directly_without_compilation": true,
+        "requires_compilation_for_primary_workflow": false,
+        "compatibility": {
+          "html": "integrates_with_generated_html",
+          "css": "can_coexist_with_css",
+          "javascript": "used_or_generated",
+          "github_pages": "static_build_or_direct_esm",
+          "server_required_on_github_pages": false
+        },
+        "dependencies": [],
+        "full_transitive_dependencies_verified": null,
+        "installation": "Install motion package for JS/React; use supported ESM distribution as documented.",
+        "configuration": "Target only necessary properties, respect reduced-motion preferences and avoid excessive scroll effects.",
+        "build_process": "Build for React usage; vanilla JS browser modules may be served statically.",
+        "deployment_notes": "Ship only generated/static browser files; do not assume GitHub Pages runs Node.js or API servers.",
+        "practical_applications": [
+          "Microinteractions",
+          "Page transitions",
+          "Spring animations"
+        ],
+        "reusable_code": [
+          "Animation primitives",
+          "Motion components"
+        ],
+        "limitations": [
+          "More capable than needed for basic CSS transitions",
+          "Animation may harm performance/accessibility when overused"
+        ],
+        "quality_review": {
+          "maintenance": "recent_push_verified",
+          "security_review": {
+            "independent_security_audit": null,
+            "known_vulnerability_status": null,
+            "dependency_vulnerabilities_scanned": null
+          },
+          "accessibility": "Respect reduced motion and avoid animation essential to comprehension.",
+          "performance": "Can animate compositor properties; actual performance depends on effects.",
+          "responsive_mobile": null,
+          "verified_browser_support_matrix": null,
+          "measured_mobile_page_speed": null,
+          "measured_a11y_score": null
+        },
+        "evidence_urls": [
+          "https://github.com/motiondivision/motion",
+          "https://api.github.com/repos/motiondivision/motion"
+        ]
+      },
+      {
+        "category_rank": 5,
+        "name": "bigskysoftware/htmx",
+        "url": "https://github.com/bigskysoftware/htmx",
+        "description": "HTML attribute-driven interaction library primarily for server responses.",
+        "metadata": {
+          "stars": 49645,
+          "last_pushed_at_utc": "2026-11-13T12:49:56Z",
+          "license_spdx": null,
+          "github_license_spdx_raw": "NOASSERTION",
+          "archived": false,
+          "github_topic_frontend": false
+        },
+        "category": "navigation_modals_and_animation",
+        "recommendation": "conditional",
+        "technology_model": "vanilla_js_markup_enhancement",
+        "static_site_classification": "conditional_backend",
+        "usable_directly_without_compilation": false,
+        "requires_compilation_for_primary_workflow": false,
+        "compatibility": {
+          "html": "native",
+          "css": "can_coexist_with_css",
+          "javascript": "used_or_generated",
+          "github_pages": "conditional_backend",
+          "server_required_on_github_pages": null
+        },
+        "dependencies": [],
+        "full_transitive_dependencies_verified": null,
+        "installation": "Add pinned htmx browser script or install htmx.org.",
+        "configuration": "Use hx-* attributes; for dynamic endpoints provide an external API/backend, or limit requests to static HTML fragments.",
+        "build_process": "Browser script needs no build; dynamic server functionality is unavailable on Pages.",
+        "deployment_notes": "Ship only generated/static browser files; do not assume GitHub Pages runs Node.js or API servers.",
+        "practical_applications": [
+          "Progressive HTML interactions backed by an API",
+          "Static fragment swaps"
+        ],
+        "reusable_code": [
+          "HTML attribute patterns",
+          "Response swap behavior"
+        ],
+        "limitations": [
+          "GitHub Pages cannot run an htmx response server",
+          "Most full htmx apps need backend infrastructure"
+        ],
+        "quality_review": {
+          "maintenance": "recent_push_verified",
+          "security_review": {
+            "independent_security_audit": null,
+            "known_vulnerability_status": null,
+            "dependency_vulnerabilities_scanned": null
+          },
+          "accessibility": "Semantics, focus and live regions need handling for swapped content.",
+          "performance": "Runtime is modest per README, but network requests can dominate.",
+          "responsive_mobile": null,
+          "verified_browser_support_matrix": null,
+          "measured_mobile_page_speed": null,
+          "measured_a11y_score": null
+        },
+        "evidence_urls": [
+          "https://github.com/bigskysoftware/htmx",
+          "https://api.github.com/repos/bigskysoftware/htmx",
+          "https://github.com/bigskysoftware/htmx/blob/master/README.md"
+        ]
+      }
+    ],
+    "accessibility_seo_and_performance_validation": [
+      {
+        "category_rank": 1,
+        "name": "dequelabs/axe-core",
+        "url": "https://github.com/dequelabs/axe-core",
+        "description": "Automated accessibility testing engine.",
+        "metadata": {
+          "stars": 7832,
+          "last_pushed_at_utc": "2026-11-16T15:01:53Z",
+          "license_spdx": "MPL-2.0",
+          "github_license_spdx_raw": "MPL-2.0",
+          "archived": false,
+          "github_topic_frontend": false
+        },
+        "category": "accessibility_seo_and_performance_validation",
+        "recommendation": "recommended",
+        "technology_model": "audit_tool",
+        "static_site_classification": "development_only",
+        "usable_directly_without_compilation": false,
+        "requires_compilation_for_primary_workflow": false,
+        "compatibility": {
+          "html": "integrates_with_generated_html",
+          "css": "can_coexist_with_css",
+          "javascript": "not_deployed",
+          "github_pages": "development_only",
+          "server_required_on_github_pages": false
+        },
+        "dependencies": [
+          "Node tooling or browser testing integration"
+        ],
+        "full_transitive_dependencies_verified": null,
+        "installation": "npm install axe-core or use axe-powered accessibility test tools.",
+        "configuration": "Run automated checks against representative rendered pages and states.",
+        "build_process": "No runtime deployment required; run in CI/test environment.",
+        "deployment_notes": "Not shipped to production.",
+        "practical_applications": [
+          "WCAG issue detection",
+          "ARIA rule checks",
+          "Regression testing"
+        ],
+        "reusable_code": [
+          "Automated rule engine",
+          "Test integrations"
+        ],
+        "limitations": [
+          "Automated accessibility testing is incomplete and requires manual keyboard/screen-reader checks"
+        ],
+        "quality_review": {
+          "maintenance": "recent_push_verified",
+          "security_review": {
+            "independent_security_audit": null,
+            "known_vulnerability_status": null,
+            "dependency_vulnerabilities_scanned": null
+          },
+          "accessibility": "Core purpose is accessibility testing.",
+          "performance": "Run during QA rather than loading into production.",
+          "responsive_mobile": null,
+          "verified_browser_support_matrix": null,
+          "measured_mobile_page_speed": null,
+          "measured_a11y_score": null
+        },
+        "evidence_urls": [
+          "https://github.com/dequelabs/axe-core",
+          "https://api.github.com/repos/dequelabs/axe-core",
+          "https://github.com/dequelabs/axe-core/blob/develop/README.md"
+        ]
+      },
+      {
+        "category_rank": 2,
+        "name": "GoogleChrome/lighthouse",
+        "url": "https://github.com/GoogleChrome/lighthouse",
+        "description": "Performance, accessibility, SEO, and best-practices auditing.",
+        "metadata": {
+          "stars": 31127,
+          "last_pushed_at_utc": "2026-11-15T12:03:50Z",
+          "license_spdx": "Apache-2.0",
+          "github_license_spdx_raw": "Apache-2.0",
+          "archived": false,
+          "github_topic_frontend": false
+        },
+        "category": "accessibility_seo_and_performance_validation",
+        "recommendation": "recommended",
+        "technology_model": "audit_tool",
+        "static_site_classification": "development_only",
+        "usable_directly_without_compilation": false,
+        "requires_compilation_for_primary_workflow": false,
+        "compatibility": {
+          "html": "integrates_with_generated_html",
+          "css": "can_coexist_with_css",
+          "javascript": "not_deployed",
+          "github_pages": "development_only",
+          "server_required_on_github_pages": false
+        },
+        "dependencies": [
+          "Chrome/Chromium or compatible CLI/CI runner"
+        ],
+        "full_transitive_dependencies_verified": null,
+        "installation": "Use Lighthouse CLI, browser tools, or CI integration.",
+        "configuration": "Audit deployed URLs on mobile and desktop; inspect metrics and repeat tests.",
+        "build_process": "No client runtime; run against staging or published output.",
+        "deployment_notes": "Not shipped to production.",
+        "practical_applications": [
+          "Core performance metrics",
+          "SEO metadata checks",
+          "Accessibility and best-practices audits"
+        ],
+        "reusable_code": [
+          "Audit reports",
+          "CI checks"
+        ],
+        "limitations": [
+          "Scores fluctuate by device/network and are not a substitute for real user data"
+        ],
+        "quality_review": {
+          "maintenance": "recent_push_verified",
+          "security_review": {
+            "independent_security_audit": null,
+            "known_vulnerability_status": null,
+            "dependency_vulnerabilities_scanned": null
+          },
+          "accessibility": "Automated accessibility checks are incomplete.",
+          "performance": "Runs performance analysis rather than improving runtime by itself.",
+          "responsive_mobile": null,
+          "verified_browser_support_matrix": null,
+          "measured_mobile_page_speed": null,
+          "measured_a11y_score": null
+        },
+        "evidence_urls": [
+          "https://github.com/GoogleChrome/lighthouse",
+          "https://api.github.com/repos/GoogleChrome/lighthouse"
+        ]
+      },
+      {
+        "category_rank": 3,
+        "name": "GoogleChrome/web-vitals",
+        "url": "https://github.com/GoogleChrome/web-vitals",
+        "description": "Library for measuring Core Web Vitals.",
+        "metadata": {
+          "stars": 8689,
+          "last_pushed_at_utc": "2026-11-12T03:40:47Z",
+          "license_spdx": "Apache-2.0",
+          "github_license_spdx_raw": "Apache-2.0",
+          "archived": false,
+          "github_topic_frontend": false
+        },
+        "category": "accessibility_seo_and_performance_validation",
+        "recommendation": "conditional",
+        "technology_model": "browser_performance_monitoring",
+        "static_site_classification": "direct_static_or_build",
+        "usable_directly_without_compilation": true,
+        "requires_compilation_for_primary_workflow": false,
+        "compatibility": {
+          "html": "native",
+          "css": "can_coexist_with_css",
+          "javascript": "used_or_generated",
+          "github_pages": "direct_static_or_build",
+          "server_required_on_github_pages": false
+        },
+        "dependencies": [],
+        "full_transitive_dependencies_verified": null,
+        "installation": "Install web-vitals or load supported JS package from a pinned distribution.",
+        "configuration": "Measure CLS, INP, LCP in real user sessions; sending data requires an external receiver.",
+        "build_process": "Library can be bundled into static JS; GitHub Pages alone does not store results.",
+        "deployment_notes": "Ship only generated/static browser files; do not assume GitHub Pages runs Node.js or API servers.",
+        "practical_applications": [
+          "Field performance monitoring",
+          "Performance regressions"
+        ],
+        "reusable_code": [
+          "Metric measurement functions"
+        ],
+        "limitations": [
+          "Analytics ingestion backend is external",
+          "Users must consider privacy requirements"
+        ],
+        "quality_review": {
+          "maintenance": "recent_push_verified",
+          "security_review": {
+            "independent_security_audit": null,
+            "known_vulnerability_status": null,
+            "dependency_vulnerabilities_scanned": null
+          },
+          "accessibility": null,
+          "performance": "Measures actual user performance; no performance gain just by importing it.",
+          "responsive_mobile": null,
+          "verified_browser_support_matrix": null,
+          "measured_mobile_page_speed": null,
+          "measured_a11y_score": null
+        },
+        "evidence_urls": [
+          "https://github.com/GoogleChrome/web-vitals",
+          "https://api.github.com/repos/GoogleChrome/web-vitals",
+          "https://github.com/GoogleChrome/web-vitals/blob/main/README.md"
+        ]
+      },
+      {
+        "category_rank": 4,
+        "name": "thedaviddias/Front-End-Checklist",
+        "url": "https://github.com/thedaviddias/Front-End-Checklist",
+        "description": "Web-development quality checklist.",
+        "metadata": {
+          "stars": 74749,
+          "last_pushed_at_utc": "2026-10-31T05:44:22Z",
+          "license_spdx": "MIT",
+          "github_license_spdx_raw": "MIT",
+          "archived": false,
+          "github_topic_frontend": true
+        },
+        "category": "accessibility_seo_and_performance_validation",
+        "recommendation": "recommended",
+        "technology_model": "checklist",
+        "static_site_classification": "reference_only",
+        "usable_directly_without_compilation": false,
+        "requires_compilation_for_primary_workflow": false,
+        "compatibility": {
+          "html": "integrates_with_generated_html",
+          "css": "can_coexist_with_css",
+          "javascript": "optional",
+          "github_pages": "reference_only",
+          "server_required_on_github_pages": false
+        },
+        "dependencies": [],
+        "full_transitive_dependencies_verified": null,
+        "installation": "Read checklist directly; no website dependency.",
+        "configuration": "Apply appropriate HTML, CSS, JS, SEO and accessibility checks during QA.",
+        "build_process": "None.",
+        "deployment_notes": "Not shipped to production.",
+        "practical_applications": [
+          "Pre-launch QA",
+          "SEO tags",
+          "Cross-browser checks"
+        ],
+        "reusable_code": [
+          "Audit checklist",
+          "Validation categories"
+        ],
+        "limitations": [
+          "Checklist is guidance, not automated verification"
+        ],
+        "quality_review": {
+          "maintenance": "recent_push_verified",
+          "security_review": {
+            "independent_security_audit": null,
+            "known_vulnerability_status": null,
+            "dependency_vulnerabilities_scanned": null
+          },
+          "accessibility": "Includes accessibility guidance; not itself an automated tester.",
+          "performance": null,
+          "responsive_mobile": "Contains cross-device checks.",
+          "verified_browser_support_matrix": null,
+          "measured_mobile_page_speed": null,
+          "measured_a11y_score": null
+        },
+        "evidence_urls": [
+          "https://github.com/thedaviddias/Front-End-Checklist",
+          "https://api.github.com/repos/thedaviddias/Front-End-Checklist",
+          "https://github.com/thedaviddias/Front-End-Checklist/blob/main/README.md"
+        ]
+      },
+      {
+        "category_rank": 5,
+        "name": "thedaviddias/Front-End-Performance-Checklist",
+        "url": "https://github.com/thedaviddias/Front-End-Performance-Checklist",
+        "description": "Front-end performance checklist.",
+        "metadata": {
+          "stars": 17400,
+          "last_pushed_at_utc": "2026-10-13T10:27:13Z",
+          "license_spdx": "MIT",
+          "github_license_spdx_raw": "MIT",
+          "archived": false,
+          "github_topic_frontend": true
+        },
+        "category": "accessibility_seo_and_performance_validation",
+        "recommendation": "recommended",
+        "technology_model": "checklist",
+        "static_site_classification": "reference_only",
+        "usable_directly_without_compilation": false,
+        "requires_compilation_for_primary_workflow": false,
+        "compatibility": {
+          "html": "integrates_with_generated_html",
+          "css": "can_coexist_with_css",
+          "javascript": "optional",
+          "github_pages": "reference_only",
+          "server_required_on_github_pages": false
+        },
+        "dependencies": [],
+        "full_transitive_dependencies_verified": null,
+        "installation": "Read checklist directly; no production dependencies.",
+        "configuration": "Use it with Lighthouse and real-site measurements.",
+        "build_process": "None.",
+        "deployment_notes": "Not shipped to production.",
+        "practical_applications": [
+          "Asset optimization QA",
+          "Loading strategy reviews"
+        ],
+        "reusable_code": [
+          "Optimization checklist"
+        ],
+        "limitations": [
+          "Recommendations must be evaluated for project/browser context"
+        ],
+        "quality_review": {
+          "maintenance": "recent_push_verified",
+          "security_review": {
+            "independent_security_audit": null,
+            "known_vulnerability_status": null,
+            "dependency_vulnerabilities_scanned": null
+          },
+          "accessibility": null,
+          "performance": "Focus is performance guidance; no direct runtime impact.",
+          "responsive_mobile": null,
+          "verified_browser_support_matrix": null,
+          "measured_mobile_page_speed": null,
+          "measured_a11y_score": null
+        },
+        "evidence_urls": [
+          "https://github.com/thedaviddias/Front-End-Performance-Checklist",
+          "https://api.github.com/repos/thedaviddias/Front-End-Performance-Checklist",
+          "https://github.com/thedaviddias/Front-End-Performance-Checklist/blob/main/README.md"
+        ]
+      }
+    ],
+    "templates_and_website_starters": [
+      {
+        "category_rank": 1,
+        "name": "11ty/eleventy-base-blog",
+        "url": "https://github.com/11ty/eleventy-base-blog",
+        "description": "Eleventy v3 blog starter with prerendered content.",
+        "metadata": {
+          "stars": 1547,
+          "last_pushed_at_utc": "2026-11-07T02:14:58Z",
+          "license_spdx": "MIT",
+          "github_license_spdx_raw": "MIT",
+          "archived": false,
+          "github_topic_frontend": false
+        },
+        "category": "templates_and_website_starters",
+        "recommendation": "recommended",
+        "technology_model": "eleventy_starter",
+        "static_site_classification": "static_build",
+        "usable_directly_without_compilation": false,
+        "requires_compilation_for_primary_workflow": true,
+        "compatibility": {
+          "html": "integrates_with_generated_html",
+          "css": "can_coexist_with_css",
+          "javascript": "used_or_generated",
+          "github_pages": "static_build",
+          "server_required_on_github_pages": false
+        },
+        "dependencies": [
+          "Node.js",
+          "Eleventy v3 dependencies"
+        ],
+        "full_transitive_dependencies_verified": null,
+        "installation": "Clone or use template; npm install then npm run build.",
+        "configuration": "Change blog content, metadata, URLs and layout before production.",
+        "build_process": "Produces _site/ prerendered static HTML by default.",
+        "deployment_notes": "Ship only generated/static browser files; do not assume GitHub Pages runs Node.js or API servers.",
+        "practical_applications": [
+          "Blog starter",
+          "Content architecture",
+          "Static SEO page templates"
+        ],
+        "reusable_code": [
+          "Blog templates",
+          "Layouts",
+          "Asset pipeline"
+        ],
+        "limitations": [
+          "Requires Eleventy build",
+          "Starter customization and audit required"
+        ],
+        "quality_review": {
+          "maintenance": "recent_push_verified",
+          "security_review": {
+            "independent_security_audit": null,
+            "known_vulnerability_status": null,
+            "dependency_vulnerabilities_scanned": null
+          },
+          "accessibility": "Check headings, alt text and keyboard interaction after customization.",
+          "performance": "Prerendered design; performance requires page audits.",
+          "responsive_mobile": "Starter styling must be evaluated on target devices.",
+          "verified_browser_support_matrix": null,
+          "measured_mobile_page_speed": null,
+          "measured_a11y_score": null
+        },
+        "evidence_urls": [
+          "https://github.com/11ty/eleventy-base-blog",
+          "https://api.github.com/repos/11ty/eleventy-base-blog",
+          "https://github.com/11ty/eleventy-base-blog/blob/main/README.md"
+        ]
+      },
+      {
+        "category_rank": 2,
+        "name": "startbootstrap/startbootstrap-landing-page",
+        "url": "https://github.com/startbootstrap/startbootstrap-landing-page",
+        "description": "Responsive Bootstrap landing-page template.",
+        "metadata": {
+          "stars": 1673,
+          "last_pushed_at_utc": "2024-07-08T18:51:16Z",
+          "license_spdx": "MIT",
+          "github_license_spdx_raw": "MIT",
+          "archived": false,
+          "github_topic_frontend": false
+        },
+        "category": "templates_and_website_starters",
+        "recommendation": "conditional",
+        "technology_model": "html_bootstrap_template",
+        "static_site_classification": "direct_static_or_build",
+        "usable_directly_without_compilation": true,
+        "requires_compilation_for_primary_workflow": false,
+        "compatibility": {
+          "html": "native",
+          "css": "can_coexist_with_css",
+          "javascript": "used_or_generated",
+          "github_pages": "direct_static_or_build",
+          "server_required_on_github_pages": false
+        },
+        "dependencies": [
+          "Bootstrap styles and optional template assets"
+        ],
+        "full_transitive_dependencies_verified": null,
+        "installation": "Download/vendored template files and replace demo content; pin supported Bootstrap version.",
+        "configuration": "Verify asset paths, replace placeholder images/copy, set SEO metadata.",
+        "build_process": "Publish built HTML/CSS/JS; source customization may use tooling.",
+        "deployment_notes": "Ship only generated/static browser files; do not assume GitHub Pages runs Node.js or API servers.",
+        "practical_applications": [
+          "Marketing landing page",
+          "Hero and responsive section examples"
+        ],
+        "reusable_code": [
+          "Static markup",
+          "Landing-page layout"
+        ],
+        "limitations": [
+          "Latest verified push was in 2024",
+          "Design may need refreshing",
+          "Check asset rights independently"
+        ],
+        "quality_review": {
+          "maintenance": "older_last_push_use_caution",
+          "security_review": {
+            "independent_security_audit": null,
+            "known_vulnerability_status": null,
+            "dependency_vulnerabilities_scanned": null
+          },
+          "accessibility": "Audit controls and media alternatives.",
+          "performance": "Measure actual assets and fonts.",
+          "responsive_mobile": "Described as responsive; no independent device testing.",
+          "verified_browser_support_matrix": null,
+          "measured_mobile_page_speed": null,
+          "measured_a11y_score": null
+        },
+        "evidence_urls": [
+          "https://github.com/startbootstrap/startbootstrap-landing-page",
+          "https://api.github.com/repos/startbootstrap/startbootstrap-landing-page"
+        ]
+      },
+      {
+        "category_rank": 3,
+        "name": "startbootstrap/startbootstrap-clean-blog",
+        "url": "https://github.com/startbootstrap/startbootstrap-clean-blog",
+        "description": "Bootstrap blog template.",
+        "metadata": {
+          "stars": 1813,
+          "last_pushed_at_utc": "2024-02-01T00:57:18Z",
+          "license_spdx": "MIT",
+          "github_license_spdx_raw": "MIT",
+          "archived": false,
+          "github_topic_frontend": false
+        },
+        "category": "templates_and_website_starters",
+        "recommendation": "conditional",
+        "technology_model": "html_bootstrap_template",
+        "static_site_classification": "direct_static_or_build",
+        "usable_directly_without_compilation": true,
+        "requires_compilation_for_primary_workflow": false,
+        "compatibility": {
+          "html": "native",
+          "css": "can_coexist_with_css",
+          "javascript": "used_or_generated",
+          "github_pages": "direct_static_or_build",
+          "server_required_on_github_pages": false
+        },
+        "dependencies": [
+          "Bootstrap styles and optional template assets"
+        ],
+        "full_transitive_dependencies_verified": null,
+        "installation": "Use as static HTML blog theme or integrate markup with an SSG.",
+        "configuration": "Customize links, metadata, navigation and article pages.",
+        "build_process": "Publish compiled/ready HTML and CSS; any source build is optional.",
+        "deployment_notes": "Ship only generated/static browser files; do not assume GitHub Pages runs Node.js or API servers.",
+        "practical_applications": [
+          "Simple editorial template",
+          "Blog layout reference"
+        ],
+        "reusable_code": [
+          "Blog-themed HTML/CSS"
+        ],
+        "limitations": [
+          "Last verified push was in early 2024",
+          "Does not by itself provide a content generator"
+        ],
+        "quality_review": {
+          "maintenance": "older_last_push_use_caution",
+          "security_review": {
+            "independent_security_audit": null,
+            "known_vulnerability_status": null,
+            "dependency_vulnerabilities_scanned": null
+          },
+          "accessibility": "Review navigation, headings and image alt text.",
+          "performance": "Asset footprint must be measured.",
+          "responsive_mobile": "Template is responsive by project description.",
+          "verified_browser_support_matrix": null,
+          "measured_mobile_page_speed": null,
+          "measured_a11y_score": null
+        },
+        "evidence_urls": [
+          "https://github.com/startbootstrap/startbootstrap-clean-blog",
+          "https://api.github.com/repos/startbootstrap/startbootstrap-clean-blog"
+        ]
+      }
+    ],
+    "development_quality_tooling": [
+      {
+        "category_rank": 1,
+        "name": "eslint/eslint",
+        "url": "https://github.com/eslint/eslint",
+        "description": "JavaScript linting and quality tool.",
+        "metadata": {
+          "stars": 27624,
+          "last_pushed_at_utc": "2026-11-16T16:02:23Z",
+          "license_spdx": "MIT",
+          "github_license_spdx_raw": "MIT",
+          "archived": false,
+          "github_topic_frontend": false
+        },
+        "category": "development_quality_tooling",
+        "recommendation": "recommended",
+        "technology_model": "javascript_linter",
+        "static_site_classification": "development_only",
+        "usable_directly_without_compilation": false,
+        "requires_compilation_for_primary_workflow": false,
+        "compatibility": {
+          "html": "integrates_with_generated_html",
+          "css": "can_coexist_with_css",
+          "javascript": "not_deployed",
+          "github_pages": "development_only",
+          "server_required_on_github_pages": false
+        },
+        "dependencies": [
+          "Node.js",
+          "npm"
+        ],
+        "full_transitive_dependencies_verified": null,
+        "installation": "npm install --save-dev eslint; initialize/configure the project linter.",
+        "configuration": "Select JS globals/config and rules appropriate to browser code and build scripts.",
+        "build_process": "No production artifact; run checks before deploying.",
+        "deployment_notes": "Not shipped to production.",
+        "practical_applications": [
+          "JavaScript correctness",
+          "Consistent code conventions"
+        ],
+        "reusable_code": [
+          "Lint rules",
+          "Static checks"
+        ],
+        "limitations": [
+          "Does not guarantee runtime security or accessibility"
+        ],
+        "quality_review": {
+          "maintenance": "recent_push_verified",
+          "security_review": {
+            "independent_security_audit": null,
+            "known_vulnerability_status": null,
+            "dependency_vulnerabilities_scanned": null
+          },
+          "accessibility": null,
+          "performance": "No runtime impact when used only in development.",
+          "responsive_mobile": null,
+          "verified_browser_support_matrix": null,
+          "measured_mobile_page_speed": null,
+          "measured_a11y_score": null
+        },
+        "evidence_urls": [
+          "https://github.com/eslint/eslint",
+          "https://api.github.com/repos/eslint/eslint",
+          "https://github.com/eslint/eslint/blob/main/README.md"
+        ]
+      },
+      {
+        "category_rank": 2,
+        "name": "prettier/prettier",
+        "url": "https://github.com/prettier/prettier",
+        "description": "Source-code formatter.",
+        "metadata": {
+          "stars": 52417,
+          "last_pushed_at_utc": "2026-11-14T08:59:34Z",
+          "license_spdx": "MIT",
+          "github_license_spdx_raw": "MIT",
+          "archived": false,
+          "github_topic_frontend": false
+        },
+        "category": "development_quality_tooling",
+        "recommendation": "recommended",
+        "technology_model": "formatter",
+        "static_site_classification": "development_only",
+        "usable_directly_without_compilation": false,
+        "requires_compilation_for_primary_workflow": false,
+        "compatibility": {
+          "html": "integrates_with_generated_html",
+          "css": "can_coexist_with_css",
+          "javascript": "not_deployed",
+          "github_pages": "development_only",
+          "server_required_on_github_pages": false
+        },
+        "dependencies": [
+          "Node.js/npm or editor integration"
+        ],
+        "full_transitive_dependencies_verified": null,
+        "installation": "npm install --save-dev prettier or use editor integration.",
+        "configuration": "Use project formatting settings; coordinate with ESLint to avoid conflicting stylistic rules.",
+        "build_process": "No runtime artifact.",
+        "deployment_notes": "Not shipped to production.",
+        "practical_applications": [
+          "Consistent HTML/CSS/JS formatting",
+          "Readable code review"
+        ],
+        "reusable_code": [
+          "Formatting engine"
+        ],
+        "limitations": [
+          "Formatting does not verify functionality"
+        ],
+        "quality_review": {
+          "maintenance": "recent_push_verified",
+          "security_review": {
+            "independent_security_audit": null,
+            "known_vulnerability_status": null,
+            "dependency_vulnerabilities_scanned": null
+          },
+          "accessibility": null,
+          "performance": "No runtime impact.",
+          "responsive_mobile": null,
+          "verified_browser_support_matrix": null,
+          "measured_mobile_page_speed": null,
+          "measured_a11y_score": null
+        },
+        "evidence_urls": [
+          "https://github.com/prettier/prettier",
+          "https://api.github.com/repos/prettier/prettier",
+          "https://github.com/prettier/prettier/blob/main/README.md"
+        ]
+      }
+    ],
+    "conditional_static_exports": [
+      {
+        "category_rank": 1,
+        "name": "vercel/next.js",
+        "url": "https://github.com/vercel/next.js",
+        "description": "React application framework with conditional static export.",
+        "metadata": {
+          "stars": 143607,
+          "last_pushed_at_utc": "2026-11-16T16:16:11Z",
+          "license_spdx": "MIT",
+          "github_license_spdx_raw": "MIT",
+          "archived": false,
+          "github_topic_frontend": false
+        },
+        "category": "conditional_static_exports",
+        "recommendation": "conditional",
+        "technology_model": "react_full_stack_framework",
+        "static_site_classification": "conditional_static_export",
+        "usable_directly_without_compilation": false,
+        "requires_compilation_for_primary_workflow": true,
+        "compatibility": {
+          "html": "integrates_with_generated_html",
+          "css": "can_coexist_with_css",
+          "javascript": "used_or_generated",
+          "github_pages": "conditional_static_export",
+          "server_required_on_github_pages": false
+        },
+        "dependencies": [
+          "Node.js",
+          "React",
+          "Next.js"
+        ],
+        "full_transitive_dependencies_verified": null,
+        "installation": "Install/create Next.js app.",
+        "configuration": "Set output: export; configure basePath/assetPrefix as needed; ensure every dynamic route can be precomputed.",
+        "build_process": "next build generates out/ static export; deploy that directory.",
+        "deployment_notes": "Ship only generated/static browser files; do not assume GitHub Pages runs Node.js or API servers.",
+        "practical_applications": [
+          "Large React content applications with no server-only features"
+        ],
+        "reusable_code": [
+          "Prerendered routes",
+          "React components"
+        ],
+        "limitations": [
+          "No server actions, runtime route handlers, cookies, ISR or image optimizer default server runtime on Pages",
+          "More complex than needed for simple site"
+        ],
+        "quality_review": {
+          "maintenance": "recent_push_verified",
+          "security_review": {
+            "independent_security_audit": null,
+            "known_vulnerability_status": null,
+            "dependency_vulnerabilities_scanned": null
+          },
+          "accessibility": "Component accessibility is author responsibility.",
+          "performance": "Static export can be efficient but bundle weight varies.",
+          "responsive_mobile": null,
+          "verified_browser_support_matrix": null,
+          "measured_mobile_page_speed": null,
+          "measured_a11y_score": null
+        },
+        "evidence_urls": [
+          "https://github.com/vercel/next.js",
+          "https://api.github.com/repos/vercel/next.js",
+          "https://nextjs.org/docs/app/guides/static-exports"
+        ]
+      },
+      {
+        "category_rank": 2,
+        "name": "nuxt/nuxt",
+        "url": "https://github.com/nuxt/nuxt",
+        "description": "Full-stack Vue framework with static generation.",
+        "metadata": {
+          "stars": 61078,
+          "last_pushed_at_utc": "2026-11-16T16:14:11Z",
+          "license_spdx": "MIT",
+          "github_license_spdx_raw": "MIT",
+          "archived": false,
+          "github_topic_frontend": false
+        },
+        "category": "conditional_static_exports",
+        "recommendation": "conditional",
+        "technology_model": "vue_full_stack_framework",
+        "static_site_classification": "conditional_static_export",
+        "usable_directly_without_compilation": false,
+        "requires_compilation_for_primary_workflow": true,
+        "compatibility": {
+          "html": "integrates_with_generated_html",
+          "css": "can_coexist_with_css",
+          "javascript": "used_or_generated",
+          "github_pages": "conditional_static_export",
+          "server_required_on_github_pages": false
+        },
+        "dependencies": [
+          "Node.js",
+          "Vue",
+          "Nuxt"
+        ],
+        "full_transitive_dependencies_verified": null,
+        "installation": "npm create nuxt@latest",
+        "configuration": "Use static generation (nuxi generate) and ensure all routes/data can be pre-rendered; set deploy base URL.",
+        "build_process": "Generate static site and deploy output directory rather than Nuxt server.",
+        "deployment_notes": "Ship only generated/static browser files; do not assume GitHub Pages runs Node.js or API servers.",
+        "practical_applications": [
+          "Static multi-route Vue sites"
+        ],
+        "reusable_code": [
+          "Vue pages",
+          "Static routes"
+        ],
+        "limitations": [
+          "SSR-only endpoints, runtime API routes and session-driven rendering require external hosting"
+        ],
+        "quality_review": {
+          "maintenance": "recent_push_verified",
+          "security_review": {
+            "independent_security_audit": null,
+            "known_vulnerability_status": null,
+            "dependency_vulnerabilities_scanned": null
+          },
+          "accessibility": "Vue UI must be accessible.",
+          "performance": "Prerendered content can limit client rendering overhead.",
+          "responsive_mobile": null,
+          "verified_browser_support_matrix": null,
+          "measured_mobile_page_speed": null,
+          "measured_a11y_score": null
+        },
+        "evidence_urls": [
+          "https://github.com/nuxt/nuxt",
+          "https://api.github.com/repos/nuxt/nuxt",
+          "https://github.com/nuxt/nuxt/blob/main/README.md",
+          "https://nuxt.com/docs/getting-started/deployment"
+        ]
+      },
+      {
+        "category_rank": 3,
+        "name": "sveltejs/kit",
+        "url": "https://github.com/sveltejs/kit",
+        "description": "Svelte app framework with static adapter.",
+        "metadata": {
+          "stars": 20914,
+          "last_pushed_at_utc": "2026-11-16T01:34:54Z",
+          "license_spdx": "MIT",
+          "github_license_spdx_raw": "MIT",
+          "archived": false,
+          "github_topic_frontend": false
+        },
+        "category": "conditional_static_exports",
+        "recommendation": "conditional",
+        "technology_model": "svelte_app_framework",
+        "static_site_classification": "conditional_static_export",
+        "usable_directly_without_compilation": false,
+        "requires_compilation_for_primary_workflow": true,
+        "compatibility": {
+          "html": "integrates_with_generated_html",
+          "css": "can_coexist_with_css",
+          "javascript": "used_or_generated",
+          "github_pages": "conditional_static_export",
+          "server_required_on_github_pages": false
+        },
+        "dependencies": [
+          "Node.js",
+          "Svelte",
+          "@sveltejs/adapter-static"
+        ],
+        "full_transitive_dependencies_verified": null,
+        "installation": "Create SvelteKit app; install/configure adapter-static.",
+        "configuration": "Prerender routes and set correct base paths; enable SPA fallback only after evaluating Pages 404 behavior.",
+        "build_process": "Build static output (commonly build/ as configured by adapter); deploy that folder.",
+        "deployment_notes": "Ship only generated/static browser files; do not assume GitHub Pages runs Node.js or API servers.",
+        "practical_applications": [
+          "Static Svelte content sites",
+          "Client side Svelte apps"
+        ],
+        "reusable_code": [
+          "Svelte route components",
+          "Static pages"
+        ],
+        "limitations": [
+          "Endpoints needing runtime SSR cannot run on Pages",
+          "Routing fallback can be unreliable without planned 404 strategy"
+        ],
+        "quality_review": {
+          "maintenance": "recent_push_verified",
+          "security_review": {
+            "independent_security_audit": null,
+            "known_vulnerability_status": null,
+            "dependency_vulnerabilities_scanned": null
+          },
+          "accessibility": "Svelte tooling includes accessibility warnings but manual checks needed.",
+          "performance": "Framework compilation; performance depends on app.",
+          "responsive_mobile": null,
+          "verified_browser_support_matrix": null,
+          "measured_mobile_page_speed": null,
+          "measured_a11y_score": null
+        },
+        "evidence_urls": [
+          "https://github.com/sveltejs/kit",
+          "https://api.github.com/repos/sveltejs/kit",
+          "https://github.com/sveltejs/kit/blob/main/README.md",
+          "https://svelte.dev/docs/kit/adapter-static"
+        ]
+      }
+    ]
+  },
+  "compatibility_conflicts": [
+    {
+      "pair": [
+        "jgthms/bulma",
+        "twbs/bootstrap"
+      ],
+      "issue": "Global resets, element and component class names can conflict. Choose one primary CSS framework.",
+      "severity": "high"
+    },
+    {
+      "pair": [
+        "jgthms/bulma",
+        "tailwindlabs/tailwindcss"
+      ],
+      "issue": "Combining complete styling systems may produce inconsistent defaults and larger CSS.",
+      "severity": "medium"
+    },
+    {
+      "pair": [
+        "markmead/hyperui",
+        "saadeghi/daisyui"
+      ],
+      "issue": "Both assume Tailwind workflows and can duplicate component styling and themes.",
+      "severity": "medium"
+    },
+    {
+      "pair": [
+        "mdbootstrap/TW-Elements",
+        "saadeghi/daisyui"
+      ],
+      "issue": "Competing Tailwind components may bind to same controls; configure only one behavior owner.",
+      "severity": "high"
+    },
+    {
+      "pair": [
+        "react/react",
+        "vuejs/core"
+      ],
+      "issue": "Separate component runtimes inflate bundles; do not mix without a defined isolation boundary.",
+      "severity": "high"
+    },
+    {
+      "pair": [
+        "alpinejs/alpine",
+        "vuejs/core"
+      ],
+      "issue": "Both may mutate the same DOM subtree; divide responsibility clearly.",
+      "severity": "high"
+    },
+    {
+      "pair": [
+        "KittyGiraudel/a11y-dialog",
+        "twbs/bootstrap"
+      ],
+      "issue": "Do not initialize two modal controllers on one dialog; choose a single implementation.",
+      "severity": "medium"
+    },
+    {
+      "pair": [
+        "nolimits4web/swiper",
+        "other_slider_libraries"
+      ],
+      "issue": "Multiple carousels add redundant CSS/JS and may conflict in gesture handling.",
+      "severity": "medium"
+    },
+    {
+      "pair": [
+        "twbs/bootstrap",
+        "unstable_main_branch"
+      ],
+      "issue": "Bootstrap default main README currently documents v6 alpha; pin stable v5 release for production.",
+      "severity": "high"
+    },
+    {
+      "pair": [
+        "tailwindlabs/tailwindcss",
+        "Tailwind v3 component instructions"
+      ],
+      "issue": "Tailwind v4 build and plugin configuration differ from v3; verify all component versions.",
+      "severity": "high"
+    },
+    {
+      "pair": [
+        "vitejs/vite",
+        "GitHub Pages project site"
+      ],
+      "issue": "Missing vite.config base=/REPOSITORY/ yields broken assets on project URLs.",
+      "severity": "high"
+    },
+    {
+      "pair": [
+        "vercel/next.js",
+        "server-only runtime features"
+      ],
+      "issue": "Server actions, ISR, cookies and runtime dynamic routes cannot execute in static output.",
+      "severity": "high"
+    },
+    {
+      "pair": [
+        "bigskysoftware/htmx",
+        "GitHub Pages static hosting"
+      ],
+      "issue": "Dynamic HTML response routes require external server; Pages can host static fragments only.",
+      "severity": "high"
+    },
+    {
+      "pair": [
+        "client-side history routers",
+        "GitHub Pages deep link refresh"
+      ],
+      "issue": "Unknown routes may return 404; prefer prerendered routes or a carefully tested fallback.",
+      "severity": "high"
+    },
+    {
+      "pair": [
+        "prettier/prettier",
+        "eslint/eslint"
+      ],
+      "issue": "Disable conflicting formatting rules and use ESLint for semantics, Prettier for formatting.",
+      "severity": "low"
+    }
+  ],
+  "excluded_or_deprioritized": [
+    {
+      "name": "picocss/pico",
+      "reason": "GitHub API archived=true on 2026-11-16; exclude from default technology recommendation",
+      "evidence_url": "https://api.github.com/repos/picocss/pico",
+      "metadata": {
+        "stars": 16811,
+        "last_pushed_at_utc": "2026-10-04T04:00:49Z",
+        "archived": true,
+        "license_spdx": "MIT",
+        "github_topic_frontend": false
+      }
+    },
+    {
+      "name": "shoelace-style/shoelace",
+      "reason": "Repository archived=true and README description points to successor; avoid starting new integration here",
+      "evidence_url": "https://api.github.com/repos/shoelace-style/shoelace",
+      "metadata": {
+        "stars": 13819,
+        "last_pushed_at_utc": "2026-05-14T13:39:51Z",
+        "archived": true,
+        "license_spdx": "MIT",
+        "github_topic_frontend": false
+      }
+    },
+    {
+      "name": "vuejs/vue",
+      "reason": "Topic listing identifies it as Vue 2; prefer maintained Vue 3 source vuejs/core",
+      "evidence_url": "https://github.com/topics/frontend",
+      "metadata": null
+    },
+    {
+      "name": "google/eleventy-high-performance-blog",
+      "reason": "Repository archived=true; use current 11ty/eleventy-base-blog instead",
+      "evidence_url": "https://api.github.com/repos/google/eleventy-high-performance-blog",
+      "metadata": {
+        "stars": 4032,
+        "last_pushed_at_utc": "2024-06-18T01:18:43Z",
+        "archived": true,
+        "license_spdx": "MIT",
+        "github_topic_frontend": false
+      }
+    },
+    {
+      "name": "typicode/json-server",
+      "reason": "Development-only fake REST server; GitHub Pages cannot run its Node server",
+      "evidence_url": "https://github.com/typicode/json-server",
+      "metadata": {
+        "stars": 75747,
+        "last_pushed_at_utc": "2026-03-23T19:40:00Z",
+        "archived": false,
+        "license_spdx": "MIT",
+        "github_topic_frontend": true
+      }
+    },
+    {
+      "name": "ionic-team/ionic-framework",
+      "reason": "Primarily cross-platform native/PWA-oriented; unnecessary for straightforward static website",
+      "evidence_url": "https://github.com/ionic-team/ionic-framework",
+      "metadata": {
+        "stars": 52753,
+        "last_pushed_at_utc": "2026-11-14T04:13:12Z",
+        "archived": false,
+        "license_spdx": "MIT",
+        "github_topic_frontend": true
+      }
+    },
+    {
+      "name": "vuejs/petite-vue",
+      "reason": "Last GitHub code push verified in 2024; prefer actively updated Alpine for small enhancements",
+      "evidence_url": "https://api.github.com/repos/vuejs/petite-vue",
+      "metadata": {
+        "stars": 9685,
+        "last_pushed_at_utc": "2024-07-13T21:45:45Z",
+        "archived": false,
+        "license_spdx": "MIT",
+        "github_topic_frontend": false
+      }
+    },
+    {
+      "name": "michalsnik/aos",
+      "reason": "Last GitHub code push verified in 2024; low priority versus CSS transitions or active animation options",
+      "evidence_url": "https://api.github.com/repos/michalsnik/aos",
+      "metadata": {
+        "stars": 28056,
+        "last_pushed_at_utc": "2024-03-26T15:58:43Z",
+        "archived": false,
+        "license_spdx": "MIT",
+        "github_topic_frontend": false
+      }
+    },
+    {
+      "name": "animate-css/animate.css",
+      "reason": "Last verified code push in 2024; optional reference only, not selected as default dependency",
+      "evidence_url": "https://api.github.com/repos/animate-css/animate.css",
+      "metadata": {
+        "stars": 83014,
+        "last_pushed_at_utc": "2024-07-29T19:34:21Z",
+        "archived": false,
+        "license_spdx": null,
+        "github_topic_frontend": false
+      }
+    },
+    {
+      "name": "Splidejs/splide",
+      "reason": "Last GitHub code push verified in 2024; active Swiper selected instead for slider requirement",
+      "evidence_url": "https://api.github.com/repos/Splidejs/splide",
+      "metadata": {
+        "stars": 5368,
+        "last_pushed_at_utc": "2024-07-08T13:39:15Z",
+        "archived": false,
+        "license_spdx": "MIT",
+        "github_topic_frontend": false
+      }
+    },
+    {
+      "name": "html-validate/html-validate",
+      "reason": "GitHub repository is a mirror with low GitHub star count; authoritative source and maintenance source not verified in this research",
+      "evidence_url": "https://api.github.com/repos/html-validate/html-validate",
+      "metadata": null
+    }
+  ],
+  "recommended_quality_gates": {
+    "review_before_selection": [
+      "Confirm latest stable release and supported Node version",
+      "Read actual distributed asset and package metadata",
+      "Review unresolved security advisories and license compatibility",
+      "Check browsers/devices supported by chosen version"
+    ],
+    "before_publication": [
+      "Run Lighthouse against built/deployed pages",
+      "Run axe-core and manual keyboard accessibility checks",
+      "Check mobile layouts at narrow widths",
+      "Test all navigation and dialogs with keyboard",
+      "Verify images have width/height and alt text",
+      "Verify output paths and hard-refresh deep URLs",
+      "Check broken links and SEO tags",
+      "Ensure no secrets are embedded in frontend code",
+      "Validate third-party CDN availability or self-host pinned resources"
+    ]
+  }
+}
