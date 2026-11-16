@@ -1,0 +1,36 @@
+{
+  "url": "https://nicholasmaritas.github.io/0AR5TAS/",
+  "title": "",
+  "bodyText": "",
+  "readyState": "complete",
+  "bodyBackground": "rgba(0, 0, 0, 0)",
+  "htmlBackground": "rgba(0, 0, 0, 0)",
+  "fonts": [],
+  "images": [],
+  "links": [],
+  "resources": [
+    {
+      "name": "https://nicholasmaritas.github.io/0AR5TAS/styles.css",
+      "initiatorType": "link"
+    },
+    {
+      "name": "https://nicholasmaritas.github.io/0AR5TAS/script.js",
+      "initiatorType": "script"
+    }
+  ],
+  "nodes": [],
+  "stylesheets": [
+    {
+      "href": "https://nicholasmaritas.github.io/0AR5TAS/styles.css",
+      "owner": "<link rel=\"stylesheet\" href=\"./styles.css\">",
+      "rules": ""
+    }
+  ],
+  "httpStatus": 200,
+  "loadError": null,
+  "errors": [],
+  "viewport": {
+    "width": 1440,
+    "height": 900
+  }
+}

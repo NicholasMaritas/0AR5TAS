@@ -1,0 +1,63 @@
+{
+  "testedViewports": [
+    {
+      "width": 1440,
+      "height": 900
+    },
+    {
+      "width": 390,
+      "height": 844
+    }
+  ],
+  "results": [
+    {
+      "id": "supreme-desktop",
+      "status": 200,
+      "loadError": null,
+      "title": "Supreme",
+      "bodyText": "skip to content\n11/16/2026 12:59pm NYC\nSupreme\nnews\nfall/winter 2026 preview\nfall/winter 2026 lookbook\nshop\nrandom\nabout\nstores\ncontact\nmailing list\nterms\nprivacy\nfaq\naccessibility",
+      "nodes": 140,
+      "images": 0,
+      "links": 39,
+      "cssSheets": 1,
+      "errors": []
+    },
+    {
+      "id": "clone-desktop",
+      "status": 200,
+      "loadError": null,
+      "title": "",
+      "bodyText": "",
+      "nodes": 0,
+      "images": 0,
+      "links": 0,
+      "cssSheets": 1,
+      "errors": []
+    },
+    {
+      "id": "supreme-mobile",
+      "status": 200,
+      "loadError": null,
+      "title": "Supreme",
+      "bodyText": "skip to content\n11/16/2026 12:59pm NYC\nSupreme\nnews\nfall/winter 2026 preview\nfall/winter 2026 lookbook\nshop\nrandom\nabout\nstores\ncontact\nmailing list\nterms\nprivacy\nfaq\naccessibility",
+      "nodes": 134,
+      "images": 0,
+      "links": 38,
+      "cssSheets": 1,
+      "errors": []
+    },
+    {
+      "id": "clone-mobile",
+      "status": 200,
+      "loadError": null,
+      "title": "",
+      "bodyText": "",
+      "nodes": 0,
+      "images": 0,
+      "links": 0,
+      "cssSheets": 1,
+      "errors": []
+    }
+  ],
+  "accuracyClaim": "unverified; no visual comparison or correction was performed by this capture step"
+}
