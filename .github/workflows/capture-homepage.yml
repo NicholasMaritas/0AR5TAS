@@ -18,10 +18,12 @@ jobs:
           node-version: '22'
       - name: Install browser dependency
         run: |
-          npm install --no-save --no-package-lock playwright
+          npm install --no-save --no-package-lock playwright sharp
           npx playwright install chromium --with-deps
       - name: Capture homepages at identical viewport sizes
         run: node scripts/capture-homepage.mjs
+      - name: Compare original and published clone at matched viewports
+        run: node scripts/compare-homepage.mjs
       - name: Upload verification artifacts
         if: always()
         uses: actions/upload-artifact@v4
