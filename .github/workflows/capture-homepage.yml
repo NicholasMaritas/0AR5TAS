@@ -4,6 +4,9 @@ on:
   push:
     paths:
       - '.github/workflows/capture-homepage.yml'
+      - 'index.html'
+      - 'styles.css'
+      - 'script.js'
   workflow_dispatch:
 permissions:
   contents: write
