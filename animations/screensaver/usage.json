@@ -1,0 +1,54 @@
+{
+  "feature": "Krink screensaver",
+  "purpose": "Collected source for later integration; not installed on the project website.",
+  "files": {
+    "krink-screensaver.js": "Original Oa class plus its original ka helper, extracted from the bundle.",
+    "krink-screensaver.css": "Original feature CSS and the five utility rules required by the overlay.",
+    "krink-screensaver.html": "Original overlay and image URL data; fragment, not a complete page.",
+    "krink-reference.json": "Provenance, behavior, original source, and verification history."
+  },
+  "integration": [
+    "Include krink-screensaver.css.",
+    "Insert krink-screensaver.html into the page body.",
+    "Load krink-screensaver.js after the fragment, then call new Oa()."
+  ],
+  "initialization_note": "The original site uses l||new Oa within its page initializer. This collection preserves the class without automatically starting it.",
+  "dependencies": [
+    "Browser DOM and timer APIs; no third-party JavaScript library required for this extracted class.",
+    "Six original external Krink image URLs retained in the HTML fragment; image files are not bundled."
+  ],
+  "behavior": {
+    "activation_timer_ms": 150000,
+    "initial_image_added_on_activation": true,
+    "image_interval_ms": 20000,
+    "image_selection": "Random selection from screensaver_json array",
+    "image_top_percent_range": [
+      -10,
+      110
+    ],
+    "image_left_percent_range": [
+      -10,
+      110
+    ],
+    "image_rotation_degrees_range": [
+      0,
+      360
+    ],
+    "overlay_dismissal_events": [
+      "click",
+      "mousemove"
+    ],
+    "event_listener_target": "#screensaver",
+    "global_user_activity_restarts_activation_timer": false,
+    "automatically_restarts_after_dismissal": false,
+    "overlay_opacity_transition_ms": 300,
+    "image_width_css_px_default": 130,
+    "image_width_css_px_at_viewport_min_width_1024": 220
+  },
+  "limitations": [
+    "Fixed initialization timer, not global inactivity detection.",
+    "Dismissal does not restart the timer.",
+    "Original asynchronous image-load and timer behavior preserved.",
+    "Live visual comparison has not been performed; future integration needs browser validation."
+  ]
+}
