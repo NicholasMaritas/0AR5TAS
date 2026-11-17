@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-11-17T15:30:50.003007+00:00",
+  "timestamp": "2026-11-17T15:32:27.347436+00:00",
   "site": "https://krink.com/",
   "errors": [],
   "assets": [
@@ -7,7 +7,7 @@
       "url": "https://krink.com/#inline-scripts",
       "kind": "inline-js",
       "bytes": 63840,
-      "sha256": "0af9476b17f5bc34a7769de397a7f165dde2239aef3d5614b24980866cd0d1b8",
+      "sha256": "c65f2531db6e198978d61d2bb732593323e87e0175b77b166bb3d06b0587aa84",
       "counts": {
         "settimeout": 3
       },
@@ -32,8 +32,8 @@
     {
       "url": "https://krink.com/#html",
       "kind": "html",
-      "bytes": 109026,
-      "sha256": "9ab58280b3ef8886bea614f3c5e877ae3137a4aa7ca7090cd587b5e4484c72d9",
+      "bytes": 109023,
+      "sha256": "d971d690d1aa18c1861942b8b086365e75e93da5457fc36e1e3552c6b523d86e",
       "counts": {
         "screensaver": 2,
         "settimeout": 3
@@ -46,8 +46,8 @@
         },
         {
           "term": "screensaver",
-          "pos": 106438,
-          "snippet": "[1]='FNAME';ftypes[1]='text';fnames[2]='LNAME';ftypes[2]='text';fnames[3]='MMERGE3';ftypes[3]='text';fnames[4]='MMERGE4';ftypes[4]='number';}(jQuery));var $mcj = jQuery.noConflict(true);</script>\n      <!--End mc_embed_signup-->\n    </div>\n  </div>\n</div>\n\n    <div id=\"screensaver\" class=\"fixed top-0 left-0 w-full h-full\"></div>\n  <div id=\"shopify-block-AWitpMC8rZDJCSlg4R__15573056287721514228\" class=\"shopify-block shopify-app-block json-ld-for-seo\"><!-- generated: 2026-11-17 10:30:50 -0500 -->\n<!-- BEGIN app snippet: json_ld_for_seo_website --><script type=\"application/ld+json\">\n {\n   \"@context\": \"https://schema.org\",\n   \"@type\": \"WebSite\",\n   \"name\": \"Krink\",\"alternateName\": [],\"@id\": \"http"
+          "pos": 106435,
+          "snippet": "[1]='FNAME';ftypes[1]='text';fnames[2]='LNAME';ftypes[2]='text';fnames[3]='MMERGE3';ftypes[3]='text';fnames[4]='MMERGE4';ftypes[4]='number';}(jQuery));var $mcj = jQuery.noConflict(true);</script>\n      <!--End mc_embed_signup-->\n    </div>\n  </div>\n</div>\n\n    <div id=\"screensaver\" class=\"fixed top-0 left-0 w-full h-full\"></div>\n  <div id=\"shopify-block-AWitpMC8rZDJCSlg4R__15573056287721514228\" class=\"shopify-block shopify-app-block json-ld-for-seo\"><!-- generated: 2026-11-17 10:32:27 -0500 -->\n<!-- BEGIN app snippet: json_ld_for_seo_website --><script type=\"application/ld+json\">\n {\n   \"@context\": \"https://schema.org\",\n   \"@type\": \"WebSite\",\n   \"name\": \"Krink\",\"alternateName\": [],\"@id\": \"http"
         },
         {
           "term": "settimeout",
@@ -693,7 +693,7 @@
     "url": "https://krink.com/",
     "status": 200,
     "final": "https://krink.com/",
-    "length": 109026
+    "length": 109023
   },
   "scripts": [
     "https://krink.com/checkouts/internal/preloads.js?locale=en-US&default_configuration_id=2261038",
