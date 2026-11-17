@@ -176,3 +176,12 @@ The agent handling a task must update this file after each task to preserve cont
 - Changes: Replaced JS scroll-position animation and velocity polling with native CSS mandatory snap, start alignment and normal pass-through. Native browser engine owns gesture, inertia, interruption and snap. Controller is read-only for counters/state, with snap-event/IntersectionObserver/scrollend fallbacks. Removed forced resize realignment. Responsive image srcsets and adjacent decode preparation added. Reduced motion uses free native scrolling.
 - Tradeoff: Native endpoint choice uses direction and projected momentum; no forced strict maximum-visible correction that can fight wheel/flick intent. Physics remain browser/OS controlled. No external JS library.
 - Validation: Syntax and six new no-scroll-write/observation/lifecycle regression tests passed. All 24 responsive photo URLs returned HTTP 200. Live publication checks pending; physical-device feel remains for human assessment.
+
+### Task 012 — Completion verification
+- COMPLETED — 2026-11-17. Commit 58377365f5a3c7321cef82309fecf82d088fd941 deployed successfully. Seven changed/added files read back identically.
+- Live desktop browser verified native y mandatory snap and native controller mode; long wheel gesture crossed multiple photos to scrollTop 3785, upward input moved to 3028 and reversal returned toward the last photo. Home settled at 0; Page Down settled at 757 with correct counters. All six images loaded using responsive 1440px candidates at the test viewport.
+- Very small wheel nudges can still settle on the current photo under native policy; no universal no-pullback claim. No measured FPS or latency improvement claimed. Six automated tests verify no application scroll writes, gesture interception or continuous frame polling, observation fallbacks and cleanup.
+- Research: Nine primary sources, source-informed decisions and native-selection tradeoffs saved in interactions/momentum-scroll/research.json. Native endpoint selection preserves momentum/direction rather than forcing an independent strict-majority correction.
+- Limits: Real touch/trackpad feel and reduced-motion preference on physical devices remain for human assessment. Browser/OS controls native motion.
+- Live test: https://nicholasmaritas.github.io/0AR5TAS/interactions/momentum-scroll/
+- Pending: None for requested research, implementation and desktop verification.

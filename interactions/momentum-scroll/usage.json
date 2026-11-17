@@ -47,7 +47,12 @@
   "validation": {
     "syntax": "passed",
     "automated": "Six tests passed; native controller cannot write scrollTop or scrollTo in test fixture; no wheel/touch handlers, no continuous frame loop.",
-    "live_browser": "pending deployment",
-    "physical_devices": "Native physics vary by browser/OS. Real touch and physical trackpad feel require human assessment."
+    "live_browser": "Native y mandatory snapping confirmed. Multi-photo scrolling, reversal, final alignment, Home/Page Down and all responsive photos passed desktop checks. Very small nudges may return to the current photo per native policy.",
+    "physical_devices": "Native physics vary by browser/OS. Real touch and physical trackpad feel require human assessment.",
+    "github_readback": "All seven published files matched uploaded contents."
+  },
+  "deployment": {
+    "commit": "58377365f5a3c7321cef82309fecf82d088fd941",
+    "status": "success"
   }
 }

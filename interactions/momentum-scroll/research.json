@@ -150,8 +150,29 @@
   ],
   "validation": {
     "automated": "Six tests passed: predominant visibility, native mode without interception/polling/position writes, native snap notifications, intersection/resize fallbacks, legacy status timer, refresh and cleanup.",
-    "live_browser": "pending deployment",
-    "physical_devices": "Human iOS/Android and physical trackpad assessment remains necessary."
+    "live_browser": {
+      "deployed_commit": "58377365f5a3c7321cef82309fecf82d088fd941",
+      "status": "passed desktop checks",
+      "before": {
+        "native_snap": "none",
+        "implementation": "JS spring after native deceleration"
+      },
+      "after": {
+        "native_snap": "y mandatory",
+        "controller_mode": "native",
+        "scroll_position_writes": "none in application controller"
+      },
+      "observations": [
+        "At a 757px viewport height, a very small wheel nudge returned to the current photo under the browser's native policy.",
+        "A large wheel gesture crossed multiple photos and aligned the last photo at scrollTop 3785.",
+        "An upward wheel input moved to photo 5 at 3028; immediate opposite input returned toward photo 6.",
+        "Home settled at 0 and Page Down settled at 757, with matching 01/06 and 02/06 counters.",
+        "All six photos loaded; desktop responsive selection used 1440px candidates instead of the previous fixed 1800px request."
+      ],
+      "performance_limit": "No claim of measured FPS or latency improvement; main-thread motion loop and scroll writes removed by inspection and regression tests."
+    },
+    "physical_devices": "Human iOS/Android and physical trackpad assessment remains necessary.",
+    "github_readback": "All seven changed/added files read back identically from main before live testing."
   },
   "image_requests": [
     {
