@@ -247,3 +247,8 @@ The agent handling a task must update this file after each task to preserve cont
 - Indexed at interactions/photo-article/index.json and linked from fade + scroll index. Updated feature manifests and continuity log. Other library features, original text-fade extraction and native momentum physics retained.
 - Human test: https://nicholasmaritas.github.io/0AR5TAS/interactions/momentum-scroll/
 - Pending: None for authorized implementation, repository organization and Pages publication. Human device/feel assessment remains available at the test URL.
+
+### Task 017 — Extract COMME des GARCONS numbered left menu
+- COMPLETED — 2026-11-17. Extracted seven original anchors and required typography/link CSS into navigation/numbered-left-menu/{numbered-menu.html,numbered-menu.css,index.json,source-extract.json}. Uploaded HTML and public source dependencies inspected; CSS/scripts returned200; commercial font service returned403. Original fallback font stack and relative hrefs preserved. Menu has no JavaScript dependency; background slideshow excluded.
+- Validation: Seven anchors and source styles verified. No live visual comparison; original webfont unavailable. Research/dependency evidence stored as JSON. Existing GitHub Pages runtime and test files untouched; library-only collection.
+- Pending: None for extraction and indexing; integration not requested.

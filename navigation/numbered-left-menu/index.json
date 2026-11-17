@@ -1,0 +1,12 @@
+{
+  "name": "numbered left navigation",
+  "source": "https://www.comme-des-garcons.com/",
+  "files": [
+    "numbered-menu.html",
+    "numbered-menu.css",
+    "source-extract.json"
+  ],
+  "integration": "Insert HTML and load CSS. Original relative hrefs preserved; replace with project destinations when integrating. No JavaScript required.",
+  "pages": "Library only; existing Pages runtime untouched.",
+  "limitations": "Original commercial font service returned403; system fallback stack preserved. Live visual comparison not performed."
+}
