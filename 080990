@@ -63,3 +63,12 @@ The agent handling a task must update this file after each task to preserve cont
 - Action: Create this file on the default `main` branch.
 - Status: COMPLETED upon successful GitHub create-file commit; verify file contents by reading it back.
 - Pending: None after successful verification. Subsequent task entries belong below this entry.
+
+### Task 002 — Locate Krink screensaver source code
+- STARTED — 2026-11-17
+- Request: Locate and verify the original inactivity-style screensaver source code at https://krink.com/; do not implement an unrequested website feature.
+- Action: Fetched public Krink homepage and linked frontend dependencies via an isolated GitHub Actions workflow on research/krink-source-inspection; inspected JavaScript, CSS, HTML and image data.
+- COMPLETED — 2026-11-17: Located exact minified class `Oa` at offset 721275 in `https://krink.com/cdn/shop/t/34/assets/index.js?v=119024977001591298761750137006`, with initialization `l||new Oa` at offset 782143. Confirmed companion CSS `https://krink.com/cdn/shop/t/34/assets/style.css?v=159774163203296273991701282695`, HTML `#screensaver` and `#screensaver_json`.
+- Findings: Fixed 150000ms timer from initialization, then immediate random image and another every 20000ms. Overlay click/mousemove dismisses, but no global activity listener restarts the timer; it is not a true activity-monitoring screensaver. Styling verified from source; live visual/browser test not performed.
+- Evidence: `research/krink-source-inspection.json` and `research/krink-screensaver-extract.json` on research branch; reference at `animations/screensaver/krink-reference.json` on main.
+- Pending: None for the source-location task. Implementation awaits user's explicit direction.
