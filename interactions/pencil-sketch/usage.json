@@ -1,5 +1,5 @@
 {
-  "feature": "Sketch: 3D pencil drawing",
+  "feature": "Sketch: monochrome drawing",
   "author": "Brad Arnett (CodePen: bradarnett)",
   "source": "https://codepen.io/bradarnett/pen/XyZKaG",
   "category": "interactions/pencil-sketch",
@@ -11,32 +11,19 @@
   "runtime": [
     "index.html",
     "sketch.css",
-    "sketch.js",
-    "MTLLoader.js",
-    "OBJLoader.js"
+    "sketch.js"
   ],
-  "implementation": "Original drawing and Three.js scene code with small documented test adaptations; compiled CSS captured from original preview.",
+  "implementation": "Drawing-only extraction; 3D scene, pencil, model loading and color palette removed from active code per user request.",
   "features": [
-    "Mouse/touch drawing",
-    "Animated 3D pencil follows cursor with tilt and lift",
-    "Five colors, shown at viewport widths >=1024px",
+    "Mouse/touch drawing in black",
+    "Standard system cursor",
     "Clear drawing",
-    "Save opens a PNG image in a new tab"
+    "Save opens drawing PNG in a new tab"
   ],
-  "integration": "Serve index.html with the sibling runtime files; Three.js r83 is loaded from cdnjs. Keep classic script order (not modules): Three.js, MTLLoader.js, OBJLoader.js, sketch.js.",
+  "integration": "Serve index.html with sketch.css and sketch.js. No external runtime dependencies.",
   "dependencies": {
-    "three": "https://cdnjs.cloudflare.com/ajax/libs/three.js/r83/three.js",
-    "assets_base": "https://s3-us-west-2.amazonaws.com/s.cdpn.io/605067/",
-    "assets": [
-      "cursor.png",
-      "pencil-multi.mtl",
-      "pencil-multi.obj",
-      "pencil_diffuse.jpg"
-    ],
-    "loaders": "Original loader URLs on assets.codepen.io failed shell fetch; same author's original S3 files fetched successfully and included locally.",
-    "font": "Original Galano Grotesque Semi Bold trial font service inaccessible; browser fallback font used, service script excluded.",
-    "jquery": "Present in original external settings but unused by feature; excluded.",
-    "codepen_runtime": "CodePen editor/watchdog scripts excluded."
+    "runtime": [],
+    "font": "Declared original font family falls back to browser font; no external font service loaded."
   },
   "adaptations": [
     "Fixed original undefined initial-dot radius to existing minThickness.",
@@ -44,16 +31,13 @@
     "Drawing canvas resizes and preserves existing pixels during viewport changes.",
     "touchmove listeners explicitly nonpassive.",
     "Model loading status shown during initialization.",
-    "Explicit page width/height keeps controls positioned in canvas-only mode."
+    "Explicit page width/height keeps controls positioned in canvas-only mode.",
+    "Removed 3D pencil and all WebGL/Three.js initialization, custom cursor and palette. Retained drawing thickness interpolation and drawing-only Save behavior."
   ],
   "validation": {
-    "syntax": "passed",
-    "model_parse": "Original loaders parsed 2 model meshes and 6 materials successfully.",
-    "source_browser": "CodePen editors and rendered preview inspected. Original preview reports WebGL context creation failure in this cloud browser; cannot verify original 3D appearance here.",
-    "live_page": "GitHub Pages deployment succeeded. Browser verified canvas strokes, switching black to blue, Clear removing strokes, and Save opening a loaded data:image/png export (1180x757).",
-    "physical_touch": "not tested",
-    "visual_limit": "Original and published 3D rendering cannot be compared because this cloud browser cannot create WebGL contexts; human WebGL-capable testing required. Original compiled CSS and model/camera/lighting/animation code retained.",
-    "github_readback": "All nine committed feature files matched uploaded contents."
+    "status": "pending deployment verification",
+    "original_history": "Prior validation retained in repository history.",
+    "physical_touch": "not tested"
   },
   "dependency_checks": [
     {
@@ -123,8 +107,18 @@
     }
   ],
   "test_url": "https://nicholasmaritas.github.io/0AR5TAS/interactions/pencil-sketch/",
-  "deployment": {
-    "commit": "f732a45b81763e48e5645a8284ccea98d3fd5c9e",
-    "status": "success"
+  "archived_dependencies": {
+    "three": "https://cdnjs.cloudflare.com/ajax/libs/three.js/r83/three.js",
+    "assets_base": "https://s3-us-west-2.amazonaws.com/s.cdpn.io/605067/",
+    "assets": [
+      "cursor.png",
+      "pencil-multi.mtl",
+      "pencil-multi.obj",
+      "pencil_diffuse.jpg"
+    ],
+    "loaders": "Original loader URLs on assets.codepen.io failed shell fetch; same author's original S3 files fetched successfully and included locally.",
+    "font": "Original Galano Grotesque Semi Bold trial font service inaccessible; browser fallback font used, service script excluded.",
+    "jquery": "Present in original external settings but unused by feature; excluded.",
+    "codepen_runtime": "CodePen editor/watchdog scripts excluded."
   }
 }

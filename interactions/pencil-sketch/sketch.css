@@ -12,7 +12,7 @@ body {
 
 body {
   background-color: #f7f4f0;
-  cursor: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/605067/cursor.png"), auto;
+  cursor: auto;
   font-family: "Galano Grotesque Semi Bold";
   margin: 0;
   overflow: hidden;
@@ -20,44 +20,6 @@ body {
 
 button {
   font-family: "Galano Grotesque Semi Bold";
-}
-
-.colours {
-  bottom: 30px;
-  display: none;
-  left: 50%;
-  list-style-type: none;
-  padding-left: 0;
-  position: absolute;
-  transform: translateX(-50%);
-  z-index: 10;
-}
-@media (min-width: 1024px) {
-  .colours {
-    display: flex;
-  }
-}
-.colours li {
-  border-radius: 50%;
-  display: inline-block;
-  height: 14px;
-  margin: 0 12px;
-  width: 14px;
-}
-.colours li:nth-child(1) {
-  background-color: #100c08;
-}
-.colours li:nth-child(2) {
-  background-color: #759BA9;
-}
-.colours li:nth-child(3) {
-  background-color: #77dd77;
-}
-.colours li:nth-child(4) {
-  background-color: #ff6961;
-}
-.colours li:nth-child(5) {
-  background-color: #ffd1dc;
 }
 
 .pencil__refresh {
@@ -109,5 +71,5 @@ button {
   -moz-user-select: none;
 }
 
-/* Keep controls positioned when WebGL cannot create its full-screen canvas. */
+/* Full-page drawing surface. */
 html,body{width:100%;height:100%}

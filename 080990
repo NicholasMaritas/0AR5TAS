@@ -140,3 +140,9 @@ The agent handling a task must update this file after each task to preserve cont
 - Limitations: Cloud browser cannot create WebGL contexts in either the original CodePen or published test; 3D pencil visual equivalence remains unverified and requires a WebGL-capable human browser. Original font service inaccessible. Physical touch testing not performed. Limitations and source/test changes documented in usage.json.
 - Human test: https://nicholasmaritas.github.io/0AR5TAS/interactions/pencil-sketch/
 - Pending: None for source collection, organization and human-test environment setup; human WebGL/touch validation remains available at the test URL.
+
+### Task 010 — Remove pencil, custom cursor and palette
+- STARTED — 2026-11-17
+- Request: Remove pencil, custom cursor and color-changing options from repository and Pages; answer whether Save can capture a webpage as a downloadable PNG.
+- Updated interactions/pencil-sketch/{index.html,sketch.js,sketch.css,usage.json}. Active runtime is drawing-only, black ink, regular cursor, no Three.js/model/loader dependencies or palette. Original reference sources remain archived. Existing drawing-only PNG Save behavior retained; webpage capture was a question, not implemented.
+- Validation: Syntax passed; isolated tests passed for drawing with finite radii, Clear and existing PNG export without Three.js. Publication/browser verification pending.
