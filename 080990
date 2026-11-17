@@ -160,3 +160,11 @@ The agent handling a task must update this file after each task to preserve cont
 - Added interactions/momentum-scroll/{momentum-scroll.js,momentum-scroll.test.mjs,feed.css,feed.js,index.html,photos.json,usage.json}. No external JavaScript dependencies. Native touch/trackpad momentum retained; passive input, no wheel hijacking. Near rest, maximal visible pixel area selects an item; critically damped spring starts at measured low native velocity. New input interrupts immediately. Held touch and substantial velocity block alignment; oversized items remain readable. Native keyboard/pinch zoom and reduced-motion supported.
 - Human test uses six full-viewport external Unsplash photos, all fetched successfully. Other feature test pages preserved.
 - Validation: Syntax passed and seven meaningful automated geometry, velocity continuity, active touch, multi-item momentum, interruption and reduced-motion tests passed. Live Pages checks pending. Physical device and hardware trackpad feel require human testing.
+
+### Task 011 — Completion verification
+- COMPLETED — 2026-11-17. Commit d9f22d68f810cbb69285d1e16fdef91b91f64b07 deployed successfully. All seven feature files read back identically.
+- Live desktop browser verified six photos loaded; short wheel movement settled back to predominant item; larger input settled on photo 2 at 757px; long input crossed multiple items and settled at final photo (3785px). Home returned to 0; Page Down settled at 757. Full-page photos and counter rendered correctly. Competing CSS snapping is disabled in enhanced mode.
+- Seven automated tests cover 2/3 visible selection, fitting/bounds/oversized content, spring position and initial-velocity continuity, no snap during held touch, high-velocity multi-item travel, immediate wheel interruption and reduced motion.
+- Limits: Real iOS/Android swipe feel and hardware trackpad inertia remain for human testing; native momentum depends on browser/OS. No claim of tested physical-device equivalence to Instagram.
+- Human test: https://nicholasmaritas.github.io/0AR5TAS/interactions/momentum-scroll/
+- Pending: None for implementation, code organization and photo-feed human test setup.
