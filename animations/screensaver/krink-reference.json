@@ -1,0 +1,62 @@
+{
+  "feature": "Krink idle-style screensaver overlay",
+  "status": "original-source-located",
+  "site": "https://krink.com/",
+  "verified_date": "2026-11-17",
+  "retrieval": "GitHub Actions hosted runner HTTP GET; status 200; scanned linked HTML, JavaScript and CSS",
+  "source": {
+    "javascript": "https://krink.com/cdn/shop/t/34/assets/index.js?v=119024977001591298761750137006",
+    "minified_class": "Oa",
+    "class_start_character_offset_zero_based": 721275,
+    "initialization_site": "l||new Oa",
+    "initialization_site_character_offset_zero_based": 782143,
+    "css": "https://krink.com/cdn/shop/t/34/assets/style.css?v=159774163203296273991701282695",
+    "html_overlay_id": "screensaver",
+    "html_image_data_script_id": "screensaver_json",
+    "class_methods": [
+      "init",
+      "reset",
+      "getRandomInt",
+      "addImage",
+      "deactivate"
+    ]
+  },
+  "verified_behavior": {
+    "activation_timer_ms": 150000,
+    "initial_image_added_on_activation": true,
+    "image_interval_ms": 20000,
+    "image_selection": "Random selection from screensaver_json array",
+    "image_top_percent_range": [
+      -10,
+      110
+    ],
+    "image_left_percent_range": [
+      -10,
+      110
+    ],
+    "image_rotation_degrees_range": [
+      0,
+      360
+    ],
+    "overlay_dismissal_events": [
+      "click",
+      "mousemove"
+    ],
+    "event_listener_target": "#screensaver",
+    "global_user_activity_restarts_activation_timer": false,
+    "automatically_restarts_after_dismissal": false,
+    "overlay_opacity_transition_ms": 300,
+    "image_width_css_px_default": 130,
+    "image_width_css_px_at_viewport_min_width_1024": 220
+  },
+  "caveats": [
+    "Despite the apparent screensaver experience, the source starts a fixed timer from initialization. It does not track page-wide input or reset its timer on user activity.",
+    "Exact source and asset requests verified, but no live browser visual playback test was performed.",
+    "This is a source reference, not an implemented feature."
+  ],
+  "research_evidence_branch": "research/krink-source-inspection",
+  "evidence_files": [
+    "research/krink-source-inspection.json",
+    "research/krink-screensaver-extract.json"
+  ]
+}
