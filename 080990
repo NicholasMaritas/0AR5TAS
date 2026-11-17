@@ -146,3 +146,10 @@ The agent handling a task must update this file after each task to preserve cont
 - Request: Remove pencil, custom cursor and color-changing options from repository and Pages; answer whether Save can capture a webpage as a downloadable PNG.
 - Updated interactions/pencil-sketch/{index.html,sketch.js,sketch.css,usage.json}. Active runtime is drawing-only, black ink, regular cursor, no Three.js/model/loader dependencies or palette. Original reference sources remain archived. Existing drawing-only PNG Save behavior retained; webpage capture was a question, not implemented.
 - Validation: Syntax passed; isolated tests passed for drawing with finite radii, Clear and existing PNG export without Three.js. Publication/browser verification pending.
+
+### Task 010 — Completion verification
+- COMPLETED — 2026-11-17. Published drawing-only revision 282193d8a6cf68de989b14d32fa580f7403ace06. Updated index, script, CSS and usage JSON read back identically from main.
+- Live browser verified only sketch.js?v=3 loads, exactly one drawing canvas, no palette elements, body cursor auto, successful black stroke and Clear removing it. Pencil model/WebGL/font/cursor dependencies are not loaded by active runtime; original source archives preserved.
+- Answered Save question: webpage-to-PNG capture is feasible using page rendering/capture; browser settings control whether a Save As dialog appears. Existing Save still captures the drawing only; no webpage capture was requested for implementation.
+- Human test: https://nicholasmaritas.github.io/0AR5TAS/interactions/pencil-sketch/
+- Pending: None for requested removals.
