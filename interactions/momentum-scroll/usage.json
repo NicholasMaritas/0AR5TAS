@@ -8,7 +8,7 @@
     "momentum-scroll.js": "createMomentumScroll(container,{itemSelector,onActiveChange}); refresh() and destroy(). No scripted scrolling.",
     "momentum-scroll.test.mjs": "Run node --test momentum-scroll.test.mjs.",
     "feed.css": "Native y mandatory snapping, normal multi-target pass-through, reduced-motion free scrolling.",
-    "feed.js": "Counter, adjacent image preparation and lifecycle cleanup.",
+    "feed.js": "Initializes native scrolling, adjacent-image preparation, and the separate delayed-caption controller.",
     "index.html": "Six full-screen responsive photographs.",
     "photos.json": "Original photograph source requests.",
     "research.json": "Nine primary sources, UX audit, design decisions, tradeoffs and validation."
@@ -47,12 +47,15 @@
   "validation": {
     "syntax": "passed",
     "automated": "Six tests passed; native controller cannot write scrollTop or scrollTo in test fixture; no wheel/touch handlers, no continuous frame loop.",
-    "live_browser": "Native y mandatory snapping confirmed. Multi-photo scrolling, reversal, final alignment, Home/Page Down and all responsive photos passed desktop checks. Very small nudges may return to the current photo per native policy.",
+    "live_browser": "Caption composition pending live verification; native scroll validation from prior revision remains recorded in repository history.",
     "physical_devices": "Native physics vary by browser/OS. Real touch and physical trackpad feel require human assessment.",
     "github_readback": "All seven published files matched uploaded contents."
   },
-  "deployment": {
-    "commit": "58377365f5a3c7321cef82309fecf82d088fd941",
-    "status": "success"
+  "test_composition": {
+    "name": "fade + scroll",
+    "library": "../fade-scroll/index.json",
+    "delay_ms": 2000,
+    "fade_duration_ms": 1000,
+    "visible_ui": "Large title, then Photo study / # and read more >. No feed header, current/total counter or scrolling hint."
   }
 }

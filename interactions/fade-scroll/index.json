@@ -1,0 +1,51 @@
+{
+  "name": "fade + scroll",
+  "category": "interactions/fade-scroll",
+  "description": "Captions stay hidden during native scrolling and fade in after a settled photograph remains ready for two seconds.",
+  "files": {
+    "fade-scroll.js": "createFadeScroll(container,{itemSelector,delay}) with refresh()/destroy(); never writes scroll position.",
+    "fade-scroll.css": "Opacity-only 1s ease-in-out reveal; instant hide on new activity.",
+    "fade-scroll.test.mjs": "Run node --test fade-scroll.test.mjs; twelve timing and interruption/lifecycle tests.",
+    "index.json": "Combined feature entry and integration notes."
+  },
+  "integration": [
+    "Use a native snapping photo container, with each fitting photo marked data-scroll-item and a figcaption.",
+    "Add data-fade-scroll to the container in initial HTML to keep captions hidden before JavaScript starts.",
+    "Load fade-scroll.css and initialize createFadeScroll(container,{delay:2000}).",
+    "Use the existing momentum-scroll controller for native momentum/selection. Its active-item callback must not start caption timers."
+  ],
+  "source_references": {
+    "fade": "../../text/fade-in/text-fade.css",
+    "scroll": "../momentum-scroll/momentum-scroll.js"
+  },
+  "timing": {
+    "after_native_scrollend_ms": 2000,
+    "fade_duration_ms": 1000,
+    "easing": "ease-in-out",
+    "properties": [
+      "opacity"
+    ],
+    "hide": "immediate; never a fade-out during scrolling"
+  },
+  "behavior": [
+    "Initial fully settled photograph receives the same two-second delay.",
+    "Input or any scroll cancels pending reveal and hides all captions immediately.",
+    "Reveal requires start alignment within 1 CSS pixel and full viewport fit; only the settled photo is revealed.",
+    "Photograph must be loaded before the full delay begins.",
+    "Legacy browsers and no-movement input use quiet/stable checks; no scroll animation is introduced.",
+    "Resize, backgrounding, BFCache restoration and held gestures invalidate/rearm the delay safely."
+  ],
+  "caption_order": [
+    "Large title",
+    "Photo study / #",
+    "read more >"
+  ],
+  "read_more": "Text only; no destination was provided and no link behavior was added.",
+  "reduced_motion": "After two seconds of stillness, show the predominant photo caption without a fade or forced snap; this preserves readability when native snapping is disabled by the existing reduced-motion policy.",
+  "test_url": "https://nicholasmaritas.github.io/0AR5TAS/interactions/momentum-scroll/",
+  "validation": {
+    "automated": "12 tests passed; syntax and markup checks passed.",
+    "live_browser": "pending deployment",
+    "physical_touch": "not tested"
+  }
+}

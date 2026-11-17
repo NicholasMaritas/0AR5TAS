@@ -194,3 +194,10 @@ The agent handling a task must update this file after each task to preserve cont
 - Validation: Each extracted block matched original CSS exactly; independent read-only audit agreed. Chromium computed #NTM as 0.25s duration, 0.25s delay, ease-in-out, forwards; #About as 1s duration, 1s delay, ease-in-out, forwards. Initial opacity 0 and settled opacity 1 observed on source site. Source WebKit shorthand override and invalid legacy delay declarations documented.
 - Scope: Library extraction only. No test HTML, live integration, or edits to existing root index.html, animations/, interactions/, or Pages configuration. No access to the restricted repository.
 - Pending: None for extraction; future integration requires explicit direction.
+
+### Task 014 — Fade + scroll captions and photo-feed UI
+- STARTED — 2026-11-17
+- Request: Remove Photo feed header, current/total counter and Swipe or scroll hint; retain large title, put photo-study/# below and append read more >. Hide text during scrolling; reveal two seconds after an image settles fully aligned. Index as fade + scroll and publish for human testing.
+- Added interactions/fade-scroll/{fade-scroll.js,fade-scroll.css,fade-scroll.test.mjs,index.json}. Updated interactions/momentum-scroll/{index.html,feed.css,feed.js,usage.json}. Native scroll module unchanged. Read more is text only; no target was supplied.
+- Caption behavior: immediate hide/cancellation on movement or input; native scrollend and full-item geometry gate a 2000ms delay, followed by original-style opacity-only 1s ease-in-out. Loaded image required. Initial photo, edge/no-motion interaction, old-browser quiet fallback, resize, hidden page, BFCache and held gesture handling included. No scroll-position writes. Reduced-motion mode uses stationary predominant caption without animation to preserve readability under existing free-scroll policy.
+- Validation: Syntax/markup checks and 12 deterministic tests passed for delay, cancellation, alignment, touch hold, boundary recovery, legacy fallback, image readiness, reduced motion, visibility/BFCache, resize and cleanup. Live publication/browser verification pending.
