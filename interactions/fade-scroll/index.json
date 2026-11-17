@@ -46,7 +46,12 @@
   "test_url": "https://nicholasmaritas.github.io/0AR5TAS/interactions/momentum-scroll/",
   "validation": {
     "automated": "14 tests passed, including visible/pending click invariance and stationary touch holds.",
-    "live_browser": "pending deployment",
-    "physical_touch": "not tested"
+    "live_browser": "Passed desktop: visible caption remained at opacity 1 after both center-image and caption clicks; initial/new-caption transition measured as 0.6s with the intended easing. During actual scrolling, departing caption was observed at intermediate opacity 0.641896 with 0.22s transition, then only the newly settled caption appeared and reached opacity 1.",
+    "physical_touch": "not tested",
+    "github_readback": "All seven changed feature/feed files matched committed contents."
+  },
+  "deployment": {
+    "commit": "e8e9275c3c1ca772a12b5a0d047c145d3951759c",
+    "status": "success"
   }
 }

@@ -47,7 +47,7 @@
   "validation": {
     "syntax": "passed",
     "automated": "Six tests passed; native controller cannot write scrollTop or scrollTo in test fixture; no wheel/touch handlers, no continuous frame loop.",
-    "live_browser": "Revised fade + scroll timing and click behavior pending live verification; native-scrolling validation remains in history.",
+    "live_browser": "Updated caption UI passed desktop click invariance, 0.6s fade-in and 0.22s fade-out/intermediate-opacity checks; exact 400ms reveal timing passed automated tests.",
     "physical_devices": "Native physics vary by browser/OS. Real touch and physical trackpad feel require human assessment.",
     "github_readback": "All seven published files matched uploaded contents."
   },
@@ -59,5 +59,9 @@
     "visible_ui": "Large title, then Photo study / # and read more >. No feed header, current/total counter or scrolling hint.",
     "fade_out_duration_ms": 220,
     "interaction": "Only actual scrolling fades captions out; clicks and stationary taps do not change caption appearance or its pending reveal."
+  },
+  "deployment": {
+    "commit": "e8e9275c3c1ca772a12b5a0d047c145d3951759c",
+    "status": "success"
   }
 }

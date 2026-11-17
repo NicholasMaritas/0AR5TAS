@@ -217,3 +217,11 @@ The agent handling a task must update this file after each task to preserve cont
 - Removed caption invalidation from wheel/pointer/key/focus/blur events. Actual scroll events drive fade-out. Touch tracking blocks reveal only when that gesture actually scrolled; stationary taps/holds preserve visible captions and original pending deadlines. Page visibility/layout/lifecycle safeguards retained. Native scrolling module unchanged.
 - Updated interactions/fade-scroll/{fade-scroll.js,fade-scroll.css,fade-scroll.test.mjs,index.json} and interactions/momentum-scroll/{index.html,feed.js,usage.json}; cache versions advanced.
 - Validation: Syntax and 14 tests passed, including visible/pending click invariance, stationary touch holds, actual-scroll cancellation, shortened delay, legacy fallback, image readiness, reduced motion, lifecycle and cleanup. Publication/browser checks pending.
+
+### Task 015 — Completion verification
+- COMPLETED — 2026-11-17. Commit e8e9275c3c1ca772a12b5a0d047c145d3951759c deployed successfully. All seven changed feature/feed files read back identically.
+- Live desktop verified center-image and caption clicks preserve the current caption marker, visible state and opacity 1. Actual scrolling triggers opacity transition toward 0; a departing caption was observed at opacity 0.641896 with a computed 0.22s transition. New settled caption uses 0.6s intended easing, was observed mid-fade and reached opacity 1. No keyframe animation restarts.
+- Fourteen tests passed, including exact default 400ms delay, pending/visible click and tap invariance, stationary touch holds, actual touch-scroll holds, scrolling interruption and lifecycle cases. Physical touch devices remain for human testing.
+- Fade + scroll index and photo-feed usage documentation updated. Native scrolling physics and requested caption layout preserved.
+- Human test: https://nicholasmaritas.github.io/0AR5TAS/interactions/momentum-scroll/
+- Pending: None for requested implementation and desktop verification.
