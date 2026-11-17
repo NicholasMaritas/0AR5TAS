@@ -79,3 +79,11 @@ The agent handling a task must update this file after each task to preserve cont
 - Actions: Read uploaded HTML; fetched its linked index.js and style.css directly; verified class Oa, initialization, HTML image list and overlay, timer behavior, and CSS. Updated animations/screensaver/krink-reference.json with original class code, HTML image data, CSS, and verification details.
 - Validation: Source fetches succeeded; class starts at character 721275; initialization substring l||new Oa starts at 782136. Fixed 150000ms activation and 20000ms image interval confirmed; no global inactivity tracking. No live visual playback test performed.
 - Pending: None for source location; implementation awaits explicit instruction.
+
+### Task 004 — Organize screensaver source for later reuse
+- STARTED / COMPLETED — 2026-11-17
+- Request: Add and organize the located code in GitHub for later use.
+- Files added under animations/screensaver/: krink-screensaver.js (original Oa class and ka helper), krink-screensaver.css (original feature and required utility rules), krink-screensaver.html (original overlay and image data), usage.json (integration instructions and limitations). Updated krink-reference.json with collection validation.
+- Validation: JavaScript syntax passed; isolated Node VM behavior checks passed for initialization, null filtering, activation timing, image generation, interval and dismissal. All six externally hosted image requests returned HTTP 200 with image content types. All four uploaded files read back identically.
+- Scope: Preserved original behavior; no automatic initialization or live website integration. Images remain externally hosted. No live visual comparison performed.
+- Pending: None for collection; website integration and visual validation await explicit direction.
