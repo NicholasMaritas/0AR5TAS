@@ -103,3 +103,11 @@ The agent handling a task must update this file after each task to preserve cont
 - Repository changes COMPLETED: test-screensaver.js now measures each loaded image's rotated bounds, scales oversized images to fit, positions the entire image inside the overlay, and recalculates positions on resize. Image interval changed to 10000ms. index.html describes stacking and cache-versions the adapter; usage.json updated. Original reference source preserved.
 - Validation: Syntax passed. 1152 geometry cases passed across desktop, mobile, small viewports, rotations, and extreme image aspect ratios. Virtual-clock test confirmed image counts 1/2/3 at 10/20/30 seconds, movement clears the stack, and idle reactivation adds a new image. Updated adapter read back identically from main.
 - Publication: GitHub Pages automatic build queued behind a previous build; live verification pending. Do not treat publication as verified until the updated script is served and stacking is checked.
+
+### Task 007 — Verify visibility and stacking changes on Pages
+- STARTED / COMPLETED — 2026-11-17
+- Request: Implement committed changes on GitHub Pages.
+- Publication confirmed: Pages workflow 44137630359 successfully deployed commit c6de909b0f6dd2d16230380e811cfdf59cc061f0. Public adapter returned HTTP 200 and included viewport fitting and 10000ms repeat interval.
+- Live browser validation: Reloaded updated page; observed two images, then three retained images. All three loaded successfully and every rotated bounding box remained fully inside the viewport. Keypress cleared all images (count 0).
+- Task 006 publication and live stacking verification are now COMPLETED. No pending deployment blocker.
+- Live URL: https://nicholasmaritas.github.io/0AR5TAS/
