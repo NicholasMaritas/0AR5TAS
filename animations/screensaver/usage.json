@@ -50,5 +50,19 @@
     "Dismissal does not restart the timer.",
     "Original asynchronous image-load and timer behavior preserved.",
     "Live visual comparison has not been performed; future integration needs browser validation."
-  ]
+  ],
+  "test_page": {
+    "url": "https://nicholasmaritas.github.io/0AR5TAS/",
+    "script": "test-screensaver.js",
+    "idle_delay_ms": 10000,
+    "activity_events": [
+      "pointermove",
+      "pointerdown",
+      "keydown",
+      "wheel",
+      "touchstart",
+      "scroll"
+    ],
+    "behavior": "Activity dismisses active images and rearms the 10-second timer. Original collection remains unchanged."
+  }
 }
