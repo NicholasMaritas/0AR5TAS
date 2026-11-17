@@ -72,3 +72,10 @@ The agent handling a task must update this file after each task to preserve cont
 - Findings: Fixed 150000ms timer from initialization, then immediate random image and another every 20000ms. Overlay click/mousemove dismisses, but no global activity listener restarts the timer; it is not a true activity-monitoring screensaver. Styling verified from source; live visual/browser test not performed.
 - Evidence: `research/krink-source-inspection.json` and `research/krink-screensaver-extract.json` on research branch; reference at `animations/screensaver/krink-reference.json` on main.
 - Pending: None for the source-location task. Implementation awaits user's explicit direction.
+
+### Task 003 — Verify screensaver against uploaded HTML
+- STARTED / COMPLETED — 2026-11-17
+- Request: Locate Krink's image-populating screensaver code using the provided website and pasted HTML.
+- Actions: Read uploaded HTML; fetched its linked index.js and style.css directly; verified class Oa, initialization, HTML image list and overlay, timer behavior, and CSS. Updated animations/screensaver/krink-reference.json with original class code, HTML image data, CSS, and verification details.
+- Validation: Source fetches succeeded; class starts at character 721275; initialization substring l||new Oa starts at 782136. Fixed 150000ms activation and 20000ms image interval confirmed; no global inactivity tracking. No live visual playback test performed.
+- Pending: None for source location; implementation awaits explicit instruction.
