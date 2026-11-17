@@ -87,3 +87,12 @@ The agent handling a task must update this file after each task to preserve cont
 - Validation: JavaScript syntax passed; isolated Node VM behavior checks passed for initialization, null filtering, activation timing, image generation, interval and dismissal. All six externally hosted image requests returned HTTP 200 with image content types. All four uploaded files read back identically.
 - Scope: Preserved original behavior; no automatic initialization or live website integration. Images remain externally hosted. No live visual comparison performed.
 - Pending: None for collection; website integration and visual validation await explicit direction.
+
+### Task 005 — Publish 10-second inactivity screensaver test
+- STARTED / COMPLETED — 2026-11-17
+- Request: Implement collected screensaver on GitHub Pages for testing, starting after 10 seconds of nonactivity.
+- Added root index.html and animations/screensaver/test-screensaver.js; updated animations/screensaver/usage.json. Original source files preserved. Test adapter resets a 10000ms timer on pointer movement/down, keyboard, wheel, touchstart, and scroll; activity dismisses images and rearms the timer. Preserves original 20000ms image interval, random placement/rotation, and CSS. Guards late image loads after dismissal.
+- Validation: JavaScript syntax and virtual-clock tests passed for idle activation, activity postponement, dismissal, overflow restoration, and repeated activation. Uploaded index and adapter read back identically. Existing GitHub Pages source main:/ deployed the page. Live browser verified Screensaver test page, active overlay with successfully loaded 220px image, keypress dismissal clearing images/restoring overflow, and reactivation with loaded image.
+- Live URL: https://nicholasmaritas.github.io/0AR5TAS/
+- Limitations: No claim of whole-page visual equivalence to Krink; this is a minimal test page. Original random positioning can place images partly or entirely outside the viewport; external Krink image hosting remains required.
+- Pending: None for requested implementation and testing.
