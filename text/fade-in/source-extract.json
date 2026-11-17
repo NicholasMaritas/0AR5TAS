@@ -1,0 +1,202 @@
+{
+  "source": "https://nicholasmaritas.com/",
+  "css_url": "https://nicholasmaritas.com/main.css",
+  "js_url": "https://nicholasmaritas.com/main.js",
+  "verified_date": "2026-11-17",
+  "sha256": {
+    "page.html": "11606cfae97fc44837c6969580c478802c5811f104c1a542b590b9e25eac9a25",
+    "main.css": "523e5e94612bd1a7b10a560220c02e089bd16fa8a664023b6172c96afb961422",
+    "main.js": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b"
+  },
+  "extraction": "Verbatim selector blocks and all four opacity keyframe variants; original declaration order retained. No unrelated layout, modal, or color transition rules copied.",
+  "blocks": [
+    {
+      "start_character_zero_based": 3047,
+      "end_character_exclusive": 3423,
+      "code": "#NTM {\n   opacity: 0;\n   display: inline-block;\n   animation: fadein 1s forwards ease-in;\n   -moz-animation: fadein 1s forwards ease-in-out;\n   -webkit-animation: fadein 1s forwards ease-in-out;\n   -o-animation: fadein 1s forwards ease-in-out;\n   -moz-animation-delay: fadein 0.25s;\n   -webkit-animation: fadein 0.25s ease-in-out forwards;\n   -webkit-animation-delay: 0.25s;\n}"
+    },
+    {
+      "start_character_zero_based": 3547,
+      "end_character_exclusive": 3820,
+      "code": "#About,\n#Currently,\n#Contact,\n.Resume,\n.footer {\n   z-index: 15;\n   opacity: 0;\n   -webkit-animation: fadein 1s ease-in-out forwards;\n   animation: fadein 1s ease-in-out forwards;\n   -webkit-animation-delay: 1s;\n   -moz-animation-delay: fadein 1s;\n   animation-delay: 1s;\n}"
+    },
+    {
+      "start_character_zero_based": 4249,
+      "end_character_exclusive": 4334,
+      "code": "@keyframes fadein {\n   from {\n      opacity: 0;\n   }\n   to {\n      opacity: 1;\n   }\n}"
+    },
+    {
+      "start_character_zero_based": 4335,
+      "end_character_exclusive": 4425,
+      "code": "@-moz-keyframes fadein {\n   from {\n      opacity: 0;\n   }\n   to {\n      opacity: 1;\n   }\n}"
+    },
+    {
+      "start_character_zero_based": 4426,
+      "end_character_exclusive": 4519,
+      "code": "@-webkit-keyframes fadein {\n   from {\n      opacity: 0;\n   }\n   to {\n      opacity: 1;\n   }\n}"
+    },
+    {
+      "start_character_zero_based": 4520,
+      "end_character_exclusive": 4608,
+      "code": "@-o-keyframes fadein {\n   from {\n      opacity: 0;\n   }\n   to {\n      opacity: 1;\n   }\n}"
+    }
+  ],
+  "javascript": {
+    "content": "\n",
+    "required": false
+  },
+  "rendered_dependencies": {
+    "css": {
+      "status": 200,
+      "bytes": 4609
+    },
+    "javascript": {
+      "status": 200,
+      "bytes": 1
+    },
+    "font_faces": [],
+    "font_note": "Named custom font families occur in CSS, but no @font-face, @import, or linked font stylesheet/resource was present. Extracted opacity animation is font independent.",
+    "icons_and_metadata_images": [
+      {
+        "url": "https://nicholasmaritas.com/114.png",
+        "status": 200,
+        "bytes": 11975,
+        "type": "image/png"
+      },
+      {
+        "url": "https://nicholasmaritas.com/120.png",
+        "status": 200,
+        "bytes": 12999,
+        "type": "image/png"
+      },
+      {
+        "url": "https://nicholasmaritas.com/128.png",
+        "status": 200,
+        "bytes": 14651,
+        "type": "image/png"
+      },
+      {
+        "url": "https://nicholasmaritas.com/144.png",
+        "status": 200,
+        "bytes": 17972,
+        "type": "image/png"
+      },
+      {
+        "url": "https://nicholasmaritas.com/150.png",
+        "status": 200,
+        "bytes": 19336,
+        "type": "image/png"
+      },
+      {
+        "url": "https://nicholasmaritas.com/152.png",
+        "status": 200,
+        "bytes": 19739,
+        "type": "image/png"
+      },
+      {
+        "url": "https://nicholasmaritas.com/16.png",
+        "status": 200,
+        "bytes": 588,
+        "type": "image/png"
+      },
+      {
+        "url": "https://nicholasmaritas.com/196.png",
+        "status": 200,
+        "bytes": 31201,
+        "type": "image/png"
+      },
+      {
+        "url": "https://nicholasmaritas.com/310.png",
+        "status": 200,
+        "bytes": 72335,
+        "type": "image/png"
+      },
+      {
+        "url": "https://nicholasmaritas.com/310x150.png",
+        "status": 200,
+        "bytes": 20081,
+        "type": "image/png"
+      },
+      {
+        "url": "https://nicholasmaritas.com/32.png",
+        "status": 200,
+        "bytes": 1506,
+        "type": "image/png"
+      },
+      {
+        "url": "https://nicholasmaritas.com/57.png",
+        "status": 200,
+        "bytes": 3535,
+        "type": "image/png"
+      },
+      {
+        "url": "https://nicholasmaritas.com/60.png",
+        "status": 200,
+        "bytes": 3847,
+        "type": "image/png"
+      },
+      {
+        "url": "https://nicholasmaritas.com/70.png",
+        "status": 200,
+        "bytes": 4924,
+        "type": "image/png"
+      },
+      {
+        "url": "https://nicholasmaritas.com/72.png",
+        "status": 200,
+        "bytes": 5118,
+        "type": "image/png"
+      },
+      {
+        "url": "https://nicholasmaritas.com/76.png",
+        "status": 200,
+        "bytes": 5580,
+        "type": "image/png"
+      },
+      {
+        "url": "https://nicholasmaritas.com/780x450.png",
+        "status": 200,
+        "bytes": 119159,
+        "type": "image/png"
+      },
+      {
+        "url": "https://nicholasmaritas.com/96.png",
+        "status": 200,
+        "bytes": 8221,
+        "type": "image/png"
+      }
+    ]
+  },
+  "browser_verification": {
+    "engine": "Chromium",
+    "initial_opacity": {
+      "NTM": "0",
+      "About": "0"
+    },
+    "settled_opacity": {
+      "NTM": "1",
+      "About": "1"
+    },
+    "computed": {
+      "NTM": {
+        "duration": "0.25s",
+        "delay": "0.25s",
+        "easing": "ease-in-out",
+        "fill_mode": "forwards"
+      },
+      "About": {
+        "duration": "1s",
+        "delay": "1s",
+        "easing": "ease-in-out",
+        "fill_mode": "forwards"
+      }
+    }
+  },
+  "notes": [
+    "The main name and the entire accompanying description are separate opacity fades. No per-character typewriter or word-stagger effect is present.",
+    "Only NTM and About exist in the currently rendered HTML; other selectors are retained for original reusable rule compatibility.",
+    "Last WebKit animation shorthand overrides earlier timing in Chromium. Invalid -moz-animation-delay declarations are preserved in the original extract and ignored by CSS parsers.",
+    "No original prefers-reduced-motion override exists. No new animation behavior or accessibility override was added to this exact extraction.",
+    "No standalone page was implemented or deployed, and no current Pages entry point, script or stylesheet was modified."
+  ]
+}

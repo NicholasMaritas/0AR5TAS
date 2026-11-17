@@ -185,3 +185,12 @@ The agent handling a task must update this file after each task to preserve cont
 - Limits: Real touch/trackpad feel and reduced-motion preference on physical devices remain for human assessment. Browser/OS controls native motion.
 - Live test: https://nicholasmaritas.github.io/0AR5TAS/interactions/momentum-scroll/
 - Pending: None for requested research, implementation and desktop verification.
+
+### Task 013 — Extract NicholasMaritas.com text fade, library only
+- STARTED / COMPLETED — 2026-11-17
+- Request: Analyze and extract type fade-in from https://nicholasmaritas.com/, add code to repository library only; do not modify current GitHub Pages.
+- Source inspection: Public HTML, main.css and main.js fetched successfully. main.js is one newline. Located six original animation/keyframe blocks; no JavaScript, typing split or viewport observer needed. All 18 referenced icon/metadata image requests succeeded. No font files or external font stylesheets were referenced by the source.
+- Added text/fade-in/{text-fade.css,source-extract.json,index.json}. CSS preserves source declaration order and prefixed variants; JSON records analysis, exact excerpts, hashes, dependencies and reuse instructions.
+- Validation: Each extracted block matched original CSS exactly; independent read-only audit agreed. Chromium computed #NTM as 0.25s duration, 0.25s delay, ease-in-out, forwards; #About as 1s duration, 1s delay, ease-in-out, forwards. Initial opacity 0 and settled opacity 1 observed on source site. Source WebKit shorthand override and invalid legacy delay declarations documented.
+- Scope: Library extraction only. No test HTML, live integration, or edits to existing root index.html, animations/, interactions/, or Pages configuration. No access to the restricted repository.
+- Pending: None for extraction; future integration requires explicit direction.

@@ -1,0 +1,36 @@
+{
+  "feature": "Text opacity fade-in",
+  "category": "text/fade-in",
+  "source": "https://nicholasmaritas.com/",
+  "status": "extracted-source-and-rendered-timing-verified",
+  "files": {
+    "text-fade.css": "Original animation selectors and keyframes, ready to reference when implementation is explicitly requested.",
+    "source-extract.json": "Analysis, exact source excerpts, hashes, dependencies, computed timings and verification."
+  },
+  "required_javascript": false,
+  "integration": {
+    "stylesheet": "text-fade.css",
+    "selectors": [
+      "#NTM",
+      "#About",
+      "#Currently",
+      "#Contact",
+      ".Resume",
+      ".footer"
+    ],
+    "markup_example": "<div id=\"NTM\">Primary text</div><div id=\"About\">Secondary text</div>",
+    "trigger": "When the styled elements appear and CSS animations start; no user activity or viewport observer required.",
+    "appearance": "Opacity only: 0 to 1; forwards retains the visible final frame.",
+    "primary_timing_chromium": {
+      "delay_ms": 250,
+      "duration_ms": 250,
+      "easing": "ease-in-out"
+    },
+    "secondary_timing_chromium": {
+      "delay_ms": 1000,
+      "duration_ms": 1000,
+      "easing": "ease-in-out"
+    }
+  },
+  "scope": "Code library only. No test page, site integration, or modification of current GitHub Pages code."
+}
