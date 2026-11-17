@@ -48,7 +48,7 @@ export function createPhotoArticle(feed, {onOpen = () => {}, onClose = () => {}}
   const closeButton = dialog.querySelector('.article-close');
   const reduced = matchMedia('(prefers-reduced-motion: reduce)');
   let state = 'closed', animation = null, generation = 0;
-  let source = null, trigger = null, savedTop = 0, savedOverflow = '';
+  let source = null, trigger = null, savedTop = 0, savedItemTop = 0, savedOverflow = '';
   let ghost = null, ghostAnimation = null, shadeAnimation = null, destroyed = false;
   const setState = value => { state = value; dialog.dataset.articleState = value; };
   const viewport = () => ({left: 0, top: 0, width: dialog.clientWidth, height: dialog.clientHeight});
@@ -62,8 +62,8 @@ export function createPhotoArticle(feed, {onOpen = () => {}, onClose = () => {}}
     feed.inert = false;
     // No scroll write in the normal path: feed never moved while the dialog was open.
     // Resize may change native snap geometry; return to the same photo in that case.
-    if (Math.abs(feed.scrollTop - savedTop) > 1 || Math.abs(source.offsetTop - savedTop) > 1)
-      feed.scrollTop = source.offsetTop;
+    if (Math.abs(source.offsetTop - savedItemTop) > 1) feed.scrollTop = source.offsetTop;
+    else if (Math.abs(feed.scrollTop - savedTop) > 1) feed.scrollTop = savedTop;
     setState('closed');
     onClose();
     // A caption may still be waiting to fade in; hidden buttons cannot receive
@@ -118,7 +118,7 @@ export function createPhotoArticle(feed, {onOpen = () => {}, onClose = () => {}}
     if (state !== 'closed') return;
     const image = item.querySelector('img');
     if (!image?.complete || !image.naturalWidth) return;
-    source = item; trigger = button; savedTop = feed.scrollTop;
+    source = item; trigger = button; savedTop = feed.scrollTop; savedItemTop = source.offsetTop;
     savedOverflow = feed.style.overflowY;
     const title = item.querySelector('h1,h2').textContent;
     const series = item.querySelector('small').textContent;
@@ -146,7 +146,7 @@ export function createPhotoArticle(feed, {onOpen = () => {}, onClose = () => {}}
     if ([hero, flyingImage].some(copy => copy.complete && copy.naturalWidth === 0)) {
       setState('closed'); return;
     }
-    if (Math.abs(feed.scrollTop - savedTop) > 1 || Math.abs(source.offsetTop - savedTop) > 1) {
+    if (Math.abs(feed.scrollTop - savedTop) > 1 || Math.abs(source.offsetTop - savedItemTop) > 1) {
       setState('closed'); return;
     }
     // Layout and typography reach their final state before the cover moves.

@@ -1,6 +1,6 @@
 import { createMomentumScroll } from './momentum-scroll.js?v=2';
 import { createFadeScroll } from '../fade-scroll/fade-scroll.js?v=2';
-import { createPhotoArticle } from '../photo-article/photo-article.js?v=1';
+import { createPhotoArticle } from '../photo-article/photo-article.js?v=2';
 const feed = document.querySelector('.photo-feed');
 const momentum = createMomentumScroll(feed, {
   onActiveChange({index}) {

@@ -246,6 +246,20 @@ test('reduced motion opens and closes without traveling animations', () => withB
   assert.equal(env.scrollWrites, 0);
 }));
 
+test('a partly visible photo in reduced-motion free scrolling opens and returns without forced alignment', () => withBrowser({reduced: true}, async env => {
+  // With compulsory snapping disabled, the selected photo may legitimately
+  // start above the viewport. Preserve that user-selected free-scroll position.
+  env.feed.scrollTop = 1614;
+  await env.open();
+  assert.equal(env.dialog.dataset.articleState, 'open');
+  assert.equal(env.dialog.open, true);
+  env.controller.close();
+  assert.equal(env.dialog.dataset.articleState, 'closed');
+  assert.equal(env.feed.scrollTop, 1614);
+  assert.equal(env.scrollWrites, 1, 'only the modeled user movement writes scroll position');
+  assert.equal(env.animations.length, 0);
+}));
+
 test('resize retargets an in-progress transition continuously rather than jumping to a stale endpoint', () => withBrowser({}, async env => {
   await env.open();
   const old = env.lastFlight();
