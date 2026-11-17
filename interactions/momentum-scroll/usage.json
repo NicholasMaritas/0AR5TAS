@@ -38,7 +38,12 @@
     "syntax": "passed",
     "automated": "7 tests passed: predominant visibility, fit/bounds/oversize, velocity-continuous spring, held touch, high-velocity multi-item travel, immediate interruption, reduced motion.",
     "photo_requests": "All six returned HTTP 200 with image/jpeg content.",
-    "live_browser": "pending deployment",
-    "physical_devices": "Real iOS/Android flick and hardware trackpad feel require human testing; native behavior varies by browser and operating system."
+    "live_browser": "Passed live desktop checks: loaded all six photos; short wheel input returned to the predominantly visible photo; larger scroll aligned photo 2 at scrollTop 757; long scroll crossed multiple items and aligned final photo at 3785; Home and Page Down worked and settled exactly at 0 and 757. Enhanced mode disables competing CSS snapping.",
+    "physical_devices": "Real iOS/Android flick and hardware trackpad feel require human testing; native behavior varies by browser and operating system.",
+    "github_readback": "All seven uploaded files matched committed contents."
+  },
+  "deployment": {
+    "commit": "d9f22d68f810cbb69285d1e16fdef91b91f64b07",
+    "status": "success"
   }
 }
