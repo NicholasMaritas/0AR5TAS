@@ -1,0 +1,44 @@
+{
+  "feature": "Native kinetic momentum scrolling with predominant-item alignment",
+  "category": "interactions/momentum-scroll",
+  "source": "Implemented from the user's written requirements; no reference site or extracted third-party interaction code.",
+  "test_url": "https://nicholasmaritas.github.io/0AR5TAS/interactions/momentum-scroll/",
+  "files": {
+    "momentum-scroll.js": "Reusable native-scroll controller and pure geometry/spring helpers.",
+    "momentum-scroll.test.mjs": "Run node --test momentum-scroll.test.mjs.",
+    "index.html": "Six full-viewport photos for human flick and scrolling tests.",
+    "feed.css": "Responsive photo feed and CSS proximity-snap fallback when JavaScript does not run.",
+    "feed.js": "Initializes controller and current-photo counter.",
+    "photos.json": "External photo URLs and successful HTTP verification."
+  },
+  "integration": [
+    "Give the container a fixed viewport height, overflow-y:auto, touch-action:pan-y pinch-zoom and scroll-behavior:auto.",
+    "Mark children data-scroll-item. With JavaScript enhanced, disable CSS scroll-snap-type so it cannot compete with the controller.",
+    "Import createMomentumScroll from momentum-scroll.js; call it with the scroll container. The returned controller has refresh() and destroy()."
+  ],
+  "behavior": {
+    "momentum": "Native browser touch/trackpad inertia. Input is passive and never preventDefault'ed or multiplied; native physics determine velocity-sensitive travel.",
+    "handoff": "Monitor actual scroll velocity. Start alignment only after speed remains below 40px/s for 100ms and input has been quiet for at least 160ms, with no active touch or pressed pointer.",
+    "selection": "Maximum vertically visible pixel area; center-distance tie break. No direction-forced next item.",
+    "alignment": "Start-align fitting items within scroll bounds. Oversized items covering the viewport remain freely readable.",
+    "easing": "Analytic critically damped spring, seeded with measured low native velocity. No artificial fling added.",
+    "interruption": "New wheel, touch, pointer or scroll-key input cancels spring immediately and restores native control.",
+    "accessibility": "Native keyboard scrolling, pinch zoom and reduced-motion immediate final alignment after settling. scroll-snap-stop:normal allows multi-item travel."
+  },
+  "configuration": {
+    "itemSelector": "[data-scroll-item]",
+    "settleSpeed": 40,
+    "settleWindow": 100,
+    "inputQuiet": 160,
+    "frequency": 12
+  },
+  "dependencies": [],
+  "photos": "Six original Unsplash image URLs, external hosting required; no external JavaScript libraries.",
+  "validation": {
+    "syntax": "passed",
+    "automated": "7 tests passed: predominant visibility, fit/bounds/oversize, velocity-continuous spring, held touch, high-velocity multi-item travel, immediate interruption, reduced motion.",
+    "photo_requests": "All six returned HTTP 200 with image/jpeg content.",
+    "live_browser": "pending deployment",
+    "physical_devices": "Real iOS/Android flick and hardware trackpad feel require human testing; native behavior varies by browser and operating system."
+  }
+}
