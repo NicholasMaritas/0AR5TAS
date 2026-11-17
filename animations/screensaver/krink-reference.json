@@ -9,7 +9,7 @@
     "minified_class": "Oa",
     "class_start_character_offset_zero_based": 721275,
     "initialization_site": "l||new Oa",
-    "initialization_site_character_offset_zero_based": 782143,
+    "initialization_site_character_offset_zero_based": 782136,
     "css": "https://krink.com/cdn/shop/t/34/assets/style.css?v=159774163203296273991701282695",
     "html_overlay_id": "screensaver",
     "html_image_data_script_id": "screensaver_json",
@@ -58,5 +58,14 @@
   "evidence_files": [
     "research/krink-source-inspection.json",
     "research/krink-screensaver-extract.json"
-  ]
+  ],
+  "reverification": {
+    "original_class_code": "var Oa=function(){function e(){!function(e,t){if(!(e instanceof t))throw new TypeError(\"Cannot call a class as a function\")}(this,e),this.inactiveTimer=null,this.stampInterval=null,this.el=document.getElementById(\"screensaver\"),this.imagesArray=JSON.parse(document.getElementById(\"screensaver_json\").textContent),this.init()}var t,n,r;return t=e,(n=[{key:\"init\",value:function(){var e=this;this.images=this.imagesArray.filter((function(e){return null!==e})),this.images.length>0&&(this.reset(),this.el.addEventListener(\"click\",(function(t){t.preventDefault(),e.deactivate()})),this.el.addEventListener(\"mousemove\",(function(){e.el.classList.contains(\"active\")&&e.deactivate()})))}},{key:\"reset\",value:function(){var e=this;clearTimeout(this.inactiveTimer),clearInterval(this.stampInterval),setTimeout((function(){e.el.hasChildNodes&&(e.el.innerHTML=\"\")}),400),this.inactiveTimer=setTimeout((function(){document.body.style.overflow=\"hidden\",e.el.classList.add(\"active\"),e.addImage(),e.stampInterval=setInterval((function(){e.addImage()}),2e4)}),15e4)}},{key:\"getRandomInt\",value:function(e,t){return Math.floor(Math.random()*(t-e+1))+e}},{key:\"addImage\",value:function(){var e=this,t=new Image,n=this.images[Math.floor(Math.random()*this.images.length)];t.src=n,t.style.top=\"\".concat(this.getRandomInt(-10,110),\"%\"),t.style.left=\"\".concat(this.getRandomInt(-10,110),\"%\"),t.style.transform=\"rotate(\".concat(this.getRandomInt(0,360),\"deg)\"),t.onload=function(){e.el.appendChild(t)}}},{key:\"deactivate\",value:function(){document.body.style.overflow=\"initial\",this.el.classList.remove(\"active\"),clearTimeout(this.inactiveTimer),clearInterval(this.stampInterval)}}])&&ka(t.prototype,n),r&&ka(t,r),Object.defineProperty(t,\"prototype\",{writable:!1}),e}();",
+    "initialization": "l||new Oa",
+    "initialization_offset": 782136,
+    "html_image_data": "<script id=\"screensaver_json\" type=\"application/json\">\n      [\n        \"\\/\\/krink.com\\/cdn\\/shop\\/files\\/K-60_Blue_Web.png?v=1732122739\",\n        \"\\/\\/krink.com\\/cdn\\/shop\\/files\\/K-66_Pink_Web.png?v=1732204248\",\n        \"\\/\\/krink.com\\/cdn\\/shop\\/files\\/K-66_Yellow2_Web.png?v=1732202754\",\n        \"\\/\\/krink.com\\/cdn\\/shop\\/files\\/K-60_Abstract_Web.png?v=1732122718\",\n        \"\\/\\/krink.com\\/cdn\\/shop\\/files\\/K-60_Black_Web.jpg?v=1732199750\",\n        \"\\/\\/krink.com\\/cdn\\/shop\\/files\\/K-66_Green_Web.png?v=1732128387\"\n      ]\n    </script>",
+    "html_overlay": "<div id=\"screensaver\" class=\"fixed top-0 left-0 w-full h-full\"></div>",
+    "css_excerpt": "#screensaver{opacity:0;pointer-events:none;transition:opacity .3s;z-index:1000}#screensaver.active{opacity:1;pointer-events:auto}#screensaver img{position:absolute;width:130px}@media screen and (min-width:1024px){#screensaver img{width:220px}}",
+    "verification": "Re-fetched JavaScript and CSS successfully; confirmed linked assets and screensaver elements in user-uploaded HTML. No live visual test performed."
+  }
 }
