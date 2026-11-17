@@ -3,16 +3,14 @@ export function alignedIndex(rects, top, height, tolerance = 1) {
   return rects.findIndex(rect => Math.abs(rect.top - top) <= tolerance && rect.bottom <= top + height + tolerance && rect.bottom > top);
 }
 
-export function createFadeScroll(container, { itemSelector = '[data-scroll-item]', delay = 2000 } = {}) {
+export function createFadeScroll(container, { itemSelector = '[data-scroll-item]', delay = 400 } = {}) {
   const media = matchMedia('(prefers-reduced-motion: reduce)');
   const hasScrollEnd = 'onscrollend' in container;
   const original = ['data-fade-scroll', 'data-fade-scroll-state'].map(name => container.getAttribute(name));
   let items = [], visible = null, waiting = null, revealTimer = 0, quietTimer = 0, frame = 0;
-  let epoch = 0, touches = 0, pressed = false, nativeMoving = false, suspended = false, destroyed = false;
-  const keys = new Set();
-  const scrollKeys = new Set(['ArrowDown', 'ArrowUp', 'PageDown', 'PageUp', 'Home', 'End', ' ']);
+  let epoch = 0, touches = 0, touchScrolling = false, nativeMoving = false, suspended = false, destroyed = false;
   container.setAttribute('data-fade-scroll', '');
-  function blocked() { return destroyed || suspended || document.hidden || touches > 0 || pressed || keys.size > 0; }
+  function blocked() { return destroyed || suspended || document.hidden || (touchScrolling && touches > 0); }
   function hide() {
     epoch++;
     clearTimeout(revealTimer); clearTimeout(quietTimer); cancelAnimationFrame(frame);
@@ -75,26 +73,31 @@ export function createFadeScroll(container, { itemSelector = '[data-scroll-item]
     clearTimeout(quietTimer);
     quietTimer = setTimeout(() => { quietTimer = 0; stableFrames(); }, 180);
   }
-  function input() { hide(); quietCheck(); }
-  function scroll() { hide(); nativeMoving = true; if (!hasScrollEnd) quietCheck(); }
+  function scroll() {
+    hide(); nativeMoving = true;
+    if (touches > 0) touchScrolling = true;
+    if (!hasScrollEnd) quietCheck();
+  }
   function end() { nativeMoving = false; clearTimeout(quietTimer); settled(); }
-  function touchStart(event) { touches = event.touches.length; input(); }
-  function touchEnd(event) { touches = event.touches.length; input(); }
-  function pointerDown(event) { if (event.pointerType !== 'touch') { pressed = true; input(); } }
-  function pointerUp(event) { if (event.pointerType !== 'touch' && pressed) { pressed = false; input(); } }
-  function keyDown(event) { if (scrollKeys.has(event.key)) { keys.add(event.key); input(); } }
-  function keyUp(event) { if (keys.delete(event.key)) input(); }
-  function suspend() { suspended = true; touches = 0; pressed = false; keys.clear(); hide(); }
+  // Touching/clicking without scrolling must never hide or restart a caption.
+  function touchStart(event) { touches = event.touches.length; }
+  function touchEnd(event) {
+    touches = event.touches.length;
+    if (touches === 0 && touchScrolling) {
+      touchScrolling = false;
+      if (!nativeMoving) settled();
+      else if (!hasScrollEnd) quietCheck();
+    }
+  }
+  function suspend() { suspended = true; touches = 0; touchScrolling = false; hide(); }
   function resume() { suspended = false; nativeMoving = false; hide(); quietCheck(); }
   function visibility() { if (document.hidden) suspend(); else resume(); }
   function resize() { hide(); nativeMoving = false; quietCheck(); }
   function loaded() { if (!waiting && !visible) stableFrames(); }
   const listeners = [
-    [container, 'scroll', scroll], [container, 'wheel', input],
+    [container, 'scroll', scroll],
     [container, 'touchstart', touchStart], [container, 'touchend', touchEnd], [container, 'touchcancel', touchEnd],
-    [container, 'pointerdown', pointerDown], [window, 'pointerup', pointerUp], [window, 'pointercancel', pointerUp],
-    [container, 'keydown', keyDown], [window, 'keyup', keyUp],
-    [window, 'blur', suspend], [window, 'focus', resume], [window, 'pagehide', suspend], [window, 'pageshow', resume],
+    [window, 'pagehide', suspend], [window, 'pageshow', resume],
     [window, 'resize', resize], [document, 'visibilitychange', visibility],
     [container, 'load', loaded, true]
   ];

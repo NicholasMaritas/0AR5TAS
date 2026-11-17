@@ -1,5 +1,5 @@
 import { createMomentumScroll } from './momentum-scroll.js?v=2';
-import { createFadeScroll } from '../fade-scroll/fade-scroll.js?v=1';
+import { createFadeScroll } from '../fade-scroll/fade-scroll.js?v=2';
 const feed = document.querySelector('.photo-feed');
 const momentum = createMomentumScroll(feed, {
   onActiveChange({index}) {
@@ -10,7 +10,7 @@ const momentum = createMomentumScroll(feed, {
     }
   }
 });
-const captions = createFadeScroll(feed, {delay: 2000});
+const captions = createFadeScroll(feed, {delay: 400});
 window.addEventListener('pagehide', event => {
   if (!event.persisted) { captions.destroy(); momentum.destroy(); }
 });

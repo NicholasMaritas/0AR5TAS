@@ -132,52 +132,77 @@ test('alignment requires start alignment and a fully fitting item', () => {
   assert.equal(alignedIndex([{ top: -1000, bottom: 0, height: 1000 }, { top: 0, bottom: 1000, height: 1000 }], 0, 1000), 1);
 });
 
-test('initial settled page waits two seconds before revealing only its caption', () => withBrowser({}, env => {
+test('initial settled page waits 400ms before revealing only its caption', () => withBrowser({}, env => {
   assert.deepEqual(env.visible(), []);
   env.waitForState('waiting');
-  env.advance(1999); assert.deepEqual(env.visible(), []);
+  env.advance(399); assert.deepEqual(env.visible(), []);
   env.advance(17); assert.deepEqual(env.visible(), [0]);
   assert.equal(env.container.getAttribute('data-fade-scroll-state'), 'visible');
 }));
 
-test('scrolling hides immediately and an unaligned native scrollend cannot reveal', () => withBrowser({}, env => {
-  env.advance(2500); assert.deepEqual(env.visible(), [0]);
+test('scrolling immediately removes the visible marker for fade-out; unaligned scrollend cannot reveal', () => withBrowser({}, env => {
+  env.advance(600); assert.deepEqual(env.visible(), [0]);
   env.scroll(650); assert.deepEqual(env.visible(), []);
   env.scrollEnd(); env.advance(3000); assert.deepEqual(env.visible(), []);
   env.scroll(1000); env.scrollEnd(); env.waitForState('waiting');
-  env.advance(1999); assert.deepEqual(env.visible(), []);
+  env.advance(399); assert.deepEqual(env.visible(), []);
   env.advance(17); assert.deepEqual(env.visible(), [1]);
 }));
 
-test('a new input invalidates the old reveal deadline and gets a fresh delay', () => withBrowser({}, env => {
-  env.waitForState('waiting'); env.advance(1000);
-  env.container.emit('wheel', { deltaY: -10 });
-  env.advance(1100); assert.deepEqual(env.visible(), []);
-  env.advance(1400); assert.deepEqual(env.visible(), [0]);
+test('actual scrolling invalidates the old reveal deadline and gets a fresh delay', () => withBrowser({}, env => {
+  env.waitForState('waiting'); env.advance(200);
+  env.scroll(1000); env.scrollEnd();
+  env.waitForState('waiting');
+  env.advance(200); assert.deepEqual(env.visible(), []);
+  env.advance(216); assert.deepEqual(env.visible(), [1]);
 }));
 
-test('held touch blocks revealing even when scrollend is dispatched', () => withBrowser({}, env => {
+test('a held touch that actually scrolled blocks revealing until it is released', () => withBrowser({}, env => {
   env.waitForState('waiting');
   env.container.emit('touchstart', { touches: [{}] });
   env.scroll(1000); env.scrollEnd(); env.advance(4000);
   assert.deepEqual(env.visible(), []);
   env.container.emit('touchend', { touches: [] }); env.scrollEnd();
-  env.waitForState('waiting'); env.advance(2016); assert.deepEqual(env.visible(), [1]);
+  env.waitForState('waiting'); env.advance(416); assert.deepEqual(env.visible(), [1]);
 }));
 
-test('wheel at a boundary recovers without a native scrollend', () => withBrowser({}, env => {
-  env.advance(2500); assert.deepEqual(env.visible(), [0]);
+test('pointer, key, wheel and window focus activity do not change a visible caption without scrolling', () => withBrowser({}, env => {
+  env.advance(600); assert.deepEqual(env.visible(), [0]);
+  env.container.emit('pointerdown', { pointerType: 'mouse', button: 0 });
+  env.win.emit('pointerup', { pointerType: 'mouse', button: 0 });
+  env.container.emit('keydown', { key: 'ArrowDown' });
+  env.win.emit('keyup', { key: 'ArrowDown' });
   env.container.emit('wheel', { deltaY: -100 });
-  assert.deepEqual(env.visible(), []);
-  env.advance(179); assert.deepEqual(env.visible(), []);
-  env.waitForState('waiting'); env.advance(1999); assert.deepEqual(env.visible(), []);
+  env.win.emit('blur'); env.win.emit('focus');
+  assert.deepEqual(env.visible(), [0]);
+  env.advance(1000); assert.deepEqual(env.visible(), [0]);
+}));
+
+test('clicks and taps do not restart a pending reveal deadline', () => withBrowser({}, env => {
+  env.waitForState('waiting'); env.advance(200);
+  env.container.emit('pointerdown', { pointerType: 'mouse', button: 0 });
+  env.win.emit('pointerup', { pointerType: 'mouse', button: 0 });
+  env.container.emit('touchstart', { touches: [{}] });
+  env.container.emit('touchend', { touches: [] });
+  env.container.emit('click');
+  env.win.emit('blur'); env.win.emit('focus');
+  env.advance(199); assert.deepEqual(env.visible(), []);
   env.advance(17); assert.deepEqual(env.visible(), [0]);
 }));
 
+test('a stationary touch hold does not block a pending reveal or hide a visible caption', () => withBrowser({}, env => {
+  env.waitForState('waiting'); env.advance(200);
+  env.container.emit('touchstart', { touches: [{}] });
+  env.advance(216); assert.deepEqual(env.visible(), [0]);
+  env.advance(1000); assert.deepEqual(env.visible(), [0]);
+  env.container.emit('touchend', { touches: [] });
+  assert.deepEqual(env.visible(), [0]);
+}));
+
 test('without scrollend, quiet stable aligned scrolling can reveal', () => withBrowser({ nativeScrollEnd: false }, env => {
-  env.advance(2500); env.scroll(1000);
+  env.advance(600); env.scroll(1000);
   env.advance(179); assert.deepEqual(env.visible(), []);
-  env.waitForState('waiting'); env.advance(1999); assert.deepEqual(env.visible(), []);
+  env.waitForState('waiting'); env.advance(399); assert.deepEqual(env.visible(), []);
   env.advance(17); assert.deepEqual(env.visible(), [1]);
 }));
 
@@ -188,33 +213,33 @@ test('unready image cannot reveal; image load starts a new complete delay', () =
     controller = createFadeScroll(env.container); env.advance(4000);
     assert.deepEqual(env.visible(), []);
     env.imageLoaded(0); env.waitForState('waiting');
-    env.advance(1999); assert.deepEqual(env.visible(), []);
+    env.advance(399); assert.deepEqual(env.visible(), []);
     env.advance(17); assert.deepEqual(env.visible(), [0]);
   } finally { controller?.destroy(); env.restore(); }
 });
 
 test('reduced motion can reveal the predominant stationary item without forced alignment', () => withBrowser({ reduced: true, position: 650 }, env => {
-  env.waitForState('waiting'); env.advance(2016);
+  env.waitForState('waiting'); env.advance(416);
   assert.deepEqual(env.visible(), [1]); assert.equal(env.scrollWrites, 0);
 }));
 
 test('visibility and BFCache restoration require fresh settlement and delay', () => withBrowser({}, env => {
-  env.advance(2500); assert.deepEqual(env.visible(), [0]);
+  env.advance(600); assert.deepEqual(env.visible(), [0]);
   env.visibility('hidden'); env.advance(4000); assert.deepEqual(env.visible(), []);
   env.visibility('visible'); env.waitForState('waiting');
-  env.advance(1999); assert.deepEqual(env.visible(), []);
+  env.advance(399); assert.deepEqual(env.visible(), []);
   env.advance(17); assert.deepEqual(env.visible(), [0]);
   env.win.emit('pagehide', { persisted: true }); env.advance(4000); assert.deepEqual(env.visible(), []);
   env.win.emit('pageshow', { persisted: true }); env.waitForState('waiting');
-  env.advance(1999); assert.deepEqual(env.visible(), []);
+  env.advance(399); assert.deepEqual(env.visible(), []);
   env.advance(17); assert.deepEqual(env.visible(), [0]);
 }));
 
 test('resize invalidates pending captions and controller never writes scrolling', () => withBrowser({}, env => {
-  env.waitForState('waiting'); env.advance(1800); env.resize();
-  env.advance(300); assert.deepEqual(env.visible(), []);
-  env.advance(2200); assert.deepEqual(env.visible(), [0]);
-  env.scroll(1000); env.scrollEnd(); env.advance(2500);
+  env.waitForState('waiting'); env.advance(200); env.resize();
+  env.advance(200); assert.deepEqual(env.visible(), []);
+  env.advance(600); assert.deepEqual(env.visible(), [0]);
+  env.scroll(1000); env.scrollEnd(); env.advance(600);
   assert.deepEqual(env.visible(), [1]); assert.equal(env.scrollWrites, 0);
 }));
 

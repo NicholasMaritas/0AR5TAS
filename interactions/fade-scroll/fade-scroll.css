@@ -1,20 +1,18 @@
-/* Same opacity-only, 1s ease-in-out reveal as the archived secondary text fade.
-   The 2s settled delay is owned by fade-scroll.js; hiding is always immediate. */
+/* Reversible opacity transitions continue from their current rendered value.
+   Actual scrolling requests the quick fade-out; clicks never change this state. */
 [data-fade-scroll] [data-scroll-item] figcaption {
   opacity: 0;
   animation: none;
-  transition: none;
+  transition: opacity 220ms cubic-bezier(.4, 0, 1, 1);
 }
 [data-fade-scroll] [data-scroll-item][data-caption-visible] figcaption {
-  animation: fade-scroll-in 1s ease-in-out forwards;
-}
-@keyframes fade-scroll-in {
-  from { opacity: 0; }
-  to { opacity: 1; }
+  opacity: 1;
+  transition-duration: 600ms;
+  transition-timing-function: cubic-bezier(.22, 1, .36, 1);
 }
 @media (prefers-reduced-motion: reduce) {
+  [data-fade-scroll] [data-scroll-item] figcaption,
   [data-fade-scroll] [data-scroll-item][data-caption-visible] figcaption {
-    animation: none;
-    opacity: 1;
+    transition: none;
   }
 }

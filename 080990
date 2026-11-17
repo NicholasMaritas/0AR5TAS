@@ -209,3 +209,11 @@ The agent handling a task must update this file after each task to preserve cont
 - Indexed feature: interactions/fade-scroll/index.json, name fade + scroll. Original text/fade-in archive and native momentum controller unchanged.
 - Human test: https://nicholasmaritas.github.io/0AR5TAS/interactions/momentum-scroll/
 - Pending: None for requested implementation, indexing and human-test publication.
+
+### Task 015 — Faster reversible fades and click-independent captions
+- STARTED — 2026-11-17
+- Request: Shorten caption wait, smooth fade-in, fade text out when scrolling resumes, and ensure clicks do not affect appearance; implement repository and Pages changes.
+- Changes: Fade + scroll default/test delay 400ms (previously 2000ms); CSS opacity transitions fade in over 600ms with cubic-bezier(.22,1,.36,1), out over 220ms with cubic-bezier(.4,0,1,1). Transitions interpolate current opacity instead of restarting keyframes.
+- Removed caption invalidation from wheel/pointer/key/focus/blur events. Actual scroll events drive fade-out. Touch tracking blocks reveal only when that gesture actually scrolled; stationary taps/holds preserve visible captions and original pending deadlines. Page visibility/layout/lifecycle safeguards retained. Native scrolling module unchanged.
+- Updated interactions/fade-scroll/{fade-scroll.js,fade-scroll.css,fade-scroll.test.mjs,index.json} and interactions/momentum-scroll/{index.html,feed.js,usage.json}; cache versions advanced.
+- Validation: Syntax and 14 tests passed, including visible/pending click invariance, stationary touch holds, actual-scroll cancellation, shortened delay, legacy fallback, image readiness, reduced motion, lifecycle and cleanup. Publication/browser checks pending.

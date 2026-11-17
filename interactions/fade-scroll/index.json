@@ -1,17 +1,17 @@
 {
   "name": "fade + scroll",
   "category": "interactions/fade-scroll",
-  "description": "Captions stay hidden during native scrolling and fade in after a settled photograph remains ready for two seconds.",
+  "description": "A short settled pause followed by a smooth caption fade-in; actual scrolling fades captions out, while clicks and stationary taps have no effect.",
   "files": {
     "fade-scroll.js": "createFadeScroll(container,{itemSelector,delay}) with refresh()/destroy(); never writes scroll position.",
-    "fade-scroll.css": "Opacity-only 1s ease-in-out reveal; instant hide on new activity.",
-    "fade-scroll.test.mjs": "Run node --test fade-scroll.test.mjs; twelve timing and interruption/lifecycle tests.",
+    "fade-scroll.css": "Reversible opacity transitions: 600ms ease-out reveal, 220ms fade-out on actual scrolling.",
+    "fade-scroll.test.mjs": "Run node --test fade-scroll.test.mjs; fourteen timing, interaction and lifecycle tests.",
     "index.json": "Combined feature entry and integration notes."
   },
   "integration": [
     "Use a native snapping photo container, with each fitting photo marked data-scroll-item and a figcaption.",
     "Add data-fade-scroll to the container in initial HTML to keep captions hidden before JavaScript starts.",
-    "Load fade-scroll.css and initialize createFadeScroll(container,{delay:2000}).",
+    "Load fade-scroll.css and initialize createFadeScroll(container,{delay:400}).",
     "Use the existing momentum-scroll controller for native momentum/selection. Its active-item callback must not start caption timers."
   ],
   "source_references": {
@@ -19,21 +19,22 @@
     "scroll": "../momentum-scroll/momentum-scroll.js"
   },
   "timing": {
-    "after_native_scrollend_ms": 2000,
-    "fade_duration_ms": 1000,
-    "easing": "ease-in-out",
-    "properties": [
-      "opacity"
-    ],
-    "hide": "immediate; never a fade-out during scrolling"
+    "after_native_scrollend_ms": 400,
+    "fade_in_ms": 600,
+    "fade_in_easing": "cubic-bezier(.22,1,.36,1)",
+    "fade_out_ms": 220,
+    "fade_out_easing": "cubic-bezier(.4,0,1,1)",
+    "property": "opacity",
+    "continuity": "CSS transitions resume from current rendered opacity; no restart-from-zero keyframes."
   },
   "behavior": [
-    "Initial fully settled photograph receives the same two-second delay.",
-    "Input or any scroll cancels pending reveal and hides all captions immediately.",
-    "Reveal requires start alignment within 1 CSS pixel and full viewport fit; only the settled photo is revealed.",
-    "Photograph must be loaded before the full delay begins.",
-    "Legacy browsers and no-movement input use quiet/stable checks; no scroll animation is introduced.",
-    "Resize, backgrounding, BFCache restoration and held gestures invalidate/rearm the delay safely."
+    "Initial settled image and each new fully aligned image receive a 400ms reveal delay.",
+    "Actual scroll events cancel pending reveal and remove the visible marker, triggering a 220ms opacity fade-out.",
+    "Clicks, pointer presses, stationary taps/holds, wheel events without movement and focus/blur do not hide captions or reset reveal timers.",
+    "A touch gesture that actually scrolls blocks reveal until the gesture and native movement finish.",
+    "The image must be loaded and its item fully aligned before the reveal delay begins.",
+    "Resize, real page visibility changes and BFCache restoration invalidate/rearm safely; old browsers use quiet/stable checks.",
+    "No JavaScript scroll-position writes and no change to native scrolling physics."
   ],
   "caption_order": [
     "Large title",
@@ -44,13 +45,8 @@
   "reduced_motion": "After two seconds of stillness, show the predominant photo caption without a fade or forced snap; this preserves readability when native snapping is disabled by the existing reduced-motion policy.",
   "test_url": "https://nicholasmaritas.github.io/0AR5TAS/interactions/momentum-scroll/",
   "validation": {
-    "automated": "12 tests passed; syntax and markup checks passed.",
-    "live_browser": "Passed desktop: removed header/counter/hint; first photo initially opacity 0; all captions opacity 0 after scrolling; only fully aligned current photo receives reveal after waiting; computed fade 1s ease-in-out and final opacity 1. Pending reveal canceled by reverse scrolling. Caption order visually verified.",
-    "physical_touch": "not tested",
-    "github_readback": "All eight uploaded feature/feed files matched committed contents."
-  },
-  "deployment": {
-    "commit": "fb8128940bb53da442bfcafde09b4db2915bef6f",
-    "status": "success"
+    "automated": "14 tests passed, including visible/pending click invariance and stationary touch holds.",
+    "live_browser": "pending deployment",
+    "physical_touch": "not tested"
   }
 }
