@@ -1,0 +1,1595 @@
+{
+  "source_url": "https://oowindow.com/jahlil-nzinga",
+  "uploaded_source": "Pasted text.txt",
+  "uploaded_source_sha256": "769f08e2c674619f1f634c8773e6d861665b90c6d456a8fac07dcbf71a76f79d",
+  "scope": "All directly referenced scripts, fonts, image source/srcset variants, stylesheet URLs, PDF and social images from uploaded HTML; fetched Figma runtime/page JSON inspected for direct style/font paths only. No analytics recursion. No About/legal pages visited.",
+  "inspection_date": "2026-11-17",
+  "dependency_checks": [
+    {
+      "url": "https://cdn.shopify.com/s/files/1/0770/3324/2867/files/OOW_Press_Release_Jahlil_Nzinga.pdf?v=1789263082",
+      "origins": [
+        "a[href]"
+      ],
+      "method": "HEAD",
+      "status": 200,
+      "content_type": "application/pdf",
+      "content_length": "71292",
+      "bytes_read": 0
+    },
+    {
+      "url": "https://oowindow.com/_assets/v11/066339bd335839baa7a6871d72c988a7d907a9cb.png",
+      "origins": [
+        "inline script/metadata URL",
+        "social image metadata"
+      ],
+      "method": "HEAD",
+      "status": 403,
+      "error": "HTTP Error 403: Forbidden",
+      "content_type": "text/plain; charset=UTF-8",
+      "content_length": "17",
+      "bytes_read": 0
+    },
+    {
+      "url": "https://oowindow.com/_assets/v11/20e4b42f4ced637a547e089bf8cdd5e0ebffa604.png",
+      "origins": [
+        "img[src]",
+        "img[srcset]"
+      ],
+      "method": "HEAD",
+      "status": 403,
+      "error": "HTTP Error 403: Forbidden",
+      "content_type": "text/plain; charset=UTF-8",
+      "content_length": "17",
+      "bytes_read": 0
+    },
+    {
+      "url": "https://oowindow.com/_assets/v11/20e4b42f4ced637a547e089bf8cdd5e0ebffa604.png?h=1024",
+      "origins": [
+        "img[srcset]"
+      ],
+      "method": "HEAD",
+      "status": 403,
+      "error": "HTTP Error 403: Forbidden",
+      "content_type": "text/plain; charset=UTF-8",
+      "content_length": "17",
+      "bytes_read": 0
+    },
+    {
+      "url": "https://oowindow.com/_assets/v11/20e4b42f4ced637a547e089bf8cdd5e0ebffa604.png?h=1536",
+      "origins": [
+        "img[srcset]"
+      ],
+      "method": "HEAD",
+      "status": 403,
+      "error": "HTTP Error 403: Forbidden",
+      "content_type": "text/plain; charset=UTF-8",
+      "content_length": "17",
+      "bytes_read": 0
+    },
+    {
+      "url": "https://oowindow.com/_assets/v11/20e4b42f4ced637a547e089bf8cdd5e0ebffa604.png?h=2048",
+      "origins": [
+        "img[srcset]"
+      ],
+      "method": "HEAD",
+      "status": 403,
+      "error": "HTTP Error 403: Forbidden",
+      "content_type": "text/plain; charset=UTF-8",
+      "content_length": "17",
+      "bytes_read": 0
+    },
+    {
+      "url": "https://oowindow.com/_assets/v11/20e4b42f4ced637a547e089bf8cdd5e0ebffa604.png?h=2560",
+      "origins": [
+        "img[srcset]"
+      ],
+      "method": "HEAD",
+      "status": 403,
+      "error": "HTTP Error 403: Forbidden",
+      "content_type": "text/plain; charset=UTF-8",
+      "content_length": "17",
+      "bytes_read": 0
+    },
+    {
+      "url": "https://oowindow.com/_assets/v11/20e4b42f4ced637a547e089bf8cdd5e0ebffa604.png?h=3072",
+      "origins": [
+        "img[srcset]"
+      ],
+      "method": "HEAD",
+      "status": 403,
+      "error": "HTTP Error 403: Forbidden",
+      "content_type": "text/plain; charset=UTF-8",
+      "content_length": "17",
+      "bytes_read": 0
+    },
+    {
+      "url": "https://oowindow.com/_assets/v11/20e4b42f4ced637a547e089bf8cdd5e0ebffa604.png?h=3584",
+      "origins": [
+        "img[srcset]"
+      ],
+      "method": "HEAD",
+      "status": 403,
+      "error": "HTTP Error 403: Forbidden",
+      "content_type": "text/plain; charset=UTF-8",
+      "content_length": "17",
+      "bytes_read": 0
+    },
+    {
+      "url": "https://oowindow.com/_assets/v11/20e4b42f4ced637a547e089bf8cdd5e0ebffa604.png?h=4096",
+      "origins": [
+        "img[srcset]"
+      ],
+      "method": "HEAD",
+      "status": 403,
+      "error": "HTTP Error 403: Forbidden",
+      "content_type": "text/plain; charset=UTF-8",
+      "content_length": "17",
+      "bytes_read": 0
+    },
+    {
+      "url": "https://oowindow.com/_assets/v11/20e4b42f4ced637a547e089bf8cdd5e0ebffa604.png?h=512",
+      "origins": [
+        "img[srcset]"
+      ],
+      "method": "HEAD",
+      "status": 403,
+      "error": "HTTP Error 403: Forbidden",
+      "content_type": "text/plain; charset=UTF-8",
+      "content_length": "17",
+      "bytes_read": 0
+    },
+    {
+      "url": "https://oowindow.com/_assets/v11/20e4b42f4ced637a547e089bf8cdd5e0ebffa604.png?h=546",
+      "origins": [
+        "img[srcset]"
+      ],
+      "method": "HEAD",
+      "status": 403,
+      "error": "HTTP Error 403: Forbidden",
+      "content_type": "text/plain; charset=UTF-8",
+      "content_length": "17",
+      "bytes_read": 0
+    },
+    {
+      "url": "https://oowindow.com/_assets/v11/2839f79b2da6e1fc8be6e9488b95fd061a7f5922.svg",
+      "origins": [
+        "img[src]"
+      ],
+      "method": "HEAD",
+      "status": 403,
+      "error": "HTTP Error 403: Forbidden",
+      "content_type": "text/plain; charset=UTF-8",
+      "content_length": "17",
+      "bytes_read": 0
+    },
+    {
+      "url": "https://oowindow.com/_assets/v11/29ba554bda1622b9c377e0b7ef820f11191f15b6.png",
+      "origins": [
+        "img[src]",
+        "img[srcset]"
+      ],
+      "method": "HEAD",
+      "status": 403,
+      "error": "HTTP Error 403: Forbidden",
+      "content_type": "text/plain; charset=UTF-8",
+      "content_length": "17",
+      "bytes_read": 0
+    },
+    {
+      "url": "https://oowindow.com/_assets/v11/29ba554bda1622b9c377e0b7ef820f11191f15b6.png?w=1072",
+      "origins": [
+        "img[srcset]"
+      ],
+      "method": "HEAD",
+      "status": 403,
+      "error": "HTTP Error 403: Forbidden",
+      "content_type": "text/plain; charset=UTF-8",
+      "content_length": "17",
+      "bytes_read": 0
+    },
+    {
+      "url": "https://oowindow.com/_assets/v11/29ba554bda1622b9c377e0b7ef820f11191f15b6.png?w=1160",
+      "origins": [
+        "img[srcset]"
+      ],
+      "method": "HEAD",
+      "status": 403,
+      "error": "HTTP Error 403: Forbidden",
+      "content_type": "text/plain; charset=UTF-8",
+      "content_length": "17",
+      "bytes_read": 0
+    },
+    {
+      "url": "https://oowindow.com/_assets/v11/29ba554bda1622b9c377e0b7ef820f11191f15b6.png?w=1176",
+      "origins": [
+        "img[srcset]"
+      ],
+      "method": "HEAD",
+      "status": 403,
+      "error": "HTTP Error 403: Forbidden",
+      "content_type": "text/plain; charset=UTF-8",
+      "content_length": "17",
+      "bytes_read": 0
+    },
+    {
+      "url": "https://oowindow.com/_assets/v11/29ba554bda1622b9c377e0b7ef820f11191f15b6.png?w=2144",
+      "origins": [
+        "img[srcset]"
+      ],
+      "method": "HEAD",
+      "status": 403,
+      "error": "HTTP Error 403: Forbidden",
+      "content_type": "text/plain; charset=UTF-8",
+      "content_length": "17",
+      "bytes_read": 0
+    },
+    {
+      "url": "https://oowindow.com/_assets/v11/29ba554bda1622b9c377e0b7ef820f11191f15b6.png?w=2320",
+      "origins": [
+        "img[srcset]"
+      ],
+      "method": "HEAD",
+      "status": 403,
+      "error": "HTTP Error 403: Forbidden",
+      "content_type": "text/plain; charset=UTF-8",
+      "content_length": "17",
+      "bytes_read": 0
+    },
+    {
+      "url": "https://oowindow.com/_assets/v11/29ba554bda1622b9c377e0b7ef820f11191f15b6.png?w=2351",
+      "origins": [
+        "img[srcset]"
+      ],
+      "method": "HEAD",
+      "status": 403,
+      "error": "HTTP Error 403: Forbidden",
+      "content_type": "text/plain; charset=UTF-8",
+      "content_length": "17",
+      "bytes_read": 0
+    },
+    {
+      "url": "https://oowindow.com/_assets/v11/29ba554bda1622b9c377e0b7ef820f11191f15b6.png?w=3215",
+      "origins": [
+        "img[srcset]"
+      ],
+      "method": "HEAD",
+      "status": 403,
+      "error": "HTTP Error 403: Forbidden",
+      "content_type": "text/plain; charset=UTF-8",
+      "content_length": "17",
+      "bytes_read": 0
+    },
+    {
+      "url": "https://oowindow.com/_assets/v11/29ba554bda1622b9c377e0b7ef820f11191f15b6.png?w=3480",
+      "origins": [
+        "img[srcset]"
+      ],
+      "method": "HEAD",
+      "status": 403,
+      "error": "HTTP Error 403: Forbidden",
+      "content_type": "text/plain; charset=UTF-8",
+      "content_length": "17",
+      "bytes_read": 0
+    },
+    {
+      "url": "https://oowindow.com/_assets/v11/29ba554bda1622b9c377e0b7ef820f11191f15b6.png?w=3526",
+      "origins": [
+        "img[srcset]"
+      ],
+      "method": "HEAD",
+      "status": 403,
+      "error": "HTTP Error 403: Forbidden",
+      "content_type": "text/plain; charset=UTF-8",
+      "content_length": "17",
+      "bytes_read": 0
+    },
+    {
+      "url": "https://oowindow.com/_assets/v11/29ba554bda1622b9c377e0b7ef820f11191f15b6.png?w=4287",
+      "origins": [
+        "img[srcset]"
+      ],
+      "method": "HEAD",
+      "status": 403,
+      "error": "HTTP Error 403: Forbidden",
+      "content_type": "text/plain; charset=UTF-8",
+      "content_length": "17",
+      "bytes_read": 0
+    },
+    {
+      "url": "https://oowindow.com/_assets/v11/29ba554bda1622b9c377e0b7ef820f11191f15b6.png?w=4640",
+      "origins": [
+        "img[srcset]"
+      ],
+      "method": "HEAD",
+      "status": 403,
+      "error": "HTTP Error 403: Forbidden",
+      "content_type": "text/plain; charset=UTF-8",
+      "content_length": "17",
+      "bytes_read": 0
+    },
+    {
+      "url": "https://oowindow.com/_assets/v11/29ba554bda1622b9c377e0b7ef820f11191f15b6.png?w=4701",
+      "origins": [
+        "img[srcset]"
+      ],
+      "method": "HEAD",
+      "status": 403,
+      "error": "HTTP Error 403: Forbidden",
+      "content_type": "text/plain; charset=UTF-8",
+      "content_length": "17",
+      "bytes_read": 0
+    },
+    {
+      "url": "https://oowindow.com/_assets/v11/29ba554bda1622b9c377e0b7ef820f11191f15b6.png?w=5358",
+      "origins": [
+        "img[srcset]"
+      ],
+      "method": "HEAD",
+      "status": 403,
+      "error": "HTTP Error 403: Forbidden",
+      "content_type": "text/plain; charset=UTF-8",
+      "content_length": "17",
+      "bytes_read": 0
+    },
+    {
+      "url": "https://oowindow.com/_assets/v11/29ba554bda1622b9c377e0b7ef820f11191f15b6.png?w=5799",
+      "origins": [
+        "img[srcset]"
+      ],
+      "method": "HEAD",
+      "status": 403,
+      "error": "HTTP Error 403: Forbidden",
+      "content_type": "text/plain; charset=UTF-8",
+      "content_length": "17",
+      "bytes_read": 0
+    },
+    {
+      "url": "https://oowindow.com/_assets/v11/29ba554bda1622b9c377e0b7ef820f11191f15b6.png?w=5876",
+      "origins": [
+        "img[srcset]"
+      ],
+      "method": "HEAD",
+      "status": 403,
+      "error": "HTTP Error 403: Forbidden",
+      "content_type": "text/plain; charset=UTF-8",
+      "content_length": "17",
+      "bytes_read": 0
+    },
+    {
+      "url": "https://oowindow.com/_assets/v11/29ba554bda1622b9c377e0b7ef820f11191f15b6.png?w=6430",
+      "origins": [
+        "img[srcset]"
+      ],
+      "method": "HEAD",
+      "status": 403,
+      "error": "HTTP Error 403: Forbidden",
+      "content_type": "text/plain; charset=UTF-8",
+      "content_length": "17",
+      "bytes_read": 0
+    },
+    {
+      "url": "https://oowindow.com/_assets/v11/29ba554bda1622b9c377e0b7ef820f11191f15b6.png?w=6959",
+      "origins": [
+        "img[srcset]"
+      ],
+      "method": "HEAD",
+      "status": 403,
+      "error": "HTTP Error 403: Forbidden",
+      "content_type": "text/plain; charset=UTF-8",
+      "content_length": "17",
+      "bytes_read": 0
+    },
+    {
+      "url": "https://oowindow.com/_assets/v11/29ba554bda1622b9c377e0b7ef820f11191f15b6.png?w=7051",
+      "origins": [
+        "img[srcset]"
+      ],
+      "method": "HEAD",
+      "status": 403,
+      "error": "HTTP Error 403: Forbidden",
+      "content_type": "text/plain; charset=UTF-8",
+      "content_length": "17",
+      "bytes_read": 0
+    },
+    {
+      "url": "https://oowindow.com/_assets/v11/29ba554bda1622b9c377e0b7ef820f11191f15b6.png?w=7501",
+      "origins": [
+        "img[srcset]"
+      ],
+      "method": "HEAD",
+      "status": 403,
+      "error": "HTTP Error 403: Forbidden",
+      "content_type": "text/plain; charset=UTF-8",
+      "content_length": "17",
+      "bytes_read": 0
+    },
+    {
+      "url": "https://oowindow.com/_assets/v11/29ba554bda1622b9c377e0b7ef820f11191f15b6.png?w=8119",
+      "origins": [
+        "img[srcset]"
+      ],
+      "method": "HEAD",
+      "status": 403,
+      "error": "HTTP Error 403: Forbidden",
+      "content_type": "text/plain; charset=UTF-8",
+      "content_length": "17",
+      "bytes_read": 0
+    },
+    {
+      "url": "https://oowindow.com/_assets/v11/29ba554bda1622b9c377e0b7ef820f11191f15b6.png?w=8226",
+      "origins": [
+        "img[srcset]"
+      ],
+      "method": "HEAD",
+      "status": 403,
+      "error": "HTTP Error 403: Forbidden",
+      "content_type": "text/plain; charset=UTF-8",
+      "content_length": "17",
+      "bytes_read": 0
+    },
+    {
+      "url": "https://oowindow.com/_assets/v11/42937e0064dbfe8829ff9e75bd6dc07c133c217a.png",
+      "origins": [
+        "img[src]",
+        "img[srcset]"
+      ],
+      "method": "HEAD",
+      "status": 403,
+      "error": "HTTP Error 403: Forbidden",
+      "content_type": "text/plain; charset=UTF-8",
+      "content_length": "17",
+      "bytes_read": 0
+    },
+    {
+      "url": "https://oowindow.com/_assets/v11/42937e0064dbfe8829ff9e75bd6dc07c133c217a.png?h=1024",
+      "origins": [
+        "img[srcset]"
+      ],
+      "method": "HEAD",
+      "status": 403,
+      "error": "HTTP Error 403: Forbidden",
+      "content_type": "text/plain; charset=UTF-8",
+      "content_length": "17",
+      "bytes_read": 0
+    },
+    {
+      "url": "https://oowindow.com/_assets/v11/42937e0064dbfe8829ff9e75bd6dc07c133c217a.png?h=1536",
+      "origins": [
+        "img[srcset]"
+      ],
+      "method": "HEAD",
+      "status": 403,
+      "error": "HTTP Error 403: Forbidden",
+      "content_type": "text/plain; charset=UTF-8",
+      "content_length": "17",
+      "bytes_read": 0
+    },
+    {
+      "url": "https://oowindow.com/_assets/v11/42937e0064dbfe8829ff9e75bd6dc07c133c217a.png?h=2048",
+      "origins": [
+        "img[srcset]"
+      ],
+      "method": "HEAD",
+      "status": 403,
+      "error": "HTTP Error 403: Forbidden",
+      "content_type": "text/plain; charset=UTF-8",
+      "content_length": "17",
+      "bytes_read": 0
+    },
+    {
+      "url": "https://oowindow.com/_assets/v11/42937e0064dbfe8829ff9e75bd6dc07c133c217a.png?h=2560",
+      "origins": [
+        "img[srcset]"
+      ],
+      "method": "HEAD",
+      "status": 403,
+      "error": "HTTP Error 403: Forbidden",
+      "content_type": "text/plain; charset=UTF-8",
+      "content_length": "17",
+      "bytes_read": 0
+    },
+    {
+      "url": "https://oowindow.com/_assets/v11/42937e0064dbfe8829ff9e75bd6dc07c133c217a.png?h=3072",
+      "origins": [
+        "img[srcset]"
+      ],
+      "method": "HEAD",
+      "status": 403,
+      "error": "HTTP Error 403: Forbidden",
+      "content_type": "text/plain; charset=UTF-8",
+      "content_length": "17",
+      "bytes_read": 0
+    },
+    {
+      "url": "https://oowindow.com/_assets/v11/42937e0064dbfe8829ff9e75bd6dc07c133c217a.png?h=3584",
+      "origins": [
+        "img[srcset]"
+      ],
+      "method": "HEAD",
+      "status": 403,
+      "error": "HTTP Error 403: Forbidden",
+      "content_type": "text/plain; charset=UTF-8",
+      "content_length": "17",
+      "bytes_read": 0
+    },
+    {
+      "url": "https://oowindow.com/_assets/v11/42937e0064dbfe8829ff9e75bd6dc07c133c217a.png?h=4096",
+      "origins": [
+        "img[srcset]"
+      ],
+      "method": "HEAD",
+      "status": 403,
+      "error": "HTTP Error 403: Forbidden",
+      "content_type": "text/plain; charset=UTF-8",
+      "content_length": "17",
+      "bytes_read": 0
+    },
+    {
+      "url": "https://oowindow.com/_assets/v11/42937e0064dbfe8829ff9e75bd6dc07c133c217a.png?h=512",
+      "origins": [
+        "img[srcset]"
+      ],
+      "method": "HEAD",
+      "status": 403,
+      "error": "HTTP Error 403: Forbidden",
+      "content_type": "text/plain; charset=UTF-8",
+      "content_length": "17",
+      "bytes_read": 0
+    },
+    {
+      "url": "https://oowindow.com/_assets/v11/6b862bf75b3c16494a2789b2ec88fd39c95e64ae.png",
+      "origins": [
+        "link[href]"
+      ],
+      "method": "HEAD",
+      "status": 403,
+      "error": "HTTP Error 403: Forbidden",
+      "content_type": "text/plain; charset=UTF-8",
+      "content_length": "17",
+      "bytes_read": 0
+    },
+    {
+      "url": "https://oowindow.com/_assets/v11/8aaf64566f4f9690783674d7311db6600db32c89.png",
+      "origins": [
+        "img[src]",
+        "img[srcset]"
+      ],
+      "method": "HEAD",
+      "status": 403,
+      "error": "HTTP Error 403: Forbidden",
+      "content_type": "text/plain; charset=UTF-8",
+      "content_length": "17",
+      "bytes_read": 0
+    },
+    {
+      "url": "https://oowindow.com/_assets/v11/8aaf64566f4f9690783674d7311db6600db32c89.png?h=1024",
+      "origins": [
+        "img[srcset]"
+      ],
+      "method": "HEAD",
+      "status": 403,
+      "error": "HTTP Error 403: Forbidden",
+      "content_type": "text/plain; charset=UTF-8",
+      "content_length": "17",
+      "bytes_read": 0
+    },
+    {
+      "url": "https://oowindow.com/_assets/v11/8aaf64566f4f9690783674d7311db6600db32c89.png?h=1536",
+      "origins": [
+        "img[srcset]"
+      ],
+      "method": "HEAD",
+      "status": 403,
+      "error": "HTTP Error 403: Forbidden",
+      "content_type": "text/plain; charset=UTF-8",
+      "content_length": "17",
+      "bytes_read": 0
+    },
+    {
+      "url": "https://oowindow.com/_assets/v11/8aaf64566f4f9690783674d7311db6600db32c89.png?h=2048",
+      "origins": [
+        "img[srcset]"
+      ],
+      "method": "HEAD",
+      "status": 403,
+      "error": "HTTP Error 403: Forbidden",
+      "content_type": "text/plain; charset=UTF-8",
+      "content_length": "17",
+      "bytes_read": 0
+    },
+    {
+      "url": "https://oowindow.com/_assets/v11/8aaf64566f4f9690783674d7311db6600db32c89.png?h=2560",
+      "origins": [
+        "img[srcset]"
+      ],
+      "method": "HEAD",
+      "status": 403,
+      "error": "HTTP Error 403: Forbidden",
+      "content_type": "text/plain; charset=UTF-8",
+      "content_length": "17",
+      "bytes_read": 0
+    },
+    {
+      "url": "https://oowindow.com/_assets/v11/8aaf64566f4f9690783674d7311db6600db32c89.png?h=3072",
+      "origins": [
+        "img[srcset]"
+      ],
+      "method": "HEAD",
+      "status": 403,
+      "error": "HTTP Error 403: Forbidden",
+      "content_type": "text/plain; charset=UTF-8",
+      "content_length": "17",
+      "bytes_read": 0
+    },
+    {
+      "url": "https://oowindow.com/_assets/v11/8aaf64566f4f9690783674d7311db6600db32c89.png?h=3584",
+      "origins": [
+        "img[srcset]"
+      ],
+      "method": "HEAD",
+      "status": 403,
+      "error": "HTTP Error 403: Forbidden",
+      "content_type": "text/plain; charset=UTF-8",
+      "content_length": "17",
+      "bytes_read": 0
+    },
+    {
+      "url": "https://oowindow.com/_assets/v11/8aaf64566f4f9690783674d7311db6600db32c89.png?h=4096",
+      "origins": [
+        "img[srcset]"
+      ],
+      "method": "HEAD",
+      "status": 403,
+      "error": "HTTP Error 403: Forbidden",
+      "content_type": "text/plain; charset=UTF-8",
+      "content_length": "17",
+      "bytes_read": 0
+    },
+    {
+      "url": "https://oowindow.com/_assets/v11/8aaf64566f4f9690783674d7311db6600db32c89.png?h=512",
+      "origins": [
+        "img[srcset]"
+      ],
+      "method": "HEAD",
+      "status": 403,
+      "error": "HTTP Error 403: Forbidden",
+      "content_type": "text/plain; charset=UTF-8",
+      "content_length": "17",
+      "bytes_read": 0
+    },
+    {
+      "url": "https://oowindow.com/_assets/v11/8e78f9ff237dfd44de3afb6532e67c6aa54a7056.svg",
+      "origins": [
+        "img[src]"
+      ],
+      "method": "HEAD",
+      "status": 403,
+      "error": "HTTP Error 403: Forbidden",
+      "content_type": "text/plain; charset=UTF-8",
+      "content_length": "17",
+      "bytes_read": 0
+    },
+    {
+      "url": "https://oowindow.com/_assets/v11/c84f9b542a0ae7e3f89483d43ce19ae248ab30bb.svg",
+      "origins": [
+        "img[src]"
+      ],
+      "method": "HEAD",
+      "status": 403,
+      "error": "HTTP Error 403: Forbidden",
+      "content_type": "text/plain; charset=UTF-8",
+      "content_length": "17",
+      "bytes_read": 0
+    },
+    {
+      "url": "https://oowindow.com/_assets/v11/f4daaf92131343f45a8c62fb6a646d4c32d89c24.png",
+      "origins": [
+        "img[src]",
+        "img[srcset]"
+      ],
+      "method": "HEAD",
+      "status": 403,
+      "error": "HTTP Error 403: Forbidden",
+      "content_type": "text/plain; charset=UTF-8",
+      "content_length": "17",
+      "bytes_read": 0
+    },
+    {
+      "url": "https://oowindow.com/_assets/v11/f4daaf92131343f45a8c62fb6a646d4c32d89c24.png?h=1228",
+      "origins": [
+        "img[srcset]"
+      ],
+      "method": "HEAD",
+      "status": 403,
+      "error": "HTTP Error 403: Forbidden",
+      "content_type": "text/plain; charset=UTF-8",
+      "content_length": "17",
+      "bytes_read": 0
+    },
+    {
+      "url": "https://oowindow.com/_assets/v11/f4daaf92131343f45a8c62fb6a646d4c32d89c24.png?h=1232",
+      "origins": [
+        "img[srcset]"
+      ],
+      "method": "HEAD",
+      "status": 403,
+      "error": "HTTP Error 403: Forbidden",
+      "content_type": "text/plain; charset=UTF-8",
+      "content_length": "17",
+      "bytes_read": 0
+    },
+    {
+      "url": "https://oowindow.com/_assets/v11/f4daaf92131343f45a8c62fb6a646d4c32d89c24.png?h=1842",
+      "origins": [
+        "img[srcset]"
+      ],
+      "method": "HEAD",
+      "status": 403,
+      "error": "HTTP Error 403: Forbidden",
+      "content_type": "text/plain; charset=UTF-8",
+      "content_length": "17",
+      "bytes_read": 0
+    },
+    {
+      "url": "https://oowindow.com/_assets/v11/f4daaf92131343f45a8c62fb6a646d4c32d89c24.png?h=1847",
+      "origins": [
+        "img[srcset]"
+      ],
+      "method": "HEAD",
+      "status": 403,
+      "error": "HTTP Error 403: Forbidden",
+      "content_type": "text/plain; charset=UTF-8",
+      "content_length": "17",
+      "bytes_read": 0
+    },
+    {
+      "url": "https://oowindow.com/_assets/v11/f4daaf92131343f45a8c62fb6a646d4c32d89c24.png?h=2456",
+      "origins": [
+        "img[srcset]"
+      ],
+      "method": "HEAD",
+      "status": 403,
+      "error": "HTTP Error 403: Forbidden",
+      "content_type": "text/plain; charset=UTF-8",
+      "content_length": "17",
+      "bytes_read": 0
+    },
+    {
+      "url": "https://oowindow.com/_assets/v11/f4daaf92131343f45a8c62fb6a646d4c32d89c24.png?h=3070",
+      "origins": [
+        "img[srcset]"
+      ],
+      "method": "HEAD",
+      "status": 403,
+      "error": "HTTP Error 403: Forbidden",
+      "content_type": "text/plain; charset=UTF-8",
+      "content_length": "17",
+      "bytes_read": 0
+    },
+    {
+      "url": "https://oowindow.com/_assets/v11/f4daaf92131343f45a8c62fb6a646d4c32d89c24.png?h=3684",
+      "origins": [
+        "img[srcset]"
+      ],
+      "method": "HEAD",
+      "status": 403,
+      "error": "HTTP Error 403: Forbidden",
+      "content_type": "text/plain; charset=UTF-8",
+      "content_length": "17",
+      "bytes_read": 0
+    },
+    {
+      "url": "https://oowindow.com/_assets/v11/f4daaf92131343f45a8c62fb6a646d4c32d89c24.png?h=4298",
+      "origins": [
+        "img[srcset]"
+      ],
+      "method": "HEAD",
+      "status": 403,
+      "error": "HTTP Error 403: Forbidden",
+      "content_type": "text/plain; charset=UTF-8",
+      "content_length": "17",
+      "bytes_read": 0
+    },
+    {
+      "url": "https://oowindow.com/_assets/v11/f4daaf92131343f45a8c62fb6a646d4c32d89c24.png?h=4912",
+      "origins": [
+        "img[srcset]"
+      ],
+      "method": "HEAD",
+      "status": 403,
+      "error": "HTTP Error 403: Forbidden",
+      "content_type": "text/plain; charset=UTF-8",
+      "content_length": "17",
+      "bytes_read": 0
+    },
+    {
+      "url": "https://oowindow.com/_assets/v11/f4daaf92131343f45a8c62fb6a646d4c32d89c24.png?h=614",
+      "origins": [
+        "img[srcset]"
+      ],
+      "method": "HEAD",
+      "status": 403,
+      "error": "HTTP Error 403: Forbidden",
+      "content_type": "text/plain; charset=UTF-8",
+      "content_length": "17",
+      "bytes_read": 0
+    },
+    {
+      "url": "https://oowindow.com/_assets/v11/f5a5aaf9bc1a86b26031e9b746894852d111ba04.png",
+      "origins": [
+        "img[src]",
+        "img[srcset]"
+      ],
+      "method": "HEAD",
+      "status": 403,
+      "error": "HTTP Error 403: Forbidden",
+      "content_type": "text/plain; charset=UTF-8",
+      "content_length": "17",
+      "bytes_read": 0
+    },
+    {
+      "url": "https://oowindow.com/_assets/v11/f5a5aaf9bc1a86b26031e9b746894852d111ba04.png?h=1024",
+      "origins": [
+        "img[srcset]"
+      ],
+      "method": "HEAD",
+      "status": 403,
+      "error": "HTTP Error 403: Forbidden",
+      "content_type": "text/plain; charset=UTF-8",
+      "content_length": "17",
+      "bytes_read": 0
+    },
+    {
+      "url": "https://oowindow.com/_assets/v11/f5a5aaf9bc1a86b26031e9b746894852d111ba04.png?h=1536",
+      "origins": [
+        "img[srcset]"
+      ],
+      "method": "HEAD",
+      "status": 403,
+      "error": "HTTP Error 403: Forbidden",
+      "content_type": "text/plain; charset=UTF-8",
+      "content_length": "17",
+      "bytes_read": 0
+    },
+    {
+      "url": "https://oowindow.com/_assets/v11/f5a5aaf9bc1a86b26031e9b746894852d111ba04.png?h=2048",
+      "origins": [
+        "img[srcset]"
+      ],
+      "method": "HEAD",
+      "status": 403,
+      "error": "HTTP Error 403: Forbidden",
+      "content_type": "text/plain; charset=UTF-8",
+      "content_length": "17",
+      "bytes_read": 0
+    },
+    {
+      "url": "https://oowindow.com/_assets/v11/f5a5aaf9bc1a86b26031e9b746894852d111ba04.png?h=2560",
+      "origins": [
+        "img[srcset]"
+      ],
+      "method": "HEAD",
+      "status": 403,
+      "error": "HTTP Error 403: Forbidden",
+      "content_type": "text/plain; charset=UTF-8",
+      "content_length": "17",
+      "bytes_read": 0
+    },
+    {
+      "url": "https://oowindow.com/_assets/v11/f5a5aaf9bc1a86b26031e9b746894852d111ba04.png?h=3072",
+      "origins": [
+        "img[srcset]"
+      ],
+      "method": "HEAD",
+      "status": 403,
+      "error": "HTTP Error 403: Forbidden",
+      "content_type": "text/plain; charset=UTF-8",
+      "content_length": "17",
+      "bytes_read": 0
+    },
+    {
+      "url": "https://oowindow.com/_assets/v11/f5a5aaf9bc1a86b26031e9b746894852d111ba04.png?h=3584",
+      "origins": [
+        "img[srcset]"
+      ],
+      "method": "HEAD",
+      "status": 403,
+      "error": "HTTP Error 403: Forbidden",
+      "content_type": "text/plain; charset=UTF-8",
+      "content_length": "17",
+      "bytes_read": 0
+    },
+    {
+      "url": "https://oowindow.com/_assets/v11/f5a5aaf9bc1a86b26031e9b746894852d111ba04.png?h=4096",
+      "origins": [
+        "img[srcset]"
+      ],
+      "method": "HEAD",
+      "status": 403,
+      "error": "HTTP Error 403: Forbidden",
+      "content_type": "text/plain; charset=UTF-8",
+      "content_length": "17",
+      "bytes_read": 0
+    },
+    {
+      "url": "https://oowindow.com/_assets/v11/f5a5aaf9bc1a86b26031e9b746894852d111ba04.png?h=512",
+      "origins": [
+        "img[srcset]"
+      ],
+      "method": "HEAD",
+      "status": 403,
+      "error": "HTTP Error 403: Forbidden",
+      "content_type": "text/plain; charset=UTF-8",
+      "content_length": "17",
+      "bytes_read": 0
+    },
+    {
+      "url": "https://oowindow.com/_assets/v11/ffe594c24dbeb8bd42a9e65a2be7827f5d190daf.png",
+      "origins": [
+        "img[src]",
+        "img[srcset]"
+      ],
+      "method": "HEAD",
+      "status": 403,
+      "error": "HTTP Error 403: Forbidden",
+      "content_type": "text/plain; charset=UTF-8",
+      "content_length": "17",
+      "bytes_read": 0
+    },
+    {
+      "url": "https://oowindow.com/_assets/v11/ffe594c24dbeb8bd42a9e65a2be7827f5d190daf.png?w=1024",
+      "origins": [
+        "img[srcset]"
+      ],
+      "method": "HEAD",
+      "status": 403,
+      "error": "HTTP Error 403: Forbidden",
+      "content_type": "text/plain; charset=UTF-8",
+      "content_length": "17",
+      "bytes_read": 0
+    },
+    {
+      "url": "https://oowindow.com/_assets/v11/ffe594c24dbeb8bd42a9e65a2be7827f5d190daf.png?w=1536",
+      "origins": [
+        "img[srcset]"
+      ],
+      "method": "HEAD",
+      "status": 403,
+      "error": "HTTP Error 403: Forbidden",
+      "content_type": "text/plain; charset=UTF-8",
+      "content_length": "17",
+      "bytes_read": 0
+    },
+    {
+      "url": "https://oowindow.com/_assets/v11/ffe594c24dbeb8bd42a9e65a2be7827f5d190daf.png?w=2048",
+      "origins": [
+        "img[srcset]"
+      ],
+      "method": "HEAD",
+      "status": 403,
+      "error": "HTTP Error 403: Forbidden",
+      "content_type": "text/plain; charset=UTF-8",
+      "content_length": "17",
+      "bytes_read": 0
+    },
+    {
+      "url": "https://oowindow.com/_assets/v11/ffe594c24dbeb8bd42a9e65a2be7827f5d190daf.png?w=256",
+      "origins": [
+        "img[srcset]"
+      ],
+      "method": "HEAD",
+      "status": 403,
+      "error": "HTTP Error 403: Forbidden",
+      "content_type": "text/plain; charset=UTF-8",
+      "content_length": "17",
+      "bytes_read": 0
+    },
+    {
+      "url": "https://oowindow.com/_assets/v11/ffe594c24dbeb8bd42a9e65a2be7827f5d190daf.png?w=2560",
+      "origins": [
+        "img[srcset]"
+      ],
+      "method": "HEAD",
+      "status": 403,
+      "error": "HTTP Error 403: Forbidden",
+      "content_type": "text/plain; charset=UTF-8",
+      "content_length": "17",
+      "bytes_read": 0
+    },
+    {
+      "url": "https://oowindow.com/_assets/v11/ffe594c24dbeb8bd42a9e65a2be7827f5d190daf.png?w=3072",
+      "origins": [
+        "img[srcset]"
+      ],
+      "method": "HEAD",
+      "status": 403,
+      "error": "HTTP Error 403: Forbidden",
+      "content_type": "text/plain; charset=UTF-8",
+      "content_length": "17",
+      "bytes_read": 0
+    },
+    {
+      "url": "https://oowindow.com/_assets/v11/ffe594c24dbeb8bd42a9e65a2be7827f5d190daf.png?w=3584",
+      "origins": [
+        "img[srcset]"
+      ],
+      "method": "HEAD",
+      "status": 403,
+      "error": "HTTP Error 403: Forbidden",
+      "content_type": "text/plain; charset=UTF-8",
+      "content_length": "17",
+      "bytes_read": 0
+    },
+    {
+      "url": "https://oowindow.com/_assets/v11/ffe594c24dbeb8bd42a9e65a2be7827f5d190daf.png?w=4096",
+      "origins": [
+        "img[srcset]"
+      ],
+      "method": "HEAD",
+      "status": 403,
+      "error": "HTTP Error 403: Forbidden",
+      "content_type": "text/plain; charset=UTF-8",
+      "content_length": "17",
+      "bytes_read": 0
+    },
+    {
+      "url": "https://oowindow.com/_assets/v11/ffe594c24dbeb8bd42a9e65a2be7827f5d190daf.png?w=512",
+      "origins": [
+        "img[srcset]"
+      ],
+      "method": "HEAD",
+      "status": 403,
+      "error": "HTTP Error 403: Forbidden",
+      "content_type": "text/plain; charset=UTF-8",
+      "content_length": "17",
+      "bytes_read": 0
+    },
+    {
+      "url": "https://oowindow.com/_json/dabe0296-ab6a-443d-be90-a271db06052e/jahlil-nzinga.json",
+      "origins": [
+        "link[href]"
+      ],
+      "method": "GET",
+      "status": 403,
+      "error": "HTTP Error 403: Forbidden",
+      "content_type": "text/plain; charset=UTF-8",
+      "content_length": "17",
+      "bytes_read": 0
+    },
+    {
+      "url": "https://oowindow.com/_runtimes/sites-runtime.ba63182f53b76eb29aeceb192dfa7fc6c550cbded9ac5d4042dbed30f2f47464.js",
+      "origins": [
+        "link[href]"
+      ],
+      "method": "GET",
+      "status": 403,
+      "error": "HTTP Error 403: Forbidden",
+      "content_type": "text/plain; charset=UTF-8",
+      "content_length": "17",
+      "bytes_read": 0
+    },
+    {
+      "url": "https://oowindow.com/_woff/v2/GeistMono_wght__1/GeistMono_wght__1-english.woff2",
+      "origins": [
+        "inline CSS url()"
+      ],
+      "method": "GET",
+      "status": 403,
+      "error": "HTTP Error 403: Forbidden",
+      "content_type": "text/plain; charset=UTF-8",
+      "content_length": "17",
+      "bytes_read": 0
+    },
+    {
+      "url": "https://oowindow.com/_woff/v2/GeistMono_wght__1/GeistMono_wght__1-latin-extended-a.woff2",
+      "origins": [
+        "inline CSS url()"
+      ],
+      "method": "GET",
+      "status": 403,
+      "error": "HTTP Error 403: Forbidden",
+      "content_type": "text/plain; charset=UTF-8",
+      "content_length": "17",
+      "bytes_read": 0
+    },
+    {
+      "url": "https://oowindow.com/_woff/v2/GeistMono_wght__1/GeistMono_wght__1-latin-extended-additional.woff2",
+      "origins": [
+        "inline CSS url()"
+      ],
+      "method": "GET",
+      "status": 403,
+      "error": "HTTP Error 403: Forbidden",
+      "content_type": "text/plain; charset=UTF-8",
+      "content_length": "17",
+      "bytes_read": 0
+    },
+    {
+      "url": "https://oowindow.com/_woff/v2/GeistMono_wght__1/GeistMono_wght__1-latin-extended-b.woff2",
+      "origins": [
+        "inline CSS url()"
+      ],
+      "method": "GET",
+      "status": 403,
+      "error": "HTTP Error 403: Forbidden",
+      "content_type": "text/plain; charset=UTF-8",
+      "content_length": "17",
+      "bytes_read": 0
+    },
+    {
+      "url": "https://oowindow.com/_woff/v2/GeistMono_wght__1/GeistMono_wght__1-rest-latin.woff2",
+      "origins": [
+        "inline CSS url()"
+      ],
+      "method": "GET",
+      "status": 403,
+      "error": "HTTP Error 403: Forbidden",
+      "content_type": "text/plain; charset=UTF-8",
+      "content_length": "17",
+      "bytes_read": 0
+    },
+    {
+      "url": "https://oowindow.com/_woff/v2/GeistMono_wght__1/GeistMono_wght__1-rest.woff2",
+      "origins": [
+        "inline CSS url()"
+      ],
+      "method": "GET",
+      "status": 403,
+      "error": "HTTP Error 403: Forbidden",
+      "content_type": "text/plain; charset=UTF-8",
+      "content_length": "17",
+      "bytes_read": 0
+    },
+    {
+      "url": "https://oowindow.com/_woff/v2/Inter_1/Inter_1-english.woff2",
+      "origins": [
+        "inline CSS url()"
+      ],
+      "method": "GET",
+      "status": 403,
+      "error": "HTTP Error 403: Forbidden",
+      "content_type": "text/plain; charset=UTF-8",
+      "content_length": "17",
+      "bytes_read": 0
+    },
+    {
+      "url": "https://oowindow.com/_woff/v2/Inter_1/Inter_1-latin-extended-a.woff2",
+      "origins": [
+        "inline CSS url()"
+      ],
+      "method": "GET",
+      "status": 403,
+      "error": "HTTP Error 403: Forbidden",
+      "content_type": "text/plain; charset=UTF-8",
+      "content_length": "17",
+      "bytes_read": 0
+    },
+    {
+      "url": "https://oowindow.com/_woff/v2/Inter_1/Inter_1-latin-extended-additional.woff2",
+      "origins": [
+        "inline CSS url()"
+      ],
+      "method": "GET",
+      "status": 403,
+      "error": "HTTP Error 403: Forbidden",
+      "content_type": "text/plain; charset=UTF-8",
+      "content_length": "17",
+      "bytes_read": 0
+    },
+    {
+      "url": "https://oowindow.com/_woff/v2/Inter_1/Inter_1-latin-extended-b.woff2",
+      "origins": [
+        "inline CSS url()"
+      ],
+      "method": "GET",
+      "status": 403,
+      "error": "HTTP Error 403: Forbidden",
+      "content_type": "text/plain; charset=UTF-8",
+      "content_length": "17",
+      "bytes_read": 0
+    },
+    {
+      "url": "https://oowindow.com/_woff/v2/Inter_1/Inter_1-rest-latin.woff2",
+      "origins": [
+        "inline CSS url()"
+      ],
+      "method": "GET",
+      "status": 403,
+      "error": "HTTP Error 403: Forbidden",
+      "content_type": "text/plain; charset=UTF-8",
+      "content_length": "17",
+      "bytes_read": 0
+    },
+    {
+      "url": "https://oowindow.com/_woff/v2/Inter_1/Inter_1-rest.woff2",
+      "origins": [
+        "inline CSS url()"
+      ],
+      "method": "GET",
+      "status": 403,
+      "error": "HTTP Error 403: Forbidden",
+      "content_type": "text/plain; charset=UTF-8",
+      "content_length": "17",
+      "bytes_read": 0
+    },
+    {
+      "url": "https://oowindow.com/_woff/v2/JetBrainsMono_wght__1/JetBrainsMono_wght__1-english.woff2",
+      "origins": [
+        "inline CSS url()"
+      ],
+      "method": "GET",
+      "status": 403,
+      "error": "HTTP Error 403: Forbidden",
+      "content_type": "text/plain; charset=UTF-8",
+      "content_length": "17",
+      "bytes_read": 0
+    },
+    {
+      "url": "https://oowindow.com/_woff/v2/JetBrainsMono_wght__1/JetBrainsMono_wght__1-latin-extended-a.woff2",
+      "origins": [
+        "inline CSS url()"
+      ],
+      "method": "GET",
+      "status": 403,
+      "error": "HTTP Error 403: Forbidden",
+      "content_type": "text/plain; charset=UTF-8",
+      "content_length": "17",
+      "bytes_read": 0
+    },
+    {
+      "url": "https://oowindow.com/_woff/v2/JetBrainsMono_wght__1/JetBrainsMono_wght__1-latin-extended-additional.woff2",
+      "origins": [
+        "inline CSS url()"
+      ],
+      "method": "GET",
+      "status": 403,
+      "error": "HTTP Error 403: Forbidden",
+      "content_type": "text/plain; charset=UTF-8",
+      "content_length": "17",
+      "bytes_read": 0
+    },
+    {
+      "url": "https://oowindow.com/_woff/v2/JetBrainsMono_wght__1/JetBrainsMono_wght__1-latin-extended-b.woff2",
+      "origins": [
+        "inline CSS url()"
+      ],
+      "method": "GET",
+      "status": 403,
+      "error": "HTTP Error 403: Forbidden",
+      "content_type": "text/plain; charset=UTF-8",
+      "content_length": "17",
+      "bytes_read": 0
+    },
+    {
+      "url": "https://oowindow.com/_woff/v2/JetBrainsMono_wght__1/JetBrainsMono_wght__1-rest-latin.woff2",
+      "origins": [
+        "inline CSS url()"
+      ],
+      "method": "GET",
+      "status": 403,
+      "error": "HTTP Error 403: Forbidden",
+      "content_type": "text/plain; charset=UTF-8",
+      "content_length": "17",
+      "bytes_read": 0
+    },
+    {
+      "url": "https://oowindow.com/_woff/v2/JetBrainsMono_wght__1/JetBrainsMono_wght__1-rest.woff2",
+      "origins": [
+        "inline CSS url()"
+      ],
+      "method": "GET",
+      "status": 403,
+      "error": "HTTP Error 403: Forbidden",
+      "content_type": "text/plain; charset=UTF-8",
+      "content_length": "17",
+      "bytes_read": 0
+    },
+    {
+      "url": "https://oowindow.com/_woff/v2/RobotoCondensed-Italic_wght__1/RobotoCondensed-Italic_wght__1-english.woff2",
+      "origins": [
+        "inline CSS url()"
+      ],
+      "method": "GET",
+      "status": 403,
+      "error": "HTTP Error 403: Forbidden",
+      "content_type": "text/plain; charset=UTF-8",
+      "content_length": "17",
+      "bytes_read": 0
+    },
+    {
+      "url": "https://oowindow.com/_woff/v2/RobotoCondensed-Italic_wght__1/RobotoCondensed-Italic_wght__1-latin-extended-a.woff2",
+      "origins": [
+        "inline CSS url()"
+      ],
+      "method": "GET",
+      "status": 403,
+      "error": "HTTP Error 403: Forbidden",
+      "content_type": "text/plain; charset=UTF-8",
+      "content_length": "17",
+      "bytes_read": 0
+    },
+    {
+      "url": "https://oowindow.com/_woff/v2/RobotoCondensed-Italic_wght__1/RobotoCondensed-Italic_wght__1-latin-extended-additional.woff2",
+      "origins": [
+        "inline CSS url()"
+      ],
+      "method": "GET",
+      "status": 403,
+      "error": "HTTP Error 403: Forbidden",
+      "content_type": "text/plain; charset=UTF-8",
+      "content_length": "17",
+      "bytes_read": 0
+    },
+    {
+      "url": "https://oowindow.com/_woff/v2/RobotoCondensed-Italic_wght__1/RobotoCondensed-Italic_wght__1-latin-extended-b.woff2",
+      "origins": [
+        "inline CSS url()"
+      ],
+      "method": "GET",
+      "status": 403,
+      "error": "HTTP Error 403: Forbidden",
+      "content_type": "text/plain; charset=UTF-8",
+      "content_length": "17",
+      "bytes_read": 0
+    },
+    {
+      "url": "https://oowindow.com/_woff/v2/RobotoCondensed-Italic_wght__1/RobotoCondensed-Italic_wght__1-rest-latin.woff2",
+      "origins": [
+        "inline CSS url()"
+      ],
+      "method": "GET",
+      "status": 403,
+      "error": "HTTP Error 403: Forbidden",
+      "content_type": "text/plain; charset=UTF-8",
+      "content_length": "17",
+      "bytes_read": 0
+    },
+    {
+      "url": "https://oowindow.com/_woff/v2/RobotoCondensed-Italic_wght__1/RobotoCondensed-Italic_wght__1-rest.woff2",
+      "origins": [
+        "inline CSS url()"
+      ],
+      "method": "GET",
+      "status": 403,
+      "error": "HTTP Error 403: Forbidden",
+      "content_type": "text/plain; charset=UTF-8",
+      "content_length": "17",
+      "bytes_read": 0
+    },
+    {
+      "url": "https://oowindow.com/jahlil-nzinga",
+      "origins": [
+        "reference page"
+      ],
+      "method": "GET",
+      "status": 403,
+      "error": "HTTP Error 403: Forbidden",
+      "content_type": "text/plain; charset=UTF-8",
+      "content_length": "17",
+      "bytes_read": 0
+    },
+    {
+      "url": "https://static.klaviyo.com/onsite/js/Ujfqzm/klaviyo.js",
+      "origins": [
+        "inline script/metadata URL",
+        "script[src]"
+      ],
+      "method": "GET",
+      "status": 200,
+      "content_type": "application/javascript; charset=UTF-8",
+      "content_length": "13158",
+      "bytes_read": 13158,
+      "body_truncated": false
+    },
+    {
+      "url": "https://www.googletagmanager.com/gtag/js?id=G-Z0L31HTDLH",
+      "origins": [
+        "inline script/metadata URL",
+        "script[src]"
+      ],
+      "method": "GET",
+      "status": 200,
+      "content_type": "application/javascript; charset=UTF-8",
+      "content_length": null,
+      "bytes_read": 541592,
+      "body_truncated": false
+    },
+    {
+      "url": "https://fonts.googleapis.com/css2?family=Geist+Mono:wght@300;400;500;600&display=swap",
+      "origins": [
+        "official same-family alternative stylesheet"
+      ],
+      "method": "GET",
+      "status": 200,
+      "content_type": "text/css; charset=utf-8",
+      "content_length": "0",
+      "bytes_read": 904
+    },
+    {
+      "url": "https://fonts.googleapis.com/css2?family=Geist+Mono:wght@300;400;500;600&display=swap&text=%20%21%22%23%24%25%26%27%28%29%2A%2B%2C-./0123456789%3A%3B%3C%3D%3E%3F%40ABCDEFGHIJKLMNOPQRSTUVWXYZ%5B%5C%5D%5E_%60abcdefghijklmnopqrstuvwxyz%7B%7C%7D~",
+      "origins": [
+        "approved official same-family ASCII-subset stylesheet"
+      ],
+      "method": "GET",
+      "status": 200,
+      "content_type": "text/css; charset=utf-8",
+      "bytes_read": 1520
+    }
+  ],
+  "font_alternatives": [
+    {
+      "url": "https://fonts.gstatic.com/l/font?kit=or3nQ6H-1_WfwkMZI_qYJrUPwBvHpGkxSMfSQ5d57wB_FMejXevPA8PAflCuhfKxnzZe_qsLmPZod9LwuZY1YeJR7Ej0p0NmVZJew508YYa5nZdiKMk7gxmeHIXOiLHE7Fzov9rtvR2jbCZhmIZGLFJl&skey=f2030a904b731103&v=v6",
+      "method": "GET",
+      "origin": "approved same-family alternative, U+0020-U+007E ASCII subset",
+      "weights": [
+        300,
+        400,
+        500,
+        600
+      ],
+      "status": 200,
+      "content_type": "font/woff2",
+      "bytes_read": 15312,
+      "signature": "wOF2",
+      "saved_file": "GeistMono-ascii.woff2",
+      "sha256": "0c14ded1b6520ea5a5443bd7d82a594c86a9155eb305a1442e67be1895a167ba",
+      "font_metadata_note": "No module named brotli"
+    }
+  ],
+  "source_css_tokens": {
+    "css-g6ekli": "display: flex; flex-direction: column; align-items: flex-end; gap: 16px; position: relative; padding: 40px 80px;",
+    "css-z8tw7y": "position: relative; flex-shrink: 0; display: flex; align-items: center; gap: 64px;",
+    "css-m2k6rt": "aspect-ratio: 1120/597.343322753906; align-content: stretch;",
+    "css-8i7mxr": "position: relative; flex: 1 0 0; padding-top: 40px; padding-bottom: 40px; display: flex; flex-direction: column; align-items: flex-start;",
+    "css-a8cjdg": "position: relative; flex-shrink: 0; display: flex; flex-direction: column; align-items: flex-start; gap: 32px;",
+    "css-a8ckre": "position: relative; flex-shrink: 0; display: flex; flex-direction: column; align-items: flex-start; gap: 16px;",
+    "css-n8r97t": "position: relative; flex-shrink: 0; display: flex; flex-direction: column; align-items: flex-start; gap: 8px;",
+    "css-s15xge": "font-family: \"Geist Mono:Light\",sans-serif; word-break: break-word; font-weight: 300; font-size: 48px; letter-spacing: -1.92px; line-height: 0.96;",
+    "css-e71wxw": "font-family: \"Geist Mono:SemiBold\",sans-serif; word-break: break-word; font-weight: 600; text-transform: uppercase; font-size: 18px; letter-spacing: -0.54px; line-height: 1.1;",
+    "css-rvkdnm": "font-family: \"Geist Mono:Regular\",sans-serif; word-break: break-word; font-weight: 400; font-size: 14px; letter-spacing: 0px; line-height: 0;",
+    "css-korqih": "font-family: \"Geist Mono:Regular\",sans-serif; word-break: break-word; font-weight: 400; font-size: 10px; letter-spacing: -0.2px; line-height: 0;",
+    "css-g1eix3": "font-family: \"Geist Mono:Medium\",sans-serif; word-break: break-word; font-weight: 500; text-transform: uppercase; font-size: 12px; letter-spacing: -0.36px; line-height: 0; white-space: nowrap;",
+    "css-xjoob6": "position: relative; flex-shrink: 0; display: flex; align-items: flex-start; border-radius: 100px; padding: 4px 8px;",
+    "css-nszjal": "border-style: solid; border-color: #060; border-top-width: 1px; border-bottom-width: 1px; border-left-width: 1px; border-right-width: 1px; position: absolute; border-radius: 100px;",
+    "css-molyu0": "font-variation-settings: normal; color: #060; -webkit-text-fill-color: #060; --letter-spacing: -0.36px;",
+    "css-ebggn2": "position: relative; flex-shrink: 0; display: flex; flex-direction: column; align-items: flex-start; padding: 64px 220px;",
+    "css-fnlft5": "position: relative; flex-shrink: 0; display: flex; flex-direction: column; align-items: center; padding: 64px 220px;",
+    "css-x8llx6": "font-family: \"Geist Mono:Light\",sans-serif; word-break: break-word; font-weight: 300; font-size: 48px; letter-spacing: -1.92px; text-align: center; line-height: 0.96; text-indent: calc(0px - 0.45 * 48px);",
+    "css-wdx4m5": "font-family: \"Geist Mono:Medium\",sans-serif; word-break: break-word; font-weight: 500; text-transform: uppercase; font-size: 24px; letter-spacing: -0.72px; text-align: center; line-height: 0; white-space: nowrap;",
+    "css-bf6f3s": "width: 368px; height: 459px;",
+    "css-u1a1nr": "position: relative; flex-shrink: 0; display: flex; flex-direction: column; align-items: center; gap: 8px; padding: 30px 80px;",
+    "css-q9fot2": "display: flex; flex-direction: column; align-items: flex-start; position: relative; padding: 64px 140px;",
+    "css-w12g0g": "display: flex; flex-direction: column; justify-content: center; align-items: flex-end; gap: 16px; position: relative; padding: 40px;",
+    "css-sb2wck": "width: 348px; height: 394px;",
+    "css-1xnc0a": "font-family: \"Geist Mono:Light\",sans-serif; word-break: break-word; font-weight: 300; font-size: 32px; letter-spacing: 0px; line-height: 0.96;",
+    "css-4e8fl": "display: flex; flex-direction: column; align-items: flex-start; gap: 32px; position: relative; padding: 40px 20px;",
+    "css-7861lw": "display: flex; flex-direction: column; align-items: flex-start; position: relative; padding: 200px 20px;"
+  },
+  "breakpoints": {
+    "mobile": "<800px",
+    "tablet": "800-1279px",
+    "desktop": ">=1280px"
+  },
+  "source_typography": {
+    "family": "Geist Mono",
+    "desktop_title": {
+      "size": 48,
+      "weight": 300,
+      "line_height": 0.96,
+      "letter_spacing": -1.92
+    },
+    "tablet_mobile_title": {
+      "size": 32,
+      "weight": 300,
+      "line_height": 0.96,
+      "letter_spacing": 0
+    },
+    "body": {
+      "size": 14,
+      "weight": 400,
+      "line_height": 1.2
+    },
+    "date": {
+      "size": 18,
+      "weight": 600,
+      "line_height": 1.1,
+      "letter_spacing": -0.54
+    },
+    "metadata": {
+      "size": 10,
+      "weight": 400,
+      "line_height": 1.2,
+      "letter_spacing": -0.2
+    }
+  },
+  "source_palette": {
+    "background": "#fff",
+    "primary": "#121212",
+    "body": "#000",
+    "accent": "#060",
+    "divider": "#e0e0e0"
+  },
+  "source_section_order": [
+    "Header and breadcrumb",
+    "Exhibition summary left / cropped hero artwork right",
+    "Two-paragraph artist introduction",
+    "Three artworks with captions",
+    "Large quote and attribution",
+    "Three detail images",
+    "Descriptive artwork text",
+    "Visit locations",
+    "Footer"
+  ],
+  "parent_browser_observation": {
+    "viewport": [
+      1180,
+      757
+    ],
+    "title_size": 32,
+    "left_column_x": 40,
+    "left_column_width": 673,
+    "image_x": 767,
+    "image_width": 344,
+    "column_ratio": "approximately 2:1; verified by root browser, distinct from uploaded SSR class declarations"
+  },
+  "limitations": [
+    "Public reference/assets shell requests may return403 even though root browser renders page; statuses recorded individually.",
+    "Image HEAD requests establish availability/type/declared size without downloading large binary bodies.",
+    "Same-family Google Fonts alternative, when saved, is not claimed byte-identical to the Figma font.",
+    "Bundled GeistMono-ascii.woff2 is an approved official same-family substitute limited to printable ASCII; non-ASCII symbols fall back. It is not byte-identical to inaccessible reference Figma font."
+  ],
+  "official_google_font_subset_css": "@font-face {\n  font-family: 'Geist Mono';\n  font-style: normal;\n  font-weight: 300;\n  font-display: swap;\n  src: url(https://fonts.gstatic.com/l/font?kit=or3nQ6H-1_WfwkMZI_qYJrUPwBvHpGkxSMfSQ5d57wB_FMejXevPA8PAflCuhfKxnzZe_qsLmPZod9LwuZY1YeJR7Ej0p0NmVZJew508YYa5nZdiKMk7gxmeHIXOiLHE7Fzov9rtvR2jbCZhmIZGLFJl&skey=f2030a904b731103&v=v6) format('woff2');\n  unicode-range: U+20-7e;\n}\n@font-face {\n  font-family: 'Geist Mono';\n  font-style: normal;\n  font-weight: 400;\n  font-display: swap;\n  src: url(https://fonts.gstatic.com/l/font?kit=or3nQ6H-1_WfwkMZI_qYJrUPwBvHpGkxSMfSQ5d57wB_FMejXevPA8PAflCuhfKxnzZe_qsLmPZod9LwuZY1YeJR7Ej0p0NmVZJew508YYa5nZdiKMk7gxmeHIXOiLHE7Fzov9rtvR2jbCZhmIZGLFJl&skey=f2030a904b731103&v=v6) format('woff2');\n  unicode-range: U+20-7e;\n}\n@font-face {\n  font-family: 'Geist Mono';\n  font-style: normal;\n  font-weight: 500;\n  font-display: swap;\n  src: url(https://fonts.gstatic.com/l/font?kit=or3nQ6H-1_WfwkMZI_qYJrUPwBvHpGkxSMfSQ5d57wB_FMejXevPA8PAflCuhfKxnzZe_qsLmPZod9LwuZY1YeJR7Ej0p0NmVZJew508YYa5nZdiKMk7gxmeHIXOiLHE7Fzov9rtvR2jbCZhmIZGLFJl&skey=f2030a904b731103&v=v6) format('woff2');\n  unicode-range: U+20-7e;\n}\n@font-face {\n  font-family: 'Geist Mono';\n  font-style: normal;\n  font-weight: 600;\n  font-display: swap;\n  src: url(https://fonts.gstatic.com/l/font?kit=or3nQ6H-1_WfwkMZI_qYJrUPwBvHpGkxSMfSQ5d57wB_FMejXevPA8PAflCuhfKxnzZe_qsLmPZod9LwuZY1YeJR7Ej0p0NmVZJew508YYa5nZdiKMk7gxmeHIXOiLHE7Fzov9rtvR2jbCZhmIZGLFJl&skey=f2030a904b731103&v=v6) format('woff2');\n  unicode-range: U+20-7e;\n}\n",
+  "implementation_scope": {
+    "source": "Visual article layout reference, not transition code (the reference does not have the requested interaction).",
+    "reconstructed": "New dependency-free reusable photo-article controller; stationary article underneath a clipped object-fit-cover rectangle animation.",
+    "retained_style": [
+      "White background",
+      "Geist Mono typography",
+      "Source desktop equal hero columns; tablet 348px right image and flexible left text",
+      "64px hero gap",
+      "40px tablet gutters;80px desktop gutters;20px mobile gutters",
+      "Source portrait 533/603 frame",
+      "Mobile image-first stack"
+    ],
+    "adaptations": [
+      "Uses the existing selected photo/title/alt text; does not reproduce exhibition branding, shops, artist copy or inquiry links.",
+      "Top-right X requested by user; native modal accessibility and reversible movement.",
+      "Clearly labeled sample article text because no article copy was supplied.",
+      "Lower-body whitespace reduced from reference mobile200px to80px for a readable testing article.",
+      "Official Google Fonts same-family printable-ASCII variable font bundled with OFL license."
+    ]
+  },
+  "matched_viewport_comparison": {
+    "viewport": [
+      1180,
+      757
+    ],
+    "reference": {
+      "left_column_x": 40,
+      "left_column_width": 673,
+      "right_image_frame_x": 777,
+      "right_image_frame_width": 348,
+      "right_image_frame_height": 394,
+      "right_image_frame_y": 169.390625,
+      "title_size": 32,
+      "title_letter_spacing": "normal"
+    },
+    "test": {
+      "left_column_x": 40,
+      "left_column_width": 673,
+      "right_image_frame_x": 777,
+      "right_image_frame_width": 348,
+      "right_image_frame_height": 393.703125,
+      "right_image_frame_y": 168.390625,
+      "title_size": 32,
+      "title_letter_spacing": "0px"
+    },
+    "notes": "Source frame/typography proportions verified at matching viewport; adaptation has different content/header and no claim of whole-site pixel equivalence."
+  },
+  "font_license": {
+    "file": "OFL.txt",
+    "url": "https://raw.githubusercontent.com/google/fonts/main/ofl/geistmono/OFL.txt",
+    "http_status": 200,
+    "font_family_verified": "fc-scan identifies Geist Mono and variable Thin through Black styles."
+  }
+}

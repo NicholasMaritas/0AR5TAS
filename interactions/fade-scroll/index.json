@@ -4,7 +4,7 @@
   "description": "A short settled pause followed by a smooth caption fade-in; actual scrolling fades captions out, while clicks and stationary taps have no effect.",
   "files": {
     "fade-scroll.js": "createFadeScroll(container,{itemSelector,delay}) with refresh()/destroy(); never writes scroll position.",
-    "fade-scroll.css": "Reversible opacity transitions: 600ms ease-out reveal, 220ms fade-out on actual scrolling.",
+    "fade-scroll.css": "Reversible opacity transitions:800ms reveal and420ms fade-out, both cubic-bezier(.4,0,.2,1).",
     "fade-scroll.test.mjs": "Run node --test fade-scroll.test.mjs; fourteen timing, interaction and lifecycle tests.",
     "index.json": "Combined feature entry and integration notes."
   },
@@ -20,16 +20,16 @@
   },
   "timing": {
     "after_native_scrollend_ms": 400,
-    "fade_in_ms": 600,
-    "fade_in_easing": "cubic-bezier(.22,1,.36,1)",
-    "fade_out_ms": 220,
-    "fade_out_easing": "cubic-bezier(.4,0,1,1)",
+    "fade_in_ms": 800,
+    "fade_in_easing": "cubic-bezier(.4,0,.2,1)",
+    "fade_out_ms": 420,
+    "fade_out_easing": "cubic-bezier(.4,0,.2,1)",
     "property": "opacity",
     "continuity": "CSS transitions resume from current rendered opacity; no restart-from-zero keyframes."
   },
   "behavior": [
     "Initial settled image and each new fully aligned image receive a 400ms reveal delay.",
-    "Actual scroll events cancel pending reveal and remove the visible marker, triggering a 220ms opacity fade-out.",
+    "Actual scroll events cancel pending reveal and remove the visible marker, triggering a 420ms opacity fade-out.",
     "Clicks, pointer presses, stationary taps/holds, wheel events without movement and focus/blur do not hide captions or reset reveal timers.",
     "A touch gesture that actually scrolls blocks reveal until the gesture and native movement finish.",
     "The image must be loaded and its item fully aligned before the reveal delay begins.",
@@ -41,17 +41,18 @@
     "Photo study / #",
     "read more >"
   ],
-  "read_more": "Text only; no destination was provided and no link behavior was added.",
-  "reduced_motion": "After two seconds of stillness, show the predominant photo caption without a fade or forced snap; this preserves readability when native snapping is disabled by the existing reduced-motion policy.",
+  "read_more": {
+    "element": "Accessible button; opens photo-article dialog on selected photo. Ordinary image/caption clicks retain prior click-independent behavior.",
+    "library": "../photo-article/index.json"
+  },
+  "reduced_motion": "After400ms of stillness, show the predominant photo caption without a fade or forced snap; article transitions are immediate.",
   "test_url": "https://nicholasmaritas.github.io/0AR5TAS/interactions/momentum-scroll/",
   "validation": {
-    "automated": "14 tests passed, including visible/pending click invariance and stationary touch holds.",
-    "live_browser": "Passed desktop: visible caption remained at opacity 1 after both center-image and caption clicks; initial/new-caption transition measured as 0.6s with the intended easing. During actual scrolling, departing caption was observed at intermediate opacity 0.641896 with 0.22s transition, then only the newly settled caption appeared and reached opacity 1.",
-    "physical_touch": "not tested",
-    "github_readback": "All seven changed feature/feed files matched committed contents."
+    "automated": "14 existing caption tests passed; scheduling/scroll module unchanged.",
+    "live_browser": "Local desktop caption/article checks complete; public Pages verification pending.",
+    "physical_touch": "not tested"
   },
   "deployment": {
-    "commit": "e8e9275c3c1ca772a12b5a0d047c145d3951759c",
-    "status": "success"
+    "status": "pending"
   }
 }

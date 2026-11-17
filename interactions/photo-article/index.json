@@ -1,0 +1,48 @@
+{
+  "name": "fade + scroll + photo article",
+  "category": "interactions/photo-article",
+  "reference": "https://oowindow.com/jahlil-nzinga",
+  "files": {
+    "photo-article.js": "createPhotoArticle(feed,{onOpen,onClose}); close()/destroy(). Native dialog, decode barrier, cancellable rectangle animation.",
+    "photo-article.css": "Static responsive article layout and photo overlay styles.",
+    "photo-article.test.mjs": "node --test photo-article.test.mjs; state/geometry/interruption/readiness/lifecycle tests.",
+    "reference.json": "Source inspection, dependencies, layout tokens, adaptations and matching-viewport comparison.",
+    "GeistMono-ascii.woff2": "Official Google Fonts Geist Mono variable printable-ASCII subset; source Figma font inaccessible via shell.",
+    "OFL.txt": "Bundled font license."
+  },
+  "integration": [
+    "Import CSS and createPhotoArticle. Mark button data-read-more inside data-scroll-item. Each item needs img, h1/h2, small and figcaption.",
+    "onOpen must suspend the caption controller; onClose reinitializes it with the existing400ms delay. Feed native scrolling controller remains read-only.",
+    "Destroy the dialog controller on page teardown. Native dialog/showModal and Web Animations are used; no external JS dependencies."
+  ],
+  "behavior": [
+    "The complete article is laid out before animation and remains stationary. A fully decoded copy of the selected image covers it initially, then shrinks into the right-hand image frame. Object-fit:cover preserves aspect ratio while the crop changes.",
+    "The feed gradient and caption dissolve without an initial brightness jump. Article scrolling remains locked until opening finishes.",
+    "The top-right X or Escape reverses from the photo current rectangle, including an interrupted opening or scrolled article image. Article remains stationary while it is covered.",
+    "Background feed is inert and locked during reading; normal close restores the existing feed position without a scroll write and restores keyboard focus. Resize recovery aligns the original photo only when dimensions actually changed.",
+    "Pending image/font preparation is canceled if user moves the feed. Failed image copies do not expose a blank cover.",
+    "Reduced-motion preference removes traveling/fade animations. Resizing or changing that preference during movement cancels/retargets safely.",
+    "Below800px the article follows the reference image-first stack, rather than squeezing readable text beside a narrow photo."
+  ],
+  "timing": {
+    "caption_delay_ms": 400,
+    "caption_in_ms": 800,
+    "caption_out_ms": 420,
+    "open_ms": 1100,
+    "close_ms": 1000,
+    "interrupted_open_reverse_ms": 650,
+    "photo_easing": "cubic-bezier(.65,0,.35,1)",
+    "caption_ghost_out_ms": 320
+  },
+  "content": "Clearly labeled sample article, selected existing photo title and alt description; final blog content was not supplied.",
+  "test_url": "https://nicholasmaritas.github.io/0AR5TAS/interactions/momentum-scroll/",
+  "validation": {
+    "automated": "37 tests passed:17 article controller,14 caption,6 native scroll. JS syntax passed.",
+    "local_browser": "Passed at1180x757: decoded selected photo enters right frame; article intro rectangle identical during/after motion; article scroll557px leaves background feed at757px; close X remains at top18px; normal reverse restores selected photo. Reference/tablet frame proportions compared at same viewport.",
+    "public_pages": "pending",
+    "physical_touch": "not tested"
+  },
+  "deployment": {
+    "status": "pending"
+  }
+}

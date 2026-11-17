@@ -225,3 +225,14 @@ The agent handling a task must update this file after each task to preserve cont
 - Fade + scroll index and photo-feed usage documentation updated. Native scrolling physics and requested caption layout preserved.
 - Human test: https://nicholasmaritas.github.io/0AR5TAS/interactions/momentum-scroll/
 - Pending: None for requested implementation and desktop verification.
+
+
+### Task 016 — Reversible photo-to-article transition and softer fades
+- STARTED — 2026-11-17
+- Request: Resume smoother fades and implement Read more using the supplied OOW article style. Selected photo shrinks/moves to the right, exposing a stationary article beneath it; article scrolls after opening. Top-right X grows the photo back to full screen. Publish for human testing.
+- Source inspection: Uploaded Figma HTML, rendered reference and exact layout/font rules inspected. Direct dependencies attempted and statuses recorded in interactions/photo-article/reference.json. Public shell requests to reference Figma fonts/runtime mostly returned403; browser rendered reference successfully. Bundled official same-family Google Fonts Geist Mono ASCII variable font with OFL license, explicitly recorded as an alternative.
+- Changes: Added interactions/photo-article/{photo-article.js,photo-article.css,photo-article.test.mjs,index.json,reference.json,GeistMono-ascii.woff2,OFL.txt}; updated momentum-scroll/{index.html,feed.css,feed.js,usage.json} and fade-scroll/{fade-scroll.css,index.json}. New native dialog/controller uses image decoding before reveal, object-fit cover rectangle animation, matching feed-gradient dissolve, native modality, Escape/X reversal, interrupted-motion continuity, resize/reduced-motion handling and focus restoration. Article layout never animates; background feed is locked and normal closing does not reposition it.
+- Fades: Existing400ms settled delay retained; fade-in800ms/fade-out420ms with smooth cubic-bezier(.4,0,.2,1). Ordinary clicks still have no caption effect; Read more now explicitly opens an article. Existing native feed physics unchanged.
+- Content: Existing selected photo/title/alt plus clearly labeled sample article copy for testing; final article content was not supplied. Mobile follows reference image-first stacking. No exhibition branding, shopping or artist copy added.
+- Validation:37 automated tests passed (17 article,14 caption,6 native scroll) plus JS syntax. Local browser at1180x757 confirmed identical article intro geometry during/after motion, matching reference left/right widths673/348px and64px gap, decoded photo, scrollable article, fixed X and preserved background scroll position. Public publication and final browser verification pending.
+- Pending: Commit/readback, Pages build and live human-test verification.

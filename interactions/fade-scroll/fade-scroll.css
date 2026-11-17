@@ -1,14 +1,14 @@
 /* Reversible opacity transitions continue from their current rendered value.
-   Actual scrolling requests the quick fade-out; clicks never change this state. */
+   Actual scrolling requests the gentle fade-out; clicks never change this state. */
 [data-fade-scroll] [data-scroll-item] figcaption {
   opacity: 0;
   animation: none;
-  transition: opacity 220ms cubic-bezier(.4, 0, 1, 1);
+  transition: opacity 420ms cubic-bezier(.4, 0, .2, 1);
 }
 [data-fade-scroll] [data-scroll-item][data-caption-visible] figcaption {
   opacity: 1;
-  transition-duration: 600ms;
-  transition-timing-function: cubic-bezier(.22, 1, .36, 1);
+  transition-duration: 800ms;
+  transition-timing-function: cubic-bezier(.4, 0, .2, 1);
 }
 @media (prefers-reduced-motion: reduce) {
   [data-fade-scroll] [data-scroll-item] figcaption,
@@ -16,3 +16,4 @@
     transition: none;
   }
 }
+

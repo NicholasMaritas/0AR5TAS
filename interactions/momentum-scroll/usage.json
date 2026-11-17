@@ -8,7 +8,7 @@
     "momentum-scroll.js": "createMomentumScroll(container,{itemSelector,onActiveChange}); refresh() and destroy(). No scripted scrolling.",
     "momentum-scroll.test.mjs": "Run node --test momentum-scroll.test.mjs.",
     "feed.css": "Native y mandatory snapping, normal multi-target pass-through, reduced-motion free scrolling.",
-    "feed.js": "Initializes native scrolling, adjacent-image preparation, and the separate delayed-caption controller.",
+    "feed.js": "Initializes native scrolling, adjacent-image preparation, delayed captions and photo-article dialog; caption controller suspended during article reading.",
     "index.html": "Six full-screen responsive photographs.",
     "photos.json": "Original photograph source requests.",
     "research.json": "Nine primary sources, UX audit, design decisions, tradeoffs and validation."
@@ -24,7 +24,7 @@
     "momentum": "OS/browser native, velocity responsive on touch and trackpads.",
     "snap": "Native engine uses gesture direction, natural stopping point and visible targets; it may pass multiple items.",
     "interruption": "New input goes directly to the same native engine. There is no application animation to cancel.",
-    "visibility": "Predominantly visible item observation updates the photo counter. It never overrides native target selection.",
+    "visibility": "Predominantly visible item observation prepares neighboring photos; it never overrides native target selection.",
     "oversized_items": "Native CSS snap rules allow scrolling within items larger than the viewport.",
     "fallback": "Without native CSS snapping support the feed remains freely scrollable. IntersectionObserver/scrollend are feature-detected; a legacy timer updates status only.",
     "reduced_motion": "Free native scrolling; no forced alignment or custom animation."
@@ -46,22 +46,22 @@
   "tradeoff": "Native snap selection honors direction and projected momentum. A strict instantaneous maximum-visible-target rule is intentionally not forced over native gesture intent.",
   "validation": {
     "syntax": "passed",
-    "automated": "Six tests passed; native controller cannot write scrollTop or scrollTo in test fixture; no wheel/touch handlers, no continuous frame loop.",
-    "live_browser": "Updated caption UI passed desktop click invariance, 0.6s fade-in and 0.22s fade-out/intermediate-opacity checks; exact 400ms reveal timing passed automated tests.",
+    "automated": "Six native scrolling tests and fourteen caption tests passed. Article controller suite separately indexed.",
+    "live_browser": "Local desktop caption/article checks complete; public Pages verification pending.",
     "physical_devices": "Native physics vary by browser/OS. Real touch and physical trackpad feel require human assessment.",
-    "github_readback": "All seven published files matched uploaded contents."
+    "github_readback": "pending"
   },
   "test_composition": {
     "name": "fade + scroll",
     "library": "../fade-scroll/index.json",
     "delay_ms": 400,
-    "fade_duration_ms": 600,
+    "fade_duration_ms": 800,
     "visible_ui": "Large title, then Photo study / # and read more >. No feed header, current/total counter or scrolling hint.",
-    "fade_out_duration_ms": 220,
-    "interaction": "Only actual scrolling fades captions out; clicks and stationary taps do not change caption appearance or its pending reveal."
+    "fade_out_duration_ms": 420,
+    "interaction": "Only actual scrolling fades captions out; ordinary clicks and stationary taps preserve captions. Read more explicitly opens the selected photo article.",
+    "read_more": "../photo-article/index.json"
   },
   "deployment": {
-    "commit": "e8e9275c3c1ca772a12b5a0d047c145d3951759c",
-    "status": "success"
+    "status": "pending"
   }
 }

@@ -6,7 +6,10 @@
 .photo img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;user-select:none;-webkit-user-drag:none}
 .photo::after{content:"";position:absolute;inset:0;pointer-events:none;background:linear-gradient(180deg,rgba(0,0,0,.25),transparent 25%,transparent 60%,rgba(0,0,0,.6));z-index:1}
 .photo figcaption{position:absolute;left:clamp(24px,5vw,80px);right:clamp(24px,5vw,80px);bottom:max(64px,calc(env(safe-area-inset-bottom) + 40px));z-index:2;pointer-events:none}
-.photo-meta{display:flex;align-items:baseline;flex-wrap:wrap;gap:12px;margin:16px 0 0}.photo-meta small{font-size:11px;letter-spacing:.18em;text-transform:uppercase;opacity:.8}.read-more{font-size:13px;letter-spacing:.02em}
+.photo-meta{display:flex;align-items:baseline;flex-wrap:wrap;gap:12px;margin:16px 0 0}.photo-meta small{font-size:11px;letter-spacing:.18em;text-transform:uppercase;opacity:.8}.read-more{font-family:inherit;font-size:13px;letter-spacing:.02em;color:inherit;background:none;border:0;padding:14px 0;margin:-14px 0;min-height:44px;cursor:pointer;pointer-events:auto;text-align:left}
+.photo:not([data-caption-visible]) .read-more{pointer-events:none;visibility:hidden;transition:visibility 0s 420ms}
+.photo[data-caption-visible] .read-more{visibility:visible;transition-delay:0s}
 .photo h1,.photo h2{font-size:clamp(36px,6vw,84px);line-height:1.02;letter-spacing:-.045em;font-weight:400;margin:0;text-wrap:balance}
 /* Reduced motion keeps navigation free of compulsory page alignment. */
 @media(prefers-reduced-motion:reduce){.photo-feed{scroll-behavior:auto;scroll-snap-type:none}}
+
