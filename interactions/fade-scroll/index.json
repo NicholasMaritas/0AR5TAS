@@ -45,7 +45,12 @@
   "test_url": "https://nicholasmaritas.github.io/0AR5TAS/interactions/momentum-scroll/",
   "validation": {
     "automated": "12 tests passed; syntax and markup checks passed.",
-    "live_browser": "pending deployment",
-    "physical_touch": "not tested"
+    "live_browser": "Passed desktop: removed header/counter/hint; first photo initially opacity 0; all captions opacity 0 after scrolling; only fully aligned current photo receives reveal after waiting; computed fade 1s ease-in-out and final opacity 1. Pending reveal canceled by reverse scrolling. Caption order visually verified.",
+    "physical_touch": "not tested",
+    "github_readback": "All eight uploaded feature/feed files matched committed contents."
+  },
+  "deployment": {
+    "commit": "fb8128940bb53da442bfcafde09b4db2915bef6f",
+    "status": "success"
   }
 }

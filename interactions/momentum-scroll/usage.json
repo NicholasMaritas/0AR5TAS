@@ -47,7 +47,7 @@
   "validation": {
     "syntax": "passed",
     "automated": "Six tests passed; native controller cannot write scrollTop or scrollTo in test fixture; no wheel/touch handlers, no continuous frame loop.",
-    "live_browser": "Caption composition pending live verification; native scroll validation from prior revision remains recorded in repository history.",
+    "live_browser": "Native scrolling retained; fade + scroll composition passed desktop layout, hidden-during-motion, settled delay, opacity animation and interruption checks.",
     "physical_devices": "Native physics vary by browser/OS. Real touch and physical trackpad feel require human assessment.",
     "github_readback": "All seven published files matched uploaded contents."
   },
@@ -57,5 +57,9 @@
     "delay_ms": 2000,
     "fade_duration_ms": 1000,
     "visible_ui": "Large title, then Photo study / # and read more >. No feed header, current/total counter or scrolling hint."
+  },
+  "deployment": {
+    "commit": "fb8128940bb53da442bfcafde09b4db2915bef6f",
+    "status": "success"
   }
 }

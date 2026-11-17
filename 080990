@@ -201,3 +201,11 @@ The agent handling a task must update this file after each task to preserve cont
 - Added interactions/fade-scroll/{fade-scroll.js,fade-scroll.css,fade-scroll.test.mjs,index.json}. Updated interactions/momentum-scroll/{index.html,feed.css,feed.js,usage.json}. Native scroll module unchanged. Read more is text only; no target was supplied.
 - Caption behavior: immediate hide/cancellation on movement or input; native scrollend and full-item geometry gate a 2000ms delay, followed by original-style opacity-only 1s ease-in-out. Loaded image required. Initial photo, edge/no-motion interaction, old-browser quiet fallback, resize, hidden page, BFCache and held gesture handling included. No scroll-position writes. Reduced-motion mode uses stationary predominant caption without animation to preserve readability under existing free-scroll policy.
 - Validation: Syntax/markup checks and 12 deterministic tests passed for delay, cancellation, alignment, touch hold, boundary recovery, legacy fallback, image readiness, reduced motion, visibility/BFCache, resize and cleanup. Live publication/browser verification pending.
+
+### Task 014 — Completion verification
+- COMPLETED — 2026-11-17. Commit fb8128940bb53da442bfcafde09b4db2915bef6f deployed successfully. All eight feature/feed files read back identically.
+- Live desktop verified zero header/counter/hint elements; large title followed by Photo study / # and read more >. Initial captions opacity 0. Native scroll to aligned photo at 757/1514 hid every caption (all six opacity 0), then revealed only current caption after the two-second wait. Computed reveal is 1s ease-in-out, ending at opacity 1. A subsequent reverse scroll canceled the earlier pending reveal; other captions stayed hidden.
+- Automated exact-delay and edge cases: 12 tests passed. Live waiting-phase inspection observed about 1.9s remaining after the timer had already started; no frame-perfect latency claim. Physical touch and reduced-motion preference on real devices remain for human assessment.
+- Indexed feature: interactions/fade-scroll/index.json, name fade + scroll. Original text/fade-in archive and native momentum controller unchanged.
+- Human test: https://nicholasmaritas.github.io/0AR5TAS/interactions/momentum-scroll/
+- Pending: None for requested implementation, indexing and human-test publication.
