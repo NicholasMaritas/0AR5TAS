@@ -9,7 +9,7 @@ class TestScreensaver extends Oa {
       document.body.style.overflow = "hidden";
       this.el.classList.add("active");
       this.addImage();
-      this.stampInterval = setInterval(() => this.addImage(), 20000);
+      this.stampInterval = setInterval(() => this.addImage(), 10000);
     }, 10000);
   }
   deactivate() {
