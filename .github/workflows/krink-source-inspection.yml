@@ -1,0 +1,83 @@
+name: Inspect public Krink frontend scripts
+on:
+  push:
+    branches: [research/krink-source-inspection]
+    paths: ['.github/workflows/krink-source-inspection.yml']
+permissions:
+  contents: write
+jobs:
+  inspect:
+    runs-on: ubuntu-latest
+    timeout-minutes: 8
+    steps:
+      - uses: actions/checkout@v4
+      - name: Analyze public HTML and assets
+        shell: bash
+        run: |
+          mkdir -p research
+          cat > /tmp/inspect_krink.py <<'PY'
+          import re, json, hashlib, urllib.request, urllib.parse, html.parser, datetime, concurrent.futures
+          TARGET='https://krink.com/'
+          headers={'User-Agent':'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 Chrome/131.0 Safari/537.36','Accept':'*/*'}
+          def fetch(url):
+              try:
+                  req=urllib.request.Request(url, headers=headers)
+                  with urllib.request.urlopen(req, timeout=14) as r:
+                      b=r.read(5000000)
+                      return {'url':url,'status':r.status,'final':r.url,'length':len(b),'content':b.decode('utf-8','replace')}
+              except Exception as e:
+                  return {'url':url,'error':str(e)[:240]}
+          class Parser(html.parser.HTMLParser):
+              def __init__(self): super().__init__();self.scripts=[];self.css=[];self.inside=False;self.inline=''
+              def handle_starttag(self,t,attrs):
+                  a=dict(attrs)
+                  if t=='script':
+                      if a.get('src'): self.scripts.append(urllib.parse.urljoin(TARGET,a['src']))
+                      else: self.inside=True
+                  if t=='link' and 'stylesheet' in a.get('rel','') and a.get('href'):
+                      self.css.append(urllib.parse.urljoin(TARGET,a['href']))
+              def handle_endtag(self,t):
+                  if t=='script':self.inside=False
+              def handle_data(self,d):
+                  if self.inside:self.inline+=d+'\n'
+          patterns=['screensaver','screen-saver','screen saver','inactiv','idle','mousemove','pointermove','mousedown','keydown','touchstart','settimeout','setinterval','gsap']
+          def analyze(name,body,kind):
+              out={'url':name,'kind':kind,'bytes':len(body),'sha256':hashlib.sha256(body.encode()).hexdigest(),'counts':{},'matches':[]}
+              for pat in patterns:
+                  matches=list(re.finditer(re.escape(pat),body,re.IGNORECASE))
+                  if matches: out['counts'][pat]=len(matches)
+                  cap=12 if pat in ('screensaver','screen-saver','screen saver','inactiv','idle') else 3
+                  for m in matches[:cap]:
+                      st=max(0,m.start()-270);en=min(len(body),m.end()+420)
+                      out['matches'].append({'term':pat,'pos':m.start(),'snippet':body[st:en]})
+              return out
+          result={'timestamp':datetime.datetime.now(datetime.timezone.utc).isoformat(),'site':TARGET,'errors':[],'assets':[]}
+          homepage=fetch(TARGET)
+          result['homepage']={k:v for k,v in homepage.items() if k!='content'}
+          if 'content' not in homepage:
+              result['errors'].append('Homepage unavailable')
+          else:
+              p=Parser();p.feed(homepage['content']);result['scripts']=list(dict.fromkeys(p.scripts));result['css']=list(dict.fromkeys(p.css))
+              result['assets'].append(analyze(TARGET+'#inline-scripts',p.inline,'inline-js'))
+              result['assets'].append(analyze(TARGET+'#html',homepage['content'],'html'))
+              urls=list(dict.fromkeys(p.scripts+p.css))
+              result['asset_count']=len(urls)
+              def worker(u):
+                  f=fetch(u);o={k:v for k,v in f.items() if k!='content'}
+                  if 'content' in f:
+                      x=analyze(u,f['content'],'css' if '.css' in u.split('?')[0] else 'js')
+                      o.update(x)
+                  return o
+              with concurrent.futures.ThreadPoolExecutor(max_workers=10) as pool:
+                  result['assets']+=list(pool.map(worker,urls[:100]))
+          with open('research/krink-source-inspection.json','w') as f:json.dump(result,f,indent=2)
+          print('homepage:',result['homepage'],'asset count:',result.get('asset_count'), 'matched assets:',[(a.get('url'), a.get('counts')) for a in result['assets'] if any(x in a.get('counts',{}) for x in ('screensaver','screen-saver','screen saver','inactiv','idle'))])
+          PY
+          python3 /tmp/inspect_krink.py
+      - name: Save analysis on isolated research branch
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add research/krink-source-inspection.json
+          git commit -m 'Capture source inspection evidence' || true
+          git push
