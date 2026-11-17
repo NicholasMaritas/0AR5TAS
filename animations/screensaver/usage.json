@@ -1,6 +1,6 @@
 {
   "feature": "Krink screensaver",
-  "purpose": "Collected source for later integration; not installed on the project website.",
+  "purpose": "Preserved Krink reference plus an active GitHub Pages test adapter.",
   "files": {
     "krink-screensaver.js": "Original Oa class plus its original ka helper, extracted from the bundle.",
     "krink-screensaver.css": "Original feature CSS and the five utility rules required by the overlay.",
@@ -63,6 +63,8 @@
       "touchstart",
       "scroll"
     ],
-    "behavior": "Activity dismisses active images and rearms the 10-second timer. Original collection remains unchanged."
+    "behavior": "After 10 seconds idle, add one image and another every 10 seconds. Images accumulate until activity clears them and restarts the idle timer. Original source remains preserved.",
+    "image_interval_ms": 10000,
+    "positioning": "Rotated bounding box kept fully inside the viewport; oversized images scaled down; positions recalculated on resize."
   }
 }
