@@ -96,3 +96,10 @@ The agent handling a task must update this file after each task to preserve cont
 - Live URL: https://nicholasmaritas.github.io/0AR5TAS/
 - Limitations: No claim of whole-page visual equivalence to Krink; this is a minimal test page. Original random positioning can place images partly or entirely outside the viewport; external Krink image hosting remains required.
 - Pending: None for requested implementation and testing.
+
+### Task 006 — Keep images visible and stack every 10 seconds
+- STARTED — 2026-11-17
+- Request: Ensure images appear on screen; add and retain another image every 10 seconds until activity clears the stack; update repository and Pages.
+- Repository changes COMPLETED: test-screensaver.js now measures each loaded image's rotated bounds, scales oversized images to fit, positions the entire image inside the overlay, and recalculates positions on resize. Image interval changed to 10000ms. index.html describes stacking and cache-versions the adapter; usage.json updated. Original reference source preserved.
+- Validation: Syntax passed. 1152 geometry cases passed across desktop, mobile, small viewports, rotations, and extreme image aspect ratios. Virtual-clock test confirmed image counts 1/2/3 at 10/20/30 seconds, movement clears the stack, and idle reactivation adds a new image. Updated adapter read back identically from main.
+- Publication: GitHub Pages automatic build queued behind a previous build; live verification pending. Do not treat publication as verified until the updated script is served and stacking is checked.
