@@ -1,14 +1,19 @@
-import { createMomentumScroll } from './momentum-scroll.js';
+import { createMomentumScroll } from './momentum-scroll.js?v=2';
 const feed = document.querySelector('.photo-feed');
-const controller = createMomentumScroll(feed);
-const photos = [...feed.querySelectorAll('[data-scroll-item]')];
 const counter = document.querySelector('#photo-count');
-const observer = new IntersectionObserver(entries => {
-  for (const entry of entries) if (entry.intersectionRatio > .5) {
-    counter.textContent = String(photos.indexOf(entry.target) + 1).padStart(2,'0') + ' / ' + String(photos.length).padStart(2,'0');
+const hint = document.querySelector('.hint');
+const controller = createMomentumScroll(feed, {
+  onActiveChange({index, count}) {
+    counter.textContent = String(index + 1).padStart(2, '0') + ' / ' + String(count).padStart(2, '0');
+    if (index > 0) hint.hidden = true;
+    // Prepare adjacent full-screen images without tying decoding to the scroll handler.
+    const photos = feed.querySelectorAll('[data-scroll-item]');
+    for (const neighbor of [index - 1, index + 1]) {
+      const image = photos[neighbor]?.querySelector('img');
+      if (image) { image.loading = 'eager'; image.decode?.().catch(() => {}); }
+    }
   }
-}, {root:feed,threshold:[.5,.51]});
-photos.forEach(photo => observer.observe(photo));
+});
 window.addEventListener('pagehide', event => {
-  if (!event.persisted) { controller.destroy(); observer.disconnect(); }
+  if (!event.persisted) controller.destroy();
 });

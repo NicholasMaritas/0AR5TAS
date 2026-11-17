@@ -1,46 +1,87 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import {predominantIndex,alignmentTarget,springPosition,createMomentumScroll} from './momentum-scroll.js';
+import {predominantIndex,createMomentumScroll} from './momentum-scroll.js';
 
-test('predominant visible pixels choose the two-thirds item in either direction',()=>{
+test('visible-item observation uses predominant area in either scroll direction',()=>{
   assert.equal(predominantIndex([{top:-330,bottom:670},{top:670,bottom:1670}],0,1000),0);
   assert.equal(predominantIndex([{top:-670,bottom:330},{top:330,bottom:1330}],0,1000),1);
-  assert.equal(predominantIndex([{top:0,bottom:900},{top:900,bottom:1000}],0,1000),0);
-});
-test('alignment respects ends, inset containers, and freely readable oversized items',()=>{
-  assert.equal(alignmentTarget({top:200,bottom:1200,height:1000},100,1000,900,5000),1000);
-  assert.equal(alignmentTarget({top:-300,bottom:1700,height:2000},0,1000,300,5000),300);
-  assert.equal(alignmentTarget({top:300,bottom:1300,height:1000},0,1000,4900,5000),5000);
-});
-test('spring starts at native position/velocity and converges without a synthetic fling',()=>{
-  assert.equal(springPosition(320,1000,30,0),320);
-  const derivative=(springPosition(320,1000,30,1e-7)-320)/1e-7;
-  assert(Math.abs(derivative-30)<.01);
-  let previous=320;
-  for(let t=1/120;t<=1.25;t+=1/120){const next=springPosition(320,1000,30,t);assert(next>=previous);assert(next<=1000);previous=next;}
-  assert(Math.abs(previous-1000)<.01);
+  assert.equal(predominantIndex([{top:200,bottom:1800}],200,800),0);
+  assert.equal(predominantIndex([{top:1200,bottom:1600}],0,1000),-1);
 });
 
-function environment(reduce=false){
-  const names=['window','performance','requestAnimationFrame','cancelAnimationFrame','matchMedia','ResizeObserver'];
-  const originals=Object.fromEntries(names.map(n=>[n,globalThis[n]]));
-  let now=0,id=0;const frames=new Map();
-  const target=()=>({events:{},addEventListener(n,f){this.events[n]=f},removeEventListener(n){delete this.events[n]}});
-  const win=target(),container=Object.assign(target(),{scrollTop:0,scrollHeight:6000,clientHeight:1000,clientTop:0,attrs:{},getAttribute(n){return this.attrs[n]??null},setAttribute(n,v){this.attrs[n]=v},removeAttribute(n){delete this.attrs[n]},getBoundingClientRect(){return {top:0,height:1000}}});
-  const items=Array.from({length:6},(_,i)=>({getBoundingClientRect(){return {top:i*1000-container.scrollTop,bottom:(i+1)*1000-container.scrollTop,height:1000}}}));
+function environment({end=true,snap=true,supported=true}={}) {
+  const names=['CSS','IntersectionObserver','ResizeObserver','requestAnimationFrame','cancelAnimationFrame','setTimeout','clearTimeout'];
+  const original=Object.fromEntries(names.map(name=>[name,globalThis[name]]));
+  const frames=new Map(),timers=new Map(),events=new Map();
+  let top=0,id=0,writes=0,intersection,resize;
+  const container={clientTop:0,clientHeight:1000,attrs:new Map(),
+    get scrollTop(){return top},set scrollTop(value){writes++;throw Error('Observers must never drive scrolling')},
+    scrollTo(){writes++;throw Error('Observers must never drive scrolling')},
+    getBoundingClientRect:()=>({top:0,height:1000}),
+    getAttribute(name){return this.attrs.get(name)??null},setAttribute(name,value){this.attrs.set(name,value)},removeAttribute(name){this.attrs.delete(name)},
+    addEventListener(name,fn,options){events.set(name,{fn,options})},removeEventListener(name){events.delete(name)}
+  };
+  if(end)container.onscrollend=null;
+  if(snap)container.onscrollsnapchange=null;
+  let items=Array.from({length:6},(_,index)=>({getBoundingClientRect:()=>({top:index*1000-top,bottom:(index+1)*1000-top})}));
   container.querySelectorAll=()=>items;
-  Object.assign(globalThis,{window:win,performance:{now:()=>now},requestAnimationFrame:f=>{frames.set(++id,f);return id},cancelAnimationFrame:i=>frames.delete(i),matchMedia:()=>({matches:reduce}),ResizeObserver:class{observe(){}disconnect(){}}});
-  return {container,frames,step(ms){for(let end=now+ms;now<end;){now+=16;const current=[...frames.values()];frames.clear();current.forEach(f=>f(now));}},scroll(y){container.scrollTop=y;container.events.scroll?.()},restore(){for(const n of names)if(originals[n]===undefined)delete globalThis[n];else globalThis[n]=originals[n]}};
+  Object.assign(globalThis,{
+    CSS:{supports:()=>supported},
+    IntersectionObserver:class {constructor(fn){intersection=fn}observe(){}disconnect(){}},
+    ResizeObserver:class {constructor(fn){resize=fn}observe(){}disconnect(){}},
+    requestAnimationFrame(fn){frames.set(++id,fn);return id},cancelAnimationFrame(i){frames.delete(i)},
+    setTimeout(fn){timers.set(++id,fn);return id},clearTimeout(i){timers.delete(i)}
+  });
+  return {container,events,frames,timers,get writes(){return writes},
+    flush(){const callbacks=[...frames.values()];frames.clear();callbacks.forEach(fn=>fn())},
+    emit(name,event={}){events.get(name)?.fn(event)},
+    position(value){top=value},observe(){intersection()},resize(){resize()},items:()=>items,
+    restore(){for(const name of names)if(original[name]===undefined)delete globalThis[name];else globalThis[name]=original[name]}
+  };
 }
-test('no alignment while finger remains down; release selects predominant item',()=>{
-  const e=environment();try{const c=createMomentumScroll(e.container);e.container.events.touchstart({touches:[{}]});e.scroll(600);e.step(900);assert.equal(e.container.scrollTop,600);e.container.events.touchend({touches:[]});e.step(1800);assert.equal(e.container.scrollTop,1000);c.destroy();assert.equal(e.frames.size,0);}finally{e.restore()}
+
+test('native mode has no gesture interception, polling loop, or scrolling writes',()=>{
+  const e=environment();try{
+    const c=createMomentumScroll(e.container);e.flush();
+    assert.equal(e.container.getAttribute('data-momentum-scroll'),'native');
+    for(const event of ['wheel','touchstart','touchmove','pointerdown','keydown'])assert(!e.events.has(event));
+    for(let n=0;n<30;n++){e.position(n*5);e.emit('scroll');e.flush()}
+    assert.equal(e.container.scrollTop,145);assert.equal(e.writes,0);assert.equal(e.frames.size,0);assert.equal(e.timers.size,0);
+    assert.equal(e.events.get('scroll').options.passive,true);c.destroy();
+  }finally{e.restore()}
 });
-test('high native velocity can cross several items before alignment',()=>{
-  const e=environment();try{const c=createMomentumScroll(e.container);e.container.events.wheel();for(let y=50;y<=3600;y+=50){e.scroll(y);e.step(16);assert.notEqual(e.container.attrs['data-momentum-scroll'],'snapping')}e.step(1800);assert.equal(e.container.scrollTop,4000);c.destroy()}finally{e.restore()}
+
+test('native snap events update settled item without launching another animation',()=>{
+  const e=environment();try{
+    const changes=[];const c=createMomentumScroll(e.container,{onActiveChange:state=>changes.push(state.index)});e.flush();
+    e.position(4000);e.emit('scroll');e.emit('scrollsnapchange',{snapTargetBlock:e.items()[4]});e.emit('scrollend');e.flush();
+    assert.deepEqual(changes,[0,4]);assert.equal(e.container.getAttribute('data-scroll-state'),'idle');assert.equal(e.writes,0);assert.equal(e.frames.size,0);c.destroy();
+  }finally{e.restore()}
 });
-test('new wheel input immediately interrupts an in-progress snap',()=>{
-  const e=environment();try{const c=createMomentumScroll(e.container);e.scroll(600);e.step(160);assert.equal(e.container.attrs['data-momentum-scroll'],'snapping');e.step(64);const top=e.container.scrollTop;e.container.events.wheel();assert.equal(e.container.attrs['data-momentum-scroll'],'ready');e.scroll(top-20);e.step(32);assert.equal(e.container.scrollTop,top-20);c.destroy()}finally{e.restore()}
+
+test('intersection fallback and resize observe majority without repositioning content',()=>{
+  const e=environment({snap:false});try{
+    const changes=[];const c=createMomentumScroll(e.container,{onActiveChange:state=>changes.push(state.index)});e.flush();
+    e.position(680);e.observe();e.observe();assert.equal(e.frames.size,1);e.flush();assert.equal(changes.at(-1),1);
+    e.position(300);e.resize();e.flush();assert.equal(changes.at(-1),0);assert.equal(e.container.scrollTop,300);assert.equal(e.writes,0);c.destroy();
+  }finally{e.restore()}
 });
-test('reduced motion aligns after settling without a spring',()=>{
-  const e=environment(true);try{const c=createMomentumScroll(e.container);e.scroll(600);e.step(160);assert.equal(e.container.scrollTop,1000);assert.equal(e.container.attrs['data-momentum-scroll'],'ready');c.destroy()}finally{e.restore()}
+
+test('older-browser timer only settles status; it never corrects the scroll position',()=>{
+  const e=environment({end:false,snap:false,supported:false});try{
+    const c=createMomentumScroll(e.container);e.flush();assert.equal(e.container.getAttribute('data-momentum-scroll'),'free');
+    e.position(160);e.emit('scroll');const first=[...e.timers.keys()][0];e.emit('scroll');assert(!e.timers.has(first));
+    const callbacks=[...e.timers.values()];e.timers.clear();callbacks.forEach(fn=>fn());e.flush();
+    assert.equal(e.container.getAttribute('data-scroll-state'),'idle');assert.equal(e.container.scrollTop,160);assert.equal(e.writes,0);c.destroy();
+  }finally{e.restore()}
+});
+
+test('refresh and idempotent destruction clean observers, callbacks and owned attributes',()=>{
+  const e=environment({end:false});try{
+    e.container.setAttribute('data-momentum-scroll','existing');const c=createMomentumScroll(e.container);e.flush();
+    c.refresh();e.emit('scroll');assert(e.frames.size&&e.timers.size);c.destroy();c.destroy();
+    assert.equal(e.events.size,0);assert.equal(e.frames.size,0);assert.equal(e.timers.size,0);
+    assert.equal(e.container.getAttribute('data-momentum-scroll'),'existing');assert.equal(e.container.getAttribute('data-active-index'),null);
+    e.observe();e.resize();c.refresh();assert.equal(e.frames.size,0);
+  }finally{e.restore()}
 });

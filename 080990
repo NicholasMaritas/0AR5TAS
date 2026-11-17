@@ -168,3 +168,11 @@ The agent handling a task must update this file after each task to preserve cont
 - Limits: Real iOS/Android swipe feel and hardware trackpad inertia remain for human testing; native momentum depends on browser/OS. No claim of tested physical-device equivalence to Instagram.
 - Human test: https://nicholasmaritas.github.io/0AR5TAS/interactions/momentum-scroll/
 - Pending: None for implementation, code organization and photo-feed human test setup.
+
+### Task 012 — Research and refine natural scrolling UX
+- STARTED — 2026-11-17
+- Request: Deep research on smooth interfaces and make the existing photo feed scroll/snap more naturally.
+- Research: Reviewed nine primary sources from W3C, Google/Chromium, Apple and MDN; preserved findings, URLs, UX audit and design tradeoffs in interactions/momentum-scroll/research.json. Independent read-only agent review confirmed the delayed near-rest spring as a likely stop/start issue.
+- Changes: Replaced JS scroll-position animation and velocity polling with native CSS mandatory snap, start alignment and normal pass-through. Native browser engine owns gesture, inertia, interruption and snap. Controller is read-only for counters/state, with snap-event/IntersectionObserver/scrollend fallbacks. Removed forced resize realignment. Responsive image srcsets and adjacent decode preparation added. Reduced motion uses free native scrolling.
+- Tradeoff: Native endpoint choice uses direction and projected momentum; no forced strict maximum-visible correction that can fight wheel/flick intent. Physics remain browser/OS controlled. No external JS library.
+- Validation: Syntax and six new no-scroll-write/observation/lifecycle regression tests passed. All 24 responsive photo URLs returned HTTP 200. Live publication checks pending; physical-device feel remains for human assessment.

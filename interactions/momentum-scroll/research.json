@@ -1,0 +1,278 @@
+{
+  "task": "Refine momentum/snap UX from primary-source research",
+  "date": "2026-11-17",
+  "sources": [
+    {
+      "id": "css-snap",
+      "url": "https://www.w3.org/TR/css-scroll-snap-1/",
+      "type": "W3C specification",
+      "sections": [
+        "3 Scroll Snap Model",
+        "5.3 Scroll Snap Limits",
+        "6.1 Types of Scrolling Methods",
+        "6.2 Choosing Snap Positions"
+      ],
+      "findings": [
+        "Browser snap selection considers natural endpoint, direction, visible snap areas and escape from existing positions.",
+        "Exact snap physics belong to the user agent.",
+        "scroll-snap-stop:normal permits passing several targets in a single operation."
+      ]
+    },
+    {
+      "id": "webdev-native",
+      "url": "https://web.dev/articles/css-scroll-snap",
+      "type": "Google web platform guidance",
+      "findings": [
+        "CSS snap gives browsers access to composited scrolling and the gesture endpoint; JavaScript need not reposition content afterward.",
+        "Mandatory snapping is appropriate here because all six full-screen targets are adjacent; widely spaced targets need different treatment."
+      ]
+    },
+    {
+      "id": "apple-fluid",
+      "url": "https://developer.apple.com/videos/play/wwdc2018/803/",
+      "type": "Apple WWDC design session and transcript",
+      "findings": [
+        "Continuity, immediate control, momentum-preserving gesture endpoints and familiar scrolling behavior underpin perceived fluidity.",
+        "Position-only endpoint selection can contradict flick intent; avoid unnecessary additional motion."
+      ],
+      "application": "Keep OS gesture physics and browser-native endpoint choice; remove the separate near-rest spring."
+    },
+    {
+      "id": "compositor",
+      "url": "https://chromium.googlesource.com/chromium/src/+/HEAD/cc/input/README.md",
+      "type": "Chromium implementation documentation",
+      "findings": [
+        "Scrolling input can run on the compositor without waiting on the main thread.",
+        "The snap selection strategy for a fling considers its projected displacement and allows intermediate targets to be passed."
+      ]
+    },
+    {
+      "id": "scrollend",
+      "url": "https://developer.mozilla.org/en-US/docs/Web/API/Element/scrollend_event",
+      "type": "MDN platform reference",
+      "findings": [
+        "scrollend means pending position updates and the gesture have completed.",
+        "Use it for settled UI state, not to begin another scrolling animation."
+      ],
+      "compatibility": "Feature-detect; older-browser timers update read-only status only."
+    },
+    {
+      "id": "snap-events",
+      "url": "https://developer.chrome.com/blog/scroll-snap-events",
+      "type": "Chrome platform guidance",
+      "findings": [
+        "scrollsnapchange identifies the actual settled snap target.",
+        "Snap events are not universal; IntersectionObserver and scrollend provide a read-only fallback."
+      ]
+    },
+    {
+      "id": "passive",
+      "url": "https://developer.chrome.com/blog/scrolling-intervention-2/",
+      "type": "Chrome input performance guidance",
+      "findings": [
+        "Blocking wheel listeners can delay scrolling; passive listeners let the browser proceed.",
+        "The revision installs no wheel or touch handlers at all. Its scroll observer is passive."
+      ]
+    },
+    {
+      "id": "scroll-behavior",
+      "url": "https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Properties/scroll-behavior",
+      "type": "MDN CSS reference",
+      "findings": [
+        "scroll-behavior governs navigation/API scrolling, not the physics of user scrolling.",
+        "Adding smooth alone would not fix the native-to-custom handoff problem."
+      ]
+    },
+    {
+      "id": "reduced-motion",
+      "url": "https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/At-rules/@media/prefers-reduced-motion",
+      "type": "MDN accessibility reference",
+      "findings": [
+        "Respect the request to reduce nonessential motion."
+      ],
+      "application": "Reduced-motion mode disables compulsory snapping; input remains native, with no scripted relocation."
+    }
+  ],
+  "audit": {
+    "previous": "Native scrolling was followed by a low-speed/input-quiet gate and a JavaScript spring. Enhanced CSS snapping was explicitly disabled.",
+    "inferred_ux_problems": [
+      "A near-rest delay followed by another acceleration can feel like two separate motions.",
+      "Repeated small wheel input can be pulled back to the same full-height photo before making useful progress.",
+      "Frame-based velocity filtering and script-driven scroll positions cannot consistently mirror platform-native inertia.",
+      "The old blur handler did not stop the monitoring loop."
+    ],
+    "evidence_type": "Source inspection, spring equation analysis and independent agent review; no claim of measured before/after FPS."
+  },
+  "decisions": [
+    {
+      "change": "Use CSS y mandatory and scroll-snap-align:start with scroll-snap-stop:normal.",
+      "why": "One native scrolling engine handles dragging, fling, deceleration, final alignment and interruption.",
+      "sources": [
+        "css-snap",
+        "webdev-native",
+        "compositor",
+        "apple-fluid"
+      ]
+    },
+    {
+      "change": "Remove all scripted scrollTop updates, gesture listeners, velocity polling and timed spring handoff.",
+      "why": "Avoid a second animation and input contention. JavaScript observes UI state only.",
+      "sources": [
+        "webdev-native",
+        "passive",
+        "scrollend"
+      ]
+    },
+    {
+      "change": "Keep predominant visibility observation for the counter; use native snap events when supported.",
+      "why": "Reflect the visible/settled photo without controlling motion.",
+      "sources": [
+        "snap-events"
+      ]
+    },
+    {
+      "change": "Use responsive photo srcsets and decode adjacent images outside scrolling handlers.",
+      "why": "Reduce avoidable transfer/decode pressure and prepare nearby photos.",
+      "evidence": "Engineering implementation choice; improvement in bandwidth/frame timing has not been benchmarked."
+    },
+    {
+      "change": "Honor reduced motion with free native scrolling.",
+      "sources": [
+        "reduced-motion"
+      ]
+    }
+  ],
+  "tradeoffs": [
+    "The browser selects the final target from direction, momentum and layout. It can prefer the next intended target over a strict maximum-visible calculation; this intentionally avoids fighting a flick or wheel gesture.",
+    "Snap duration and deceleration remain browser/OS controlled; there is no claim of identical feel across platforms.",
+    "The UI counter's older-browser fallback timer does not affect motion.",
+    "No new library or wheel-delta smoothing layer is introduced."
+  ],
+  "validation": {
+    "automated": "Six tests passed: predominant visibility, native mode without interception/polling/position writes, native snap notifications, intersection/resize fallbacks, legacy status timer, refresh and cleanup.",
+    "live_browser": "pending deployment",
+    "physical_devices": "Human iOS/Android and physical trackpad assessment remains necessary."
+  },
+  "image_requests": [
+    {
+      "url": "https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=1080&q=85",
+      "status": 200,
+      "type": "image/jpeg"
+    },
+    {
+      "url": "https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=1440&q=85",
+      "status": 200,
+      "type": "image/jpeg"
+    },
+    {
+      "url": "https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=1800&q=85",
+      "status": 200,
+      "type": "image/jpeg"
+    },
+    {
+      "url": "https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=720&q=85",
+      "status": 200,
+      "type": "image/jpeg"
+    },
+    {
+      "url": "https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?auto=format&fit=crop&w=1080&q=85",
+      "status": 200,
+      "type": "image/jpeg"
+    },
+    {
+      "url": "https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?auto=format&fit=crop&w=1440&q=85",
+      "status": 200,
+      "type": "image/jpeg"
+    },
+    {
+      "url": "https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?auto=format&fit=crop&w=1800&q=85",
+      "status": 200,
+      "type": "image/jpeg"
+    },
+    {
+      "url": "https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?auto=format&fit=crop&w=720&q=85",
+      "status": 200,
+      "type": "image/jpeg"
+    },
+    {
+      "url": "https://images.unsplash.com/photo-1472396961693-142e6e269027?auto=format&fit=crop&w=1080&q=85",
+      "status": 200,
+      "type": "image/jpeg"
+    },
+    {
+      "url": "https://images.unsplash.com/photo-1472396961693-142e6e269027?auto=format&fit=crop&w=1440&q=85",
+      "status": 200,
+      "type": "image/jpeg"
+    },
+    {
+      "url": "https://images.unsplash.com/photo-1472396961693-142e6e269027?auto=format&fit=crop&w=1800&q=85",
+      "status": 200,
+      "type": "image/jpeg"
+    },
+    {
+      "url": "https://images.unsplash.com/photo-1472396961693-142e6e269027?auto=format&fit=crop&w=720&q=85",
+      "status": 200,
+      "type": "image/jpeg"
+    },
+    {
+      "url": "https://images.unsplash.com/photo-1473448912268-2022ce9509d8?auto=format&fit=crop&w=1080&q=85",
+      "status": 200,
+      "type": "image/jpeg"
+    },
+    {
+      "url": "https://images.unsplash.com/photo-1473448912268-2022ce9509d8?auto=format&fit=crop&w=1440&q=85",
+      "status": 200,
+      "type": "image/jpeg"
+    },
+    {
+      "url": "https://images.unsplash.com/photo-1473448912268-2022ce9509d8?auto=format&fit=crop&w=1800&q=85",
+      "status": 200,
+      "type": "image/jpeg"
+    },
+    {
+      "url": "https://images.unsplash.com/photo-1473448912268-2022ce9509d8?auto=format&fit=crop&w=720&q=85",
+      "status": 200,
+      "type": "image/jpeg"
+    },
+    {
+      "url": "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1080&q=85",
+      "status": 200,
+      "type": "image/jpeg"
+    },
+    {
+      "url": "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1440&q=85",
+      "status": 200,
+      "type": "image/jpeg"
+    },
+    {
+      "url": "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1800&q=85",
+      "status": 200,
+      "type": "image/jpeg"
+    },
+    {
+      "url": "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=720&q=85",
+      "status": 200,
+      "type": "image/jpeg"
+    },
+    {
+      "url": "https://images.unsplash.com/photo-1518837695005-2083093ee35b?auto=format&fit=crop&w=1080&q=85",
+      "status": 200,
+      "type": "image/jpeg"
+    },
+    {
+      "url": "https://images.unsplash.com/photo-1518837695005-2083093ee35b?auto=format&fit=crop&w=1440&q=85",
+      "status": 200,
+      "type": "image/jpeg"
+    },
+    {
+      "url": "https://images.unsplash.com/photo-1518837695005-2083093ee35b?auto=format&fit=crop&w=1800&q=85",
+      "status": 200,
+      "type": "image/jpeg"
+    },
+    {
+      "url": "https://images.unsplash.com/photo-1518837695005-2083093ee35b?auto=format&fit=crop&w=720&q=85",
+      "status": 200,
+      "type": "image/jpeg"
+    }
+  ]
+}

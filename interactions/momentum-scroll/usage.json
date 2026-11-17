@@ -1,49 +1,53 @@
 {
-  "feature": "Native kinetic momentum scrolling with predominant-item alignment",
+  "feature": "Natural momentum and native photo snapping",
+  "version": 2,
   "category": "interactions/momentum-scroll",
-  "source": "Implemented from the user's written requirements; no reference site or extracted third-party interaction code.",
   "test_url": "https://nicholasmaritas.github.io/0AR5TAS/interactions/momentum-scroll/",
+  "implementation": "The browser owns the complete gesture, momentum and snapping interaction. JavaScript observes visible/settled photos only.",
   "files": {
-    "momentum-scroll.js": "Reusable native-scroll controller and pure geometry/spring helpers.",
+    "momentum-scroll.js": "createMomentumScroll(container,{itemSelector,onActiveChange}); refresh() and destroy(). No scripted scrolling.",
     "momentum-scroll.test.mjs": "Run node --test momentum-scroll.test.mjs.",
-    "index.html": "Six full-viewport photos for human flick and scrolling tests.",
-    "feed.css": "Responsive photo feed and CSS proximity-snap fallback when JavaScript does not run.",
-    "feed.js": "Initializes controller and current-photo counter.",
-    "photos.json": "External photo URLs and successful HTTP verification."
+    "feed.css": "Native y mandatory snapping, normal multi-target pass-through, reduced-motion free scrolling.",
+    "feed.js": "Counter, adjacent image preparation and lifecycle cleanup.",
+    "index.html": "Six full-screen responsive photographs.",
+    "photos.json": "Original photograph source requests.",
+    "research.json": "Nine primary sources, UX audit, design decisions, tradeoffs and validation."
   },
   "integration": [
-    "Give the container a fixed viewport height, overflow-y:auto, touch-action:pan-y pinch-zoom and scroll-behavior:auto.",
-    "Mark children data-scroll-item. With JavaScript enhanced, disable CSS scroll-snap-type so it cannot compete with the controller.",
-    "Import createMomentumScroll from momentum-scroll.js; call it with the scroll container. The returned controller has refresh() and destroy()."
+    "Give the container a fixed height, overflow-y:auto and scroll-snap-type:y mandatory.",
+    "Set every adjacent content item to scroll-snap-align:start and scroll-snap-stop:normal; do not force one-item-per-gesture stops.",
+    "Keep touch-action:pan-y pinch-zoom, native keyboard access and scroll-behavior:auto.",
+    "Import createMomentumScroll and optionally provide onActiveChange({index,item,count}). This callback must not reposition the feed.",
+    "For reduced motion, disable compulsory snapping using the provided media query."
   ],
   "behavior": {
-    "momentum": "Native browser touch/trackpad inertia. Input is passive and never preventDefault'ed or multiplied; native physics determine velocity-sensitive travel.",
-    "handoff": "Monitor actual scroll velocity. Start alignment only after speed remains below 40px/s for 100ms and input has been quiet for at least 160ms, with no active touch or pressed pointer.",
-    "selection": "Maximum vertically visible pixel area; center-distance tie break. No direction-forced next item.",
-    "alignment": "Start-align fitting items within scroll bounds. Oversized items covering the viewport remain freely readable.",
-    "easing": "Analytic critically damped spring, seeded with measured low native velocity. No artificial fling added.",
-    "interruption": "New wheel, touch, pointer or scroll-key input cancels spring immediately and restores native control.",
-    "accessibility": "Native keyboard scrolling, pinch zoom and reduced-motion immediate final alignment after settling. scroll-snap-stop:normal allows multi-item travel."
+    "momentum": "OS/browser native, velocity responsive on touch and trackpads.",
+    "snap": "Native engine uses gesture direction, natural stopping point and visible targets; it may pass multiple items.",
+    "interruption": "New input goes directly to the same native engine. There is no application animation to cancel.",
+    "visibility": "Predominantly visible item observation updates the photo counter. It never overrides native target selection.",
+    "oversized_items": "Native CSS snap rules allow scrolling within items larger than the viewport.",
+    "fallback": "Without native CSS snapping support the feed remains freely scrollable. IntersectionObserver/scrollend are feature-detected; a legacy timer updates status only.",
+    "reduced_motion": "Free native scrolling; no forced alignment or custom animation."
   },
+  "changes_from_v1": [
+    "Removed fixed 160ms input / 100ms velocity waits and separate spring.",
+    "Removed gesture interception and scroll-position writes, including resize-triggered alignment.",
+    "Removed continuous requestAnimationFrame velocity polling.",
+    "Native mandatory snap restores useful small wheel/keyboard movement.",
+    "Responsive image candidates and preparation of adjacent images reduce unnecessary loading pressure."
+  ],
   "configuration": {
     "itemSelector": "[data-scroll-item]",
-    "settleSpeed": 40,
-    "settleWindow": 100,
-    "inputQuiet": 160,
-    "frequency": 12
+    "onActiveChange": "optional function({index,item,count})",
+    "removed_options": "settleSpeed, settleWindow, inputQuiet and frequency belonged to the removed custom spring."
   },
   "dependencies": [],
-  "photos": "Six original Unsplash image URLs, external hosting required; no external JavaScript libraries.",
+  "research": "research.json",
+  "tradeoff": "Native snap selection honors direction and projected momentum. A strict instantaneous maximum-visible-target rule is intentionally not forced over native gesture intent.",
   "validation": {
     "syntax": "passed",
-    "automated": "7 tests passed: predominant visibility, fit/bounds/oversize, velocity-continuous spring, held touch, high-velocity multi-item travel, immediate interruption, reduced motion.",
-    "photo_requests": "All six returned HTTP 200 with image/jpeg content.",
-    "live_browser": "Passed live desktop checks: loaded all six photos; short wheel input returned to the predominantly visible photo; larger scroll aligned photo 2 at scrollTop 757; long scroll crossed multiple items and aligned final photo at 3785; Home and Page Down worked and settled exactly at 0 and 757. Enhanced mode disables competing CSS snapping.",
-    "physical_devices": "Real iOS/Android flick and hardware trackpad feel require human testing; native behavior varies by browser and operating system.",
-    "github_readback": "All seven uploaded files matched committed contents."
-  },
-  "deployment": {
-    "commit": "d9f22d68f810cbb69285d1e16fdef91b91f64b07",
-    "status": "success"
+    "automated": "Six tests passed; native controller cannot write scrollTop or scrollTo in test fixture; no wheel/touch handlers, no continuous frame loop.",
+    "live_browser": "pending deployment",
+    "physical_devices": "Native physics vary by browser/OS. Real touch and physical trackpad feel require human assessment."
   }
 }
