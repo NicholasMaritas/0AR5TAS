@@ -36,7 +36,14 @@
     "syntax": "passed",
     "automated": "Mouse/touch movement, threshold, bounds, click suppression, persistence and reset passed.",
     "source_browser": "Dragged source item and confirmed percentage position, dotted outline, and raised z-index at 1200x777.",
-    "comparison": "Live test-page comparison pending deployment."
+    "comparison": "Published test and original source compared at 1200x777: all four item x/y/width/height values and font family match exactly.",
+    "live_browser": "Passed mouse drag, click suppression, persistence after reload, reset, and click feedback. Test drag produced the same percentage coordinates as the source drag.",
+    "touch": "Automated touch-event checks passed; physical-device testing remains for humans."
   },
-  "test_url": "https://nicholasmaritas.github.io/0AR5TAS/interactions/draggable-items/"
+  "test_url": "https://nicholasmaritas.github.io/0AR5TAS/interactions/draggable-items/",
+  "deployment": {
+    "commit": "26543930d15b27ded17d97bcb3e2394e56310a21",
+    "status": "success",
+    "url": "https://nicholasmaritas.github.io/0AR5TAS/interactions/draggable-items/"
+  }
 }
