@@ -1,0 +1,65 @@
+# 080990 — PROJECT RULES, GOAL, AND CONTINUITY LOG
+
+Repository: https://github.com/NicholasMaritas/0AR5TAS
+Project repository: NicholasMaritas/0AR5TAS
+Restricted repository: NicholasMaritas/ntm90.github.io (OFF LIMITS)
+
+## RULES
+1. Respond in as few characters as possible.
+2. Answer questions without follow-up questions.
+3. Perform only the specified task; avoid scope drift.
+4. Never visit About, Policy, Terms of Service, Legal Notice, or similar pages during web searches.
+5. Present gathered research exclusively in JSON files for AI interpretation.
+6. Verify compliance with all rules throughout the chat.
+7. Never infer, assume, interpret, or add requirements, preferences, priorities, or objectives not explicitly stated by the user.
+8. Before every response or action, verify compliance with established rules. Execute only explicitly requested tasks. Never introduce unrequested deliverables, formats, actions, assumptions, or objectives. Correct violations before responding.
+   - No guesswork: Never invent or approximate design details without explicit authorization.
+   - Source verification: Inspect provided code, styles, assets, and rendered references before implementation.
+   - Visual validation: Compare recreated websites against originals at identical viewport dimensions; correct discrepancies before declaring completion.
+   - Transparency: Identify missing resources, unsupported features, and unverified results. Never claim accuracy without verification.
+9. Mandatory dependency inspection: Before declaring source information missing, unavailable, or insufficient, identify and attempt to open all referenced JavaScript, CSS, fonts, images, and external assets; document inaccessible dependencies and limitations.
+10. Access and verify https://github.com/NicholasMaritas/0AR5TAS. Work only in this project repository. Never access or modify NicholasMaritas/ntm90.github.io.
+
+Apply these project rules subject to higher-priority applicable instructions.
+
+## PROJECT GOAL
+Build a website with GitHub Pages using the repository:
+https://github.com/NicholasMaritas/0AR5TAS
+
+The user will direct the work one detail at a time, with ChatGPT providing assistance for implementation.
+
+## UI/UX FEATURE COLLECTION AND IMPLEMENTATION
+- Features will be discovered by the user on other websites while browsing; the complete feature list is not predetermined.
+- The user will provide source webpages, source code, screenshots, and/or related resources for inspection.
+- Inspect the provided sources and dependencies to identify the relevant feature code.
+- Extract or reconstruct, test, and verify the feature code before declaring it accurate.
+- Organize reusable feature code into category-based folders inside the project repository (for example, text-related features under a text folder; backgrounds under a backgrounds folder; animations under an animations folder). Categories follow actual feature types; do not invent features.
+- Preserve collected feature code for reference and potential future use.
+- Not all collected features will be used in the final GitHub Pages website.
+- Reference, test, adjust, and implement selected features only as explicitly directed by the user.
+- Compare results with source references at matching viewport dimensions, verify, and correct discrepancies before declaring completion.
+- Proceed incrementally and in the user's specified order.
+
+## NEW CHAT HANDOFF
+At the beginning of each new project chat:
+1. Access https://github.com/NicholasMaritas/0AR5TAS using available authorized GitHub access.
+2. Open and read the full contents of the repository-root file `080990` BEFORE performing new project tasks.
+3. Acknowledge the established rules, project goal, latest completed work, and any unfinished tasks.
+4. Continue strictly from the user's next explicit instruction; do not infer the next task.
+5. If GitHub access or the file cannot be read, disclose the limitation. Reading cannot be guaranteed automatically across unrelated chats.
+
+## CONTINUOUS TASK LOG — UPDATE AFTER EACH TASK
+The agent handling a task must update this file after each task to preserve continuity. Record the start and completion/status of each task, actions and files affected, validation, any blockers, and work still pending. Never record an unverified action as completed.
+
+### Verified project history prior to this file
+- COMPLETED — GitHub access verified as NicholasMaritas; access to NicholasMaritas/0AR5TAS confirmed.
+- COMPLETED — NicholasMaritas/ntm90.github.io identified as off-limits; project scope limited to NicholasMaritas/0AR5TAS.
+- COMPLETED — All four files on the project repository's main branch were removed: `.github/workflows/pages.yml`, `index.html`, `script.js`, and `styles.css`; file fetches returned 404 after deletion. Git history was retained.
+- COMPLETED — User established project rules, GitHub Pages goal, feature library workflow, and new-chat continuity requirement.
+
+### Task 001 — Create and upload continuity file
+- STARTED — 2026-11-17
+- Request: Create repository-root file named `080990`, containing project rules, goal, procedures, and a running task log; upload it to `NicholasMaritas/0AR5TAS`.
+- Action: Create this file on the default `main` branch.
+- Status: COMPLETED upon successful GitHub create-file commit; verify file contents by reading it back.
+- Pending: None after successful verification. Subsequent task entries belong below this entry.
