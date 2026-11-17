@@ -67,5 +67,58 @@
     "html_overlay": "<div id=\"screensaver\" class=\"fixed top-0 left-0 w-full h-full\"></div>",
     "css_excerpt": "#screensaver{opacity:0;pointer-events:none;transition:opacity .3s;z-index:1000}#screensaver.active{opacity:1;pointer-events:auto}#screensaver img{position:absolute;width:130px}@media screen and (min-width:1024px){#screensaver img{width:220px}}",
     "verification": "Re-fetched JavaScript and CSS successfully; confirmed linked assets and screensaver elements in user-uploaded HTML. No live visual test performed."
+  },
+  "collection": {
+    "date": "2026-11-17",
+    "files": [
+      "krink-screensaver.js",
+      "krink-screensaver.css",
+      "krink-screensaver.html",
+      "usage.json"
+    ],
+    "validation": {
+      "javascript_syntax": "passed node --check",
+      "behavior": "Passed isolated Node VM checks for initialization, null filtering, 150000ms activation, image generation and position ranges, 20000ms interval, mousemove dismissal, and no automatic restart.",
+      "github_readback": "All four collected files matched uploaded contents.",
+      "image_requests": [
+        {
+          "url": "//krink.com/cdn/shop/files/K-60_Blue_Web.png?v=1732122739",
+          "status": 200,
+          "type": "image/png",
+          "bytes": 136702
+        },
+        {
+          "url": "//krink.com/cdn/shop/files/K-66_Pink_Web.png?v=1732204248",
+          "status": 200,
+          "type": "image/png",
+          "bytes": 200395
+        },
+        {
+          "url": "//krink.com/cdn/shop/files/K-66_Yellow2_Web.png?v=1732202754",
+          "status": 200,
+          "type": "image/png",
+          "bytes": 150793
+        },
+        {
+          "url": "//krink.com/cdn/shop/files/K-60_Abstract_Web.png?v=1732122718",
+          "status": 200,
+          "type": "image/png",
+          "bytes": 114972
+        },
+        {
+          "url": "//krink.com/cdn/shop/files/K-60_Black_Web.jpg?v=1732199750",
+          "status": 200,
+          "type": "image/jpeg",
+          "bytes": 184103
+        },
+        {
+          "url": "//krink.com/cdn/shop/files/K-66_Green_Web.png?v=1732128387",
+          "status": 200,
+          "type": "image/png",
+          "bytes": 155772
+        }
+      ],
+      "visual_comparison": "Not performed; collected source only."
+    }
   }
 }
