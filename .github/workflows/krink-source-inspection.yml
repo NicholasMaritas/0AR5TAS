@@ -84,7 +84,7 @@ jobs:
           i=s.find('var Oa=function()')
           end=s.find('return e}()',i)
           excerpt=s[i:end+11] if end>i and end-i<16000 else s[i:i+5000]
-          calls=[{'pos':m.start(),'context':s[max(0,m.start()-180):m.end()+200]} for m in re.finditer(r'new Oa\\b|Oa\\(\\)',s)]
+          calls=[{'pos':m.start(),'context':s[max(0,m.start()-160):m.end()+180]} for m in re.finditer('Oa',s)]
           css='https://krink.com/cdn/shop/t/34/assets/style.css?v=159774163203296273991701282695'
           c=urllib.request.urlopen(urllib.request.Request(css,headers={'User-Agent':'Mozilla/5.0'}),timeout=25).read().decode('utf-8','replace')
           j=c.find('#screensaver')
