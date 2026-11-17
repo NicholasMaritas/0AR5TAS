@@ -35,8 +35,9 @@
     "Removed 3D pencil and all WebGL/Three.js initialization, custom cursor and palette. Retained drawing thickness interpolation and drawing-only Save behavior."
   ],
   "validation": {
-    "status": "pending deployment verification",
-    "original_history": "Prior validation retained in repository history.",
+    "syntax": "passed",
+    "isolated": "Drawing, finite radii, Clear and original PNG export passed without Three.js.",
+    "live_page": "Verified one canvas, regular auto cursor, no palette and no external scripts; drew black stroke and cleared it.",
     "physical_touch": "not tested"
   },
   "dependency_checks": [
@@ -120,5 +121,9 @@
     "font": "Original Galano Grotesque Semi Bold trial font service inaccessible; browser fallback font used, service script excluded.",
     "jquery": "Present in original external settings but unused by feature; excluded.",
     "codepen_runtime": "CodePen editor/watchdog scripts excluded."
+  },
+  "deployment": {
+    "commit": "282193d8a6cf68de989b14d32fa580f7403ace06",
+    "status": "success"
   }
 }
