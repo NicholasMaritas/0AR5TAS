@@ -50,8 +50,10 @@
     "syntax": "passed",
     "model_parse": "Original loaders parsed 2 model meshes and 6 materials successfully.",
     "source_browser": "CodePen editors and rendered preview inspected. Original preview reports WebGL context creation failure in this cloud browser; cannot verify original 3D appearance here.",
-    "live_page": "pending deployment",
-    "physical_touch": "not tested"
+    "live_page": "GitHub Pages deployment succeeded. Browser verified canvas strokes, switching black to blue, Clear removing strokes, and Save opening a loaded data:image/png export (1180x757).",
+    "physical_touch": "not tested",
+    "visual_limit": "Original and published 3D rendering cannot be compared because this cloud browser cannot create WebGL contexts; human WebGL-capable testing required. Original compiled CSS and model/camera/lighting/animation code retained.",
+    "github_readback": "All nine committed feature files matched uploaded contents."
   },
   "dependency_checks": [
     {
@@ -120,5 +122,9 @@
       "file": "pencil_diffuse.jpg"
     }
   ],
-  "test_url": "https://nicholasmaritas.github.io/0AR5TAS/interactions/pencil-sketch/"
+  "test_url": "https://nicholasmaritas.github.io/0AR5TAS/interactions/pencil-sketch/",
+  "deployment": {
+    "commit": "f732a45b81763e48e5645a8284ccea98d3fd5c9e",
+    "status": "success"
+  }
 }
