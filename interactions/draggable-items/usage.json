@@ -1,0 +1,42 @@
+{
+  "feature": "Oklama draggable items",
+  "source": "https://oklama.com/",
+  "original_module": 9858,
+  "source_file": "source-extract.json",
+  "implementation": "Standalone vanilla JavaScript port of the original drag effect, not a byte-identical React component.",
+  "files": {
+    "draggable.js": "Reusable enableDraggableItems(area, options) API returning reset() and destroy().",
+    "draggable.css": "Feature styles and inspected source typography/layout.",
+    "index.html": "Human test page using the original four visual items and original initial positions.",
+    "oklama-original-module.js": "Archived verbatim webpack module; not standalone executable."
+  },
+  "behavior": {
+    "mouse_and_touch": true,
+    "drag_threshold_px": 4,
+    "selected_outline": "2px dotted black",
+    "bring_to_front": true,
+    "position_units": "percent",
+    "bounds": "Parent dimensions; original 90px right/bottom inset reserves icon space.",
+    "persist": "localStorage, indexed by current path",
+    "native_image_drag": false
+  },
+  "adaptations": [
+    "React state and effects replaced with DOM API and explicit cleanup.",
+    "Coordinates calculated relative to parent so reusable containers work away from viewport origin.",
+    "Dedicated localStorage key; preserves entries for other test paths.",
+    "Reset control and click feedback added only for human testing.",
+    "touchcancel and window blur cancel active drag.",
+    "Context menu and original navigation/modal are excluded; item activation gives test feedback."
+  ],
+  "dependencies": {
+    "frameworks": [],
+    "external_assets": "Original Oklama image and font URLs; all fetched successfully."
+  },
+  "validation": {
+    "syntax": "passed",
+    "automated": "Mouse/touch movement, threshold, bounds, click suppression, persistence and reset passed.",
+    "source_browser": "Dragged source item and confirmed percentage position, dotted outline, and raised z-index at 1200x777.",
+    "comparison": "Live test-page comparison pending deployment."
+  },
+  "test_url": "https://nicholasmaritas.github.io/0AR5TAS/interactions/draggable-items/"
+}

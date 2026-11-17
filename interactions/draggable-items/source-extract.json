@@ -1,0 +1,198 @@
+{
+  "source_url": "https://oklama.com/_next/static/chunks/787-bdbf6e75789edb0a.js",
+  "module_id": 9858,
+  "component": "x (export K)",
+  "effect_start_character_offset": 2473,
+  "original_drag_effect": "(0,r.useEffect)((function(){var e,t=k.current,i=1,a=null,o=null,r=!1,c=0,l=0,s=0,u=0,d=0,h=0;n&&_(v(p));var A=function(){a=null,r=!1},x=function(t){var n;if(L.current!==t.target&&!(null===(n=L.current)||void 0===n?void 0:n.contains(t.target))){var r,d;if(B(null),f(t,MouseEvent))r=t.clientX,d=t.clientY;else{if(t.touches.length>1)return void A();r=t.touches[0].clientX,d=t.touches[0].clientY,w&&(e=setTimeout((function(){t.preventDefault(),B({x:r,y:d}),A()}),800))}o&&(o.style.outline=\"none\",o=null,N(null));for(var m=t.target;m&&!m.hasAttribute(\"data-drag\");)m=m.parentElement;if(m&&(m.style.outline=\"2px dotted black\",o=m,N(m),!f(t,MouseEvent)||0===t.button)){a=m;var h=m.getBoundingClientRect();m.style.zIndex=String(i++),c=r,l=d,s=h.x,u=h.y}}},g=function(n){if(a&&!L.current){var i,o;if(f(n,MouseEvent))i=n.clientX,o=n.clientY;else{if(n.touches.length>1)return;i=n.touches[0].clientX,o=n.touches[0].clientY}var m=i-c,A=o-l;if(!r){if(Math.sqrt(m*m+A*A)<4)return;e&&(clearTimeout(e),e=void 0),r=!0}n.preventDefault(),d=Math.min(t.offsetWidth,Math.max(0,m+s))/t.offsetWidth,h=Math.min(t.offsetHeight,Math.max(0,A+u))/t.offsetHeight,a.style.left=\"\".concat(100*d,\"%\"),a.style.top=\"\".concat(100*h,\"%\")}},y=function(t){if(f(t,MouseEvent)||!(t.touches.length>1)){if(e&&(clearTimeout(e),e=void 0),r&&a){if(n){var i=a.getAttribute(\"data-index\");\"string\"!==typeof i||isNaN(parseInt(i,10))||function(e,t,n){var i=v(e);i[t]=n;try{localStorage.setItem(e,JSON.stringify(m({},location.pathname,i)))}catch(a){}}(p,parseInt(i,10),[d,h])}t.preventDefault()}A()}},b=function(e){w&&(e.preventDefault(),B({x:e.clientX,y:e.clientY}))};return window.addEventListener(\"mousedown\",x),window.addEventListener(\"touchstart\",x),window.addEventListener(\"mousemove\",g),window.addEventListener(\"touchmove\",g,{passive:!1}),window.addEventListener(\"click\",y,!0),window.addEventListener(\"touchend\",y),window.addEventListener(\"contextmenu\",b),function(){window.removeEventListener(\"mousedown\",x),window.removeEventListener(\"touchstart\",x),window.removeEventListener(\"mousemove\",g),window.removeEventListener(\"touchmove\",g),window.removeEventListener(\"click\",y,!0),window.removeEventListener(\"touchend\",y),window.removeEventListener(\"contextmenu\",b),o&&(o.style.outline=\"none\"),e&&(clearTimeout(e),e=void 0)}}),[w,n,p])",
+  "original_local_storage_reader": "v=function(e){try{var t=localStorage.getItem(e);if(t){var n=JSON.parse(t)[location.pathname];if(Array.isArray(n)&&n.every((function(e){return null===e||Array.isArray(e)&&\"number\"===typeof e[0]&&\"number\"===typeof e[1]})))return n}}catch(i){}return[]}",
+  "original_module": "oklama-original-module.js",
+  "source_dependencies": [
+    {
+      "url": "https://oklama.com/_next/static/9dLLZsmhGcvG9sAYd3R7q/_buildManifest.js",
+      "status": 200,
+      "bytes": 946,
+      "type": "application/javascript; charset=utf-8",
+      "local": "__next_static_9dLLZsmhGcvG9sAYd3R7q__buildManifest.js"
+    },
+    {
+      "url": "https://oklama.com/_next/static/9dLLZsmhGcvG9sAYd3R7q/_middlewareManifest.js",
+      "status": 200,
+      "bytes": 92,
+      "type": "application/javascript; charset=utf-8",
+      "local": "__next_static_9dLLZsmhGcvG9sAYd3R7q__middlewareManifest.js"
+    },
+    {
+      "url": "https://oklama.com/_next/static/9dLLZsmhGcvG9sAYd3R7q/_ssgManifest.js",
+      "status": 200,
+      "bytes": 77,
+      "type": "application/javascript; charset=utf-8",
+      "local": "__next_static_9dLLZsmhGcvG9sAYd3R7q__ssgManifest.js"
+    },
+    {
+      "url": "https://oklama.com/_next/static/chunks/113-03130541d3b0e3ac.js",
+      "status": 200,
+      "bytes": 23711,
+      "type": "application/javascript; charset=utf-8",
+      "local": "__next_static_chunks_113-03130541d3b0e3ac.js"
+    },
+    {
+      "url": "https://oklama.com/_next/static/chunks/675-fca0467c7cfaa3b1.js",
+      "status": 200,
+      "bytes": 11539,
+      "type": "application/javascript; charset=utf-8",
+      "local": "__next_static_chunks_675-fca0467c7cfaa3b1.js"
+    },
+    {
+      "url": "https://oklama.com/_next/static/chunks/787-bdbf6e75789edb0a.js",
+      "status": 200,
+      "bytes": 9042,
+      "type": "application/javascript; charset=utf-8",
+      "local": "__next_static_chunks_787-bdbf6e75789edb0a.js"
+    },
+    {
+      "url": "https://oklama.com/_next/static/chunks/framework-5f4595e5518b5600.js",
+      "status": 200,
+      "bytes": 129979,
+      "type": "application/javascript; charset=utf-8",
+      "local": "__next_static_chunks_framework-5f4595e5518b5600.js"
+    },
+    {
+      "url": "https://oklama.com/_next/static/chunks/main-04bdde0b0d3e5446.js",
+      "status": 200,
+      "bytes": 101482,
+      "type": "application/javascript; charset=utf-8",
+      "local": "__next_static_chunks_main-04bdde0b0d3e5446.js"
+    },
+    {
+      "url": "https://oklama.com/_next/static/chunks/pages/_app-30d44e9f6482d855.js",
+      "status": 200,
+      "bytes": 1905,
+      "type": "application/javascript; charset=utf-8",
+      "local": "__next_static_chunks_pages__app-30d44e9f6482d855.js"
+    },
+    {
+      "url": "https://oklama.com/_next/static/chunks/pages/index-830153a7483262b6.js",
+      "status": 200,
+      "bytes": 4658,
+      "type": "application/javascript; charset=utf-8",
+      "local": "__next_static_chunks_pages_index-830153a7483262b6.js"
+    },
+    {
+      "url": "https://oklama.com/_next/static/chunks/polyfills-5cd94c89d3acac5f.js",
+      "status": 200,
+      "bytes": 91434,
+      "type": "application/javascript; charset=utf-8",
+      "local": "__next_static_chunks_polyfills-5cd94c89d3acac5f.js"
+    },
+    {
+      "url": "https://oklama.com/_next/static/chunks/webpack-9b312e20a4e32339.js",
+      "status": 200,
+      "bytes": 1636,
+      "type": "application/javascript; charset=utf-8",
+      "local": "__next_static_chunks_webpack-9b312e20a4e32339.js"
+    },
+    {
+      "url": "https://oklama.com/_next/static/css/d291c0c2a5f69739.css",
+      "status": 200,
+      "bytes": 19005,
+      "type": "text/css; charset=utf-8",
+      "local": "__next_static_css_d291c0c2a5f69739.css"
+    },
+    {
+      "url": "https://oklama.com/_next/static/media/black.2928ccde.png",
+      "status": 200,
+      "bytes": 2827,
+      "type": "image/png",
+      "local": "__next_static_media_black.2928ccde.png"
+    },
+    {
+      "url": "https://oklama.com/_next/static/media/default.0302e2ab.png",
+      "status": 200,
+      "bytes": 1817,
+      "type": "image/png",
+      "local": "__next_static_media_default.0302e2ab.png"
+    },
+    {
+      "url": "https://oklama.com/_next/static/media/gray.baac307f.png",
+      "status": 200,
+      "bytes": 1779,
+      "type": "image/png",
+      "local": "__next_static_media_gray.baac307f.png"
+    },
+    {
+      "url": "https://oklama.com/apple-touch-icon.png",
+      "status": 200,
+      "bytes": 16704,
+      "type": "image/png",
+      "local": "_apple-touch-icon.png"
+    },
+    {
+      "url": "https://oklama.com/favicon-16x16.png",
+      "status": 200,
+      "bytes": 1226,
+      "type": "image/png",
+      "local": "_favicon-16x16.png"
+    },
+    {
+      "url": "https://oklama.com/favicon-32x32.png",
+      "status": 200,
+      "bytes": 1563,
+      "type": "image/png",
+      "local": "_favicon-32x32.png"
+    },
+    {
+      "url": "https://oklama.com/mm.jpg",
+      "status": 200,
+      "bytes": 9779,
+      "type": "image/jpeg",
+      "local": "_mm.jpg"
+    },
+    {
+      "url": "https://oklama.com/site.webmanifest",
+      "status": 200,
+      "bytes": 372,
+      "type": "application/manifest+json; charset=utf-8",
+      "local": "_site.webmanifest"
+    },
+    {
+      "url": "https://oklama.com/_next/static/media/JetBrainsMono-Regular.773863c9.woff",
+      "status": 200,
+      "bytes": 55968
+    },
+    {
+      "url": "https://oklama.com/_next/static/media/JetBrainsMono-Regular.bae14b26.woff2",
+      "status": 200,
+      "bytes": 38844
+    },
+    {
+      "url": "https://oklama.com/_next/static/media/black.2928ccde.png",
+      "status": 200,
+      "bytes": 2827
+    },
+    {
+      "url": "https://oklama.com/_next/static/media/default.0302e2ab.png",
+      "status": 200,
+      "bytes": 1817
+    },
+    {
+      "url": "https://oklama.com/_next/static/media/folder.cd74367e.gif",
+      "status": 200,
+      "bytes": 531
+    },
+    {
+      "url": "https://oklama.com/_next/static/media/gray.baac307f.png",
+      "status": 200,
+      "bytes": 1779
+    },
+    {
+      "url": "https://oklama.com/_next/static/media/mm.88f5fe45.jpg",
+      "status": 200,
+      "bytes": 951411
+    },
+    {
+      "url": "https://oklama.com/_next/static/media/white.ceaab2bb.png",
+      "status": 200,
+      "bytes": 2810
+    }
+  ]
+}

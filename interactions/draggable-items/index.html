@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Oklama draggable items test</title><link rel="stylesheet" href="draggable.css"></head>
+<body>
+<div class="drag-stage"><div class="drag-area" id="drag-area">
+<a draggable="false" data-drag="true" data-index="0" style="top:75%;left:65%" href="#nu-thoughts"><img draggable="false" src="https://oklama.com/_next/static/media/default.0302e2ab.png" width="64" height="64" alt=""><span>nu thoughts</span></a>
+<a draggable="false" data-drag="true" data-index="1" style="top:15%;left:55%" href="#black-folder" aria-label="Black folder"><img draggable="false" src="https://oklama.com/_next/static/media/black.2928ccde.png" width="64" height="64" alt=""><span>​</span></a>
+<a draggable="false" data-drag="true" data-index="2" style="top:48%;left:18%" href="#gray-folder" aria-label="Gray folder"><img draggable="false" src="https://oklama.com/_next/static/media/gray.baac307f.png" width="64" height="64" alt=""><span>​</span></a>
+<div draggable="false" data-drag="true" data-index="3" data-image style="top:50%;left:50%"><img draggable="false" src="https://oklama.com/mm.jpg" width="84" height="84" alt="Album artwork"></div>
+</div></div>
+<nav class="test-controls" aria-label="Test controls"><span>Drag an item. Reload to check saved positions.</span><button id="reset" type="button">Reset positions</button></nav>
+<p id="status" role="status">Click without dragging to test item activation.</p>
+<script type="module">
+import { enableDraggableItems } from './draggable.js';
+const area = document.querySelector('#drag-area');
+const status = document.querySelector('#status');
+const drag = enableDraggableItems(area);
+document.querySelector('#reset').addEventListener('click', () => {drag.reset(); status.textContent = 'Positions reset.';});
+for (const item of area.querySelectorAll('[data-drag]')) item.addEventListener('click', event => {
+  if (event.defaultPrevented) return;
+  event.preventDefault(); status.textContent = 'Activated item ' + (Number(item.dataset.index) + 1) + ' without dragging.';
+});
+</script></body></html>
