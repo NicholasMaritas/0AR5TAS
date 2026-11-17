@@ -118,3 +118,10 @@ The agent handling a task must update this file after each task to preserve cont
 - Located drag effect in webpack module 9858 (export K/component x), chunk 787-bdbf6e75789edb0a.js. Inspected linked scripts/CSS, fonts and referenced images; dependency requests succeeded. Verified source drag in browser at 1200x777.
 - Added interactions/draggable-items/: draggable.js, draggable.css, index.html, oklama-original-module.js, source-extract.json, usage.json. Standalone port preserves 4px threshold, mouse/touch drag, outline, z-index, percentage bounds and persistence; adaptations documented. Original module archived. Human test replaces navigation/modal with click feedback and adds reset.
 - Validation: Syntax and isolated mouse/touch, threshold, bounds, click suppression, persistence and reset tests passed. Pages publication and live comparison pending.
+
+### Task 008 — Completion verification
+- COMPLETED — 2026-11-17. Commit 26543930d15b27ded17d97bcb3e2394e56310a21 deployed successfully through GitHub Pages; all six uploaded feature files read back identically.
+- At matched 1200x777 viewports, source/test all four item positions and dimensions matched exactly; inspected font family matched, and all original images loaded. Mouse drag produced source-equivalent final percentages and outline/z-index. Reload retained the position; reset restored original positions; click without dragging produced feedback without navigation. Touch behavior covered by automated checks; physical-device touch test remains unverified.
+- Usage JSON updated with verification and adaptation details. No whole-website recreation claimed; source navigation, context menu and modal excluded from isolated test.
+- Human test: https://nicholasmaritas.github.io/0AR5TAS/interactions/draggable-items/
+- Pending: None for extraction, organization and human testing environment setup.
