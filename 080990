@@ -133,3 +133,10 @@ The agent handling a task must update this file after each task to preserve cont
 - Files: interactions/pencil-sketch/{original.html,original.scss,original.js,sketch.css,sketch.js,index.html,MTLLoader.js,OBJLoader.js,usage.json}. Original sources retained; test adaptations and dependency checks documented in usage.json.
 - Dependency checks: Three.js r83, pencil MTL/OBJ, texture and cursor fetched successfully. Original loader assets.codepen.io requests returned 403; same-author original S3 loaders fetched and bundled. Font trial service inaccessible; no font substitution claimed. jQuery unused and CodePen editor/watchdog excluded.
 - Validation: Syntax passed; original loaders parsed pencil model into 2 meshes and 6 materials. Original preview fails WebGL context creation in cloud browser. Test handles unsupported WebGL explicitly and retains 2D drawing without claiming a rendered 3D pencil. Publication and live input testing pending.
+
+### Task 009 — Completion verification
+- COMPLETED — 2026-11-17. Commit f732a45b81763e48e5645a8284ccea98d3fd5c9e deployed successfully. All nine feature files read back identically from main.
+- Live browser: drew a stroke, selected blue and drew a second colored stroke, verified Clear removed marks, and Save opened a successfully loaded PNG image at 1180x757.
+- Limitations: Cloud browser cannot create WebGL contexts in either the original CodePen or published test; 3D pencil visual equivalence remains unverified and requires a WebGL-capable human browser. Original font service inaccessible. Physical touch testing not performed. Limitations and source/test changes documented in usage.json.
+- Human test: https://nicholasmaritas.github.io/0AR5TAS/interactions/pencil-sketch/
+- Pending: None for source collection, organization and human-test environment setup; human WebGL/touch validation remains available at the test URL.
