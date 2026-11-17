@@ -1,0 +1,108 @@
+#mfPreviewBar {
+	display: none !important;
+}
+
+html,
+body {
+  position: fixed;
+  overflow: hidden;
+	touch-action: none;
+}
+
+body {
+	background-color: #f7f4f0;
+	cursor: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/605067/cursor.png'), auto;
+	font-family: 'Galano Grotesque Semi Bold';
+	margin: 0;
+	overflow: hidden;
+}
+
+button {
+	font-family: 'Galano Grotesque Semi Bold';
+}
+
+.colours {
+	bottom: 30px;
+	display: none;
+	left: 50%;
+	list-style-type: none;
+	padding-left: 0;
+	position: absolute;
+	transform: translateX(-50%);
+	z-index: 10;
+	
+	@media (min-width: 1024px) {
+		display: flex;
+	}
+	
+	li {
+		border-radius: 50%;
+		display: inline-block;
+		height: 14px;
+		margin: 0 12px;
+		width: 14px;
+		
+		&:nth-child(1){
+			background-color: #100c08;
+		}
+		&:nth-child(2){
+			background-color: #759BA9;
+		}
+		&:nth-child(3){
+			background-color: #77dd77;
+		}
+		&:nth-child(4){
+			background-color: #ff6961;
+		}
+		&:nth-child(5){
+			background-color: #ffd1dc;
+		}
+	}
+}
+
+.pencil__refresh {
+	background-color: #FCF4EA;
+	border: none;
+	border-radius: 50%;
+	bottom: 18px;
+	cursor: pointer;
+	height: 26px;
+	padding: 4px 1px 0px;
+	position: absolute;
+	left: 50%;
+	text-align: center;
+	transform: translateX(-50%);
+	width: auto;
+	z-index: 3;
+				
+	@media (min-width: 1024px) {
+		bottom: 27px;
+		left: 30px;
+		transform: none;
+	}
+}
+
+.pencil__submit {
+	bottom: 27px;
+	display: none;
+	position: absolute;
+	right: 30px;
+	z-index: 4;
+				
+	@media (min-width: 1024px) {
+	 display: block;
+	}
+}
+
+.btn {
+	background-color: transparent;
+	border: none;
+	cursor: pointer;
+	font-size: 13px;
+	letter-spacing: .05em;
+	outline: none;
+	padding: 5px 10px 1px 10px;
+	text-transform: uppercase;
+	user-select: none;
+	-moz-user-select: none;
+}
