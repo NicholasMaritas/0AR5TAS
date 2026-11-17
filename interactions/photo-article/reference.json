@@ -1433,7 +1433,7 @@
       "signature": "wOF2",
       "saved_file": "GeistMono-ascii.woff2",
       "sha256": "0c14ded1b6520ea5a5443bd7d82a594c86a9155eb305a1442e67be1895a167ba",
-      "font_metadata_note": "No module named brotli"
+      "font_metadata_note": "fc-scan verified Geist Mono variable Thin through Black styles."
     }
   ],
   "source_css_tokens": {
@@ -1591,5 +1591,14 @@
     "url": "https://raw.githubusercontent.com/google/fonts/main/ofl/geistmono/OFL.txt",
     "http_status": 200,
     "font_family_verified": "fc-scan identifies Geist Mono and variable Thin through Black styles."
+  },
+  "validation": {
+    "automated": "38 tests passed:18 article controller,14 caption,6 native scroll; JavaScript syntax passed.",
+    "live_browser": "Passed at1180x757 on public Pages:800ms caption reveal,420ms hide on actual scrolling, ordinary image click preserves opacity1; selected decoded photo shrinks into348x393.7px right frame; intro geometry [40,272.09375,673,214.296875] identical during/after movement; article scroll557px leaves feed757px; X stays top18px; closing restores same photo and focus to feed while caption rearms; Escape interrupts opening and reverses; final revision module feed.js?v=6 and photo-article.js?v=2 verified.",
+    "physical_touch": "not tested; human test URL provided",
+    "reduced_motion": "Automated immediate transitions, preference changes during motion and partial-photo free-scroll return passed; device preference not browser-tested.",
+    "mobile_layout": "Source mobile CSS inspected; implementation follows image-first stack. Mobile visual/physical-device test not performed.",
+    "github_readback": "All13 original text files and5 follow-up files read back identically; binary font matched source SHA256.",
+    "public_assets": "All7 active runtime/style/font files returned200 and byte-matched; final3 changed runtime files rechecked after deployment."
   }
 }

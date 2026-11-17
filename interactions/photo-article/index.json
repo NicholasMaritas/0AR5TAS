@@ -19,7 +19,7 @@
     "The complete article is laid out before animation and remains stationary. A fully decoded copy of the selected image covers it initially, then shrinks into the right-hand image frame. Object-fit:cover preserves aspect ratio while the crop changes.",
     "The feed gradient and caption dissolve without an initial brightness jump. Article scrolling remains locked until opening finishes.",
     "The top-right X or Escape reverses from the photo current rectangle, including an interrupted opening or scrolled article image. Article remains stationary while it is covered.",
-    "Background feed is inert and locked during reading; normal close restores the existing feed position without a scroll write and restores keyboard focus. Resize recovery aligns the original photo only when dimensions actually changed.",
+    "Background feed is inert and locked during reading; normal close restores the existing feed position without a scroll write and restores keyboard focus to the button if visible, otherwise to the feed during caption rearming. Resize recovery aligns the original photo only when dimensions actually changed.",
     "Pending image/font preparation is canceled if user moves the feed. Failed image copies do not expose a blank cover.",
     "Reduced-motion preference removes traveling/fade animations. Resizing or changing that preference during movement cancels/retargets safely.",
     "Below800px the article follows the reference image-first stack, rather than squeezing readable text beside a narrow photo."
@@ -37,12 +37,17 @@
   "content": "Clearly labeled sample article, selected existing photo title and alt description; final blog content was not supplied.",
   "test_url": "https://nicholasmaritas.github.io/0AR5TAS/interactions/momentum-scroll/",
   "validation": {
-    "automated": "37 tests passed:17 article controller,14 caption,6 native scroll. JS syntax passed.",
-    "local_browser": "Passed at1180x757: decoded selected photo enters right frame; article intro rectangle identical during/after motion; article scroll557px leaves background feed at757px; close X remains at top18px; normal reverse restores selected photo. Reference/tablet frame proportions compared at same viewport.",
-    "public_pages": "pending",
-    "physical_touch": "not tested"
+    "automated": "38 tests passed:18 article controller,14 caption,6 native scroll; JavaScript syntax passed.",
+    "live_browser": "Passed at1180x757 on public Pages:800ms caption reveal,420ms hide on actual scrolling, ordinary image click preserves opacity1; selected decoded photo shrinks into348x393.7px right frame; intro geometry [40,272.09375,673,214.296875] identical during/after movement; article scroll557px leaves feed757px; X stays top18px; closing restores same photo and focus to feed while caption rearms; Escape interrupts opening and reverses; final revision module feed.js?v=6 and photo-article.js?v=2 verified.",
+    "physical_touch": "not tested; human test URL provided",
+    "reduced_motion": "Automated immediate transitions, preference changes during motion and partial-photo free-scroll return passed; device preference not browser-tested.",
+    "mobile_layout": "Source mobile CSS inspected; implementation follows image-first stack. Mobile visual/physical-device test not performed.",
+    "github_readback": "All13 original text files and5 follow-up files read back identically; binary font matched source SHA256.",
+    "public_assets": "All7 active runtime/style/font files returned200 and byte-matched; final3 changed runtime files rechecked after deployment."
   },
   "deployment": {
-    "status": "pending"
+    "commit": "f8d132becc6be4a39b37c95b12375068b5ca66e3",
+    "status": "success",
+    "workflow_run": 44178355009
   }
 }

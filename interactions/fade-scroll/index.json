@@ -48,11 +48,13 @@
   "reduced_motion": "After400ms of stillness, show the predominant photo caption without a fade or forced snap; article transitions are immediate.",
   "test_url": "https://nicholasmaritas.github.io/0AR5TAS/interactions/momentum-scroll/",
   "validation": {
-    "automated": "14 existing caption tests passed; scheduling/scroll module unchanged.",
-    "live_browser": "Local desktop caption/article checks complete; public Pages verification pending.",
-    "physical_touch": "not tested"
+    "automated": "14 caption tests passed; article integration18 and native scrolling6 also passed.",
+    "live_browser": "Public Pages verified ordinary image click preserves opacity1; actual scroll hides departing caption with0.42s transition; settled caption uses0.8s cubic-bezier(.4,0,.2,1) and reaches opacity1. Read more opens stationary article behind moving selected photo and X restores feed.",
+    "physical_touch": "not tested",
+    "github_readback": "All changed feature/feed files matched committed contents."
   },
   "deployment": {
-    "status": "pending"
+    "commit": "f8d132becc6be4a39b37c95b12375068b5ca66e3",
+    "status": "success"
   }
 }

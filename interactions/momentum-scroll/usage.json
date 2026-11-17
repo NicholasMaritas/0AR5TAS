@@ -46,10 +46,10 @@
   "tradeoff": "Native snap selection honors direction and projected momentum. A strict instantaneous maximum-visible-target rule is intentionally not forced over native gesture intent.",
   "validation": {
     "syntax": "passed",
-    "automated": "Six native scrolling tests and fourteen caption tests passed. Article controller suite separately indexed.",
-    "live_browser": "Local desktop caption/article checks complete; public Pages verification pending.",
+    "automated": "Six native scrolling,14 caption and18 article tests passed. Native controller unchanged.",
+    "live_browser": "Passed at1180x757 on public Pages:800ms caption reveal,420ms hide on actual scrolling, ordinary image click preserves opacity1; selected decoded photo shrinks into348x393.7px right frame; intro geometry [40,272.09375,673,214.296875] identical during/after movement; article scroll557px leaves feed757px; X stays top18px; closing restores same photo and focus to feed while caption rearms; Escape interrupts opening and reverses; final revision module feed.js?v=6 and photo-article.js?v=2 verified.",
     "physical_devices": "Native physics vary by browser/OS. Real touch and physical trackpad feel require human assessment.",
-    "github_readback": "pending"
+    "github_readback": "All13 original text files and5 follow-up files read back identically; binary font matched source SHA256."
   },
   "test_composition": {
     "name": "fade + scroll",
@@ -62,6 +62,7 @@
     "read_more": "../photo-article/index.json"
   },
   "deployment": {
-    "status": "pending"
+    "commit": "f8d132becc6be4a39b37c95b12375068b5ca66e3",
+    "status": "success"
   }
 }
