@@ -1,0 +1,12 @@
+{
+  "source": "User-provided thumb_radius_mobile_website_navigation_guide.pdf, three pages",
+  "decisions": [
+    "Mobile bottom navigation with three original destinations and More; all seven links retained",
+    "Original source order retained; destinations labeled from existing routes, not invented site architecture",
+    "12px dots with at least44px targets;64px bottom cells and48px overflow rows",
+    "Safe-area insets, page bottom padding, keyboard focus and Escape closing",
+    "No current-page indicator falsely assigned: all destinations are external source pages",
+    "Desktop original vertical dots preserved; mobile breakpoint767px"
+  ],
+  "validation": "Source/markup reviewed; deployment and browser checks pending"
+}
