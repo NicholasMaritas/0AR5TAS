@@ -1,0 +1,179 @@
+{
+  "name": "SNEEZE archive media selector",
+  "source_url": "https://www.sneezemag.com/pages/archive",
+  "retrieved_date": "2026-11-18",
+  "user_html": {
+    "file": "Pasted text.txt",
+    "bytes": 189032,
+    "sha256": "8ac51ce1d3bc686285bc918e6b1c0f4c2b761dd418efa41cb352e1ea19179af6"
+  },
+  "assets": [
+    {
+      "url": "https://www.sneezemag.com/cdn/shop/t/80/assets/theme.scss.css?v=56789389243075830841783228721",
+      "status": 200,
+      "file": "theme.css",
+      "bytes": 21269,
+      "type": "text/css"
+    },
+    {
+      "url": "https://www.sneezemag.com/cdn/shop/t/80/assets/theme.js?v=55810362901795548271783212049",
+      "status": 200,
+      "file": "theme.js",
+      "bytes": 288453,
+      "type": "text/javascript"
+    }
+  ],
+  "theme_js_sha256": "c7644fe338571edcd7c9739fcc637ed40152dca2808a00cddff82fae622cd36f",
+  "original_modules": [
+    {
+      "id": 64,
+      "role": "Ticker-page selection and caption/background orchestration",
+      "start": 256463,
+      "end_exclusive": 261503
+    },
+    {
+      "id": 67,
+      "role": "Responsive picture/native video background",
+      "start": 268999,
+      "end_exclusive": 270873
+    },
+    {
+      "id": 68,
+      "role": "Archive thumbnail/zoom gallery and optional Vimeo modal",
+      "start": 270874,
+      "end_exclusive": 274441
+    },
+    {
+      "id": 69,
+      "role": "Caption visibility base",
+      "start": 274442,
+      "end_exclusive": 275434
+    },
+    {
+      "id": 72,
+      "role": "Moving ticker/click and hover/touch preload",
+      "start": 280322,
+      "end_exclusive": 282754
+    }
+  ],
+  "original_runtime_dependencies": {
+    "jquery": "3.2.1 (bundled module50)",
+    "marquee3000": "bundled module51",
+    "imagesLoaded": "4.1.4 (module48)",
+    "Modernizr": "inline3.5.0 feature detector",
+    "optional_video_modal": "Bundled Vimeo player module1 and Bootstrap modal plugin; not required by the standalone background-video selector."
+  },
+  "original_module_reference_limits": "original-modules.js preserves exact Browserify entries and require mappings; it is a source reference, not an independently bootable bundle. Original page module64 also refers to section base61 and nonarchive caption variants70/71; complete theme URL is recorded. Use archive-selector.js for the standalone selection behavior.",
+  "data_contract": {
+    "join_key": "data-id",
+    "ticker_items": 21,
+    "captions": 19,
+    "backgrounds": 21,
+    "background_videos": 14,
+    "thumbnails": 46,
+    "zoom_containers": 19,
+    "captionless_ids": [
+      "1598905274621",
+      "e3fb7807-716d-44aa-81cc-66c7156c9920"
+    ],
+    "thumbnail_order": "Sibling index in [data-thumb] parent corresponds to [data-zoom] img order."
+  },
+  "behavior": [
+    "Ticker click activates the caption/background with the same ID and hides previous selection.",
+    "Hover/touchstart preloads thumbs; it does not change the background.",
+    "Selected native video is muted/looping/inline, lazily loads sources and plays oncanplay; hiding pauses it.",
+    "Caption selection loads thumbs and large gallery images; background-only items are valid.",
+    "Thumb opens a fixed viewport image overlay using contain fit; clicking it fades images out and hides overlay after200ms.",
+    "Original ticker shifts up only when a caption is active; header logo resets selection."
+  ],
+  "source_timings": {
+    "background_fade_ms": 200,
+    "video_fade_ms": 150,
+    "ticker_shift_ms": 175,
+    "zoom_fade_and_close_ms": 200,
+    "marquee_speed": "data-speed5.3 pixels per animation frame, not per second."
+  },
+  "layout": {
+    "desktop_caption_left_px": 55,
+    "caption_bottom_px": 20,
+    "mobile_caption_gutters_px": 20,
+    "desktop_breakpoint_px": 768,
+    "thumbnail_max_px": [
+      102,
+      45
+    ],
+    "background_fit": "cover",
+    "zoom_fit": "contain",
+    "zoom_dimensions": "95% viewport;85% at>=576px; width75% at>=1200px",
+    "font": "Courier New,Courier,monospace;12px/1.2"
+  },
+  "requested_example": {
+    "ticker_image": "https://www.sneezemag.com/cdn/shop/files/ticker-reebok-black_900x.png?v=1656890036",
+    "id": "20fc3c2a-139a-4623-a7fe-b727e74749df",
+    "title": "SNEEZE/Reebok LT Court",
+    "thumb_count": 3,
+    "native_video": "https://cdn.shopify.com/videos/c/o/v/be1ebf15982548f08b48e8d26a74a08d.mp4"
+  },
+  "source_vs_upload": "Feature sections are semantically identical; exact markup differs only by two nonbreaking spaces in the older2020 Reebok description. Requested2022 Reebok item is unchanged.",
+  "dependency_validation": {
+    "direct_archive_media_urls": 468,
+    "successful_HEAD_requests": 468,
+    "failed": 0,
+    "core_js_css_status": 200,
+    "css_source_map_status": 200,
+    "font_files": "No webfont URLs; system font stack."
+  },
+  "validation": {
+    "tests": "13/13 standalone behavior tests and JavaScript syntax passed.",
+    "matched_viewport": "Original and local Reebok selection at1180x757: caption content x55,y611.25,width540,height125.75; three thumbnail rectangles and12px/14.4px font metrics matched exactly.",
+    "source_zoom": "At1180x757, second thumb opens product-reebok-black-tops_1600x.png with contain-fit bounds x88.5,y56.78125,width1003,height643.4375.",
+    "local_zoom": "At1168x735, same second image/contain fit, bounds x87.59375,y55.125,width992.796875,height624.75 (85% viewport).",
+    "native_video": "Source and extracted Reebok video reached readyState4 with pausedfalse and advancing playback; same MP4 URL.",
+    "photo_and_reset": "Local Baker photo decoded successfully; switching from video paused the old video. Explicit reset restored default and removed ticker shift.",
+    "physical_touch": "not tested",
+    "equivalence_scope": "Selection/media/caption/zoom component only; no full-site or moving-ticker visual-equivalence claim."
+  },
+  "pages": {
+    "instruction": "Keep existing GitHub Pages test intact",
+    "status": "Existing runtime and entry points excluded from changes; repository/live preservation verification pending.",
+    "baseline": [
+      {
+        "path": "index.html",
+        "status": 200,
+        "sha256": "2276ccfe14b275ea156cd01b8a75ad4c1cfd44ff50cbd782fa504634c42b8298",
+        "git_blob_sha": "310637701ff96e0b5f6c9d8d8172a4c61ff5e69a"
+      },
+      {
+        "path": "navigation/looping-dot-menu/index.html",
+        "status": 200,
+        "sha256": "a387a4459654e12406263fdbe320b5f16df69958421ba6a5d6179f3ed878c68a",
+        "git_blob_sha": "3dad5202772e03a50617cb3267dc04e3a13cc313"
+      },
+      {
+        "path": "navigation/looping-dot-menu/menu.css",
+        "status": 200,
+        "sha256": "2e6b67af3f67a43a47a3181345696ae7a42ab561139f57da1502cd2cbe362ba2",
+        "git_blob_sha": "94c2f0db184499d8a0554a7927a07039ec350a8e"
+      },
+      {
+        "path": "navigation/looping-dot-menu/menu.js",
+        "status": 200,
+        "sha256": "b026f45a6c7eac32f7e2d1600e7ea6adcd0778446b4ea49aaa0c91fb9d2e9cab",
+        "git_blob_sha": "0ed662a96c484ff1cac92a2d3ef0341e52d4c1fc"
+      },
+      {
+        "path": "navigation/looping-dot-menu/trigger-slide.js",
+        "status": 200,
+        "sha256": "80afb8f8816ec8e6dd0cd1c282c57fec9b28be68f04dbec8d5d754de078e6cdf",
+        "git_blob_sha": "047c4327bf99d55548ba9f12b451175810c741da"
+      },
+      {
+        "path": "navigation/looping-dot-menu/motion.js",
+        "status": 200,
+        "sha256": "e7e23c94ed94939ed593ca695c2dc3554f67070eb561d1192e366f2fe166a3da",
+        "git_blob_sha": "99587807026c968c92c7d22d08a2b367921bdd41"
+      }
+    ]
+  },
+  "module_offsets_unit": "Zero-based character indexes in decoded theme.js; end index exclusive."
+}

@@ -1,0 +1,68 @@
+/* Exact feature rules; source media contexts retained. HTML also supplies45px item gap. */
+.site-background{position:fixed;top:0;left:0;width:100%;height:100%;height:100vh;overflow:hidden;z-index:-2;pointer-events:none;opacity:0;transition:opacity .2s cubic-bezier(.6,.29,.46,.88)}
+.is-loading .site-background{opacity:0!important}
+.site-background.is-active{z-index:-1;opacity:1;transition-timing-function:cubic-bezier(.05,.41,.22,.84)}
+.site-background picture.lazy img{opacity:0}
+.site-background picture.lazy-loaded img{opacity:1;transition:opacity .2s cubic-bezier(.05,.41,.22,.84)}
+.site-background img,.site-background video{position:absolute;top:0;left:0;height:100%;width:100%;-o-object-fit:cover;object-fit:cover}
+.site-background img{z-index:1}
+.site-background video{z-index:2;opacity:0;transition:opacity .15s cubic-bezier(.05,.41,.22,.84)}
+.site-background.video-loaded video{opacity:1}
+.ticker{position:fixed;top:50%;left:0;width:100%;white-space:nowrap;overflow:hidden;-webkit-transform:translateY(-50%);transform:translateY(-50%);transition:opacity .2s cubic-bezier(.6,.29,.46,.88) .25s,-webkit-transform 175ms cubic-bezier(.18,.01,.21,1.07);transition:transform 175ms cubic-bezier(.18,.01,.21,1.07),opacity .2s cubic-bezier(.6,.29,.46,.88) .25s;transition:transform 175ms cubic-bezier(.18,.01,.21,1.07),opacity .2s cubic-bezier(.6,.29,.46,.88) .25s,-webkit-transform 175ms cubic-bezier(.18,.01,.21,1.07);-webkit-backface-visibility:hidden;backface-visibility:hidden;opacity:0}
+.ticker.is-ready{opacity:1}
+.is-loading .ticker{opacity:0!important}
+@media screen and (max-height:600px){
+.ticker.shift-up{-webkit-transform:translateY(-75%);transform:translateY(-75%)}
+}
+@media(max-width:767.98px){
+.ticker{top:47%}
+}
+.ticker__content{position:relative}
+.ticker__item{display:inline-block;height:120px;padding-right:35px;cursor:pointer}
+@media(min-width:768px){
+.ticker__item{height:180px}
+}
+.ticker__item img{height:100%;width:auto}
+.ticker-caption__content{position:fixed;z-index:100;left:20px;right:20px;bottom:20px;flex-direction:column;align-items:center;text-align:center;display:none}
+@media(min-width:768px){
+.ticker-caption__content{left:55px;right:auto;align-items:flex-start;text-align:left}
+}
+.is-visible .ticker-caption__content{display:flex}
+.ticker-caption__content .ticker-caption__description,.ticker-caption__content .ticker-caption__title,.ticker-caption__content p{margin-bottom:.35rem}
+.ticker-caption__content p:last-child{margin-bottom:0}
+@media(max-width:767.98px){
+.ua-ios .ticker-caption__content select{font-size:16px}
+}
+.ticker-caption__thumbs-container{margin-left:-20px;margin-right:-20px;overflow:scroll}
+@media(min-width:768px){
+.ticker-caption__thumbs-container{overflow:auto;margin-left:0;margin-right:0}
+}
+@media(max-width:767.98px){
+.ticker-caption__thumbs{padding-bottom:20px;margin-bottom:-20px;white-space:nowrap;overflow:scroll;-webkit-overflow-scrolling:touch}
+}
+.ticker-caption__thumb{display:inline-block;padding:0 3px;margin-bottom:12px;cursor:zoom-in}
+@media(max-width:767.98px){
+.ticker-caption__thumb:first-child{padding-left:20px}
+.ticker-caption__thumb:last-child{padding-right:20px}
+}
+@media(min-width:768px){
+.ticker-caption__thumb{padding:0 6px 0 0}
+}
+.ticker-caption__thumb img{max-width:102px;max-height:45px}
+.ticker-caption__description{max-width:45em}
+.ticker-caption__controls{margin-top:.8rem}
+.ticker-caption__form{display:flex;justify-content:center;align-items:flex-end}
+@media(min-width:768px){
+.ticker-caption__form{justify-content:flex-start}
+}
+.ticker-caption__form select{margin-right:10px;width:auto}
+.zoom{position:fixed;z-index:3300;top:0;left:0;height:100%;width:100%;align-items:center;justify-content:center;display:none}
+.zoom.is-visible{display:flex;cursor:zoom-out}
+.zoom__image{position:absolute;height:95%;width:95%;-o-object-fit:contain;object-fit:contain;opacity:0;transition:opacity .2s ease-out}
+@media(min-width:576px){
+.zoom__image{height:85%;width:85%}
+}
+@media(min-width:1200px){
+.zoom__image{width:75%}
+}
+.zoom__image.is-visible{opacity:1;transition-timing-function:cubic-bezier(.2,.21,.22,.9)}

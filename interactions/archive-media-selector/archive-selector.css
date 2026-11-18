@@ -1,0 +1,76 @@
+/* Scoped port of original feature styles; no page-wide reset. */
+.archive-media-selector{position:relative;isolation:isolate;min-height:100vh;font-family:Courier New,Courier,monospace;font-size:12px;font-weight:400;line-height:1.2;color:#fff;text-align:left;background:#000;text-rendering:optimizeLegibility}
+.archive-media-selector,.archive-media-selector *,.archive-media-selector :before,.archive-media-selector :after{box-sizing:border-box}
+.archive-media-selector p{margin-top:0;margin-bottom:1rem}
+.archive-media-selector img{border-style:none;vertical-align:middle}
+.archive-media-selector .site-background{position:fixed;top:0;left:0;width:100%;height:100%;height:100vh;overflow:hidden;z-index:-2;pointer-events:none;opacity:0;transition:opacity .2s cubic-bezier(.6,.29,.46,.88)}
+.archive-media-selector.is-loading .site-background,.is-loading .archive-media-selector .site-background{opacity:0!important}
+.archive-media-selector .site-background.is-active{z-index:-1;opacity:1;transition-timing-function:cubic-bezier(.05,.41,.22,.84)}
+.archive-media-selector .site-background picture.lazy img{opacity:0}
+.archive-media-selector .site-background picture.lazy-loaded img{opacity:1;transition:opacity .2s cubic-bezier(.05,.41,.22,.84)}
+.archive-media-selector .site-background img,.archive-media-selector .site-background video{position:absolute;top:0;left:0;height:100%;width:100%;-o-object-fit:cover;object-fit:cover}
+.archive-media-selector .site-background img{z-index:1}
+.archive-media-selector .site-background video{z-index:2;opacity:0;transition:opacity .15s cubic-bezier(.05,.41,.22,.84)}
+.archive-media-selector .site-background.video-loaded video{opacity:1}
+.archive-media-selector .ticker{position:fixed;top:50%;left:0;width:100%;white-space:nowrap;overflow:hidden;-webkit-transform:translateY(-50%);transform:translateY(-50%);transition:opacity .2s cubic-bezier(.6,.29,.46,.88) .25s,-webkit-transform 175ms cubic-bezier(.18,.01,.21,1.07);transition:transform 175ms cubic-bezier(.18,.01,.21,1.07),opacity .2s cubic-bezier(.6,.29,.46,.88) .25s;transition:transform 175ms cubic-bezier(.18,.01,.21,1.07),opacity .2s cubic-bezier(.6,.29,.46,.88) .25s,-webkit-transform 175ms cubic-bezier(.18,.01,.21,1.07);-webkit-backface-visibility:hidden;backface-visibility:hidden;opacity:0}
+.archive-media-selector .ticker.is-ready{opacity:1}
+.archive-media-selector.is-loading .ticker,.is-loading .archive-media-selector .ticker{opacity:0!important}
+@media screen and (max-height:600px){
+.archive-media-selector .ticker.shift-up{-webkit-transform:translateY(-75%);transform:translateY(-75%)}
+}
+@media(max-width:767.98px){
+.archive-media-selector .ticker{top:47%}
+}
+.archive-media-selector .ticker__content{position:relative}
+.archive-media-selector .ticker__item{display:inline-block;height:120px;padding-right:35px;cursor:pointer}
+@media(min-width:768px){
+.archive-media-selector .ticker__item{height:180px}
+}
+.archive-media-selector .ticker__item img{height:100%;width:auto}
+.archive-media-selector .ticker-caption__content{position:fixed;z-index:100;left:20px;right:20px;bottom:20px;flex-direction:column;align-items:center;text-align:center;display:none}
+@media(min-width:768px){
+.archive-media-selector .ticker-caption__content{left:55px;right:auto;align-items:flex-start;text-align:left}
+}
+.archive-media-selector .is-visible .ticker-caption__content{display:flex}
+.archive-media-selector .ticker-caption__content .ticker-caption__description,.archive-media-selector .ticker-caption__content .ticker-caption__title,.archive-media-selector .ticker-caption__content p{margin-bottom:.35rem}
+.archive-media-selector .ticker-caption__content p:last-child{margin-bottom:0}
+@media(max-width:767.98px){
+.archive-media-selector.ua-ios .ticker-caption__content select,.ua-ios .archive-media-selector .ticker-caption__content select{font-size:16px}
+}
+.archive-media-selector .ticker-caption__thumbs-container{margin-left:-20px;margin-right:-20px;overflow:scroll}
+@media(min-width:768px){
+.archive-media-selector .ticker-caption__thumbs-container{overflow:auto;margin-left:0;margin-right:0}
+}
+@media(max-width:767.98px){
+.archive-media-selector .ticker-caption__thumbs{padding-bottom:20px;margin-bottom:-20px;white-space:nowrap;overflow:scroll;-webkit-overflow-scrolling:touch}
+}
+.archive-media-selector .ticker-caption__thumb{display:inline-block;padding:0 3px;margin-bottom:12px;cursor:zoom-in}
+@media(max-width:767.98px){
+.archive-media-selector .ticker-caption__thumb:first-child{padding-left:20px}
+.archive-media-selector .ticker-caption__thumb:last-child{padding-right:20px}
+}
+@media(min-width:768px){
+.archive-media-selector .ticker-caption__thumb{padding:0 6px 0 0}
+}
+.archive-media-selector .ticker-caption__thumb img{max-width:102px;max-height:45px}
+.archive-media-selector .ticker-caption__description{max-width:45em}
+.archive-media-selector .ticker-caption__controls{margin-top:.8rem}
+.archive-media-selector .ticker-caption__form{display:flex;justify-content:center;align-items:flex-end}
+@media(min-width:768px){
+.archive-media-selector .ticker-caption__form{justify-content:flex-start}
+}
+.archive-media-selector .ticker-caption__form select{margin-right:10px;width:auto}
+.archive-media-selector .zoom{position:fixed;z-index:3300;top:0;left:0;height:100%;width:100%;align-items:center;justify-content:center;display:none}
+.archive-media-selector .zoom.is-visible{display:flex;cursor:zoom-out}
+.archive-media-selector .zoom__image{position:absolute;height:95%;width:95%;-o-object-fit:contain;object-fit:contain;opacity:0;transition:opacity .2s ease-out}
+@media(min-width:576px){
+.archive-media-selector .zoom__image{height:85%;width:85%}
+}
+@media(min-width:1200px){
+.archive-media-selector .zoom__image{width:75%}
+}
+.archive-media-selector .zoom__image.is-visible{opacity:1;transition-timing-function:cubic-bezier(.2,.21,.22,.9)}
+.archive-media-selector .ticker__item{padding-right:45px}
+/* Optional embedded Vimeo Watch video modal is retained in original markup/reference,
+   but is outside this standalone background/thumbnail selection port. */
+.archive-media-selector .modal,.archive-media-selector [data-toggle="modal"]{display:none}

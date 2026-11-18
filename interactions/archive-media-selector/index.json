@@ -1,0 +1,22 @@
+{
+  "name": "archive media selector",
+  "category": "interactions/archive-media-selector",
+  "source_url": "https://www.sneezemag.com/pages/archive",
+  "description": "Click an archive item to switch its background image/video and show matching bottom-corner text and selectable image thumbnails.",
+  "files": {
+    "archive.html": "Integration partial: original feature data/markup, CDN URLs made explicitlyHTTPS, unscoped inline gap style removed (present in scoped CSS).",
+    "archive.original.html": "Exact111214-byte user-provided feature section; includes original optional modal markup.",
+    "original-modules.js": "Unmodified original Browserify module entries64/67/68/69/72, reference only.",
+    "original-styles.css": "Original feature CSS with media contexts retained.",
+    "archive-selector.js": "Standalone native-DOM selection/background/gallery controller; no automatic initialization.",
+    "archive-selector.css": "Scoped feature CSS and required typography/reset rules.",
+    "archive-data.json": "All21 ID-linked archive records and default background.",
+    "asset-manifest.json": "468 direct media URLs, provenance and successful HEAD responses plus core dependencies.",
+    "source-extract.json": "Source locations, behaviors, dependencies, matching metrics and verification limits.",
+    "archive-selector.test.mjs": "node --test archive-selector.test.mjs;13 behavior/media/lifecycle tests."
+  },
+  "usage": "usage.json",
+  "verification": "source-extract.json",
+  "state": "extracted and locally validated; repository publication pending",
+  "pages": "Existing looping dot menu test remains the active Pages test; this extraction is not mounted there."
+}

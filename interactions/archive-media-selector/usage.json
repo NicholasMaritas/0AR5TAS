@@ -1,0 +1,60 @@
+{
+  "name": "archive media selector",
+  "purpose": "Select an archive item to switch its full-page picture/video and reveal linked thumbnails and text.",
+  "files": {
+    "archive.html": "Integration partial: original feature data/markup, CDN URLs made explicitlyHTTPS, unscoped inline gap style removed (present in scoped CSS).",
+    "archive.original.html": "Exact111214-byte user-provided feature section; includes original optional modal markup.",
+    "original-modules.js": "Unmodified original Browserify module entries64/67/68/69/72, reference only.",
+    "original-styles.css": "Original feature CSS with media contexts retained.",
+    "archive-selector.js": "Standalone native-DOM selection/background/gallery controller; no automatic initialization.",
+    "archive-selector.css": "Scoped feature CSS and required typography/reset rules.",
+    "archive-data.json": "All21 ID-linked archive records and default background.",
+    "asset-manifest.json": "468 direct media URLs, provenance and successful HEAD responses plus core dependencies.",
+    "source-extract.json": "Source locations, behaviors, dependencies, matching metrics and verification limits.",
+    "archive-selector.test.mjs": "node --test archive-selector.test.mjs;13 behavior/media/lifecycle tests."
+  },
+  "integration": {
+    "steps": [
+      "Insert archive.html into the host document.",
+      "Load archive-selector.css.",
+      "Import createArchiveSelector from archive-selector.js and mount the feature root once.",
+      "Provide your own chooser/ticker, or use select(id) to reach items outside the static strip."
+    ],
+    "example": "import {createArchiveSelector} from \"./archive-selector.js\";\nconst root=document.querySelector(\"[data-section-type=ticker-page]\");\nconst archive=createArchiveSelector(root);\narchive.select(\"20fc3c2a-139a-4623-a7fe-b727e74749df\");",
+    "options": {
+      "resetControl": "Optional existing button/link; no global header handlers are installed.",
+      "onShift": "Optional callback receiving whether caption/ticker shift is active."
+    },
+    "api": [
+      "select(id): boolean",
+      "reset()",
+      "destroy()"
+    ],
+    "cleanup": "destroy removes listeners/timers, pauses video and restores owned visibility/carrier/root classes. Media hydration and native media attributes are one-way and remain in the DOM; this does not claim full DOM restoration."
+  },
+  "standalone_port_scope": {
+    "included": [
+      "ID-based selection",
+      "responsive picture/native video backgrounds",
+      "caption text and thumbnails",
+      "large image overlay",
+      "explicit reset and cleanup"
+    ],
+    "original_reference_only": [
+      "moving/randomized marquee carrier (module72)",
+      "optional ClubC Vimeo watch-video modal",
+      "global header/footer/Shopify integration"
+    ],
+    "carrier_note": "The provided port prepares a static strip; its clipping does not itself make every item reachable. Mount a chooser/marquee or callselect(id). The original ticker code and data are preserved for later integration.",
+    "adaptations": [
+      "NativeDOM replaces bundled jQuery/Shopify coupling for this selector.",
+      "CSS is scoped under .archive-media-selector.",
+      "Autoplay rejection leaves the picture poster visible.",
+      "Closing timers and asynchronous playback callbacks are guarded against stale selection.",
+      "Optional Vimeo modal controls are hidden in the standalone port."
+    ]
+  },
+  "external_media": "Images/videos remain hosted by SNEEZE/Shopify; binaries are not copied. Source availability and autoplay policy still apply.",
+  "dependencies": "Standalone port has no external JavaScript dependencies.",
+  "pages": "Library only; no new test route, no automatic mount, no changes to existing Pages files."
+}
