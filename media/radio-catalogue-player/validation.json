@@ -1,6 +1,6 @@
 {
   "date": "2026-11-18",
-  "status": "code and local browser verified; repository publication pending",
+  "status": "Published and verified; active Pages unchanged",
   "automated": {
     "syntax": "Native module and all exact reference JavaScript passed node --check.",
     "controller_tests": {
@@ -66,5 +66,39 @@
     "Physical phone/touch, background audio/lock-screen behavior and full-duration mix playback not tested.",
     "HTTP metadata availability alone does not prove every complete audio file decodes.",
     "No full storefront recreation or source CSS-map availability claim."
+  ],
+  "repository": {
+    "commit": "7ba652aa7c0fda0fcc0c6933e5adef4d79e89393",
+    "changed_files_readback": 18,
+    "all_contents_matched": true,
+    "preexisting_code_blobs": 94,
+    "preexisting_code_blobs_unchanged": 94
+  },
+  "active_pages": [
+    {
+      "url": "https://nicholasmaritas.github.io/0AR5TAS/",
+      "status": 200,
+      "matches_baseline": true
+    },
+    {
+      "url": "https://nicholasmaritas.github.io/0AR5TAS/interactions/tlog-photo-library/index.html",
+      "status": 200,
+      "matches_baseline": true
+    },
+    {
+      "url": "https://nicholasmaritas.github.io/0AR5TAS/interactions/tlog-photo-library/host.css",
+      "status": 200,
+      "matches_baseline": true
+    },
+    {
+      "url": "https://nicholasmaritas.github.io/0AR5TAS/interactions/tlog-photo-library/tlog.css",
+      "status": 200,
+      "matches_baseline": true
+    },
+    {
+      "url": "https://nicholasmaritas.github.io/0AR5TAS/interactions/tlog-photo-library/tlog.js",
+      "status": 200,
+      "matches_baseline": true
+    }
   ]
 }

@@ -31,6 +31,8 @@
   "publication": {
     "mode": "library only",
     "active_pages_changed": false,
-    "status": "ready; main publication and unchanged-Pages verification pending"
+    "status": "verified on main",
+    "reference_commit": "7ba652aa7c0fda0fcc0c6933e5adef4d79e89393",
+    "existing_code_blobs_unchanged": 94
   }
 }
