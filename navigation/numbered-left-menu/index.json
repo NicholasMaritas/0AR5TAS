@@ -7,7 +7,8 @@
     "source-extract.json"
   ],
   "integration": "Insert HTML and load CSS. Original relative hrefs preserved; replace with project destinations when integrating. No JavaScript required.",
-  "pages": "Library only; existing Pages runtime untouched.",
+  "pages": "Standalone black-dot test only; former photo test URL redirects here.",
   "limitations": "No font dependency for dots. Original numbered source preserved in source-extract.json; visual browser validation not performed.",
-  "variant": "Seven black12px circular dots,40px vertical spacing; original link destinations and fixed positioning retained."
+  "variant": "Seven black12px circular dots,40px vertical spacing; original link destinations and fixed positioning retained.",
+  "test_url": "https://nicholasmaritas.github.io/0AR5TAS/navigation/black-dots/"
 }
