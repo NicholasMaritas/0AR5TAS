@@ -371,3 +371,5 @@ The agent handling a task must update this file after each task to preserve cont
 
 ### Task 033 — Full-viewport archive backgrounds
 - 2026-11-18. Background picture/video layers now anchor to all viewport edges with dynamic viewport height (100dvh plus100vh fallback), centered cover cropping and explicit removal of media maximum-size constraints. Host page margins/width and horizontal overflow normalized; CSS cache version bumped. Applies to reusable code and current Pages test. Publication verification pending.
+
+- COMPLETED verification — Task033: changed files read back identically; live CSS verified. Published browser measured background and video atx0/y0,width1168,height735, exactly matching1168x735 viewport, withobject-fit:cover. Physical mobile browser testing not performed.
