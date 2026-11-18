@@ -8,5 +8,5 @@
     "No current-page indicator falsely assigned: all destinations are external source pages",
     "Desktop original vertical dots preserved; mobile breakpoint767px"
   ],
-  "validation": "Source/markup reviewed; deployment and browser checks pending"
+  "validation": "Published and browser-verified at500x757:111.5x64 primary targets;456x48 secondary rows; no horizontal overflow; More opens and Escape closes with focus. Desktop all seven links present. Physical touch/safe-area device testing not performed."
 }
