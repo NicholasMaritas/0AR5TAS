@@ -1,0 +1,93 @@
+{
+  "name": "Testing",
+  "category": "testing",
+  "test_url": "https://nicholasmaritas.github.io/0AR5TAS/testing/",
+  "description": "Looping dot menu selects seven archive media states; central ticker removed.",
+  "files": {
+    "index.html": "Active standalone Pages test.",
+    "testing.js": "Manual composition/mount and seven ID-linked dot choices.",
+    "testing.css": "Shared page reset and menu layering.",
+    "navigation.html": "Seven One\u2013Seven links using the preserved loop structure.",
+    "validation.json": "Integration checks and publication evidence."
+  },
+  "components": {
+    "archive": "../interactions/archive-media-selector/archive-selector.js",
+    "archive_styles": "../interactions/archive-media-selector/archive-selector.css?v=2",
+    "markup": "../interactions/archive-media-selector/archive.html",
+    "menu": "../navigation/looping-dot-menu/menu.js?v=7",
+    "menu_styles": "../navigation/looping-dot-menu/menu.css?v=7",
+    "motion": "../navigation/looping-dot-menu/motion.js?v=1",
+    "trigger": "../navigation/looping-dot-menu/trigger-slide.js?v=5"
+  },
+  "mapping": [
+    {
+      "label": "One",
+      "id": "1595381799430",
+      "title": [
+        "BAKER/SNEEZE SKATEBOARD"
+      ],
+      "thumbnails": 2
+    },
+    {
+      "label": "Two",
+      "id": "1595398676148",
+      "title": [
+        "SNEEZE N\u00b034 HOLIDAY 2017 (2018 POSTER CALENDAR)"
+      ],
+      "thumbnails": 5
+    },
+    {
+      "label": "Three",
+      "id": "1595400105447",
+      "title": [
+        "SNEEZE LOX SKATEBOARD"
+      ],
+      "thumbnails": 2
+    },
+    {
+      "label": "Four",
+      "id": "1595403925337",
+      "title": [
+        "SNEEZE MOUSE FANATIC SKATEBOARD"
+      ],
+      "thumbnails": 3
+    },
+    {
+      "label": "Five",
+      "id": "1595449047435",
+      "title": [
+        "SNEEZE/TOY MACHINE SKATEBOARD"
+      ],
+      "thumbnails": 2
+    },
+    {
+      "label": "Six",
+      "id": "1595535440673",
+      "title": [
+        "SALE: SNEEZE/VIRUS SKATEBOARD"
+      ],
+      "thumbnails": 2
+    },
+    {
+      "label": "Seven",
+      "id": "1595537714238",
+      "title": [
+        "SNEEZE MULAN & PRINCESS JASMINE SKATEBOARDS"
+      ],
+      "thumbnails": 2
+    }
+  ],
+  "initial_state": "Original separate sneeze22-bg default background; no selected option, thumbnails or caption. Reload restores this state.",
+  "behavior": [
+    "Only7 options exist in the mounted interface; central ticker is removed in an inert template before insertion. Other14 captions/backgrounds are pruned.",
+    "Dot activation changes associated background image/video, thumbnails and text through the archive controller.",
+    "Mobile labels One\u2013Seven; existing infinite loop, fade, cardinal docking and landscape constraints are retained. Desktop dots remain fixed.",
+    "Loop scrolling only positions choices. Selection happens on click/tap/Enter, with drag-click suppression intact.",
+    "Caption thumbnail zoom is preserved. Hidden videos pause on selection change."
+  ],
+  "integration": "Load index.html as an isolated document. testing.js imports the existing controllers, fetches archive markup and navigation.html, and mounts once. mountTesting(host,archiveMarkup,navigationMarkup) returns destroy(). No external JavaScript dependencies added.",
+  "publication": {
+    "status": "pending",
+    "active_test": "Testing"
+  }
+}

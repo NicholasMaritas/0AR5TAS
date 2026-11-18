@@ -1,0 +1,89 @@
+{
+  "date": "2026-11-18",
+  "syntax": "testing.js passed node --check.",
+  "static": "Seven navigation links with internal hrefs and exact archive IDs; no external menu links.",
+  "browser": {
+    "desktop": [
+      1352,
+      797
+    ],
+    "narrow": [
+      500,
+      797
+    ],
+    "initial": "Default poster decoded; no visible caption; seven backgrounds, seven captions and seven One\u2013Seven links; zero central ticker elements.",
+    "selection_results": [
+      {
+        "label": "One",
+        "id": "1595381799430",
+        "title": [
+          "BAKER/SNEEZE SKATEBOARD"
+        ],
+        "thumbs": 2
+      },
+      {
+        "label": "Two",
+        "id": "1595398676148",
+        "title": [
+          "SNEEZE N\u00b034 HOLIDAY 2017 (2018 POSTER CALENDAR)"
+        ],
+        "thumbs": 5
+      },
+      {
+        "label": "Three",
+        "id": "1595400105447",
+        "title": [
+          "SNEEZE LOX SKATEBOARD"
+        ],
+        "thumbs": 2
+      },
+      {
+        "label": "Four",
+        "id": "1595403925337",
+        "title": [
+          "SNEEZE MOUSE FANATIC SKATEBOARD"
+        ],
+        "thumbs": 3
+      },
+      {
+        "label": "Five",
+        "id": "1595449047435",
+        "title": [
+          "SNEEZE/TOY MACHINE SKATEBOARD"
+        ],
+        "thumbs": 2
+      },
+      {
+        "label": "Six",
+        "id": "1595535440673",
+        "title": [
+          "SALE: SNEEZE/VIRUS SKATEBOARD"
+        ],
+        "thumbs": 2
+      },
+      {
+        "label": "Seven",
+        "id": "1595537714238",
+        "title": [
+          "SNEEZE MULAN & PRINCESS JASMINE SKATEBOARDS"
+        ],
+        "thumbs": 2
+      }
+    ],
+    "verified": [
+      "All7 desktop clicks selected matching background/caption ID without changing URL.",
+      "All7 responsive poster images decoded at500px width.",
+      "One native background video reachedreadyState4/pausedfalse and filled1352x797 viewport.",
+      "Switching away paused prior video; only one caption remained visible.",
+      "Seven thumbnail opened matching large image and closed normally.",
+      "Mobile open showed One\u2013Seven; ArrowUp centeredTwo without changing active media; Enter selectedTwo.",
+      "Mobile drag changed loop position while retainingTwo media, menuopen and body scroll0.",
+      "Closed ArrowLeft switched trigger toleft without changing selected media."
+    ],
+    "limits": [
+      "Resized desktop browser; physical touch/rotation not tested.",
+      "Black dots/text retain the existing menu appearance; contrast varies with source backgrounds."
+    ]
+  },
+  "publication": "pending"
+}
