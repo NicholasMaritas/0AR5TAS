@@ -264,3 +264,5 @@ The agent handling a task must update this file after each task to preserve cont
 
 ### Task 020 — Black-dot-only test and matching URL
 - STARTED — 2026-11-17. Replaced current testing entry points with redirects to navigation/black-dots/. New white page contains only seven black-dot links and CSS; no photos, scrolling controller, captions, article dialog or scripts. Previous reusable modules and original source archives retained in library. Root and former momentum-scroll test URL redirect to new matching URL. Original external link destinations retained. User preference: testing URL must match current tested code. Publication verification pending.
+
+- COMPLETED — Task020: Pages workflow44210070925 deployed commit64f95a7099dfb46a67e1e88d86374595c72b3068 successfully. All five changed files read back identically. Live browser verified Black dots page: seven dots on white background, zero images, zero scripts and zero dialogs. Matching test URL: https://nicholasmaritas.github.io/0AR5TAS/navigation/black-dots/ . Previous features removed from active test; library modules retained.
