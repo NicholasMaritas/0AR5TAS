@@ -10,20 +10,22 @@
     "motion.test.mjs": "node --test motion.test.mjs;13 behavior/physics tests.",
     "requirements.json": "Requested behavior, integration decisions and verification limits.",
     "landscape-validation.json": "Twelve evaluated media-query scenarios, synchronized CSS/JS/no-script rule, verification limits.",
-    "trigger-slide.js": "Closed-trigger flick switch after12px inward intent, including curved paths and final pointerup sampling; open lock and cancellation preserved.",
-    "trigger-slide.test.mjs": "node --test trigger-slide.test.mjs;22 gesture and edge-case regression tests.",
+    "trigger-slide.js": "Closed four-dock trigger: bottom/middle on either edge, latched inward/up/down flick intent, measured safe-area targets and open-menu delegation.",
+    "trigger-slide.test.mjs": "node --test trigger-slide.test.mjs;32 docking and gesture regressions.",
     "handedness-validation.json": "Gesture and desktop fixed-scroll verification, geometry and limitations.",
-    "flick-fade-validation.json": "Flick root causes, replacement gesture contract, reveal timing and validation."
+    "flick-fade-validation.json": "Flick root causes, replacement gesture contract, reveal timing and validation.",
+    "menu-input.test.mjs": "node --test menu-input.test.mjs;10 shared-band input, capture, click-suppression and lifecycle regressions.",
+    "docking-validation.json": "Mid-edge docking, expanded scroll-band requirements, geometry, validation and publication evidence."
   },
-  "integration": "Load menu.css, use .loop-nav/.loop-toggle/.loop-panel/.loop-link markup from index.html, and load menu.js as a module. No external JavaScript, fonts or image dependencies. Seven existing source-site hrefs retained; replace with project destinations when supplied.",
-  "mobile": "Narrow viewports <=767px, or hover:none + pointer:coarse + height<=600px: retain the mobile looping menu, including landscape phones wider than767px. Large fine-pointer desktops retain vertical navigation. Geometry/gestures unchanged. Closed trigger can be dragged to either edge; menu mirrors to opposite side. Open trigger stays locked. Chosen side remains for the current page session. A12px inward flick sends the trigger to the other edge; crossing the middle or maintaining speed is unnecessary. Opening fades the entire menu over360ms.",
+  "integration": "Load menu.css, copy .loop-nav with .loop-toggle, transparent .loop-scroll-zone, .loop-panel and seven .loop-link elements from index.html, then load menu.js as a module. No external runtime dependencies.",
+  "mobile": "Same portrait/landscape responsive rule. Closed trigger flicks between bottom and middle docks on either side. Up24px moves to middle; down24px returns to bottom; inward12px changes side. Intent survives curved paths, pauses and final-release-only sampling. Diagonal flicks can change both axes. Middle dot targets5%/95% viewport width and50% visible viewport height, constrained to keep its56px target inside safe areas. Menu stays opposite and level. While open, one transparent168px-high scroll band spans the menu outer edge through the outlined trigger; pointer/wheel input over links, gap or dot scrolls the same infinite menu. Trigger docking is locked while open.",
   "desktop": "Seven source-style dots remain position:fixed at left30px/top50px while the document scrolls; verified with 757px body scrolling and exact unchanged dot bounds.",
   "motion": "Drag follows pointer, release decelerates into aligned row. Wheel/trackpad deltas are smoothed and gently aligned without injecting a second inertial tail. New input interrupts motion immediately; wrapping occurs outside clipped window.",
-  "accessibility": "Native links/button/region; only centered link in tab order; ArrowUp/Down cycle following visual direction; Home/End; Enter; Escape returns focus to trigger. Resizing moves focus out of newly hidden content. Reduced-motion avoids coast and alignment animation. Pinch zoom allowed in touch region. While closed, focus trigger and use ArrowLeft/Right to choose handedness; hidden help documents the gesture. Trigger settling respects reduced motion.",
+  "accessibility": "Native links/button/region; only centered link in tab order; ArrowUp/Down cycle following visual direction; Home/End; Enter; Escape returns focus to trigger. Resizing moves focus out of newly hidden content. Reduced-motion avoids coast and alignment animation. Pinch zoom allowed in touch region. While closed, focus trigger and use ArrowLeft/Right to choose handedness; hidden help documents the gesture. Trigger settling respects reduced motion. Closed ArrowUp/Down selects middle/bottom; ArrowLeft/Right selects side. Open trigger tap still closes, while dragging it scrolls links and suppresses only the accidental trailing click.",
   "validation": {
-    "automated": "13 pure motion tests passed; JS syntax passed.",
+    "automated": "55 tests passed:32 trigger docking,10 shared menu input and13 motion/physics. JavaScript syntax passed.",
     "local_browser": "500x757:12px closed/open dot;1px hollow border;Home/trigger center655px;CDG599px andRecruitment711px at0.28opacity. Mouse drag and wheel both directions exercised without navigation; body scroll remains0; integer settled opacity1 observed. Additional333x505 CSS viewport checked using browser zoom: aligned centers402.667px, full labels fit and no horizontal overflow. At1180px desktop all seven original links remain tabbable with no transforms; resizing to500px closes menu and restores focus to trigger. A full seven-key cycle returns toHome with opacity1 and focus.",
-    "public_pages": "Existing main-branch published version only; this landscape correction is deliberately not deployed.",
+    "public_pages": "New docking/expanded scroll version publication pending.",
     "physical_touch": "not tested",
     "github_readback": "All12 original files and follow-up startup HTML read back identically.",
     "landscape_correction": {
@@ -34,12 +36,11 @@
     },
     "handedness": "Nine new gesture tests passed. Local500x757 checked pointer drag both ways, opposite panel, open lock, normal taps, keyboard side control; desktop1180x757 scrolled757px with all seven dot bounds unchanged. Physical touch/notch devices not tested.",
     "handedness_readback": "All nine changed/new branch files matched uploaded contents; main head unchanged and live index.html/menu.js/menu.css byte-matched prior published version.",
-    "flick_fade": "22 gesture regressions passed. Public500x757 browser verified18px/55px diagonal left switch and14px short right switch, remaining closed. Open diagonal attempt remained locked. Parent opacity observed0.909782 during0.36s reveal then1; neighbor row opacity0.28 retained. All nine files read back identically; all four changed runtime URLs returned200 with matching bytes. Physical phone testing remains for human assessment."
+    "flick_fade": "22 gesture regressions passed. Public500x757 browser verified18px/55px diagonal left switch and14px short right switch, remaining closed. Open diagonal attempt remained locked. Parent opacity observed0.909782 during0.36s reveal then1; neighbor row opacity0.28 retained. All nine files read back identically; all four changed runtime URLs returned200 with matching bytes. Physical phone testing remains for human assessment.",
+    "docking": "Local browser500x757 and718x757: middle Y378.5;718px width centers35.9/682.1 equal5%/95%; menu and trigger centers level. Expanded bands mirror panel far edge through trigger hit area. Vertical drags over outlined trigger and empty gap, plus gap wheel input, scroll links while remaining open and body scroll stays0. Closed horizontal midpoint flick changes sides. Physical touch remains untested."
   },
   "deployment": {
-    "status": "success",
-    "commit": "a7058142bda8ebeb943a51330b2056449e997840",
-    "workflow_run": 44223454446
+    "status": "pending"
   },
   "test_url_note": "Live Pages now includes the landscape and sliding-trigger corrections."
 }

@@ -1,0 +1,42 @@
+{
+  "task": 28,
+  "date": "2026-11-18",
+  "name": "looping dot menu: four docking positions and extended scroll interaction",
+  "clarified_requirements": [
+    "Keep bottom-left and bottom-right resting positions; add a midpoint on each screen edge.",
+    "Flick upward from bottom to middle, downward from middle to bottom, and horizontally to switch sides at the selected height.",
+    "Middle dot center is approximately95% across/50% down on right, mirrored to5% across/50% down on left; adapt only as needed for a fully visible56px safe-area touch target.",
+    "Open the link window on the opposite side, with its centered row level with the trigger.",
+    "While open, vertical swipes over links, blank space between them and the trigger, or the outlined trigger itself scroll the same infinite link list.",
+    "The invisible scroll band extends from the link window outer border through the trigger hit area and retains the three-row height.",
+    "Open trigger stays fixed; a stationary tap closes, while a scrolling swipe does not close."
+  ],
+  "implementation": {
+    "docks": [
+      "bottom-left",
+      "bottom-right",
+      "middle-left",
+      "middle-right"
+    ],
+    "horizontal_threshold_css_px": 12,
+    "vertical_threshold_css_px": 24,
+    "transition_ms": 360,
+    "middle_coordinates_at_710x1536": [
+      674.5,
+      768
+    ],
+    "safe_area_adaptation": "Clamp center to safe-area+28px minimum margin so56px target remains on-screen.",
+    "dynamic_viewport": "100dvh with100vh fallback",
+    "scroll_ownership": "root shared by scroll zone, links and button; trigger helper handles closed state only",
+    "new_dependencies": false
+  },
+  "verification": {
+    "automated": "55 passed:32 trigger,10 menu input,13 motion. Syntax passed.",
+    "local_browser": "500x757 and718x757. Middle718px dot centers35.9/682.1 atY378.5; all are5%/95% and50%. Panel/trigger aligned, mirrored input bounds, dot and gap drags plus gap wheel move same menu without docking/closing/body scrolling. Horizontal midpoint switching checked.",
+    "physical_touch": "not tested"
+  },
+  "deployment": {
+    "status": "pending"
+  },
+  "test_url": "https://nicholasmaritas.github.io/0AR5TAS/navigation/looping-dot-menu/"
+}

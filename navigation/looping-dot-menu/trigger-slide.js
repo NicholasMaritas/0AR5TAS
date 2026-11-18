@@ -1,90 +1,89 @@
 export function flickSide(side, inwardTravel) {
-  // A deliberate short inward swipe is the command, not a drag to mid-screen.
   return inwardTravel >= 12 ? (side === 'right' ? 'left' : 'right') : side;
 }
 
-// Owns only the closed trigger's horizontal gesture. The menu keeps its own
-// vertical scrolling controller and is never dragged by this helper.
+export function flickDock(dock, towardTravel) {
+  return towardTravel >= 24 ? (dock === 'middle' ? 'bottom' : 'middle') : dock;
+}
+
+// Closed gestures own docking. Open gestures belong entirely to the menu's
+// shared scroll band, including gestures that start on the outlined trigger.
 export function createSlidingTrigger(root, button, {isEnabled, isOpen}) {
   let gesture = null, suppressClick = false;
   root.dataset.triggerSide ||= 'right';
+  root.dataset.triggerDock ||= 'bottom';
   function releaseCapture() {
     const id = gesture?.id;
     gesture = null;
     if (id !== undefined && button.hasPointerCapture?.(id)) button.releasePointerCapture(id);
   }
+  function clearPosition() {
+    button.style.removeProperty('--trigger-x');
+    button.style.removeProperty('--trigger-y');
+  }
   function settle() {
     if (gesture?.moved) suppressClick = true;
     releaseCapture();
     root.dataset.triggerDragging = 'true';
-    button.style.removeProperty('--trigger-offset');
-    button.getBoundingClientRect(); // Commit the resting edge without animation.
+    clearPosition();
+    button.getBoundingClientRect();
     delete root.dataset.triggerDragging;
   }
   function freeze() {
-    const current = button.getBoundingClientRect().left;
-    const side = root.dataset.triggerSide;
-    root.dataset.triggerDragging = 'true';
-    button.style.removeProperty('--trigger-offset');
-    // Measure the actual CSS safe-area endpoints once, before the next paint.
-    // The menu is closed, so its mirrored layout is not exposed while measuring.
-    root.dataset.triggerSide = 'left';
-    const left = button.getBoundingClientRect().left;
-    root.dataset.triggerSide = 'right';
-    const right = button.getBoundingClientRect().left;
-    root.dataset.triggerSide = side;
-    button.style.setProperty('--trigger-offset', `${current - left}px`);
-    return {left, right, current};
+    const current = button.getBoundingClientRect();
+    const side = root.dataset.triggerSide, dock = root.dataset.triggerDock;
+    root.dataset.triggerDragging = 'true'; clearPosition();
+    const targets = [];
+    for (const edge of ['left','right']) for (const level of ['bottom','middle']) {
+      root.dataset.triggerSide = edge; root.dataset.triggerDock = level;
+      const {left,top} = button.getBoundingClientRect(); targets.push({left,top});
+    }
+    root.dataset.triggerSide = side; root.dataset.triggerDock = dock;
+    button.style.setProperty('--trigger-x', `${current.left}px`);
+    button.style.setProperty('--trigger-y', `${current.top}px`);
+    return {x:current.left,y:current.top,
+      left:Math.min(...targets.map(t=>t.left)),right:Math.max(...targets.map(t=>t.left)),
+      top:Math.min(...targets.map(t=>t.top)),bottom:Math.max(...targets.map(t=>t.top))};
   }
-  function finish(side, animate = true) {
-    root.dataset.triggerSide = side;
+  function finish(side, dock, animate = true) {
+    root.dataset.triggerSide = side; root.dataset.triggerDock = dock;
     releaseCapture();
     if (!animate) { settle(); return; }
     delete root.dataset.triggerDragging;
-    button.getBoundingClientRect(); // Preserve the last dragged position as the transition start.
-    button.style.removeProperty('--trigger-offset');
+    button.getBoundingClientRect();
+    clearPosition();
   }
   function down(event) {
-    if (!isEnabled() || event.isPrimary === false || event.button > 0) return;
+    if (!isEnabled() || gesture || event.isPrimary === false || event.button > 0) return;
     suppressClick = false;
-    const locked = isOpen();
-    const bounds = locked ? null : freeze();
-    gesture = {id:event.pointerId, side:root.dataset.triggerSide, locked, bounds,
-      x:event.clientX, y:event.clientY, position:bounds?.current,
-      moved:false, inwardTravel:0};
+    if (isOpen()) return;
+    const bounds = freeze();
+    gesture = {id:event.pointerId,side:root.dataset.triggerSide,dock:root.dataset.triggerDock,
+      bounds,x:event.clientX,y:event.clientY,moved:false,inwardTravel:0,towardTravel:0};
     button.setPointerCapture?.(event.pointerId);
   }
   function sample(event) {
     if (!gesture || event.pointerId !== gesture.id) return;
     const dx = event.clientX - gesture.x, dy = event.clientY - gesture.y;
-    if (Math.hypot(dx, dy) >= 6) gesture.moved = true;
-    if (gesture.locked || !gesture.moved) return;
-    // Keep qualifying inward intent through a curved path or a pause before up.
-    // There is no first-sample axis lock and no release-speed requirement.
-    const inward = gesture.side === 'right' ? -dx : dx;
-    gesture.inwardTravel = Math.max(gesture.inwardTravel, inward);
-    const {left, right, current} = gesture.bounds;
-    gesture.position = Math.max(left, Math.min(right, current + dx));
-    button.style.setProperty('--trigger-offset', `${gesture.position - left}px`);
+    if (Math.hypot(dx,dy) >= 6) gesture.moved = true;
+    if (!gesture.moved) return;
+    // Independent, latched intent allows curved/diagonal flicks without a
+    // straight-line or release-speed requirement. Final pointerup is sampled.
+    gesture.inwardTravel = Math.max(gesture.inwardTravel, gesture.side === 'right' ? -dx : dx);
+    gesture.towardTravel = Math.max(gesture.towardTravel, gesture.dock === 'bottom' ? -dy : dy);
+    const b = gesture.bounds;
+    button.style.setProperty('--trigger-x', `${Math.max(b.left,Math.min(b.right,b.x+dx))}px`);
+    button.style.setProperty('--trigger-y', `${Math.max(b.top,Math.min(b.bottom,b.y+dy))}px`);
   }
-  function move(event) {
-    sample(event);
-    if (gesture?.moved && !gesture.locked) event.preventDefault();
-  }
+  function move(event) { sample(event); if (gesture?.moved) event.preventDefault(); }
   function up(event) {
     if (!gesture || event.pointerId !== gesture.id) return;
-    // Fast flicks may deliver their meaningful final position only on pointerup.
-    sample(event);
-    suppressClick = gesture.moved;
-    if (gesture.locked) { releaseCapture(); return; }
-    finish(flickSide(gesture.side, gesture.inwardTravel));
+    sample(event); suppressClick = gesture.moved;
+    finish(flickSide(gesture.side,gesture.inwardTravel),flickDock(gesture.dock,gesture.towardTravel));
   }
-  function cancel() {
-    if (!gesture) return;
-    const {locked, moved, side} = gesture;
-    suppressClick = moved;
-    if (locked) releaseCapture();
-    else finish(side);
+  function cancel(event) {
+    if (!gesture || (event && event.pointerId !== gesture.id)) return;
+    const {moved,side,dock} = gesture; suppressClick = moved; finish(side,dock);
   }
   function click(event) {
     if (suppressClick && event.detail !== 0) {
@@ -94,21 +93,21 @@ export function createSlidingTrigger(root, button, {isEnabled, isOpen}) {
   function key(event) {
     suppressClick = false;
     if (!isEnabled() || isOpen()) return;
-    if (event.key === 'ArrowLeft' || event.key === 'ArrowRight') {
-      event.preventDefault();
-      const side = event.key === 'ArrowLeft' ? 'left' : 'right';
-      if (gesture) cancel();
-      freeze(); finish(side);
+    if (['ArrowLeft','ArrowRight','ArrowUp','ArrowDown'].includes(event.key)) {
+      event.preventDefault(); if (gesture) cancel(); freeze();
+      finish(event.key === 'ArrowLeft' ? 'left' : event.key === 'ArrowRight' ? 'right' : root.dataset.triggerSide,
+        event.key === 'ArrowUp' ? 'middle' : event.key === 'ArrowDown' ? 'bottom' : root.dataset.triggerDock);
     } else if (event.key === 'Escape') cancel();
   }
-  function resized() { if (isEnabled()) settle(); else { releaseCapture(); button.style.removeProperty('--trigger-offset'); delete root.dataset.triggerDragging; } }
+  function resized() {
+    if (isEnabled()) settle();
+    else { releaseCapture(); clearPosition(); delete root.dataset.triggerDragging; }
+  }
   const listeners = [[button,'pointerdown',down], [button,'pointermove',move,{passive:false}],
     [button,'pointerup',up], [button,'pointercancel',cancel], [button,'lostpointercapture',cancel],
     [button,'click',click,true], [button,'keydown',key], [window,'resize',resized]];
   listeners.forEach(([target,name,handler,options]) => target.addEventListener(name,handler,options));
-  return {settle, cancel, destroy() {
-    settle();
-    listeners.forEach(([target,name,handler,options]) => target.removeEventListener(name,handler,options));
+  return {settle,cancel,destroy() {
+    settle(); listeners.forEach(([target,name,handler,options]) => target.removeEventListener(name,handler,options));
   }};
 }
-

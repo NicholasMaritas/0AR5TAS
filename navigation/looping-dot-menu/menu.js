@@ -1,5 +1,5 @@
 import {LoopMotion, rowOffset, rowOpacity} from './motion.js?v=1';
-import {createSlidingTrigger} from './trigger-slide.js?v=2';
+import {createSlidingTrigger} from './trigger-slide.js?v=3';
 
 export function createLoopMenu(root) {
   const button = root.querySelector('.loop-toggle');
@@ -41,8 +41,8 @@ export function createLoopMenu(root) {
   }
   function startFrames() { if (!frameId) { previousTime = 0; frameId = requestAnimationFrame(animate); } }
   function releaseCapture() {
-    if (pointer && panel.hasPointerCapture?.(pointer.id)) panel.releasePointerCapture(pointer.id);
-    pointer = null;
+    const id = pointer?.id; pointer = null;
+    if (id !== undefined && root.hasPointerCapture?.(id)) root.releasePointerCapture(id);
   }
   function setOpen(value, keyboard = false) {
     if (!mobile.matches) return;
@@ -57,39 +57,46 @@ export function createLoopMenu(root) {
   }
   const toggle = event => setOpen(!open, event.detail === 0);
   function down(event) {
-    if (!open || !mobile.matches || event.isPrimary === false || event.button > 0) return;
+    if (!open || !mobile.matches || pointer || event.isPrimary === false || event.button > 0) return;
     stopFrames(); motion.stop(); focusAtRest = false; suppressClick = false;
-    pointer = {id:event.pointerId, startY:event.clientY, lastY:event.clientY,
-      lastTime:event.timeStamp, moved:false};
+    pointer = {id:event.pointerId,startX:event.clientX,startY:event.clientY,lastY:event.clientY,
+      lastTime:event.timeStamp,moved:false,scrolled:false};
   }
   function move(event) {
     if (!pointer || pointer.id !== event.pointerId) return;
-    if (!pointer.moved && Math.abs(event.clientY - pointer.startY) < 5) return;
-    if (!pointer.moved) { pointer.moved = true; panel.setPointerCapture?.(event.pointerId); }
+    if (!pointer.moved && Math.hypot(event.clientX-pointer.startX,event.clientY-pointer.startY) < 6) return;
+    if (!pointer.moved) { pointer.moved = true; root.setPointerCapture?.(event.pointerId); }
     event.preventDefault();
-    const delta = (event.clientY - pointer.lastY) / stride();
-    const elapsed = Math.max(1, event.timeStamp - pointer.lastTime);
-    const instantaneous = Math.max(-.055, Math.min(.055, delta / elapsed));
-    motion.drag(delta, motion.velocity * .25 + instantaneous * .75);
+    if (!pointer.scrolled && Math.abs(event.clientY-pointer.startY) < 5) return;
+    pointer.scrolled = true;
+    const delta = (event.clientY-pointer.lastY) / stride();
+    if (!delta) return;
+    const elapsed = Math.max(1,event.timeStamp-pointer.lastTime);
+    const instantaneous = Math.max(-.055,Math.min(.055,delta/elapsed));
+    motion.drag(delta,motion.velocity*.25+instantaneous*.75);
     pointer.lastY = event.clientY; pointer.lastTime = event.timeStamp;
     paint();
   }
   function up(event) {
     if (!pointer || pointer.id !== event.pointerId) return;
-    const moved = pointer.moved;
-    if (event.timeStamp - pointer.lastTime > 100) motion.velocity = 0;
+    move(event); // Include fast flicks whose travel arrives only on pointerup.
+    const moved = pointer.moved, scrolled = pointer.scrolled;
+    if (event.timeStamp-pointer.lastTime > 100) motion.velocity = 0;
     releaseCapture();
     if (moved) suppressClick = true;
-    if (moved || Math.abs(motion.position - Math.round(motion.position)) > .001) {
+    if (scrolled || Math.abs(motion.position-Math.round(motion.position)) > .001) {
       motion.release(); startFrames();
     }
   }
-  function cancel() {
-    if (!pointer) return;
+  function cancel(event) {
+    if (!pointer || (event && event.pointerId !== pointer.id)) return;
+    suppressClick ||= pointer.moved;
     releaseCapture(); motion.velocity = 0; motion.release(); startFrames();
   }
   function click(event) {
-    if (suppressClick) { event.preventDefault(); event.stopPropagation(); suppressClick = false; }
+    if (suppressClick && event.detail !== 0) {
+      event.preventDefault(); event.stopImmediatePropagation(); suppressClick = false;
+    }
   }
   function wheel(event) {
     if (!open || !mobile.matches || event.ctrlKey) return;
@@ -142,14 +149,19 @@ export function createLoopMenu(root) {
     motion.reduced = reduced.matches;
     if (reduced.matches) { stopFrames(); motion.settleImmediately(); paint(); }
   }
+  function resized() {
+    if (!mobile.matches) return;
+    suppressClick ||= Boolean(pointer?.moved);
+    releaseCapture(); stopFrames(); motion.settleImmediately(); paint();
+  }
   function visibility() { if (document.hidden && mobile.matches) setOpen(false); }
   const sliding = createSlidingTrigger(root, button, {
     isEnabled:() => mobile.matches, isOpen:() => open
   });
   const listeners = [
-    [button,'click',toggle], [panel,'pointerdown',down], [panel,'pointermove',move,{passive:false}],
-    [panel,'pointerup',up], [panel,'pointercancel',cancel], [panel,'click',click,true],
-    [panel,'wheel',wheel,{passive:false}], [root,'keydown',key], [document,'visibilitychange',visibility]
+    [button,'click',toggle], [root,'pointerdown',down], [root,'pointermove',move,{passive:false}],
+    [root,'pointerup',up], [root,'pointercancel',cancel], [root,'lostpointercapture',cancel], [root,'click',click,true],
+    [root,'wheel',wheel,{passive:false}], [root,'keydown',key], [document,'visibilitychange',visibility], [window,'resize',resized]
   ];
   listeners.forEach(([target,name,handler,options]) => target.addEventListener(name,handler,options));
   mobile.addEventListener('change',layout); reduced.addEventListener('change',preference);
@@ -164,5 +176,6 @@ export function createLoopMenu(root) {
 
 const navigation = document.querySelector('.loop-nav');
 if (navigation) createLoopMenu(navigation);
+
 
 
