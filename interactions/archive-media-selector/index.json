@@ -17,6 +17,14 @@
   },
   "usage": "usage.json",
   "verification": "source-extract.json",
-  "state": "extracted and locally validated; repository publication pending",
-  "pages": "Existing looping dot menu test remains the active Pages test; this extraction is not mounted there."
+  "state": "extracted, indexed and verified in repository",
+  "pages": "Existing looping dot menu test remains the active Pages test; this extraction is not mounted there.",
+  "repository_url": "https://github.com/NicholasMaritas/0AR5TAS/tree/main/interactions/archive-media-selector",
+  "library_commit": "687240daa2372a32d97c94d1af226eff4ab06c22",
+  "validation": {
+    "tests": "13 passed",
+    "media_urls": "468/468 successful HEAD checks",
+    "readback": "All13 changed/new files matched uploaded contents; all12 library blobs matched local byte hashes.",
+    "pages": "All66 prior code files unchanged; six live entry/runtime URLs returned200 and exactly matched baseline bytes."
+  }
 }

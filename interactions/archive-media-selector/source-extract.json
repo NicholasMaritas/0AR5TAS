@@ -135,7 +135,7 @@
   },
   "pages": {
     "instruction": "Keep existing GitHub Pages test intact",
-    "status": "Existing runtime and entry points excluded from changes; repository/live preservation verification pending.",
+    "status": "preserved: existing Pages entry points and runtime are byte-identical; extraction is not mounted",
     "baseline": [
       {
         "path": "index.html",
@@ -173,7 +173,104 @@
         "sha256": "e7e23c94ed94939ed593ca695c2dc3554f67070eb561d1192e366f2fe166a3da",
         "git_blob_sha": "99587807026c968c92c7d22d08a2b367921bdd41"
       }
+    ],
+    "repository_preservation": {
+      "prior_files_checked": 66,
+      "altered": [],
+      "library_blob_hashes": [
+        {
+          "path": "archive-data.json",
+          "hash_match": true
+        },
+        {
+          "path": "archive-selector.css",
+          "hash_match": true
+        },
+        {
+          "path": "archive-selector.js",
+          "hash_match": true
+        },
+        {
+          "path": "archive-selector.test.mjs",
+          "hash_match": true
+        },
+        {
+          "path": "archive.html",
+          "hash_match": true
+        },
+        {
+          "path": "archive.original.html",
+          "hash_match": true
+        },
+        {
+          "path": "asset-manifest.json",
+          "hash_match": true
+        },
+        {
+          "path": "index.json",
+          "hash_match": true
+        },
+        {
+          "path": "original-modules.js",
+          "hash_match": true
+        },
+        {
+          "path": "original-styles.css",
+          "hash_match": true
+        },
+        {
+          "path": "source-extract.json",
+          "hash_match": true
+        },
+        {
+          "path": "usage.json",
+          "hash_match": true
+        }
+      ]
+    },
+    "live_after": [
+      {
+        "path": "index.html",
+        "status": 200,
+        "same_bytes": true,
+        "sha256": "2276ccfe14b275ea156cd01b8a75ad4c1cfd44ff50cbd782fa504634c42b8298"
+      },
+      {
+        "path": "navigation/looping-dot-menu/index.html",
+        "status": 200,
+        "same_bytes": true,
+        "sha256": "a387a4459654e12406263fdbe320b5f16df69958421ba6a5d6179f3ed878c68a"
+      },
+      {
+        "path": "navigation/looping-dot-menu/menu.css",
+        "status": 200,
+        "same_bytes": true,
+        "sha256": "2e6b67af3f67a43a47a3181345696ae7a42ab561139f57da1502cd2cbe362ba2"
+      },
+      {
+        "path": "navigation/looping-dot-menu/menu.js",
+        "status": 200,
+        "same_bytes": true,
+        "sha256": "b026f45a6c7eac32f7e2d1600e7ea6adcd0778446b4ea49aaa0c91fb9d2e9cab"
+      },
+      {
+        "path": "navigation/looping-dot-menu/trigger-slide.js",
+        "status": 200,
+        "same_bytes": true,
+        "sha256": "80afb8f8816ec8e6dd0cd1c282c57fec9b28be68f04dbec8d5d754de078e6cdf"
+      },
+      {
+        "path": "navigation/looping-dot-menu/motion.js",
+        "status": 200,
+        "same_bytes": true,
+        "sha256": "e7e23c94ed94939ed593ca695c2dc3554f67070eb561d1192e366f2fe166a3da"
+      }
     ]
   },
-  "module_offsets_unit": "Zero-based character indexes in decoded theme.js; end index exclusive."
+  "module_offsets_unit": "Zero-based character indexes in decoded theme.js; end index exclusive.",
+  "repository": {
+    "url": "https://github.com/NicholasMaritas/0AR5TAS/tree/main/interactions/archive-media-selector",
+    "implementation_commit": "687240daa2372a32d97c94d1af226eff4ab06c22",
+    "readback": "All13 changed/new files read back identically; all12 library blob hashes matched local files."
+  }
 }
