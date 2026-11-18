@@ -256,3 +256,6 @@ The agent handling a task must update this file after each task to preserve cont
 ### Task 018 — Replace menu numbers with black dots
 - COMPLETED — 2026-11-17. Updated extracted menu HTML/CSS and index: seven12px black CSS circles,40px vertical spacing, original fixed position and hrefs retained; accessible link labels and keyboard focus outline. Original numbered reference remains in source-extract.json. No font dependency for dots.
 - Validation: Seven original destinations retained; seven labeled links and circular markers verified in generated markup/styles. Browser visual check not performed. Existing Pages runtime untouched.
+
+### Task 019 — Apply black-dot menu to Pages photo test
+- STARTED — 2026-11-17. Added seven black dots at left30px/top50px to existing momentum-scroll test using collected CSS. Original COMME des GARCONS destinations made absolute to prevent broken project-relative routes; no project destinations supplied. Native article dialog covers/inerts background menu while open. Publication verification pending.
