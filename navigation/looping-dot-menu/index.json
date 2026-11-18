@@ -34,11 +34,12 @@
     },
     "handedness": "Nine new gesture tests passed. Local500x757 checked pointer drag both ways, opposite panel, open lock, normal taps, keyboard side control; desktop1180x757 scrolled757px with all seven dot bounds unchanged. Physical touch/notch devices not tested.",
     "handedness_readback": "All nine changed/new branch files matched uploaded contents; main head unchanged and live index.html/menu.js/menu.css byte-matched prior published version.",
-    "flick_fade": "22 regression tests passed; local browser18px steep diagonal and14px short flicks switched sides while remaining closed. Opacity observed0.909757 mid-reveal and1 after360ms animation; neighbor row opacity0.28 retained. Open lock confirmed. Public publication pending."
+    "flick_fade": "22 gesture regressions passed. Public500x757 browser verified18px/55px diagonal left switch and14px short right switch, remaining closed. Open diagonal attempt remained locked. Parent opacity observed0.909782 during0.36s reveal then1; neighbor row opacity0.28 retained. All nine files read back identically; all four changed runtime URLs returned200 with matching bytes. Physical phone testing remains for human assessment."
   },
   "deployment": {
-    "status": "pending",
-    "reason": "User requested updated code and Pages for smoother reveal and reliable flicks."
+    "status": "success",
+    "commit": "a7058142bda8ebeb943a51330b2056449e997840",
+    "workflow_run": 44223454446
   },
   "test_url_note": "Live Pages now includes the landscape and sliding-trigger corrections."
 }

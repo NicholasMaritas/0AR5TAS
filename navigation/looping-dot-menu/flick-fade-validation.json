@@ -52,7 +52,25 @@
       },
       "open_lock": "Attempted diagonal drag left side stays left and menu stays open."
     },
-    "physical_touch": "Not tested; human testing required on real iOS/Android devices."
+    "physical_touch": "Not tested; human testing required on real iOS/Android devices.",
+    "public_browser": {
+      "viewport": [
+        500,
+        757
+      ],
+      "diagonal_flick": "18px inward/55px vertical switched right→left without opening",
+      "short_flick": "14px inward switched left→right without opening",
+      "open_lock": "Attempted diagonal movement left side stayed left and menu remained open",
+      "fade_mid_opacity": 0.909782,
+      "fade_settled_opacity": 1,
+      "fade_duration_ms": 360,
+      "neighbor_opacity": 0.28,
+      "active_assets": "index.html/menu.css/menu.js/trigger-slide.js all HTTP200 and byte-matched"
+    }
   },
-  "publication": "pending"
+  "publication": {
+    "status": "success",
+    "commit": "a7058142bda8ebeb943a51330b2056449e997840",
+    "workflow_run": 44223454446
+  }
 }
