@@ -31,7 +31,8 @@
       "browser": "Local narrow layout checked. Device emulation unavailable because managed browser blocks DevTools; no physical rotation claim.",
       "runtime_dependencies_added": false
     },
-    "handedness": "Nine new gesture tests passed. Local500x757 checked pointer drag both ways, opposite panel, open lock, normal taps, keyboard side control; desktop1180x757 scrolled757px with all seven dot bounds unchanged. Physical touch/notch devices not tested."
+    "handedness": "Nine new gesture tests passed. Local500x757 checked pointer drag both ways, opposite panel, open lock, normal taps, keyboard side control; desktop1180x757 scrolled757px with all seven dot bounds unchanged. Physical touch/notch devices not tested.",
+    "handedness_readback": "All nine changed/new branch files matched uploaded contents; main head unchanged and live index.html/menu.js/menu.css byte-matched prior published version."
   },
   "deployment": {
     "status": "not_deployed",
