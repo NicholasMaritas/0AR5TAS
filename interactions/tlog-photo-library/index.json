@@ -6,11 +6,11 @@
   "example_url": "https://nicholasmaritas.github.io/0AR5TAS/interactions/tlog-photo-library/#photo-41886163075244",
   "description": "Chronological photo/video library with year/month views, favorites, native scrolling, animated viewer, thumbnail scrubber, zoom/pan, metadata, copy link and save/share.",
   "files": {
-    "index.html": "Standalone active Pages test.",
+    "index.html": "Standalone reference/test document, also embedded from Testing link Six.",
     "host.css": "Minimal source-theme typography and document reset.",
     "tlog.html": "Reusable adapted feature DOM, SVG and inline data.",
     "tlog.css": "Extracted feature styles with HTTPS font URLs.",
-    "tlog.js": "Original native controller with static-host Copy Link adaptation.",
+    "tlog.js": "Native controller with static-host Copy Link and optional Testing embedded-history mode.",
     "tlog-data.json": "Reusable81entry/231media dataset.",
     "tlog.original.html": "Exact feature HTML extracted from user source.",
     "tlog.original.css": "Exact feature stylesheet.",
@@ -59,5 +59,11 @@
         "redirects_to_current_test": true
       }
     ]
+  },
+  "testing": {
+    "entry": "../../testing/",
+    "link": "Six",
+    "query": "embed=testing",
+    "validation": "../../testing/photo-validation.json"
   }
 }

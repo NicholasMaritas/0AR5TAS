@@ -2,6 +2,7 @@ import {createArchiveSelector} from '../interactions/archive-media-selector/arch
 import {createLoopMenu} from '../navigation/looping-dot-menu/menu.js?v=7';
 import {mountRadioCatalogue} from '../media/radio-catalogue-player/radio-player.js?v=3';
 import {createMusicSession} from './music-session.js?v=1';
+import {createPhotoSection} from './photo-section.js?v=1';
 
 export const options = [
   {label:'One', id:'1595381799430'},
@@ -34,6 +35,7 @@ export function mountTesting(host, archiveMarkup, navigationMarkup) {
     const option = options[index], link = links[index];
     link.href = `#${option.label.toLowerCase()}`;
     link.setAttribute('data-ticker-item', '');
+    if (index === 5) link.removeAttribute('data-ticker-item');
     link.dataset.id = option.id;
     link.querySelector('.link-name').textContent = option.label;
     link.querySelector('.desktop-name').textContent = option.label;
@@ -73,15 +75,32 @@ export function mountTesting(host, archiveMarkup, navigationMarkup) {
       return radio;
     },
   });
+  const photoSection = createPhotoSection(root, {
+    onHome() {
+      archive.reset();
+      delete root.dataset.selected;
+      links.forEach(link => link.removeAttribute('aria-current'));
+      musicSession.setActive(false); photoSection.setActive(false);
+    },
+    returnFocus() {
+      const button = navigation.querySelector('.loop-toggle');
+      const target = doc.defaultView.getComputedStyle(button).display === 'none' ? links[5] : button;
+      target.focus({preventScroll:true});
+    },
+  });
   const activated = event => {
-    const link = event.target.closest?.('.loop-link[data-ticker-item]');
+    const link = event.target.closest?.('.loop-link[data-id]');
     if (!link || !navigation.contains(link)) return;
-    // The archive's delegated handler has already selected this ID. The menu's
+    event.preventDefault();
+    const photosActive = link.dataset.id === options[5].id;
+    if (photosActive) archive.reset();
+    // Archive choices are selected by its delegated handler; Six opens Tlog. The menu's
     // capture-phase drag suppression prevents this listener on trailing clicks.
     for (const item of links) item.toggleAttribute('aria-current', item === link);
     link.setAttribute('aria-current', 'page');
     root.dataset.selected = link.dataset.id;
     musicSession.setActive(link.dataset.id === options[6].id);
+    photoSection.setActive(photosActive);
   };
   root.addEventListener('click', activated);
   let destroyed = false;
@@ -89,7 +108,7 @@ export function mountTesting(host, archiveMarkup, navigationMarkup) {
     if (destroyed) return;
     destroyed = true;
     root.removeEventListener('click', activated);
-    musicSession.destroy(); menu.destroy(); archive.destroy(); root.remove();
+    photoSection.destroy(); musicSession.destroy(); menu.destroy(); archive.destroy(); root.remove();
   }};
 }
 

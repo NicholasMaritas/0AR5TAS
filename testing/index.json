@@ -2,16 +2,19 @@
   "name": "Testing",
   "category": "testing",
   "test_url": "https://nicholasmaritas.github.io/0AR5TAS/testing/",
-  "description": "Looping dots select archive media, with a persistent radio catalogue on Music.",
+  "description": "Looping dots select archive media, the Tlog photo library on Six, and a persistent radio catalogue on Music.",
   "files": {
     "index.html": "Active standalone Pages test.",
     "testing.js": "Manual composition/mount and seven ID-linked dot choices.",
     "testing.css": "Shared page reset and menu layering.",
-    "navigation.html": "Seven links: One–Six and Music.",
+    "navigation.html": "Seven links: One–Six and Music, preserving loop structure.",
     "validation.json": "Historical Task038 archive/dot integration checks.",
     "music-session.js": "Lazy one-instance catalogue lifecycle and playback persistence across section changes.",
     "music-session.test.mjs": "Seven load/race/lifecycle tests.",
-    "music-validation.json": "Music integration, audio persistence and publication checks."
+    "music-validation.json": "Music integration, audio persistence and publication checks.",
+    "photo-section.js": "Lazy isolated Tlog document, Home bridge, focus return and hidden-media lifecycle.",
+    "photo-section.test.mjs": "Seven lazy-load, visibility, media and teardown tests.",
+    "photo-validation.json": "Six/Tlog integration checks and publication evidence."
   },
   "components": {
     "archive": "../interactions/archive-media-selector/archive-selector.js",
@@ -23,7 +26,9 @@
     "trigger": "../navigation/looping-dot-menu/trigger-slide.js?v=5",
     "radio": "../media/radio-catalogue-player/radio-player.js?v=3",
     "radio_styles": "../media/radio-catalogue-player/radio-player.css?v=2",
-    "catalogue": "../media/radio-catalogue-player/catalogue.json"
+    "catalogue": "../media/radio-catalogue-player/catalogue.json",
+    "photos": "../interactions/tlog-photo-library/?embed=testing",
+    "photo_controller": "../interactions/tlog-photo-library/tlog.js?v=2"
   },
   "mapping": [
     {
@@ -69,10 +74,9 @@
     {
       "label": "Six",
       "id": "1595535440673",
-      "title": [
-        "SALE: SNEEZE/VIRUS SKATEBOARD"
-      ],
-      "thumbnails": 2
+      "foreground": "Tlog photo library: 222 photos and 9 videos, chronological layouts, viewer and source controls.",
+      "document": "../interactions/tlog-photo-library/?embed=testing",
+      "archive_media_selected": false
     },
     {
       "label": "Music",
@@ -87,20 +91,21 @@
   "initial_state": "Original separate sneeze22-bg default background; no selected option, thumbnails or caption. Reload restores this state.",
   "behavior": [
     "Only7 options exist in the mounted interface; central ticker is removed in an inert template before insertion. Other14 captions/backgrounds are pruned.",
-    "Dot activation changes the matching archive background; One–Six show archive thumbnails/text and Music shows the radio catalogue.",
+    "One–Five and Music select their associated archive backgrounds through the archive controller. Six opens the Tlog document instead of selecting its former archive video.",
     "Mobile labels One–Six and Music; existing loop/docking and desktop fixed dots retained.",
     "Loop scrolling only positions choices. Selection happens on click/tap/Enter, with drag-click suppression intact.",
     "Caption thumbnail zoom is preserved. Hidden videos pause on selection change.",
     "Music retains background1595537714238 while overlaying the radio catalogue. Music foreground replaces that option's old caption/thumbs.",
     "Catalogue mounts once on first Music visit. Its single audio node remains outside the hidden visual section and continues playing on other dot selections.",
     "Player bar is omitted. Only the playing card shows pause; clicking it pauses, and selecting another mix switches playback.",
-    "Loading completion cannot reopen Music after leaving; failed loading can be retried by reselecting Music."
+    "Loading completion cannot reopen Music after leaving; failed loading can be retried by reselecting Music.",
+    "Six lazily mounts one same-origin Tlog iframe and preserves its layout/scroll/viewer state across dot changes. Fixed desktop dots and mobile navigation remain above it.",
+    "Leaving Six pauses photo-library media and makes the hidden frame inert without collapsing its dimensions. Persistent Music audio remains independent.",
+    "Embedded viewer uses local Back/next controls without changing the host tab's history; Copy Link points to the standalone photo URL. Tlog Home returns to Testing's original opening state."
   ],
-  "integration": "Load index.html as an isolated document. testing.js imports the existing controllers, fetches archive markup and navigation.html, and mounts once. mountTesting(host,archiveMarkup,navigationMarkup) returns destroy(). No external JavaScript dependencies added.",
+  "integration": "Load index.html as an isolated document. testing.js imports existing controllers, fetches archive/navigation markup and mounts once. Tlog is a lazy isolated document because its source owns global IDs, styles, input listeners and scrolling. mountTesting returns destroy(). No external JavaScript dependencies added.",
   "publication": {
-    "status": "published and verified",
-    "active_test": "Testing",
-    "runtime_commit": "90734b440f949f96f87231560e6c8fac130f874a",
-    "pages_workflow": 44395031344
+    "status": "Six Tlog integration; deployment verification pending",
+    "active_test": "Testing"
   }
 }

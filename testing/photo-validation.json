@@ -1,0 +1,51 @@
+{
+  "name": "Testing — Six opens Tlog",
+  "date": "2026-11-18",
+  "request": "Replace link Six foreground with the existing Tlog photo library; update indexed Testing and Pages.",
+  "implementation": {
+    "label": "Six",
+    "media": "Tlog video pauses on leaving; captured late-play events are paused while hidden. Music audio continues independently.",
+    "document": "../interactions/tlog-photo-library/?embed=testing",
+    "frame": "One lazy same-origin frame, fixed dimensions when hidden; inert and unavailable to input while inactive.",
+    "home": "Tlog Home returns to Testing's original default state without loading nested Testing.",
+    "history": "Embedded viewer uses local Back and does not modify host history; standalone hash mode retained.",
+    "archive": "Six no longer selects its former archive background/video; One–Five and Music retain archive media."
+  },
+  "automated": {
+    "photo_lifecycle_tests": 7,
+    "music_lifecycle_tests": 7,
+    "audio_transport_tests": 7,
+    "passed": 21,
+    "failed": 0,
+    "syntax": "Passed"
+  },
+  "local_browser": {
+    "desktop": [
+      1352,
+      797
+    ],
+    "narrow": [
+      500,
+      797
+    ],
+    "results": [
+      "No frame before first Six selection; first visit loads library, repeated visits reuse one frame.",
+      "231 media buttons render; first photo, Next, Info, Back to grid and Home verified.",
+      "Home cleared selected state, hid photo surface and restored focus to Six on desktop.",
+      "MP3 time advanced from 0.29058s in Music to 1.24748s on Six with paused=false; one audio, zero player bars.",
+      "Opened video 22 of 231; Pause control visible. Leaving for One and returning Six changed video control to Play, preserving viewer.",
+      "500x797 library and photo viewer displayed without host document horizontal overflow; mobile menu opened with seven labels.",
+      "Standalone requested deep link opened photo 41886163075244; Back closed viewer and removed hash."
+    ],
+    "review": "Independent read-only integration review found no blockers."
+  },
+  "limits": [
+    "Resized desktop browser; physical touch, phone rotation and OS background audio not tested.",
+    "Source photo library's existing open-viewer resize limitations remain; iframe dimensions are preserved while hidden.",
+    "CDN media/font availability remains external; full duration of all audio/video was not retested."
+  ],
+  "publication": {
+    "status": "pending",
+    "test_url": "https://nicholasmaritas.github.io/0AR5TAS/testing/"
+  }
+}

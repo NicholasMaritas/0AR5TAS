@@ -14,11 +14,19 @@
     "Copy Link now uses current origin/path/query plus #photo-ID instead of the Shopify search-template endpoint.",
     "Home returns to the project root via ../../.",
     "Protocol-relative media/font URLs are explicitHTTPS.",
-    "Minimal source-theme typography/reset and30px desktop/15px mobile host gutters replace the omitted shop header/cart shell."
+    "Minimal source-theme typography/reset and30px desktop/15px mobile host gutters replace the omitted shop header/cart shell.",
+    "Optional ?embed=testing suppresses viewer pushState/replaceState/popstate and scrollRestoration changes. Viewer Back closes locally. Copy Link omits the embed query and targets the standalone library."
   ],
   "reference": "tlog.original.html/css/js preserve unmodified feature extraction; source-analysis.json records identical feature hashes in both uploaded attachments. Raw asset inventory was consolidated into asset-manifest.json.",
   "persistence": "Source localStorage keys fugazi-tlog-likes, fugazi-tlog-cols and fugazi-tlog-view are retained. Favorites stay on each visitor device; no account or server write.",
   "api": "Original self-initializing IIFE, one instance per document; no destroy or mount API.",
   "save_share": "Uses native Web Share when files are supported, otherwise downloads a fetched Blob. Browser permissions and CDN CORS apply. The source in-memory file cache keeps the last5 files.",
-  "compatibility": "Source native scrolling, pointer/touch gestures, modern CSS container sizing and reduced-motion rules retained. Physical phone gestures and native mobile Share sheet were not tested."
+  "compatibility": "Source native scrolling, pointer/touch gestures, modern CSS container sizing and reduced-motion rules retained. Physical phone gestures and native mobile Share sheet were not tested.",
+  "testing_integration": {
+    "entry": "../../testing/",
+    "link": "Six",
+    "frame": "index.html?embed=testing",
+    "lifecycle": "testing/photo-section.js lazily preserves one iframe, intercepts Home to restore Testing, restores parent focus and pauses hidden frame media. Parent navigation and Music audio are independent.",
+    "standalone": "Default no-query mode retains original standalone hash/history behavior."
+  }
 }

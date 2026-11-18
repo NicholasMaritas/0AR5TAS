@@ -1,5 +1,8 @@
 
   (function() {
+    // Testing embeds keep viewer history local so hidden photos cannot consume
+    // the host page's Back button. Standalone library history stays unchanged.
+    var embedded = new URLSearchParams(location.search).get('embed') === 'testing';
     var root = document.getElementById('Tlog');
     var stream = document.getElementById('TlStream');
     var dataEl = document.getElementById('TlogData');
@@ -748,7 +751,7 @@
         whenEl.textContent = heading ? photo.entry.weekday + '  ' + photo.entry.short : photo.entry.long;
         paintLike(photo);
         fillInfo(photo);
-        if (pushed) history.replaceState({ tlogPhoto: true }, '', '#photo-' + photo.id);
+        if (pushed && !embedded) history.replaceState({ tlogPhoto: true }, '', '#photo-' + photo.id);
         playCurrent();
         paintPlayer();
         // Get the photo ready to save while it's looked at, so Share opens straight away (videos only when asked: too big)
@@ -847,7 +850,10 @@
         }
         keyFocus(document.getElementById('TlBack'));
         // The back button closes the photo rather than leaving the page
-        if (!pushed) { history.pushState({ tlogPhoto: true }, '', '#photo-' + photos[i].id); pushed = true; }
+        if (!pushed) {
+          if (!embedded) history.pushState({ tlogPhoto: true }, '', '#photo-' + photos[i].id);
+          pushed = true;
+        }
       }
       function close(fromHistory) {
         if (!viewer.classList.contains('is-open')) return;
@@ -876,13 +882,13 @@
             ghost(img.currentSrc || img.src, shownAt, el.getBoundingClientRect(), false, function(remove) { el.style.visibility = ''; remove(); });
           }
         }
-        if (pushed && !fromHistory) { pushed = false; history.back(); }
+        if (pushed && !fromHistory && !embedded) { pushed = false; history.back(); }
         pushed = false;
         // Favorites may have changed while the photo was open
         if (favourites && current === 'all') filter();
       }
       document.getElementById('TlBack').addEventListener('click', function() { close(); });
-      window.addEventListener('popstate', function() { close(true); });
+      if (!embedded) window.addEventListener('popstate', function() { close(true); });
 
       // Down closes, up shows the details (and down puts them away), a tap hides or shows the controls; on a computer
       // the mouse can drag the photos sideways too
@@ -1169,7 +1175,7 @@
       document.getElementById('TlCopy').addEventListener('click', function() {
         closeMenu();
         // Static-host adaptation: share the current test page and original photo hash.
-        var url = location.origin + location.pathname + location.search + '#photo-' + encodeURIComponent(photos[at].id);
+        var url = location.origin + location.pathname + (embedded ? '' : location.search) + '#photo-' + encodeURIComponent(photos[at].id);
         if (navigator.clipboard) navigator.clipboard.writeText(url).then(function() { say('Link Copied'); }, function() { say(url); });
         else say(url);
       });
@@ -1213,7 +1219,7 @@
       });
 
       // Start at the bottom on the newest photo, or on the photo a shared link points to
-      if ('scrollRestoration' in history) history.scrollRestoration = 'manual';
+      if (!embedded && 'scrollRestoration' in history) history.scrollRestoration = 'manual';
       var saved = null;
       try { saved = localStorage.getItem('fugazi-tlog-view'); } catch (e) {}
       show(saved === 'years' || saved === 'months' ? saved : 'all');
@@ -1223,7 +1229,7 @@
         var id = decodeURIComponent(linked[1]);
         for (var i = 0; i < photos.length; i++) {
           if (String(photos[i].id) === id) {
-            history.replaceState(null, '', location.pathname + location.search);
+            if (!embedded) history.replaceState(null, '', location.pathname + location.search);
             if (current !== 'all') show('all');
             open(i);
             break;
