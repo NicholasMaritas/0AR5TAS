@@ -35,10 +35,9 @@
     "handedness_readback": "All nine changed/new branch files matched uploaded contents; main head unchanged and live index.html/menu.js/menu.css byte-matched prior published version."
   },
   "deployment": {
-    "status": "not_deployed",
-    "reason": "Continue code-only branch update; live Pages left unchanged as requested in preceding instruction.",
-    "branch": "fix/looping-dot-menu-landscape",
-    "retained_live_runtime_commit": "d54ca6aab91ed39828019e88ebe71765a4e8aebc"
+    "status": "success",
+    "commit": "77950a22c4b20328603f26b23e5a6c966d32ae39",
+    "workflow_run": 44221601966
   },
-  "test_url_note": "Live URL remains the existing main-branch version; this branch correction is not served there."
+  "test_url_note": "Live Pages now includes the landscape and sliding-trigger corrections."
 }
