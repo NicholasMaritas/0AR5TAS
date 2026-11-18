@@ -1,14 +1,14 @@
 /* Scoped port of original feature styles; no page-wide reset. */
-.archive-media-selector{position:relative;isolation:isolate;min-height:100vh;font-family:Courier New,Courier,monospace;font-size:12px;font-weight:400;line-height:1.2;color:#fff;text-align:left;background:#000;text-rendering:optimizeLegibility}
+.archive-media-selector{position:relative;isolation:isolate;min-height:100vh;min-height:100dvh;font-family:Courier New,Courier,monospace;font-size:12px;font-weight:400;line-height:1.2;color:#fff;text-align:left;background:#000;text-rendering:optimizeLegibility}
 .archive-media-selector,.archive-media-selector *,.archive-media-selector :before,.archive-media-selector :after{box-sizing:border-box}
 .archive-media-selector p{margin-top:0;margin-bottom:1rem}
 .archive-media-selector img{border-style:none;vertical-align:middle}
-.archive-media-selector .site-background{position:fixed;top:0;left:0;width:100%;height:100%;height:100vh;overflow:hidden;z-index:-2;pointer-events:none;opacity:0;transition:opacity .2s cubic-bezier(.6,.29,.46,.88)}
+.archive-media-selector .site-background{position:fixed;inset:0;width:100vw;height:100vh;height:100dvh;overflow:hidden;z-index:-2;pointer-events:none;opacity:0;transition:opacity .2s cubic-bezier(.6,.29,.46,.88)}
 .archive-media-selector.is-loading .site-background,.is-loading .archive-media-selector .site-background{opacity:0!important}
 .archive-media-selector .site-background.is-active{z-index:-1;opacity:1;transition-timing-function:cubic-bezier(.05,.41,.22,.84)}
 .archive-media-selector .site-background picture.lazy img{opacity:0}
 .archive-media-selector .site-background picture.lazy-loaded img{opacity:1;transition:opacity .2s cubic-bezier(.05,.41,.22,.84)}
-.archive-media-selector .site-background img,.archive-media-selector .site-background video{position:absolute;top:0;left:0;height:100%;width:100%;-o-object-fit:cover;object-fit:cover}
+.archive-media-selector .site-background img,.archive-media-selector .site-background video{position:absolute;top:0;left:0;height:100%;width:100%;-o-object-fit:cover;object-fit:cover;object-position:center;max-width:none;max-height:none;min-width:100%;min-height:100%;display:block}
 .archive-media-selector .site-background img{z-index:1}
 .archive-media-selector .site-background video{z-index:2;opacity:0;transition:opacity .15s cubic-bezier(.05,.41,.22,.84)}
 .archive-media-selector .site-background.video-loaded video{opacity:1}
