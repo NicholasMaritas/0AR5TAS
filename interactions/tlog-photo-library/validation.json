@@ -1,0 +1,46 @@
+{
+  "date": "2026-11-18",
+  "source": "Both attachments have byte-identical extracted HTML/CSS/data/controller slices despite different surrounding theme versions.",
+  "contracts": {
+    "required_ids": 30,
+    "missing_ids": 0,
+    "duplicate_ids": 0,
+    "entries": 81,
+    "media": 231,
+    "photos": 222,
+    "videos": 9,
+    "unique_media_ids": 231,
+    "pagination_pages": 1
+  },
+  "automated": [
+    "JavaScript syntax passed for original and adapted controller.",
+    "Static-host audit confirmed index embeds adapted template exactly.",
+    "Controller diff limited to documented Copy Link adaptation; template changes limited to Home routing and HTTPS.",
+    "1394 unique URL HEAD checks passed (1390 feature media/font URLs plus4 source-theme body-font URLs)."
+  ],
+  "desktop_browser": {
+    "viewport": [
+      1168,
+      735
+    ],
+    "geometry": "Settled source and local first-photo image x374.375,y72,width419.25,height559. Bottom bar x324,y667.203125,width520,height53.796875. BodyMontserrat14px/300/23.8px matched.",
+    "tested": [
+      "Requested photo hash opens correct viewer.",
+      "Next/Previous changes selected photo and hash.",
+      "Info toggles metadata layout.",
+      "More menu opens and Copy Link shows Link Copied feedback (native clipboard payload not independently confirmed).",
+      "Save Photo produces a desktop download.",
+      "Favorite persists through reload, Favorites filter shows one selected photo and removing it restores empty Favorites.",
+      "Years shows4 year cards; Months shows12 month cards; All restores full library.",
+      "Double-click applies is-zoomed and bare controls.",
+      "Video id41886215012524 loaded readyState4, played muted, and Pause toggled to Play."
+    ]
+  },
+  "limits": [
+    "Physical touch gestures, pinch behavior and native mobile Share sheet not tested.",
+    "No full-site/header/cart recreation claim."
+  ],
+  "deployment": {
+    "status": "pending"
+  }
+}

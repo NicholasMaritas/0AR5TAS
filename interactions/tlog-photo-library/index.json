@@ -1,0 +1,27 @@
+{
+  "name": "Tlog photo library",
+  "category": "interactions/tlog-photo-library",
+  "source_url": "https://fugazi.net/pages/tlog",
+  "test_url": "https://nicholasmaritas.github.io/0AR5TAS/interactions/tlog-photo-library/",
+  "example_url": "https://nicholasmaritas.github.io/0AR5TAS/interactions/tlog-photo-library/#photo-41886163075244",
+  "description": "Chronological photo/video library with year/month views, favorites, native scrolling, animated viewer, thumbnail scrubber, zoom/pan, metadata, copy link and save/share.",
+  "files": {
+    "index.html": "Standalone active Pages test.",
+    "host.css": "Minimal source-theme typography and document reset.",
+    "tlog.html": "Reusable adapted feature DOM, SVG and inline data.",
+    "tlog.css": "Extracted feature styles with HTTPS font URLs.",
+    "tlog.js": "Original native controller with static-host Copy Link adaptation.",
+    "tlog-data.json": "Reusable81entry/231media dataset.",
+    "tlog.original.html": "Exact feature HTML extracted from user source.",
+    "tlog.original.css": "Exact feature stylesheet.",
+    "tlog.original.js": "Exact feature controller.",
+    "source-analysis.json": "Attachment equality, source hashes, DOM/data inventory.",
+    "controller-reference.json": "Source function offsets, behavior and integration contracts.",
+    "asset-manifest.json": "1394 checked media/font URLs and fetched source dependencies.",
+    "usage.json": "Integration, adaptations and limits.",
+    "validation.json": "Automated and browser validation, publication status."
+  },
+  "deployment": {
+    "status": "pending"
+  }
+}

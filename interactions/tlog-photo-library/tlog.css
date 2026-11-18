@@ -1,0 +1,923 @@
+
+  @font-face {
+  font-family: Montserrat;
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+  src: url("https://fugazi.net/cdn/fonts/montserrat/montserrat_n5.07ef3781d9c78c8b93c98419da7ad4fbeebb6635.woff2") format("woff2"),
+       url("https://fugazi.net/cdn/fonts/montserrat/montserrat_n5.adf9b4bd8b0e4f55a0b203cdd84512667e0d5e4d.woff") format("woff");
+}
+
+  @font-face {
+  font-family: Montserrat;
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+  src: url("https://fugazi.net/cdn/fonts/montserrat/montserrat_n6.1326b3e84230700ef15b3a29fb520639977513e0.woff2") format("woff2"),
+       url("https://fugazi.net/cdn/fonts/montserrat/montserrat_n6.652f051080eb14192330daceed8cd53dfdc5ead9.woff") format("woff");
+}
+
+  #shopify-section-footer {
+    display: none !important;
+  }
+  /* Shared by the page, the bottom bar and the viewer (the last two sit outside .tl) */
+  .tl,
+  .tl-bar,
+  .tl-viewer {
+    /* The site's own font, Montserrat, throughout */
+    --tl-font: Montserrat, sans-serif;
+    --tl-gap: 3px;
+    --tl-grey: #8e8e93;
+    --tl-accent: #a61919;
+  }
+  .tl {
+    margin: 0 -15px;
+    padding: 0 0 130px;
+    font-family: var(--tl-font);
+    color: #000;
+    -webkit-font-smoothing: antialiased;
+  }
+  .tl button,
+  .tl input,
+  .tl-viewer button,
+  .tl-bar button,
+  .tl-bar input {
+    font-family: var(--tl-font);
+  }
+
+  /* Liquid glass */
+  .tl-glass {
+    border: 1px solid rgba(255, 255, 255, .7);
+    background: rgba(250, 250, 252, .62);
+    -webkit-backdrop-filter: blur(22px) saturate(180%);
+    backdrop-filter: blur(22px) saturate(180%);
+    box-shadow: 0 6px 22px rgba(0, 0, 0, .12), inset 0 1px 0 rgba(255, 255, 255, .9);
+  }
+
+  /* Tlog and the date float at the top, the photos scrolling up under them and out of the top of the screen; over
+     photos the type turns white, with only a soft glow behind the letters. Nothing at the top has a background:
+     Safari tints the strip behind the clock to match anything fixed there, which showed as a grey bar */
+  .tl-top {
+    position: sticky;
+    top: 0;
+    z-index: 3;
+    height: 0;
+  }
+  .tl-top__text {
+    position: absolute;
+    top: 8px;
+    left: 18px;
+    right: 18px;
+    color: #000;
+    transition: color 200ms ease, text-shadow 200ms ease;
+    pointer-events: none;
+  }
+  .tl-top.is-over .tl-top__text {
+    color: #fff;
+    text-shadow: 0 0 2px rgba(0, 0, 0, .18), 0 1px 16px rgba(0, 0, 0, .28);
+  }
+  .tl-top__title {
+    margin: 0;
+    font-size: 31px;
+    font-weight: 600;
+    letter-spacing: -.6px;
+    line-height: 1.1;
+  }
+  .tl-top__sub {
+    margin: 2px 0 0;
+    min-height: 1.3em;
+    font-size: 15px;
+    font-weight: 500;
+    letter-spacing: -.1px;
+    line-height: 1.3;
+  }
+
+  /* Tiles; the All grid starts below the title, so at the top it sits in black above the photos */
+  .tl-all {
+    padding-top: 76px;
+  }
+  .tl-grid {
+    display: grid;
+    grid-template-columns: repeat(var(--tl-cols, 3), 1fr);
+    gap: var(--tl-gap);
+    touch-action: pan-y;
+  }
+  .tl-tile {
+    display: block;
+    position: relative;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    padding-top: 100%;
+    border: 0;
+    border-radius: 0;
+    background: #f2f2f7;
+    cursor: pointer;
+    overflow: hidden;
+    -webkit-tap-highlight-color: transparent;
+  }
+  .tl-tile img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0;
+    transition: opacity 250ms ease;
+  }
+  .tl-tile img.is-loaded {
+    opacity: 1;
+  }
+  .tl-tile:active img {
+    opacity: .7;
+  }
+  .tl-tile:focus-visible {
+    outline: 3px solid rgba(0, 0, 0, .55);
+    outline-offset: -3px;
+  }
+  .tl-tile__heart {
+    position: absolute;
+    left: 6px;
+    bottom: 5px;
+    width: 15px;
+    height: 15px;
+    color: #fff;
+    filter: drop-shadow(0 0 2px rgba(0, 0, 0, .45));
+  }
+  /* A video's length, in the corner of its tile, like the phone */
+  .tl-tile__dur {
+    position: absolute;
+    right: 6px;
+    bottom: 5px;
+    color: #fff;
+    font-size: 12px;
+    font-weight: 600;
+    text-shadow: 0 0 3px rgba(0, 0, 0, .55);
+    pointer-events: none;
+  }
+  .tl-count {
+    margin: 18px 0 0;
+    font-size: 14px;
+    font-weight: 600;
+    text-align: center;
+  }
+  .tl-count span {
+    display: block;
+    color: var(--tl-grey);
+    font-size: 12px;
+    font-weight: 400;
+  }
+  .tl-empty {
+    margin: 140px 16px 40px;
+    color: var(--tl-grey);
+    font-size: 17px;
+    text-align: center;
+  }
+
+  /* Months and years: rounded cards with the title over the photo */
+  .tl-cards {
+    display: grid;
+    grid-template-columns: repeat(var(--tl-card-cols, 1), 1fr);
+    gap: 14px;
+    padding: 84px 14px 0;
+  }
+  .tl-card {
+    display: block;
+    position: relative;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    padding-top: var(--tl-card-ratio, 75%);
+    border: 0;
+    border-radius: 22px;
+    background: #f2f2f7;
+    overflow: hidden;
+    cursor: pointer;
+    text-align: left;
+    -webkit-tap-highlight-color: transparent;
+  }
+  .tl-card .tl-tile {
+    position: absolute;
+    inset: 0;
+    padding: 0;
+    pointer-events: none;
+  }
+  .tl-card::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(rgba(0, 0, 0, .4), rgba(0, 0, 0, 0) 45%);
+    pointer-events: none;
+  }
+  .tl-card__text {
+    position: absolute;
+    top: 16px;
+    left: 18px;
+    right: 18px;
+    z-index: 1;
+    color: #fff;
+  }
+  .tl-card__title {
+    display: block;
+    font-size: 23px;
+    font-weight: 600;
+    letter-spacing: -.4px;
+    line-height: 1.1;
+  }
+  .tl-card__sub {
+    display: block;
+    margin-top: 3px;
+    font-size: 14px;
+    font-weight: 500;
+    opacity: .9;
+  }
+  .tl-years {
+    --tl-card-ratio: 110%;
+  }
+  .tl-years .tl-card__title {
+    font-size: 32px;
+  }
+
+  /* Bottom controls */
+  /* Like the phone: Library on the left, Home on the right, the views pill between */
+  .tl-bar {
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: calc(14px + env(safe-area-inset-bottom));
+    z-index: 50;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    max-width: 520px;
+    margin: 0 auto;
+    padding: 0 14px;
+    pointer-events: none;
+  }
+  .tl-bar.is-tabs .tl-tabs {
+    margin-right: auto;
+  }
+  #TlHome {
+    text-decoration: none;
+  }
+  .tl-bar > * {
+    pointer-events: auto;
+  }
+  .tl-round {
+    display: flex;
+    flex: 0 0 auto;
+    align-items: center;
+    justify-content: center;
+    width: 48px;
+    height: 48px;
+    padding: 0;
+    border-radius: 50%;
+    color: #000;
+    cursor: pointer;
+    -webkit-tap-highlight-color: transparent;
+  }
+  .tl-round svg {
+    width: 22px;
+    height: 22px;
+  }
+  .tl-round--accent {
+    color: var(--tl-accent);
+  }
+  .tl-seg {
+    display: flex;
+    flex: 0 1 auto;
+    gap: 2px;
+    padding: 4px;
+    border-radius: 999px;
+  }
+  .tl-seg__btn {
+    padding: 10px 18px;
+    border: 0;
+    border-radius: 999px;
+    background: none;
+    color: #000;
+    font-size: 14px;
+    font-weight: 500;
+    white-space: nowrap;
+    cursor: pointer;
+    transition: background-color 200ms ease;
+    -webkit-tap-highlight-color: transparent;
+  }
+  .tl-seg__btn[aria-pressed="true"] {
+    background: rgba(120, 120, 128, .18);
+  }
+  .tl-seg__btn:focus-visible,
+  .tl-round:focus-visible,
+  .tl-pill-btn:focus-visible {
+    outline: 2px solid rgba(0, 0, 0, .55);
+    outline-offset: 2px;
+  }
+
+  /* Tapping Library turns the bar into tabs, Library and Favorites, like the phone */
+  .tl-tabs {
+    display: none;
+    gap: 4px;
+    padding: 4px;
+    border-radius: 999px;
+  }
+  .tl-bar.is-tabs .tl-tabs {
+    display: flex;
+  }
+  .tl-bar.is-tabs .tl-seg,
+  .tl-bar.is-tabs #TlNewest {
+    display: none;
+  }
+  .tl-tab {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2px;
+    min-width: 78px;
+    height: 50px;
+    padding: 0 12px;
+    border: 0;
+    border-radius: 999px;
+    background: none;
+    color: #000;
+    font-size: 11px;
+    font-weight: 500;
+    text-decoration: none;
+    cursor: pointer;
+    transition: background-color 200ms ease, color 200ms ease;
+    -webkit-tap-highlight-color: transparent;
+  }
+  .tl-tab svg {
+    width: 23px;
+    height: 23px;
+  }
+  .tl-tab[aria-pressed="true"] {
+    background: rgba(120, 120, 128, .16);
+    color: var(--tl-accent);
+  }
+  .tl-tab:focus-visible {
+    outline: 2px solid rgba(0, 0, 0, .55);
+    outline-offset: 2px;
+  }
+  .tl-empty span {
+    display: block;
+    margin-top: 6px;
+    font-size: 15px;
+  }
+  .tl-grid > [hidden],
+  .tl-count[hidden],
+  .tl-empty[hidden],
+  .tl-count [hidden],
+  .tl-empty [hidden] {
+    display: none !important;
+  }
+  /* The photo that zooms between the grid and the viewer */
+  .tl-ghost {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1001;
+    display: block;
+    transform-origin: 0 0;
+    will-change: transform, clip-path;
+    pointer-events: none;
+    backface-visibility: hidden;
+  }
+  .tl-viewer.is-zooming .tl-pages {
+    visibility: hidden;
+  }
+  /* The hidden switch that plays the iPhone's tick */
+  .tl-tick {
+    position: fixed;
+    top: 0;
+    left: -40px;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    opacity: 0;
+    pointer-events: none;
+  }
+
+  /* Viewer */
+  /* Out of the page entirely while closed: Safari tints the strip behind the clock to match a full-screen layer
+     pinned to the top, even an invisible one */
+  .tl-viewer {
+    position: fixed;
+    inset: 0;
+    z-index: 1000;
+    display: none;
+    flex-direction: column;
+    background: #fff;
+    color: #000;
+    font-family: var(--tl-font);
+    transition: opacity 200ms ease;
+    -webkit-font-smoothing: antialiased;
+  }
+  .tl-viewer.is-open {
+    display: flex;
+    opacity: 1;
+  }
+  @starting-style {
+    .tl-viewer.is-open {
+      opacity: 0;
+    }
+  }
+  /* Like the phone: the photo runs from under the clock down to the toolbar row; the top buttons and the thumbnail
+     strip float over its edges, and only Share / Heart / Info sit below it */
+  .tl-viewer__top,
+  .tl-viewer__foot {
+    position: absolute;
+    left: 0;
+    right: 0;
+    z-index: 2;
+    transition: opacity 200ms ease;
+  }
+  .tl-viewer__top {
+    top: 0;
+  }
+  .tl-viewer__foot {
+    bottom: 0;
+  }
+  .tl-viewer.is-bare .tl-viewer__top,
+  .tl-viewer.is-bare .tl-viewer__foot,
+  .tl-viewer.is-bare .tl-arrow {
+    opacity: 0;
+    pointer-events: none;
+  }
+  .tl-viewer__top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    padding: calc(8px + env(safe-area-inset-top)) 14px 8px;
+  }
+  .tl-viewer .tl-round {
+    width: 40px;
+    height: 40px;
+  }
+  .tl-viewer .tl-round svg {
+    width: 20px;
+    height: 20px;
+  }
+  .tl-viewer__head {
+    min-width: 0;
+    max-width: 70%;
+    padding: 5px 20px;
+    border-radius: 999px;
+    text-align: center;
+  }
+  .tl-viewer__title {
+    margin: 0;
+    overflow: hidden;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 1.25;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+  .tl-viewer__sub {
+    margin: 0;
+    font-size: 10.5px;
+    font-weight: 400;
+    line-height: 1.3;
+  }
+  .tl-viewer__stage {
+    position: absolute;
+    inset: env(safe-area-inset-top) 0 calc(60px + env(safe-area-inset-bottom));
+  }
+
+  /* The photos: a native sideways scroller that snaps one photo at a time, so swiping has the phone's own feel */
+  .tl-pages {
+    --tl-page-gap: 20px;
+    position: absolute;
+    inset: 0;
+    display: flex;
+    gap: var(--tl-page-gap);
+    overflow-x: auto;
+    overflow-y: hidden;
+    overscroll-behavior: contain;
+    scroll-snap-type: x mandatory;
+    scrollbar-width: none;
+    touch-action: pan-x;
+    -webkit-user-select: none;
+    user-select: none;
+  }
+  .tl-pages::-webkit-scrollbar {
+    display: none;
+  }
+  .tl-pages.is-free {
+    scroll-snap-type: none;
+  }
+  /* Each photo's box is exactly the photo's shape (--r, its width over height), fitted and centred, so holding it
+     to save lifts just the photo, as on the phone, not the space around it */
+  .tl-page {
+    position: relative;
+    flex: 0 0 100%;
+    scroll-snap-align: center;
+    scroll-snap-stop: always;
+    container-type: size;
+  }
+  .tl-page img,
+  .tl-page video {
+    position: absolute;
+    inset: 0;
+    width: min(calc(100cqw - var(--tl-side, 0px)), calc(100cqh * var(--r, 1)));
+    height: auto;
+    max-height: 100%;
+    margin: auto;
+    aspect-ratio: var(--r, 1);
+    object-fit: contain;
+  }
+  .tl-page img {
+    background: center / cover no-repeat;
+    -webkit-user-drag: none;
+    transition: transform 240ms cubic-bezier(.2, .7, .2, 1);
+  }
+  .tl-page img.is-dragging,
+  .tl-page video.is-dragging {
+    transition: none;
+  }
+  /* A video plays over its own still, in the same place */
+  .tl-page video {
+    background: transparent;
+    transition: transform 240ms cubic-bezier(.2, .7, .2, 1);
+  }
+  .tl-arrow {
+    position: absolute;
+    top: 50%;
+    z-index: 2;
+    display: none;
+    margin-top: -23px;
+    transition: opacity 200ms ease;
+  }
+  .tl-arrow--prev {
+    left: 16px;
+  }
+  .tl-arrow--next {
+    right: 16px;
+  }
+  .tl-arrow[disabled] {
+    opacity: 0;
+    pointer-events: none;
+  }
+  @media (hover: hover) and (min-width: 769px) {
+    .tl-arrow {
+      display: flex;
+    }
+  }
+  .tl-viewer__foot {
+    padding: 6px 0 calc(8px + env(safe-area-inset-bottom));
+  }
+
+  /* The video bar, like the phone's: play / pause, how far along, sound; it sits just above the strip */
+  .tl-player {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    height: 46px;
+    margin: 0 14px 10px;
+    padding: 0 16px;
+    border-radius: 999px;
+    transition: opacity 200ms ease;
+  }
+  .tl-player[hidden] {
+    display: none;
+  }
+  .tl-viewer.is-info .tl-player {
+    opacity: 0;
+    pointer-events: none;
+  }
+  .tl-player__btn {
+    display: flex;
+    flex: 0 0 auto;
+    align-items: center;
+    justify-content: center;
+    width: 30px;
+    height: 30px;
+    padding: 0;
+    border: 0;
+    background: none;
+    color: #000;
+    cursor: pointer;
+    -webkit-tap-highlight-color: transparent;
+  }
+  .tl-player__btn svg {
+    width: 22px;
+    height: 22px;
+  }
+  .tl-player__track {
+    position: relative;
+    flex: 1 1 auto;
+    height: 28px;
+    cursor: pointer;
+    touch-action: none;
+  }
+  .tl-player__track::before,
+  .tl-player__fill {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 50%;
+    height: 6px;
+    margin-top: -3px;
+    border-radius: 3px;
+  }
+  .tl-player__track::before {
+    right: 0;
+    background: rgba(120, 120, 128, .22);
+  }
+  .tl-player__fill {
+    width: 0;
+    background: #8e8e93;
+  }
+
+  /* The thumbnail strip: its own scroller, linked to the photos; the current thumbnail sits at the centre */
+  .tl-strip {
+    --tl-thumb: 22px;
+    --tl-thumb-gap: 4px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: var(--tl-thumb-gap);
+    height: 36px;
+    padding: 0 calc(50% - var(--tl-thumb) / 2);
+    overflow-x: auto;
+    overflow-y: hidden;
+    overscroll-behavior: contain;
+    scrollbar-width: none;
+    touch-action: pan-x;
+  }
+  .tl-strip::-webkit-scrollbar {
+    display: none;
+  }
+  .tl-strip__item {
+    flex: 0 0 var(--tl-thumb);
+    height: 28px;
+    padding: 0;
+    border: 0;
+    border-radius: 2px;
+    background: #f2f2f7 center / cover no-repeat;
+    cursor: pointer;
+    transition: transform 160ms ease;
+  }
+  .tl-strip__item.is-current {
+    position: relative;
+    z-index: 1;
+    transform: scale(1.3);
+    box-shadow: 0 0 0 1.5px #fff;
+  }
+  .tl-tools {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 8px 14px 0;
+  }
+  .tl-pill {
+    display: flex;
+    gap: 4px;
+    padding: 2px 8px;
+    border-radius: 999px;
+  }
+  .tl-pill-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    padding: 0;
+    border: 0;
+    background: none;
+    color: #000;
+    cursor: pointer;
+  }
+  .tl-pill-btn svg {
+    width: 21px;
+    height: 21px;
+  }
+  .tl-pill-btn[aria-pressed="true"] {
+    color: var(--tl-accent);
+  }
+  #TlInfoBtn[aria-pressed="true"] {
+    color: #000;
+  }
+  .tl-tools__spacer {
+    width: 40px;
+  }
+  /* Info, like the phone: the photo slides up into the top half and the details come up under it */
+  .tl-viewer__stage {
+    transition: bottom 380ms cubic-bezier(.32, .72, 0, 1);
+  }
+  .tl-viewer.is-info .tl-viewer__stage {
+    bottom: 50%;
+  }
+  .tl-viewer.is-info .tl-viewer__top,
+  .tl-viewer.is-info .tl-strip {
+    opacity: 0;
+    pointer-events: none;
+  }
+  .tl-sheet {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1;
+    height: 50%;
+    padding-bottom: calc(76px + env(safe-area-inset-bottom));
+    overflow-y: auto;
+    background: #f5f5f7;
+    transform: translateY(100%);
+    transition: transform 380ms cubic-bezier(.32, .72, 0, 1);
+    overscroll-behavior: contain;
+  }
+  .tl-viewer.is-info .tl-sheet {
+    transform: none;
+  }
+  .tl-sheet p {
+    margin: 0;
+  }
+  .tl-sheet__caption {
+    padding: 14px 18px;
+    border-bottom: 1px solid #e5e5ea;
+    background: #fff;
+    font-size: 16px;
+    line-height: 1.4;
+  }
+  .tl-sheet__body {
+    padding: 16px 18px;
+  }
+  .tl-sheet__when {
+    font-size: 16px;
+    font-weight: 500;
+  }
+  .tl-sheet__place {
+    margin-top: 4px !important;
+    font-size: 15px;
+  }
+  .tl-sheet__file {
+    margin-top: 4px !important;
+    color: var(--tl-grey);
+    font-size: 14px;
+  }
+  .tl-sheet__card {
+    margin-top: 16px;
+    border-radius: 12px;
+    background: #ebebf0;
+    overflow: hidden;
+  }
+  .tl-sheet__head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 14px;
+    background: #e1e1e6;
+    font-size: 14px;
+    font-weight: 500;
+  }
+  .tl-sheet__chip {
+    padding: 2px 7px;
+    border-radius: 5px;
+    background: #d1d1d6;
+    color: #6e6e73;
+    font-size: 11px;
+    font-weight: 500;
+  }
+  .tl-sheet__spec {
+    padding: 11px 14px;
+    color: #6e6e73;
+    font-size: 14px;
+  }
+  .tl-menu {
+    position: absolute;
+    top: calc(60px + env(safe-area-inset-top));
+    right: 14px;
+    z-index: 3;
+    min-width: 200px;
+    padding: 6px;
+    border-radius: 18px;
+    opacity: 0;
+    transform: scale(.95);
+    transform-origin: top right;
+    transition: opacity 160ms ease, transform 160ms ease;
+    pointer-events: none;
+  }
+  .tl-menu.is-shown {
+    opacity: 1;
+    transform: none;
+    pointer-events: auto;
+  }
+  .tl-menu button {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    width: 100%;
+    padding: 11px 14px;
+    border: 0;
+    border-radius: 12px;
+    background: none;
+    color: #000;
+    font-size: 16px;
+    text-align: left;
+    cursor: pointer;
+  }
+  .tl-menu button svg {
+    width: 20px;
+    height: 20px;
+  }
+  .tl-menu button:hover {
+    background: rgba(120, 120, 128, .12);
+  }
+  .tl-toast {
+    position: absolute;
+    left: 50%;
+    bottom: calc(var(--tl-foot, 120px) + 12px);
+    z-index: 3;
+    padding: 9px 16px;
+    border-radius: 999px;
+    color: #000;
+    font-size: 14px;
+    font-weight: 500;
+    white-space: nowrap;
+    opacity: 0;
+    transform: translateX(-50%);
+    transition: opacity 200ms ease;
+    pointer-events: none;
+  }
+  .tl-toast.is-shown {
+    opacity: 1;
+  }
+  html.tl-locked,
+  html.tl-locked body {
+    overflow: hidden;
+  }
+
+  @media only screen and (min-width: 769px) {
+    .tl {
+      margin: 0;
+    }
+    .tl-top__text {
+      left: 0;
+      right: 0;
+    }
+    .tl-top__title {
+      font-size: 34px;
+    }
+    .tl-months {
+      --tl-card-cols: 3;
+    }
+    .tl-years {
+      --tl-card-cols: 2;
+      --tl-card-ratio: 70%;
+    }
+    /* On a computer the photos sit in a centred column, with tlog and the date beside them on the left, in black */
+    .tl-all,
+    .tl-cards {
+      max-width: min(1080px, calc(100% - 400px));
+      margin: 0 auto;
+    }
+    .tl-all {
+      padding-top: 8px;
+    }
+    .tl-cards {
+      padding: 8px 0 0;
+    }
+    .tl-top.is-over .tl-top__text {
+      color: #000;
+      text-shadow: none;
+    }
+    /* The screen is big enough for the photo to sit in the white space, clear of the controls */
+    .tl-viewer__stage {
+      top: 72px;
+      bottom: var(--tl-foot, 110px);
+    }
+    .tl-page {
+      --tl-side: 160px;
+    }
+  }
+  /* Zoomed in, the photo has the whole screen to itself, with the controls out of the way. The viewer stays white
+     throughout, like the page, so it matches Safari's own strips at the top and bottom of the screen */
+  .tl-viewer.is-zoomed .tl-viewer__stage {
+    inset: 0;
+    transition: none;
+  }
+  .tl-viewer.is-zoomed .tl-page {
+    --tl-side: 0px;
+  }
+  @media only screen and (max-width: 420px) {
+    .tl-seg__btn {
+      padding: 10px 15px;
+    }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .tl-tile img,
+    .tl-viewer,
+    .tl-page img,
+    .tl-strip__item,
+    .tl-seg__btn,
+    .tl-sheet,
+    .tl-viewer__stage,
+    .tl-menu {
+      transition: none;
+    }
+  }

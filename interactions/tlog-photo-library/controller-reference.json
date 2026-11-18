@@ -1,0 +1,202 @@
+{
+  "task": "034 read-only FUGAZI Tlog feature/controller audit",
+  "source_controller": "inline-49.js",
+  "controller_sha256": "e1a5dd5f5363172da82f944ab05eea77ea51d9a0f57e930f4e3b6bf4a402902d",
+  "controller_characters": 61446,
+  "offset_units": "zero-based Unicode character offsets",
+  "function_starts": {
+    "fetchBatch": 723,
+    "tlog": 1143,
+    "show": 14863,
+    "setCols": 19542,
+    "setOrder": 23508,
+    "near": 23987,
+    "fillInfo": 28461,
+    "tick": 31062,
+    "playCurrent": 34772,
+    "setCurrent": 35915,
+    "ghost": 38094,
+    "open": 39874,
+    "close": 42074,
+    "enterZoom": 45988,
+    "resetZoom": 46602,
+    "zoomAt": 47791,
+    "fileFor": 55543,
+    "sharePhoto": 56876
+  },
+  "data": {
+    "pages": 1,
+    "entries": 81,
+    "photos": 231,
+    "target": {
+      "entry": {
+        "date": "2009-07-21",
+        "seq": 659760251052,
+        "note": "",
+        "place": "",
+        "photos": [
+          {
+            "id": 41886163075244,
+            "src": "//fugazi.net/cdn/shop/files/IMG_0984.jpg?v=1793043563&width=400",
+            "w": 1200,
+            "h": 1600,
+            "name": "IMG_0984.jpg"
+          }
+        ]
+      },
+      "photo": {
+        "id": 41886163075244,
+        "src": "//fugazi.net/cdn/shop/files/IMG_0984.jpg?v=1793043563&width=400",
+        "w": 1200,
+        "h": 1600,
+        "name": "IMG_0984.jpg"
+      }
+    },
+    "order": "Oldest date first; ties sorted ascending entry.seq; initial grid opens newest at bottom."
+  },
+  "standalone": {
+    "javascript": "Vanilla IIFE; no jQuery, GSAP, Shopify SDK, theme globals or build/runtime imports. Shopify references are comments only.",
+    "bootstrap": "Needs complete feature DOM, inline feature CSS, SVG sprite and JSON TlogData. Root #Tlog alone is not sufficient: #TlBar, #TlViewer, #TlToast are siblings; SVG sprite is before #Tlog.",
+    "pagination": "pages=1 means fetchBatch is never called. For pages>1 it fetches current location with view=tlog-data&page=n using same-origin credentials, requiring server JSON or a static adaptation.",
+    "required_dom_ids": [
+      "Tlog",
+      "TlStream",
+      "TlogData",
+      "TlSub",
+      "TlTop",
+      "TlBar",
+      "TlNewest",
+      "TlHome",
+      "TlViewer",
+      "TlPages",
+      "TlStrip",
+      "TlPrev",
+      "TlNext",
+      "TlTitle",
+      "TlWhen",
+      "TlLike",
+      "TlInfoBtn",
+      "TlInfo",
+      "TlMore",
+      "TlMenu",
+      "TlToast",
+      "TlPlayer",
+      "TlPlay",
+      "TlMute",
+      "TlTrack",
+      "TlFill",
+      "TlBack",
+      "TlShare",
+      "TlSave",
+      "TlCopy"
+    ],
+    "other_dom_contracts": [
+      ".tl-seg__btn[data-view=years|months|all]",
+      ".tl-tab[data-tab=library|favorites]",
+      ".tl-tabs",
+      ".tl-seg",
+      ".tl-viewer__foot",
+      ".tl-round",
+      ".tl-pill-btn",
+      "SVG symbol IDs such as tl-heart/tl-info/tl-back/tl-play"
+    ],
+    "isolation": "Global listeners, global history.scrollRestoration=manual, global html tl-locked class and no cleanup API; should execute once on an isolated test page."
+  },
+  "viewer_interactions": [
+    {
+      "feature": "Open/close",
+      "behavior": "Tile click opens viewer with dialog state and hash #photo-ID; loaded tile copy animates transform+clipPath to fitted photo rectangle,380ms cubic-bezier(.32,.72,0,1). Close reverses when source tile is available. Back button, browser back/popstate and Escape close. Closing may center current tile rather than restore exact previous window offset."
+    },
+    {
+      "feature": "Photo navigation",
+      "behavior": "Native horizontal page scroller, previous/next buttons, ArrowLeft/ArrowRight. Active photo is nearest scroll position. End buttons disabled. Metadata, info, heart, media player, strip and hash update with current photo."
+    },
+    {
+      "feature": "Filmstrip",
+      "behavior": "Native horizontally scrolling strip tracks pages continuously. Strip scrubbing changes photo without slide; strip settles to current thumbnail after120ms. Clicking thumb jumps photo and smoothly centers strip. Haptics: navigator.vibrate(5), or hidden switch checkbox behavior on supported Safari."
+    },
+    {
+      "feature": "Toolbar tap",
+      "behavior": "Single photo tap after260ms hides/shows controls; if info open it closes info instead. Long press over500ms retains native save/context behavior."
+    },
+    {
+      "feature": "Pinch/double tap zoom",
+      "behavior": "Double tap within300ms and40px toggles zoom, zoom-in scale2.5. Two-finger pinch or Ctrl+wheel trackpad pinch scales around fingers/cursor. Zoom scale clamped from home*.6 through5. While zoomed, pan by pointer; horizontal page scroll disabled; zoom out restores controls prior visibility. Exit animation260ms."
+    },
+    {
+      "feature": "Swipe gestures",
+      "behavior": "Axis chosen after8px. Downward photo drag follows pointer with scale/background fade; closes after100px, or40px when gesture<250ms. Upward movement past40px reveals details. Downward40px hides details. Mouse horizontal drag manually updates pages scrollLeft and settles to next photo when appropriate."
+    },
+    {
+      "feature": "Favorites",
+      "behavior": "Heart toggles current photo favorite, updates grid heart and saves browser-local storage. If opened from Favorites, viewer order includes only favorites plus initially opened item; changes filter when viewer closes."
+    },
+    {
+      "feature": "Info",
+      "behavior": "Info button/upward gesture reveals caption, day/date, optional place, filename stem, file type and dimensions/MP or duration. Single tap, down gesture or Escape dismisses info."
+    },
+    {
+      "feature": "Video",
+      "behavior": "Native video element made when selected, uses direct photo.video, playsInline, auto preload and muted by default. Play/pause, sound toggle and pointer scrubber. Only current video plays; leaving resets playback to0. Sound setting stays in memory until reload."
+    },
+    {
+      "feature": "More menu",
+      "behavior": "More toggles Save Photo / Copy Link menu; outside click or Escape closes it. Escape prioritizes menu, then info, then viewer."
+    },
+    {
+      "feature": "Save/share",
+      "behavior": "Fetches photo.save to Blob/File. Supported mobile shares actual file via navigator.share; desktop downloads blob using temporary object URL revoked after4s. Loading errors show Photo Unavailable; lost activation may show Tap Again to Save."
+    },
+    {
+      "feature": "Keyboard focus",
+      "behavior": "Focus is moved only after keyboard use, to Back on opening and source tile on closing. Tab loops visible enabled .tl-round/.tl-pill-btn controls; no inert background is set."
+    }
+  ],
+  "grid_interactions": [
+    "Years/Months/All views; year/month cards drill down.",
+    "Library button morphs into Library/Favorites tabs,420ms cubic-bezier(.3,.9,.3,1).",
+    "Grid columns change via pinch or Ctrl+wheel: phone1/3/5; desktop4/6/8/12.",
+    "Grid lazy expansion prepends CHUNK240 older photos with scroll offset compensation; sample231photos fits current initial chunk.",
+    "Date heading updates while page scrolls; newest position aligns just above bottom toolbar."
+  ],
+  "storage": {
+    "persistent": {
+      "fugazi-tlog-likes": "JSON map of photo ID ->1",
+      "fugazi-tlog-cols": "phone/wide column choices",
+      "fugazi-tlog-view": "years,months or all"
+    },
+    "in_memory": "Viewer page and strip DOM made once; image URL assigned once when nearby. Up to5 saved file promises/files cached in memory; no IndexedDB, Cache API or service worker. Sound/favorites active tab not persistently stored.",
+    "photo_prefetch": "Current\u00b12 photos full srcset, filmstrip\u00b124 tiny images. When canShareFiles, current still image save blob is prefetched500ms after selection and on Share pointerdown. Browser HTTP caching remains browser/server controlled."
+  },
+  "network": {
+    "pagination": "Only when data.pages>1; current page URL plus view=tlog-data&page=n.",
+    "images": "Protocol-relative fugazi.net CDN data; derived widths120/400/800/1000/2000; save3000. Original URLs have existing version query, so width appends work.",
+    "videos": "Direct photo.video MP4 data; fetched only when relevant player/save invokes it.",
+    "save_share": "Fetch(blob) requires remote media CORS; normal cross-origin image display alone does not prove Save works.",
+    "third_party_js": []
+  },
+  "required_static_adaptations": [
+    {
+      "location": "inline-49.js line1172",
+      "source": "location.origin + '/search?q=photo-' + photos[at].id + '&view=tlog'",
+      "problem": "Copy Link points to nonexistent Shopify search template on GitHub Pages and drops repository path.",
+      "recommended": "For a runnable port, copy current static page URL with #photo-ID; preserve exact source in original archive."
+    },
+    {
+      "location": "HTML #TlHome href=/",
+      "problem": "On project Pages this navigates account-root site, outside /0AR5TAS/.",
+      "recommended": "Use an explicit project test-home URL or explicit external source-home URL according to intended navigation."
+    }
+  ],
+  "other_portability_notes": [
+    "Viewport/grid CSS and SVG icon sprite are required; do not extract controller alone.",
+    "Root standard browser APIs: matchMedia, Promise, fetch, native scroll containers, requestAnimationFrame, URL/history, Pointer/Touch events, localStorage, optional IntersectionObserver/WAAPI/clipboard/WebShare.",
+    "reduced-motion is sampled at initialization, not listened for later changes.",
+    "Hash deep-link only checked at initialization; arbitrary later hashchange is not handled.",
+    "Global popstate always closes the viewer; no SPA/router ownership boundary.",
+    "Video slider is role=slider but has no tabindex or keyboard-specific seek handling.",
+    "Save names still files .jpg although actual MIME type is taken from Blob; source format may differ.",
+    "No feature destroy lifecycle exists; do not initialize twice."
+  ],
+  "verification": "Read-only analysis of supplied local source files; no live browser interactions, runtime edits or GitHub writes."
+}

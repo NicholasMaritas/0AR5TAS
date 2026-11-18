@@ -1,0 +1,340 @@
+{
+  "task": "FUGAZI Tlog feature extraction",
+  "scope": "Only Tlog SVG symbols, library/viewer markup, inline data, feature stylesheet and native controller. Header, cart, footer markup, tracking and unrelated scripts excluded.",
+  "sources": {
+    "photo_attachment": {
+      "path": "/workspace/work/tlog/photo.html",
+      "source": {
+        "characters": 376462,
+        "bytes": 384713,
+        "sha256": "16c9d6caa8a55add6103dd3ec2ed3aae8286f967f129d73eba461bafe92591fe"
+      },
+      "parts": {
+        "html": {
+          "characters": 55028,
+          "bytes": 55028,
+          "sha256": "6d22b430059081305ba2718977decda166bf75b570d476a2b8f79a5d1e394ff4"
+        },
+        "css": {
+          "characters": 20936,
+          "bytes": 20936,
+          "sha256": "21660657ea361506c7a71b8885a826177d352251cb3757251ea1617b2c26917d"
+        },
+        "data": {
+          "characters": 46806,
+          "bytes": 46806,
+          "sha256": "d55bdcadf76579739f08995269c7c3b1d08d5db7d0dd5414f113ba2f704d5173"
+        },
+        "js": {
+          "characters": 61446,
+          "bytes": 61460,
+          "sha256": "e1a5dd5f5363172da82f944ab05eea77ea51d9a0f57e930f4e3b6bf4a402902d"
+        }
+      },
+      "ranges": {
+        "style": {
+          "start": 79680,
+          "inner_start": 79687,
+          "inner_end": 100623,
+          "end": 100631
+        },
+        "symbols": {
+          "start": 100632,
+          "inner_start": 100703,
+          "inner_end": 104455,
+          "end": 104461
+        },
+        "data": {
+          "start": 108799,
+          "inner_start": 108845,
+          "inner_end": 155651,
+          "end": 155660
+        },
+        "controller": {
+          "start": 155660,
+          "inner_start": 155668,
+          "inner_end": 217114,
+          "end": 217123
+        }
+      },
+      "pages": 1,
+      "entries": 81,
+      "media": 231,
+      "media_types": {
+        "photo": 222,
+        "video": 9
+      },
+      "entry_fields": [
+        "date",
+        "note",
+        "photos",
+        "place",
+        "seq"
+      ],
+      "photo_fields": [
+        "duration",
+        "h",
+        "id",
+        "name",
+        "src",
+        "type",
+        "video",
+        "w"
+      ],
+      "photo_id_duplicates": {},
+      "required_controller_ids": [
+        "TlBack",
+        "TlBar",
+        "TlCopy",
+        "TlFill",
+        "TlHome",
+        "TlInfo",
+        "TlInfoBtn",
+        "TlLike",
+        "TlMenu",
+        "TlMore",
+        "TlMute",
+        "TlNewest",
+        "TlNext",
+        "TlPages",
+        "TlPlay",
+        "TlPlayer",
+        "TlPrev",
+        "TlSave",
+        "TlShare",
+        "TlStream",
+        "TlStrip",
+        "TlSub",
+        "TlTitle",
+        "TlToast",
+        "TlTop",
+        "TlTrack",
+        "TlViewer",
+        "TlWhen",
+        "Tlog",
+        "TlogData"
+      ],
+      "missing_controller_ids": [],
+      "duplicate_markup_ids": {},
+      "symbol_ids": [
+        "tl-back",
+        "tl-heart",
+        "tl-heart-line",
+        "tl-home",
+        "tl-info",
+        "tl-info-fill",
+        "tl-link",
+        "tl-more",
+        "tl-muted",
+        "tl-pause",
+        "tl-photos",
+        "tl-play",
+        "tl-save",
+        "tl-share",
+        "tl-sound"
+      ],
+      "target_photo": {
+        "entry_date": "2009-07-21",
+        "entry_seq": 659760251052,
+        "id": 41886163075244,
+        "src": "//fugazi.net/cdn/shop/files/IMG_0984.jpg?v=1793043563&width=400",
+        "w": 1200,
+        "h": 1600,
+        "name": "IMG_0984.jpg"
+      }
+    },
+    "grid_attachment": {
+      "path": "/workspace/work/tlog/grid.html",
+      "source": {
+        "characters": 373340,
+        "bytes": 381352,
+        "sha256": "e9788210069b20a4f49d55cbc5067e8588f3d09d1bff5a54d95a8bceef3ea903"
+      },
+      "parts": {
+        "html": {
+          "characters": 55028,
+          "bytes": 55028,
+          "sha256": "6d22b430059081305ba2718977decda166bf75b570d476a2b8f79a5d1e394ff4"
+        },
+        "css": {
+          "characters": 20936,
+          "bytes": 20936,
+          "sha256": "21660657ea361506c7a71b8885a826177d352251cb3757251ea1617b2c26917d"
+        },
+        "data": {
+          "characters": 46806,
+          "bytes": 46806,
+          "sha256": "d55bdcadf76579739f08995269c7c3b1d08d5db7d0dd5414f113ba2f704d5173"
+        },
+        "js": {
+          "characters": 61446,
+          "bytes": 61460,
+          "sha256": "e1a5dd5f5363172da82f944ab05eea77ea51d9a0f57e930f4e3b6bf4a402902d"
+        }
+      },
+      "ranges": {
+        "style": {
+          "start": 79691,
+          "inner_start": 79698,
+          "inner_end": 100634,
+          "end": 100642
+        },
+        "symbols": {
+          "start": 100643,
+          "inner_start": 100714,
+          "inner_end": 104466,
+          "end": 104472
+        },
+        "data": {
+          "start": 108810,
+          "inner_start": 108856,
+          "inner_end": 155662,
+          "end": 155671
+        },
+        "controller": {
+          "start": 155671,
+          "inner_start": 155679,
+          "inner_end": 217125,
+          "end": 217134
+        }
+      },
+      "pages": 1,
+      "entries": 81,
+      "media": 231,
+      "media_types": {
+        "photo": 222,
+        "video": 9
+      },
+      "entry_fields": [
+        "date",
+        "note",
+        "photos",
+        "place",
+        "seq"
+      ],
+      "photo_fields": [
+        "duration",
+        "h",
+        "id",
+        "name",
+        "src",
+        "type",
+        "video",
+        "w"
+      ],
+      "photo_id_duplicates": {},
+      "required_controller_ids": [
+        "TlBack",
+        "TlBar",
+        "TlCopy",
+        "TlFill",
+        "TlHome",
+        "TlInfo",
+        "TlInfoBtn",
+        "TlLike",
+        "TlMenu",
+        "TlMore",
+        "TlMute",
+        "TlNewest",
+        "TlNext",
+        "TlPages",
+        "TlPlay",
+        "TlPlayer",
+        "TlPrev",
+        "TlSave",
+        "TlShare",
+        "TlStream",
+        "TlStrip",
+        "TlSub",
+        "TlTitle",
+        "TlToast",
+        "TlTop",
+        "TlTrack",
+        "TlViewer",
+        "TlWhen",
+        "Tlog",
+        "TlogData"
+      ],
+      "missing_controller_ids": [],
+      "duplicate_markup_ids": {},
+      "symbol_ids": [
+        "tl-back",
+        "tl-heart",
+        "tl-heart-line",
+        "tl-home",
+        "tl-info",
+        "tl-info-fill",
+        "tl-link",
+        "tl-more",
+        "tl-muted",
+        "tl-pause",
+        "tl-photos",
+        "tl-play",
+        "tl-save",
+        "tl-share",
+        "tl-sound"
+      ],
+      "target_photo": {
+        "entry_date": "2009-07-21",
+        "entry_seq": 659760251052,
+        "id": 41886163075244,
+        "src": "//fugazi.net/cdn/shop/files/IMG_0984.jpg?v=1793043563&width=400",
+        "w": 1200,
+        "h": 1600,
+        "name": "IMG_0984.jpg"
+      }
+    }
+  },
+  "comparison": {
+    "feature_parts_identical": {
+      "html": true,
+      "css": true,
+      "data": true,
+      "js": true
+    },
+    "parsed_data_identical": true
+  },
+  "integration_contract": {
+    "data_element": "tlog.html preserves the original inline script[type=\"application/json\"]#TlogData; tlog-data.json is the same source text as a separate reusable data file.",
+    "execution": "Load tlog.css, insert tlog.html markup, then load tlog.js as a classic deferred script after that markup. Native inline IIFE is unchanged.",
+    "dependencies": "Only native browser APIs and four Montserrat font URLs referenced by tlog.css; no Shopify, jQuery or other runtime global is referenced. Pagination uses same-origin fetch only if data.pages > 1; captured data.pages is 1.",
+    "source_context": "Feature CSS retains original #shopify-section-footer display:none rule. tlog.html includes the source Home link href=\"/\". Host page supplies body margin/reset, .visually-hidden and outer page width/gutters from the full site.",
+    "links": "Viewer hash uses #photo-ID. Copy Link constructs location.origin + /search?q=photo-ID&view=tlog, a Shopify-specific preview route; porting that route requires an explicitly documented host adaptation.",
+    "storage": [
+      "fugazi-tlog-likes",
+      "fugazi-tlog-cols",
+      "fugazi-tlog-view"
+    ],
+    "starting_position": "Oldest-first sort, viewport initially jumps to newest/bottom; explicit #photo-ID opens that photo.",
+    "original_controls": [
+      "Years/Months/All",
+      "Library/Favorites",
+      "grid density pinch",
+      "open/close morph",
+      "horizontal native snap/swipe",
+      "pinch/double-tap zoom",
+      "photo info",
+      "favorites",
+      "video play/mute/scrub",
+      "share/save",
+      "copy link"
+    ]
+  },
+  "validation": {
+    "all_referenced_ids_present": true,
+    "duplicate_ids": {},
+    "source_slices_verbatim": true,
+    "asset_requests_performed": false
+  },
+  "files": {
+    "html": "tlog.html",
+    "css": "tlog.css",
+    "data": "tlog-data.json",
+    "js": "tlog.js"
+  },
+  "asset_inventory": {
+    "count": 1390,
+    "file": "tlog-assets.json",
+    "note": "Includes every directly referenced preview/video/font URL and all runtime-generated image-size URLs."
+  }
+}

@@ -1,0 +1,9 @@
+@font-face{font-family:Montserrat;font-weight:300;font-style:normal;src:url(https://fugazi.net/cdn/fonts/montserrat/montserrat_n3.29e699231893fd243e1620595067294bb067ba2a.woff2) format("woff2"),url(https://fugazi.net/cdn/fonts/montserrat/montserrat_n3.64ed56f012a53c08a49d49bd7e0c8d2f46119150.woff) format("woff")}
+@font-face{font-family:Montserrat;font-weight:400;font-style:normal;src:url(https://fugazi.net/cdn/fonts/montserrat/montserrat_n4.81949fa0ac9fd2021e16436151e8eaa539321637.woff2) format("woff2"),url(https://fugazi.net/cdn/fonts/montserrat/montserrat_n4.a6c632ca7b62da89c3594789ba828388aac693fe.woff) format("woff")}
+/* Minimal source-theme typography/reset for the isolated Tlog page. */
+
+
+
+
+
+*,*:before,*:after{box-sizing:border-box}html{font-size:14px;-webkit-text-size-adjust:100%}body{margin:0;background:#fff;color:#000;font-family:Montserrat,sans-serif;font-size:14px;font-weight:300;line-height:1.7}button,input{font:inherit}button{background:none;border:0}img{border:0;max-width:100%}svg{vertical-align:middle}p{margin:0 0 15px}.visually-hidden{position:absolute!important;overflow:hidden;clip:rect(0,0,0,0);width:1px;height:1px;margin:-1px;padding:0;border:0}main{padding:0 30px}@media(max-width:768px){main{padding:0 15px}}

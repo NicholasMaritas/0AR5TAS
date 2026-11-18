@@ -1,0 +1,546 @@
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="tl-heart" viewBox="0 0 24 24"><path fill="currentColor" d="M12 21.2s-7.6-4.6-9.6-9.3C1 8.6 3.2 4.8 6.9 4.8c2.2 0 3.7 1.3 5.1 3 1.4-1.7 2.9-3 5.1-3 3.7 0 5.9 3.8 4.5 7.1-2 4.7-9.6 9.3-9.6 9.3z"/></symbol>
+  <symbol id="tl-heart-line" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.7" d="M12 20.2s-7-4.3-8.8-8.6C2 8.7 4 5.6 7 5.6c2 0 3.4 1.2 5 3.2 1.6-2 3-3.2 5-3.2 3 0 5 3.1 3.8 6-1.8 4.3-8.8 8.6-8.8 8.6z"/></symbol>
+  <symbol id="tl-share" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" d="M12 3v12M8 7l4-4 4 4M7 10H5.5A1.5 1.5 0 0 0 4 11.5v8A1.5 1.5 0 0 0 5.5 21h13a1.5 1.5 0 0 0 1.5-1.5v-8a1.5 1.5 0 0 0-1.5-1.5H17"/></symbol>
+  <symbol id="tl-info" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9.2" fill="none" stroke="currentColor" stroke-width="1.7"/><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" d="M10.5 10.8H12v6M10.4 16.8h3.2"/><circle cx="11.9" cy="7.6" r="1.15" fill="currentColor"/></symbol>
+  <symbol id="tl-info-fill" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10" fill="currentColor"/><path fill="none" stroke="#fff" stroke-width="1.9" stroke-linecap="round" d="M10.5 10.8H12v6M10.4 16.8h3.2"/><circle cx="11.9" cy="7.6" r="1.2" fill="#fff"/></symbol>
+  <symbol id="tl-photos" viewBox="0 0 24 24"><rect x="3" y="4.5" width="15" height="12" rx="2.4" fill="none" stroke="currentColor" stroke-width="1.7"/><path fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" d="M6.5 19.5h11a3 3 0 0 0 3-3V8.5"/><path fill="currentColor" d="M5 14.5l3.4-3.6 2.4 2.4 2.2-1.8 3 3z"/><circle cx="13.6" cy="8.4" r="1.4" fill="currentColor"/></symbol>
+  <symbol id="tl-back" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round" d="M15 4.5 7.5 12l7.5 7.5"/></symbol>
+  <symbol id="tl-save" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" d="M12 4v11M7.5 10.5 12 15l4.5-4.5M5 19.5h14"/></symbol>
+  <symbol id="tl-link" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" d="M10 14a4 4 0 0 0 5.7 0l3-3a4 4 0 0 0-5.7-5.7l-1 1M14 10a4 4 0 0 0-5.7 0l-3 3a4 4 0 0 0 5.7 5.7l1-1"/></symbol>
+  <symbol id="tl-home" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round" d="M4 10.4 12 4l8 6.4V19a1 1 0 0 1-1 1h-4.5v-5.5h-5V20H5a1 1 0 0 1-1-1z"/></symbol>
+  <symbol id="tl-play" viewBox="0 0 24 24"><path fill="currentColor" d="M7 4.6v14.8c0 .8.9 1.3 1.6.9l11.5-7.4c.6-.4.6-1.4 0-1.8L8.6 3.7C7.9 3.3 7 3.8 7 4.6z"/></symbol>
+  <symbol id="tl-pause" viewBox="0 0 24 24"><rect x="5.5" y="4" width="4.5" height="16" rx="1.3" fill="currentColor"/><rect x="14" y="4" width="4.5" height="16" rx="1.3" fill="currentColor"/></symbol>
+  <symbol id="tl-muted" viewBox="0 0 24 24"><path fill="currentColor" d="M11 5.2 7 8.6H4.6a1 1 0 0 0-1 1v4.8a1 1 0 0 0 1 1H7l4 3.4c.6.5 1.6.1 1.6-.8V6c0-.9-1-1.3-1.6-.8z"/><path stroke="currentColor" stroke-width="1.9" stroke-linecap="round" d="m3.5 3.5 17 17"/></symbol>
+  <symbol id="tl-sound" viewBox="0 0 24 24"><path fill="currentColor" d="M11 5.2 7 8.6H4.6a1 1 0 0 0-1 1v4.8a1 1 0 0 0 1 1H7l4 3.4c.6.5 1.6.1 1.6-.8V6c0-.9-1-1.3-1.6-.8z"/><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" d="M15.5 9a4.2 4.2 0 0 1 0 6M18.2 6.4a8 8 0 0 1 0 11.2"/></symbol>
+  <symbol id="tl-more" viewBox="0 0 24 24"><circle cx="5" cy="12" r="1.9" fill="currentColor"/><circle cx="12" cy="12" r="1.9" fill="currentColor"/><circle cx="19" cy="12" r="1.9" fill="currentColor"/></symbol>
+</svg>
+
+<div class="tl" id="Tlog">
+  <h1 class="visually-hidden">tlog</h1>
+  <div class="tl-top" id="TlTop" aria-hidden="true">
+    <div class="tl-top__text">
+      <p class="tl-top__title">tlog</p>
+      <p class="tl-top__sub" id="TlSub"></p>
+    </div>
+  </div>
+  <div id="TlStream"></div>
+  <noscript><p class="tl-empty">Photos need JavaScript to show.</p></noscript>
+</div>
+
+<div class="tl-bar" id="TlBar">
+  <button type="button" class="tl-round tl-round--accent tl-glass" id="TlNewest" aria-label="Library and Favorites"><svg aria-hidden="true"><use href="#tl-photos"/></svg></button>
+  <div class="tl-seg tl-glass" role="toolbar" aria-label="View">
+    <button type="button" class="tl-seg__btn" data-view="years" aria-pressed="false">Years</button>
+    <button type="button" class="tl-seg__btn" data-view="months" aria-pressed="false">Months</button>
+    <button type="button" class="tl-seg__btn" data-view="all" aria-pressed="true">All</button>
+  </div>
+  <div class="tl-tabs tl-glass" role="toolbar" aria-label="Albums">
+    <button type="button" class="tl-tab" data-tab="library" aria-pressed="true"><svg aria-hidden="true"><use href="#tl-photos"/></svg>Library</button>
+    <button type="button" class="tl-tab" data-tab="favorites" aria-pressed="false"><svg aria-hidden="true"><use href="#tl-heart-line"/></svg>Favorites</button>
+  </div>
+  <a class="tl-round tl-glass" id="TlHome" href="../../" aria-label="Home"><svg aria-hidden="true"><use href="#tl-home"/></svg></a>
+</div>
+
+<div class="tl-viewer" id="TlViewer" role="dialog" aria-modal="true" aria-label="Photo" aria-hidden="true">
+  <div class="tl-viewer__top">
+    <button type="button" class="tl-round tl-glass" id="TlBack" aria-label="Back"><svg aria-hidden="true"><use href="#tl-back"/></svg></button>
+    <div class="tl-viewer__head tl-glass">
+      <p class="tl-viewer__title" id="TlTitle"></p>
+      <p class="tl-viewer__sub" id="TlWhen"></p>
+    </div>
+    <button type="button" class="tl-round tl-glass" id="TlMore" aria-label="More" aria-expanded="false"><svg aria-hidden="true"><use href="#tl-more"/></svg></button>
+  </div>
+  <div class="tl-menu tl-glass" id="TlMenu" role="menu">
+    <button type="button" role="menuitem" id="TlSave">Save Photo <svg aria-hidden="true"><use href="#tl-save"/></svg></button>
+    <button type="button" role="menuitem" id="TlCopy">Copy Link <svg aria-hidden="true"><use href="#tl-link"/></svg></button>
+  </div>
+  <div class="tl-viewer__stage" id="TlStage">
+    <div class="tl-pages" id="TlPages"></div>
+    <button type="button" class="tl-round tl-glass tl-arrow tl-arrow--prev" id="TlPrev" aria-label="Previous photo"><svg aria-hidden="true"><use href="#tl-back"/></svg></button>
+    <button type="button" class="tl-round tl-glass tl-arrow tl-arrow--next" id="TlNext" aria-label="Next photo"><svg aria-hidden="true" style="transform:scaleX(-1)"><use href="#tl-back"/></svg></button>
+    <p class="tl-toast tl-glass" id="TlToast" role="status"></p>
+  </div>
+  <div class="tl-sheet" id="TlInfo" aria-live="polite"></div>
+  <div class="tl-viewer__foot">
+    <div class="tl-player tl-glass" id="TlPlayer" hidden>
+      <button type="button" class="tl-player__btn" id="TlPlay" aria-label="Pause"><svg aria-hidden="true"><use href="#tl-pause"/></svg></button>
+      <div class="tl-player__track" id="TlTrack" role="slider" aria-label="Video position" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0"><span class="tl-player__fill" id="TlFill"></span></div>
+      <button type="button" class="tl-player__btn" id="TlMute" aria-label="Turn sound on"><svg aria-hidden="true"><use href="#tl-muted"/></svg></button>
+    </div>
+    <div class="tl-strip" id="TlStrip" aria-hidden="true"></div>
+    <div class="tl-tools">
+      <button type="button" class="tl-round tl-glass" id="TlShare" aria-label="Share or save photo"><svg aria-hidden="true"><use href="#tl-share"/></svg></button>
+      <div class="tl-pill tl-glass">
+        <button type="button" class="tl-pill-btn" id="TlLike" aria-label="Favourite" aria-pressed="false"><svg aria-hidden="true"><use href="#tl-heart-line"/></svg></button>
+        <button type="button" class="tl-pill-btn" id="TlInfoBtn" aria-label="Info" aria-pressed="false"><svg aria-hidden="true"><use href="#tl-info"/></svg></button>
+      </div>
+      <span class="tl-tools__spacer"></span>
+    </div>
+  </div>
+</div><script type="application/json" id="TlogData">{
+  "pages": 1,
+  "entries": [{"date":"2009-07-21","seq":659760251052,"note":"","place":"","photos":[{"id":41886163075244,"src":"https:\/\/fugazi.net\/cdn\/shop\/files\/IMG_0984.jpg?v=1793043563\u0026width=400","w":1200,"h":1600
+,"name":"IMG_0984.jpg"
+}]},{"date":"2017-01-25","seq":659760873644,"note":"","place":"","photos":[{"id":41886173266092,"src":"https:\/\/fugazi.net\/cdn\/shop\/files\/IMG_2769.jpg?v=1793043694\u0026width=400","w":750,"h":743
+,"name":"IMG_2769.jpg"
+},{"id":41886173167788,"src":"https:\/\/fugazi.net\/cdn\/shop\/files\/IMG_4542.jpg?v=1793043694\u0026width=400","w":1334,"h":750
+,"name":"IMG_4542.jpg"
+},{"id":41886173659308,"src":"https:\/\/fugazi.net\/cdn\/shop\/files\/split_jacket_2.jpg?v=1793043697\u0026width=400","w":4000,"h":6000
+,"name":"split_jacket_2.jpg"
+},{"id":41886173757612,"src":"https:\/\/fugazi.net\/cdn\/shop\/files\/split_jacket_3.jpg?v=1793043699\u0026width=400","w":6000,"h":4000
+,"name":"split_jacket_3.jpg"
+},{"id":41886175723692,"src":"https:\/\/fugazi.net\/cdn\/shop\/files\/split_jacket.jpg?v=1793043701\u0026width=400","w":3925,"h":5887
+,"name":"split_jacket.jpg"
+}]},{"date":"2020-01-11","seq":661295693996,"note":"","place":"","photos":[{"id":41930921377964,"src":"https:\/\/fugazi.net\/cdn\/shop\/files\/IMG_6025.jpg?v=1793299754\u0026width=400","w":2462,"h":3282
+,"name":"IMG_6025.jpg"
+}]},{"date":"2026-03-14","seq":659761135788,"note":"","place":"Los Angeles - Melrose District ","photos":[{"id":41886184767660,"src":"https:\/\/fugazi.net\/cdn\/shop\/files\/IMG_2147.jpg?v=1793043760\u0026width=400","w":4284,"h":5712
+,"name":"IMG_2147.jpg"
+}]},{"date":"2026-05-25","seq":659762184364,"note":"C8 fittings","place":"Brooklyn ","photos":[{"id":41886202724524,"src":"https:\/\/fugazi.net\/cdn\/shop\/files\/IMG_0074.jpg?v=1793043998\u0026width=400","w":1536,"h":2048
+,"name":"IMG_0074.jpg"
+},{"id":41886202691756,"src":"https:\/\/fugazi.net\/cdn\/shop\/files\/IMG_0080.jpg?v=1793043997\u0026width=400","w":1536,"h":2048
+,"name":"IMG_0080.jpg"
+},{"id":41886202658988,"src":"https:\/\/fugazi.net\/cdn\/shop\/files\/IMG_0083.jpg?v=1793043998\u0026width=400","w":1536,"h":2048
+,"name":"IMG_0083.jpg"
+},{"id":41886202593452,"src":"https:\/\/fugazi.net\/cdn\/shop\/files\/IMG_0149.jpg?v=1793043997\u0026width=400","w":1536,"h":2048
+,"name":"IMG_0149.jpg"
+},{"id":41886202560684,"src":"https:\/\/fugazi.net\/cdn\/shop\/files\/IMG_0173.jpg?v=1793043997\u0026width=400","w":1536,"h":2048
+,"name":"IMG_0173.jpg"
+}]},{"date":"2026-06-02","seq":659763331244,"note":"","place":"","photos":[{"id":41886214979756,"src":"https:\/\/fugazi.net\/cdn\/shop\/files\/PNG_image.jpg?v=1793044219\u0026width=400","w":1132,"h":1716
+,"name":"PNG_image.jpg"
+},{"id":41886215307436,"src":"https:\/\/fugazi.net\/cdn\/shop\/files\/IMG_4286.jpg?v=1793044224\u0026width=400","w":4284,"h":5712
+,"name":"IMG_4286.jpg"
+},{"id":41886215471276,"src":"https:\/\/fugazi.net\/cdn\/shop\/files\/IMG_4275.jpg?v=1793044229\u0026width=400","w":3024,"h":4032
+,"name":"IMG_4275.jpg"
+},{"id":41886215536812,"src":"https:\/\/fugazi.net\/cdn\/shop\/files\/IMG_4280.jpg?v=1793044230\u0026width=400","w":4284,"h":5712
+,"name":"IMG_4280.jpg"
+},{"id":41886215733420,"src":"https:\/\/fugazi.net\/cdn\/shop\/files\/IMG_7497.jpg?v=1793044233\u0026width=400","w":4284,"h":5712
+,"name":"IMG_7497.jpg"
+},{"id":41886215569580,"src":"https:\/\/fugazi.net\/cdn\/shop\/files\/IMG_7504.jpg?v=1793044231\u0026width=400","w":3024,"h":4032
+,"name":"IMG_7504.jpg"
+},{"id":41886215012524,"src":"https:\/\/fugazi.net\/cdn\/shop\/files\/preview_images\/cf75b122bd704ca29c66de7a22460be5.thumbnail.0000000000.jpg?v=1793044234\u0026width=400","w":960,"h":720
+,"type":"video","video":"https:\/\/fugazi.net\/cdn\/shop\/videos\/c\/vp\/cf75b122bd704ca29c66de7a22460be5\/cf75b122bd704ca29c66de7a22460be5.HD-720p-4.5Mbps-98967085.mp4?v=0","duration":8
+}]},{"date":"2026-06-03","seq":659764412588,"note":"","place":"","photos":[{"id":41886237556908,"src":"https:\/\/fugazi.net\/cdn\/shop\/files\/IMG_4357.jpg?v=1793044467\u0026width=400","w":4284,"h":5712
+,"name":"IMG_4357.jpg"
+},{"id":41886237655212,"src":"https:\/\/fugazi.net\/cdn\/shop\/files\/IMG_4319.jpg?v=1793044469\u0026width=400","w":4284,"h":5712
+,"name":"IMG_4319.jpg"
+},{"id":41886237720748,"src":"https:\/\/fugazi.net\/cdn\/shop\/files\/IMG_4306.jpg?v=1793044471\u0026width=400","w":4284,"h":5712
+,"name":"IMG_4306.jpg"
+},{"id":41886241063084,"src":"https:\/\/fugazi.net\/cdn\/shop\/files\/IMG_4325.jpg?v=1793044531\u0026width=400","w":4362,"h":3272
+,"name":"IMG_4325.jpg"
+}]},{"date":"2026-06-05","seq":659764838572,"note":"","place":"","photos":[{"id":41886248796332,"src":"https:\/\/fugazi.net\/cdn\/shop\/files\/IMG_0109.jpg?v=1793044656\u0026width=400","w":1152,"h":2048
+,"name":"IMG_0109.jpg"
+},{"id":41886248927404,"src":"https:\/\/fugazi.net\/cdn\/shop\/files\/IMG_8372.jpg?v=1793044659\u0026width=400","w":4284,"h":5712
+,"name":"IMG_8372.jpg"
+},{"id":41886252368044,"src":"https:\/\/fugazi.net\/cdn\/shop\/files\/IMG_4460.jpg?v=1793044664\u0026width=400","w":4284,"h":5712
+,"name":"IMG_4460.jpg"
+},{"id":41886249681068,"src":"https:\/\/fugazi.net\/cdn\/shop\/files\/IMG_4462.jpg?v=1793044663\u0026width=400","w":4284,"h":5712
+,"name":"IMG_4462.jpg"
+},{"id":41886249255084,"src":"https:\/\/fugazi.net\/cdn\/shop\/files\/IMG_8370.jpg?v=1793044663\u0026width=400","w":4284,"h":5712
+,"name":"IMG_8370.jpg"
+}]},{"date":"2026-06-10","seq":659765428396,"note":"","place":"Guangzhou","photos":[{"id":41886262689964,"src":"https:\/\/fugazi.net\/cdn\/shop\/files\/IMG_4624.jpg?v=1793044788\u0026width=400","w":4284,"h":5712
+,"name":"IMG_4624.jpg"
+},{"id":41886262427820,"src":"https:\/\/fugazi.net\/cdn\/shop\/files\/IMG_4631.jpg?v=1793044786\u0026width=400","w":3024,"h":4032
+,"name":"IMG_4631.jpg"
+},{"id":41886263083180,"src":"https:\/\/fugazi.net\/cdn\/shop\/files\/IMG_4603.jpg?v=1793044792\u0026width=400","w":4284,"h":5712
+,"name":"IMG_4603.jpg"
+},{"id":41886405427372,"src":"https:\/\/fugazi.net\/cdn\/shop\/files\/IMG_4602.jpg?v=1793047989\u0026width=400","w":4284,"h":5712
+,"name":"IMG_4602.jpg"
+},{"id":41886405197996,"src":"https:\/\/fugazi.net\/cdn\/shop\/files\/IMG_4580.jpg?v=1793047983\u0026width=400","w":4284,"h":5712
+,"name":"IMG_4580.jpg"
+},{"id":41886405263532,"src":"https:\/\/fugazi.net\/cdn\/shop\/files\/preview_images\/daa3fd53843249b3af89ce9bf8154662.thumbnail.0000000000.jpg?v=1793048005\u0026width=400","w":1080,"h":1920
+,"type":"video","video":"https:\/\/fugazi.net\/cdn\/shop\/videos\/c\/vp\/daa3fd53843249b3af89ce9bf8154662\/daa3fd53843249b3af89ce9bf8154662.HD-1080p-7.2Mbps-98972397.mp4?v=0","duration":7
+},{"id":41886405329068,"src":"https:\/\/fugazi.net\/cdn\/shop\/files\/IMG_4579.jpg?v=1793047986\u0026width=400","w":4284,"h":5712
+,"name":"IMG_4579.jpg"
+},{"id":41886405296300,"src":"https:\/\/fugazi.net\/cdn\/shop\/files\/IMG_4583.jpg?v=1793047986\u0026width=400","w":4284,"h":5712
+,"name":"IMG_4583.jpg"
+}]},{"date":"2026-06-11","seq":659765690540,"note":"","place":"","photos":[{"id":41886266228908,"src":"https:\/\/fugazi.net\/cdn\/shop\/files\/IMG_4702.png?v=1793044843\u0026width=400","w":1260,"h":2736
+,"name":"IMG_4702.png"
+}]},{"date":"2026-06-11","seq":659765985452,"note":"","place":"Guangzhou","photos":[{"id":41886269571244,"src":"https:\/\/fugazi.net\/cdn\/shop\/files\/IMG_4709.jpg?v=1793044910\u0026width=400","w":4284,"h":5712
+,"name":"IMG_4709.jpg"
+},{"id":41886269538476,"src":"https:\/\/fugazi.net\/cdn\/shop\/files\/IMG_0262.jpg?v=1793044909\u0026width=400","w":3024,"h":4032
+,"name":"IMG_0262.jpg"
+},{"id":41886269505708,"src":"https:\/\/fugazi.net\/cdn\/shop\/files\/IMG_4717.jpg?v=1793044908\u0026width=400","w":4284,"h":5712
+,"name":"IMG_4717.jpg"
+},{"id":41886269407404,"src":"https:\/\/fugazi.net\/cdn\/shop\/files\/IMG_0255.jpg?v=1793044908\u0026width=400","w":3024,"h":4032
+,"name":"IMG_0255.jpg"
+},{"id":41886269374636,"src":"https:\/\/fugazi.net\/cdn\/shop\/files\/IMG_4719.jpg?v=1793044908\u0026width=400","w":3213,"h":5712
+,"name":"IMG_4719.jpg"
+},{"id":41886269309100,"src":"https:\/\/fugazi.net\/cdn\/shop\/files\/IMG_4720.jpg?v=1793044907\u0026width=400","w":4284,"h":5712
+,"name":"IMG_4720.jpg"
+},{"id":41886269046956,"src":"https:\/\/fugazi.net\/cdn\/shop\/files\/IMG_4721.jpg?v=1793044904\u0026width=400","w":4284,"h":5712
+,"name":"IMG_4721.jpg"
+},{"id":41886268981420,"src":"https:\/\/fugazi.net\/cdn\/shop\/files\/IMG_4707.jpg?v=1793044903\u0026width=400","w":3024,"h":4032
+,"name":"IMG_4707.jpg"
+},{"id":41886268850348,"src":"https:\/\/fugazi.net\/cdn\/shop\/files\/IMG_1133.jpg?v=1793044900\u0026width=400","w":3024,"h":4032
+,"name":"IMG_1133.jpg"
+}]},{"date":"2026-06-15","seq":659766509740,"note":"","place":"Portugal ","photos":[{"id":41886281760940,"src":"https:\/\/fugazi.net\/cdn\/shop\/files\/55585628-eede-48ef-916d-5fa0f51396db.jpg?v=1793045090\u0026width=400","w":1200,"h":1600
+,"name":"55585628-eede-48ef-916d-5fa0f51396db.jpg"
+}]},{"date":"2026-06-18","seq":659837485228,"note":"","place":"","photos":[{"id":41886440947884,"src":"https:\/\/fugazi.net\/cdn\/shop\/files\/IMG_5223.jpg?v=1793048864\u0026width=400","w":1706,"h":1279
+,"name":"IMG_5223.jpg"
+},{"id":41886440980652,"src":"https:\/\/fugazi.net\/cdn\/shop\/files\/IMG_5224.jpg?v=1793048864\u0026width=400","w":1706,"h":1279
+,"name":"IMG_5224.jpg"
+}]},{"date":"2026-06-19","seq":659838501036,"note":"","place":"Shibuya","photos":[{"id":41886442848428,"src":"https:\/\/fugazi.net\/cdn\/shop\/files\/2026-06-16_14.59.29.jpg?v=1793048928\u0026width=400","w":820,"h":604
+,"name":"2026-06-16_14.59.29.jpg"
+},{"id":41886448418988,"src":"https:\/\/fugazi.net\/cdn\/shop\/files\/2B92539B-46AF-414A-AEFD-D21BA1EDB673.jpg?v=1793048984\u0026width=400","w":1260,"h":2240
+,"name":"2B92539B-46AF-414A-AEFD-D21BA1EDB673.jpg"
+},{"id":41886448451756,"src":"https:\/\/fugazi.net\/cdn\/shop\/files\/IMG_5350.jpg?v=1793048985\u0026width=400","w":4284,"h":5712
+,"name":"IMG_5350.jpg"
+},{"id":41886449270956,"src":"https:\/\/fugazi.net\/cdn\/shop\/files\/IMG_5342.jpg?v=1793048998\u0026width=400","w":5712,"h":4284
+,"name":"IMG_5342.jpg"
+},{"id":41886450679980,"src":"https:\/\/fugazi.net\/cdn\/shop\/files\/IMG_5331.jpg?v=1793049007\u0026width=400","w":3024,"h":4032
+,"name":"IMG_5331.jpg"
+},{"id":41886450581676,"src":"https:\/\/fugazi.net\/cdn\/shop\/files\/IMG_5333.jpg?v=1793049005\u0026width=400","w":4284,"h":5712
+,"name":"IMG_5333.jpg"
+},{"id":41886451728556,"src":"https:\/\/fugazi.net\/cdn\/shop\/files\/IMG_5284.jpg?v=1793049014\u0026width=400","w":4284,"h":5712
+,"name":"IMG_5284.jpg"
+},{"id":41886451826860,"src":"https:\/\/fugazi.net\/cdn\/shop\/files\/IMG_0857.jpg?v=1793049016\u0026width=400","w":3024,"h":4032
+,"name":"IMG_0857.jpg"
+},{"id":41886451761324,"src":"https:\/\/fugazi.net\/cdn\/shop\/files\/IMG_5275.jpg?v=1793049014\u0026width=400","w":4284,"h":5712
+,"name":"IMG_5275.jpg"
+},{"id":41886451794092,"src":"https:\/\/fugazi.net\/cdn\/shop\/files\/IMG_5277.jpg?v=1793049016\u0026width=400","w":4284,"h":5712
+,"name":"IMG_5277.jpg"
+},{"id":41886452023468,"src":"https:\/\/fugazi.net\/cdn\/shop\/files\/IMG_5265.jpg?v=1793049020\u0026width=400","w":4284,"h":5712
+,"name":"IMG_5265.jpg"
+},{"id":41886453104812,"src":"https:\/\/fugazi.net\/cdn\/shop\/files\/IMG_5168.jpg?v=1793049023\u0026width=400","w":4284,"h":5712
+,"name":"IMG_5168.jpg"
+}]},{"date":"2026-06-21","seq":659840729260,"note":"","place":"","photos":[{"id":41886503731372,"src":"https:\/\/fugazi.net\/cdn\/shop\/files\/9B949409-4585-4108-9898-421CC8858F07.jpg?v=1793049405\u0026width=400","w":320,"h":320
+,"name":"9B949409-4585-4108-9898-421CC8858F07.jpg"
+}]},{"date":"2026-06-22","seq":659841122476,"note":"","place":"Shibuya","photos":[{"id":41886508581036,"src":"https:\/\/fugazi.net\/cdn\/shop\/files\/IMG_5363.jpg?v=1793049438\u0026width=400","w":4284,"h":5712
+,"name":"IMG_5363.jpg"
+}]},{"date":"2026-06-25","seq":659843776684,"note":"","place":"Paris","photos":[{"id":41886550458540,"src":"https:\/\/fugazi.net\/cdn\/shop\/files\/ED92895B-E2D1-4890-A7FF-864BFE1CC9BB.jpg?v=1793049774\u0026width=400","w":1260,"h":2240
+,"name":"ED92895B-E2D1-4890-A7FF-864BFE1CC9BB.jpg"
+},{"id":41886550065324,"src":"https:\/\/fugazi.net\/cdn\/shop\/files\/F1E250F8-70D9-494C-BF62-A7218A8E89C2.jpg?v=1793049773\u0026width=400","w":1260,"h":2240
+,"name":"F1E250F8-70D9-494C-BF62-A7218A8E89C2.jpg"
+},{"id":41886550098092,"src":"https:\/\/fugazi.net\/cdn\/shop\/files\/IMG_5484.png?v=1793049773\u0026width=400","w":1260,"h":2736
+,"name":"IMG_5484.png"
+},{"id":41886550032556,"src":"https:\/\/fugazi.net\/cdn\/shop\/files\/IMG_5539.jpg?v=1793049772\u0026width=400","w":1234,"h":1646
+,"name":"IMG_5539.jpg"
+},{"id":41886550917292,"src":"https:\/\/fugazi.net\/cdn\/shop\/files\/IMG_5420.jpg?v=1793049780\u0026width=400","w":4284,"h":5712
+,"name":"IMG_5420.jpg"
+},{"id":41886550687916,"src":"https:\/\/fugazi.net\/cdn\/shop\/files\/IMG_5548.jpg?v=1793049779\u0026width=400","w":3213,"h":5712
+,"name":"IMG_5548.jpg"
+},{"id":41886551212204,"src":"https:\/\/fugazi.net\/cdn\/shop\/files\/80409292383__9F729CB6-4108-4710-A897-B46BA05D8FC6.jpg?v=1793049783\u0026width=400","w":3024,"h":4032
+,"name":"80409292383__9F729CB6-4108-4710-A897-B46BA05D8FC6.jpg"
+},{"id":41886551146668,"src":"https:\/\/fugazi.net\/cdn\/shop\/files\/IMG_3072.jpg?v=1793049782\u0026width=400","w":4284,"h":5712
+,"name":"IMG_3072.jpg"
+},{"id":41886551343276,"src":"https:\/\/fugazi.net\/cdn\/shop\/files\/IMG_5383.jpg?v=1793049785\u0026width=400","w":4284,"h":5712
+,"name":"IMG_5383.jpg"
+},{"id":41886549999788,"src":"https:\/\/fugazi.net\/cdn\/shop\/files\/preview_images\/b651b4553c3841f888793d1a70f94561.thumbnail.0000000000.jpg?v=1793049787\u0026width=400","w":576,"h":768
+,"type":"video","video":"https:\/\/fugazi.net\/cdn\/shop\/videos\/c\/vp\/b651b4553c3841f888793d1a70f94561\/b651b4553c3841f888793d1a70f94561.HD-720p-1.6Mbps-98975451.mp4?v=0","duration":4
+},{"id":41886551310508,"src":"https:\/\/fugazi.net\/cdn\/shop\/files\/IMG_5413.png?v=1793049787\u0026width=400","w":1260,"h":2736
+,"name":"IMG_5413.png"
+},{"id":41886550491308,"src":"https:\/\/fugazi.net\/cdn\/shop\/files\/preview_images\/d8d7f75fe2a244378ab8a4f1aa1af3f5.thumbnail.0000000000.jpg?v=1793049790\u0026width=400","w":576,"h":1024
+,"type":"video","video":"https:\/\/fugazi.net\/cdn\/shop\/videos\/c\/vp\/d8d7f75fe2a244378ab8a4f1aa1af3f5\/d8d7f75fe2a244378ab8a4f1aa1af3f5.HD-720p-1.6Mbps-98975450.mp4?v=0","duration":15
+},{"id":41886568382636,"src":"https:\/\/fugazi.net\/cdn\/shop\/files\/IMG_8498.jpg?v=1793050276\u0026width=400","w":1260,"h":1672
+,"name":"IMG_8498.jpg"
+},{"id":41886818369708,"src":"https:\/\/fugazi.net\/cdn\/shop\/files\/1000000309.jpg?v=1793053506\u0026width=400","w":1936,"h":2592
+,"name":"1000000309.jpg"
+},{"id":41886818336940,"src":"https:\/\/fugazi.net\/cdn\/shop\/files\/IMG_2910.jpg?v=1793053506\u0026width=400","w":736,"h":926
+,"name":"IMG_2910.jpg"
+}]},{"date":"2026-07-07","seq":659846135980,"note":"","place":"New York - Lower East Side","photos":[{"id":41886570283180,"src":"https:\/\/fugazi.net\/cdn\/shop\/files\/EB5AE4AB-C509-4EF5-AEA6-7456831D75CA.jpg?v=1793050325\u0026width=400","w":1260,"h":2240
+,"name":"EB5AE4AB-C509-4EF5-AEA6-7456831D75CA.jpg"
+}]},{"date":"2026-07-12","seq":659846496428,"note":"","place":"","photos":[{"id":41886574903468,"src":"https:\/\/fugazi.net\/cdn\/shop\/files\/IMG_2117.jpg?v=1793050403\u0026width=400","w":4284,"h":5712
+,"name":"IMG_2117.jpg"
+},{"id":41886574870700,"src":"https:\/\/fugazi.net\/cdn\/shop\/files\/IMG_5972.png?v=1793050404\u0026width=400","w":1260,"h":2736
+,"name":"IMG_5972.png"
+}]},{"date":"2026-07-12","seq":659846791340,"note":"","place":"Pasadena ","photos":[{"id":41886578344108,"src":"https:\/\/fugazi.net\/cdn\/shop\/files\/IMG_2816_9b379341-a223-409f-8a7e-3cb758098c77.jpg?v=1793050469\u0026width=400","w":3368,"h":4491
+,"name":"IMG_2816_9b379341-a223-409f-8a7e-3cb758098c77.jpg"
+}]},{"date":"2026-07-14","seq":659846987948,"note":"","place":"","photos":[{"id":41886574411948,"src":"https:\/\/fugazi.net\/cdn\/shop\/files\/19311.jpg?v=1793050397\u0026width=400","w":1279,"h":2275
+,"name":"19311.jpg"
+},{"id":41886574444716,"src":"https:\/\/fugazi.net\/cdn\/shop\/files\/17878.jpg?v=1793050398\u0026width=400","w":1707,"h":1280
+,"name":"17878.jpg"
+},{"id":41886574510252,"src":"https:\/\/fugazi.net\/cdn\/shop\/files\/17879.jpg?v=1793050398\u0026width=400","w":1707,"h":1280
+,"name":"17879.jpg"
+},{"id":41886574477484,"src":"https:\/\/fugazi.net\/cdn\/shop\/files\/17898.jpg?v=1793050398\u0026width=400","w":960,"h":1707
+,"name":"17898.jpg"
+},{"id":41886574772396,"src":"https:\/\/fugazi.net\/cdn\/shop\/files\/IMG_6017.png?v=1793050402\u0026width=400","w":1260,"h":2736
+,"name":"IMG_6017.png"
+}]},{"date":"2026-07-27","seq":659847348396,"note":"","place":"Los Angeles- West Hollywood","photos":[{"id":41886574837932,"src":"https:\/\/fugazi.net\/cdn\/shop\/files\/IMG_6202.jpg?v=1793050402\u0026width=400","w":4284,"h":5712
+,"name":"IMG_6202.jpg"
+}]},{"date":"2026-07-29","seq":659847741612,"note":"","place":"West Hollywood- Sunset Strip","photos":[{"id":41886574608556,"src":"https:\/\/fugazi.net\/cdn\/shop\/files\/IMG_6232.jpg?v=1793050400\u0026width=400","w":4284,"h":5712
+,"name":"IMG_6232.jpg"
+}]},{"date":"2026-07-31","seq":659848855724,"note":"","place":"","photos":[{"id":41886593941676,"src":"https:\/\/fugazi.net\/cdn\/shop\/files\/52001.jpg?v=1793050708\u0026width=400","w":1280,"h":1707
+,"name":"52001.jpg"
+}]},{"date":"2026-08-07","seq":659848954028,"note":"","place":"","photos":[{"id":41886594302124,"src":"https:\/\/fugazi.net\/cdn\/shop\/files\/80783152869__92E880C5-54C5-43C7-B15A-E5F01DAEF366.jpg?v=1793050717\u0026width=400","w":3024,"h":4032
+,"name":"80783152869__92E880C5-54C5-43C7-B15A-E5F01DAEF366.jpg"
+}]},{"date":"2026-08-10","seq":659849347244,"note":"","place":"Los Angeles - West Hollywood ","photos":[{"id":41886594203820,"src":"https:\/\/fugazi.net\/cdn\/shop\/files\/IMG_1798.jpg?v=1793050716\u0026width=400","w":2557,"h":3409
+,"name":"IMG_1798.jpg"
+}]},{"date":"2026-08-16","seq":659850166444,"note":"","place":"","photos":[{"id":41886605541548,"src":"https:\/\/fugazi.net\/cdn\/shop\/files\/19950023_829ba929-b2af-4135-bc24-155eba3f8620.jpg?v=1793050894\u0026width=400","w":3583,"h":2376
+,"name":"19950023_829ba929-b2af-4135-bc24-155eba3f8620.jpg"
+},{"id":41886605639852,"src":"https:\/\/fugazi.net\/cdn\/shop\/files\/DSCF1267_7c9e62f1-7742-4305-9c53-5fbed5f644e6.jpg?v=1793050896\u0026width=400","w":3852,"h":5778
+,"name":"DSCF1267_7c9e62f1-7742-4305-9c53-5fbed5f644e6.jpg"
+},{"id":41886605607084,"src":"https:\/\/fugazi.net\/cdn\/shop\/files\/IMG_0717_cc46ab37-e540-441c-ae2d-29eab7575ef5.jpg?v=1793050895\u0026width=400","w":4284,"h":5712
+,"name":"IMG_0717_cc46ab37-e540-441c-ae2d-29eab7575ef5.jpg"
+}]},{"date":"2026-08-17","seq":659850297516,"note":"","place":"","photos":[{"id":41886594793644,"src":"https:\/\/fugazi.net\/cdn\/shop\/files\/IMG_6724.jpg?v=1793050722\u0026width=400","w":4284,"h":5712
+,"name":"IMG_6724.jpg"
+},{"id":41886594662572,"src":"https:\/\/fugazi.net\/cdn\/shop\/files\/IMG_6764.jpg?v=1793050720\u0026width=400","w":4284,"h":5712
+,"name":"IMG_6764.jpg"
+},{"id":41886594629804,"src":"https:\/\/fugazi.net\/cdn\/shop\/files\/57644.jpg?v=1793050719\u0026width=400","w":3024,"h":4032
+,"name":"57644.jpg"
+},{"id":41886594564268,"src":"https:\/\/fugazi.net\/cdn\/shop\/files\/IMG_6783.jpg?v=1793050718\u0026width=400","w":4284,"h":5712
+,"name":"IMG_6783.jpg"
+}]},{"date":"2026-08-21","seq":659850494124,"note":"","place":"New York - Flatiron District ","photos":[{"id":41886594498732,"src":"https:\/\/fugazi.net\/cdn\/shop\/files\/IMG_6817.jpg?v=1793050718\u0026width=400","w":4284,"h":5712
+,"name":"IMG_6817.jpg"
+}]},{"date":"2026-08-22","seq":659850756268,"note":"","place":"","photos":[{"id":41886593679532,"src":"https:\/\/fugazi.net\/cdn\/shop\/files\/5711.jpg?v=1793050706\u0026width=400","w":1280,"h":1707
+,"name":"5711.jpg"
+},{"id":41886594236588,"src":"https:\/\/fugazi.net\/cdn\/shop\/files\/IMG_6837.jpg?v=1793050717\u0026width=400","w":4284,"h":5712
+,"name":"IMG_6837.jpg"
+}]},{"date":"2026-08-25","seq":659850920108,"note":"","place":"LAX","photos":[{"id":41886594007212,"src":"https:\/\/fugazi.net\/cdn\/shop\/files\/IMG_6868.jpg?v=1793050712\u0026width=400","w":4284,"h":5712
+,"name":"IMG_6868.jpg"
+}]},{"date":"2026-08-30","seq":659851509932,"note":"","place":"Portugal ","photos":[{"id":41886623793324,"src":"https:\/\/fugazi.net\/cdn\/shop\/files\/image.png?v=1793051136\u0026width=400","w":1599,"h":1002
+,"name":"image.png"
+},{"id":41886623203500,"src":"https:\/\/fugazi.net\/cdn\/shop\/files\/Image_20260830223606_681_28.jpg?v=1793051127\u0026width=400","w":1080,"h":1920
+,"name":"Image_20260830223606_681_28.jpg"
+},{"id":41886623236268,"src":"https:\/\/fugazi.net\/cdn\/shop\/files\/5614.jpg?v=1793051128\u0026width=400","w":1200,"h":1600
+,"name":"5614.jpg"
+},{"id":41886645747884,"src":"https:\/\/fugazi.net\/cdn\/shop\/files\/ad24950f-e0fe-406c-a617-b909949e32d7.jpg?v=1793051437\u0026width=400","w":1200,"h":1600
+,"name":"ad24950f-e0fe-406c-a617-b909949e32d7.jpg"
+}]},{"date":"2026-08-31","seq":659851837612,"note":"","place":"LAX","photos":[{"id":41886624153772,"src":"https:\/\/fugazi.net\/cdn\/shop\/files\/IMG_7073.jpg?v=1793051140\u0026width=400","w":4284,"h":5712
+,"name":"IMG_7073.jpg"
+}]},{"date":"2026-09-02","seq":659851968684,"note":"","place":"Boston","photos":[{"id":41886623957164,"src":"https:\/\/fugazi.net\/cdn\/shop\/files\/IMG_1159.jpg?v=1793051137\u0026width=400","w":4284,"h":5712
+,"name":"IMG_1159.jpg"
+},{"id":41886623760556,"src":"https:\/\/fugazi.net\/cdn\/shop\/files\/IMG_1445.jpg?v=1793051137\u0026width=400","w":4284,"h":5712
+,"name":"IMG_1445.jpg"
+},{"id":41886623695020,"src":"https:\/\/fugazi.net\/cdn\/shop\/files\/IMG_1220.jpg?v=1793051134\u0026width=400","w":3024,"h":4032
+,"name":"IMG_1220.jpg"
+},{"id":41886623662252,"src":"https:\/\/fugazi.net\/cdn\/shop\/files\/IMG_0863.jpg?v=1793051133\u0026width=400","w":3024,"h":4032
+,"name":"IMG_0863.jpg"
+}]},{"date":"2026-09-04","seq":659852165292,"note":"","place":"","photos":[{"id":41886623170732,"src":"https:\/\/fugazi.net\/cdn\/shop\/files\/IMG_7259.jpg?v=1793051127\u0026width=400","w":401,"h":498
+,"name":"IMG_7259.jpg"
+}]},{"date":"2026-09-07","seq":659852329132,"note":"","place":"","photos":[{"id":41886623367340,"src":"https:\/\/fugazi.net\/cdn\/shop\/files\/IMG_7311.jpg?v=1793051129\u0026width=400","w":3024,"h":4032
+,"name":"IMG_7311.jpg"
+},{"id":41886623269036,"src":"https:\/\/fugazi.net\/cdn\/shop\/files\/IMG_7291.jpg?v=1793051128\u0026width=400","w":1608,"h":2144
+,"name":"IMG_7291.jpg"
+},{"id":41886623563948,"src":"https:\/\/fugazi.net\/cdn\/shop\/files\/58398.jpg?v=1793051132\u0026width=400","w":2160,"h":3840
+,"name":"58398.jpg"
+},{"id":41886623596716,"src":"https:\/\/fugazi.net\/cdn\/shop\/files\/IMG_7288.jpg?v=1793051134\u0026width=400","w":4284,"h":5712
+,"name":"IMG_7288.jpg"
+},{"id":41886623137964,"src":"https:\/\/fugazi.net\/cdn\/shop\/files\/IMG_7341.webp?v=1793051126\u0026width=400","w":706,"h":824
+,"name":"IMG_7341.webp"
+}]},{"date":"2026-09-11","seq":659853869228,"note":"","place":"","photos":[{"id":41886662459564,"src":"https:\/\/fugazi.net\/cdn\/shop\/files\/IMG_7373.jpg?v=1793051630\u0026width=400","w":3024,"h":4032
+,"name":"IMG_7373.jpg"
+}]},{"date":"2026-09-12","seq":659854098604,"note":"","place":"West Hollywood - Sunset Strip","photos":[{"id":41886662754476,"src":"https:\/\/fugazi.net\/cdn\/shop\/files\/IMG_7398.jpg?v=1793051634\u0026width=400","w":4284,"h":5712
+,"name":"IMG_7398.jpg"
+},{"id":41886662721708,"src":"https:\/\/fugazi.net\/cdn\/shop\/files\/IMG_7399.jpg?v=1793051633\u0026width=400","w":4284,"h":5712
+,"name":"IMG_7399.jpg"
+}]},{"date":"2026-09-13","seq":659854327980,"note":"","place":"","photos":[{"id":41886661542060,"src":"https:\/\/fugazi.net\/cdn\/shop\/files\/IMG_7440.webp?v=1793051623\u0026width=400","w":2520,"h":1820
+,"name":"IMG_7440.webp"
+}]},{"date":"2026-09-14","seq":659854426284,"note":"","place":"","photos":[{"id":41886662426796,"src":"https:\/\/fugazi.net\/cdn\/shop\/files\/Screenshot_2026-09-03_at_8.01.39_PM.png?v=1793051630\u0026width=400","w":1450,"h":976
+,"name":"Screenshot_2026-09-03_at_8.01.39_PM.png"
+}]},{"date":"2026-09-14","seq":659854917804,"note":"","place":"","photos":[{"id":41886662623404,"src":"https:\/\/fugazi.net\/cdn\/shop\/files\/IMG_0679.jpg?v=1793051631\u0026width=400","w":3213,"h":5712
+,"name":"IMG_0679.jpg"
+},{"id":41886662394028,"src":"https:\/\/fugazi.net\/cdn\/shop\/files\/IMG_7457.jpg?v=1793051630\u0026width=400","w":4284,"h":5712
+,"name":"IMG_7457.jpg"
+}]},{"date":"2026-09-22","seq":659855179948,"note":"","place":"","photos":[{"id":41886662295724,"src":"https:\/\/fugazi.net\/cdn\/shop\/files\/IMG_7508.jpg?v=1793051627\u0026width=400","w":3024,"h":4032
+,"name":"IMG_7508.jpg"
+},{"id":41886662197420,"src":"https:\/\/fugazi.net\/cdn\/shop\/files\/IMG_3213.jpg?v=1793051626\u0026width=400","w":3024,"h":4032
+,"name":"IMG_3213.jpg"
+},{"id":41886661902508,"src":"https:\/\/fugazi.net\/cdn\/shop\/files\/19825.jpg?v=1793051624\u0026width=400","w":1280,"h":1707
+,"name":"19825.jpg"
+},{"id":41886661869740,"src":"https:\/\/fugazi.net\/cdn\/shop\/files\/55205.jpg?v=1793051624\u0026width=400","w":960,"h":1707
+,"name":"55205.jpg"
+}]},{"date":"2026-09-23","seq":659855442092,"note":"","place":"Paris","photos":[{"id":41886687723692,"src":"https:\/\/fugazi.net\/cdn\/shop\/files\/IMG_7914.png?v=1793051892\u0026width=400","w":1204,"h":1600
+,"name":"IMG_7914.png"
+}]},{"date":"2026-09-24","seq":659855507628,"note":"","place":"Portugal","photos":[{"id":41886661738668,"src":"https:\/\/fugazi.net\/cdn\/shop\/files\/2fed622d-b4c6-4e12-ad41-38c0f2f143ca_d69bbf9b-c942-40a7-be91-ae2b37c01822.jpg?v=1793051624\u0026width=400","w":1200,"h":1600
+,"name":"2fed622d-b4c6-4e12-ad41-38c0f2f143ca_d69bbf9b-c942-40a7-be91-ae2b37c01822.jpg"
+},{"id":41886661771436,"src":"https:\/\/fugazi.net\/cdn\/shop\/files\/be446264-88a2-4fed-8a46-25f57e023c4e_66084d8f-ce9e-400f-afe5-d06c5ecce6de.jpg?v=1793051624\u0026width=400","w":1200,"h":1600
+,"name":"be446264-88a2-4fed-8a46-25f57e023c4e_66084d8f-ce9e-400f-afe5-d06c5ecce6de.jpg"
+},{"id":41886661673132,"src":"https:\/\/fugazi.net\/cdn\/shop\/files\/990c2341-2f71-4c02-aa26-26f075c50b6e_61600cd2-39fb-47b8-9a2d-6826057f6dd1.jpg?v=1793051624\u0026width=400","w":1200,"h":1600
+,"name":"990c2341-2f71-4c02-aa26-26f075c50b6e_61600cd2-39fb-47b8-9a2d-6826057f6dd1.jpg"
+},{"id":41886661607596,"src":"https:\/\/fugazi.net\/cdn\/shop\/files\/528d7a55-bc68-48dd-b7b4-a1d05876a413_ba284acf-85c0-4397-b979-9deecdd00c0d.jpg?v=1793051624\u0026width=400","w":1200,"h":1600
+,"name":"528d7a55-bc68-48dd-b7b4-a1d05876a413_ba284acf-85c0-4397-b979-9deecdd00c0d.jpg"
+}]},{"date":"2026-09-24","seq":659855573164,"note":"","place":"","photos":[{"id":41886661509292,"src":"https:\/\/fugazi.net\/cdn\/shop\/files\/5836_c48ecf00-d26f-4f32-a054-4d75151a0a19.jpg?v=1793051623\u0026width=400","w":1920,"h":1280
+,"name":"5836_c48ecf00-d26f-4f32-a054-4d75151a0a19.jpg"
+},{"id":41886661476524,"src":"https:\/\/fugazi.net\/cdn\/shop\/files\/5838_f1c4779c-defa-466a-80a5-e7f686f2732b.jpg?v=1793051622\u0026width=400","w":1920,"h":1280
+,"name":"5838_f1c4779c-defa-466a-80a5-e7f686f2732b.jpg"
+},{"id":41886661443756,"src":"https:\/\/fugazi.net\/cdn\/shop\/files\/5837_f3c8d912-97df-482b-8acb-7e277d5b74a1.jpg?v=1793051623\u0026width=400","w":1920,"h":1280
+,"name":"5837_f3c8d912-97df-482b-8acb-7e277d5b74a1.jpg"
+}]},{"date":"2026-09-27","seq":659855900844,"note":"","place":"","photos":[{"id":41886695260332,"src":"https:\/\/fugazi.net\/cdn\/shop\/files\/IMG_7634.jpg?v=1793052000\u0026width=400","w":4284,"h":5712
+,"name":"IMG_7634.jpg"
+},{"id":41886695522476,"src":"https:\/\/fugazi.net\/cdn\/shop\/files\/IMG_7633.jpg?v=1793052005\u0026width=400","w":4284,"h":5712
+,"name":"IMG_7633.jpg"
+},{"id":41886696046764,"src":"https:\/\/fugazi.net\/cdn\/shop\/files\/IMG_7598.jpg?v=1793052012\u0026width=400","w":4284,"h":5712
+,"name":"IMG_7598.jpg"
+},{"id":41886695981228,"src":"https:\/\/fugazi.net\/cdn\/shop\/files\/IMG_7609.jpg?v=1793052011\u0026width=400","w":4284,"h":5712
+,"name":"IMG_7609.jpg"
+}]},{"date":"2026-09-28","seq":659857375404,"note":"","place":"Acton","photos":[{"id":41886707122348,"src":"https:\/\/fugazi.net\/cdn\/shop\/files\/preview_images\/784bffdae7fc43f1bd12eee3cafb2e35.thumbnail.0000000000.jpg?v=1793052213\u0026width=400","w":1080,"h":1920
+,"type":"video","video":"https:\/\/fugazi.net\/cdn\/shop\/videos\/c\/vp\/784bffdae7fc43f1bd12eee3cafb2e35\/784bffdae7fc43f1bd12eee3cafb2e35.HD-1080p-7.2Mbps-98979867.mp4?v=0","duration":12
+},{"id":41886708662444,"src":"https:\/\/fugazi.net\/cdn\/shop\/files\/preview_images\/ec2b7d306d564d7d9f443b75b7a34b98.thumbnail.0000000000.jpg?v=1793052236\u0026width=400","w":1080,"h":1920
+,"type":"video","video":"https:\/\/fugazi.net\/cdn\/shop\/videos\/c\/vp\/ec2b7d306d564d7d9f443b75b7a34b98\/ec2b7d306d564d7d9f443b75b7a34b98.HD-1080p-7.2Mbps-98979910.mp4?v=0","duration":3
+}]},{"date":"2026-09-30","seq":659858030764,"note":"","place":"New York - Lower East Side","photos":[{"id":41886713086124,"src":"https:\/\/fugazi.net\/cdn\/shop\/files\/IMG_0193.jpg?v=1793052297\u0026width=400","w":4284,"h":5712
+,"name":"IMG_0193.jpg"
+},{"id":41886712987820,"src":"https:\/\/fugazi.net\/cdn\/shop\/files\/IMG_7713.jpg?v=1793052296\u0026width=400","w":4284,"h":5712
+,"name":"IMG_7713.jpg"
+},{"id":41886712856748,"src":"https:\/\/fugazi.net\/cdn\/shop\/files\/IMG_7702.jpg?v=1793052295\u0026width=400","w":3672,"h":4896
+,"name":"IMG_7702.jpg"
+},{"id":41886712529068,"src":"https:\/\/fugazi.net\/cdn\/shop\/files\/150A5D2C-E78B-485B-ADE7-06327AA6AE56.jpg?v=1793052293\u0026width=400","w":2160,"h":3840
+,"name":"150A5D2C-E78B-485B-ADE7-06327AA6AE56.jpg"
+}]},{"date":"2026-10-01","seq":659858456748,"note":"C8D4","place":"New York - Bowery","photos":[{"id":41886712889516,"src":"https:\/\/fugazi.net\/cdn\/shop\/files\/IMG_7737_765def53-4d81-4672-a736-ab2fb6734c16.jpg?v=1793052295\u0026width=400","w":3213,"h":5712
+,"name":"IMG_7737_765def53-4d81-4672-a736-ab2fb6734c16.jpg"
+},{"id":41886712955052,"src":"https:\/\/fugazi.net\/cdn\/shop\/files\/IMG_7735.jpg?v=1793052296\u0026width=400","w":4284,"h":5712
+,"name":"IMG_7735.jpg"
+},{"id":41886712823980,"src":"https:\/\/fugazi.net\/cdn\/shop\/files\/IMG_1679.jpg?v=1793052295\u0026width=400","w":4284,"h":5712
+,"name":"IMG_1679.jpg"
+},{"id":41886712758444,"src":"https:\/\/fugazi.net\/cdn\/shop\/files\/IMG_1683.jpg?v=1793052295\u0026width=400","w":4284,"h":5712
+,"name":"IMG_1683.jpg"
+},{"id":41886712594604,"src":"https:\/\/fugazi.net\/cdn\/shop\/files\/IMG_1660.jpg?v=1793052293\u0026width=400","w":3024,"h":4032
+,"name":"IMG_1660.jpg"
+},{"id":41886712660140,"src":"https:\/\/fugazi.net\/cdn\/shop\/files\/IMG_1694_0515a39e-b76f-44be-8eb8-77eb4c680afe.jpg?v=1793052294\u0026width=400","w":4284,"h":5712
+,"name":"IMG_1694_0515a39e-b76f-44be-8eb8-77eb4c680afe.jpg"
+},{"id":41886712201388,"src":"https:\/\/fugazi.net\/cdn\/shop\/files\/preview_images\/933442d1651b4b4d91b58ec1ae5dcd37.thumbnail.0000000000.jpg?v=1793052311\u0026width=400","w":1080,"h":1920
+,"type":"video","video":"https:\/\/fugazi.net\/cdn\/shop\/videos\/c\/vp\/933442d1651b4b4d91b58ec1ae5dcd37\/933442d1651b4b4d91b58ec1ae5dcd37.HD-1080p-7.2Mbps-98979971.mp4?v=0","duration":11
+}]},{"date":"2026-10-01","seq":659859112108,"note":"","place":"","photos":[{"id":41886712332460,"src":"https:\/\/fugazi.net\/cdn\/shop\/files\/IMG_7925_ca72c4fe-4a0b-4be9-98ca-ee6ab88f788d.jpg?v=1793052292\u0026width=400","w":3024,"h":4032
+,"name":"IMG_7925_ca72c4fe-4a0b-4be9-98ca-ee6ab88f788d.jpg"
+},{"id":41886712168620,"src":"https:\/\/fugazi.net\/cdn\/shop\/files\/IMG_1716.jpg?v=1793052290\u0026width=400","w":3024,"h":4032
+,"name":"IMG_1716.jpg"
+},{"id":41886712103084,"src":"https:\/\/fugazi.net\/cdn\/shop\/files\/F96768C6-6884-4D62-872B-B6383D25FFBD.jpg?v=1793052285\u0026width=400","w":1206,"h":2622
+,"name":"F96768C6-6884-4D62-872B-B6383D25FFBD.jpg"
+}]},{"date":"2026-10-03","seq":659860160684,"note":"","place":"","photos":[{"id":41886733074604,"src":"https:\/\/fugazi.net\/cdn\/shop\/files\/IMG_7849_c43cac2f-4fbb-4332-9de2-204983600243.jpg?v=1793052612\u0026width=400","w":3024,"h":4032
+,"name":"IMG_7849_c43cac2f-4fbb-4332-9de2-204983600243.jpg"
+}]},{"date":"2026-10-05","seq":659860488364,"note":"","place":"New York - Chinatown","photos":[{"id":41886734516396,"src":"https:\/\/fugazi.net\/cdn\/shop\/files\/IMG_7909.jpg?v=1793052629\u0026width=400","w":4284,"h":5712
+,"name":"IMG_7909.jpg"
+},{"id":41886734385324,"src":"https:\/\/fugazi.net\/cdn\/shop\/files\/IMG_7912.jpg?v=1793052629\u0026width=400","w":4284,"h":5712
+,"name":"IMG_7912.jpg"
+},{"id":41886733533356,"src":"https:\/\/fugazi.net\/cdn\/shop\/files\/IMG_7918_3fa92914-5548-4237-baed-74be9f4888fd.jpg?v=1793052618\u0026width=400","w":4284,"h":5712
+,"name":"IMG_7918_3fa92914-5548-4237-baed-74be9f4888fd.jpg"
+}]},{"date":"2026-10-08","seq":659860816044,"note":"","place":"","photos":[{"id":41886734221484,"src":"https:\/\/fugazi.net\/cdn\/shop\/files\/59203_7af79c63-13ec-43cd-aad7-c9d84f5b92ec.jpg?v=1793052625\u0026width=400","w":3024,"h":4032
+,"name":"59203_7af79c63-13ec-43cd-aad7-c9d84f5b92ec.jpg"
+},{"id":41886734024876,"src":"https:\/\/fugazi.net\/cdn\/shop\/files\/59200_925a04b0-d760-442a-8997-d71466993784.jpg?v=1793052622\u0026width=400","w":3024,"h":4032
+,"name":"59200_925a04b0-d760-442a-8997-d71466993784.jpg"
+},{"id":41886777049260,"src":"https:\/\/fugazi.net\/cdn\/shop\/files\/IMG_8296_5c0afd14-c28d-4ed6-87dd-a484029d2804.jpg?v=1793053088\u0026width=400","w":1080,"h":1920
+,"name":"IMG_8296_5c0afd14-c28d-4ed6-87dd-a484029d2804.jpg"
+},{"id":41886776983724,"src":"https:\/\/fugazi.net\/cdn\/shop\/files\/IMG_8295_8850b5d1-c212-4dbd-8038-6b9b5b7b02a1.jpg?v=1793053087\u0026width=400","w":1080,"h":1920
+,"name":"IMG_8295_8850b5d1-c212-4dbd-8038-6b9b5b7b02a1.jpg"
+}]},{"date":"2026-10-08","seq":659861176492,"note":"","place":"Singapore","photos":[{"id":41886733828268,"src":"https:\/\/fugazi.net\/cdn\/shop\/files\/preview_images\/c5aacb0c03f34f92b19968f09f949266.thumbnail.0000000000.jpg?v=1793052655\u0026width=400","w":1080,"h":1920
+,"type":"video","video":"https:\/\/fugazi.net\/cdn\/shop\/videos\/c\/vp\/c5aacb0c03f34f92b19968f09f949266\/c5aacb0c03f34f92b19968f09f949266.HD-1080p-7.2Mbps-98980319.mp4?v=0","duration":26
+},{"id":41886733762732,"src":"https:\/\/fugazi.net\/cdn\/shop\/files\/IMG_7947_799667b1-9781-4568-b180-2e82092ade64.jpg?v=1793052621\u0026width=400","w":4284,"h":5712
+,"name":"IMG_7947_799667b1-9781-4568-b180-2e82092ade64.jpg"
+},{"id":41886733140140,"src":"https:\/\/fugazi.net\/cdn\/shop\/files\/IMG_0087.jpg?v=1793052612\u0026width=400","w":3024,"h":4032
+,"name":"IMG_0087.jpg"
+},{"id":41886733009068,"src":"https:\/\/fugazi.net\/cdn\/shop\/files\/IMG_0083_b2a10199-0b63-449d-8a53-3a852275d8be.jpg?v=1793052610\u0026width=400","w":4032,"h":3024
+,"name":"IMG_0083_b2a10199-0b63-449d-8a53-3a852275d8be.jpg"
+},{"id":41886733041836,"src":"https:\/\/fugazi.net\/cdn\/shop\/files\/IMG_7929.jpg?v=1793052611\u0026width=400","w":3024,"h":4032
+,"name":"IMG_7929.jpg"
+},{"id":41886732419244,"src":"https:\/\/fugazi.net\/cdn\/shop\/files\/IMG_7948.jpg?v=1793052592\u0026width=400","w":447,"h":447
+,"name":"IMG_7948.jpg"
+},{"id":41886734090412,"src":"https:\/\/fugazi.net\/cdn\/shop\/files\/IMG_7946_79dc4fb5-d970-497b-807d-01fd8d07f423.jpg?v=1793052623\u0026width=400","w":4284,"h":5712
+,"name":"IMG_7946_79dc4fb5-d970-497b-807d-01fd8d07f423.jpg"
+}]},{"date":"2026-10-09","seq":659861471404,"note":"DSMS Smog Check Installation ","place":"Singapore","photos":[{"id":41886733959340,"src":"https:\/\/fugazi.net\/cdn\/shop\/files\/IMG_8039_9399144a-ac64-4a44-ab44-19c2929893fd.jpg?v=1793052622\u0026width=400","w":4284,"h":5712
+,"name":"IMG_8039_9399144a-ac64-4a44-ab44-19c2929893fd.jpg"
+},{"id":41886733926572,"src":"https:\/\/fugazi.net\/cdn\/shop\/files\/IMG_8040.jpg?v=1793052621\u0026width=400","w":4284,"h":5712
+,"name":"IMG_8040.jpg"
+}]},{"date":"2026-10-10","seq":659861766316,"note":"","place":"Singapore","photos":[{"id":41886733238444,"src":"https:\/\/fugazi.net\/cdn\/shop\/files\/IMG_8069.jpg?v=1793052615\u0026width=400","w":4284,"h":5712
+,"name":"IMG_8069.jpg"
+},{"id":41886732386476,"src":"https:\/\/fugazi.net\/cdn\/shop\/files\/IMG_8101.png?v=1793052592\u0026width=400","w":498,"h":374
+,"name":"IMG_8101.png"
+}]},{"date":"2026-10-15","seq":659863044268,"note":"","place":"","photos":[{"id":41886778785964,"src":"https:\/\/fugazi.net\/cdn\/shop\/files\/59430_07522440-dd5a-4ae0-a15a-8f2aeb2fe347.jpg?v=1793053096\u0026width=400","w":3024,"h":4032
+,"name":"59430_07522440-dd5a-4ae0-a15a-8f2aeb2fe347.jpg"
+},{"id":41886778753196,"src":"https:\/\/fugazi.net\/cdn\/shop\/files\/59427.jpg?v=1793053096\u0026width=400","w":4032,"h":3024
+,"name":"59427.jpg"
+}]},{"date":"2026-10-15","seq":660190232748,"note":"Wingtips","place":"","photos":[{"id":41886778294444,"src":"https:\/\/fugazi.net\/cdn\/shop\/files\/81353128696__eea650c9-2a28-4f66-ab34-7befc0bac8f5.jpg?v=1793053092\u0026width=400","w":3024,"h":4032
+,"name":"81353128696__eea650c9-2a28-4f66-ab34-7befc0bac8f5.jpg"
+}]},{"date":"2026-10-16","seq":659863535788,"note":"","place":"Brooklyn ","photos":[{"id":41886778687660,"src":"https:\/\/fugazi.net\/cdn\/shop\/files\/IMG_8290_10fbbc40-d416-44dd-ad36-b0437ab3213f.jpg?v=1793053097\u0026width=400","w":4284,"h":5712
+,"name":"IMG_8290_10fbbc40-d416-44dd-ad36-b0437ab3213f.jpg"
+}]},{"date":"2026-10-17","seq":659863699628,"note":"","place":"","photos":[{"id":41886776688812,"src":"https:\/\/fugazi.net\/cdn\/shop\/files\/IMG_8330.jpg?v=1793053085\u0026width=400","w":426,"h":639
+,"name":"IMG_8330.jpg"
+},{"id":41886776656044,"src":"https:\/\/fugazi.net\/cdn\/shop\/files\/IMG_8331.jpg?v=1793053085\u0026width=400","w":407,"h":610
+,"name":"IMG_8331.jpg"
+}]},{"date":"2026-10-18","seq":659863830700,"note":"","place":"","photos":[{"id":41886776950956,"src":"https:\/\/fugazi.net\/cdn\/shop\/files\/IMG_8350.jpg?v=1793053086\u0026width=400","w":1260,"h":706
+,"name":"IMG_8350.jpg"
+}]},{"date":"2026-10-20","seq":659863994540,"note":"","place":"New York","photos":[{"id":41886778359980,"src":"https:\/\/fugazi.net\/cdn\/shop\/files\/IMG_8367_a608b717-8896-4f2c-8279-6774458fad3d.jpg?v=1793053094\u0026width=400","w":3024,"h":4032
+,"name":"IMG_8367_a608b717-8896-4f2c-8279-6774458fad3d.jpg"
+},{"id":41886777082028,"src":"https:\/\/fugazi.net\/cdn\/shop\/files\/IMG_8379_ccd97e82-1f9b-4d70-81c8-37c46a7beb72.jpg?v=1793053089\u0026width=400","w":3024,"h":4032
+,"name":"IMG_8379_ccd97e82-1f9b-4d70-81c8-37c46a7beb72.jpg"
+}]},{"date":"2026-10-20","seq":659864092844,"note":"Shit Tee (shitty)","place":"","photos":[{"id":41886778654892,"src":"https:\/\/fugazi.net\/cdn\/shop\/files\/33dd20f4cf32eb3497819f688b741934.jpg?v=1793053095\u0026width=400","w":4160,"h":5547
+,"name":"33dd20f4cf32eb3497819f688b741934.jpg"
+}]},{"date":"2026-10-22","seq":659864387756,"note":"","place":"Brooklyn ","photos":[{"id":41886778622124,"src":"https:\/\/fugazi.net\/cdn\/shop\/files\/IMG_8375_91b56760-d5a8-48e4-968b-be4e641757c7.jpg?v=1793053096\u0026width=400","w":4284,"h":5712
+,"name":"IMG_8375_91b56760-d5a8-48e4-968b-be4e641757c7.jpg"
+},{"id":41886778720428,"src":"https:\/\/fugazi.net\/cdn\/shop\/files\/IMG_8374_28637dbe-d344-483e-ba5b-cd3a249d0646.jpg?v=1793053097\u0026width=400","w":4284,"h":5712
+,"name":"IMG_8374_28637dbe-d344-483e-ba5b-cd3a249d0646.jpg"
+},{"id":41886778392748,"src":"https:\/\/fugazi.net\/cdn\/shop\/files\/IMG_8376_4cc415b1-dd2d-4537-b93a-3900bb104ba6.jpg?v=1793053094\u0026width=400","w":4284,"h":5712
+,"name":"IMG_8376_4cc415b1-dd2d-4537-b93a-3900bb104ba6.jpg"
+},{"id":41886778327212,"src":"https:\/\/fugazi.net\/cdn\/shop\/files\/IMG_8378_9471b1e3-693a-4182-ad9c-1f6c62da87b9.jpg?v=1793053093\u0026width=400","w":4284,"h":5712
+,"name":"IMG_8378_9471b1e3-693a-4182-ad9c-1f6c62da87b9.jpg"
+}]},{"date":"2026-10-23","seq":659864551596,"note":"","place":"","photos":[{"id":41886776918188,"src":"https:\/\/fugazi.net\/cdn\/shop\/files\/7D0024DE-862A-4D20-971E-EAB255FF8C4D.jpg?v=1793053086\u0026width=400","w":1260,"h":2240
+,"name":"7D0024DE-862A-4D20-971E-EAB255FF8C4D.jpg"
+}]},{"date":"2026-10-24","seq":659865305260,"note":"","place":"","photos":[{"id":41886822039724,"src":"https:\/\/fugazi.net\/cdn\/shop\/files\/IMG_8451.jpg?v=1793053601\u0026width=400","w":612,"h":408
+,"name":"IMG_8451.jpg"
+}]},{"date":"2026-10-27","seq":660373274796,"note":"","place":"Brooklyn","photos":[{"id":41902612349100,"src":"https:\/\/fugazi.net\/cdn\/shop\/files\/IMG_5701.png?v=1793137510\u0026width=400","w":4284,"h":5712
+,"name":"IMG_5701.png"
+}]},{"date":"2026-10-29","seq":661154005164,"note":"","place":"","photos":[{"id":41927885062316,"src":"https:\/\/fugazi.net\/cdn\/shop\/files\/IMG_0644.jpg?v=1793277871\u0026width=400","w":4284,"h":5712
+,"name":"IMG_0644.jpg"
+}]},{"date":"2026-10-30","seq":661764767916,"note":"","place":"","photos":[{"id":41941780988076,"src":"https:\/\/fugazi.net\/cdn\/shop\/files\/preview_images\/5d1d5858244f48d89625dcc12e1ef024.thumbnail.0000000000.jpg?v=1793364157\u0026width=400","w":664,"h":1180
+,"type":"video","video":"https:\/\/fugazi.net\/cdn\/shop\/videos\/c\/vp\/5d1d5858244f48d89625dcc12e1ef024\/5d1d5858244f48d89625dcc12e1ef024.HD-1080p-7.2Mbps-99453617.mp4?v=0","duration":12
+}]},{"date":"2026-11-02","seq":665948422316,"note":"","place":"Portugal","photos":[{"id":41991693861036,"src":"https:\/\/fugazi.net\/cdn\/shop\/files\/2a13567c-cce4-4f28-b7e7-b4b49d309247.jpg?v=1793639770\u0026width=400","w":1536,"h":2048
+,"name":"2a13567c-cce4-4f28-b7e7-b4b49d309247.jpg"
+},{"id":41991693893804,"src":"https:\/\/fugazi.net\/cdn\/shop\/files\/db4ec4c5-21a6-44fb-9ea3-90ee0e8309c7.jpg?v=1793639770\u0026width=400","w":1536,"h":2048
+,"name":"db4ec4c5-21a6-44fb-9ea3-90ee0e8309c7.jpg"
+}]},{"date":"2026-11-04","seq":669780967596,"note":"Virginia Tee","place":"","photos":[{"id":42025143042220,"src":"https:\/\/fugazi.net\/cdn\/shop\/files\/IMG_8115.jpg?v=1793852174\u0026width=400","w":3213,"h":5712
+,"name":"IMG_8115.jpg"
+},{"id":42025139404972,"src":"https:\/\/fugazi.net\/cdn\/shop\/files\/IMG_8591.jpg?v=1793852117\u0026width=400","w":4284,"h":5712
+,"name":"IMG_8591.jpg"
+}]},{"date":"2026-11-04","seq":669781950636,"note":"","place":"","photos":[{"id":42025159688364,"src":"https:\/\/fugazi.net\/cdn\/shop\/files\/20851.jpg?v=1793852361\u0026width=400","w":1279,"h":2275
+,"name":"20851.jpg"
+}]},{"date":"2026-11-05","seq":671011405996,"note":"Satoshi @ YZY Show","place":"","photos":[{"id":42035409879212,"src":"https:\/\/fugazi.net\/cdn\/shop\/files\/IMG_8620.jpg?v=1793925908\u0026width=400","w":1260,"h":2736
+,"name":"IMG_8620.jpg"
+}]},{"date":"2026-11-08","seq":674395553964,"note":"Allen Iverson","place":"","photos":[{"id":42114995519660,"src":"https:\/\/fugazi.net\/cdn\/shop\/files\/IMG_8644.jpg?v=1794233661\u0026width=400","w":4284,"h":5712
+,"name":"IMG_8644.jpg"
+},{"id":42114995060908,"src":"https:\/\/fugazi.net\/cdn\/shop\/files\/IMG_8646.jpg?v=1794233662\u0026width=400","w":4284,"h":5712
+,"name":"IMG_8646.jpg"
+}]},{"date":"2026-04-20","seq":659761922220,"note":"","place":"Brooklyn ","photos":[{"id":41886193647788,"src":"https:\/\/fugazi.net\/cdn\/shop\/files\/7DE099C9-0F5F-407B-9FFE-0E315AA255D2.jpg?v=1793043888\u0026width=400","w":981,"h":1744
+,"name":"7DE099C9-0F5F-407B-9FFE-0E315AA255D2.jpg"
+}]},{"date":"2026-06-15","seq":659766411436,"note":"Matcha Farm","place":"Kagoshima, Japan","photos":[{"id":41886277009580,"src":"https:\/\/fugazi.net\/cdn\/shop\/files\/IMG_4995.jpg?v=1793045023\u0026width=400","w":4284,"h":5712
+,"name":"IMG_4995.jpg"
+},{"id":41886276944044,"src":"https:\/\/fugazi.net\/cdn\/shop\/files\/IMG_5006.jpg?v=1793045022\u0026width=400","w":4284,"h":5712
+,"name":"IMG_5006.jpg"
+},{"id":41886277304492,"src":"https:\/\/fugazi.net\/cdn\/shop\/files\/IMG_0475.jpg?v=1793045027\u0026width=400","w":3024,"h":4032
+,"name":"IMG_0475.jpg"
+},{"id":41886277271724,"src":"https:\/\/fugazi.net\/cdn\/shop\/files\/IMG_6684.jpg?v=1793045027\u0026width=400","w":3024,"h":4032
+,"name":"IMG_6684.jpg"
+},{"id":41886277238956,"src":"https:\/\/fugazi.net\/cdn\/shop\/files\/IMG_6685.jpg?v=1793045027\u0026width=400","w":4284,"h":5712
+,"name":"IMG_6685.jpg"
+},{"id":41886277337260,"src":"https:\/\/fugazi.net\/cdn\/shop\/files\/IMG_4888.jpg?v=1793045029\u0026width=400","w":4284,"h":5712
+,"name":"IMG_4888.jpg"
+}]},{"date":"2026-07-28","seq":659847676076,"note":"Fern first time at store","place":"New York - Lower East Side","photos":[{"id":41886574805164,"src":"https:\/\/fugazi.net\/cdn\/shop\/files\/IMG_2529.jpg?v=1793050403\u0026width=400","w":3213,"h":5712
+,"name":"IMG_2529.jpg"
+}]},{"date":"2026-11-05","seq":671011733676,"note":"C9 Knits","place":"Brooklyn","photos":[{"id":42035417841836,"src":"https:\/\/fugazi.net\/cdn\/shop\/files\/IMG_5939.jpg?v=1793926093\u0026width=400","w":3213,"h":5712
+,"name":"IMG_5939.jpg"
+},{"id":42035417809068,"src":"https:\/\/fugazi.net\/cdn\/shop\/files\/IMG_5941.jpg?v=1793926093\u0026width=400","w":1758,"h":2344
+,"name":"IMG_5941.jpg"
+}]},{"date":"2026-10-11","seq":659862192300,"note":"","place":"Singapore","photos":[{"id":41886734549164,"src":"https:\/\/fugazi.net\/cdn\/shop\/files\/IMG_8114_3d136c5a-077d-4b34-aea0-5de1375ac87f.jpg?v=1793052629\u0026width=400","w":4284,"h":5712
+,"name":"IMG_8114_3d136c5a-077d-4b34-aea0-5de1375ac87f.jpg"
+},{"id":41886734418092,"src":"https:\/\/fugazi.net\/cdn\/shop\/files\/IMG_8116_5ee456d0-a31a-4c67-a8a1-ce8fb11fd5d1.jpg?v=1793052629\u0026width=400","w":4284,"h":5712
+,"name":"IMG_8116_5ee456d0-a31a-4c67-a8a1-ce8fb11fd5d1.jpg"
+},{"id":41886734287020,"src":"https:\/\/fugazi.net\/cdn\/shop\/files\/IMG_8120.jpg?v=1793052629\u0026width=400","w":4284,"h":5712
+,"name":"IMG_8120.jpg"
+},{"id":41886734254252,"src":"https:\/\/fugazi.net\/cdn\/shop\/files\/IMG_8121_6278f4ef-1e54-4d84-9612-d75783b581f1.jpg?v=1793052627\u0026width=400","w":4284,"h":5712
+,"name":"IMG_8121_6278f4ef-1e54-4d84-9612-d75783b581f1.jpg"
+},{"id":41886734188716,"src":"https:\/\/fugazi.net\/cdn\/shop\/files\/IMG_8119.jpg?v=1793052625\u0026width=400","w":3307,"h":4409
+,"name":"IMG_8119.jpg"
+},{"id":41886734123180,"src":"https:\/\/fugazi.net\/cdn\/shop\/files\/IMG_8122_fe384ec1-e5c4-4d81-9f3b-453910a315bf.jpg?v=1793052624\u0026width=400","w":4284,"h":5712
+,"name":"IMG_8122_fe384ec1-e5c4-4d81-9f3b-453910a315bf.jpg"
+},{"id":41886733992108,"src":"https:\/\/fugazi.net\/cdn\/shop\/files\/IMG_8127_5eaccf6b-20d5-48ac-b8a5-b82813774dd6.jpg?v=1793052622\u0026width=400","w":4284,"h":5712
+,"name":"IMG_8127_5eaccf6b-20d5-48ac-b8a5-b82813774dd6.jpg"
+},{"id":41886733598892,"src":"https:\/\/fugazi.net\/cdn\/shop\/files\/IMG_8134_c4b49448-bca6-4fe5-85e6-c7e5c6b61cee.jpg?v=1793052619\u0026width=400","w":4284,"h":5712
+,"name":"IMG_8134_c4b49448-bca6-4fe5-85e6-c7e5c6b61cee.jpg"
+},{"id":41886733205676,"src":"https:\/\/fugazi.net\/cdn\/shop\/files\/IMG_8129.jpg?v=1793052615\u0026width=400","w":3024,"h":4032
+,"name":"IMG_8129.jpg"
+},{"id":41886733172908,"src":"https:\/\/fugazi.net\/cdn\/shop\/files\/IMG_8131_34bfa5c7-18a9-4e19-85ac-b2af8f8539ea.jpg?v=1793052615\u0026width=400","w":3024,"h":4032
+,"name":"IMG_8131_34bfa5c7-18a9-4e19-85ac-b2af8f8539ea.jpg"
+},{"id":41886733107372,"src":"https:\/\/fugazi.net\/cdn\/shop\/files\/IMG_8141.jpg?v=1793052613\u0026width=400","w":4284,"h":5712
+,"name":"IMG_8141.jpg"
+},{"id":41886732550316,"src":"https:\/\/fugazi.net\/cdn\/shop\/files\/C1067634-C91D-4FD7-A691-50B5E89797B5.jpg?v=1793052596\u0026width=400","w":1260,"h":2240
+,"name":"C1067634-C91D-4FD7-A691-50B5E89797B5.jpg"
+},{"id":41886732943532,"src":"https:\/\/fugazi.net\/cdn\/shop\/files\/IMG_8153.jpg?v=1793052609\u0026width=400","w":4284,"h":5712
+,"name":"IMG_8153.jpg"
+},{"id":41886732517548,"src":"https:\/\/fugazi.net\/cdn\/shop\/files\/B049554E-E207-4FD7-A88C-30C07FABFF94.jpg?v=1793052594\u0026width=400","w":1260,"h":2240
+,"name":"B049554E-E207-4FD7-A88C-30C07FABFF94.jpg"
+}]},{"date":"2026-03-20","seq":659761889452,"note":"","place":"West Hollywood - Sunset Strip","photos":[{"id":41886193680556,"src":"https:\/\/fugazi.net\/cdn\/shop\/files\/IMG_2329.jpg?v=1793043892\u0026width=400","w":4284,"h":5712
+,"name":"IMG_2329.jpg"
+}]},{"date":"2026-10-26","seq":659865370796,"note":"","place":"","photos":[{"id":41886824825004,"src":"https:\/\/fugazi.net\/cdn\/shop\/files\/IMG_8496.jpg?v=1793053610\u0026width=400","w":4284,"h":5712
+,"name":"IMG_8496.jpg"
+},{"id":41886824857772,"src":"https:\/\/fugazi.net\/cdn\/shop\/files\/IMG_8497.jpg?v=1793053612\u0026width=400","w":4284,"h":5712
+,"name":"IMG_8497.jpg"
+}]}]
+}</script>

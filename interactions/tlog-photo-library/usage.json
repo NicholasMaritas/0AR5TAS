@@ -1,0 +1,24 @@
+{
+  "name": "Tlog photo library",
+  "source": "https://fugazi.net/pages/tlog",
+  "example": "https://fugazi.net/pages/tlog#photo-41886163075244",
+  "integration": [
+    "Use an isolated document: the original component owns fixed toolbar/viewer layers, global IDs, history, scroll restoration and document/window input listeners.",
+    "Load host.css then tlog.css.",
+    "Insert tlog.html (includes SVG symbols, all required sibling layers and embedded TlogData) before loading tlog.js once.",
+    "index.html is the ready-to-host static test with this structure already embedded."
+  ],
+  "data": "81entries/231media,222photos+9videos. pages1 means no Shopify pagination request. Keep pages1 for static hosting and merge future data into the embedded TlogData before publishing. tlog-data.json is the reusable source data; sync it with the embedded JSON when editing.",
+  "dependencies": "No external JavaScript libraries required. Montserrat fonts and Fugazi image/video media remain externally hosted; availability is recorded in asset-manifest.json.",
+  "adaptations": [
+    "Copy Link now uses current origin/path/query plus #photo-ID instead of the Shopify search-template endpoint.",
+    "Home returns to the project root via ../../.",
+    "Protocol-relative media/font URLs are explicitHTTPS.",
+    "Minimal source-theme typography/reset and30px desktop/15px mobile host gutters replace the omitted shop header/cart shell."
+  ],
+  "reference": "tlog.original.html/css/js preserve unmodified feature extraction; source-analysis.json records identical feature hashes in both uploaded attachments. Raw asset inventory was consolidated into asset-manifest.json.",
+  "persistence": "Source localStorage keys fugazi-tlog-likes, fugazi-tlog-cols and fugazi-tlog-view are retained. Favorites stay on each visitor device; no account or server write.",
+  "api": "Original self-initializing IIFE, one instance per document; no destroy or mount API.",
+  "save_share": "Uses native Web Share when files are supported, otherwise downloads a fetched Blob. Browser permissions and CDN CORS apply. The source in-memory file cache keeps the last5 files.",
+  "compatibility": "Source native scrolling, pointer/touch gestures, modern CSS container sizing and reduced-motion rules retained. Physical phone gestures and native mobile Share sheet were not tested."
+}
