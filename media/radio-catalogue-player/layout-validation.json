@@ -70,5 +70,36 @@
     "Resized desktop browser; physical mobile safe-area inset not exercised.",
     "Original source styles preserved in source/; current layout intentionally differs per user request."
   ],
-  "publication": "pending"
+  "publication": {
+    "status": "verified",
+    "runtime_commit": "d97db04dc3aab723f47fad13788c8a40101d4645",
+    "workflow": {
+      "id": 44380132058,
+      "status": "completed",
+      "conclusion": "success",
+      "head": "d97db04dc3aab723f47fad13788c8a40101d4645"
+    },
+    "main_readback": "All7 changed/new files matched.",
+    "live_runtime": "Published index.html, radio-player.css?v=2 and radio-player.js?v=2 exactly matched committed bytes.",
+    "public_browser": {
+      "viewport": [
+        1352,
+        797
+      ],
+      "bully_circle_icon_center_delta": {
+        "dx": 0,
+        "dy": 0
+      },
+      "scroll_y": 240,
+      "player": {
+        "x": 0,
+        "y": 744,
+        "width": 1337,
+        "height": 53,
+        "bottom": 797
+      },
+      "bully_selected_and_paused": true,
+      "screenshot": "/workspace/shared/radio-player-bottom-fixed.jpg"
+    }
+  }
 }

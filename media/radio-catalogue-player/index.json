@@ -33,6 +33,8 @@
   "publication": {
     "mode": "active Pages test",
     "test_url": "https://nicholasmaritas.github.io/0AR5TAS/media/radio-catalogue-player/",
-    "status": "updated layout; deployment verification pending"
+    "status": "published and verified",
+    "runtime_commit": "d97db04dc3aab723f47fad13788c8a40101d4645",
+    "pages_workflow": 44380132058
   }
 }
