@@ -1,0 +1,125 @@
+{
+  "query": "(max-width:767px), (hover:none) and (pointer:coarse) and (max-height:600px)",
+  "validator": "css-mediaquery@0.1.2 (temporary validation dependency only)",
+  "cases": [
+    {
+      "name": "phone portrait",
+      "width": 390,
+      "height": 844,
+      "pointer": "coarse",
+      "hover": "none",
+      "mobile": true,
+      "passed": true
+    },
+    {
+      "name": "phone landscape",
+      "width": 844,
+      "height": 390,
+      "pointer": "coarse",
+      "hover": "none",
+      "mobile": true,
+      "passed": true
+    },
+    {
+      "name": "observed wide landscape",
+      "width": 836,
+      "height": 374,
+      "pointer": "coarse",
+      "hover": "none",
+      "mobile": true,
+      "passed": true
+    },
+    {
+      "name": "larger phone landscape",
+      "width": 932,
+      "height": 430,
+      "pointer": "coarse",
+      "hover": "none",
+      "mobile": true,
+      "passed": true
+    },
+    {
+      "name": "landscape limit",
+      "width": 1024,
+      "height": 600,
+      "pointer": "coarse",
+      "hover": "none",
+      "mobile": true,
+      "passed": true
+    },
+    {
+      "name": "tall touch tablet",
+      "width": 1024,
+      "height": 768,
+      "pointer": "coarse",
+      "hover": "none",
+      "mobile": false,
+      "passed": true
+    },
+    {
+      "name": "height limit exceeded",
+      "width": 1024,
+      "height": 601,
+      "pointer": "coarse",
+      "hover": "none",
+      "mobile": false,
+      "passed": true
+    },
+    {
+      "name": "desktop landscape",
+      "width": 836,
+      "height": 374,
+      "pointer": "fine",
+      "hover": "hover",
+      "mobile": false,
+      "passed": true
+    },
+    {
+      "name": "large desktop",
+      "width": 1440,
+      "height": 900,
+      "pointer": "fine",
+      "hover": "hover",
+      "mobile": false,
+      "passed": true
+    },
+    {
+      "name": "narrow desktop",
+      "width": 767,
+      "height": 800,
+      "pointer": "fine",
+      "hover": "hover",
+      "mobile": true,
+      "passed": true
+    },
+    {
+      "name": "desktop width boundary",
+      "width": 768,
+      "height": 800,
+      "pointer": "fine",
+      "hover": "hover",
+      "mobile": false,
+      "passed": true
+    },
+    {
+      "name": "hover-capable coarse pointer",
+      "width": 932,
+      "height": 430,
+      "pointer": "coarse",
+      "hover": "hover",
+      "mobile": false,
+      "passed": true
+    }
+  ],
+  "rotationMaintainsMobile": true,
+  "syntax": "menu.js node --check passed",
+  "synchronized": [
+    "menu.css",
+    "menu.js",
+    "index.html noscript fallback"
+  ],
+  "limitations": [
+    "Local narrow-screen browser checked; DevTools device emulation blocked by managed browser policy, not bypassed.",
+    "Physical phone rotation not tested; capability scenarios validated against the media-query parser."
+  ]
+}

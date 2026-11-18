@@ -4,7 +4,7 @@ export function createLoopMenu(root) {
   const button = root.querySelector('.loop-toggle');
   const panel = root.querySelector('.loop-panel');
   const links = [...root.querySelectorAll('.loop-link')];
-  const mobile = matchMedia('(max-width:767px)');
+  const mobile = matchMedia('(max-width:767px), (hover:none) and (pointer:coarse) and (max-height:600px)');
   const reduced = matchMedia('(prefers-reduced-motion:reduce)');
   const motion = new LoopMotion(links.length, {reduced:reduced.matches});
   let open = false, frameId = 0, previousTime = 0, pointer = null;

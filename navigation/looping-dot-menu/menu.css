@@ -7,7 +7,7 @@
 .link-name{display:none}
 .loop-link:focus-visible{outline:1px dotted #000;outline-offset:-2px}
 .sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip-path:inset(50%);white-space:nowrap}
-@media(max-width:767px){
+@media(max-width:767px), (hover:none) and (pointer:coarse) and (max-height:600px){
   .loop-toggle{display:grid;place-items:center;position:fixed;right:max(18px,env(safe-area-inset-right));bottom:calc(var(--edge) + var(--row));width:var(--row);height:var(--row);padding:0;border:0;background:transparent;color:#000;cursor:pointer;z-index:10;-webkit-tap-highlight-color:transparent}
   .loop-toggle[aria-expanded="true"] .dot{background:transparent}
   .loop-toggle:focus-visible{outline:1px dotted #000;outline-offset:-6px}
