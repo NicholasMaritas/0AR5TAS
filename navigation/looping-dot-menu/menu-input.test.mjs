@@ -30,7 +30,7 @@ function fixture(run) {
     }
     hasPointerCapture(id) {return captures.get(id)===this;}
     releasePointerCapture(id) {if(this.hasPointerCapture(id)){captures.delete(id);emit(this,'lostpointercapture',{pointerId:id});}}
-    getBoundingClientRect() {return {left:parseFloat(this.properties.get('--trigger-x')??(root.dataset.triggerSide==='left'?18:426)),top:parseFloat(this.properties.get('--trigger-y')??(root.dataset.triggerDock==='middle'?372:670)),width:56,height:56};}
+    getBoundingClientRect() {return {left:parseFloat(this.properties.get('--trigger-x')??(root.dataset.triggerSide==='left'?18:426)),top:parseFloat(this.properties.get('--trigger-y')??(root.dataset.triggerDock==='middle'?372:root.dataset.triggerDock==='top'?74:670)),width:56,height:56};}
     click() {return emit(this,'click');}
   }
   const root=new Target(),button=new Target(root),panel=new Target(root),gap=new Target(root),win=new Target(),doc=new Target();
@@ -40,7 +40,7 @@ function fixture(run) {
   root.querySelector=selector=>selector==='.loop-toggle'?button:panel;
   root.querySelectorAll=()=>links;
   doc.querySelector=()=>null;doc.hidden=false;doc.activeElement=null;
-  const mobile=new Target(),reduced=new Target();mobile.matches=true;reduced.matches=false;
+  const mobile=new Target(),reduced=new Target(),landscape=new Target();mobile.matches=true;reduced.matches=false;landscape.matches=false;
   function emit(target,type,properties={}) {
     if(type.startsWith('pointer')&&type!=='pointerdown')flushCaptureChanges();
     const event={pointerId:1,isPrimary:true,button:0,clientX:454,clientY:670,timeStamp:now,detail:1,key:'',deltaY:0,deltaMode:0,ctrlKey:false,
@@ -58,12 +58,13 @@ function fixture(run) {
   function flushCaptureChanges() {
     while(pendingCaptureLoss.length){const {target,id}=pendingCaptureLoss.shift();emit(target,'lostpointercapture',{pointerId:id,pointerType:'touch'});}
   }
-  const values={window:win,document:doc,matchMedia:query=>query.includes('prefers-reduced')?reduced:mobile,
+  const values={window:win,document:doc,matchMedia:query=>query.includes('orientation:landscape')?landscape:query.includes('prefers-reduced')?reduced:mobile,
     getComputedStyle:()=>({getPropertyValue:()=>'56px'}),requestAnimationFrame:fn=>{frames.set(++sequence,fn);return sequence;},cancelAnimationFrame:id=>frames.delete(id),performance:{now:()=>now}};
   for(const [name,value]of Object.entries(values))Object.defineProperty(globalThis,name,{value,configurable:true,writable:true});
   const controller=createLoopMenu(root);
   function advance(count=180){for(let step=0;step<count&&frames.size;step++){now+=16;const callbacks=[...frames.values()];frames.clear();callbacks.forEach(fn=>fn(now));}}
-  const env={root,button,panel,gap,links,win,mobile,reduced,captures,frames,emit,advance,flushCaptureChanges,controller,
+  const env={root,button,panel,gap,links,win,mobile,reduced,landscape,captures,frames,emit,advance,flushCaptureChanges,controller,
+    rotate(value){landscape.matches=value;emit(landscape,'change',{matches:value});emit(win,'resize');},
     open(){emit(button,'click');assert.equal(root.dataset.open,'true');},
     drag(target,{from=600,to=656,id=1}={}){emit(target,'pointerdown',{pointerId:id,clientY:from,timeStamp:0});emit(target,'pointermove',{pointerId:id,clientY:to,timeStamp:80});return emit(target,'pointerup',{pointerId:id,clientY:to,timeStamp:90});}};
   try {run(env);} finally {controller.destroy();for(const [name,descriptor]of prior){if(descriptor)Object.defineProperty(globalThis,name,descriptor);else delete globalThis[name];}}
@@ -197,6 +198,33 @@ test('open band keeps its original capture when a different input reports itself
   assert.equal(env.links[0].style.transform,'translate3d(0,56px,0)');
   env.emit(env.gap,'pointerup',{pointerId:1,clientY:656,timeStamp:50});
   assert.equal(env.captures.size,0);assert.equal(env.root.dataset.open,'true');
+}));
+
+test('rotating an open middle or top menu docks trigger at bottom without closing or breaking touch scroll',()=>{
+  for(const dock of ['middle','top'])fixture(env=>{
+    assert.equal(env.landscape.matches,false,'default fixture represents portrait');
+    env.root.dataset.triggerDock=dock;env.open();assert.equal(env.root.dataset.triggerDock,dock);
+    env.rotate(true);
+    assert.equal(env.root.dataset.triggerDock,'bottom');assert.equal(env.root.dataset.open,'true');
+    assert.equal(env.panel.hidden,false);assert.equal(env.button.attrs.get('aria-expanded'),'true');
+    const touch={pointerId:1,pointerType:'touch',clientY:600,timeStamp:0};
+    env.emit(env.button,'pointerdown',touch);
+    env.emit(env.button,'pointermove',{...touch,clientY:628,timeStamp:20});
+    env.flushCaptureChanges();assert.equal(env.captures.get(1),env.root);
+    env.emit(env.button,'pointermove',{...touch,clientY:656,timeStamp:40});
+    assert.equal(env.links[0].style.transform,'translate3d(0,56px,0)');
+    env.emit(env.button,'pointerup',{...touch,clientY:656,timeStamp:50});
+    assert.equal(env.emit(env.button,'click').prevented,true);assert.equal(env.root.dataset.open,'true');
+  });
+});
+
+test('landscape trigger vertical docking lock does not consume open-menu Up and Down keys',()=>fixture(env=>{
+  env.rotate(true);env.open();
+  assert.equal(env.emit(env.button,'keydown',{key:'ArrowUp'}).prevented,true);
+  env.advance();assert.equal(env.panel.dataset.centered,'CDG');assert.equal(env.root.dataset.triggerDock,'bottom');
+  assert.equal(env.emit(env.links[1],'keydown',{key:'ArrowDown'}).prevented,true);
+  env.advance();assert.equal(env.panel.dataset.centered,'Home');assert.equal(env.root.dataset.open,'true');
+  assert.equal(env.root.dataset.triggerDock,'bottom');
 }));
 
 test('destroy removes shared input and cancels capture/animation work',()=>fixture(env=>{

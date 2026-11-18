@@ -1,0 +1,42 @@
+{
+  "task": 30,
+  "date": "2026-11-18",
+  "requested": [
+    "Portrait dot moves only up/down/left/right; no diagonal dragging/flicking.",
+    "Landscape rotated phone supports only bottom-left/right.",
+    "Update code and GitHub Pages."
+  ],
+  "implementation": {
+    "axis_lock_css_px": 6,
+    "tie_axis": "horizontal",
+    "horizontal_intent_css_px": 12,
+    "vertical_intent_css_px": 24,
+    "axis_policy": "Choose dominant displacement at first deliberate movement and keep axis fixed until release/cancel; ignore other-axis displacement.",
+    "portrait_docks": [
+      "bottom-left",
+      "bottom-right",
+      "middle-left",
+      "middle-right",
+      "top-left",
+      "top-right"
+    ],
+    "landscape_docks": [
+      "bottom-left",
+      "bottom-right"
+    ],
+    "columns": "All levels use safe-area-clamped5%/95% X, eliminating angled vertical rest transitions.",
+    "rotation": "Preserve side, normalize levelbottom, cancel active capture/settle, suppress trailing click; CSS bypasses stale portrait Y while landscape.",
+    "interrupted_settle": "If both coordinates need correction after interrupting a different-axis glide, use360ms native Web Animations with two straight legs. Reduced motion or absent API commits immediately.",
+    "open_menu": "Shared vertical scroll controller remains active in either orientation; closed docking restrictions do not block open menu scrolling.",
+    "runtime_dependencies_added": false
+  },
+  "verification": {
+    "automated": "87 passed (60 trigger,14 menu input,13 motion); JS syntax passed.",
+    "local_browser": "Portrait718x757/710x757: dominant diagonal input moves only horizontally or vertically, interrupted perpendicular gesture settled left/middle without console errors. Landscape710x374: open middle-left normalized bottom-left, panel/trigger level, outlined trigger drag moved links, vertical closed drag/key did not change dock, horizontal switch worked, body scroll0.",
+    "physical_phone": "not tested"
+  },
+  "deployment": {
+    "status": "pending"
+  },
+  "test_url": "https://nicholasmaritas.github.io/0AR5TAS/navigation/looping-dot-menu/"
+}

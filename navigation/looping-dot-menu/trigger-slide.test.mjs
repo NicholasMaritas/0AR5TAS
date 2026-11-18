@@ -2,8 +2,9 @@ import test from 'node:test';
 import assert from 'node:assert/strict';
 import {createSlidingTrigger, flickSide, flickDock} from './trigger-slide.js';
 
-function fixture(run) {
+function fixture(run, {landscape:initialLandscape=false,reduced:initialReduced=false,side='right',dock='bottom'}={}) {
   const previous = globalThis.window;
+  const previousMedia = globalThis.matchMedia;
   class Target {
     listeners = new Map();
     addEventListener(name, handler, options) {
@@ -19,21 +20,34 @@ function fixture(run) {
       return event;
     }
   }
-  const win=new Target(),button=new Target(),root={dataset:{}};
+  const win=new Target(),button=new Target(),root={dataset:{triggerSide:side,triggerDock:dock}};
+  const landscape=new Target(),reduced=new Target();
+  landscape.matches=initialLandscape;reduced.matches=initialReduced;
   const styles=new Map(),capture=new Set();
   let enabled=true,open=false;
   button.style={setProperty:(k,v)=>styles.set(k,v),removeProperty:k=>styles.delete(k)};
   const endpoints={left:18,right:426,bottom:627,middle:350.5,top:74};
-  button.getBoundingClientRect=()=>({left:styles.has('--trigger-x')?parseFloat(styles.get('--trigger-x')):endpoints[root.dataset.triggerSide||'right'],top:styles.has('--trigger-y')?parseFloat(styles.get('--trigger-y')):endpoints[root.dataset.triggerDock||'bottom'],width:56,height:56});
+  let presentation=null;
+  button.getBoundingClientRect=()=>{
+    if(presentation){const rect=presentation;presentation=null;return rect;}
+    return {left:styles.has('--trigger-x')?parseFloat(styles.get('--trigger-x')):endpoints[root.dataset.triggerSide||'right'],top:styles.has('--trigger-y')?parseFloat(styles.get('--trigger-y')):endpoints[root.dataset.triggerDock||'bottom'],width:56,height:56};
+  };
+  const animations=[];
+  button.animate=(frames,options)=>{const animation={frames,options,canceled:false,cancel(){this.canceled=true}};animations.push(animation);return animation};
   button.setPointerCapture=id=>capture.add(id);
   button.hasPointerCapture=id=>capture.has(id);
   button.releasePointerCapture=id=>capture.delete(id);
   globalThis.window=win;
+  globalThis.matchMedia=query=>query.includes('orientation')?landscape:reduced;
   const controller=createSlidingTrigger(root,button,{isEnabled:()=>enabled,isOpen:()=>open});
-  const context={root,button,win,styles,capture,controller,endpoints,
+  const context={root,button,win,styles,capture,controller,endpoints,landscape,reduced,animations,
+    presentNextRect:rect=>{presentation={width:56,height:56,...rect}},
     enable:value=>{enabled=value},open:value=>{open=value},
     drag(from,to,start=0,end=120){button.emit('pointerdown',{clientX:from,timeStamp:start});button.emit('pointermove',{clientX:to,timeStamp:end-10});button.emit('pointerup',{clientX:to,timeStamp:end})}};
-  try{run(context)}finally{controller.destroy();if(previous===undefined)delete globalThis.window;else globalThis.window=previous;}
+  try{run(context)}finally{
+    controller.destroy();if(previous===undefined)delete globalThis.window;else globalThis.window=previous;
+    if(previousMedia===undefined)delete globalThis.matchMedia;else globalThis.matchMedia=previousMedia;
+  }
 }
 
 test('a short inward flick chooses the opposite edge without a midpoint or speed requirement',()=>{
@@ -115,19 +129,20 @@ test('pointerup includes travel beyond the last small move sample',()=>fixture((
   assert.equal(root.dataset.triggerSide,'left');
 }));
 
-test('an initially vertical path may become a qualifying inward diagonal flick',()=>fixture(({button,root})=>{
-  button.emit('pointerdown',{clientX:454,clientY:655,timeStamp:0});
+test('an initially vertical path locks vertical movement despite a later inward curve',()=>fixture(({button,root})=>{
+  button.emit('pointerdown',{clientX:454,clientY:655});
   button.emit('pointermove',{clientX:454,clientY:710,timeStamp:15});
   button.emit('pointermove',{clientX:434,clientY:750,timeStamp:30});
+  assert.equal(button.getBoundingClientRect().left,426);
   button.emit('pointerup',{clientX:434,clientY:750,timeStamp:40});
-  assert.equal(root.dataset.triggerSide,'left');
+  assert.equal(root.dataset.triggerSide,'right');assert.equal(root.dataset.triggerDock,'bottom');
   assert.equal(button.emit('click').prevented,true);
 }));
 
-test('a very diagonal flick qualifies from its inward travel without an axis ratio gate',()=>fixture(({button,root})=>{
-  button.emit('pointerdown',{clientX:454,clientY:655,timeStamp:0});
+test('a strongly vertical final sample changes only its vertical dock',()=>fixture(({button,root})=>{
+  button.emit('pointerdown',{clientX:454,clientY:655});
   button.emit('pointerup',{clientX:438,clientY:255,timeStamp:25});
-  assert.equal(root.dataset.triggerSide,'left');
+  assert.equal(root.dataset.triggerSide,'right');assert.equal(root.dataset.triggerDock,'middle');
   assert.equal(button.emit('click').prevented,true);
 }));
 
@@ -246,31 +261,31 @@ test('a short vertical gesture below threshold suppresses a drag click but retai
   assert.equal(button.emit('click').prevented,true);
 }));
 
-test('a diagonal flick can change edge and dock independently in both directions',()=>fixture(({button,root})=>{
+test('diagonal flicks choose the dominant axis without changing both edge and dock',()=>fixture(({button,root})=>{
   button.emit('pointerdown',{clientX:454,clientY:655});
   button.emit('pointerup',{clientX:434,clientY:625,timeStamp:10});
-  assert.equal(root.dataset.triggerSide,'left');assert.equal(root.dataset.triggerDock,'middle');
-  button.emit('pointerdown',{clientX:46,clientY:378,timeStamp:100});
-  button.emit('pointerup',{clientX:66,clientY:408,timeStamp:110});
+  assert.equal(root.dataset.triggerSide,'right');assert.equal(root.dataset.triggerDock,'middle');
+  button.emit('pointerdown',{clientX:454,clientY:378.5,timeStamp:100});
+  button.emit('pointerup',{clientX:434,clientY:408.5,timeStamp:110});
   assert.equal(root.dataset.triggerSide,'right');assert.equal(root.dataset.triggerDock,'bottom');
 }));
 
-test('two-axis dragging follows the finger within the measured six dock endpoints',()=>fixture(({button,root})=>{
+test('horizontal locking follows only x and clamps against its fixed side columns',()=>fixture(({button,root})=>{
   button.emit('pointerdown',{clientX:454,clientY:655});
   button.emit('pointermove',{clientX:80,clientY:400,timeStamp:20});
-  assert.equal(button.getBoundingClientRect().left,52);assert.equal(button.getBoundingClientRect().top,372);
+  assert.equal(button.getBoundingClientRect().left,52);assert.equal(button.getBoundingClientRect().top,627);
   button.emit('pointermove',{clientX:-200,clientY:-200,timeStamp:30});
-  assert.equal(button.getBoundingClientRect().left,18);assert.equal(button.getBoundingClientRect().top,74);
+  assert.equal(button.getBoundingClientRect().left,18);assert.equal(button.getBoundingClientRect().top,627);
   button.emit('pointerup',{clientX:-200,clientY:-200,timeStamp:40});
-  assert.equal(root.dataset.triggerSide,'left');assert.equal(root.dataset.triggerDock,'middle');
+  assert.equal(root.dataset.triggerSide,'left');assert.equal(root.dataset.triggerDock,'bottom');
 }));
 
-test('curved paths retain qualified vertical intent through a pause and retreat',()=>fixture(({button,root})=>{
+test('vertical locking retains qualified vertical intent through a horizontal curve and pause',()=>fixture(({button,root})=>{
   button.emit('pointerdown',{clientX:454,clientY:655});
   button.emit('pointermove',{clientX:454,clientY:620,timeStamp:10});
   button.emit('pointermove',{clientX:434,clientY:650,timeStamp:80});
   button.emit('pointerup',{clientX:450,clientY:650,timeStamp:1500});
-  assert.equal(root.dataset.triggerSide,'left');assert.equal(root.dataset.triggerDock,'middle');
+  assert.equal(root.dataset.triggerSide,'right');assert.equal(root.dataset.triggerDock,'middle');
 }));
 
 test('cancellation restores both original edge and original middle dock',()=>fixture(({button,root,capture,styles})=>{
@@ -293,7 +308,7 @@ test('resize remeasures resting endpoints while retaining the chosen middle/left
   assert.equal(styles.size,0);
   button.emit('pointerdown',{clientX:52,clientY:448,timeStamp:100});
   button.emit('pointermove',{clientX:800,clientY:900,timeStamp:110});
-  assert.equal(button.getBoundingClientRect().left,500);assert.equal(button.getBoundingClientRect().top,730);
+  assert.equal(button.getBoundingClientRect().left,500);assert.equal(button.getBoundingClientRect().top,420);
 }));
 
 test('keyboard docking changes level independently from edge and delegates while open',()=>fixture(({button,root,open,enable})=>{
@@ -435,6 +450,168 @@ test('nested dot implicit-capture loss cannot cancel an active middle or top ges
     assert.equal(root.dataset.triggerDock,expectedDock);
     assert.equal(capture.size,0);assert.equal(button.emit('click').prevented,true);
   }
+}));
+
+test('vertical locking previews only y and later x travel cannot switch sides',()=>fixture(({button,root})=>{
+  button.emit('pointerdown',{clientX:454,clientY:655});
+  button.emit('pointermove',{clientX:452,clientY:648,timeStamp:10});
+  assert.equal(button.getBoundingClientRect().left,426);assert.equal(button.getBoundingClientRect().top,620);
+  button.emit('pointermove',{clientX:100,clientY:615,timeStamp:20});
+  assert.equal(button.getBoundingClientRect().left,426);assert.equal(button.getBoundingClientRect().top,587);
+  button.emit('pointerup',{clientX:100,clientY:615,timeStamp:30});
+  assert.equal(root.dataset.triggerSide,'right');assert.equal(root.dataset.triggerDock,'middle');
+}));
+
+test('horizontal locking survives a later strongly vertical curve',()=>fixture(({button,root})=>{
+  button.emit('pointerdown',{clientX:454,clientY:655});
+  button.emit('pointermove',{clientX:447,clientY:654,timeStamp:10});
+  button.emit('pointermove',{clientX:434,clientY:200,timeStamp:20});
+  assert.equal(button.getBoundingClientRect().top,627);
+  button.emit('pointerup',{clientX:434,clientY:200,timeStamp:30});
+  assert.equal(root.dataset.triggerSide,'left');assert.equal(root.dataset.triggerDock,'bottom');
+}));
+
+test('fast pointerup dominance selects exactly one axis and ties choose horizontal',()=>{
+  for(const [dx,dy,side,dock] of [[-16,-10,'left','bottom'],[-12,-30,'right','middle'],[-24,-24,'left','bottom']]){
+    fixture(({button,root})=>{
+      button.emit('pointerdown',{clientX:454,clientY:655});
+      button.emit('pointerup',{clientX:454+dx,clientY:655+dy,timeStamp:10});
+      assert.equal(root.dataset.triggerSide,side);assert.equal(root.dataset.triggerDock,dock);
+    });
+  }
+});
+
+test('landscape initialization uses bottom only while preserving the chosen left edge',()=>fixture(({root,button})=>{
+  assert.equal(root.dataset.triggerDock,'bottom');assert.equal(root.dataset.triggerSide,'left');
+  assert.equal(button.getBoundingClientRect().left,18);assert.equal(button.getBoundingClientRect().top,627);
+},{landscape:true,side:'left',dock:'top'}));
+
+test('closed landscape vertical gestures cannot preview or release to a higher dock',()=>fixture(({button,root})=>{
+  button.emit('pointerdown',{clientX:454,clientY:655});
+  button.emit('pointermove',{clientX:450,clientY:500,timeStamp:10});
+  assert.equal(button.getBoundingClientRect().left,426);assert.equal(button.getBoundingClientRect().top,627);
+  button.emit('pointerup',{clientX:450,clientY:400,timeStamp:20});
+  assert.equal(root.dataset.triggerDock,'bottom');assert.equal(root.dataset.triggerSide,'right');
+  assert.equal(button.emit('click').prevented,true);
+},{landscape:true}));
+
+test('landscape retains horizontal flicking and ignores diagonal cross-axis vertical travel',()=>fixture(({button,root})=>{
+  button.emit('pointerdown',{clientX:454,clientY:655});
+  button.emit('pointerup',{clientX:424,clientY:635,timeStamp:10});
+  assert.equal(root.dataset.triggerSide,'left');assert.equal(root.dataset.triggerDock,'bottom');
+  button.emit('pointerdown',{clientX:46,clientY:655,timeStamp:100});
+  button.emit('pointerup',{clientX:76,clientY:635,timeStamp:110});
+  assert.equal(root.dataset.triggerSide,'right');assert.equal(root.dataset.triggerDock,'bottom');
+},{landscape:true}));
+
+test('landscape keyboard disables closed vertical docking and retains horizontal navigation',()=>fixture(({button,root,open})=>{
+  for(const key of ['ArrowUp','ArrowDown'])button.emit('keydown',{key});
+  assert.equal(root.dataset.triggerDock,'bottom');
+  button.emit('keydown',{key:'ArrowLeft'});assert.equal(root.dataset.triggerSide,'left');
+  button.emit('keydown',{key:'ArrowRight'});assert.equal(root.dataset.triggerSide,'right');
+  open(true);
+  for(const key of ['ArrowUp','ArrowDown'])assert.notEqual(button.emit('keydown',{key}).prevented,true,'open-menu scrolling still owns these keys');
+},{landscape:true}));
+
+test('rotating from top portrait to landscape returns to bottom and stays there on portrait restoration',()=>fixture(({root,landscape,button})=>{
+  root.dataset.triggerDock='top';root.dataset.triggerSide='left';
+  landscape.matches=true;landscape.emit('change');
+  assert.equal(root.dataset.triggerDock,'bottom');assert.equal(root.dataset.triggerSide,'left');
+  landscape.matches=false;landscape.emit('change');
+  assert.equal(root.dataset.triggerDock,'bottom');assert.equal(root.dataset.triggerSide,'left');
+  button.emit('keydown',{key:'ArrowUp'});assert.equal(root.dataset.triggerDock,'middle','portrait docking is available again');
+}));
+
+test('rotation during a drag releases capture, resets its dock, and suppresses its trailing click',()=>fixture(({button,root,landscape,capture,styles})=>{
+  root.dataset.triggerDock='top';
+  button.emit('pointerdown',{clientX:454,clientY:102});
+  button.emit('pointermove',{clientX:430,clientY:104,timeStamp:10});
+  landscape.matches=true;landscape.emit('change');
+  button.emit('pointerup',{clientX:430,clientY:104,timeStamp:20});
+  assert.equal(root.dataset.triggerSide,'right');assert.equal(root.dataset.triggerDock,'bottom');
+  assert.equal(capture.size,0);assert.equal(styles.size,0);assert.equal(button.emit('click').prevented,true);
+}));
+
+test('rotation or resize cancels even a stationary pointer and suppresses the later click',()=>{
+  for(const rotate of [false,true])fixture(({button,root,landscape,win,capture})=>{
+    button.emit('pointerdown');
+    if(rotate){landscape.matches=true;landscape.emit('change');}else win.emit('resize');
+    assert.equal(capture.size,0);
+    button.emit('pointerup');assert.equal(button.emit('click').prevented,true);
+    assert.equal(root.dataset.triggerDock,'bottom');
+    button.emit('pointerdown');button.emit('pointerup');assert.notEqual(button.emit('click').prevented,true,'the next intentional tap still works');
+  });
+});
+
+test('rotation while open normalizes its dock without capturing or changing handedness',()=>fixture(({button,root,open,landscape,capture})=>{
+  root.dataset.triggerSide='left';root.dataset.triggerDock='top';open(true);
+  button.emit('pointerdown',{clientX:46,clientY:102});
+  landscape.matches=true;landscape.emit('change');
+  assert.equal(root.dataset.triggerSide,'left');assert.equal(root.dataset.triggerDock,'bottom');assert.equal(capture.size,0);
+  button.emit('pointerup',{clientX:46,clientY:200});assert.notEqual(button.emit('click').prevented,true);
+}));
+
+test('orientation normalization also occurs on resize when disabled and cleanup removes media listeners',()=>fixture(({root,landscape,win,enable,controller})=>{
+  root.dataset.triggerDock='top';enable(false);landscape.matches=true;win.emit('resize');
+  assert.equal(root.dataset.triggerDock,'bottom');
+  controller.destroy();root.dataset.triggerDock='top';landscape.emit('change');
+  assert.equal(root.dataset.triggerDock,'top','destroyed controller no longer receives orientation changes');
+}));
+
+test('interrupted off-axis glide settles in two cardinal segments with one coordinate changing at a time',()=>{
+  for(const key of ['ArrowLeft','ArrowUp'])fixture(({button,presentNextRect,animations})=>{
+    presentNextRect({left:300,top:400});button.emit('keydown',{key});
+    assert.equal(animations.length,1);
+    const frames=animations[0].frames;
+    assert.equal(frames.length,3);
+    const coordinates=frames.map(frame=>frame.transform.match(/translate3d\(([-\d.]+)px,([-\d.]+)px,0\)/).slice(1).map(Number));
+    assert.deepEqual(coordinates[0],[300,400]);
+    assert.deepEqual(coordinates[2],key==='ArrowLeft'?[18,627]:[426,350.5]);
+    for(let index=1;index<coordinates.length;index++){
+      const before=coordinates[index-1],after=coordinates[index];
+      assert.equal(Number(before[0]!==after[0])+Number(before[1]!==after[1]),1,'each animation segment is cardinal');
+    }
+    assert.deepEqual(coordinates[1],key==='ArrowLeft'?[18,400]:[300,350.5]);
+  });
+});
+
+test('ordinary single-axis glides use no two-segment animation and reduced motion skips the fallback',()=>{
+  fixture(({button,animations})=>{button.emit('keydown',{key:'ArrowLeft'});button.emit('keydown',{key:'ArrowUp'});assert.equal(animations.length,0);});
+  fixture(({button,presentNextRect,animations})=>{
+    presentNextRect({left:300,top:400});button.emit('keydown',{key:'ArrowLeft'});
+    assert.equal(animations.length,0);assert.equal(button.getBoundingClientRect().left,18);assert.equal(button.getBoundingClientRect().top,627);
+  },{reduced:true});
+});
+
+test('new input and resizing cancel an outstanding cardinal settling animation',()=>{
+  for(const viaResize of [false,true])fixture(({button,win,presentNextRect,animations})=>{
+    presentNextRect({left:300,top:400});button.emit('keydown',{key:'ArrowLeft'});
+    const animation=animations[0];assert.equal(animation.canceled,false);
+    if(viaResize)win.emit('resize');else button.emit('pointerdown',{clientX:46});
+    assert.equal(animation.canceled,true);
+  });
+});
+
+test('switching to reduced motion cancels active settling and stale finish cannot affect a later glide',()=>fixture(({button,root,reduced,presentNextRect,animations,controller,styles})=>{
+  presentNextRect({left:300,top:400});button.emit('keydown',{key:'ArrowLeft'});
+  const oldAnimation=animations[0];assert.equal(oldAnimation.canceled,false);
+  reduced.matches=true;reduced.emit('change');
+  assert.equal(oldAnimation.canceled,true);assert.equal(styles.size,0);
+  assert.equal(root.dataset.triggerSide,'left');assert.equal(root.dataset.triggerDock,'bottom');
+  assert.equal(button.getBoundingClientRect().left,18);assert.equal(button.getBoundingClientRect().top,627);
+  reduced.matches=false;reduced.emit('change');
+  presentNextRect({left:200,top:400});button.emit('keydown',{key:'ArrowRight'});
+  const newAnimation=animations[1];assert.equal(newAnimation.canceled,false);
+  oldAnimation.onfinish?.();
+  controller.settle();
+  assert.equal(newAnimation.canceled,true,'stale completion must not discard ownership of the active glide');
+  assert.equal(button.getBoundingClientRect().left,426);assert.equal(button.getBoundingClientRect().top,627);
+}));
+
+test('destroy removes reduced-motion preference handling as well as orientation handling',()=>fixture(({controller,reduced,styles})=>{
+  controller.destroy();styles.set('--trigger-x','123px');
+  reduced.matches=true;reduced.emit('change');
+  assert.equal(styles.get('--trigger-x'),'123px','a destroyed helper must not mutate later styles');
 }));
 
 

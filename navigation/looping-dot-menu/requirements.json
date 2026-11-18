@@ -19,7 +19,10 @@
     "Keep the menu opposite the current trigger and vertically aligned with it at all four docks.",
     "Extend open-menu vertical scroll input from its far outer border through the outlined trigger, including the intervening blank area.",
     "Also allow top-left and top-right dot/menu positions.",
-    "Correct the new More links touch-scrolling regression."
+    "Correct the new More links touch-scrolling regression.",
+    "Portrait dot movement must be exclusively up/down/left/right, without diagonal dragging or flicking.",
+    "Landscape rotated phone must offer bottom-left/right only, with no middle/top option.",
+    "Publish both changes to the existing GitHub Pages test."
   ],
   "geometry": {
     "row_and_hit_area_px": 56,
@@ -27,22 +30,22 @@
     "dot_border_box_px": 12,
     "open_stroke_px": 1,
     "neighbor_opacity": 0.28,
-    "anchor": "Bottom geometry retained: center84px above max(18px,safe-area-bottom). Middle center50% of dynamic visible viewport height. Middle x5%/95%, clamped inside left/right safe areas with28px half-target margin; at710x1536 the right center is674.5,768 (approximately675,767 reference). Panel and transparent scroll band remain three56px rows centered on the trigger. Top center=max(18px,safe-area-top)+84px, leaving a complete row above and below. Top and bottom x geometry is mirrored; middle5%/95% positions retained."
+    "anchor": "All portrait levels use identical left/right5%/95% safe-area-clamped columns so vertical settling stays straight. Middle center=50% dynamic viewport height, top center=max(18px,safe-top)+84px, bottom center=height-max(18px,safe-bottom)-84px. Landscape uses only the bottom center. Menu and trigger remain level with three complete rows."
   },
   "reference": "Original menu source preserved at ../numbered-left-menu/source-extract.json; supplied thumb-radius PDF used for reach and minimum target guidance. This loop interaction is newly implemented from user instructions, not claimed extracted from the original site.",
   "scope": "Mobile behavior replaced; desktop original vertical source layout preserved. No photographs, caption effects, blog/article transitions or unrelated demos on this testing page.",
   "external_links": "Original Home/CDG/Junya Watanabe/Noir/Stores/Subscribe/Recruitment source destinations preserved. Project-specific routes not supplied.",
-  "validation_limits": "68 tests passed; implicit touch capture reproduced as a deterministic browser-event regression, failing before fix and passing after. Local mouse browser top-dock geometry and scrolling checked. Physical iOS/Android touch remains for human testing.",
+  "validation_limits": "87 deterministic tests passed, including touch capture transfer, one-axis preview/release, landscape orientation cleanup and cardinal interrupted-settle keyframes. Local mouse browser portrait/landscape behavior checked; physical phone rotation/touch remains untested.",
   "responsive_query": "(max-width:767px), (hover:none) and (pointer:coarse) and (max-height:600px)",
   "responsive_policy": "Keep the existing767px width rule, plus touch-first (primary coarse pointer and no hover) screens up to600px tall. Do not classify wide fine-pointer desktops as mobile just because their window is short.",
   "handedness": {
     "initial_side": "right",
     "release": "Commit opposite edge once peak inward horizontal travel reaches12 CSSpx. No midpoint or velocity requirement. Pointerup is sampled so a fast early release is not lost.",
-    "closed_motion": "Direct two-axis dragging; up/down24px advances one level through bottom/middle/top (bounded at ends), inward12px switches side. Each axis records peak intent and360ms easing settles to dock. Diagonal gestures may change side and level.",
+    "closed_motion": "Lock dominant axis at6px travel (ties horizontal); maintain lock through curves and release. Horizontal axis changes side only after12px inward peak; vertical axis changes level only after24px peak. Landscape vertical docking is disabled. This current rule supersedes earlier independent two-axis diagonal docking.",
     "open": "Docking disabled; the shared menu controller handles vertical drags over the outlined trigger, gap and links. Stationary trigger tap closes. Horizontal open drags do not dock or accidentally close.",
     "panel": "Opposite side; mirrored labels face inward; Home remains level with trigger",
     "tap_areas": "56px trigger and rows retained;12px dot unchanged",
-    "keyboard": "ArrowLeft/Right changes side and ArrowUp/Down advances one vertical level while closed; Enter/Space toggles. Open arrows scroll links.",
+    "keyboard": "Portrait Left/Right selects side and Up/Down steps height; closed landscape Up/Down cannot change height. Open menu arrows continue to scroll links.",
     "persistence": "Current page only",
     "safe_area": "CSS/env geometry measured for all four endpoints; entire56px target stays on-screen, so very narrow/notched viewports can shift the nominal5%/95% center inward.",
     "cancel": "Real pointer cancellation/pinch abort restores original edge; a deliberate inward flick remains committed through a curved path or pause."
@@ -64,5 +67,12 @@
     "ownership": "One root pointer/wheel controller, no duplicate delta application; trigger helper delegates while open.",
     "containment": "Vertical pointer/wheel scrolling stays within infinite link menu; ctrl-wheel pinch remains native."
   },
-  "touch_capture": "Touch implicitly captures on the touched element. Transfer to the shared root must ignore bubbled loss from the old child; only actual root capture loss cancels scrolling. Closed trigger similarly ignores loss from its inner dot when it takes capture."
+  "touch_capture": "Touch implicitly captures on the touched element. Transfer to the shared root must ignore bubbled loss from the old child; only actual root capture loss cancels scrolling. Closed trigger similarly ignores loss from its inner dot when it takes capture.",
+  "orientation": {
+    "query": "(orientation:landscape)",
+    "landscape": "Force bottom on current side at initialization and rotation; bypass stale drag-Y inline override in CSS, cancel active gesture/settle, release capture, suppress trailing click.",
+    "portrait": "Six docks available again; retain current bottom/side when returning from landscape.",
+    "desktop": "Existing mobile responsive test preserved; full desktop fixed links unchanged."
+  },
+  "cardinal_settling": "Normal releases ease along a single axis. If an interrupted prior glide leaves both coordinates off the new dock, native Web Animations applies two consecutive one-axis segments. New gestures/resize/rotation/destroy cancel stale work. Reduced motion (including live preference change) skips or ends animation. Without Web Animations, this uncommon two-coordinate correction commits immediately."
 }
