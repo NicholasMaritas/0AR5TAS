@@ -11,7 +11,7 @@
       500,
       797
     ],
-    "initial": "Default poster decoded; no visible caption; seven backgrounds, seven captions and seven One\u2013Seven links; zero central ticker elements.",
+    "initial": "Default poster decoded; no visible caption; seven backgrounds, seven captions and seven One–Seven links; zero central ticker elements.",
     "selection_results": [
       {
         "label": "One",
@@ -25,7 +25,7 @@
         "label": "Two",
         "id": "1595398676148",
         "title": [
-          "SNEEZE N\u00b034 HOLIDAY 2017 (2018 POSTER CALENDAR)"
+          "SNEEZE N°34 HOLIDAY 2017 (2018 POSTER CALENDAR)"
         ],
         "thumbs": 5
       },
@@ -76,7 +76,7 @@
       "One native background video reachedreadyState4/pausedfalse and filled1352x797 viewport.",
       "Switching away paused prior video; only one caption remained visible.",
       "Seven thumbnail opened matching large image and closed normally.",
-      "Mobile open showed One\u2013Seven; ArrowUp centeredTwo without changing active media; Enter selectedTwo.",
+      "Mobile open showed One–Seven; ArrowUp centeredTwo without changing active media; Enter selectedTwo.",
       "Mobile drag changed loop position while retainingTwo media, menuopen and body scroll0.",
       "Closed ArrowLeft switched trigger toleft without changing selected media."
     ],
@@ -85,5 +85,49 @@
       "Black dots/text retain the existing menu appearance; contrast varies with source backgrounds."
     ]
   },
-  "publication": "pending"
+  "publication": {
+    "status": "verified",
+    "runtime_commit": "0c0e968ee60ec17e384b3b3a1b12f2244f9759f3",
+    "workflow": {
+      "id": 44387516905,
+      "status": "completed",
+      "conclusion": "success",
+      "head": "0c0e968ee60ec17e384b3b3a1b12f2244f9759f3"
+    },
+    "main_readback": "All8 changed/new files matched committed contents.",
+    "live_runtime": "index.html, testing.js, testing.css and navigation.html returned200 and exactly matched committed bytes; root redirect points to testing/.",
+    "public_browser": {
+      "viewport": [
+        500,
+        797
+      ],
+      "initial": {
+        "default_background_active": true,
+        "caption_count": 0,
+        "links": 7,
+        "tickers": 0
+      },
+      "labels": [
+        "One",
+        "Two",
+        "Three",
+        "Four",
+        "Five",
+        "Six",
+        "Seven"
+      ],
+      "keyboard_two": {
+        "selected": "1595398676148",
+        "background": "1595398676148",
+        "thumbs": 5,
+        "title": "SNEEZE N°34 HOLIDAY 2017 (2018 POSTER CALENDAR)"
+      },
+      "keyboard_home_one": {
+        "selected": "1595381799430",
+        "video_ready_state": 4,
+        "video_paused": false
+      },
+      "screenshot": "/workspace/shared/testing-mobile.jpg"
+    }
+  }
 }
