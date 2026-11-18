@@ -7,8 +7,8 @@
     "index.html": "Active standalone Pages test.",
     "testing.js": "Manual composition/mount and seven ID-linked dot choices.",
     "testing.css": "Shared page reset and menu layering.",
-    "navigation.html": "Seven One–Seven links using the preserved loop structure.",
-    "validation.json": "Integration checks and publication evidence.",
+    "navigation.html": "Seven links: One–Six and Music.",
+    "validation.json": "Historical Task038 archive/dot integration checks.",
     "music-session.js": "Lazy one-instance catalogue lifecycle and playback persistence across section changes.",
     "music-session.test.mjs": "Seven load/race/lifecycle tests.",
     "music-validation.json": "Music integration, audio persistence and publication checks."
@@ -87,7 +87,7 @@
   "initial_state": "Original separate sneeze22-bg default background; no selected option, thumbnails or caption. Reload restores this state.",
   "behavior": [
     "Only7 options exist in the mounted interface; central ticker is removed in an inert template before insertion. Other14 captions/backgrounds are pruned.",
-    "Dot activation changes associated background image/video, thumbnails and text through the archive controller.",
+    "Dot activation changes the matching archive background; One–Six show archive thumbnails/text and Music shows the radio catalogue.",
     "Mobile labels One–Six and Music; existing loop/docking and desktop fixed dots retained.",
     "Loop scrolling only positions choices. Selection happens on click/tap/Enter, with drag-click suppression intact.",
     "Caption thumbnail zoom is preserved. Hidden videos pause on selection change.",
@@ -98,7 +98,9 @@
   ],
   "integration": "Load index.html as an isolated document. testing.js imports the existing controllers, fetches archive markup and navigation.html, and mounts once. mountTesting(host,archiveMarkup,navigationMarkup) returns destroy(). No external JavaScript dependencies added.",
   "publication": {
-    "status": "updated Music implementation; deployment verification pending",
-    "active_test": "Testing"
+    "status": "published and verified",
+    "active_test": "Testing",
+    "runtime_commit": "90734b440f949f96f87231560e6c8fac130f874a",
+    "pages_workflow": 44395031344
   }
 }

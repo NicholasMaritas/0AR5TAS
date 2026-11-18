@@ -44,5 +44,37 @@
     "Resized desktop browser; physical phone/background OS behavior not tested.",
     "Cross-dot persistence is within the current document; full reload/navigation unloads audio."
   ],
-  "publication": "pending"
+  "publication": {
+    "status": "verified",
+    "runtime_commit": "90734b440f949f96f87231560e6c8fac130f874a",
+    "workflow": {
+      "id": 44395031344,
+      "head": "90734b440f949f96f87231560e6c8fac130f874a",
+      "status": "completed",
+      "conclusion": "success"
+    },
+    "readback": "All11 changed/new files matched main.",
+    "live_runtime": "Testing index/module/styles/navigation, music-session.js and shared radio module exactly matched committed bytes.",
+    "public_browser": {
+      "viewport": [
+        1352,
+        797
+      ],
+      "background": "1595537714238",
+      "cards": 28,
+      "player_bars": 0,
+      "audio_nodes": 1,
+      "source": "https://d11rox2ve9bkk5.cloudfront.net/Kenny%20Hoopla.mp3",
+      "times": {
+        "Music": 0.337254,
+        "One": 0.782941,
+        "Music_return": 1.269105
+      },
+      "paused_during_switches": false,
+      "return_pause_icon": "whitePauseIcon-OU3QAV73.svg",
+      "return_pause_display": "flex",
+      "proof": "/workspace/shared/testing-music.jpg",
+      "test_audio_paused_after_proof": true
+    }
+  }
 }
