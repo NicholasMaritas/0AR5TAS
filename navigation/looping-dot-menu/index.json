@@ -27,9 +27,9 @@
   "validation": {
     "automated": "87 tests passed:60 trigger/cardinal/orientation,14 menu input and13 motion. JavaScript syntax passed.",
     "local_browser": "500x757:12px closed/open dot;1px hollow border;Home/trigger center655px;CDG599px andRecruitment711px at0.28opacity. Mouse drag and wheel both directions exercised without navigation; body scroll remains0; integer settled opacity1 observed. Additional333x505 CSS viewport checked using browser zoom: aligned centers402.667px, full labels fit and no horizontal overflow. At1180px desktop all seven original links remain tabbable with no transforms; resizing to500px closes menu and restores focus to trigger. A full seven-key cycle returns toHome with opacity1 and focus.",
-    "public_pages": "Task030 publication pending.",
+    "public_pages": "Workflow44322369566 successfully deployedc8748b3b2984a9c1b9633e6aabe539d9865b8f40. All four changed runtime URLs returned200 and matched committed bytes; active menu.css/menu.js?v=7 and trigger-slide.js?v=5. Public710x757 portrait: horizontal-dominant diagonal changed only side; vertical-dominant diagonal changed only level. Resizing open middle-left to710x374 landscape preserved open menu and normalizedbottom. Outlined trigger drag scrolledHome->CDG without body scrolling. Closed vertical flick/Up key stayedbottom; horizontal flick switchedright. ReopenedHome aligned with bottom-right outlined trigger; screenshot saved. Physical phone testing not performed.",
     "physical_touch": "not tested",
-    "github_readback": "All10 Task029 changed/new files read back identically.",
+    "github_readback": "All10 Task030 changed/new files read back identically.",
     "landscape_correction": {
       "status": "12 media-query scenarios passed; JavaScript syntax and three responsive-query copies checked",
       "query": "(max-width:767px), (hover:none) and (pointer:coarse) and (max-height:600px)",
@@ -44,7 +44,9 @@
     "cardinal_landscape": "Local718x757/710x757 portrait diagonal-input tests changed only side or only level; interrupted perpendicular gestures settled without console errors. Landscape710x374 normalized open middle-left to bottom-left, retained menu scroll; vertical closed flick/key stayed bottom, horizontal side switch worked. Physical phone rotation/touch untested."
   },
   "deployment": {
-    "status": "pending"
+    "status": "success",
+    "commit": "c8748b3b2984a9c1b9633e6aabe539d9865b8f40",
+    "workflow_run": 44322369566
   },
   "test_url_note": "Current code uses portrait cardinal movement and landscape bottom-left/right only."
 }

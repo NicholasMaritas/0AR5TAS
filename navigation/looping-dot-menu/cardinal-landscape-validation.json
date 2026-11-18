@@ -33,10 +33,14 @@
   "verification": {
     "automated": "87 passed (60 trigger,14 menu input,13 motion); JS syntax passed.",
     "local_browser": "Portrait718x757/710x757: dominant diagonal input moves only horizontally or vertically, interrupted perpendicular gesture settled left/middle without console errors. Landscape710x374: open middle-left normalized bottom-left, panel/trigger level, outlined trigger drag moved links, vertical closed drag/key did not change dock, horizontal switch worked, body scroll0.",
-    "physical_phone": "not tested"
+    "physical_phone": "not tested",
+    "github_readback": "All10 Task030 changed/new files read back identically.",
+    "public_pages": "Workflow44322369566 successfully deployedc8748b3b2984a9c1b9633e6aabe539d9865b8f40. All four changed runtime URLs returned200 and matched committed bytes; active menu.css/menu.js?v=7 and trigger-slide.js?v=5. Public710x757 portrait: horizontal-dominant diagonal changed only side; vertical-dominant diagonal changed only level. Resizing open middle-left to710x374 landscape preserved open menu and normalizedbottom. Outlined trigger drag scrolledHome->CDG without body scrolling. Closed vertical flick/Up key stayedbottom; horizontal flick switchedright. ReopenedHome aligned with bottom-right outlined trigger; screenshot saved. Physical phone testing not performed."
   },
   "deployment": {
-    "status": "pending"
+    "status": "success",
+    "commit": "c8748b3b2984a9c1b9633e6aabe539d9865b8f40",
+    "workflow_run": 44322369566
   },
   "test_url": "https://nicholasmaritas.github.io/0AR5TAS/navigation/looping-dot-menu/"
 }
