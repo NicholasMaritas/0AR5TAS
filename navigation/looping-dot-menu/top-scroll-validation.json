@@ -27,11 +27,14 @@
     "trigger": "43/43 trigger tests passed, including allsix docks, nested-dot transfer, top bounds, cancellation/resize and keyboard steps.",
     "motion": "13/13 unchanged motion tests passed.",
     "local_browser": "718x757: top-right center672,102 and top-left46,102; panel top18,height168; centered Home and outlined trigger level. Dot and gap drag moved center toCDG without closing/docking/body scrolling.",
-    "physical_touch": "not tested"
+    "physical_touch": "not tested",
+    "public_pages": "Workflow44319151867 deployed45d6c2b42450e25f5a9488a77a7514bb36da91f2 successfully; all four changed live runtime URLs returned200 and matched committed bytes. Public718x757 browser verified bottom->middle->top flicks, top-right/left alignment and mirroring, scrolling from outlined dot/gap, wheel over outlined trigger, normal tap close and reopeningHome. Body scroll remained0. Physical-device touch untested.",
+    "github_readback": "All10 Task029 changed/new files read back identically."
   },
   "deployment": {
-    "status": "pending"
+    "status": "success",
+    "commit": "45d6c2b42450e25f5a9488a77a7514bb36da91f2",
+    "workflow_run": 44319151867
   },
   "test_url": "https://nicholasmaritas.github.io/0AR5TAS/navigation/looping-dot-menu/"
 }
-
