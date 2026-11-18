@@ -20,5 +20,5 @@
   "reference": "Original menu source preserved at ../numbered-left-menu/source-extract.json; supplied thumb-radius PDF used for reach and minimum target guidance. This loop interaction is newly implemented from user instructions, not claimed extracted from the original site.",
   "scope": "Mobile behavior replaced; desktop original vertical source layout preserved. No photographs, caption effects, blog/article transitions or unrelated demos on this testing page.",
   "external_links": "Original Home/CDG/Junya Watanabe/Noir/Stores/Subscribe/Recruitment source destinations preserved. Project-specific routes not supplied.",
-  "validation_limits": "Local browser checked; public deployment pending; physical iOS/Android touch and device safe-area feel require human testing."
+  "validation_limits": "Browser verified at500x757 and333x505 CSS viewports; desktop1180px and breakpoint focus behavior checked. Public deployment and active-file byte checks passed. Physical iOS/Android touch and device safe-area feel remain for human testing."
 }

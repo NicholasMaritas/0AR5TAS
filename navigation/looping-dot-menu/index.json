@@ -17,11 +17,14 @@
   "accessibility": "Native links/button/region; only centered link in tab order; ArrowUp/Down cycle following visual direction; Home/End; Enter; Escape returns focus to trigger. Resizing moves focus out of newly hidden content. Reduced-motion avoids coast and alignment animation. Pinch zoom allowed in touch region.",
   "validation": {
     "automated": "13 pure motion tests passed; JS syntax passed.",
-    "local_browser": "500x757:12px closed/open dot;1px hollow border;Home/trigger center655px;CDG599px andRecruitment711px at0.28opacity. Mouse drag and wheel both directions exercised without navigation; body scroll remains0; integer settled opacity1 observed.",
-    "public_pages": "pending",
-    "physical_touch": "not tested"
+    "local_browser": "500x757:12px closed/open dot;1px hollow border;Home/trigger center655px;CDG599px andRecruitment711px at0.28opacity. Mouse drag and wheel both directions exercised without navigation; body scroll remains0; integer settled opacity1 observed. Additional333x505 CSS viewport checked using browser zoom: aligned centers402.667px, full labels fit and no horizontal overflow. At1180px desktop all seven original links remain tabbable with no transforms; resizing to500px closes menu and restores focus to trigger. A full seven-key cycle returns toHome with opacity1 and focus.",
+    "public_pages": "Passed at500x757: only trigger while closed; open Home and12px/1px hollow trigger both center655px;CDG above/Recruitment below both opacity0.28; long wheel movement both directions remains contained, settles at opacity1, keeps seven real links; reopening resets Home. Old black-dots URL redirects to new canonical URL. All four active files returned200 and matched repository bytes.",
+    "physical_touch": "not tested",
+    "github_readback": "All12 original files and follow-up startup HTML read back identically."
   },
   "deployment": {
-    "status": "pending"
+    "status": "success",
+    "commit": "d54ca6aab91ed39828019e88ebe71765a4e8aebc",
+    "workflow_run": 44216901183
   }
 }
