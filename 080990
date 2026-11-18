@@ -396,3 +396,5 @@ The agent handling a task must update this file after each task to preserve cont
 
 ### Task 036 — Activate radio catalogue + player Pages test
 - 2026-11-18. User explicitly requested replacing current Pages test with radio catalogue + player. Added standalone index.html mounting the archived native player and28-track catalogue, and replaced root redirect with media/radio-catalogue-player/. Prior feature library retained. Publication verification pending.
+
+- COMPLETED verification — Task036: commit131b4cd3dd4a63a5bde0f220a5f7979b77035e1d read back identically for all3 changed files. Public matching radio test index returned200 with expected mount and title; module, styles and28-track data returned200. Root redirect verified with fresh request. Pages workflow44377156801 still finalizing at verification; live runtime is available. Test: https://nicholasmaritas.github.io/0AR5TAS/media/radio-catalogue-player/ .
