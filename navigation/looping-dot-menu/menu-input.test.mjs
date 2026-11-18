@@ -10,7 +10,7 @@ else globalThis.document = initialDocument;
 function fixture(run) {
   const globals = ['window','document','matchMedia','getComputedStyle','requestAnimationFrame','cancelAnimationFrame','performance'];
   const prior = new Map(globals.map(name=>[name,Object.getOwnPropertyDescriptor(globalThis,name)]));
-  const captures = new Map(), frames = new Map();
+  const captures = new Map(), frames = new Map(), pendingCaptureLoss = [];
   let now=0, sequence=0;
   class Target {
     constructor(parent=null) {this.parent=parent;this.listeners=new Map();this.dataset={};this.attrs=new Map();this.properties=new Map();this.style={setProperty:(k,v)=>this.properties.set(k,v),removeProperty:k=>this.properties.delete(k)};}
@@ -21,7 +21,13 @@ function fixture(run) {
     toggleAttribute(name,value) {if(value)this.attrs.set(name,'');else this.attrs.delete(name);}
     contains(target) {for(let node=target;node;node=node.parent)if(node===this)return true;return false;}
     focus() {doc.activeElement=this;}
-    setPointerCapture(id) {captures.set(id,this);}
+    setPointerCapture(id) {
+      const previous=captures.get(id);captures.set(id,this);
+      // Browsers dispatch lostpointercapture on the old owner when a pending
+      // capture transfer is processed before the next pointer event. It bubbles
+      // from that child even though the ancestor is now the capture owner.
+      if(previous&&previous!==this)pendingCaptureLoss.push({target:previous,id});
+    }
     hasPointerCapture(id) {return captures.get(id)===this;}
     releasePointerCapture(id) {if(this.hasPointerCapture(id)){captures.delete(id);emit(this,'lostpointercapture',{pointerId:id});}}
     getBoundingClientRect() {return {left:parseFloat(this.properties.get('--trigger-x')??(root.dataset.triggerSide==='left'?18:426)),top:parseFloat(this.properties.get('--trigger-y')??(root.dataset.triggerDock==='middle'?372:670)),width:56,height:56};}
@@ -36,9 +42,11 @@ function fixture(run) {
   doc.querySelector=()=>null;doc.hidden=false;doc.activeElement=null;
   const mobile=new Target(),reduced=new Target();mobile.matches=true;reduced.matches=false;
   function emit(target,type,properties={}) {
+    if(type.startsWith('pointer')&&type!=='pointerdown')flushCaptureChanges();
     const event={pointerId:1,isPrimary:true,button:0,clientX:454,clientY:670,timeStamp:now,detail:1,key:'',deltaY:0,deltaMode:0,ctrlKey:false,
       prevented:false,stopped:false,immediate:false,
       preventDefault(){this.prevented=true},stopPropagation(){this.stopped=true},stopImmediatePropagation(){this.stopped=true;this.immediate=true},...properties};
+    if(type==='pointerdown'&&event.pointerType==='touch'&&!captures.has(event.pointerId))captures.set(event.pointerId,target);
     if(type.startsWith('pointer')&&type!=='pointerdown'&&captures.has(event.pointerId))target=captures.get(event.pointerId);
     event.target=target;
     const path=[];for(let node=target;node;node=node.parent)path.push(node);
@@ -47,12 +55,15 @@ function fixture(run) {
     for(const node of path){visit(node,false);if(event.stopped)break;}
     return event;
   }
+  function flushCaptureChanges() {
+    while(pendingCaptureLoss.length){const {target,id}=pendingCaptureLoss.shift();emit(target,'lostpointercapture',{pointerId:id,pointerType:'touch'});}
+  }
   const values={window:win,document:doc,matchMedia:query=>query.includes('prefers-reduced')?reduced:mobile,
     getComputedStyle:()=>({getPropertyValue:()=>'56px'}),requestAnimationFrame:fn=>{frames.set(++sequence,fn);return sequence;},cancelAnimationFrame:id=>frames.delete(id),performance:{now:()=>now}};
   for(const [name,value]of Object.entries(values))Object.defineProperty(globalThis,name,{value,configurable:true,writable:true});
   const controller=createLoopMenu(root);
   function advance(count=180){for(let step=0;step<count&&frames.size;step++){now+=16;const callbacks=[...frames.values()];frames.clear();callbacks.forEach(fn=>fn(now));}}
-  const env={root,button,panel,gap,links,win,mobile,reduced,captures,frames,emit,advance,controller,
+  const env={root,button,panel,gap,links,win,mobile,reduced,captures,frames,emit,advance,flushCaptureChanges,controller,
     open(){emit(button,'click');assert.equal(root.dataset.open,'true');},
     drag(target,{from=600,to=656,id=1}={}){emit(target,'pointerdown',{pointerId:id,clientY:from,timeStamp:0});emit(target,'pointermove',{pointerId:id,clientY:to,timeStamp:80});return emit(target,'pointerup',{pointerId:id,clientY:to,timeStamp:90});}};
   try {run(env);} finally {controller.destroy();for(const [name,descriptor]of prior){if(descriptor)Object.defineProperty(globalThis,name,descriptor);else delete globalThis[name];}}
@@ -80,6 +91,37 @@ test('fast final pointerup travel scrolls menu and suppresses trigger activation
   assert.equal(env.links[0].style.transform,'translate3d(0,56px,0)');
   assert.equal(env.emit(env.button,'click').prevented,true);
   assert.equal(env.root.dataset.open,'true');
+}));
+
+test('touch implicit capture transfers from trigger, link and gap without canceling menu scrolling',()=>{
+  for(const origin of ['button','link','gap'])fixture(env=>{
+    env.open();const target=origin==='link'?env.links[0]:env[origin];
+    const touch={pointerId:1,pointerType:'touch',clientY:600,timeStamp:0};
+    env.emit(target,'pointerdown',touch);
+    assert.equal(env.captures.get(1),target,'touch begins with implicit child capture');
+    env.emit(target,'pointermove',{...touch,clientY:628,timeStamp:20});
+    assert.equal(env.captures.get(1),env.root,'menu explicitly takes capture');
+    env.flushCaptureChanges();
+    assert.equal(env.captures.get(1),env.root,'bubbling loss from old child must not cancel new owner');
+    env.emit(target,'pointermove',{...touch,clientY:656,timeStamp:40});
+    assert.equal(env.links[0].style.transform,'translate3d(0,56px,0)','second touch sample continues the same scroll');
+    env.emit(target,'pointerup',{...touch,clientY:656,timeStamp:50});
+    assert.equal(env.captures.size,0);
+    assert.equal(env.emit(target,'click').prevented,true);assert.equal(env.root.dataset.open,'true');
+  });
+});
+
+test('genuine capture loss on the shared root still cancels its touch gesture safely',()=>fixture(env=>{
+  env.open();const touch={pointerId:1,pointerType:'touch',clientY:600,timeStamp:0};
+  env.emit(env.root,'pointerdown',touch);
+  env.emit(env.root,'pointermove',{...touch,clientY:628,timeStamp:20});
+  assert.equal(env.captures.get(1),env.root);
+  env.emit(env.root,'lostpointercapture',{pointerId:1,pointerType:'touch'});
+  assert.equal(env.captures.size,0);
+  const stopped=env.links[0].style.transform;
+  env.emit(env.root,'pointermove',{...touch,clientY:656,timeStamp:40});
+  assert.equal(env.links[0].style.transform,stopped,'cancelled pointer cannot continue moving menu');
+  assert.equal(env.emit(env.button,'click').prevented,true);assert.equal(env.root.dataset.open,'true');
 }));
 
 test('unrelated pointer cancellation leaves primary open scroll and capture intact',()=>fixture(env=>{

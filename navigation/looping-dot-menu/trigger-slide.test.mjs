@@ -11,7 +11,7 @@ function fixture(run) {
     }
     removeEventListener(name, handler) {this.listeners.set(name,(this.listeners.get(name)||[]).filter(x=>x.handler!==handler));}
     emit(name, properties={}) {
-      const event={pointerId:1,isPrimary:true,button:0,clientX:454,clientY:655,timeStamp:0,detail:1,
+      const event={target:this,pointerId:1,isPrimary:true,button:0,clientX:454,clientY:655,timeStamp:0,detail:1,
         preventDefault(){this.prevented=true},stopImmediatePropagation(){this.stopped=true},...properties};
       for(const entry of [...(this.listeners.get(name)||[])].sort((a,b)=>Number(b.capture)-Number(a.capture))){
         entry.handler(event); if(event.stopped)break;
@@ -23,7 +23,7 @@ function fixture(run) {
   const styles=new Map(),capture=new Set();
   let enabled=true,open=false;
   button.style={setProperty:(k,v)=>styles.set(k,v),removeProperty:k=>styles.delete(k)};
-  const endpoints={left:18,right:426,bottom:627,middle:350};
+  const endpoints={left:18,right:426,bottom:627,middle:350.5,top:74};
   button.getBoundingClientRect=()=>({left:styles.has('--trigger-x')?parseFloat(styles.get('--trigger-x')):endpoints[root.dataset.triggerSide||'right'],top:styles.has('--trigger-y')?parseFloat(styles.get('--trigger-y')):endpoints[root.dataset.triggerDock||'bottom'],width:56,height:56});
   button.setPointerCapture=id=>capture.add(id);
   button.hasPointerCapture=id=>capture.has(id);
@@ -215,7 +215,9 @@ test('resize mid-drag suppresses the following pointerup click instead of openin
 test('vertical docking has a deliberate 24px toward-dock threshold',()=>{
   assert.equal(flickDock('bottom',23.99),'bottom');
   assert.equal(flickDock('bottom',24),'middle');
-  assert.equal(flickDock('middle',24),'bottom');
+  assert.equal(flickDock('middle',24),'top');
+  assert.equal(flickDock('middle',0,24),'bottom');
+  assert.equal(flickDock('top',0,24),'middle');
   assert.equal(flickDock('middle',-40),'middle');
 });
 
@@ -223,7 +225,7 @@ test('upward flick docks at the middle and downward flick returns to the bottom'
   button.emit('pointerdown',{clientX:454,clientY:655});
   button.emit('pointerup',{clientX:454,clientY:625,timeStamp:12});
   assert.equal(root.dataset.triggerSide,'right');assert.equal(root.dataset.triggerDock,'middle');
-  assert.equal(button.getBoundingClientRect().top,350);
+  assert.equal(button.getBoundingClientRect().top,350.5);
   button.emit('pointerdown',{clientX:454,clientY:378,timeStamp:100});
   button.emit('pointerup',{clientX:454,clientY:408,timeStamp:112});
   assert.equal(root.dataset.triggerSide,'right');assert.equal(root.dataset.triggerDock,'bottom');
@@ -233,9 +235,9 @@ test('upward flick docks at the middle and downward flick returns to the bottom'
 test('vertical travel away from the other dock never changes level',()=>fixture(({button,root})=>{
   button.emit('pointerdown',{clientY:655});button.emit('pointerup',{clientY:700,timeStamp:10});
   assert.equal(root.dataset.triggerDock,'bottom');
-  root.dataset.triggerDock='middle';
-  button.emit('pointerdown',{clientY:378,timeStamp:100});button.emit('pointerup',{clientY:300,timeStamp:110});
-  assert.equal(root.dataset.triggerDock,'middle');assert.equal(root.dataset.triggerSide,'right');
+  root.dataset.triggerDock='top';
+  button.emit('pointerdown',{clientY:102,timeStamp:100});button.emit('pointerup',{clientY:30,timeStamp:110});
+  assert.equal(root.dataset.triggerDock,'top');assert.equal(root.dataset.triggerSide,'right');
 }));
 
 test('a short vertical gesture below threshold suppresses a drag click but retains the dock',()=>fixture(({button,root})=>{
@@ -253,12 +255,12 @@ test('a diagonal flick can change edge and dock independently in both directions
   assert.equal(root.dataset.triggerSide,'right');assert.equal(root.dataset.triggerDock,'bottom');
 }));
 
-test('two-axis dragging follows the finger within the measured four dock endpoints',()=>fixture(({button,root})=>{
+test('two-axis dragging follows the finger within the measured six dock endpoints',()=>fixture(({button,root})=>{
   button.emit('pointerdown',{clientX:454,clientY:655});
   button.emit('pointermove',{clientX:80,clientY:400,timeStamp:20});
   assert.equal(button.getBoundingClientRect().left,52);assert.equal(button.getBoundingClientRect().top,372);
   button.emit('pointermove',{clientX:-200,clientY:-200,timeStamp:30});
-  assert.equal(button.getBoundingClientRect().left,18);assert.equal(button.getBoundingClientRect().top,350);
+  assert.equal(button.getBoundingClientRect().left,18);assert.equal(button.getBoundingClientRect().top,74);
   button.emit('pointerup',{clientX:-200,clientY:-200,timeStamp:40});
   assert.equal(root.dataset.triggerSide,'left');assert.equal(root.dataset.triggerDock,'middle');
 }));
@@ -306,6 +308,133 @@ test('keyboard docking changes level independently from edge and delegates while
   assert.equal(root.dataset.triggerSide,'right');assert.equal(root.dataset.triggerDock,'bottom');
   open(false);enable(false);button.emit('keydown',{key:'ArrowUp'});
   assert.equal(root.dataset.triggerDock,'bottom');
+}));
+
+test('vertical docking advances one level per flick and stops at outer boundaries',()=>{
+  assert.equal(flickDock('bottom',1000,0),'middle','a large upward flick cannot skip the middle');
+  assert.equal(flickDock('middle',24,0),'top');
+  assert.equal(flickDock('top',1000,0),'top');
+  assert.equal(flickDock('top',0,1000),'middle','a large downward flick cannot skip the middle');
+  assert.equal(flickDock('middle',0,24),'bottom');
+  assert.equal(flickDock('bottom',0,1000),'bottom');
+  assert.equal(flickDock('top',0,23.99),'top');
+  assert.equal(flickDock('middle',23.99,23.99),'middle');
+});
+
+test('middle chooses the greater qualified peak with upward travel winning ties',()=>{
+  assert.equal(flickDock('middle',35,30),'top');
+  assert.equal(flickDock('middle',30,35),'bottom');
+  assert.equal(flickDock('middle',24,24),'top');
+  assert.equal(flickDock('middle',23.99,30),'bottom');
+  assert.equal(flickDock('middle',30,23.99),'top');
+  assert.equal(flickDock('bottom',24,1000),'middle','away travel cannot undo qualified upward intent');
+  assert.equal(flickDock('top',1000,24),'middle','away travel cannot undo qualified downward intent');
+});
+
+test('keyboard can reach all six measured resting docks without coupling side and level',()=>fixture(({button,root,endpoints})=>{
+  const seen=new Set();
+  for(const side of ['left','right']){
+    button.emit('keydown',{key:side==='left'?'ArrowLeft':'ArrowRight'});
+    button.emit('keydown',{key:'ArrowDown'});button.emit('keydown',{key:'ArrowDown'});
+    for(const dock of ['bottom','middle','top']){
+      if(dock!=='bottom')button.emit('keydown',{key:'ArrowUp'});
+      assert.equal(root.dataset.triggerSide,side);assert.equal(root.dataset.triggerDock,dock);
+      assert.equal(button.getBoundingClientRect().left,endpoints[side]);
+      assert.equal(button.getBoundingClientRect().top,endpoints[dock]);
+      seen.add(`${side}/${dock}`);
+    }
+  }
+  assert.equal(seen.size,6);
+  button.emit('keydown',{key:'ArrowUp'});assert.equal(root.dataset.triggerDock,'top');
+  button.emit('keydown',{key:'ArrowDown'});assert.equal(root.dataset.triggerDock,'middle');
+  button.emit('keydown',{key:'ArrowDown'});assert.equal(root.dataset.triggerDock,'bottom');
+  button.emit('keydown',{key:'ArrowDown'});assert.equal(root.dataset.triggerDock,'bottom');
+}));
+
+test('pointerup-only flick steps from middle to top then back through middle to bottom',()=>fixture(({button,root})=>{
+  root.dataset.triggerDock='middle';
+  button.emit('pointerdown',{clientY:378.5});button.emit('pointerup',{clientY:354.5,timeStamp:10});
+  assert.equal(root.dataset.triggerDock,'top');assert.equal(button.getBoundingClientRect().top,74);
+  button.emit('pointerdown',{clientY:102,timeStamp:100});button.emit('pointerup',{clientY:126,timeStamp:110});
+  assert.equal(root.dataset.triggerDock,'middle');
+  button.emit('pointerdown',{clientY:378.5,timeStamp:200});button.emit('pointerup',{clientY:402.5,timeStamp:210});
+  assert.equal(root.dataset.triggerDock,'bottom');assert.equal(root.dataset.triggerSide,'right');
+}));
+
+test('top clamp limits direct dragging but a long upward flick still advances only one dock',()=>fixture(({button,root})=>{
+  button.emit('pointerdown',{clientY:655});button.emit('pointermove',{clientY:-400,timeStamp:10});
+  assert.equal(button.getBoundingClientRect().top,74);
+  button.emit('pointerup',{clientY:-400,timeStamp:20});
+  assert.equal(root.dataset.triggerDock,'middle');
+  button.emit('pointerdown',{clientY:378.5,timeStamp:100});button.emit('pointerup',{clientY:0,timeStamp:110});
+  assert.equal(root.dataset.triggerDock,'top');
+  button.emit('pointerdown',{clientY:102,timeStamp:200});button.emit('pointerup',{clientY:-100,timeStamp:210});
+  assert.equal(root.dataset.triggerDock,'top');assert.equal(button.getBoundingClientRect().top,74);
+}));
+
+test('horizontal mirroring at top retains its level and supports both edges',()=>fixture(({button,root})=>{
+  root.dataset.triggerDock='top';
+  button.emit('pointerdown',{clientX:454,clientY:102});
+  button.emit('pointerup',{clientX:438,clientY:102,timeStamp:10});
+  assert.equal(root.dataset.triggerSide,'left');assert.equal(root.dataset.triggerDock,'top');
+  button.emit('pointerdown',{clientX:46,clientY:102,timeStamp:100});
+  button.emit('pointerup',{clientX:62,clientY:102,timeStamp:110});
+  assert.equal(root.dataset.triggerSide,'right');assert.equal(root.dataset.triggerDock,'top');
+}));
+
+test('middle curved gesture latches both peaks and honors the larger downward excursion',()=>fixture(({button,root})=>{
+  root.dataset.triggerDock='middle';
+  button.emit('pointerdown',{clientY:378.5});
+  button.emit('pointermove',{clientY:348.5,timeStamp:10});
+  button.emit('pointermove',{clientY:418.5,timeStamp:20});
+  button.emit('pointerup',{clientY:378.5,timeStamp:1000});
+  assert.equal(root.dataset.triggerDock,'bottom');
+}));
+
+test('canceling a diagonal departure from the top restores both original coordinates',()=>fixture(({button,root,capture,styles})=>{
+  root.dataset.triggerSide='left';root.dataset.triggerDock='top';
+  button.emit('pointerdown',{clientX:46,clientY:102});
+  button.emit('pointermove',{clientX:90,clientY:150,timeStamp:10});
+  button.emit('pointercancel');
+  assert.equal(root.dataset.triggerSide,'left');assert.equal(root.dataset.triggerDock,'top');
+  assert.equal(button.getBoundingClientRect().left,18);assert.equal(button.getBoundingClientRect().top,74);
+  assert.equal(capture.size,0);assert.equal(styles.size,0);assert.equal(button.emit('click').prevented,true);
+}));
+
+test('resizing a top-dock gesture remeasures the top safe-area position without changing its dock',()=>fixture(({button,root,endpoints,win,capture,styles})=>{
+  root.dataset.triggerDock='top';
+  button.emit('pointerdown',{clientY:102});button.emit('pointermove',{clientY:150,timeStamp:10});
+  endpoints.top=90;endpoints.middle=420;endpoints.bottom=750;endpoints.right=500;
+  win.emit('resize');
+  assert.equal(root.dataset.triggerDock,'top');assert.equal(root.dataset.triggerSide,'right');
+  assert.equal(button.getBoundingClientRect().left,500);assert.equal(button.getBoundingClientRect().top,90);
+  assert.equal(capture.size,0);assert.equal(styles.size,0);assert.equal(button.emit('click').prevented,true);
+}));
+
+test('foreign pointer events cannot cancel or overwrite the primary docking gesture',()=>fixture(({button,root,capture})=>{
+  button.emit('pointerdown',{pointerId:1,clientY:655});
+  button.emit('pointermove',{pointerId:1,clientY:625,timeStamp:10});
+  button.emit('pointerdown',{pointerId:2,isPrimary:false,clientY:655,timeStamp:12});
+  button.emit('pointercancel',{pointerId:2,timeStamp:14});
+  assert.equal(capture.has(1),true);
+  button.emit('pointerup',{pointerId:1,clientY:625,timeStamp:20});
+  assert.equal(root.dataset.triggerDock,'middle');assert.equal(capture.size,0);
+}));
+
+test('nested dot implicit-capture loss cannot cancel an active middle or top gesture',()=>fixture(({button,root,capture})=>{
+  const innerDot={className:'dot'};
+  for(const [startDock,startY,endY,expectedDock] of [
+    ['middle',378.5,348.5,'top'],['top',102,132,'middle']
+  ]){
+    root.dataset.triggerDock=startDock;root.dataset.triggerSide='right';
+    button.emit('pointerdown',{target:innerDot,clientY:startY});
+    assert.equal(capture.has(1),true);
+    button.emit('lostpointercapture',{target:innerDot});
+    assert.equal(capture.has(1),true,'child capture transfer must not release the button capture');
+    button.emit('pointerup',{clientY:endY,timeStamp:20});
+    assert.equal(root.dataset.triggerDock,expectedDock);
+    assert.equal(capture.size,0);assert.equal(button.emit('click').prevented,true);
+  }
 }));
 
 

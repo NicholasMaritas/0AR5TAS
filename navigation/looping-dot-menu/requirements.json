@@ -17,7 +17,9 @@
     "Retain bottom docks and add middle docks on either edge, matching the supplied Control Center icon midpoint reference.",
     "At middle dock target5%/95% viewport width and50% height, with safe-area and complete-target protection.",
     "Keep the menu opposite the current trigger and vertically aligned with it at all four docks.",
-    "Extend open-menu vertical scroll input from its far outer border through the outlined trigger, including the intervening blank area."
+    "Extend open-menu vertical scroll input from its far outer border through the outlined trigger, including the intervening blank area.",
+    "Also allow top-left and top-right dot/menu positions.",
+    "Correct the new More links touch-scrolling regression."
   ],
   "geometry": {
     "row_and_hit_area_px": 56,
@@ -25,22 +27,22 @@
     "dot_border_box_px": 12,
     "open_stroke_px": 1,
     "neighbor_opacity": 0.28,
-    "anchor": "Bottom geometry retained: center84px above max(18px,safe-area-bottom). Middle center50% of dynamic visible viewport height. Middle x5%/95%, clamped inside left/right safe areas with28px half-target margin; at710x1536 the right center is674.5,768 (approximately675,767 reference). Panel and transparent scroll band remain three56px rows centered on the trigger."
+    "anchor": "Bottom geometry retained: center84px above max(18px,safe-area-bottom). Middle center50% of dynamic visible viewport height. Middle x5%/95%, clamped inside left/right safe areas with28px half-target margin; at710x1536 the right center is674.5,768 (approximately675,767 reference). Panel and transparent scroll band remain three56px rows centered on the trigger. Top center=max(18px,safe-area-top)+84px, leaving a complete row above and below. Top and bottom x geometry is mirrored; middle5%/95% positions retained."
   },
   "reference": "Original menu source preserved at ../numbered-left-menu/source-extract.json; supplied thumb-radius PDF used for reach and minimum target guidance. This loop interaction is newly implemented from user instructions, not claimed extracted from the original site.",
   "scope": "Mobile behavior replaced; desktop original vertical source layout preserved. No photographs, caption effects, blog/article transitions or unrelated demos on this testing page.",
   "external_links": "Original Home/CDG/Junya Watanabe/Noir/Stores/Subscribe/Recruitment source destinations preserved. Project-specific routes not supplied.",
-  "validation_limits": "55 deterministic tests passed and local mouse/pointer browser geometry/scroll behavior checked. Physical iOS/Android touch feel and notch safe-area behavior remain for human testing.",
+  "validation_limits": "68 tests passed; implicit touch capture reproduced as a deterministic browser-event regression, failing before fix and passing after. Local mouse browser top-dock geometry and scrolling checked. Physical iOS/Android touch remains for human testing.",
   "responsive_query": "(max-width:767px), (hover:none) and (pointer:coarse) and (max-height:600px)",
   "responsive_policy": "Keep the existing767px width rule, plus touch-first (primary coarse pointer and no hover) screens up to600px tall. Do not classify wide fine-pointer desktops as mobile just because their window is short.",
   "handedness": {
     "initial_side": "right",
     "release": "Commit opposite edge once peak inward horizontal travel reaches12 CSSpx. No midpoint or velocity requirement. Pointerup is sampled so a fast early release is not lost.",
-    "closed_motion": "Direct two-axis dragging; up24px/down24px switches bottom/middle, inward12px switches side, with360ms easing to chosen dock. Both intent axes latch independently; no release-speed or straight-axis requirement.",
+    "closed_motion": "Direct two-axis dragging; up/down24px advances one level through bottom/middle/top (bounded at ends), inward12px switches side. Each axis records peak intent and360ms easing settles to dock. Diagonal gestures may change side and level.",
     "open": "Docking disabled; the shared menu controller handles vertical drags over the outlined trigger, gap and links. Stationary trigger tap closes. Horizontal open drags do not dock or accidentally close.",
     "panel": "Opposite side; mirrored labels face inward; Home remains level with trigger",
     "tap_areas": "56px trigger and rows retained;12px dot unchanged",
-    "keyboard": "ArrowLeft/Right side and ArrowUp/Down middle/bottom while closed; normal Enter/Space toggles.",
+    "keyboard": "ArrowLeft/Right changes side and ArrowUp/Down advances one vertical level while closed; Enter/Space toggles. Open arrows scroll links.",
     "persistence": "Current page only",
     "safe_area": "CSS/env geometry measured for all four endpoints; entire56px target stays on-screen, so very narrow/notched viewports can shift the nominal5%/95% center inward.",
     "cancel": "Real pointer cancellation/pinch abort restores original edge; a deliberate inward flick remains committed through a curved path or pause."
@@ -61,5 +63,6 @@
     "visuals": "Transparent, no new visible border/background. Active only while mobile menu is open.",
     "ownership": "One root pointer/wheel controller, no duplicate delta application; trigger helper delegates while open.",
     "containment": "Vertical pointer/wheel scrolling stays within infinite link menu; ctrl-wheel pinch remains native."
-  }
+  },
+  "touch_capture": "Touch implicitly captures on the touched element. Transfer to the shared root must ignore bubbled loss from the old child; only actual root capture loss cancels scrolling. Closed trigger similarly ignores loss from its inner dot when it takes capture."
 }

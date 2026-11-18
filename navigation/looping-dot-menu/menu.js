@@ -1,5 +1,5 @@
 import {LoopMotion, rowOffset, rowOpacity} from './motion.js?v=1';
-import {createSlidingTrigger} from './trigger-slide.js?v=3';
+import {createSlidingTrigger} from './trigger-slide.js?v=4';
 
 export function createLoopMenu(root) {
   const button = root.querySelector('.loop-toggle');
@@ -93,6 +93,12 @@ export function createLoopMenu(root) {
     suppressClick ||= pointer.moved;
     releaseCapture(); motion.velocity = 0; motion.release(); startFrames();
   }
+  function lostCapture(event) {
+    // Touch starts with implicit capture on the touched child. Taking control
+    // at the shared root releases that child and bubbles its loss through us.
+    // Only losing our own capture ends the scroll gesture.
+    if (event.target === root) cancel(event);
+  }
   function click(event) {
     if (suppressClick && event.detail !== 0) {
       event.preventDefault(); event.stopImmediatePropagation(); suppressClick = false;
@@ -160,7 +166,7 @@ export function createLoopMenu(root) {
   });
   const listeners = [
     [button,'click',toggle], [root,'pointerdown',down], [root,'pointermove',move,{passive:false}],
-    [root,'pointerup',up], [root,'pointercancel',cancel], [root,'lostpointercapture',cancel], [root,'click',click,true],
+    [root,'pointerup',up], [root,'pointercancel',cancel], [root,'lostpointercapture',lostCapture], [root,'click',click,true],
     [root,'wheel',wheel,{passive:false}], [root,'keydown',key], [document,'visibilitychange',visibility], [window,'resize',resized]
   ];
   listeners.forEach(([target,name,handler,options]) => target.addEventListener(name,handler,options));

@@ -2,8 +2,15 @@ export function flickSide(side, inwardTravel) {
   return inwardTravel >= 12 ? (side === 'right' ? 'left' : 'right') : side;
 }
 
-export function flickDock(dock, towardTravel) {
-  return towardTravel >= 24 ? (dock === 'middle' ? 'bottom' : 'middle') : dock;
+export function flickDock(dock, upwardTravel, downwardTravel = 0) {
+  const levels = ['bottom','middle','top'];
+  const index = levels.indexOf(dock);
+  // Advance one resting level per deliberate flick. At the outer levels,
+  // travel away from the other levels cannot undo a qualified inward flick.
+  if (dock === 'bottom') return upwardTravel >= 24 ? 'middle' : 'bottom';
+  if (dock === 'top') return downwardTravel >= 24 ? 'middle' : 'top';
+  const direction = upwardTravel >= 24 && upwardTravel >= downwardTravel ? 1 : downwardTravel >= 24 ? -1 : 0;
+  return levels[index + direction];
 }
 
 // Closed gestures own docking. Open gestures belong entirely to the menu's
@@ -34,7 +41,7 @@ export function createSlidingTrigger(root, button, {isEnabled, isOpen}) {
     const side = root.dataset.triggerSide, dock = root.dataset.triggerDock;
     root.dataset.triggerDragging = 'true'; clearPosition();
     const targets = [];
-    for (const edge of ['left','right']) for (const level of ['bottom','middle']) {
+    for (const edge of ['left','right']) for (const level of ['bottom','middle','top']) {
       root.dataset.triggerSide = edge; root.dataset.triggerDock = level;
       const {left,top} = button.getBoundingClientRect(); targets.push({left,top});
     }
@@ -59,7 +66,7 @@ export function createSlidingTrigger(root, button, {isEnabled, isOpen}) {
     if (isOpen()) return;
     const bounds = freeze();
     gesture = {id:event.pointerId,side:root.dataset.triggerSide,dock:root.dataset.triggerDock,
-      bounds,x:event.clientX,y:event.clientY,moved:false,inwardTravel:0,towardTravel:0};
+      bounds,x:event.clientX,y:event.clientY,moved:false,inwardTravel:0,upwardTravel:0,downwardTravel:0};
     button.setPointerCapture?.(event.pointerId);
   }
   function sample(event) {
@@ -70,7 +77,8 @@ export function createSlidingTrigger(root, button, {isEnabled, isOpen}) {
     // Independent, latched intent allows curved/diagonal flicks without a
     // straight-line or release-speed requirement. Final pointerup is sampled.
     gesture.inwardTravel = Math.max(gesture.inwardTravel, gesture.side === 'right' ? -dx : dx);
-    gesture.towardTravel = Math.max(gesture.towardTravel, gesture.dock === 'bottom' ? -dy : dy);
+    gesture.upwardTravel = Math.max(gesture.upwardTravel,-dy);
+    gesture.downwardTravel = Math.max(gesture.downwardTravel,dy);
     const b = gesture.bounds;
     button.style.setProperty('--trigger-x', `${Math.max(b.left,Math.min(b.right,b.x+dx))}px`);
     button.style.setProperty('--trigger-y', `${Math.max(b.top,Math.min(b.bottom,b.y+dy))}px`);
@@ -79,11 +87,15 @@ export function createSlidingTrigger(root, button, {isEnabled, isOpen}) {
   function up(event) {
     if (!gesture || event.pointerId !== gesture.id) return;
     sample(event); suppressClick = gesture.moved;
-    finish(flickSide(gesture.side,gesture.inwardTravel),flickDock(gesture.dock,gesture.towardTravel));
+    finish(flickSide(gesture.side,gesture.inwardTravel),flickDock(gesture.dock,gesture.upwardTravel,gesture.downwardTravel));
   }
   function cancel(event) {
     if (!gesture || (event && event.pointerId !== gesture.id)) return;
     const {moved,side,dock} = gesture; suppressClick = moved; finish(side,dock);
+  }
+  function lostCapture(event) {
+    // A touch on the inner dot may transfer implicit child capture to us.
+    if (event.target === button) cancel(event);
   }
   function click(event) {
     if (suppressClick && event.detail !== 0) {
@@ -96,7 +108,7 @@ export function createSlidingTrigger(root, button, {isEnabled, isOpen}) {
     if (['ArrowLeft','ArrowRight','ArrowUp','ArrowDown'].includes(event.key)) {
       event.preventDefault(); if (gesture) cancel(); freeze();
       finish(event.key === 'ArrowLeft' ? 'left' : event.key === 'ArrowRight' ? 'right' : root.dataset.triggerSide,
-        event.key === 'ArrowUp' ? 'middle' : event.key === 'ArrowDown' ? 'bottom' : root.dataset.triggerDock);
+        event.key === 'ArrowUp' ? flickDock(root.dataset.triggerDock,24,0) : event.key === 'ArrowDown' ? flickDock(root.dataset.triggerDock,0,24) : root.dataset.triggerDock);
     } else if (event.key === 'Escape') cancel();
   }
   function resized() {
@@ -104,7 +116,7 @@ export function createSlidingTrigger(root, button, {isEnabled, isOpen}) {
     else { releaseCapture(); clearPosition(); delete root.dataset.triggerDragging; }
   }
   const listeners = [[button,'pointerdown',down], [button,'pointermove',move,{passive:false}],
-    [button,'pointerup',up], [button,'pointercancel',cancel], [button,'lostpointercapture',cancel],
+    [button,'pointerup',up], [button,'pointercancel',cancel], [button,'lostpointercapture',lostCapture],
     [button,'click',click,true], [button,'keydown',key], [window,'resize',resized]];
   listeners.forEach(([target,name,handler,options]) => target.addEventListener(name,handler,options));
   return {settle,cancel,destroy() {

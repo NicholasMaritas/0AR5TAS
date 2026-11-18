@@ -1,0 +1,37 @@
+{
+  "task": 29,
+  "date": "2026-11-18",
+  "requested": [
+    "Add top-left/top-right resting positions to existing bottom/middle positions.",
+    "Fix More links menu scrolling regression."
+  ],
+  "implementation": {
+    "docks": [
+      "bottom-left",
+      "bottom-right",
+      "middle-left",
+      "middle-right",
+      "top-left",
+      "top-right"
+    ],
+    "vertical_flick": "24px up/down advances one level, bounded at top/bottom; middle follows greatest qualified peak (up wins tie).",
+    "horizontal_flick": "Existing12px inward intent retained at every height.",
+    "top_geometry": "CenterY=max(18px,safe-area-top)+84px; panel top=safe top edge, height168px. Opposite-side menu remains level and fully visible.",
+    "touch_root_cause": "Native implicit touch capture belongs to touched child. First drag transfer to root emits child lostpointercapture which bubbles. Previous generic cancel handler discarded active scrolling immediately.",
+    "touch_fix": "Dedicated lostCapture checks event.target===owner before canceling. Applied to shared menu root and trigger button (for touch beginning on nested dot). Genuine owner capture loss and pointercancel still abort safely.",
+    "dependencies_added": false
+  },
+  "validation": {
+    "regression_before": "menu-input.test.mjs failed with root capture undefined after child capture-loss propagation.11 passed/1 failed.",
+    "regression_after": "12/12 shared input tests passed, including continued touch drag from trigger/link/gap and actual root capture loss.",
+    "trigger": "43/43 trigger tests passed, including allsix docks, nested-dot transfer, top bounds, cancellation/resize and keyboard steps.",
+    "motion": "13/13 unchanged motion tests passed.",
+    "local_browser": "718x757: top-right center672,102 and top-left46,102; panel top18,height168; centered Home and outlined trigger level. Dot and gap drag moved center toCDG without closing/docking/body scrolling.",
+    "physical_touch": "not tested"
+  },
+  "deployment": {
+    "status": "pending"
+  },
+  "test_url": "https://nicholasmaritas.github.io/0AR5TAS/navigation/looping-dot-menu/"
+}
+
