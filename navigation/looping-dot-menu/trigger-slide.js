@@ -1,5 +1,6 @@
-export function releaseSide(left, right, position, velocity = 0) {
-  return position + velocity * 140 < (left + right) / 2 ? 'left' : 'right';
+export function flickSide(side, inwardTravel) {
+  // A deliberate short inward swipe is the command, not a drag to mid-screen.
+  return inwardTravel >= 12 ? (side === 'right' ? 'left' : 'right') : side;
 }
 
 // Owns only the closed trigger's horizontal gesture. The menu keeps its own
@@ -13,6 +14,7 @@ export function createSlidingTrigger(root, button, {isEnabled, isOpen}) {
     if (id !== undefined && button.hasPointerCapture?.(id)) button.releasePointerCapture(id);
   }
   function settle() {
+    if (gesture?.moved) suppressClick = true;
     releaseCapture();
     root.dataset.triggerDragging = 'true';
     button.style.removeProperty('--trigger-offset');
@@ -48,36 +50,34 @@ export function createSlidingTrigger(root, button, {isEnabled, isOpen}) {
     const locked = isOpen();
     const bounds = locked ? null : freeze();
     gesture = {id:event.pointerId, side:root.dataset.triggerSide, locked, bounds,
-      x:event.clientX, y:event.clientY, lastX:event.clientX, lastTime:event.timeStamp,
-      position:bounds?.current, moved:false, horizontal:false, velocity:0};
+      x:event.clientX, y:event.clientY, position:bounds?.current,
+      moved:false, inwardTravel:0};
     button.setPointerCapture?.(event.pointerId);
   }
-  function move(event) {
+  function sample(event) {
     if (!gesture || event.pointerId !== gesture.id) return;
     const dx = event.clientX - gesture.x, dy = event.clientY - gesture.y;
-    if (!gesture.moved) {
-      if (Math.hypot(dx, dy) < 6) return;
-      gesture.moved = true; gesture.horizontal = Math.abs(dx) > Math.abs(dy);
-    }
-    if (gesture.locked || !gesture.horizontal) return;
-    event.preventDefault();
-    const elapsed = Math.max(1, event.timeStamp - gesture.lastTime);
-    const velocity = Math.max(-3, Math.min(3, (event.clientX - gesture.lastX) / elapsed));
-    gesture.velocity = gesture.velocity * .25 + velocity * .75;
-    gesture.lastX = event.clientX; gesture.lastTime = event.timeStamp;
+    if (Math.hypot(dx, dy) >= 6) gesture.moved = true;
+    if (gesture.locked || !gesture.moved) return;
+    // Keep qualifying inward intent through a curved path or a pause before up.
+    // There is no first-sample axis lock and no release-speed requirement.
+    const inward = gesture.side === 'right' ? -dx : dx;
+    gesture.inwardTravel = Math.max(gesture.inwardTravel, inward);
     const {left, right, current} = gesture.bounds;
     gesture.position = Math.max(left, Math.min(right, current + dx));
     button.style.setProperty('--trigger-offset', `${gesture.position - left}px`);
   }
+  function move(event) {
+    sample(event);
+    if (gesture?.moved && !gesture.locked) event.preventDefault();
+  }
   function up(event) {
     if (!gesture || event.pointerId !== gesture.id) return;
+    // Fast flicks may deliver their meaningful final position only on pointerup.
+    sample(event);
     suppressClick = gesture.moved;
     if (gesture.locked) { releaseCapture(); return; }
-    const velocity = event.timeStamp - gesture.lastTime > 100 ? 0 : gesture.velocity;
-    const side = gesture.moved && gesture.horizontal
-      ? releaseSide(gesture.bounds.left, gesture.bounds.right, gesture.position, velocity)
-      : gesture.side;
-    finish(side);
+    finish(flickSide(gesture.side, gesture.inwardTravel));
   }
   function cancel() {
     if (!gesture) return;
@@ -111,3 +111,4 @@ export function createSlidingTrigger(root, button, {isEnabled, isOpen}) {
     listeners.forEach(([target,name,handler,options]) => target.removeEventListener(name,handler,options));
   }};
 }
+

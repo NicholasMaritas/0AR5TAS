@@ -11,7 +11,9 @@
     "Keep the mobile menu on rotated phones; update repository code without changing the live Pages version.",
     "Allow closed trigger to slide smoothly to either side for handedness; menu opens on the opposite side.",
     "Do not allow trigger sliding while menu is open.",
-    "Keep desktop dots visible and at identical viewport positions while scrolling."
+    "Keep desktop dots visible and at identical viewport positions while scrolling.",
+    "Smooth fade-in when link menu opens.",
+    "Reliable opposite-edge switch on a flick, including fast, diagonal and early releases."
   ],
   "geometry": {
     "row_and_hit_area_px": 56,
@@ -24,19 +26,27 @@
   "reference": "Original menu source preserved at ../numbered-left-menu/source-extract.json; supplied thumb-radius PDF used for reach and minimum target guidance. This loop interaction is newly implemented from user instructions, not claimed extracted from the original site.",
   "scope": "Mobile behavior replaced; desktop original vertical source layout preserved. No photographs, caption effects, blog/article transitions or unrelated demos on this testing page.",
   "external_links": "Original Home/CDG/Junya Watanabe/Noir/Stores/Subscribe/Recruitment source destinations preserved. Project-specific routes not supplied.",
-  "validation_limits": "Landscape correction checked against12 media-query scenarios and synchronized across CSS, JavaScript and no-script fallback. Existing motion module unchanged. Physical phone rotation not tested. This branch is not deployed to Pages. Handedness addition verified by nine gesture tests and local mouse/keyboard browser checks. Physical touch/notch behavior not claimed.",
+  "validation_limits": "22 gesture regressions passed; local pointer/mouse browser verified short/diagonal switching, opening opacity progression and open lock. Actual iOS/Android physical-touch feel remains for human testing.",
   "responsive_query": "(max-width:767px), (hover:none) and (pointer:coarse) and (max-height:600px)",
   "responsive_policy": "Keep the existing767px width rule, plus touch-first (primary coarse pointer and no hover) screens up to600px tall. Do not classify wide fine-pointer desktops as mobile just because their window is short.",
   "handedness": {
     "initial_side": "right",
-    "release": "Nearest edge or projected short-flick direction",
+    "release": "Commit opposite edge once peak inward horizontal travel reaches12 CSSpx. No midpoint or velocity requirement. Pointerup is sampled so a fast early release is not lost.",
     "closed_motion": "Direct horizontal drag followed by360ms CSS transform easing; no overshoot",
     "open": "No drag movement and no accidental toggle from drag attempt",
     "panel": "Opposite side; mirrored labels face inward; Home remains level with trigger",
     "tap_areas": "56px trigger and rows retained;12px dot unchanged",
     "keyboard": "ArrowLeft/Right on closed trigger; normal Enter/Space toggles",
     "persistence": "Current page only",
-    "safe_area": "Endpoints measured from actual CSS/env safe-area geometry"
+    "safe_area": "Endpoints measured from actual CSS/env safe-area geometry",
+    "cancel": "Real pointer cancellation/pinch abort restores original edge; a deliberate inward flick remains committed through a curved path or pause."
   },
-  "desktop_scroll": "position:fixed preserved; seven dot rectangles identical before and after757px local-fixture scroll."
+  "desktop_scroll": "position:fixed preserved; seven dot rectangles identical before and after757px local-fixture scroll.",
+  "opening_fade": {
+    "duration_ms": 360,
+    "easing": "cubic-bezier(.4,0,.2,1)",
+    "property": "opacity",
+    "target": "Parent .loop-panel; row opacity/fade profile remains independent",
+    "reduced_motion": "animation:none"
+  }
 }

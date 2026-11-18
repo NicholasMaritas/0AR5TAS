@@ -7,8 +7,9 @@
 .link-name{display:none}
 .loop-link:focus-visible{outline:1px dotted #000;outline-offset:-2px}
 .sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip-path:inset(50%);white-space:nowrap}
+@keyframes loop-menu-reveal{from{opacity:0}to{opacity:1}}
 @media(max-width:767px), (hover:none) and (pointer:coarse) and (max-height:600px){
-  .loop-toggle{display:grid;place-items:center;position:fixed;left:max(18px,env(safe-area-inset-left));bottom:calc(var(--edge) + var(--row));width:var(--row);height:var(--row);padding:0;border:0;background:transparent;color:#000;cursor:grab;z-index:10;-webkit-tap-highlight-color:transparent;touch-action:pan-y pinch-zoom;transform:translate3d(var(--trigger-offset,calc(100vw - max(18px,env(safe-area-inset-left)) - max(18px,env(safe-area-inset-right)) - var(--row))),0,0);transition:transform 360ms cubic-bezier(.22,1,.36,1)}
+  .loop-toggle{display:grid;place-items:center;position:fixed;left:max(18px,env(safe-area-inset-left));bottom:calc(var(--edge) + var(--row));width:var(--row);height:var(--row);padding:0;border:0;background:transparent;color:#000;cursor:grab;z-index:10;-webkit-tap-highlight-color:transparent;touch-action:pinch-zoom;transform:translate3d(var(--trigger-offset,calc(100vw - max(18px,env(safe-area-inset-left)) - max(18px,env(safe-area-inset-right)) - var(--row))),0,0);transition:transform 360ms cubic-bezier(.22,1,.36,1)}
   .loop-nav[data-trigger-side="left"] .loop-toggle{transform:translate3d(var(--trigger-offset,0px),0,0)}
   .loop-nav[data-trigger-dragging] .loop-toggle,.loop-nav[data-open="true"] .loop-toggle{transition:none}
   .loop-nav[data-trigger-dragging] .loop-toggle{cursor:grabbing}
@@ -17,6 +18,7 @@
   .loop-toggle:focus-visible{outline:1px dotted #000;outline-offset:-6px}
   .loop-panel{left:max(18px,env(safe-area-inset-left));top:auto;bottom:var(--edge);width:min(260px,calc(100vw - 112px));height:calc(3 * var(--row));overflow:hidden;overscroll-behavior:contain;touch-action:pinch-zoom;user-select:none;-webkit-user-select:none;background:transparent;border:0;box-shadow:none}
   .loop-panel[hidden]{display:none}
+  .loop-nav[data-open="true"] .loop-panel{animation:loop-menu-reveal 360ms cubic-bezier(.4,0,.2,1) both}
   .loop-nav[data-trigger-side="left"] .loop-panel{left:auto;right:max(18px,env(safe-area-inset-right))}
   .loop-link{position:absolute;left:0;top:50%;margin-top:calc(var(--row) / -2);width:100%;height:var(--row);min-width:44px;min-height:44px;padding:0 12px;justify-content:flex-start;gap:14px;will-change:transform,opacity;-webkit-tap-highlight-color:transparent}
   .link-name{display:block;font-size:13px;line-height:1.2}.desktop-name{display:none}
@@ -24,5 +26,6 @@
   .loop-nav[data-trigger-side="left"] .loop-link{flex-direction:row-reverse;text-align:right}
   .loop-panel:focus-visible{outline:1px dotted #000;outline-offset:2px}
 }
-@media(prefers-reduced-motion:reduce){.loop-link{will-change:auto}.loop-toggle{transition:none}}
+@media(prefers-reduced-motion:reduce){.loop-link{will-change:auto}.loop-toggle{transition:none}.loop-nav[data-open="true"] .loop-panel{animation:none}}
+
 

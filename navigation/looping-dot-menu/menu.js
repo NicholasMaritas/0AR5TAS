@@ -1,5 +1,5 @@
 import {LoopMotion, rowOffset, rowOpacity} from './motion.js?v=1';
-import {createSlidingTrigger} from './trigger-slide.js?v=1';
+import {createSlidingTrigger} from './trigger-slide.js?v=2';
 
 export function createLoopMenu(root) {
   const button = root.querySelector('.loop-toggle');
@@ -164,4 +164,5 @@ export function createLoopMenu(root) {
 
 const navigation = document.querySelector('.loop-nav');
 if (navigation) createLoopMenu(navigation);
+
 

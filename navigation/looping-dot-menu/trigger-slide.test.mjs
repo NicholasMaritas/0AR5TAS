@@ -1,6 +1,6 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import {createSlidingTrigger, releaseSide} from './trigger-slide.js';
+import {createSlidingTrigger, flickSide} from './trigger-slide.js';
 
 function fixture(run) {
   const previous = globalThis.window;
@@ -35,10 +35,11 @@ function fixture(run) {
   try{run(context)}finally{controller.destroy();if(previous===undefined)delete globalThis.window;else globalThis.window=previous;}
 }
 
-test('slow release chooses nearest edge and a quick flick can change handedness',()=>{
-  assert.equal(releaseSide(18,426,80,0),'left');
-  assert.equal(releaseSide(18,426,350,0),'right');
-  assert.equal(releaseSide(18,426,350,-2),'left');
+test('a short inward flick chooses the opposite edge without a midpoint or speed requirement',()=>{
+  assert.equal(flickSide('right',11.99),'right');
+  assert.equal(flickSide('right',12),'left');
+  assert.equal(flickSide('left',12),'right');
+  assert.equal(flickSide('left',-20),'left');
 });
 test('closed trigger follows horizontal dragging, changes side and suppresses accidental opening',()=>fixture(({button,root,styles,capture})=>{
   let opened=0;button.addEventListener('click',()=>opened++);
@@ -86,3 +87,127 @@ test('resize or opening settles the trigger at its chosen edge and cleanup remov
   controller.settle();assert.equal(button.getBoundingClientRect().left,426);
   controller.destroy();button.emit('keydown',{key:'ArrowLeft'});assert.equal(root.dataset.triggerSide,'right');
 }));
+
+test('a short fast flick near the starting edge commits without reaching the midpoint',()=>fixture(({button,root})=>{
+  button.emit('pointerdown',{clientX:454,timeStamp:0});
+  button.emit('pointermove',{clientX:434,timeStamp:8});
+  button.emit('pointerup',{clientX:434,timeStamp:12});
+  assert.equal(root.dataset.triggerSide,'left');
+  assert.equal(button.emit('click').prevented,true);
+}));
+
+test('pointerup alone can supply the fast flick final position',()=>fixture(({button,root,capture})=>{
+  button.emit('pointerdown',{clientX:454,timeStamp:0});
+  button.emit('pointerup',{clientX:439,timeStamp:10});
+  assert.equal(root.dataset.triggerSide,'left');
+  assert.equal(capture.size,0);
+  assert.equal(button.emit('click').prevented,true);
+}));
+
+test('pointerup includes travel beyond the last small move sample',()=>fixture(({button,root})=>{
+  button.emit('pointerdown',{clientX:454,timeStamp:0});
+  button.emit('pointermove',{clientX:451,timeStamp:4});
+  button.emit('pointerup',{clientX:434,timeStamp:9});
+  assert.equal(root.dataset.triggerSide,'left');
+}));
+
+test('an initially vertical path may become a qualifying inward diagonal flick',()=>fixture(({button,root})=>{
+  button.emit('pointerdown',{clientX:454,clientY:655,timeStamp:0});
+  button.emit('pointermove',{clientX:454,clientY:710,timeStamp:15});
+  button.emit('pointermove',{clientX:434,clientY:750,timeStamp:30});
+  button.emit('pointerup',{clientX:434,clientY:750,timeStamp:40});
+  assert.equal(root.dataset.triggerSide,'left');
+  assert.equal(button.emit('click').prevented,true);
+}));
+
+test('a very diagonal flick qualifies from its inward travel without an axis ratio gate',()=>fixture(({button,root})=>{
+  button.emit('pointerdown',{clientX:454,clientY:655,timeStamp:0});
+  button.emit('pointerup',{clientX:438,clientY:255,timeStamp:25});
+  assert.equal(root.dataset.triggerSide,'left');
+  assert.equal(button.emit('click').prevented,true);
+}));
+
+test('small jitter remains a tap and does not change handedness',()=>fixture(({button,root})=>{
+  button.emit('pointerdown',{clientX:454,clientY:655});
+  button.emit('pointermove',{clientX:450,clientY:658,timeStamp:20});
+  button.emit('pointerup',{clientX:450,clientY:658,timeStamp:45});
+  assert.equal(root.dataset.triggerSide,'right');
+  assert.notEqual(button.emit('click').prevented,true);
+}));
+
+test('pausing after qualifying inward travel still commits and preserves peak intent',()=>fixture(({button,root})=>{
+  button.emit('pointerdown',{clientX:454,timeStamp:0});
+  button.emit('pointermove',{clientX:430,timeStamp:15});
+  button.emit('pointermove',{clientX:448,timeStamp:100});
+  button.emit('pointerup',{clientX:448,timeStamp:1500});
+  assert.equal(root.dataset.triggerSide,'left');
+  assert.equal(button.emit('click').prevented,true);
+}));
+
+test('short final-position flicks work from either edge',()=>fixture(({button,root})=>{
+  button.emit('pointerdown',{clientX:454});
+  button.emit('pointerup',{clientX:438,timeStamp:12});
+  assert.equal(root.dataset.triggerSide,'left');
+  button.emit('pointerdown',{clientX:46,timeStamp:100});
+  button.emit('pointerup',{clientX:62,timeStamp:112});
+  assert.equal(root.dataset.triggerSide,'right');
+  assert.equal(button.emit('click').prevented,true);
+}));
+
+test('a locked open trigger detects fast pointerup travel without accidentally clicking',()=>fixture(({button,root,open,styles,capture})=>{
+  let toggles=0;button.addEventListener('click',()=>toggles++);
+  open(true);button.emit('pointerdown',{clientX:454,timeStamp:0});
+  button.emit('pointerup',{clientX:434,clientY:670,timeStamp:10});
+  assert.equal(root.dataset.triggerSide,'right');
+  assert.equal(styles.size,0);
+  assert.equal(capture.size,0);
+  assert.equal(button.emit('click').prevented,true);
+  assert.equal(toggles,0);
+}));
+
+test('genuine pointer cancellation discards a qualifying flick and suppresses its click',()=>fixture(({button,root,capture,styles})=>{
+  button.emit('pointerdown',{clientX:454});
+  button.emit('pointermove',{clientX:434,timeStamp:10});
+  button.emit('pointercancel');
+  button.emit('pointerup',{clientX:434,timeStamp:20});
+  assert.equal(root.dataset.triggerSide,'right');
+  assert.equal(capture.size,0);
+  assert.equal(styles.size,0);
+  assert.equal(button.emit('click').prevented,true);
+}));
+
+test('lost capture cancels a genuine gesture without committing its qualified side',()=>fixture(({button,root,capture})=>{
+  button.emit('pointerdown',{clientX:454});
+  button.emit('pointermove',{clientX:434,timeStamp:10});
+  button.emit('lostpointercapture');
+  assert.equal(root.dataset.triggerSide,'right');
+  assert.equal(capture.size,0);
+  assert.equal(button.emit('click').prevented,true);
+}));
+
+test('resizing during a qualifying flick restores the chosen resting edge',()=>fixture(({button,root,win,capture,styles})=>{
+  button.emit('pointerdown',{clientX:454});
+  button.emit('pointermove',{clientX:434,timeStamp:10});
+  win.emit('resize');
+  button.emit('pointerup',{clientX:434,timeStamp:20});
+  assert.equal(root.dataset.triggerSide,'right');
+  assert.equal(capture.size,0);
+  assert.equal(styles.size,0);
+}));
+
+test('resize mid-drag suppresses the following pointerup click instead of opening navigation',()=>fixture(({button,root,win})=>{
+  let toggles=0;button.addEventListener('click',()=>toggles++);
+  button.emit('pointerdown',{clientX:454});
+  button.emit('pointermove',{clientX:434,timeStamp:10});
+  win.emit('resize');
+  button.emit('pointerup',{clientX:434,timeStamp:20});
+  assert.equal(root.dataset.triggerSide,'right');
+  assert.equal(button.emit('click').prevented,true);
+  assert.equal(toggles,0);
+  // Suppression is one-shot; an intentional subsequent tap still works.
+  button.emit('pointerdown',{clientX:454,timeStamp:100});
+  button.emit('pointerup',{clientX:454,timeStamp:130});
+  assert.notEqual(button.emit('click').prevented,true);
+  assert.equal(toggles,1);
+}));
+

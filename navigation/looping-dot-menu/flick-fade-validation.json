@@ -1,0 +1,58 @@
+{
+  "name": "Menu reveal and reliable inward flick",
+  "opening_fade": {
+    "duration_ms": 360,
+    "easing": "cubic-bezier(.4,0,.2,1)",
+    "property": "opacity",
+    "target": "Parent .loop-panel; row opacity/fade profile remains independent",
+    "reduced_motion": "animation:none"
+  },
+  "flick": {
+    "minimum_inward_travel_px": 12,
+    "activation": "Peak inward horizontal travel from starting edge; latched for gesture",
+    "changes": [
+      "No screen-midpoint requirement",
+      "No minimum release speed",
+      "No first-movement axis lock; diagonal/curved paths accepted",
+      "Pointerup coordinates sampled even without pointermove",
+      "Single-finger trigger gesture stays with trigger; pinch zoom still permitted"
+    ],
+    "safety": [
+      "Subthreshold tap jitter does not switch sides",
+      "Flick click suppressed",
+      "Open-menu gesture lock retained",
+      "True pointercancel/pinch abort and resize restore safely"
+    ]
+  },
+  "validation": {
+    "automated": "22 trigger-slide regression tests passed; JavaScript syntax passed.",
+    "local_browser": {
+      "viewport": [
+        500,
+        757
+      ],
+      "diagonal": {
+        "dx": -18,
+        "dy": -55,
+        "result": "left",
+        "accidentally_opened": false
+      },
+      "short_return": {
+        "dx": 14,
+        "dy": 0,
+        "result": "right",
+        "accidentally_opened": false
+      },
+      "fade": {
+        "animation": "loop-menu-reveal",
+        "duration": "0.36s",
+        "observed_mid_opacity": 0.909757,
+        "settled_opacity": 1,
+        "neighbor_row_opacity": 0.28
+      },
+      "open_lock": "Attempted diagonal drag left side stays left and menu stays open."
+    },
+    "physical_touch": "Not tested; human testing required on real iOS/Android devices."
+  },
+  "publication": "pending"
+}
