@@ -1,0 +1,36 @@
+{
+  "name": "Radio catalogue + player",
+  "category": "media/radio-catalogue-player",
+  "source_url": "https://fuct.com/us/radio",
+  "description": "Music catalogue with artwork/genre/date metadata and a shared, collapsible native browser audio player.",
+  "entry_points": {
+    "markup": "radio-player.html",
+    "styles": "radio-player.css",
+    "module": "radio-player.js",
+    "data": "catalogue.json",
+    "mount": "mountRadioCatalogue"
+  },
+  "files": {
+    "asset-manifest.json": "Reusable code, data or documentation.",
+    "catalogue.json": "Reusable code, data or documentation.",
+    "radio-player.css": "Reusable code, data or documentation.",
+    "radio-player.html": "Reusable code, data or documentation.",
+    "radio-player.js": "Reusable code, data or documentation.",
+    "radio-player.test.mjs": "Reusable code, data or documentation.",
+    "source/audio-context.original.js": "Exact extracted source evidence.",
+    "source/catalogue.original.html": "Exact extracted source evidence.",
+    "source/global-player.original.css": "Exact extracted source evidence.",
+    "source/global-player.original.js": "Exact extracted source evidence.",
+    "source/layout-provider.original.js": "Exact extracted source evidence.",
+    "source/radio-route.original.js": "Exact extracted source evidence.",
+    "source/radio.original.css": "Exact extracted source evidence.",
+    "source-analysis.json": "Reusable code, data or documentation.",
+    "usage.json": "Reusable code, data or documentation.",
+    "validation.json": "Reusable code, data or documentation."
+  },
+  "publication": {
+    "mode": "library only",
+    "active_pages_changed": false,
+    "status": "ready; main publication and unchanged-Pages verification pending"
+  }
+}

@@ -1,0 +1,42 @@
+{
+  "name": "Radio catalogue + player",
+  "source_url": "https://fuct.com/us/radio",
+  "integration": [
+    "Load radio-player.css in the document head.",
+    "Insert radio-player.html or an empty element with data-fuct-radio.",
+    "Fetch catalogue.json and explicitly call mountRadioCatalogue once. No automatic initialization or active test page is included.",
+    "Keep this mount alive outside route replacement if playback must continue across SPA navigation; destroy it only when the player is being removed. Full document navigation unloads audio."
+  ],
+  "example_module": "import {mountRadioCatalogue} from './radio-player.js';\nconst catalogue = await fetch('./catalogue.json').then(response => response.json());\nconst root = document.querySelector('[data-fuct-radio]');\nconst radio = mountRadioCatalogue(root, {tracks: catalogue.tracks});\n// When removing this component:\n// radio.destroy();",
+  "input": "Pass catalogue.tracks in its recorded newest-first display order. Optional initialIndex selects a deterministic paused mix; omitted initialIndex selects a random paused mix, matching the source.",
+  "api": [
+    "mountRadioCatalogue(root,{tracks,initialIndex?}) returns getState/select/play/pause/toggle/toggleExpanded/destroy.",
+    "select(index) switches and plays; selecting the current mix toggles play/pause. select(index,false) changes without autoplay.",
+    "getState() returns selected index, track, playing, expanded, progress percentage and error.",
+    "destroy() removes owned DOM/listeners, pauses/releases audio and preserves an existing data-fuct-radio marker. Remount uses a new call.",
+    "createRadioController(audio,tracks,onChange,options) is the independent native transport layer used by the component and tests."
+  ],
+  "preserved_behavior": [
+    "28 music choices with artwork, titles, exact genre values and source-reversed catalogue ordering.",
+    "Four columns at1280px and above; one column below1280px; fixed player at top-right desktop and bottom below1280px.",
+    "Selecting a different mix starts it; selecting the same mix or player control toggles playback. Only one audio element is used.",
+    "Expanded/compact player, artwork/title/date and playback progress. Collapse preserves audio playback.",
+    "Source title marquee, visual playback icons and genre clipping."
+  ],
+  "adaptations": [
+    "React/Remix provider and components ported to manual native-DOM mount without external JavaScript dependencies; originals retained as evidence.",
+    "Feature CSS scoped beneath data-fuct-radio; minimal original reset/utility rules and Fira Mono font loading included.",
+    "Audio URL outer whitespace trimmed and interior spaces percent-encoded, with exact original values retained in catalogue.json.",
+    "Native ended event and finite duration guard replace exact100percent detection; single event subscriptions and cleanup replace accumulated source listeners.",
+    "Play Promise rejection and obsolete track-request rejection are handled; a small live status reports playback failure.",
+    "Native button names/keyboard behavior, focus styling and reduced-motion fallback added.",
+    "preload=metadata requests metadata rather than the default automatic preload. No local/session storage added."
+  ],
+  "not_in_source": [
+    "No seeking/scrubbing, volume slider, next/previous, shuffle control, automatic next mix, playlist persistence or Media Session controls. Progress is display-only."
+  ],
+  "hosting": "Mount in a host document served over HTTP(S), not file://. Supply an appropriate Content Security Policy for the recorded CDN/font domains if the host uses one.",
+  "assets": "Original media stay on the source CDNs. Availability and headers checked, with no complete long music-file download. Some WAV files exceed1GB. Physical mobile playback/backgrounding and complete-track duration not validated.",
+  "source_references": "source/*.original.js are exact compiled slices/route module; their imported alias bindings are not standalone modules. source-analysis.json records the enclosing bundles, offsets, hashes and dependencies. Original catalogue HTML and original feature CSS are preserved.",
+  "publication": "Library-only. Current GitHub Pages Tlog test and root redirect stay unchanged."
+}

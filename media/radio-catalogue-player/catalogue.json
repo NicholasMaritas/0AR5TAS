@@ -1,0 +1,2310 @@
+{
+  "name": "FUCT RADIO catalogue",
+  "source_file": "source.html",
+  "order": "tracks preserves rendered catalogue order, newest first. source_index preserves loaderData node position, oldest first; display_index preserves rendered position. Both indices are zero-based.",
+  "track_count": 28,
+  "tracks": [
+    {
+      "source_index": 27,
+      "display_index": 0,
+      "title": "GUEST MIX: KENNY HOOPLA",
+      "date": "2026-10-14",
+      "date_display": "10.14.2026",
+      "genres": [
+        "WITCHOUSE",
+        "POST PUNK",
+        "RAP",
+        "INDIE ROCK",
+        "AMBIENT",
+        "MODULAR"
+      ],
+      "image_gid": "gid://shopify/MediaImage/47524736008381",
+      "image_url": "https://cdn.shopify.com/s/files/1/2068/4441/files/KENNY.jpg?v=1792037028",
+      "image_url_source": "https://cdn.shopify.com/s/files/1/2068/4441/files/KENNY.jpg?v=1792037028",
+      "image_display_src": "https://cdn.shopify.com/s/files/1/2068/4441/files/KENNY.jpg?v=1792037028&width=100&crop=center",
+      "image_srcset": [
+        {
+          "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/KENNY.jpg?v=1792037028&width=200&crop=center",
+          "descriptor": "200w"
+        },
+        {
+          "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/KENNY.jpg?v=1792037028&width=400&crop=center",
+          "descriptor": "400w"
+        },
+        {
+          "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/KENNY.jpg?v=1792037028&width=600&crop=center",
+          "descriptor": "600w"
+        },
+        {
+          "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/KENNY.jpg?v=1792037028&width=800&crop=center",
+          "descriptor": "800w"
+        },
+        {
+          "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/KENNY.jpg?v=1792037028&width=1000&crop=center",
+          "descriptor": "1000w"
+        },
+        {
+          "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/KENNY.jpg?v=1792037028&width=1200&crop=center",
+          "descriptor": "1200w"
+        },
+        {
+          "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/KENNY.jpg?v=1792037028&width=1400&crop=center",
+          "descriptor": "1400w"
+        },
+        {
+          "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/KENNY.jpg?v=1792037028&width=1600&crop=center",
+          "descriptor": "1600w"
+        },
+        {
+          "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/KENNY.jpg?v=1792037028&width=1800&crop=center",
+          "descriptor": "1800w"
+        },
+        {
+          "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/KENNY.jpg?v=1792037028&width=2000&crop=center",
+          "descriptor": "2000w"
+        },
+        {
+          "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/KENNY.jpg?v=1792037028&width=2200&crop=center",
+          "descriptor": "2200w"
+        },
+        {
+          "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/KENNY.jpg?v=1792037028&width=2400&crop=center",
+          "descriptor": "2400w"
+        },
+        {
+          "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/KENNY.jpg?v=1792037028&width=2600&crop=center",
+          "descriptor": "2600w"
+        },
+        {
+          "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/KENNY.jpg?v=1792037028&width=2800&crop=center",
+          "descriptor": "2800w"
+        },
+        {
+          "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/KENNY.jpg?v=1792037028&width=3000&crop=center",
+          "descriptor": "3000w"
+        }
+      ],
+      "audio_url": "https://d11rox2ve9bkk5.cloudfront.net/Kenny%20Hoopla.mp3",
+      "audio_url_source": "https://d11rox2ve9bkk5.cloudfront.net/Kenny Hoopla.mp3",
+      "audio_format_hint": "mp3"
+    },
+    {
+      "source_index": 26,
+      "display_index": 1,
+      "title": "FUCT MIX 011",
+      "date": "2026-08-11",
+      "date_display": "08.11.2026",
+      "genres": [
+        "UNDERGROUND HIP-HOP",
+        "LO-FI SOUL",
+        "NEO-SOUL",
+        "CHILLHOP",
+        "BEDROOM R&B",
+        "SUNSHINE RAP",
+        "LAIDBACK TRAP",
+        "AMBIENT R&B",
+        "FRENCH BOOGIE",
+        "VENEZUELAN TROPICAL",
+        "LATE-NIGHT DEEP HOUSE"
+      ],
+      "image_gid": "gid://shopify/MediaImage/32184726126781",
+      "image_url": "https://cdn.shopify.com/s/files/1/2068/4441/files/IMG_7233.jpg?v=1786462344",
+      "image_url_source": "https://cdn.shopify.com/s/files/1/2068/4441/files/IMG_7233.jpg?v=1786462344",
+      "image_display_src": "https://cdn.shopify.com/s/files/1/2068/4441/files/IMG_7233.jpg?v=1786462344&width=100&crop=center",
+      "image_srcset": [
+        {
+          "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/IMG_7233.jpg?v=1786462344&width=200&crop=center",
+          "descriptor": "200w"
+        },
+        {
+          "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/IMG_7233.jpg?v=1786462344&width=400&crop=center",
+          "descriptor": "400w"
+        },
+        {
+          "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/IMG_7233.jpg?v=1786462344&width=600&crop=center",
+          "descriptor": "600w"
+        },
+        {
+          "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/IMG_7233.jpg?v=1786462344&width=800&crop=center",
+          "descriptor": "800w"
+        },
+        {
+          "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/IMG_7233.jpg?v=1786462344&width=1000&crop=center",
+          "descriptor": "1000w"
+        },
+        {
+          "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/IMG_7233.jpg?v=1786462344&width=1200&crop=center",
+          "descriptor": "1200w"
+        },
+        {
+          "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/IMG_7233.jpg?v=1786462344&width=1400&crop=center",
+          "descriptor": "1400w"
+        },
+        {
+          "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/IMG_7233.jpg?v=1786462344&width=1600&crop=center",
+          "descriptor": "1600w"
+        },
+        {
+          "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/IMG_7233.jpg?v=1786462344&width=1800&crop=center",
+          "descriptor": "1800w"
+        },
+        {
+          "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/IMG_7233.jpg?v=1786462344&width=2000&crop=center",
+          "descriptor": "2000w"
+        },
+        {
+          "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/IMG_7233.jpg?v=1786462344&width=2200&crop=center",
+          "descriptor": "2200w"
+        },
+        {
+          "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/IMG_7233.jpg?v=1786462344&width=2400&crop=center",
+          "descriptor": "2400w"
+        },
+        {
+          "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/IMG_7233.jpg?v=1786462344&width=2600&crop=center",
+          "descriptor": "2600w"
+        },
+        {
+          "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/IMG_7233.jpg?v=1786462344&width=2800&crop=center",
+          "descriptor": "2800w"
+        },
+        {
+          "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/IMG_7233.jpg?v=1786462344&width=3000&crop=center",
+          "descriptor": "3000w"
+        }
+      ],
+      "audio_url": "https://d11rox2ve9bkk5.cloudfront.net/222.mp3",
+      "audio_url_source": "https://d11rox2ve9bkk5.cloudfront.net/222.mp3",
+      "audio_format_hint": "mp3"
+    },
+    {
+      "source_index": 25,
+      "display_index": 2,
+      "title": "FUCT MIX 010",
+      "date": "2026-01-16",
+      "date_display": "01.16.2026",
+      "genres": [
+        "Delta Blues",
+        "Classic Rock",
+        "Psychedelic Rock",
+        "Soul",
+        "New Wave"
+      ],
+      "image_gid": "gid://shopify/MediaImage/30546425643197",
+      "image_url": "https://cdn.shopify.com/s/files/1/2068/4441/files/RAY.jpg?v=1768592846",
+      "image_url_source": "https://cdn.shopify.com/s/files/1/2068/4441/files/RAY.jpg?v=1768592846",
+      "image_display_src": "https://cdn.shopify.com/s/files/1/2068/4441/files/RAY.jpg?v=1768592846&width=100&crop=center",
+      "image_srcset": [
+        {
+          "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/RAY.jpg?v=1768592846&width=200&crop=center",
+          "descriptor": "200w"
+        },
+        {
+          "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/RAY.jpg?v=1768592846&width=400&crop=center",
+          "descriptor": "400w"
+        },
+        {
+          "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/RAY.jpg?v=1768592846&width=600&crop=center",
+          "descriptor": "600w"
+        },
+        {
+          "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/RAY.jpg?v=1768592846&width=800&crop=center",
+          "descriptor": "800w"
+        },
+        {
+          "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/RAY.jpg?v=1768592846&width=1000&crop=center",
+          "descriptor": "1000w"
+        },
+        {
+          "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/RAY.jpg?v=1768592846&width=1200&crop=center",
+          "descriptor": "1200w"
+        },
+        {
+          "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/RAY.jpg?v=1768592846&width=1400&crop=center",
+          "descriptor": "1400w"
+        },
+        {
+          "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/RAY.jpg?v=1768592846&width=1600&crop=center",
+          "descriptor": "1600w"
+        },
+        {
+          "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/RAY.jpg?v=1768592846&width=1800&crop=center",
+          "descriptor": "1800w"
+        },
+        {
+          "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/RAY.jpg?v=1768592846&width=2000&crop=center",
+          "descriptor": "2000w"
+        },
+        {
+          "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/RAY.jpg?v=1768592846&width=2200&crop=center",
+          "descriptor": "2200w"
+        },
+        {
+          "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/RAY.jpg?v=1768592846&width=2400&crop=center",
+          "descriptor": "2400w"
+        },
+        {
+          "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/RAY.jpg?v=1768592846&width=2600&crop=center",
+          "descriptor": "2600w"
+        },
+        {
+          "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/RAY.jpg?v=1768592846&width=2800&crop=center",
+          "descriptor": "2800w"
+        },
+        {
+          "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/RAY.jpg?v=1768592846&width=3000&crop=center",
+          "descriptor": "3000w"
+        }
+      ],
+      "audio_url": "https://d11rox2ve9bkk5.cloudfront.net/RAY.mp3",
+      "audio_url_source": "https://d11rox2ve9bkk5.cloudfront.net/RAY.mp3",
+      "audio_format_hint": "mp3"
+    },
+    {
+      "source_index": 24,
+      "display_index": 3,
+      "title": "GUEST MIX: ANGELA WHITE",
+      "date": "2025-12-15",
+      "date_display": "12.15.2025",
+      "genres": [
+        "HARDCORE PUNK",
+        "POP PUNK",
+        "HARDCORE POP PUNK"
+      ],
+      "image_gid": "gid://shopify/MediaImage/30333933355197",
+      "image_url": "https://cdn.shopify.com/s/files/1/2068/4441/files/ANGELA_RADIO.jpg?v=1765680992",
+      "image_url_source": "https://cdn.shopify.com/s/files/1/2068/4441/files/ANGELA_RADIO.jpg?v=1765680992",
+      "image_display_src": "https://cdn.shopify.com/s/files/1/2068/4441/files/ANGELA_RADIO.jpg?v=1765680992&width=100&crop=center",
+      "image_srcset": [
+        {
+          "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/ANGELA_RADIO.jpg?v=1765680992&width=200&crop=center",
+          "descriptor": "200w"
+        },
+        {
+          "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/ANGELA_RADIO.jpg?v=1765680992&width=400&crop=center",
+          "descriptor": "400w"
+        },
+        {
+          "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/ANGELA_RADIO.jpg?v=1765680992&width=600&crop=center",
+          "descriptor": "600w"
+        },
+        {
+          "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/ANGELA_RADIO.jpg?v=1765680992&width=800&crop=center",
+          "descriptor": "800w"
+        },
+        {
+          "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/ANGELA_RADIO.jpg?v=1765680992&width=1000&crop=center",
+          "descriptor": "1000w"
+        },
+        {
+          "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/ANGELA_RADIO.jpg?v=1765680992&width=1200&crop=center",
+          "descriptor": "1200w"
+        },
+        {
+          "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/ANGELA_RADIO.jpg?v=1765680992&width=1400&crop=center",
+          "descriptor": "1400w"
+        },
+        {
+          "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/ANGELA_RADIO.jpg?v=1765680992&width=1600&crop=center",
+          "descriptor": "1600w"
+        },
+        {
+          "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/ANGELA_RADIO.jpg?v=1765680992&width=1800&crop=center",
+          "descriptor": "1800w"
+        },
+        {
+          "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/ANGELA_RADIO.jpg?v=1765680992&width=2000&crop=center",
+          "descriptor": "2000w"
+        },
+        {
+          "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/ANGELA_RADIO.jpg?v=1765680992&width=2200&crop=center",
+          "descriptor": "2200w"
+        },
+        {
+          "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/ANGELA_RADIO.jpg?v=1765680992&width=2400&crop=center",
+          "descriptor": "2400w"
+        },
+        {
+          "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/ANGELA_RADIO.jpg?v=1765680992&width=2600&crop=center",
+          "descriptor": "2600w"
+        },
+        {
+          "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/ANGELA_RADIO.jpg?v=1765680992&width=2800&crop=center",
+          "descriptor": "2800w"
+        },
+        {
+          "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/ANGELA_RADIO.jpg?v=1765680992&width=3000&crop=center",
+          "descriptor": "3000w"
+        }
+      ],
+      "audio_url": "https://d11rox2ve9bkk5.cloudfront.net/Angela.mp3",
+      "audio_url_source": "https://d11rox2ve9bkk5.cloudfront.net/Angela.mp3",
+      "audio_format_hint": "mp3"
+    },
+    {
+      "source_index": 23,
+      "display_index": 4,
+      "title": "GUEST MIX: GAIA MINESI",
+      "date": "2025-10-23",
+      "date_display": "10.23.2025",
+      "genres": [
+        "ITALO-DISCO",
+        "COLD WAVE",
+        "ART FUNK",
+        "ANTI-POP",
+        "TROPICAL GOTHIC",
+        "FINANCIAL POP",
+        "ATOMIC AMERICANA"
+      ],
+      "image_gid": "gid://shopify/MediaImage/29899310563517",
+      "image_url": "https://cdn.shopify.com/s/files/1/2068/4441/files/GAIA.jpg?v=1761275195",
+      "image_url_source": "https://cdn.shopify.com/s/files/1/2068/4441/files/GAIA.jpg?v=1761275195",
+      "image_display_src": "https://cdn.shopify.com/s/files/1/2068/4441/files/GAIA.jpg?v=1761275195&width=100&crop=center",
+      "image_srcset": [
+        {
+          "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/GAIA.jpg?v=1761275195&width=200&crop=center",
+          "descriptor": "200w"
+        },
+        {
+          "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/GAIA.jpg?v=1761275195&width=400&crop=center",
+          "descriptor": "400w"
+        },
+        {
+          "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/GAIA.jpg?v=1761275195&width=600&crop=center",
+          "descriptor": "600w"
+        },
+        {
+          "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/GAIA.jpg?v=1761275195&width=800&crop=center",
+          "descriptor": "800w"
+        },
+        {
+          "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/GAIA.jpg?v=1761275195&width=1000&crop=center",
+          "descriptor": "1000w"
+        },
+        {
+          "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/GAIA.jpg?v=1761275195&width=1200&crop=center",
+          "descriptor": "1200w"
+        },
+        {
+          "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/GAIA.jpg?v=1761275195&width=1400&crop=center",
+          "descriptor": "1400w"
+        },
+        {
+          "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/GAIA.jpg?v=1761275195&width=1600&crop=center",
+          "descriptor": "1600w"
+        },
+        {
+          "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/GAIA.jpg?v=1761275195&width=1800&crop=center",
+          "descriptor": "1800w"
+        },
+        {
+          "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/GAIA.jpg?v=1761275195&width=2000&crop=center",
+          "descriptor": "2000w"
+        },
+        {
+          "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/GAIA.jpg?v=1761275195&width=2200&crop=center",
+          "descriptor": "2200w"
+        },
+        {
+          "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/GAIA.jpg?v=1761275195&width=2400&crop=center",
+          "descriptor": "2400w"
+        },
+        {
+          "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/GAIA.jpg?v=1761275195&width=2600&crop=center",
+          "descriptor": "2600w"
+        },
+        {
+          "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/GAIA.jpg?v=1761275195&width=2800&crop=center",
+          "descriptor": "2800w"
+        },
+        {
+          "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/GAIA.jpg?v=1761275195&width=3000&crop=center",
+          "descriptor": "3000w"
+        }
+      ],
+      "audio_url": "https://d11rox2ve9bkk5.cloudfront.net/GAIA.mp3",
+      "audio_url_source": "https://d11rox2ve9bkk5.cloudfront.net/GAIA.mp3",
+      "audio_format_hint": "mp3"
+    },
+    {
+      "source_index": 22,
+      "display_index": 5,
+      "title": "GUEST MIX: MTV JESSE",
+      "date": "2025-07-18",
+      "date_display": "07.18.2025",
+      "genres": [
+        "EAST COAST HIP-HOP",
+        "POP ROCK",
+        "SOUL",
+        "ALTERNATIVE ROCK",
+        "RAP",
+        "GRUNGE"
+      ],
+      "image_gid": "gid://shopify/MediaImage/29102757773501",
+      "image_url": "https://cdn.shopify.com/s/files/1/2068/4441/files/NELK.jpg?v=1752082631",
+      "image_url_source": "https://cdn.shopify.com/s/files/1/2068/4441/files/NELK.jpg?v=1752082631",
+      "image_display_src": "https://cdn.shopify.com/s/files/1/2068/4441/files/NELK.jpg?v=1752082631&width=100&crop=center",
+      "image_srcset": [
+        {
+          "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/NELK.jpg?v=1752082631&width=200&crop=center",
+          "descriptor": "200w"
+        },
+        {
+          "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/NELK.jpg?v=1752082631&width=400&crop=center",
+          "descriptor": "400w"
+        },
+        {
+          "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/NELK.jpg?v=1752082631&width=600&crop=center",
+          "descriptor": "600w"
+        },
+        {
+          "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/NELK.jpg?v=1752082631&width=800&crop=center",
+          "descriptor": "800w"
+        },
+        {
+          "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/NELK.jpg?v=1752082631&width=1000&crop=center",
+          "descriptor": "1000w"
+        },
+        {
+          "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/NELK.jpg?v=1752082631&width=1200&crop=center",
+          "descriptor": "1200w"
+        },
+        {
+          "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/NELK.jpg?v=1752082631&width=1400&crop=center",
+          "descriptor": "1400w"
+        },
+        {
+          "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/NELK.jpg?v=1752082631&width=1600&crop=center",
+          "descriptor": "1600w"
+        },
+        {
+          "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/NELK.jpg?v=1752082631&width=1800&crop=center",
+          "descriptor": "1800w"
+        },
+        {
+          "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/NELK.jpg?v=1752082631&width=2000&crop=center",
+          "descriptor": "2000w"
+        },
+        {
+          "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/NELK.jpg?v=1752082631&width=2200&crop=center",
+          "descriptor": "2200w"
+        },
+        {
+          "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/NELK.jpg?v=1752082631&width=2400&crop=center",
+          "descriptor": "2400w"
+        },
+        {
+          "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/NELK.jpg?v=1752082631&width=2600&crop=center",
+          "descriptor": "2600w"
+        },
+        {
+          "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/NELK.jpg?v=1752082631&width=2800&crop=center",
+          "descriptor": "2800w"
+        },
+        {
+          "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/NELK.jpg?v=1752082631&width=3000&crop=center",
+          "descriptor": "3000w"
+        }
+      ],
+      "audio_url": "https://d11rox2ve9bkk5.cloudfront.net/NELK.mp3",
+      "audio_url_source": "https://d11rox2ve9bkk5.cloudfront.net/NELK.mp3",
+      "audio_format_hint": "mp3"
+    },
+    {
+      "source_index": 21,
+      "display_index": 6,
+      "title": "FUCT MIX 009",
+      "date": "2025-06-13",
+      "date_display": "06.13.2025",
+      "genres": [
+        "GARAGE ROCK",
+        "AMERICANA",
+        "POST-PUNK",
+        "CLASSIC ROCK",
+        "DUB",
+        "R&B"
+      ],
+      "image_gid": "gid://shopify/MediaImage/29102744993981",
+      "image_url": "https://cdn.shopify.com/s/files/1/2068/4441/files/SNAKE.jpg?v=1752082567",
+      "image_url_source": "https://cdn.shopify.com/s/files/1/2068/4441/files/SNAKE.jpg?v=1752082567",
+      "image_display_src": "https://cdn.shopify.com/s/files/1/2068/4441/files/SNAKE.jpg?v=1752082567&width=100&crop=center",
+      "image_srcset": [
+        {
+          "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/SNAKE.jpg?v=1752082567&width=200&crop=center",
+          "descriptor": "200w"
+        },
+        {
+          "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/SNAKE.jpg?v=1752082567&width=400&crop=center",
+          "descriptor": "400w"
+        },
+        {
+          "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/SNAKE.jpg?v=1752082567&width=600&crop=center",
+          "descriptor": "600w"
+        },
+        {
+          "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/SNAKE.jpg?v=1752082567&width=800&crop=center",
+          "descriptor": "800w"
+        },
+        {
+          "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/SNAKE.jpg?v=1752082567&width=1000&crop=center",
+          "descriptor": "1000w"
+        },
+        {
+          "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/SNAKE.jpg?v=1752082567&width=1200&crop=center",
+          "descriptor": "1200w"
+        },
+        {
+          "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/SNAKE.jpg?v=1752082567&width=1400&crop=center",
+          "descriptor": "1400w"
+        },
+        {
+          "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/SNAKE.jpg?v=1752082567&width=1600&crop=center",
+          "descriptor": "1600w"
+        },
+        {
+          "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/SNAKE.jpg?v=1752082567&width=1800&crop=center",
+          "descriptor": "1800w"
+        },
+        {
+          "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/SNAKE.jpg?v=1752082567&width=2000&crop=center",
+          "descriptor": "2000w"
+        },
+        {
+          "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/SNAKE.jpg?v=1752082567&width=2200&crop=center",
+          "descriptor": "2200w"
+        },
+        {
+          "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/SNAKE.jpg?v=1752082567&width=2400&crop=center",
+          "descriptor": "2400w"
+        },
+        {
+          "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/SNAKE.jpg?v=1752082567&width=2600&crop=center",
+          "descriptor": "2600w"
+        },
+        {
+          "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/SNAKE.jpg?v=1752082567&width=2800&crop=center",
+          "descriptor": "2800w"
+        },
+        {
+          "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/SNAKE.jpg?v=1752082567&width=3000&crop=center",
+          "descriptor": "3000w"
+        }
+      ],
+      "audio_url": "https://d11rox2ve9bkk5.cloudfront.net/FUCTMIX.mp3",
+      "audio_url_source": "https://d11rox2ve9bkk5.cloudfront.net/FUCTMIX.mp3",
+      "audio_format_hint": "mp3"
+    },
+    {
+      "source_index": 20,
+      "display_index": 7,
+      "title": "GUEST MIX: STORAGEBASED",
+      "date": "2025-05-30",
+      "date_display": "05.30.2025",
+      "genres": [
+        "UNDERGROUND HIP-HOP",
+        "CLASSIC SOUL",
+        "ROCKSTEADY",
+        "G-FUNK",
+        "EXPERIMENTAL POP"
+      ],
+      "image_gid": "gid://shopify/MediaImage/28865219133629",
+      "image_url": "https://cdn.shopify.com/s/files/1/2068/4441/files/DENZEL_RADIO.jpg?v=1748623082",
+      "image_url_source": "https://cdn.shopify.com/s/files/1/2068/4441/files/DENZEL_RADIO.jpg?v=1748623082",
+      "image_display_src": "https://cdn.shopify.com/s/files/1/2068/4441/files/DENZEL_RADIO.jpg?v=1748623082&width=100&crop=center",
+      "image_srcset": [
+        {
+          "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/DENZEL_RADIO.jpg?v=1748623082&width=200&crop=center",
+          "descriptor": "200w"
+        },
+        {
+          "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/DENZEL_RADIO.jpg?v=1748623082&width=400&crop=center",
+          "descriptor": "400w"
+        },
+        {
+          "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/DENZEL_RADIO.jpg?v=1748623082&width=600&crop=center",
+          "descriptor": "600w"
+        },
+        {
+          "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/DENZEL_RADIO.jpg?v=1748623082&width=800&crop=center",
+          "descriptor": "800w"
+        },
+        {
+          "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/DENZEL_RADIO.jpg?v=1748623082&width=1000&crop=center",
+          "descriptor": "1000w"
+        },
+        {
+          "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/DENZEL_RADIO.jpg?v=1748623082&width=1200&crop=center",
+          "descriptor": "1200w"
+        },
+        {
+          "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/DENZEL_RADIO.jpg?v=1748623082&width=1400&crop=center",
+          "descriptor": "1400w"
+        },
+        {
+          "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/DENZEL_RADIO.jpg?v=1748623082&width=1600&crop=center",
+          "descriptor": "1600w"
+        },
+        {
+          "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/DENZEL_RADIO.jpg?v=1748623082&width=1800&crop=center",
+          "descriptor": "1800w"
+        },
+        {
+          "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/DENZEL_RADIO.jpg?v=1748623082&width=2000&crop=center",
+          "descriptor": "2000w"
+        },
+        {
+          "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/DENZEL_RADIO.jpg?v=1748623082&width=2200&crop=center",
+          "descriptor": "2200w"
+        },
+        {
+          "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/DENZEL_RADIO.jpg?v=1748623082&width=2400&crop=center",
+          "descriptor": "2400w"
+        },
+        {
+          "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/DENZEL_RADIO.jpg?v=1748623082&width=2600&crop=center",
+          "descriptor": "2600w"
+        },
+        {
+          "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/DENZEL_RADIO.jpg?v=1748623082&width=2800&crop=center",
+          "descriptor": "2800w"
+        },
+        {
+          "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/DENZEL_RADIO.jpg?v=1748623082&width=3000&crop=center",
+          "descriptor": "3000w"
+        }
+      ],
+      "audio_url": "https://d11rox2ve9bkk5.cloudfront.net/DENZEL.mp3",
+      "audio_url_source": "https://d11rox2ve9bkk5.cloudfront.net/DENZEL.mp3",
+      "audio_format_hint": "mp3"
+    },
+    {
+      "source_index": 19,
+      "display_index": 8,
+      "title": "GUEST MIX: RYBQAH",
+      "date": "2025-04-25",
+      "date_display": "04.25.2025",
+      "genres": [
+        "POST-INTERNET",
+        "LO-FI HIP-HOP",
+        "UNDERGROUND RAP",
+        "JAPANESE ART POP",
+        "TRIP-HOP"
+      ],
+      "image_gid": "gid://shopify/MediaImage/28627917013181",
+      "image_url": "https://cdn.shopify.com/s/files/1/2068/4441/files/94E7D672-2243-440A-B87D-03E503AE72B3.jpg?v=1745604210",
+      "image_url_source": "https://cdn.shopify.com/s/files/1/2068/4441/files/94E7D672-2243-440A-B87D-03E503AE72B3.jpg?v=1745604210",
+      "image_display_src": "https://cdn.shopify.com/s/files/1/2068/4441/files/94E7D672-2243-440A-B87D-03E503AE72B3.jpg?v=1745604210&width=100&crop=center",
+      "image_srcset": [
+        {
+          "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/94E7D672-2243-440A-B87D-03E503AE72B3.jpg?v=1745604210&width=200&crop=center",
+          "descriptor": "200w"
+        },
+        {
+          "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/94E7D672-2243-440A-B87D-03E503AE72B3.jpg?v=1745604210&width=400&crop=center",
+          "descriptor": "400w"
+        },
+        {
+          "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/94E7D672-2243-440A-B87D-03E503AE72B3.jpg?v=1745604210&width=600&crop=center",
+          "descriptor": "600w"
+        },
+        {
+          "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/94E7D672-2243-440A-B87D-03E503AE72B3.jpg?v=1745604210&width=800&crop=center",
+          "descriptor": "800w"
+        },
+        {
+          "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/94E7D672-2243-440A-B87D-03E503AE72B3.jpg?v=1745604210&width=1000&crop=center",
+          "descriptor": "1000w"
+        },
+        {
+          "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/94E7D672-2243-440A-B87D-03E503AE72B3.jpg?v=1745604210&width=1200&crop=center",
+          "descriptor": "1200w"
+        },
+        {
+          "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/94E7D672-2243-440A-B87D-03E503AE72B3.jpg?v=1745604210&width=1400&crop=center",
+          "descriptor": "1400w"
+        },
+        {
+          "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/94E7D672-2243-440A-B87D-03E503AE72B3.jpg?v=1745604210&width=1600&crop=center",
+          "descriptor": "1600w"
+        },
+        {
+          "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/94E7D672-2243-440A-B87D-03E503AE72B3.jpg?v=1745604210&width=1800&crop=center",
+          "descriptor": "1800w"
+        },
+        {
+          "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/94E7D672-2243-440A-B87D-03E503AE72B3.jpg?v=1745604210&width=2000&crop=center",
+          "descriptor": "2000w"
+        },
+        {
+          "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/94E7D672-2243-440A-B87D-03E503AE72B3.jpg?v=1745604210&width=2200&crop=center",
+          "descriptor": "2200w"
+        },
+        {
+          "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/94E7D672-2243-440A-B87D-03E503AE72B3.jpg?v=1745604210&width=2400&crop=center",
+          "descriptor": "2400w"
+        },
+        {
+          "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/94E7D672-2243-440A-B87D-03E503AE72B3.jpg?v=1745604210&width=2600&crop=center",
+          "descriptor": "2600w"
+        },
+        {
+          "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/94E7D672-2243-440A-B87D-03E503AE72B3.jpg?v=1745604210&width=2800&crop=center",
+          "descriptor": "2800w"
+        },
+        {
+          "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/94E7D672-2243-440A-B87D-03E503AE72B3.jpg?v=1745604210&width=3000&crop=center",
+          "descriptor": "3000w"
+        }
+      ],
+      "audio_url": "https://d11rox2ve9bkk5.cloudfront.net/TOXE.mp3",
+      "audio_url_source": "https://d11rox2ve9bkk5.cloudfront.net/TOXE.mp3",
+      "audio_format_hint": "mp3"
+    },
+    {
+      "source_index": 18,
+      "display_index": 9,
+      "title": "GUEST MIX: SNUFF MAGAZINE",
+      "date": "2025-03-23",
+      "date_display": "03.23.2025",
+      "genres": [
+        "NOISE ROCK",
+        "SHOEGAZE",
+        "LO-FI",
+        "SADCORE",
+        "DREAM POP"
+      ],
+      "image_gid": "gid://shopify/MediaImage/28478490935485",
+      "image_url": "https://cdn.shopify.com/s/files/1/2068/4441/files/SNUFFBLOOD.jpg?v=1742774204",
+      "image_url_source": "https://cdn.shopify.com/s/files/1/2068/4441/files/SNUFFBLOOD.jpg?v=1742774204",
+      "image_display_src": "https://cdn.shopify.com/s/files/1/2068/4441/files/SNUFFBLOOD.jpg?v=1742774204&width=100&crop=center",
+      "image_srcset": [
+        {
+          "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/SNUFFBLOOD.jpg?v=1742774204&width=200&crop=center",
+          "descriptor": "200w"
+        },
+        {
+          "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/SNUFFBLOOD.jpg?v=1742774204&width=400&crop=center",
+          "descriptor": "400w"
+        },
+        {
+          "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/SNUFFBLOOD.jpg?v=1742774204&width=600&crop=center",
+          "descriptor": "600w"
+        },
+        {
+          "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/SNUFFBLOOD.jpg?v=1742774204&width=800&crop=center",
+          "descriptor": "800w"
+        },
+        {
+          "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/SNUFFBLOOD.jpg?v=1742774204&width=1000&crop=center",
+          "descriptor": "1000w"
+        },
+        {
+          "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/SNUFFBLOOD.jpg?v=1742774204&width=1200&crop=center",
+          "descriptor": "1200w"
+        },
+        {
+          "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/SNUFFBLOOD.jpg?v=1742774204&width=1400&crop=center",
+          "descriptor": "1400w"
+        },
+        {
+          "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/SNUFFBLOOD.jpg?v=1742774204&width=1600&crop=center",
+          "descriptor": "1600w"
+        },
+        {
+          "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/SNUFFBLOOD.jpg?v=1742774204&width=1800&crop=center",
+          "descriptor": "1800w"
+        },
+        {
+          "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/SNUFFBLOOD.jpg?v=1742774204&width=2000&crop=center",
+          "descriptor": "2000w"
+        },
+        {
+          "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/SNUFFBLOOD.jpg?v=1742774204&width=2200&crop=center",
+          "descriptor": "2200w"
+        },
+        {
+          "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/SNUFFBLOOD.jpg?v=1742774204&width=2400&crop=center",
+          "descriptor": "2400w"
+        },
+        {
+          "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/SNUFFBLOOD.jpg?v=1742774204&width=2600&crop=center",
+          "descriptor": "2600w"
+        },
+        {
+          "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/SNUFFBLOOD.jpg?v=1742774204&width=2800&crop=center",
+          "descriptor": "2800w"
+        },
+        {
+          "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/SNUFFBLOOD.jpg?v=1742774204&width=3000&crop=center",
+          "descriptor": "3000w"
+        }
+      ],
+      "audio_url": "https://d11rox2ve9bkk5.cloudfront.net/SNUFF2.mp3",
+      "audio_url_source": "https://d11rox2ve9bkk5.cloudfront.net/SNUFF2.mp3",
+      "audio_format_hint": "mp3"
+    },
+    {
+      "source_index": 17,
+      "display_index": 10,
+      "title": "BULLY",
+      "date": "2025-03-22",
+      "date_display": "03.22.2025",
+      "genres": [
+        "SOUL",
+        "RAP",
+        "SALSA",
+        "R&B"
+      ],
+      "image_gid": "gid://shopify/MediaImage/28468278526141",
+      "image_url": "https://cdn.shopify.com/s/files/1/2068/4441/files/BULLY.jpg?v=1742579741",
+      "image_url_source": "https://cdn.shopify.com/s/files/1/2068/4441/files/BULLY.jpg?v=1742579741",
+      "image_display_src": "https://cdn.shopify.com/s/files/1/2068/4441/files/BULLY.jpg?v=1742579741&width=100&crop=center",
+      "image_srcset": [
+        {
+          "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/BULLY.jpg?v=1742579741&width=200&crop=center",
+          "descriptor": "200w"
+        },
+        {
+          "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/BULLY.jpg?v=1742579741&width=400&crop=center",
+          "descriptor": "400w"
+        },
+        {
+          "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/BULLY.jpg?v=1742579741&width=600&crop=center",
+          "descriptor": "600w"
+        },
+        {
+          "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/BULLY.jpg?v=1742579741&width=800&crop=center",
+          "descriptor": "800w"
+        },
+        {
+          "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/BULLY.jpg?v=1742579741&width=1000&crop=center",
+          "descriptor": "1000w"
+        },
+        {
+          "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/BULLY.jpg?v=1742579741&width=1200&crop=center",
+          "descriptor": "1200w"
+        },
+        {
+          "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/BULLY.jpg?v=1742579741&width=1400&crop=center",
+          "descriptor": "1400w"
+        },
+        {
+          "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/BULLY.jpg?v=1742579741&width=1600&crop=center",
+          "descriptor": "1600w"
+        },
+        {
+          "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/BULLY.jpg?v=1742579741&width=1800&crop=center",
+          "descriptor": "1800w"
+        },
+        {
+          "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/BULLY.jpg?v=1742579741&width=2000&crop=center",
+          "descriptor": "2000w"
+        },
+        {
+          "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/BULLY.jpg?v=1742579741&width=2200&crop=center",
+          "descriptor": "2200w"
+        },
+        {
+          "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/BULLY.jpg?v=1742579741&width=2400&crop=center",
+          "descriptor": "2400w"
+        },
+        {
+          "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/BULLY.jpg?v=1742579741&width=2600&crop=center",
+          "descriptor": "2600w"
+        },
+        {
+          "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/BULLY.jpg?v=1742579741&width=2800&crop=center",
+          "descriptor": "2800w"
+        },
+        {
+          "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/BULLY.jpg?v=1742579741&width=3000&crop=center",
+          "descriptor": "3000w"
+        }
+      ],
+      "audio_url": "https://d11rox2ve9bkk5.cloudfront.net/v1_Bully_YE.mp3",
+      "audio_url_source": "https://d11rox2ve9bkk5.cloudfront.net/v1_Bully_YE.mp3",
+      "audio_format_hint": "mp3"
+    },
+    {
+      "source_index": 16,
+      "display_index": 11,
+      "title": "FUCT MIX 008",
+      "date": "2025-03-22",
+      "date_display": "03.22.2025",
+      "genres": [
+        "DISCO",
+        "RARE GROOVE"
+      ],
+      "image_gid": "gid://shopify/MediaImage/28473219449021",
+      "image_url": "https://cdn.shopify.com/s/files/1/2068/4441/files/DISCO_copy.jpg?v=1742656642",
+      "image_url_source": "https://cdn.shopify.com/s/files/1/2068/4441/files/DISCO_copy.jpg?v=1742656642",
+      "image_display_src": "https://cdn.shopify.com/s/files/1/2068/4441/files/DISCO_copy.jpg?v=1742656642&width=100&crop=center",
+      "image_srcset": [
+        {
+          "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/DISCO_copy.jpg?v=1742656642&width=200&crop=center",
+          "descriptor": "200w"
+        },
+        {
+          "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/DISCO_copy.jpg?v=1742656642&width=400&crop=center",
+          "descriptor": "400w"
+        },
+        {
+          "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/DISCO_copy.jpg?v=1742656642&width=600&crop=center",
+          "descriptor": "600w"
+        },
+        {
+          "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/DISCO_copy.jpg?v=1742656642&width=800&crop=center",
+          "descriptor": "800w"
+        },
+        {
+          "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/DISCO_copy.jpg?v=1742656642&width=1000&crop=center",
+          "descriptor": "1000w"
+        },
+        {
+          "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/DISCO_copy.jpg?v=1742656642&width=1200&crop=center",
+          "descriptor": "1200w"
+        },
+        {
+          "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/DISCO_copy.jpg?v=1742656642&width=1400&crop=center",
+          "descriptor": "1400w"
+        },
+        {
+          "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/DISCO_copy.jpg?v=1742656642&width=1600&crop=center",
+          "descriptor": "1600w"
+        },
+        {
+          "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/DISCO_copy.jpg?v=1742656642&width=1800&crop=center",
+          "descriptor": "1800w"
+        },
+        {
+          "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/DISCO_copy.jpg?v=1742656642&width=2000&crop=center",
+          "descriptor": "2000w"
+        },
+        {
+          "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/DISCO_copy.jpg?v=1742656642&width=2200&crop=center",
+          "descriptor": "2200w"
+        },
+        {
+          "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/DISCO_copy.jpg?v=1742656642&width=2400&crop=center",
+          "descriptor": "2400w"
+        },
+        {
+          "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/DISCO_copy.jpg?v=1742656642&width=2600&crop=center",
+          "descriptor": "2600w"
+        },
+        {
+          "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/DISCO_copy.jpg?v=1742656642&width=2800&crop=center",
+          "descriptor": "2800w"
+        },
+        {
+          "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/DISCO_copy.jpg?v=1742656642&width=3000&crop=center",
+          "descriptor": "3000w"
+        }
+      ],
+      "audio_url": "https://d11rox2ve9bkk5.cloudfront.net/RAREGROOVES2.mp3",
+      "audio_url_source": "https://d11rox2ve9bkk5.cloudfront.net/RAREGROOVES2.mp3",
+      "audio_format_hint": "mp3"
+    },
+    {
+      "source_index": 15,
+      "display_index": 12,
+      "title": "GUEST MIX: JORDAN HARTIGAN",
+      "date": "2025-03-22",
+      "date_display": "03.22.2025",
+      "genres": [
+        "RAP METAL",
+        "PSYCHEDELIC ROCK",
+        "MINIMALIST ELECTRONIC",
+        "SLOWCORE"
+      ],
+      "image_gid": "gid://shopify/MediaImage/28473141428413",
+      "image_url": "https://cdn.shopify.com/s/files/1/2068/4441/files/BURMA.jpg?v=1742654100",
+      "image_url_source": "https://cdn.shopify.com/s/files/1/2068/4441/files/BURMA.jpg?v=1742654100",
+      "image_display_src": "https://cdn.shopify.com/s/files/1/2068/4441/files/BURMA.jpg?v=1742654100&width=100&crop=center",
+      "image_srcset": [
+        {
+          "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/BURMA.jpg?v=1742654100&width=200&crop=center",
+          "descriptor": "200w"
+        },
+        {
+          "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/BURMA.jpg?v=1742654100&width=400&crop=center",
+          "descriptor": "400w"
+        },
+        {
+          "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/BURMA.jpg?v=1742654100&width=600&crop=center",
+          "descriptor": "600w"
+        },
+        {
+          "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/BURMA.jpg?v=1742654100&width=800&crop=center",
+          "descriptor": "800w"
+        },
+        {
+          "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/BURMA.jpg?v=1742654100&width=1000&crop=center",
+          "descriptor": "1000w"
+        },
+        {
+          "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/BURMA.jpg?v=1742654100&width=1200&crop=center",
+          "descriptor": "1200w"
+        },
+        {
+          "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/BURMA.jpg?v=1742654100&width=1400&crop=center",
+          "descriptor": "1400w"
+        },
+        {
+          "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/BURMA.jpg?v=1742654100&width=1600&crop=center",
+          "descriptor": "1600w"
+        },
+        {
+          "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/BURMA.jpg?v=1742654100&width=1800&crop=center",
+          "descriptor": "1800w"
+        },
+        {
+          "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/BURMA.jpg?v=1742654100&width=2000&crop=center",
+          "descriptor": "2000w"
+        },
+        {
+          "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/BURMA.jpg?v=1742654100&width=2200&crop=center",
+          "descriptor": "2200w"
+        },
+        {
+          "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/BURMA.jpg?v=1742654100&width=2400&crop=center",
+          "descriptor": "2400w"
+        },
+        {
+          "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/BURMA.jpg?v=1742654100&width=2600&crop=center",
+          "descriptor": "2600w"
+        },
+        {
+          "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/BURMA.jpg?v=1742654100&width=2800&crop=center",
+          "descriptor": "2800w"
+        },
+        {
+          "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/BURMA.jpg?v=1742654100&width=3000&crop=center",
+          "descriptor": "3000w"
+        }
+      ],
+      "audio_url": "https://d11rox2ve9bkk5.cloudfront.net/JORDAN2.mp3",
+      "audio_url_source": "https://d11rox2ve9bkk5.cloudfront.net/JORDAN2.mp3",
+      "audio_format_hint": "mp3"
+    },
+    {
+      "source_index": 14,
+      "display_index": 13,
+      "title": "GUEST MIX: DEREK SNODGRASS",
+      "date": "2025-03-12",
+      "date_display": "03.12.2025",
+      "genres": [
+        "PSYCHEDELIC ROCK",
+        "HEAVY METAL",
+        "HARD ROCK",
+        "BLUES"
+      ],
+      "image_gid": "gid://shopify/MediaImage/28424925577405",
+      "image_url": "https://cdn.shopify.com/s/files/1/2068/4441/files/DEREK_PRISON.jpg?v=1741827755",
+      "image_url_source": "https://cdn.shopify.com/s/files/1/2068/4441/files/DEREK_PRISON.jpg?v=1741827755",
+      "image_display_src": "https://cdn.shopify.com/s/files/1/2068/4441/files/DEREK_PRISON.jpg?v=1741827755&width=100&crop=center",
+      "image_srcset": [
+        {
+          "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/DEREK_PRISON.jpg?v=1741827755&width=200&crop=center",
+          "descriptor": "200w"
+        },
+        {
+          "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/DEREK_PRISON.jpg?v=1741827755&width=400&crop=center",
+          "descriptor": "400w"
+        },
+        {
+          "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/DEREK_PRISON.jpg?v=1741827755&width=600&crop=center",
+          "descriptor": "600w"
+        },
+        {
+          "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/DEREK_PRISON.jpg?v=1741827755&width=800&crop=center",
+          "descriptor": "800w"
+        },
+        {
+          "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/DEREK_PRISON.jpg?v=1741827755&width=1000&crop=center",
+          "descriptor": "1000w"
+        },
+        {
+          "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/DEREK_PRISON.jpg?v=1741827755&width=1200&crop=center",
+          "descriptor": "1200w"
+        },
+        {
+          "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/DEREK_PRISON.jpg?v=1741827755&width=1400&crop=center",
+          "descriptor": "1400w"
+        },
+        {
+          "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/DEREK_PRISON.jpg?v=1741827755&width=1600&crop=center",
+          "descriptor": "1600w"
+        },
+        {
+          "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/DEREK_PRISON.jpg?v=1741827755&width=1800&crop=center",
+          "descriptor": "1800w"
+        },
+        {
+          "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/DEREK_PRISON.jpg?v=1741827755&width=2000&crop=center",
+          "descriptor": "2000w"
+        },
+        {
+          "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/DEREK_PRISON.jpg?v=1741827755&width=2200&crop=center",
+          "descriptor": "2200w"
+        },
+        {
+          "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/DEREK_PRISON.jpg?v=1741827755&width=2400&crop=center",
+          "descriptor": "2400w"
+        },
+        {
+          "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/DEREK_PRISON.jpg?v=1741827755&width=2600&crop=center",
+          "descriptor": "2600w"
+        },
+        {
+          "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/DEREK_PRISON.jpg?v=1741827755&width=2800&crop=center",
+          "descriptor": "2800w"
+        },
+        {
+          "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/DEREK_PRISON.jpg?v=1741827755&width=3000&crop=center",
+          "descriptor": "3000w"
+        }
+      ],
+      "audio_url": "https://d11rox2ve9bkk5.cloudfront.net/DEREK2.mp3",
+      "audio_url_source": "https://d11rox2ve9bkk5.cloudfront.net/DEREK2.mp3",
+      "audio_format_hint": "mp3"
+    },
+    {
+      "source_index": 13,
+      "display_index": 14,
+      "title": "FUCT MIX 007",
+      "date": "2025-03-11",
+      "date_display": "03.11.2025",
+      "genres": [
+        "ROOTS",
+        "REGGAE",
+        "DUB REGGAE"
+      ],
+      "image_gid": "gid://shopify/MediaImage/28419650945213",
+      "image_url": "https://cdn.shopify.com/s/files/1/2068/4441/files/REGGAEE_RADIO.jpg?v=1741720982",
+      "image_url_source": "https://cdn.shopify.com/s/files/1/2068/4441/files/REGGAEE_RADIO.jpg?v=1741720982",
+      "image_display_src": "https://cdn.shopify.com/s/files/1/2068/4441/files/REGGAEE_RADIO.jpg?v=1741720982&width=100&crop=center",
+      "image_srcset": [
+        {
+          "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/REGGAEE_RADIO.jpg?v=1741720982&width=200&crop=center",
+          "descriptor": "200w"
+        },
+        {
+          "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/REGGAEE_RADIO.jpg?v=1741720982&width=400&crop=center",
+          "descriptor": "400w"
+        },
+        {
+          "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/REGGAEE_RADIO.jpg?v=1741720982&width=600&crop=center",
+          "descriptor": "600w"
+        },
+        {
+          "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/REGGAEE_RADIO.jpg?v=1741720982&width=800&crop=center",
+          "descriptor": "800w"
+        },
+        {
+          "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/REGGAEE_RADIO.jpg?v=1741720982&width=1000&crop=center",
+          "descriptor": "1000w"
+        },
+        {
+          "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/REGGAEE_RADIO.jpg?v=1741720982&width=1200&crop=center",
+          "descriptor": "1200w"
+        },
+        {
+          "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/REGGAEE_RADIO.jpg?v=1741720982&width=1400&crop=center",
+          "descriptor": "1400w"
+        },
+        {
+          "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/REGGAEE_RADIO.jpg?v=1741720982&width=1600&crop=center",
+          "descriptor": "1600w"
+        },
+        {
+          "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/REGGAEE_RADIO.jpg?v=1741720982&width=1800&crop=center",
+          "descriptor": "1800w"
+        },
+        {
+          "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/REGGAEE_RADIO.jpg?v=1741720982&width=2000&crop=center",
+          "descriptor": "2000w"
+        },
+        {
+          "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/REGGAEE_RADIO.jpg?v=1741720982&width=2200&crop=center",
+          "descriptor": "2200w"
+        },
+        {
+          "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/REGGAEE_RADIO.jpg?v=1741720982&width=2400&crop=center",
+          "descriptor": "2400w"
+        },
+        {
+          "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/REGGAEE_RADIO.jpg?v=1741720982&width=2600&crop=center",
+          "descriptor": "2600w"
+        },
+        {
+          "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/REGGAEE_RADIO.jpg?v=1741720982&width=2800&crop=center",
+          "descriptor": "2800w"
+        },
+        {
+          "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/REGGAEE_RADIO.jpg?v=1741720982&width=3000&crop=center",
+          "descriptor": "3000w"
+        }
+      ],
+      "audio_url": "https://d11rox2ve9bkk5.cloudfront.net/App%20Recording%2020250311%201333.mp3",
+      "audio_url_source": "https://d11rox2ve9bkk5.cloudfront.net/App Recording 20250311 1333.mp3",
+      "audio_format_hint": "mp3"
+    },
+    {
+      "source_index": 12,
+      "display_index": 15,
+      "title": "GUEST MIX: BANKS VIOLETTE",
+      "date": "2024-09-13",
+      "date_display": "09.13.2024",
+      "genres": [
+        "Punk",
+        "Hardcore",
+        "Metal"
+      ],
+      "image_gid": "gid://shopify/MediaImage/27660264603837",
+      "image_url": "https://cdn.shopify.com/s/files/1/2068/4441/files/BANKS.jpg?v=1726252511",
+      "image_url_source": "https://cdn.shopify.com/s/files/1/2068/4441/files/BANKS.jpg?v=1726252511",
+      "image_display_src": "https://cdn.shopify.com/s/files/1/2068/4441/files/BANKS.jpg?v=1726252511&width=100&crop=center",
+      "image_srcset": [
+        {
+          "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/BANKS.jpg?v=1726252511&width=200&crop=center",
+          "descriptor": "200w"
+        },
+        {
+          "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/BANKS.jpg?v=1726252511&width=400&crop=center",
+          "descriptor": "400w"
+        },
+        {
+          "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/BANKS.jpg?v=1726252511&width=600&crop=center",
+          "descriptor": "600w"
+        },
+        {
+          "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/BANKS.jpg?v=1726252511&width=800&crop=center",
+          "descriptor": "800w"
+        },
+        {
+          "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/BANKS.jpg?v=1726252511&width=1000&crop=center",
+          "descriptor": "1000w"
+        },
+        {
+          "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/BANKS.jpg?v=1726252511&width=1200&crop=center",
+          "descriptor": "1200w"
+        },
+        {
+          "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/BANKS.jpg?v=1726252511&width=1400&crop=center",
+          "descriptor": "1400w"
+        },
+        {
+          "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/BANKS.jpg?v=1726252511&width=1600&crop=center",
+          "descriptor": "1600w"
+        },
+        {
+          "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/BANKS.jpg?v=1726252511&width=1800&crop=center",
+          "descriptor": "1800w"
+        },
+        {
+          "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/BANKS.jpg?v=1726252511&width=2000&crop=center",
+          "descriptor": "2000w"
+        },
+        {
+          "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/BANKS.jpg?v=1726252511&width=2200&crop=center",
+          "descriptor": "2200w"
+        },
+        {
+          "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/BANKS.jpg?v=1726252511&width=2400&crop=center",
+          "descriptor": "2400w"
+        },
+        {
+          "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/BANKS.jpg?v=1726252511&width=2600&crop=center",
+          "descriptor": "2600w"
+        },
+        {
+          "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/BANKS.jpg?v=1726252511&width=2800&crop=center",
+          "descriptor": "2800w"
+        },
+        {
+          "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/BANKS.jpg?v=1726252511&width=3000&crop=center",
+          "descriptor": "3000w"
+        }
+      ],
+      "audio_url": "https://d11rox2ve9bkk5.cloudfront.net/BV.wav",
+      "audio_url_source": "https://d11rox2ve9bkk5.cloudfront.net/BV.wav",
+      "audio_format_hint": "wav"
+    },
+    {
+      "source_index": 11,
+      "display_index": 16,
+      "title": "GUEST MIX: POPPY DAYDREAM by NATHANIEL MATTHEWS",
+      "date": "2024-07-19",
+      "date_display": "07.19.2024",
+      "genres": [
+        "BOSSA NOVA",
+        "INSTRUMENTAL BALLAD",
+        "VALSE SERENADE",
+        "EASY LISTENING"
+      ],
+      "image_gid": "gid://shopify/MediaImage/27459644391613",
+      "image_url": "https://cdn.shopify.com/s/files/1/2068/4441/files/POPPY_DAY_DREAM.jpg?v=1721435227",
+      "image_url_source": "https://cdn.shopify.com/s/files/1/2068/4441/files/POPPY_DAY_DREAM.jpg?v=1721435227",
+      "image_display_src": "https://cdn.shopify.com/s/files/1/2068/4441/files/POPPY_DAY_DREAM.jpg?v=1721435227&width=100&crop=center",
+      "image_srcset": [
+        {
+          "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/POPPY_DAY_DREAM.jpg?v=1721435227&width=200&crop=center",
+          "descriptor": "200w"
+        },
+        {
+          "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/POPPY_DAY_DREAM.jpg?v=1721435227&width=400&crop=center",
+          "descriptor": "400w"
+        },
+        {
+          "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/POPPY_DAY_DREAM.jpg?v=1721435227&width=600&crop=center",
+          "descriptor": "600w"
+        },
+        {
+          "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/POPPY_DAY_DREAM.jpg?v=1721435227&width=800&crop=center",
+          "descriptor": "800w"
+        },
+        {
+          "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/POPPY_DAY_DREAM.jpg?v=1721435227&width=1000&crop=center",
+          "descriptor": "1000w"
+        },
+        {
+          "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/POPPY_DAY_DREAM.jpg?v=1721435227&width=1200&crop=center",
+          "descriptor": "1200w"
+        },
+        {
+          "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/POPPY_DAY_DREAM.jpg?v=1721435227&width=1400&crop=center",
+          "descriptor": "1400w"
+        },
+        {
+          "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/POPPY_DAY_DREAM.jpg?v=1721435227&width=1600&crop=center",
+          "descriptor": "1600w"
+        },
+        {
+          "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/POPPY_DAY_DREAM.jpg?v=1721435227&width=1800&crop=center",
+          "descriptor": "1800w"
+        },
+        {
+          "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/POPPY_DAY_DREAM.jpg?v=1721435227&width=2000&crop=center",
+          "descriptor": "2000w"
+        },
+        {
+          "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/POPPY_DAY_DREAM.jpg?v=1721435227&width=2200&crop=center",
+          "descriptor": "2200w"
+        },
+        {
+          "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/POPPY_DAY_DREAM.jpg?v=1721435227&width=2400&crop=center",
+          "descriptor": "2400w"
+        },
+        {
+          "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/POPPY_DAY_DREAM.jpg?v=1721435227&width=2600&crop=center",
+          "descriptor": "2600w"
+        },
+        {
+          "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/POPPY_DAY_DREAM.jpg?v=1721435227&width=2800&crop=center",
+          "descriptor": "2800w"
+        },
+        {
+          "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/POPPY_DAY_DREAM.jpg?v=1721435227&width=3000&crop=center",
+          "descriptor": "3000w"
+        }
+      ],
+      "audio_url": "https://d11rox2ve9bkk5.cloudfront.net/NOT_NATHAN.wav",
+      "audio_url_source": "https://d11rox2ve9bkk5.cloudfront.net/NOT_NATHAN.wav",
+      "audio_format_hint": "wav"
+    },
+    {
+      "source_index": 10,
+      "display_index": 17,
+      "title": "GUEST MIX: BELLA",
+      "date": "2024-07-08",
+      "date_display": "07.08.2024",
+      "genres": [
+        "SHOEGAZE",
+        "INDIE",
+        "ROCK",
+        "POST-PUNK"
+      ],
+      "image_gid": "gid://shopify/MediaImage/27406466711741",
+      "image_url": "https://cdn.shopify.com/s/files/1/2068/4441/files/BELLA_FUCT_RADIO.jpg?v=1720466020",
+      "image_url_source": "https://cdn.shopify.com/s/files/1/2068/4441/files/BELLA_FUCT_RADIO.jpg?v=1720466020",
+      "image_display_src": "https://cdn.shopify.com/s/files/1/2068/4441/files/BELLA_FUCT_RADIO.jpg?v=1720466020&width=100&crop=center",
+      "image_srcset": [
+        {
+          "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/BELLA_FUCT_RADIO.jpg?v=1720466020&width=200&crop=center",
+          "descriptor": "200w"
+        },
+        {
+          "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/BELLA_FUCT_RADIO.jpg?v=1720466020&width=400&crop=center",
+          "descriptor": "400w"
+        },
+        {
+          "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/BELLA_FUCT_RADIO.jpg?v=1720466020&width=600&crop=center",
+          "descriptor": "600w"
+        },
+        {
+          "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/BELLA_FUCT_RADIO.jpg?v=1720466020&width=800&crop=center",
+          "descriptor": "800w"
+        },
+        {
+          "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/BELLA_FUCT_RADIO.jpg?v=1720466020&width=1000&crop=center",
+          "descriptor": "1000w"
+        },
+        {
+          "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/BELLA_FUCT_RADIO.jpg?v=1720466020&width=1200&crop=center",
+          "descriptor": "1200w"
+        },
+        {
+          "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/BELLA_FUCT_RADIO.jpg?v=1720466020&width=1400&crop=center",
+          "descriptor": "1400w"
+        },
+        {
+          "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/BELLA_FUCT_RADIO.jpg?v=1720466020&width=1600&crop=center",
+          "descriptor": "1600w"
+        },
+        {
+          "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/BELLA_FUCT_RADIO.jpg?v=1720466020&width=1800&crop=center",
+          "descriptor": "1800w"
+        },
+        {
+          "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/BELLA_FUCT_RADIO.jpg?v=1720466020&width=2000&crop=center",
+          "descriptor": "2000w"
+        },
+        {
+          "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/BELLA_FUCT_RADIO.jpg?v=1720466020&width=2200&crop=center",
+          "descriptor": "2200w"
+        },
+        {
+          "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/BELLA_FUCT_RADIO.jpg?v=1720466020&width=2400&crop=center",
+          "descriptor": "2400w"
+        },
+        {
+          "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/BELLA_FUCT_RADIO.jpg?v=1720466020&width=2600&crop=center",
+          "descriptor": "2600w"
+        },
+        {
+          "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/BELLA_FUCT_RADIO.jpg?v=1720466020&width=2800&crop=center",
+          "descriptor": "2800w"
+        },
+        {
+          "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/BELLA_FUCT_RADIO.jpg?v=1720466020&width=3000&crop=center",
+          "descriptor": "3000w"
+        }
+      ],
+      "audio_url": "https://d11rox2ve9bkk5.cloudfront.net/BELLA.wav",
+      "audio_url_source": "https://d11rox2ve9bkk5.cloudfront.net/BELLA.wav",
+      "audio_format_hint": "wav"
+    },
+    {
+      "source_index": 9,
+      "display_index": 18,
+      "title": "GUEST MIX: PAISA BOYS",
+      "date": "2024-06-28",
+      "date_display": "06.28.2024",
+      "genres": [
+        "NARCOCORRIDO",
+        "RANCHERA",
+        "BANDA",
+        "CORRIDO",
+        "BALLAD"
+      ],
+      "image_gid": "gid://shopify/MediaImage/27365235163325",
+      "image_url": "https://cdn.shopify.com/s/files/1/2068/4441/files/PAISABOYS.jpg?v=1719601113",
+      "image_url_source": "https://cdn.shopify.com/s/files/1/2068/4441/files/PAISABOYS.jpg?v=1719601113",
+      "image_display_src": "https://cdn.shopify.com/s/files/1/2068/4441/files/PAISABOYS.jpg?v=1719601113&width=100&crop=center",
+      "image_srcset": [
+        {
+          "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/PAISABOYS.jpg?v=1719601113&width=200&crop=center",
+          "descriptor": "200w"
+        },
+        {
+          "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/PAISABOYS.jpg?v=1719601113&width=400&crop=center",
+          "descriptor": "400w"
+        },
+        {
+          "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/PAISABOYS.jpg?v=1719601113&width=600&crop=center",
+          "descriptor": "600w"
+        },
+        {
+          "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/PAISABOYS.jpg?v=1719601113&width=800&crop=center",
+          "descriptor": "800w"
+        },
+        {
+          "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/PAISABOYS.jpg?v=1719601113&width=1000&crop=center",
+          "descriptor": "1000w"
+        },
+        {
+          "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/PAISABOYS.jpg?v=1719601113&width=1200&crop=center",
+          "descriptor": "1200w"
+        },
+        {
+          "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/PAISABOYS.jpg?v=1719601113&width=1400&crop=center",
+          "descriptor": "1400w"
+        },
+        {
+          "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/PAISABOYS.jpg?v=1719601113&width=1600&crop=center",
+          "descriptor": "1600w"
+        },
+        {
+          "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/PAISABOYS.jpg?v=1719601113&width=1800&crop=center",
+          "descriptor": "1800w"
+        },
+        {
+          "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/PAISABOYS.jpg?v=1719601113&width=2000&crop=center",
+          "descriptor": "2000w"
+        },
+        {
+          "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/PAISABOYS.jpg?v=1719601113&width=2200&crop=center",
+          "descriptor": "2200w"
+        },
+        {
+          "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/PAISABOYS.jpg?v=1719601113&width=2400&crop=center",
+          "descriptor": "2400w"
+        },
+        {
+          "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/PAISABOYS.jpg?v=1719601113&width=2600&crop=center",
+          "descriptor": "2600w"
+        },
+        {
+          "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/PAISABOYS.jpg?v=1719601113&width=2800&crop=center",
+          "descriptor": "2800w"
+        },
+        {
+          "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/PAISABOYS.jpg?v=1719601113&width=3000&crop=center",
+          "descriptor": "3000w"
+        }
+      ],
+      "audio_url": "https://d11rox2ve9bkk5.cloudfront.net/paisa.wav",
+      "audio_url_source": "https://d11rox2ve9bkk5.cloudfront.net/paisa.wav",
+      "audio_format_hint": "wav"
+    },
+    {
+      "source_index": 8,
+      "display_index": 19,
+      "title": "FUCT MIX 006 DC HARDCORE",
+      "date": "2024-05-30",
+      "date_display": "05.30.2024",
+      "genres": [
+        "PUNK",
+        "HARDCORE"
+      ],
+      "image_gid": "gid://shopify/MediaImage/27167514984637",
+      "image_url": "https://cdn.shopify.com/s/files/1/2068/4441/files/DCHARDCORE.jpg?v=1717120695",
+      "image_url_source": "https://cdn.shopify.com/s/files/1/2068/4441/files/DCHARDCORE.jpg?v=1717120695",
+      "image_display_src": "https://cdn.shopify.com/s/files/1/2068/4441/files/DCHARDCORE.jpg?v=1717120695&width=100&crop=center",
+      "image_srcset": [
+        {
+          "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/DCHARDCORE.jpg?v=1717120695&width=200&crop=center",
+          "descriptor": "200w"
+        },
+        {
+          "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/DCHARDCORE.jpg?v=1717120695&width=400&crop=center",
+          "descriptor": "400w"
+        },
+        {
+          "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/DCHARDCORE.jpg?v=1717120695&width=600&crop=center",
+          "descriptor": "600w"
+        },
+        {
+          "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/DCHARDCORE.jpg?v=1717120695&width=800&crop=center",
+          "descriptor": "800w"
+        },
+        {
+          "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/DCHARDCORE.jpg?v=1717120695&width=1000&crop=center",
+          "descriptor": "1000w"
+        },
+        {
+          "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/DCHARDCORE.jpg?v=1717120695&width=1200&crop=center",
+          "descriptor": "1200w"
+        },
+        {
+          "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/DCHARDCORE.jpg?v=1717120695&width=1400&crop=center",
+          "descriptor": "1400w"
+        },
+        {
+          "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/DCHARDCORE.jpg?v=1717120695&width=1600&crop=center",
+          "descriptor": "1600w"
+        },
+        {
+          "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/DCHARDCORE.jpg?v=1717120695&width=1800&crop=center",
+          "descriptor": "1800w"
+        },
+        {
+          "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/DCHARDCORE.jpg?v=1717120695&width=2000&crop=center",
+          "descriptor": "2000w"
+        },
+        {
+          "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/DCHARDCORE.jpg?v=1717120695&width=2200&crop=center",
+          "descriptor": "2200w"
+        },
+        {
+          "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/DCHARDCORE.jpg?v=1717120695&width=2400&crop=center",
+          "descriptor": "2400w"
+        },
+        {
+          "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/DCHARDCORE.jpg?v=1717120695&width=2600&crop=center",
+          "descriptor": "2600w"
+        },
+        {
+          "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/DCHARDCORE.jpg?v=1717120695&width=2800&crop=center",
+          "descriptor": "2800w"
+        },
+        {
+          "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/DCHARDCORE.jpg?v=1717120695&width=3000&crop=center",
+          "descriptor": "3000w"
+        }
+      ],
+      "audio_url": "https://d11rox2ve9bkk5.cloudfront.net/DCHARDCORE.wav",
+      "audio_url_source": "https://d11rox2ve9bkk5.cloudfront.net/DCHARDCORE.wav",
+      "audio_format_hint": "wav"
+    },
+    {
+      "source_index": 7,
+      "display_index": 20,
+      "title": "GUEST MIX: GIORGIO DI SALVO",
+      "date": "2024-05-22",
+      "date_display": "05.22.2024",
+      "genres": [
+        "ART ROCK",
+        "TRIP HOP",
+        "ELECTRONIC"
+      ],
+      "image_gid": "gid://shopify/MediaImage/27106168733885",
+      "image_url": "https://cdn.shopify.com/s/files/1/2068/4441/files/BENEBENE.jpg?v=1716429578",
+      "image_url_source": "https://cdn.shopify.com/s/files/1/2068/4441/files/BENEBENE.jpg?v=1716429578",
+      "image_display_src": "https://cdn.shopify.com/s/files/1/2068/4441/files/BENEBENE.jpg?v=1716429578&width=100&crop=center",
+      "image_srcset": [
+        {
+          "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/BENEBENE.jpg?v=1716429578&width=200&crop=center",
+          "descriptor": "200w"
+        },
+        {
+          "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/BENEBENE.jpg?v=1716429578&width=400&crop=center",
+          "descriptor": "400w"
+        },
+        {
+          "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/BENEBENE.jpg?v=1716429578&width=600&crop=center",
+          "descriptor": "600w"
+        },
+        {
+          "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/BENEBENE.jpg?v=1716429578&width=800&crop=center",
+          "descriptor": "800w"
+        },
+        {
+          "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/BENEBENE.jpg?v=1716429578&width=1000&crop=center",
+          "descriptor": "1000w"
+        },
+        {
+          "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/BENEBENE.jpg?v=1716429578&width=1200&crop=center",
+          "descriptor": "1200w"
+        },
+        {
+          "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/BENEBENE.jpg?v=1716429578&width=1400&crop=center",
+          "descriptor": "1400w"
+        },
+        {
+          "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/BENEBENE.jpg?v=1716429578&width=1600&crop=center",
+          "descriptor": "1600w"
+        },
+        {
+          "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/BENEBENE.jpg?v=1716429578&width=1800&crop=center",
+          "descriptor": "1800w"
+        },
+        {
+          "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/BENEBENE.jpg?v=1716429578&width=2000&crop=center",
+          "descriptor": "2000w"
+        },
+        {
+          "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/BENEBENE.jpg?v=1716429578&width=2200&crop=center",
+          "descriptor": "2200w"
+        },
+        {
+          "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/BENEBENE.jpg?v=1716429578&width=2400&crop=center",
+          "descriptor": "2400w"
+        },
+        {
+          "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/BENEBENE.jpg?v=1716429578&width=2600&crop=center",
+          "descriptor": "2600w"
+        },
+        {
+          "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/BENEBENE.jpg?v=1716429578&width=2800&crop=center",
+          "descriptor": "2800w"
+        },
+        {
+          "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/BENEBENE.jpg?v=1716429578&width=3000&crop=center",
+          "descriptor": "3000w"
+        }
+      ],
+      "audio_url": "https://d11rox2ve9bkk5.cloudfront.net/BENEBENE.wav",
+      "audio_url_source": "https://d11rox2ve9bkk5.cloudfront.net/BENEBENE.wav",
+      "audio_format_hint": "wav"
+    },
+    {
+      "source_index": 6,
+      "display_index": 21,
+      "title": "FUCT MIX 005",
+      "date": "2024-05-14",
+      "date_display": "05.14.2024",
+      "genres": [
+        "OUTLAW COUNTRY",
+        "BLUEGRASS",
+        "COUNTRY"
+      ],
+      "image_gid": "gid://shopify/MediaImage/27057018306749",
+      "image_url": "https://cdn.shopify.com/s/files/1/2068/4441/files/Screen_Shot_2024-05-14_at_7.20.34_PM.png?v=1715728906",
+      "image_url_source": "https://cdn.shopify.com/s/files/1/2068/4441/files/Screen_Shot_2024-05-14_at_7.20.34_PM.png?v=1715728906",
+      "image_display_src": "https://cdn.shopify.com/s/files/1/2068/4441/files/Screen_Shot_2024-05-14_at_7.20.34_PM.png?v=1715728906&width=100&crop=center",
+      "image_srcset": [
+        {
+          "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/Screen_Shot_2024-05-14_at_7.20.34_PM.png?v=1715728906&width=200&crop=center",
+          "descriptor": "200w"
+        },
+        {
+          "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/Screen_Shot_2024-05-14_at_7.20.34_PM.png?v=1715728906&width=400&crop=center",
+          "descriptor": "400w"
+        },
+        {
+          "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/Screen_Shot_2024-05-14_at_7.20.34_PM.png?v=1715728906&width=600&crop=center",
+          "descriptor": "600w"
+        },
+        {
+          "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/Screen_Shot_2024-05-14_at_7.20.34_PM.png?v=1715728906&width=800&crop=center",
+          "descriptor": "800w"
+        },
+        {
+          "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/Screen_Shot_2024-05-14_at_7.20.34_PM.png?v=1715728906&width=1000&crop=center",
+          "descriptor": "1000w"
+        },
+        {
+          "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/Screen_Shot_2024-05-14_at_7.20.34_PM.png?v=1715728906&width=1200&crop=center",
+          "descriptor": "1200w"
+        },
+        {
+          "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/Screen_Shot_2024-05-14_at_7.20.34_PM.png?v=1715728906&width=1400&crop=center",
+          "descriptor": "1400w"
+        },
+        {
+          "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/Screen_Shot_2024-05-14_at_7.20.34_PM.png?v=1715728906&width=1600&crop=center",
+          "descriptor": "1600w"
+        },
+        {
+          "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/Screen_Shot_2024-05-14_at_7.20.34_PM.png?v=1715728906&width=1800&crop=center",
+          "descriptor": "1800w"
+        },
+        {
+          "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/Screen_Shot_2024-05-14_at_7.20.34_PM.png?v=1715728906&width=2000&crop=center",
+          "descriptor": "2000w"
+        },
+        {
+          "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/Screen_Shot_2024-05-14_at_7.20.34_PM.png?v=1715728906&width=2200&crop=center",
+          "descriptor": "2200w"
+        },
+        {
+          "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/Screen_Shot_2024-05-14_at_7.20.34_PM.png?v=1715728906&width=2400&crop=center",
+          "descriptor": "2400w"
+        },
+        {
+          "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/Screen_Shot_2024-05-14_at_7.20.34_PM.png?v=1715728906&width=2600&crop=center",
+          "descriptor": "2600w"
+        },
+        {
+          "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/Screen_Shot_2024-05-14_at_7.20.34_PM.png?v=1715728906&width=2800&crop=center",
+          "descriptor": "2800w"
+        },
+        {
+          "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/Screen_Shot_2024-05-14_at_7.20.34_PM.png?v=1715728906&width=3000&crop=center",
+          "descriptor": "3000w"
+        }
+      ],
+      "audio_url": "https://d11rox2ve9bkk5.cloudfront.net/OUTLAW.wav",
+      "audio_url_source": "https://d11rox2ve9bkk5.cloudfront.net/OUTLAW.wav",
+      "audio_format_hint": "wav"
+    },
+    {
+      "source_index": 5,
+      "display_index": 22,
+      "title": "GUEST MIX: SOLDIER",
+      "date": "2024-04-20",
+      "date_display": "04.20.2024",
+      "genres": [
+        "HIP HOP",
+        "SOUL",
+        "INDIE",
+        "TRAP"
+      ],
+      "image_gid": "gid://shopify/MediaImage/26913822245053",
+      "image_url": "https://cdn.shopify.com/s/files/1/2068/4441/files/SOLDIER_a407e057-82fc-4856-9dd5-1a66229ac92b.jpg?v=1713628248",
+      "image_url_source": "https://cdn.shopify.com/s/files/1/2068/4441/files/SOLDIER_a407e057-82fc-4856-9dd5-1a66229ac92b.jpg?v=1713628248",
+      "image_display_src": "https://cdn.shopify.com/s/files/1/2068/4441/files/SOLDIER_a407e057-82fc-4856-9dd5-1a66229ac92b.jpg?v=1713628248&width=100&crop=center",
+      "image_srcset": [
+        {
+          "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/SOLDIER_a407e057-82fc-4856-9dd5-1a66229ac92b.jpg?v=1713628248&width=200&crop=center",
+          "descriptor": "200w"
+        },
+        {
+          "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/SOLDIER_a407e057-82fc-4856-9dd5-1a66229ac92b.jpg?v=1713628248&width=400&crop=center",
+          "descriptor": "400w"
+        },
+        {
+          "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/SOLDIER_a407e057-82fc-4856-9dd5-1a66229ac92b.jpg?v=1713628248&width=600&crop=center",
+          "descriptor": "600w"
+        },
+        {
+          "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/SOLDIER_a407e057-82fc-4856-9dd5-1a66229ac92b.jpg?v=1713628248&width=800&crop=center",
+          "descriptor": "800w"
+        },
+        {
+          "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/SOLDIER_a407e057-82fc-4856-9dd5-1a66229ac92b.jpg?v=1713628248&width=1000&crop=center",
+          "descriptor": "1000w"
+        },
+        {
+          "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/SOLDIER_a407e057-82fc-4856-9dd5-1a66229ac92b.jpg?v=1713628248&width=1200&crop=center",
+          "descriptor": "1200w"
+        },
+        {
+          "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/SOLDIER_a407e057-82fc-4856-9dd5-1a66229ac92b.jpg?v=1713628248&width=1400&crop=center",
+          "descriptor": "1400w"
+        },
+        {
+          "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/SOLDIER_a407e057-82fc-4856-9dd5-1a66229ac92b.jpg?v=1713628248&width=1600&crop=center",
+          "descriptor": "1600w"
+        },
+        {
+          "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/SOLDIER_a407e057-82fc-4856-9dd5-1a66229ac92b.jpg?v=1713628248&width=1800&crop=center",
+          "descriptor": "1800w"
+        },
+        {
+          "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/SOLDIER_a407e057-82fc-4856-9dd5-1a66229ac92b.jpg?v=1713628248&width=2000&crop=center",
+          "descriptor": "2000w"
+        },
+        {
+          "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/SOLDIER_a407e057-82fc-4856-9dd5-1a66229ac92b.jpg?v=1713628248&width=2200&crop=center",
+          "descriptor": "2200w"
+        },
+        {
+          "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/SOLDIER_a407e057-82fc-4856-9dd5-1a66229ac92b.jpg?v=1713628248&width=2400&crop=center",
+          "descriptor": "2400w"
+        },
+        {
+          "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/SOLDIER_a407e057-82fc-4856-9dd5-1a66229ac92b.jpg?v=1713628248&width=2600&crop=center",
+          "descriptor": "2600w"
+        },
+        {
+          "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/SOLDIER_a407e057-82fc-4856-9dd5-1a66229ac92b.jpg?v=1713628248&width=2800&crop=center",
+          "descriptor": "2800w"
+        },
+        {
+          "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/SOLDIER_a407e057-82fc-4856-9dd5-1a66229ac92b.jpg?v=1713628248&width=3000&crop=center",
+          "descriptor": "3000w"
+        }
+      ],
+      "audio_url": "https://d11rox2ve9bkk5.cloudfront.net/REC-2024-04-12.wav",
+      "audio_url_source": "https://d11rox2ve9bkk5.cloudfront.net/REC-2024-04-12.wav",
+      "audio_format_hint": "wav"
+    },
+    {
+      "source_index": 4,
+      "display_index": 23,
+      "title": "GUEST MIX: EYEDRESS",
+      "date": "2024-04-05",
+      "date_display": "04.05.2024",
+      "genres": [
+        "SHOEGAZE ",
+        "PUNK",
+        "NO WAVE",
+        "SOUL"
+      ],
+      "image_gid": "gid://shopify/MediaImage/26789666816189",
+      "image_url": "https://cdn.shopify.com/s/files/1/2068/4441/files/EYEDDRESS_b85120ff-fbe7-4d49-abc4-47a6498237ce.jpg?v=1712341425",
+      "image_url_source": "https://cdn.shopify.com/s/files/1/2068/4441/files/EYEDDRESS_b85120ff-fbe7-4d49-abc4-47a6498237ce.jpg?v=1712341425",
+      "image_display_src": "https://cdn.shopify.com/s/files/1/2068/4441/files/EYEDDRESS_b85120ff-fbe7-4d49-abc4-47a6498237ce.jpg?v=1712341425&width=100&crop=center",
+      "image_srcset": [
+        {
+          "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/EYEDDRESS_b85120ff-fbe7-4d49-abc4-47a6498237ce.jpg?v=1712341425&width=200&crop=center",
+          "descriptor": "200w"
+        },
+        {
+          "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/EYEDDRESS_b85120ff-fbe7-4d49-abc4-47a6498237ce.jpg?v=1712341425&width=400&crop=center",
+          "descriptor": "400w"
+        },
+        {
+          "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/EYEDDRESS_b85120ff-fbe7-4d49-abc4-47a6498237ce.jpg?v=1712341425&width=600&crop=center",
+          "descriptor": "600w"
+        },
+        {
+          "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/EYEDDRESS_b85120ff-fbe7-4d49-abc4-47a6498237ce.jpg?v=1712341425&width=800&crop=center",
+          "descriptor": "800w"
+        },
+        {
+          "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/EYEDDRESS_b85120ff-fbe7-4d49-abc4-47a6498237ce.jpg?v=1712341425&width=1000&crop=center",
+          "descriptor": "1000w"
+        },
+        {
+          "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/EYEDDRESS_b85120ff-fbe7-4d49-abc4-47a6498237ce.jpg?v=1712341425&width=1200&crop=center",
+          "descriptor": "1200w"
+        },
+        {
+          "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/EYEDDRESS_b85120ff-fbe7-4d49-abc4-47a6498237ce.jpg?v=1712341425&width=1400&crop=center",
+          "descriptor": "1400w"
+        },
+        {
+          "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/EYEDDRESS_b85120ff-fbe7-4d49-abc4-47a6498237ce.jpg?v=1712341425&width=1600&crop=center",
+          "descriptor": "1600w"
+        },
+        {
+          "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/EYEDDRESS_b85120ff-fbe7-4d49-abc4-47a6498237ce.jpg?v=1712341425&width=1800&crop=center",
+          "descriptor": "1800w"
+        },
+        {
+          "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/EYEDDRESS_b85120ff-fbe7-4d49-abc4-47a6498237ce.jpg?v=1712341425&width=2000&crop=center",
+          "descriptor": "2000w"
+        },
+        {
+          "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/EYEDDRESS_b85120ff-fbe7-4d49-abc4-47a6498237ce.jpg?v=1712341425&width=2200&crop=center",
+          "descriptor": "2200w"
+        },
+        {
+          "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/EYEDDRESS_b85120ff-fbe7-4d49-abc4-47a6498237ce.jpg?v=1712341425&width=2400&crop=center",
+          "descriptor": "2400w"
+        },
+        {
+          "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/EYEDDRESS_b85120ff-fbe7-4d49-abc4-47a6498237ce.jpg?v=1712341425&width=2600&crop=center",
+          "descriptor": "2600w"
+        },
+        {
+          "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/EYEDDRESS_b85120ff-fbe7-4d49-abc4-47a6498237ce.jpg?v=1712341425&width=2800&crop=center",
+          "descriptor": "2800w"
+        },
+        {
+          "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/EYEDDRESS_b85120ff-fbe7-4d49-abc4-47a6498237ce.jpg?v=1712341425&width=3000&crop=center",
+          "descriptor": "3000w"
+        }
+      ],
+      "audio_url": "https://d11rox2ve9bkk5.cloudfront.net/eyedress.wav",
+      "audio_url_source": "https://d11rox2ve9bkk5.cloudfront.net/eyedress.wav",
+      "audio_format_hint": "wav"
+    },
+    {
+      "source_index": 3,
+      "display_index": 24,
+      "title": "FUCT MIX 004",
+      "date": "2024-03-23",
+      "date_display": "03.23.2024",
+      "genres": [
+        "SALSA",
+        "CHARANGA",
+        "SON CUBANO"
+      ],
+      "image_gid": "gid://shopify/MediaImage/26715503624381",
+      "image_url": "https://cdn.shopify.com/s/files/1/2068/4441/files/SALSA_MIX.jpg?v=1711235811",
+      "image_url_source": "https://cdn.shopify.com/s/files/1/2068/4441/files/SALSA_MIX.jpg?v=1711235811",
+      "image_display_src": "https://cdn.shopify.com/s/files/1/2068/4441/files/SALSA_MIX.jpg?v=1711235811&width=100&crop=center",
+      "image_srcset": [
+        {
+          "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/SALSA_MIX.jpg?v=1711235811&width=200&crop=center",
+          "descriptor": "200w"
+        },
+        {
+          "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/SALSA_MIX.jpg?v=1711235811&width=400&crop=center",
+          "descriptor": "400w"
+        },
+        {
+          "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/SALSA_MIX.jpg?v=1711235811&width=600&crop=center",
+          "descriptor": "600w"
+        },
+        {
+          "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/SALSA_MIX.jpg?v=1711235811&width=800&crop=center",
+          "descriptor": "800w"
+        },
+        {
+          "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/SALSA_MIX.jpg?v=1711235811&width=1000&crop=center",
+          "descriptor": "1000w"
+        },
+        {
+          "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/SALSA_MIX.jpg?v=1711235811&width=1200&crop=center",
+          "descriptor": "1200w"
+        },
+        {
+          "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/SALSA_MIX.jpg?v=1711235811&width=1400&crop=center",
+          "descriptor": "1400w"
+        },
+        {
+          "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/SALSA_MIX.jpg?v=1711235811&width=1600&crop=center",
+          "descriptor": "1600w"
+        },
+        {
+          "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/SALSA_MIX.jpg?v=1711235811&width=1800&crop=center",
+          "descriptor": "1800w"
+        },
+        {
+          "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/SALSA_MIX.jpg?v=1711235811&width=2000&crop=center",
+          "descriptor": "2000w"
+        },
+        {
+          "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/SALSA_MIX.jpg?v=1711235811&width=2200&crop=center",
+          "descriptor": "2200w"
+        },
+        {
+          "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/SALSA_MIX.jpg?v=1711235811&width=2400&crop=center",
+          "descriptor": "2400w"
+        },
+        {
+          "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/SALSA_MIX.jpg?v=1711235811&width=2600&crop=center",
+          "descriptor": "2600w"
+        },
+        {
+          "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/SALSA_MIX.jpg?v=1711235811&width=2800&crop=center",
+          "descriptor": "2800w"
+        },
+        {
+          "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/SALSA_MIX.jpg?v=1711235811&width=3000&crop=center",
+          "descriptor": "3000w"
+        }
+      ],
+      "audio_url": "https://d11rox2ve9bkk5.cloudfront.net/FUCT_MIX_004.wav",
+      "audio_url_source": "https://d11rox2ve9bkk5.cloudfront.net/FUCT_MIX_004.wav",
+      "audio_format_hint": "wav"
+    },
+    {
+      "source_index": 2,
+      "display_index": 25,
+      "title": "FUCT MIX 003",
+      "date": "2024-03-21",
+      "date_display": "03.21.2024",
+      "genres": [
+        "BLACK METAL",
+        "DEATH METAL",
+        "THRASH"
+      ],
+      "image_gid": "gid://shopify/MediaImage/26707805995197",
+      "image_url": "https://cdn.shopify.com/s/files/1/2068/4441/files/IMG_4378.heic?v=1711070856",
+      "image_url_source": "https://cdn.shopify.com/s/files/1/2068/4441/files/IMG_4378.heic?v=1711070856",
+      "image_display_src": "https://cdn.shopify.com/s/files/1/2068/4441/files/IMG_4378.heic?v=1711070856&width=100&crop=center",
+      "image_srcset": [
+        {
+          "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/IMG_4378.heic?v=1711070856&width=200&crop=center",
+          "descriptor": "200w"
+        },
+        {
+          "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/IMG_4378.heic?v=1711070856&width=400&crop=center",
+          "descriptor": "400w"
+        },
+        {
+          "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/IMG_4378.heic?v=1711070856&width=600&crop=center",
+          "descriptor": "600w"
+        },
+        {
+          "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/IMG_4378.heic?v=1711070856&width=800&crop=center",
+          "descriptor": "800w"
+        },
+        {
+          "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/IMG_4378.heic?v=1711070856&width=1000&crop=center",
+          "descriptor": "1000w"
+        },
+        {
+          "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/IMG_4378.heic?v=1711070856&width=1200&crop=center",
+          "descriptor": "1200w"
+        },
+        {
+          "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/IMG_4378.heic?v=1711070856&width=1400&crop=center",
+          "descriptor": "1400w"
+        },
+        {
+          "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/IMG_4378.heic?v=1711070856&width=1600&crop=center",
+          "descriptor": "1600w"
+        },
+        {
+          "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/IMG_4378.heic?v=1711070856&width=1800&crop=center",
+          "descriptor": "1800w"
+        },
+        {
+          "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/IMG_4378.heic?v=1711070856&width=2000&crop=center",
+          "descriptor": "2000w"
+        },
+        {
+          "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/IMG_4378.heic?v=1711070856&width=2200&crop=center",
+          "descriptor": "2200w"
+        },
+        {
+          "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/IMG_4378.heic?v=1711070856&width=2400&crop=center",
+          "descriptor": "2400w"
+        },
+        {
+          "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/IMG_4378.heic?v=1711070856&width=2600&crop=center",
+          "descriptor": "2600w"
+        },
+        {
+          "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/IMG_4378.heic?v=1711070856&width=2800&crop=center",
+          "descriptor": "2800w"
+        },
+        {
+          "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/IMG_4378.heic?v=1711070856&width=3000&crop=center",
+          "descriptor": "3000w"
+        }
+      ],
+      "audio_url": "https://d11rox2ve9bkk5.cloudfront.net/MIX_003.wav",
+      "audio_url_source": "https://d11rox2ve9bkk5.cloudfront.net/MIX_003.wav",
+      "audio_format_hint": "wav"
+    },
+    {
+      "source_index": 1,
+      "display_index": 26,
+      "title": "FUCT MIX 002",
+      "date": "2024-03-18",
+      "date_display": "03.18.2024",
+      "genres": [
+        "HOUSE",
+        "DEEP HOUSE"
+      ],
+      "image_gid": "gid://shopify/MediaImage/26694832357565",
+      "image_url": "https://cdn.shopify.com/s/files/1/2068/4441/files/AFTERHOUR_RADIO.jpg?v=1710798625",
+      "image_url_source": "https://cdn.shopify.com/s/files/1/2068/4441/files/AFTERHOUR_RADIO.jpg?v=1710798625",
+      "image_display_src": "https://cdn.shopify.com/s/files/1/2068/4441/files/AFTERHOUR_RADIO.jpg?v=1710798625&width=100&crop=center",
+      "image_srcset": [
+        {
+          "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/AFTERHOUR_RADIO.jpg?v=1710798625&width=200&crop=center",
+          "descriptor": "200w"
+        },
+        {
+          "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/AFTERHOUR_RADIO.jpg?v=1710798625&width=400&crop=center",
+          "descriptor": "400w"
+        },
+        {
+          "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/AFTERHOUR_RADIO.jpg?v=1710798625&width=600&crop=center",
+          "descriptor": "600w"
+        },
+        {
+          "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/AFTERHOUR_RADIO.jpg?v=1710798625&width=800&crop=center",
+          "descriptor": "800w"
+        },
+        {
+          "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/AFTERHOUR_RADIO.jpg?v=1710798625&width=1000&crop=center",
+          "descriptor": "1000w"
+        },
+        {
+          "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/AFTERHOUR_RADIO.jpg?v=1710798625&width=1200&crop=center",
+          "descriptor": "1200w"
+        },
+        {
+          "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/AFTERHOUR_RADIO.jpg?v=1710798625&width=1400&crop=center",
+          "descriptor": "1400w"
+        },
+        {
+          "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/AFTERHOUR_RADIO.jpg?v=1710798625&width=1600&crop=center",
+          "descriptor": "1600w"
+        },
+        {
+          "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/AFTERHOUR_RADIO.jpg?v=1710798625&width=1800&crop=center",
+          "descriptor": "1800w"
+        },
+        {
+          "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/AFTERHOUR_RADIO.jpg?v=1710798625&width=2000&crop=center",
+          "descriptor": "2000w"
+        },
+        {
+          "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/AFTERHOUR_RADIO.jpg?v=1710798625&width=2200&crop=center",
+          "descriptor": "2200w"
+        },
+        {
+          "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/AFTERHOUR_RADIO.jpg?v=1710798625&width=2400&crop=center",
+          "descriptor": "2400w"
+        },
+        {
+          "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/AFTERHOUR_RADIO.jpg?v=1710798625&width=2600&crop=center",
+          "descriptor": "2600w"
+        },
+        {
+          "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/AFTERHOUR_RADIO.jpg?v=1710798625&width=2800&crop=center",
+          "descriptor": "2800w"
+        },
+        {
+          "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/AFTERHOUR_RADIO.jpg?v=1710798625&width=3000&crop=center",
+          "descriptor": "3000w"
+        }
+      ],
+      "audio_url": "https://d11rox2ve9bkk5.cloudfront.net/01%20MIX_002.wav",
+      "audio_url_source": "https://d11rox2ve9bkk5.cloudfront.net/01 MIX_002.wav",
+      "audio_format_hint": "wav"
+    },
+    {
+      "source_index": 0,
+      "display_index": 27,
+      "title": "FUCT MIX 001",
+      "date": "2024-03-08",
+      "date_display": "03.08.2024",
+      "genres": [
+        "HARDCORE",
+        "PUNK"
+      ],
+      "image_gid": "gid://shopify/MediaImage/26647792746685",
+      "image_url": "https://cdn.shopify.com/s/files/1/2068/4441/files/IMG_4160.heic?v=1709768347",
+      "image_url_source": "https://cdn.shopify.com/s/files/1/2068/4441/files/IMG_4160.heic?v=1709768347",
+      "image_display_src": "https://cdn.shopify.com/s/files/1/2068/4441/files/IMG_4160.heic?v=1709768347&width=100&crop=center",
+      "image_srcset": [
+        {
+          "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/IMG_4160.heic?v=1709768347&width=200&crop=center",
+          "descriptor": "200w"
+        },
+        {
+          "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/IMG_4160.heic?v=1709768347&width=400&crop=center",
+          "descriptor": "400w"
+        },
+        {
+          "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/IMG_4160.heic?v=1709768347&width=600&crop=center",
+          "descriptor": "600w"
+        },
+        {
+          "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/IMG_4160.heic?v=1709768347&width=800&crop=center",
+          "descriptor": "800w"
+        },
+        {
+          "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/IMG_4160.heic?v=1709768347&width=1000&crop=center",
+          "descriptor": "1000w"
+        },
+        {
+          "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/IMG_4160.heic?v=1709768347&width=1200&crop=center",
+          "descriptor": "1200w"
+        },
+        {
+          "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/IMG_4160.heic?v=1709768347&width=1400&crop=center",
+          "descriptor": "1400w"
+        },
+        {
+          "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/IMG_4160.heic?v=1709768347&width=1600&crop=center",
+          "descriptor": "1600w"
+        },
+        {
+          "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/IMG_4160.heic?v=1709768347&width=1800&crop=center",
+          "descriptor": "1800w"
+        },
+        {
+          "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/IMG_4160.heic?v=1709768347&width=2000&crop=center",
+          "descriptor": "2000w"
+        },
+        {
+          "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/IMG_4160.heic?v=1709768347&width=2200&crop=center",
+          "descriptor": "2200w"
+        },
+        {
+          "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/IMG_4160.heic?v=1709768347&width=2400&crop=center",
+          "descriptor": "2400w"
+        },
+        {
+          "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/IMG_4160.heic?v=1709768347&width=2600&crop=center",
+          "descriptor": "2600w"
+        },
+        {
+          "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/IMG_4160.heic?v=1709768347&width=2800&crop=center",
+          "descriptor": "2800w"
+        },
+        {
+          "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/IMG_4160.heic?v=1709768347&width=3000&crop=center",
+          "descriptor": "3000w"
+        }
+      ],
+      "audio_url": "https://d11rox2ve9bkk5.cloudfront.net/MIX_001_HARDCORE.wav",
+      "audio_url_source": "https://d11rox2ve9bkk5.cloudfront.net/MIX_001_HARDCORE.wav ",
+      "audio_format_hint": "wav"
+    }
+  ]
+}

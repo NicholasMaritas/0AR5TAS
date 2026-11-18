@@ -1,0 +1,70 @@
+{
+  "date": "2026-11-18",
+  "status": "code and local browser verified; repository publication pending",
+  "automated": {
+    "syntax": "Native module and all exact reference JavaScript passed node --check.",
+    "controller_tests": {
+      "command": "node --test radio-player.test.mjs",
+      "passed": 7,
+      "failed": 0,
+      "coverage": [
+        "Paused initial source and selected-track playback.",
+        "Collapse keeps playback; same selection pauses without reload.",
+        "Obsolete play rejection cannot stop the new mix.",
+        "Explicit pause wins over pending play rejection.",
+        "Autoplay refusal feedback and retry recovery.",
+        "Finite progress and natural end without auto-advance.",
+        "Destroy releases source and suppresses late callbacks."
+      ]
+    }
+  },
+  "data": {
+    "tracks": 28,
+    "audio_formats": {
+      "wav": 13,
+      "mp3": 15
+    },
+    "rendered_order_matches_reversed_loader": true,
+    "audio_urls_unique": 28
+  },
+  "asset_checks": {
+    "head_requests": 505,
+    "successful": 505,
+    "audio": 28,
+    "covers": 476,
+    "range_probe": "Kenny Hoopla MP3206;256bytes read;Content-Range bytes0-255/63204316."
+  },
+  "browser": {
+    "source_and_local_viewports": [
+      [
+        1180,
+        757
+      ],
+      [
+        1352,
+        797
+      ],
+      [
+        500,
+        797
+      ]
+    ],
+    "geometry": "Source/local artwork CTA, first card, title/metadata and fixed player bounds matched at compared dimensions. At1352x797 first card x10,y131,317.9375x207.8125; artwork CTA x11,y132,315.9375x166.125; player x1002.75,y80,334.25x51. At500x797 first card x7.5,y90,470x306.25; player x0,y746,485x51.",
+    "tested": [
+      "All28 cards rendered.",
+      "Kenny Hoopla MP3 and FUCT MIX011 MP3 loaded readyState4 and played, with progressing time and progress bar.",
+      "Collapse retained playback; expand and Pause worked.",
+      "Selecting another card changed native audio URL and active icon; exactly one card active.",
+      "Unmount during playback removed all audio/cards, paused/released source, preserved existing scope marker, and remount restored28 cards and one audio element.",
+      "Narrow layout had no document horizontal overflow.",
+      "FUCT MIX001 WAV loaded readyState4, duration2943.949569s, and played past100s; paused and switched back to Kenny Hoopla successfully."
+    ],
+    "screenshot": "/workspace/shared/radio-catalogue-player.jpg",
+    "console_note": "Observed errors were browser-extension metadata messages from chrome-extension://, not component-origin errors; no claim of a clean extension console."
+  },
+  "limits": [
+    "Physical phone/touch, background audio/lock-screen behavior and full-duration mix playback not tested.",
+    "HTTP metadata availability alone does not prove every complete audio file decodes.",
+    "No full storefront recreation or source CSS-map availability claim."
+  ]
+}

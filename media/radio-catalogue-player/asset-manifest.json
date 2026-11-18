@@ -1,0 +1,4973 @@
+{
+  "dependencies": [
+    {
+      "url": "https://cdn.shopify.com/oxygen-v2/29569/17180/35458/1808845/build/_assets/reset-YB72SZRB.css",
+      "status": 200,
+      "bytes": 1175,
+      "file": "reset-YB72SZRB.css",
+      "sha256": "52329b283066347595682d8f4032ad776bfe28c6a998b41864344a13beb0162d"
+    },
+    {
+      "url": "https://cdn.shopify.com/oxygen-v2/29569/17180/35458/1808845/build/_assets/app-BCRHPTW2.css",
+      "status": 200,
+      "bytes": 15897,
+      "file": "app-BCRHPTW2.css",
+      "sha256": "39e3117569cc8c1124340ad4494911edfe48e10d5a5291d696f92c218fe6030c"
+    },
+    {
+      "url": "https://cdn.shopify.com/oxygen-v2/29569/17180/35458/1808845/build/_assets/header-N6DD4M6K.css",
+      "status": 200,
+      "bytes": 12275,
+      "file": "header-N6DD4M6K.css",
+      "sha256": "7fdc67de73080cfa90b34adc6885ccbfb71bf9678e1b807b9975d4fac30cabfb"
+    },
+    {
+      "url": "https://cdn.shopify.com/oxygen-v2/29569/17180/35458/1808845/build/_assets/radio-PKNDW5SQ.css",
+      "status": 200,
+      "bytes": 4365,
+      "file": "radio-PKNDW5SQ.css",
+      "sha256": "dcba5239c3f8256e8ca0b2be5a6e594ca37f6600e5e22a4ce30dd8e5253a686c"
+    },
+    {
+      "url": "https://cdn.shopify.com/oxygen-v2/29569/17180/35458/1808845/build/_assets/looks-TUB46J27.css",
+      "status": 200,
+      "bytes": 2694,
+      "file": "looks-TUB46J27.css",
+      "sha256": "b814c85e7e1d089ec47b58257dd630b70ca75ebd31f1f1af1885c448b3fbd0c0"
+    },
+    {
+      "url": "https://cdn.shopify.com/oxygen-v2/29569/17180/35458/1808845/build/_assets/looks-gallery-3DWNVHLR.css",
+      "status": 200,
+      "bytes": 6241,
+      "file": "looks-gallery-3DWNVHLR.css",
+      "sha256": "67c7f2ae45c09d05244c887eee80fefe7c801794755fd9eb7096dde1d15c64f8"
+    },
+    {
+      "url": "https://cdn.shopify.com/oxygen-v2/29569/17180/35458/1808845/build/_assets/global-player-B4RKHMDX.css",
+      "status": 200,
+      "bytes": 3328,
+      "file": "global-player-B4RKHMDX.css",
+      "sha256": "ceb0daece71de7762d01338f0d60812742b05221b83af35ef31bcc16fbc024bc"
+    },
+    {
+      "url": "https://cdn.shopify.com/oxygen-v2/29569/17180/35458/1808845/build/_assets/shop-QWHM76HM.css",
+      "status": 200,
+      "bytes": 5170,
+      "file": "shop-QWHM76HM.css",
+      "sha256": "59f57646d5644bfe03e4273441ace360ae0cebea7130d347d5a4a9808bff6c42"
+    },
+    {
+      "url": "https://cdn.shopify.com/oxygen-v2/29569/17180/35458/1808845/build/_assets/product-page-MB3CGEUT.css",
+      "status": 200,
+      "bytes": 8150,
+      "file": "product-page-MB3CGEUT.css",
+      "sha256": "2fb64c42d8f888d4d94dac8839533672b1e6ad90f02e89228c186cc88b55be34"
+    },
+    {
+      "url": "https://cdn.shopify.com/oxygen-v2/29569/17180/35458/1808845/build/_assets/home-7H3ZOYL5.css",
+      "status": 200,
+      "bytes": 2009,
+      "file": "home-7H3ZOYL5.css",
+      "sha256": "f722318bda0ef394ca090117f9742a4d65c2ca59d39cd9d3b2c9862b070ebc30"
+    },
+    {
+      "url": "https://cdn.shopify.com/oxygen-v2/29569/17180/35458/1808845/build/_assets/country-selector-WRBLGKM7.css",
+      "status": 200,
+      "bytes": 4527,
+      "file": "country-selector-WRBLGKM7.css",
+      "sha256": "78a8a6dc85dc6a81aa6266e92028bd7632fbd72d3ca95e5ca624bce1938cb259"
+    },
+    {
+      "url": "https://cdn.shopify.com/oxygen-v2/29569/17180/35458/1808845/build/_assets/account-styles-FC2NUGP7.css",
+      "status": 200,
+      "bytes": 17042,
+      "file": "account-styles-FC2NUGP7.css",
+      "sha256": "d2e8e6ef2e3338c3f1be775fbec5d989792370d6f088d81db2618e280354ce27"
+    },
+    {
+      "url": "https://cdn.shopify.com/oxygen-v2/29569/17180/35458/1808845/build/_assets/policies-contact-V4K6M6PB.css",
+      "status": 200,
+      "bytes": 1528,
+      "file": "policies-contact-V4K6M6PB.css",
+      "sha256": "02717228591a9929d483b5c5e032bff395e1f60bb23525fa994c2429f34ff6a4"
+    },
+    {
+      "url": "https://cdn.shopify.com/oxygen-v2/29569/17180/35458/1808845/build/_assets/aside-panels-PP6WSSLY.css",
+      "status": 200,
+      "bytes": 11109,
+      "file": "aside-panels-PP6WSSLY.css",
+      "sha256": "4523e488a055a8223fd5ae82921d8684c6296eb62e17af5c728277ca35b68d31"
+    },
+    {
+      "url": "https://cdn.shopify.com/oxygen-v2/29569/17180/35458/1808845/build/_assets/footer-LL3JJVLT.css",
+      "status": 200,
+      "bytes": 4059,
+      "file": "footer-LL3JJVLT.css",
+      "sha256": "3c31b79e2486f004aad04fea39472deec54bdad24115be0266442a3755f19103"
+    },
+    {
+      "url": "https://cdn.shopify.com/oxygen-v2/29569/17180/35458/1808845/build/_assets/favicon-IT4JI5RX.png",
+      "status": 200,
+      "bytes": 1396,
+      "file": "favicon-IT4JI5RX.png",
+      "sha256": "fd47b487decc2343f06dc3de58b148be35755d6267d5713b76dc6d4a3bce3aa9"
+    },
+    {
+      "url": "https://cdn.shopify.com/oxygen-v2/29569/17180/35458/1808845/build/manifest-D9562F3F.js",
+      "status": 200,
+      "bytes": 15619,
+      "file": "manifest-D9562F3F.js",
+      "sha256": "0e9e7df43fae5a8593971513029eec6760c68edbc5482418cd91c70395343531"
+    },
+    {
+      "url": "https://cdn.shopify.com/oxygen-v2/29569/17180/35458/1808845/build/entry.client-5CDGWKOE.js",
+      "status": 200,
+      "bytes": 657,
+      "file": "entry.client-5CDGWKOE.js",
+      "sha256": "3b0d20f3f75f64ac2741fc3353302a358836aa533186b58504824616c659d790"
+    },
+    {
+      "url": "https://cdn.shopify.com/oxygen-v2/29569/17180/35458/1808845/build/_shared/chunk-U43PBJBX.js",
+      "status": 200,
+      "bytes": 207289,
+      "file": "chunk-U43PBJBX.js",
+      "sha256": "ebff6115b2ae55eddc3197c8e7b7bd10dceef680557d041258801afee7cf267f"
+    },
+    {
+      "url": "https://cdn.shopify.com/oxygen-v2/29569/17180/35458/1808845/build/_shared/chunk-VVLE5XDI.js",
+      "status": 200,
+      "bytes": 54854,
+      "file": "chunk-VVLE5XDI.js",
+      "sha256": "3e2059098c079e2328e88eeedd203b877275456a7b5de872b98ef9512a240fe0"
+    },
+    {
+      "url": "https://cdn.shopify.com/oxygen-v2/29569/17180/35458/1808845/build/_shared/chunk-PZUHJ4WO.js",
+      "status": 200,
+      "bytes": 587,
+      "file": "chunk-PZUHJ4WO.js",
+      "sha256": "3f27cdb01b3a7c0bade01da081c12c52b46bd2c2a579d928b30e306eb7f6ab67"
+    },
+    {
+      "url": "https://cdn.shopify.com/oxygen-v2/29569/17180/35458/1808845/build/_shared/chunk-H6HP6E5F.js",
+      "status": 200,
+      "bytes": 27838,
+      "file": "chunk-H6HP6E5F.js",
+      "sha256": "7cce30eb95b7dc34eee4ef41cfd59f73f2534b4e216fe4e92facadbd40c20201"
+    },
+    {
+      "url": "https://cdn.shopify.com/oxygen-v2/29569/17180/35458/1808845/build/_shared/chunk-OYVGDRQE.js",
+      "status": 200,
+      "bytes": 124,
+      "file": "chunk-OYVGDRQE.js",
+      "sha256": "4a3e394aa97b1595932a8c8c4c3d20fdd37d11755aa968d91707f902c704fe1c"
+    },
+    {
+      "url": "https://cdn.shopify.com/oxygen-v2/29569/17180/35458/1808845/build/_shared/chunk-COPU5TY7.js",
+      "status": 200,
+      "bytes": 5676,
+      "file": "chunk-COPU5TY7.js",
+      "sha256": "2a77c40677445ac9b5d7a0c808ece19a276c201cc8c3f1292ca7d00fdf8d0b20"
+    },
+    {
+      "url": "https://cdn.shopify.com/oxygen-v2/29569/17180/35458/1808845/build/_shared/chunk-Q3OFGS3M.js",
+      "status": 200,
+      "bytes": 22074,
+      "file": "chunk-Q3OFGS3M.js",
+      "sha256": "eb6f923677631ec403a83d581c8c9b09ebd18d9e2fec93465bdd639ef4a36f10"
+    },
+    {
+      "url": "https://cdn.shopify.com/oxygen-v2/29569/17180/35458/1808845/build/_shared/chunk-EDNXUYOC.js",
+      "status": 200,
+      "bytes": 1228,
+      "file": "chunk-EDNXUYOC.js",
+      "sha256": "5067bce1cc5964faaedea54eaf27362a89a07f885ba7700637a471897a90bfef"
+    },
+    {
+      "url": "https://cdn.shopify.com/oxygen-v2/29569/17180/35458/1808845/build/_shared/chunk-DWIS4GRQ.js",
+      "status": 200,
+      "bytes": 16428,
+      "file": "chunk-DWIS4GRQ.js",
+      "sha256": "70e1516c7c8ae9359106b93e25f58371659ea8d3e318f8ce3a54abfedfcbcf8c"
+    },
+    {
+      "url": "https://cdn.shopify.com/oxygen-v2/29569/17180/35458/1808845/build/root-5FDY5PB2.js",
+      "status": 200,
+      "bytes": 1008,
+      "file": "root-5FDY5PB2.js",
+      "sha256": "49d4749a2c43d4688ac2ea9ecc50a4573f20b8392547ac073485de286971d19c"
+    },
+    {
+      "url": "https://cdn.shopify.com/oxygen-v2/29569/17180/35458/1808845/build/routes/($locale).radio-BVA3KXHD.js",
+      "status": 200,
+      "bytes": 3185,
+      "file": "($locale).radio-BVA3KXHD.js",
+      "sha256": "e41954bdcf739f7d2710fd215fab403a7a95dabff6f6fdba03ef6a3edfc7f3db"
+    },
+    {
+      "url": "https://cdn.shopify.com/oxygen-v2/29569/17180/35458/1808845/build/_assets/account-styles-BS637H7Q.css.map",
+      "error": "HTTP Error 404: Not Found"
+    },
+    {
+      "url": "https://cdn.shopify.com/oxygen-v2/29569/17180/35458/1808845/build/_assets/accountIcon-X65KVUMX.svg",
+      "status": 200,
+      "bytes": 2050,
+      "file": "accountIcon-X65KVUMX.svg"
+    },
+    {
+      "url": "https://cdn.shopify.com/oxygen-v2/29569/17180/35458/1808845/build/_assets/app-QBWFAGAI.css.map",
+      "error": "HTTP Error 404: Not Found"
+    },
+    {
+      "url": "https://cdn.shopify.com/oxygen-v2/29569/17180/35458/1808845/build/_assets/aside-panels-XB5RJPHO.css.map",
+      "error": "HTTP Error 404: Not Found"
+    },
+    {
+      "url": "https://cdn.shopify.com/oxygen-v2/29569/17180/35458/1808845/build/_assets/cartIcon-A5K2TDFE.svg",
+      "status": 200,
+      "bytes": 1362,
+      "file": "cartIcon-A5K2TDFE.svg"
+    },
+    {
+      "url": "https://cdn.shopify.com/oxygen-v2/29569/17180/35458/1808845/build/_assets/country-selector-6J5TWJJV.css.map",
+      "error": "HTTP Error 404: Not Found"
+    },
+    {
+      "url": "https://cdn.shopify.com/oxygen-v2/29569/17180/35458/1808845/build/_assets/footer-SYP4WFA6.css.map",
+      "error": "HTTP Error 404: Not Found"
+    },
+    {
+      "url": "https://cdn.shopify.com/oxygen-v2/29569/17180/35458/1808845/build/_assets/global-player-KURT4IKZ.css.map",
+      "error": "HTTP Error 404: Not Found"
+    },
+    {
+      "url": "https://cdn.shopify.com/oxygen-v2/29569/17180/35458/1808845/build/_assets/hamburguerIcon-6QNKVHNK.svg",
+      "status": 200,
+      "bytes": 1454,
+      "file": "hamburguerIcon-6QNKVHNK.svg"
+    },
+    {
+      "url": "https://cdn.shopify.com/oxygen-v2/29569/17180/35458/1808845/build/_assets/header-76XQJXKU.css.map",
+      "error": "HTTP Error 404: Not Found"
+    },
+    {
+      "url": "https://cdn.shopify.com/oxygen-v2/29569/17180/35458/1808845/build/_assets/home-AVNMWPVI.css.map",
+      "error": "HTTP Error 404: Not Found"
+    },
+    {
+      "url": "https://cdn.shopify.com/oxygen-v2/29569/17180/35458/1808845/build/_assets/instagramIcon-FT6T3QAN.svg",
+      "status": 200,
+      "bytes": 2785,
+      "file": "instagramIcon-FT6T3QAN.svg"
+    },
+    {
+      "url": "https://cdn.shopify.com/oxygen-v2/29569/17180/35458/1808845/build/_assets/logoResized-PKRC5LUX.svg",
+      "status": 200,
+      "bytes": 1613,
+      "file": "logoResized-PKRC5LUX.svg"
+    },
+    {
+      "url": "https://cdn.shopify.com/oxygen-v2/29569/17180/35458/1808845/build/_assets/looks-RGQ5C7FI.css.map",
+      "error": "HTTP Error 404: Not Found"
+    },
+    {
+      "url": "https://cdn.shopify.com/oxygen-v2/29569/17180/35458/1808845/build/_assets/looks-gallery-4R7NHPJZ.css.map",
+      "error": "HTTP Error 404: Not Found"
+    },
+    {
+      "url": "https://cdn.shopify.com/oxygen-v2/29569/17180/35458/1808845/build/_assets/pauseIcon-JDPGQUFH.svg",
+      "status": 200,
+      "bytes": 2046,
+      "file": "pauseIcon-JDPGQUFH.svg"
+    },
+    {
+      "url": "https://cdn.shopify.com/oxygen-v2/29569/17180/35458/1808845/build/_assets/playIcon-NNYMEOZA.svg",
+      "status": 200,
+      "bytes": 1822,
+      "file": "playIcon-NNYMEOZA.svg"
+    },
+    {
+      "url": "https://cdn.shopify.com/oxygen-v2/29569/17180/35458/1808845/build/_assets/policies-contact-LPQYVIVP.css.map",
+      "error": "HTTP Error 404: Not Found"
+    },
+    {
+      "url": "https://cdn.shopify.com/oxygen-v2/29569/17180/35458/1808845/build/_assets/product-page-ZWXV6O7T.css.map",
+      "error": "HTTP Error 404: Not Found"
+    },
+    {
+      "url": "https://cdn.shopify.com/oxygen-v2/29569/17180/35458/1808845/build/_assets/radio-K7VULMZZ.css.map",
+      "error": "HTTP Error 404: Not Found"
+    },
+    {
+      "url": "https://cdn.shopify.com/oxygen-v2/29569/17180/35458/1808845/build/_assets/reset-M7CCHDKG.css.map",
+      "error": "HTTP Error 404: Not Found"
+    },
+    {
+      "url": "https://cdn.shopify.com/oxygen-v2/29569/17180/35458/1808845/build/_assets/searchIcon-SJPJFKKV.svg",
+      "status": 200,
+      "bytes": 2049,
+      "file": "searchIcon-SJPJFKKV.svg"
+    },
+    {
+      "url": "https://cdn.shopify.com/oxygen-v2/29569/17180/35458/1808845/build/_assets/shop-S5GINVI2.css.map",
+      "error": "HTTP Error 404: Not Found"
+    },
+    {
+      "url": "https://cdn.shopify.com/oxygen-v2/29569/17180/35458/1808845/build/_assets/twitterIcon-WC5AWISN.svg",
+      "status": 200,
+      "bytes": 385,
+      "file": "twitterIcon-WC5AWISN.svg"
+    },
+    {
+      "url": "https://cdn.shopify.com/oxygen-v2/29569/17180/35458/1808845/build/_assets/whitePauseIcon-OU3QAV73.svg",
+      "status": 200,
+      "bytes": 1153,
+      "file": "whitePauseIcon-OU3QAV73.svg"
+    },
+    {
+      "url": "https://cdn.shopify.com/oxygen-v2/29569/17180/35458/1808845/build/_assets/whitePlayIcon-CU3UURRN.svg",
+      "status": 200,
+      "bytes": 1149,
+      "file": "whitePlayIcon-CU3UURRN.svg"
+    },
+    {
+      "url": "https://cdn.shopify.com/oxygen-v2/29569/17180/35458/1808845/build/_shared/chunk-H5PKR2LK.js",
+      "status": 200,
+      "bytes": 31401,
+      "file": "chunk-H5PKR2LK.js"
+    },
+    {
+      "url": "https://cdn.shopify.com/oxygen-v2/29569/17180/35458/1808845/build/_shared/chunk-IG7PWVW3.js",
+      "status": 200,
+      "bytes": 73020,
+      "file": "chunk-IG7PWVW3.js"
+    },
+    {
+      "url": "https://cdn.shopify.com/oxygen-v2/29569/17180/35458/1808845/build/_shared/chunk-MCGCNNBA.js",
+      "status": 200,
+      "bytes": 2213,
+      "file": "chunk-MCGCNNBA.js"
+    },
+    {
+      "url": "https://cdn.shopify.com/oxygen-v2/29569/17180/35458/1808845/build/_shared/chunk-VSKWHPCF.js",
+      "status": 200,
+      "bytes": 1011,
+      "file": "chunk-VSKWHPCF.js"
+    },
+    {
+      "url": "https://cdn.shopify.com/oxygen-v2/29569/17180/35458/1808845/build/_shared/log-seo-tags-TY72EQWZ-6YRMCAH3.js",
+      "status": 200,
+      "bytes": 1460,
+      "file": "log-seo-tags-TY72EQWZ-6YRMCAH3.js"
+    },
+    {
+      "url": "https://cdn.shopify.com/oxygen-v2/29569/17180/35458/1808845/build/routes/locale-YZHTKYIL.js",
+      "status": 200,
+      "bytes": 164,
+      "file": "locale-YZHTKYIL.js"
+    }
+  ],
+  "fonts": [
+    {
+      "url": "https://fonts.gstatic.com/s/firamono/v16/N0bX2SlFPv1weGeLZDtQIQ.ttf",
+      "status": 200,
+      "bytes": 162472
+    }
+  ],
+  "media": {
+    "inspection_date": "2026-11-18",
+    "source": "FUCT radio source.html radioTracks metaobjects plus rendered cover img src/srcset variants",
+    "method_note": "HEAD metadata requests only for audio, original covers, generated covers and fonts. One latest Kenny Hoopla MP3 GET requests bytes0-255 and reads at most256 bytes, even if the server ignores Range. No complete audio/mix or image bodies downloaded.",
+    "origin_header": "https://nicholasmaritas.github.io",
+    "counts": {
+      "tracks": 28,
+      "unique_audio_urls": 28,
+      "original_cover_urls": 28,
+      "rendered_cover_urls": 448,
+      "total_head_requests": 505
+    },
+    "checks": [
+      {
+        "url": "https://d11rox2ve9bkk5.cloudfront.net/MIX_001_HARDCORE.wav",
+        "kind": "audio",
+        "status": 200,
+        "content_type": "audio/wav",
+        "content_length": "519312874",
+        "accept_ranges": "bytes",
+        "access_control_allow_origin": null
+      },
+      {
+        "url": "https://d11rox2ve9bkk5.cloudfront.net/01%20MIX_002.wav",
+        "kind": "audio",
+        "status": 200,
+        "content_type": "audio/wav",
+        "content_length": "1019308520",
+        "accept_ranges": "bytes",
+        "access_control_allow_origin": null
+      },
+      {
+        "url": "https://d11rox2ve9bkk5.cloudfront.net/MIX_003.wav",
+        "kind": "audio",
+        "status": 200,
+        "content_type": "audio/wav",
+        "content_length": "772881868",
+        "accept_ranges": "bytes",
+        "access_control_allow_origin": null
+      },
+      {
+        "url": "https://d11rox2ve9bkk5.cloudfront.net/FUCT_MIX_004.wav",
+        "kind": "audio",
+        "status": 200,
+        "content_type": "audio/wav",
+        "content_length": "675097036",
+        "accept_ranges": "bytes",
+        "access_control_allow_origin": null
+      },
+      {
+        "url": "https://d11rox2ve9bkk5.cloudfront.net/eyedress.wav",
+        "kind": "audio",
+        "status": 200,
+        "content_type": "audio/wav",
+        "content_length": "363154892",
+        "accept_ranges": "bytes",
+        "access_control_allow_origin": null
+      },
+      {
+        "url": "https://d11rox2ve9bkk5.cloudfront.net/REC-2024-04-12.wav",
+        "kind": "audio",
+        "status": 200,
+        "content_type": "audio/wav",
+        "content_length": "723615180",
+        "accept_ranges": "bytes",
+        "access_control_allow_origin": null
+      },
+      {
+        "url": "https://d11rox2ve9bkk5.cloudfront.net/OUTLAW.wav",
+        "kind": "audio",
+        "status": 200,
+        "content_type": "audio/wav",
+        "content_length": "675733986",
+        "accept_ranges": "bytes",
+        "access_control_allow_origin": null
+      },
+      {
+        "url": "https://d11rox2ve9bkk5.cloudfront.net/BENEBENE.wav",
+        "kind": "audio",
+        "status": 200,
+        "content_type": "audio/wav",
+        "content_length": "524902886",
+        "accept_ranges": "bytes",
+        "access_control_allow_origin": null
+      },
+      {
+        "url": "https://d11rox2ve9bkk5.cloudfront.net/DCHARDCORE.wav",
+        "kind": "audio",
+        "status": 200,
+        "content_type": "audio/wav",
+        "content_length": "489590252",
+        "accept_ranges": "bytes",
+        "access_control_allow_origin": null
+      },
+      {
+        "url": "https://d11rox2ve9bkk5.cloudfront.net/paisa.wav",
+        "kind": "audio",
+        "status": 200,
+        "content_type": "audio/wav",
+        "content_length": "829106662",
+        "accept_ranges": "bytes",
+        "access_control_allow_origin": null
+      },
+      {
+        "url": "https://d11rox2ve9bkk5.cloudfront.net/BELLA.wav",
+        "kind": "audio",
+        "status": 200,
+        "content_type": "audio/wav",
+        "content_length": "724564454",
+        "accept_ranges": "bytes",
+        "access_control_allow_origin": null
+      },
+      {
+        "url": "https://d11rox2ve9bkk5.cloudfront.net/NOT_NATHAN.wav",
+        "kind": "audio",
+        "status": 200,
+        "content_type": "audio/wav",
+        "content_length": "493153772",
+        "accept_ranges": "bytes",
+        "access_control_allow_origin": null
+      },
+      {
+        "url": "https://d11rox2ve9bkk5.cloudfront.net/BV.wav",
+        "kind": "audio",
+        "status": 200,
+        "content_type": "audio/wav",
+        "content_length": "905961852",
+        "accept_ranges": "bytes",
+        "access_control_allow_origin": null
+      },
+      {
+        "url": "https://d11rox2ve9bkk5.cloudfront.net/App%20Recording%2020250311%201333.mp3",
+        "kind": "audio",
+        "status": 200,
+        "content_type": "audio/mp3",
+        "content_length": "112518605",
+        "accept_ranges": "bytes",
+        "access_control_allow_origin": null
+      },
+      {
+        "url": "https://d11rox2ve9bkk5.cloudfront.net/DEREK2.mp3",
+        "kind": "audio",
+        "status": 200,
+        "content_type": "audio/mp3",
+        "content_length": "164082685",
+        "accept_ranges": "bytes",
+        "access_control_allow_origin": null
+      },
+      {
+        "url": "https://d11rox2ve9bkk5.cloudfront.net/JORDAN2.mp3",
+        "kind": "audio",
+        "status": 200,
+        "content_type": "audio/mp3",
+        "content_length": "43543505",
+        "accept_ranges": "bytes",
+        "access_control_allow_origin": null
+      },
+      {
+        "url": "https://d11rox2ve9bkk5.cloudfront.net/RAREGROOVES2.mp3",
+        "kind": "audio",
+        "status": 200,
+        "content_type": "audio/mp3",
+        "content_length": "36273388",
+        "accept_ranges": "bytes",
+        "access_control_allow_origin": null
+      },
+      {
+        "url": "https://d11rox2ve9bkk5.cloudfront.net/v1_Bully_YE.mp3",
+        "kind": "audio",
+        "status": 200,
+        "content_type": "audio/mp3",
+        "content_length": "32725935",
+        "accept_ranges": "bytes",
+        "access_control_allow_origin": null
+      },
+      {
+        "url": "https://d11rox2ve9bkk5.cloudfront.net/SNUFF2.mp3",
+        "kind": "audio",
+        "status": 200,
+        "content_type": "audio/mp3",
+        "content_length": "79896221",
+        "accept_ranges": "bytes",
+        "access_control_allow_origin": null
+      },
+      {
+        "url": "https://d11rox2ve9bkk5.cloudfront.net/TOXE.mp3",
+        "kind": "audio",
+        "status": 200,
+        "content_type": "audio/mp3",
+        "content_length": "52572418",
+        "accept_ranges": "bytes",
+        "access_control_allow_origin": null
+      },
+      {
+        "url": "https://d11rox2ve9bkk5.cloudfront.net/DENZEL.mp3",
+        "kind": "audio",
+        "status": 200,
+        "content_type": "audio/mp3",
+        "content_length": "52031674",
+        "accept_ranges": "bytes",
+        "access_control_allow_origin": null
+      },
+      {
+        "url": "https://d11rox2ve9bkk5.cloudfront.net/FUCTMIX.mp3",
+        "kind": "audio",
+        "status": 200,
+        "content_type": "audio/mp3",
+        "content_length": "117456908",
+        "accept_ranges": "bytes",
+        "access_control_allow_origin": null
+      },
+      {
+        "url": "https://d11rox2ve9bkk5.cloudfront.net/NELK.mp3",
+        "kind": "audio",
+        "status": 200,
+        "content_type": "audio/mp3",
+        "content_length": "67049507",
+        "accept_ranges": "bytes",
+        "access_control_allow_origin": null
+      },
+      {
+        "url": "https://d11rox2ve9bkk5.cloudfront.net/GAIA.mp3",
+        "kind": "audio",
+        "status": 200,
+        "content_type": "audio/mp3",
+        "content_length": "71421360",
+        "accept_ranges": "bytes",
+        "access_control_allow_origin": null
+      },
+      {
+        "url": "https://d11rox2ve9bkk5.cloudfront.net/Angela.mp3",
+        "kind": "audio",
+        "status": 200,
+        "content_type": "audio/mp3",
+        "content_length": "61553542",
+        "accept_ranges": "bytes",
+        "access_control_allow_origin": null
+      },
+      {
+        "url": "https://d11rox2ve9bkk5.cloudfront.net/RAY.mp3",
+        "kind": "audio",
+        "status": 200,
+        "content_type": "audio/mp3",
+        "content_length": "88034094",
+        "accept_ranges": "bytes",
+        "access_control_allow_origin": null
+      },
+      {
+        "url": "https://d11rox2ve9bkk5.cloudfront.net/222.mp3",
+        "kind": "audio",
+        "status": 200,
+        "content_type": "audio/mp3",
+        "content_length": "96293876",
+        "accept_ranges": "bytes",
+        "access_control_allow_origin": null
+      },
+      {
+        "url": "https://d11rox2ve9bkk5.cloudfront.net/Kenny%20Hoopla.mp3",
+        "kind": "audio",
+        "status": 200,
+        "content_type": "audio/mp3",
+        "content_length": "63204316",
+        "accept_ranges": "bytes",
+        "access_control_allow_origin": null
+      },
+      {
+        "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/IMG_4160.heic?v=1709768347",
+        "kind": "cover-original",
+        "status": 200,
+        "content_type": "image/jpeg",
+        "content_length": "303963",
+        "accept_ranges": "bytes",
+        "access_control_allow_origin": "*"
+      },
+      {
+        "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/AFTERHOUR_RADIO.jpg?v=1710798625",
+        "kind": "cover-original",
+        "status": 200,
+        "content_type": "image/jpeg",
+        "content_length": "96162",
+        "accept_ranges": "bytes",
+        "access_control_allow_origin": "*"
+      },
+      {
+        "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/IMG_4378.heic?v=1711070856",
+        "kind": "cover-original",
+        "status": 200,
+        "content_type": "image/jpeg",
+        "content_length": "19195",
+        "accept_ranges": "bytes",
+        "access_control_allow_origin": "*"
+      },
+      {
+        "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/SALSA_MIX.jpg?v=1711235811",
+        "kind": "cover-original",
+        "status": 200,
+        "content_type": "image/jpeg",
+        "content_length": "172950",
+        "accept_ranges": null,
+        "access_control_allow_origin": "*"
+      },
+      {
+        "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/EYEDDRESS_b85120ff-fbe7-4d49-abc4-47a6498237ce.jpg?v=1712341425",
+        "kind": "cover-original",
+        "status": 200,
+        "content_type": "image/jpeg",
+        "content_length": "380488",
+        "accept_ranges": "bytes",
+        "access_control_allow_origin": "*"
+      },
+      {
+        "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/SOLDIER_a407e057-82fc-4856-9dd5-1a66229ac92b.jpg?v=1713628248",
+        "kind": "cover-original",
+        "status": 200,
+        "content_type": "image/jpeg",
+        "content_length": "77703",
+        "accept_ranges": "bytes",
+        "access_control_allow_origin": "*"
+      },
+      {
+        "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/Screen_Shot_2024-05-14_at_7.20.34_PM.png?v=1715728906",
+        "kind": "cover-original",
+        "status": 200,
+        "content_type": "image/png",
+        "content_length": "807614",
+        "accept_ranges": "bytes",
+        "access_control_allow_origin": "*"
+      },
+      {
+        "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/BENEBENE.jpg?v=1716429578",
+        "kind": "cover-original",
+        "status": 200,
+        "content_type": "image/jpeg",
+        "content_length": "176280",
+        "accept_ranges": "bytes",
+        "access_control_allow_origin": "*"
+      },
+      {
+        "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/DCHARDCORE.jpg?v=1717120695",
+        "kind": "cover-original",
+        "status": 200,
+        "content_type": "image/jpeg",
+        "content_length": "107069",
+        "accept_ranges": null,
+        "access_control_allow_origin": "*"
+      },
+      {
+        "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/PAISABOYS.jpg?v=1719601113",
+        "kind": "cover-original",
+        "status": 200,
+        "content_type": "image/jpeg",
+        "content_length": "320449",
+        "accept_ranges": "bytes",
+        "access_control_allow_origin": "*"
+      },
+      {
+        "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/BELLA_FUCT_RADIO.jpg?v=1720466020",
+        "kind": "cover-original",
+        "status": 200,
+        "content_type": "image/jpeg",
+        "content_length": "107380",
+        "accept_ranges": "bytes",
+        "access_control_allow_origin": "*"
+      },
+      {
+        "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/POPPY_DAY_DREAM.jpg?v=1721435227",
+        "kind": "cover-original",
+        "status": 200,
+        "content_type": "image/jpeg",
+        "content_length": "454746",
+        "accept_ranges": null,
+        "access_control_allow_origin": "*"
+      },
+      {
+        "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/BANKS.jpg?v=1726252511",
+        "kind": "cover-original",
+        "status": 200,
+        "content_type": "image/jpeg",
+        "content_length": "137809",
+        "accept_ranges": "bytes",
+        "access_control_allow_origin": "*"
+      },
+      {
+        "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/REGGAEE_RADIO.jpg?v=1741720982",
+        "kind": "cover-original",
+        "status": 200,
+        "content_type": "image/jpeg",
+        "content_length": "115683",
+        "accept_ranges": "bytes",
+        "access_control_allow_origin": "*"
+      },
+      {
+        "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/DEREK_PRISON.jpg?v=1741827755",
+        "kind": "cover-original",
+        "status": 200,
+        "content_type": "image/jpeg",
+        "content_length": "101218",
+        "accept_ranges": "bytes",
+        "access_control_allow_origin": "*"
+      },
+      {
+        "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/BURMA.jpg?v=1742654100",
+        "kind": "cover-original",
+        "status": 200,
+        "content_type": "image/jpeg",
+        "content_length": "165751",
+        "accept_ranges": null,
+        "access_control_allow_origin": "*"
+      },
+      {
+        "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/DISCO_copy.jpg?v=1742656642",
+        "kind": "cover-original",
+        "status": 200,
+        "content_type": "image/jpeg",
+        "content_length": "78999",
+        "accept_ranges": null,
+        "access_control_allow_origin": "*"
+      },
+      {
+        "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/BULLY.jpg?v=1742579741",
+        "kind": "cover-original",
+        "status": 200,
+        "content_type": "image/jpeg",
+        "content_length": "88584",
+        "accept_ranges": "bytes",
+        "access_control_allow_origin": "*"
+      },
+      {
+        "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/SNUFFBLOOD.jpg?v=1742774204",
+        "kind": "cover-original",
+        "status": 200,
+        "content_type": "image/jpeg",
+        "content_length": "61444",
+        "accept_ranges": "bytes",
+        "access_control_allow_origin": "*"
+      },
+      {
+        "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/94E7D672-2243-440A-B87D-03E503AE72B3.jpg?v=1745604210",
+        "kind": "cover-original",
+        "status": 200,
+        "content_type": "image/jpeg",
+        "content_length": "24076",
+        "accept_ranges": "bytes",
+        "access_control_allow_origin": "*"
+      },
+      {
+        "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/DENZEL_RADIO.jpg?v=1748623082",
+        "kind": "cover-original",
+        "status": 200,
+        "content_type": "image/jpeg",
+        "content_length": "193885",
+        "accept_ranges": "bytes",
+        "access_control_allow_origin": "*"
+      },
+      {
+        "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/SNAKE.jpg?v=1752082567",
+        "kind": "cover-original",
+        "status": 200,
+        "content_type": "image/jpeg",
+        "content_length": "178876",
+        "accept_ranges": "bytes",
+        "access_control_allow_origin": "*"
+      },
+      {
+        "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/NELK.jpg?v=1752082631",
+        "kind": "cover-original",
+        "status": 200,
+        "content_type": "image/jpeg",
+        "content_length": "125534",
+        "accept_ranges": null,
+        "access_control_allow_origin": "*"
+      },
+      {
+        "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/GAIA.jpg?v=1761275195",
+        "kind": "cover-original",
+        "status": 200,
+        "content_type": "image/jpeg",
+        "content_length": "51672",
+        "accept_ranges": "bytes",
+        "access_control_allow_origin": "*"
+      },
+      {
+        "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/ANGELA_RADIO.jpg?v=1765680992",
+        "kind": "cover-original",
+        "status": 200,
+        "content_type": "image/jpeg",
+        "content_length": "158565",
+        "accept_ranges": "bytes",
+        "access_control_allow_origin": "*"
+      },
+      {
+        "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/RAY.jpg?v=1768592846",
+        "kind": "cover-original",
+        "status": 200,
+        "content_type": "image/jpeg",
+        "content_length": "79598",
+        "accept_ranges": "bytes",
+        "access_control_allow_origin": "*"
+      },
+      {
+        "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/IMG_7233.jpg?v=1786462344",
+        "kind": "cover-original",
+        "status": 200,
+        "content_type": "image/jpeg",
+        "content_length": "241003",
+        "accept_ranges": null,
+        "access_control_allow_origin": "*"
+      },
+      {
+        "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/KENNY.jpg?v=1792037028",
+        "kind": "cover-original",
+        "status": 200,
+        "content_type": "image/jpeg",
+        "content_length": "236231",
+        "accept_ranges": "bytes",
+        "access_control_allow_origin": "*"
+      },
+      {
+        "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/KENNY.jpg?v=1792037028&width=100&crop=center",
+        "kind": "cover-generated",
+        "status": 200,
+        "content_type": "image/jpeg",
+        "content_length": "2478",
+        "accept_ranges": "bytes",
+        "access_control_allow_origin": "*"
+      },
+      {
+        "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/KENNY.jpg?v=1792037028&width=200&crop=center",
+        "kind": "cover-generated",
+        "status": 200,
+        "content_type": "image/jpeg",
+        "content_length": "4732",
+        "accept_ranges": "bytes",
+        "access_control_allow_origin": "*"
+      },
+      {
+        "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/KENNY.jpg?v=1792037028&width=400&crop=center",
+        "kind": "cover-generated",
+        "status": 200,
+        "content_type": "image/jpeg",
+        "content_length": "11969",
+        "accept_ranges": "bytes",
+        "access_control_allow_origin": "*"
+      },
+      {
+        "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/KENNY.jpg?v=1792037028&width=600&crop=center",
+        "kind": "cover-generated",
+        "status": 200,
+        "content_type": "image/jpeg",
+        "content_length": "24188",
+        "accept_ranges": "bytes",
+        "access_control_allow_origin": "*"
+      },
+      {
+        "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/KENNY.jpg?v=1792037028&width=800&crop=center",
+        "kind": "cover-generated",
+        "status": 200,
+        "content_type": "image/jpeg",
+        "content_length": "43661",
+        "accept_ranges": "bytes",
+        "access_control_allow_origin": "*"
+      },
+      {
+        "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/KENNY.jpg?v=1792037028&width=1000&crop=center",
+        "kind": "cover-generated",
+        "status": 200,
+        "content_type": "image/jpeg",
+        "content_length": "68938",
+        "accept_ranges": null,
+        "access_control_allow_origin": "*"
+      },
+      {
+        "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/KENNY.jpg?v=1792037028&width=1200&crop=center",
+        "kind": "cover-generated",
+        "status": 200,
+        "content_type": "image/jpeg",
+        "content_length": "98121",
+        "accept_ranges": null,
+        "access_control_allow_origin": "*"
+      },
+      {
+        "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/KENNY.jpg?v=1792037028&width=1400&crop=center",
+        "kind": "cover-generated",
+        "status": 200,
+        "content_type": "image/jpeg",
+        "content_length": "128921",
+        "accept_ranges": "bytes",
+        "access_control_allow_origin": "*"
+      },
+      {
+        "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/KENNY.jpg?v=1792037028&width=1600&crop=center",
+        "kind": "cover-generated",
+        "status": 200,
+        "content_type": "image/jpeg",
+        "content_length": "161596",
+        "accept_ranges": "bytes",
+        "access_control_allow_origin": "*"
+      },
+      {
+        "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/KENNY.jpg?v=1792037028&width=1800&crop=center",
+        "kind": "cover-generated",
+        "status": 200,
+        "content_type": "image/jpeg",
+        "content_length": "194589",
+        "accept_ranges": null,
+        "access_control_allow_origin": "*"
+      },
+      {
+        "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/KENNY.jpg?v=1792037028&width=2000&crop=center",
+        "kind": "cover-generated",
+        "status": 200,
+        "content_type": "image/jpeg",
+        "content_length": "200920",
+        "accept_ranges": "bytes",
+        "access_control_allow_origin": "*"
+      },
+      {
+        "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/KENNY.jpg?v=1792037028&width=2200&crop=center",
+        "kind": "cover-generated",
+        "status": 200,
+        "content_type": "image/jpeg",
+        "content_length": "230625",
+        "accept_ranges": "bytes",
+        "access_control_allow_origin": "*"
+      },
+      {
+        "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/KENNY.jpg?v=1792037028&width=2400&crop=center",
+        "kind": "cover-generated",
+        "status": 200,
+        "content_type": "image/jpeg",
+        "content_length": "236231",
+        "accept_ranges": "bytes",
+        "access_control_allow_origin": "*"
+      },
+      {
+        "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/KENNY.jpg?v=1792037028&width=2600&crop=center",
+        "kind": "cover-generated",
+        "status": 200,
+        "content_type": "image/jpeg",
+        "content_length": "236231",
+        "accept_ranges": "bytes",
+        "access_control_allow_origin": "*"
+      },
+      {
+        "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/KENNY.jpg?v=1792037028&width=2800&crop=center",
+        "kind": "cover-generated",
+        "status": 200,
+        "content_type": "image/jpeg",
+        "content_length": "236231",
+        "accept_ranges": null,
+        "access_control_allow_origin": "*"
+      },
+      {
+        "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/KENNY.jpg?v=1792037028&width=3000&crop=center",
+        "kind": "cover-generated",
+        "status": 200,
+        "content_type": "image/jpeg",
+        "content_length": "236231",
+        "accept_ranges": "bytes",
+        "access_control_allow_origin": "*"
+      },
+      {
+        "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/IMG_7233.jpg?v=1786462344&width=100&crop=center",
+        "kind": "cover-generated",
+        "status": 200,
+        "content_type": "image/jpeg",
+        "content_length": "4481",
+        "accept_ranges": "bytes",
+        "access_control_allow_origin": "*"
+      },
+      {
+        "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/IMG_7233.jpg?v=1786462344&width=200&crop=center",
+        "kind": "cover-generated",
+        "status": 200,
+        "content_type": "image/jpeg",
+        "content_length": "12235",
+        "accept_ranges": "bytes",
+        "access_control_allow_origin": "*"
+      },
+      {
+        "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/IMG_7233.jpg?v=1786462344&width=400&crop=center",
+        "kind": "cover-generated",
+        "status": 200,
+        "content_type": "image/jpeg",
+        "content_length": "36623",
+        "accept_ranges": null,
+        "access_control_allow_origin": "*"
+      },
+      {
+        "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/IMG_7233.jpg?v=1786462344&width=600&crop=center",
+        "kind": "cover-generated",
+        "status": 200,
+        "content_type": "image/jpeg",
+        "content_length": "71573",
+        "accept_ranges": "bytes",
+        "access_control_allow_origin": "*"
+      },
+      {
+        "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/IMG_7233.jpg?v=1786462344&width=800&crop=center",
+        "kind": "cover-generated",
+        "status": 200,
+        "content_type": "image/jpeg",
+        "content_length": "115233",
+        "accept_ranges": "bytes",
+        "access_control_allow_origin": "*"
+      },
+      {
+        "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/IMG_7233.jpg?v=1786462344&width=1000&crop=center",
+        "kind": "cover-generated",
+        "status": 200,
+        "content_type": "image/jpeg",
+        "content_length": "165733",
+        "accept_ranges": "bytes",
+        "access_control_allow_origin": "*"
+      },
+      {
+        "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/IMG_7233.jpg?v=1786462344&width=1200&crop=center",
+        "kind": "cover-generated",
+        "status": 200,
+        "content_type": "image/jpeg",
+        "content_length": "220906",
+        "accept_ranges": "bytes",
+        "access_control_allow_origin": "*"
+      },
+      {
+        "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/IMG_7233.jpg?v=1786462344&width=1400&crop=center",
+        "kind": "cover-generated",
+        "status": 200,
+        "content_type": "image/jpeg",
+        "content_length": "241003",
+        "accept_ranges": "bytes",
+        "access_control_allow_origin": "*"
+      },
+      {
+        "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/IMG_7233.jpg?v=1786462344&width=1600&crop=center",
+        "kind": "cover-generated",
+        "status": 200,
+        "content_type": "image/jpeg",
+        "content_length": "241003",
+        "accept_ranges": null,
+        "access_control_allow_origin": "*"
+      },
+      {
+        "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/IMG_7233.jpg?v=1786462344&width=1800&crop=center",
+        "kind": "cover-generated",
+        "status": 200,
+        "content_type": "image/jpeg",
+        "content_length": "241003",
+        "accept_ranges": null,
+        "access_control_allow_origin": "*"
+      },
+      {
+        "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/IMG_7233.jpg?v=1786462344&width=2000&crop=center",
+        "kind": "cover-generated",
+        "status": 200,
+        "content_type": "image/jpeg",
+        "content_length": "241003",
+        "accept_ranges": null,
+        "access_control_allow_origin": "*"
+      },
+      {
+        "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/IMG_7233.jpg?v=1786462344&width=2200&crop=center",
+        "kind": "cover-generated",
+        "status": 200,
+        "content_type": "image/jpeg",
+        "content_length": "241003",
+        "accept_ranges": "bytes",
+        "access_control_allow_origin": "*"
+      },
+      {
+        "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/IMG_7233.jpg?v=1786462344&width=2400&crop=center",
+        "kind": "cover-generated",
+        "status": 200,
+        "content_type": "image/jpeg",
+        "content_length": "241003",
+        "accept_ranges": "bytes",
+        "access_control_allow_origin": "*"
+      },
+      {
+        "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/IMG_7233.jpg?v=1786462344&width=2600&crop=center",
+        "kind": "cover-generated",
+        "status": 200,
+        "content_type": "image/jpeg",
+        "content_length": "241003",
+        "accept_ranges": "bytes",
+        "access_control_allow_origin": "*"
+      },
+      {
+        "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/IMG_7233.jpg?v=1786462344&width=2800&crop=center",
+        "kind": "cover-generated",
+        "status": 200,
+        "content_type": "image/jpeg",
+        "content_length": "241003",
+        "accept_ranges": "bytes",
+        "access_control_allow_origin": "*"
+      },
+      {
+        "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/IMG_7233.jpg?v=1786462344&width=3000&crop=center",
+        "kind": "cover-generated",
+        "status": 200,
+        "content_type": "image/jpeg",
+        "content_length": "241003",
+        "accept_ranges": "bytes",
+        "access_control_allow_origin": "*"
+      },
+      {
+        "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/RAY.jpg?v=1768592846&width=100&crop=center",
+        "kind": "cover-generated",
+        "status": 200,
+        "content_type": "image/jpeg",
+        "content_length": "3410",
+        "accept_ranges": "bytes",
+        "access_control_allow_origin": "*"
+      },
+      {
+        "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/RAY.jpg?v=1768592846&width=200&crop=center",
+        "kind": "cover-generated",
+        "status": 200,
+        "content_type": "image/jpeg",
+        "content_length": "7884",
+        "accept_ranges": "bytes",
+        "access_control_allow_origin": "*"
+      },
+      {
+        "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/RAY.jpg?v=1768592846&width=400&crop=center",
+        "kind": "cover-generated",
+        "status": 200,
+        "content_type": "image/jpeg",
+        "content_length": "20631",
+        "accept_ranges": "bytes",
+        "access_control_allow_origin": "*"
+      },
+      {
+        "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/RAY.jpg?v=1768592846&width=600&crop=center",
+        "kind": "cover-generated",
+        "status": 200,
+        "content_type": "image/jpeg",
+        "content_length": "36092",
+        "accept_ranges": "bytes",
+        "access_control_allow_origin": "*"
+      },
+      {
+        "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/RAY.jpg?v=1768592846&width=800&crop=center",
+        "kind": "cover-generated",
+        "status": 200,
+        "content_type": "image/jpeg",
+        "content_length": "53258",
+        "accept_ranges": "bytes",
+        "access_control_allow_origin": "*"
+      },
+      {
+        "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/RAY.jpg?v=1768592846&width=1000&crop=center",
+        "kind": "cover-generated",
+        "status": 200,
+        "content_type": "image/jpeg",
+        "content_length": "71541",
+        "accept_ranges": null,
+        "access_control_allow_origin": "*"
+      },
+      {
+        "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/RAY.jpg?v=1768592846&width=1200&crop=center",
+        "kind": "cover-generated",
+        "status": 200,
+        "content_type": "image/jpeg",
+        "content_length": "79598",
+        "accept_ranges": "bytes",
+        "access_control_allow_origin": "*"
+      },
+      {
+        "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/RAY.jpg?v=1768592846&width=1400&crop=center",
+        "kind": "cover-generated",
+        "status": 200,
+        "content_type": "image/jpeg",
+        "content_length": "79598",
+        "accept_ranges": "bytes",
+        "access_control_allow_origin": "*"
+      },
+      {
+        "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/RAY.jpg?v=1768592846&width=1600&crop=center",
+        "kind": "cover-generated",
+        "status": 200,
+        "content_type": "image/jpeg",
+        "content_length": "79598",
+        "accept_ranges": "bytes",
+        "access_control_allow_origin": "*"
+      },
+      {
+        "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/RAY.jpg?v=1768592846&width=1800&crop=center",
+        "kind": "cover-generated",
+        "status": 200,
+        "content_type": "image/jpeg",
+        "content_length": "79598",
+        "accept_ranges": "bytes",
+        "access_control_allow_origin": "*"
+      },
+      {
+        "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/RAY.jpg?v=1768592846&width=2000&crop=center",
+        "kind": "cover-generated",
+        "status": 200,
+        "content_type": "image/jpeg",
+        "content_length": "79598",
+        "accept_ranges": "bytes",
+        "access_control_allow_origin": "*"
+      },
+      {
+        "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/RAY.jpg?v=1768592846&width=2200&crop=center",
+        "kind": "cover-generated",
+        "status": 200,
+        "content_type": "image/jpeg",
+        "content_length": "79598",
+        "accept_ranges": null,
+        "access_control_allow_origin": "*"
+      },
+      {
+        "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/RAY.jpg?v=1768592846&width=2400&crop=center",
+        "kind": "cover-generated",
+        "status": 200,
+        "content_type": "image/jpeg",
+        "content_length": "79598",
+        "accept_ranges": "bytes",
+        "access_control_allow_origin": "*"
+      },
+      {
+        "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/RAY.jpg?v=1768592846&width=2600&crop=center",
+        "kind": "cover-generated",
+        "status": 200,
+        "content_type": "image/jpeg",
+        "content_length": "79598",
+        "accept_ranges": "bytes",
+        "access_control_allow_origin": "*"
+      },
+      {
+        "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/RAY.jpg?v=1768592846&width=2800&crop=center",
+        "kind": "cover-generated",
+        "status": 200,
+        "content_type": "image/jpeg",
+        "content_length": "79598",
+        "accept_ranges": "bytes",
+        "access_control_allow_origin": "*"
+      },
+      {
+        "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/RAY.jpg?v=1768592846&width=3000&crop=center",
+        "kind": "cover-generated",
+        "status": 200,
+        "content_type": "image/jpeg",
+        "content_length": "79598",
+        "accept_ranges": "bytes",
+        "access_control_allow_origin": "*"
+      },
+      {
+        "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/ANGELA_RADIO.jpg?v=1765680992&width=100&crop=center",
+        "kind": "cover-generated",
+        "status": 200,
+        "content_type": "image/jpeg",
+        "content_length": "4515",
+        "accept_ranges": "bytes",
+        "access_control_allow_origin": "*"
+      },
+      {
+        "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/ANGELA_RADIO.jpg?v=1765680992&width=200&crop=center",
+        "kind": "cover-generated",
+        "status": 200,
+        "content_type": "image/jpeg",
+        "content_length": "11666",
+        "accept_ranges": "bytes",
+        "access_control_allow_origin": "*"
+      },
+      {
+        "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/ANGELA_RADIO.jpg?v=1765680992&width=400&crop=center",
+        "kind": "cover-generated",
+        "status": 200,
+        "content_type": "image/jpeg",
+        "content_length": "33348",
+        "accept_ranges": "bytes",
+        "access_control_allow_origin": "*"
+      },
+      {
+        "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/ANGELA_RADIO.jpg?v=1765680992&width=600&crop=center",
+        "kind": "cover-generated",
+        "status": 200,
+        "content_type": "image/jpeg",
+        "content_length": "62662",
+        "accept_ranges": "bytes",
+        "access_control_allow_origin": "*"
+      },
+      {
+        "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/ANGELA_RADIO.jpg?v=1765680992&width=800&crop=center",
+        "kind": "cover-generated",
+        "status": 200,
+        "content_type": "image/jpeg",
+        "content_length": "98355",
+        "accept_ranges": null,
+        "access_control_allow_origin": "*"
+      },
+      {
+        "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/ANGELA_RADIO.jpg?v=1765680992&width=1000&crop=center",
+        "kind": "cover-generated",
+        "status": 200,
+        "content_type": "image/jpeg",
+        "content_length": "138738",
+        "accept_ranges": null,
+        "access_control_allow_origin": "*"
+      },
+      {
+        "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/ANGELA_RADIO.jpg?v=1765680992&width=1200&crop=center",
+        "kind": "cover-generated",
+        "status": 200,
+        "content_type": "image/jpeg",
+        "content_length": "158565",
+        "accept_ranges": "bytes",
+        "access_control_allow_origin": "*"
+      },
+      {
+        "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/ANGELA_RADIO.jpg?v=1765680992&width=1400&crop=center",
+        "kind": "cover-generated",
+        "status": 200,
+        "content_type": "image/jpeg",
+        "content_length": "158565",
+        "accept_ranges": null,
+        "access_control_allow_origin": "*"
+      },
+      {
+        "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/ANGELA_RADIO.jpg?v=1765680992&width=1600&crop=center",
+        "kind": "cover-generated",
+        "status": 200,
+        "content_type": "image/jpeg",
+        "content_length": "158565",
+        "accept_ranges": "bytes",
+        "access_control_allow_origin": "*"
+      },
+      {
+        "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/ANGELA_RADIO.jpg?v=1765680992&width=1800&crop=center",
+        "kind": "cover-generated",
+        "status": 200,
+        "content_type": "image/jpeg",
+        "content_length": "158565",
+        "accept_ranges": "bytes",
+        "access_control_allow_origin": "*"
+      },
+      {
+        "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/ANGELA_RADIO.jpg?v=1765680992&width=2000&crop=center",
+        "kind": "cover-generated",
+        "status": 200,
+        "content_type": "image/jpeg",
+        "content_length": "158565",
+        "accept_ranges": "bytes",
+        "access_control_allow_origin": "*"
+      },
+      {
+        "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/ANGELA_RADIO.jpg?v=1765680992&width=2200&crop=center",
+        "kind": "cover-generated",
+        "status": 200,
+        "content_type": "image/jpeg",
+        "content_length": "158565",
+        "accept_ranges": "bytes",
+        "access_control_allow_origin": "*"
+      },
+      {
+        "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/ANGELA_RADIO.jpg?v=1765680992&width=2400&crop=center",
+        "kind": "cover-generated",
+        "status": 200,
+        "content_type": "image/jpeg",
+        "content_length": "158565",
+        "accept_ranges": "bytes",
+        "access_control_allow_origin": "*"
+      },
+      {
+        "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/ANGELA_RADIO.jpg?v=1765680992&width=2600&crop=center",
+        "kind": "cover-generated",
+        "status": 200,
+        "content_type": "image/jpeg",
+        "content_length": "158565",
+        "accept_ranges": null,
+        "access_control_allow_origin": "*"
+      },
+      {
+        "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/ANGELA_RADIO.jpg?v=1765680992&width=2800&crop=center",
+        "kind": "cover-generated",
+        "status": 200,
+        "content_type": "image/jpeg",
+        "content_length": "158565",
+        "accept_ranges": null,
+        "access_control_allow_origin": "*"
+      },
+      {
+        "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/ANGELA_RADIO.jpg?v=1765680992&width=3000&crop=center",
+        "kind": "cover-generated",
+        "status": 200,
+        "content_type": "image/jpeg",
+        "content_length": "158565",
+        "accept_ranges": "bytes",
+        "access_control_allow_origin": "*"
+      },
+      {
+        "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/GAIA.jpg?v=1761275195&width=100&crop=center",
+        "kind": "cover-generated",
+        "status": 200,
+        "content_type": "image/jpeg",
+        "content_length": "2915",
+        "accept_ranges": "bytes",
+        "access_control_allow_origin": "*"
+      },
+      {
+        "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/GAIA.jpg?v=1761275195&width=200&crop=center",
+        "kind": "cover-generated",
+        "status": 200,
+        "content_type": "image/jpeg",
+        "content_length": "5804",
+        "accept_ranges": "bytes",
+        "access_control_allow_origin": "*"
+      },
+      {
+        "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/GAIA.jpg?v=1761275195&width=400&crop=center",
+        "kind": "cover-generated",
+        "status": 200,
+        "content_type": "image/jpeg",
+        "content_length": "13344",
+        "accept_ranges": "bytes",
+        "access_control_allow_origin": "*"
+      },
+      {
+        "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/GAIA.jpg?v=1761275195&width=600&crop=center",
+        "kind": "cover-generated",
+        "status": 200,
+        "content_type": "image/jpeg",
+        "content_length": "22560",
+        "accept_ranges": "bytes",
+        "access_control_allow_origin": "*"
+      },
+      {
+        "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/GAIA.jpg?v=1761275195&width=800&crop=center",
+        "kind": "cover-generated",
+        "status": 200,
+        "content_type": "image/jpeg",
+        "content_length": "33590",
+        "accept_ranges": null,
+        "access_control_allow_origin": "*"
+      },
+      {
+        "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/GAIA.jpg?v=1761275195&width=1000&crop=center",
+        "kind": "cover-generated",
+        "status": 200,
+        "content_type": "image/jpeg",
+        "content_length": "45642",
+        "accept_ranges": null,
+        "access_control_allow_origin": "*"
+      },
+      {
+        "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/GAIA.jpg?v=1761275195&width=1200&crop=center",
+        "kind": "cover-generated",
+        "status": 200,
+        "content_type": "image/jpeg",
+        "content_length": "51672",
+        "accept_ranges": "bytes",
+        "access_control_allow_origin": "*"
+      },
+      {
+        "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/GAIA.jpg?v=1761275195&width=1400&crop=center",
+        "kind": "cover-generated",
+        "status": 200,
+        "content_type": "image/jpeg",
+        "content_length": "51672",
+        "accept_ranges": "bytes",
+        "access_control_allow_origin": "*"
+      },
+      {
+        "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/GAIA.jpg?v=1761275195&width=1600&crop=center",
+        "kind": "cover-generated",
+        "status": 200,
+        "content_type": "image/jpeg",
+        "content_length": "51672",
+        "accept_ranges": "bytes",
+        "access_control_allow_origin": "*"
+      },
+      {
+        "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/GAIA.jpg?v=1761275195&width=1800&crop=center",
+        "kind": "cover-generated",
+        "status": 200,
+        "content_type": "image/jpeg",
+        "content_length": "51672",
+        "accept_ranges": "bytes",
+        "access_control_allow_origin": "*"
+      },
+      {
+        "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/GAIA.jpg?v=1761275195&width=2000&crop=center",
+        "kind": "cover-generated",
+        "status": 200,
+        "content_type": "image/jpeg",
+        "content_length": "51672",
+        "accept_ranges": "bytes",
+        "access_control_allow_origin": "*"
+      },
+      {
+        "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/GAIA.jpg?v=1761275195&width=2200&crop=center",
+        "kind": "cover-generated",
+        "status": 200,
+        "content_type": "image/jpeg",
+        "content_length": "51672",
+        "accept_ranges": "bytes",
+        "access_control_allow_origin": "*"
+      },
+      {
+        "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/GAIA.jpg?v=1761275195&width=2400&crop=center",
+        "kind": "cover-generated",
+        "status": 200,
+        "content_type": "image/jpeg",
+        "content_length": "51672",
+        "accept_ranges": "bytes",
+        "access_control_allow_origin": "*"
+      },
+      {
+        "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/GAIA.jpg?v=1761275195&width=2600&crop=center",
+        "kind": "cover-generated",
+        "status": 200,
+        "content_type": "image/jpeg",
+        "content_length": "51672",
+        "accept_ranges": "bytes",
+        "access_control_allow_origin": "*"
+      },
+      {
+        "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/GAIA.jpg?v=1761275195&width=2800&crop=center",
+        "kind": "cover-generated",
+        "status": 200,
+        "content_type": "image/jpeg",
+        "content_length": "51672",
+        "accept_ranges": "bytes",
+        "access_control_allow_origin": "*"
+      },
+      {
+        "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/GAIA.jpg?v=1761275195&width=3000&crop=center",
+        "kind": "cover-generated",
+        "status": 200,
+        "content_type": "image/jpeg",
+        "content_length": "51672",
+        "accept_ranges": "bytes",
+        "access_control_allow_origin": "*"
+      },
+      {
+        "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/NELK.jpg?v=1752082631&width=100&crop=center",
+        "kind": "cover-generated",
+        "status": 200,
+        "content_type": "image/jpeg",
+        "content_length": "4297",
+        "accept_ranges": null,
+        "access_control_allow_origin": "*"
+      },
+      {
+        "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/NELK.jpg?v=1752082631&width=200&crop=center",
+        "kind": "cover-generated",
+        "status": 200,
+        "content_type": "image/jpeg",
+        "content_length": "10585",
+        "accept_ranges": "bytes",
+        "access_control_allow_origin": "*"
+      },
+      {
+        "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/NELK.jpg?v=1752082631&width=400&crop=center",
+        "kind": "cover-generated",
+        "status": 200,
+        "content_type": "image/jpeg",
+        "content_length": "29242",
+        "accept_ranges": "bytes",
+        "access_control_allow_origin": "*"
+      },
+      {
+        "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/NELK.jpg?v=1752082631&width=600&crop=center",
+        "kind": "cover-generated",
+        "status": 200,
+        "content_type": "image/jpeg",
+        "content_length": "52306",
+        "accept_ranges": "bytes",
+        "access_control_allow_origin": "*"
+      },
+      {
+        "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/NELK.jpg?v=1752082631&width=800&crop=center",
+        "kind": "cover-generated",
+        "status": 200,
+        "content_type": "image/jpeg",
+        "content_length": "80181",
+        "accept_ranges": "bytes",
+        "access_control_allow_origin": "*"
+      },
+      {
+        "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/NELK.jpg?v=1752082631&width=1000&crop=center",
+        "kind": "cover-generated",
+        "status": 200,
+        "content_type": "image/jpeg",
+        "content_length": "109660",
+        "accept_ranges": "bytes",
+        "access_control_allow_origin": "*"
+      },
+      {
+        "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/NELK.jpg?v=1752082631&width=1200&crop=center",
+        "kind": "cover-generated",
+        "status": 200,
+        "content_type": "image/jpeg",
+        "content_length": "125534",
+        "accept_ranges": "bytes",
+        "access_control_allow_origin": "*"
+      },
+      {
+        "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/NELK.jpg?v=1752082631&width=1400&crop=center",
+        "kind": "cover-generated",
+        "status": 200,
+        "content_type": "image/jpeg",
+        "content_length": "125534",
+        "accept_ranges": "bytes",
+        "access_control_allow_origin": "*"
+      },
+      {
+        "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/NELK.jpg?v=1752082631&width=1600&crop=center",
+        "kind": "cover-generated",
+        "status": 200,
+        "content_type": "image/jpeg",
+        "content_length": "125534",
+        "accept_ranges": "bytes",
+        "access_control_allow_origin": "*"
+      },
+      {
+        "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/NELK.jpg?v=1752082631&width=1800&crop=center",
+        "kind": "cover-generated",
+        "status": 200,
+        "content_type": "image/jpeg",
+        "content_length": "125534",
+        "accept_ranges": "bytes",
+        "access_control_allow_origin": "*"
+      },
+      {
+        "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/NELK.jpg?v=1752082631&width=2000&crop=center",
+        "kind": "cover-generated",
+        "status": 200,
+        "content_type": "image/jpeg",
+        "content_length": "125534",
+        "accept_ranges": "bytes",
+        "access_control_allow_origin": "*"
+      },
+      {
+        "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/NELK.jpg?v=1752082631&width=2200&crop=center",
+        "kind": "cover-generated",
+        "status": 200,
+        "content_type": "image/jpeg",
+        "content_length": "125534",
+        "accept_ranges": "bytes",
+        "access_control_allow_origin": "*"
+      },
+      {
+        "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/NELK.jpg?v=1752082631&width=2400&crop=center",
+        "kind": "cover-generated",
+        "status": 200,
+        "content_type": "image/jpeg",
+        "content_length": "125534",
+        "accept_ranges": "bytes",
+        "access_control_allow_origin": "*"
+      },
+      {
+        "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/NELK.jpg?v=1752082631&width=2600&crop=center",
+        "kind": "cover-generated",
+        "status": 200,
+        "content_type": "image/jpeg",
+        "content_length": "125534",
+        "accept_ranges": "bytes",
+        "access_control_allow_origin": "*"
+      },
+      {
+        "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/NELK.jpg?v=1752082631&width=2800&crop=center",
+        "kind": "cover-generated",
+        "status": 200,
+        "content_type": "image/jpeg",
+        "content_length": "125534",
+        "accept_ranges": "bytes",
+        "access_control_allow_origin": "*"
+      },
+      {
+        "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/NELK.jpg?v=1752082631&width=3000&crop=center",
+        "kind": "cover-generated",
+        "status": 200,
+        "content_type": "image/jpeg",
+        "content_length": "125534",
+        "accept_ranges": "bytes",
+        "access_control_allow_origin": "*"
+      },
+      {
+        "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/SNAKE.jpg?v=1752082567&width=100&crop=center",
+        "kind": "cover-generated",
+        "status": 200,
+        "content_type": "image/jpeg",
+        "content_length": "4290",
+        "accept_ranges": "bytes",
+        "access_control_allow_origin": "*"
+      },
+      {
+        "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/SNAKE.jpg?v=1752082567&width=200&crop=center",
+        "kind": "cover-generated",
+        "status": 200,
+        "content_type": "image/jpeg",
+        "content_length": "10567",
+        "accept_ranges": "bytes",
+        "access_control_allow_origin": "*"
+      },
+      {
+        "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/SNAKE.jpg?v=1752082567&width=400&crop=center",
+        "kind": "cover-generated",
+        "status": 200,
+        "content_type": "image/jpeg",
+        "content_length": "31529",
+        "accept_ranges": "bytes",
+        "access_control_allow_origin": "*"
+      },
+      {
+        "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/SNAKE.jpg?v=1752082567&width=600&crop=center",
+        "kind": "cover-generated",
+        "status": 200,
+        "content_type": "image/jpeg",
+        "content_length": "64369",
+        "accept_ranges": "bytes",
+        "access_control_allow_origin": "*"
+      },
+      {
+        "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/SNAKE.jpg?v=1752082567&width=800&crop=center",
+        "kind": "cover-generated",
+        "status": 200,
+        "content_type": "image/jpeg",
+        "content_length": "107332",
+        "accept_ranges": "bytes",
+        "access_control_allow_origin": "*"
+      },
+      {
+        "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/SNAKE.jpg?v=1752082567&width=1000&crop=center",
+        "kind": "cover-generated",
+        "status": 200,
+        "content_type": "image/jpeg",
+        "content_length": "156082",
+        "accept_ranges": null,
+        "access_control_allow_origin": "*"
+      },
+      {
+        "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/SNAKE.jpg?v=1752082567&width=1200&crop=center",
+        "kind": "cover-generated",
+        "status": 200,
+        "content_type": "image/jpeg",
+        "content_length": "178876",
+        "accept_ranges": "bytes",
+        "access_control_allow_origin": "*"
+      },
+      {
+        "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/SNAKE.jpg?v=1752082567&width=1400&crop=center",
+        "kind": "cover-generated",
+        "status": 200,
+        "content_type": "image/jpeg",
+        "content_length": "178876",
+        "accept_ranges": "bytes",
+        "access_control_allow_origin": "*"
+      },
+      {
+        "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/SNAKE.jpg?v=1752082567&width=1600&crop=center",
+        "kind": "cover-generated",
+        "status": 200,
+        "content_type": "image/jpeg",
+        "content_length": "178876",
+        "accept_ranges": "bytes",
+        "access_control_allow_origin": "*"
+      },
+      {
+        "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/SNAKE.jpg?v=1752082567&width=1800&crop=center",
+        "kind": "cover-generated",
+        "status": 200,
+        "content_type": "image/jpeg",
+        "content_length": "178876",
+        "accept_ranges": "bytes",
+        "access_control_allow_origin": "*"
+      },
+      {
+        "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/SNAKE.jpg?v=1752082567&width=2000&crop=center",
+        "kind": "cover-generated",
+        "status": 200,
+        "content_type": "image/jpeg",
+        "content_length": "178876",
+        "accept_ranges": "bytes",
+        "access_control_allow_origin": "*"
+      },
+      {
+        "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/SNAKE.jpg?v=1752082567&width=2200&crop=center",
+        "kind": "cover-generated",
+        "status": 200,
+        "content_type": "image/jpeg",
+        "content_length": "178876",
+        "accept_ranges": "bytes",
+        "access_control_allow_origin": "*"
+      },
+      {
+        "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/SNAKE.jpg?v=1752082567&width=2400&crop=center",
+        "kind": "cover-generated",
+        "status": 200,
+        "content_type": "image/jpeg",
+        "content_length": "178876",
+        "accept_ranges": null,
+        "access_control_allow_origin": "*"
+      },
+      {
+        "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/SNAKE.jpg?v=1752082567&width=2600&crop=center",
+        "kind": "cover-generated",
+        "status": 200,
+        "content_type": "image/jpeg",
+        "content_length": "178876",
+        "accept_ranges": "bytes",
+        "access_control_allow_origin": "*"
+      },
+      {
+        "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/SNAKE.jpg?v=1752082567&width=2800&crop=center",
+        "kind": "cover-generated",
+        "status": 200,
+        "content_type": "image/jpeg",
+        "content_length": "178876",
+        "accept_ranges": null,
+        "access_control_allow_origin": "*"
+      },
+      {
+        "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/SNAKE.jpg?v=1752082567&width=3000&crop=center",
+        "kind": "cover-generated",
+        "status": 200,
+        "content_type": "image/jpeg",
+        "content_length": "178876",
+        "accept_ranges": "bytes",
+        "access_control_allow_origin": "*"
+      },
+      {
+        "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/DENZEL_RADIO.jpg?v=1748623082&width=100&crop=center",
+        "kind": "cover-generated",
+        "status": 200,
+        "content_type": "image/jpeg",
+        "content_length": "3355",
+        "accept_ranges": "bytes",
+        "access_control_allow_origin": "*"
+      },
+      {
+        "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/DENZEL_RADIO.jpg?v=1748623082&width=200&crop=center",
+        "kind": "cover-generated",
+        "status": 200,
+        "content_type": "image/jpeg",
+        "content_length": "9403",
+        "accept_ranges": "bytes",
+        "access_control_allow_origin": "*"
+      },
+      {
+        "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/DENZEL_RADIO.jpg?v=1748623082&width=400&crop=center",
+        "kind": "cover-generated",
+        "status": 200,
+        "content_type": "image/jpeg",
+        "content_length": "32920",
+        "accept_ranges": null,
+        "access_control_allow_origin": "*"
+      },
+      {
+        "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/DENZEL_RADIO.jpg?v=1748623082&width=600&crop=center",
+        "kind": "cover-generated",
+        "status": 200,
+        "content_type": "image/jpeg",
+        "content_length": "69779",
+        "accept_ranges": null,
+        "access_control_allow_origin": "*"
+      },
+      {
+        "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/DENZEL_RADIO.jpg?v=1748623082&width=800&crop=center",
+        "kind": "cover-generated",
+        "status": 200,
+        "content_type": "image/jpeg",
+        "content_length": "116857",
+        "accept_ranges": null,
+        "access_control_allow_origin": "*"
+      },
+      {
+        "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/DENZEL_RADIO.jpg?v=1748623082&width=1000&crop=center",
+        "kind": "cover-generated",
+        "status": 200,
+        "content_type": "image/jpeg",
+        "content_length": "168334",
+        "accept_ranges": "bytes",
+        "access_control_allow_origin": "*"
+      },
+      {
+        "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/DENZEL_RADIO.jpg?v=1748623082&width=1200&crop=center",
+        "kind": "cover-generated",
+        "status": 200,
+        "content_type": "image/jpeg",
+        "content_length": "193885",
+        "accept_ranges": "bytes",
+        "access_control_allow_origin": "*"
+      },
+      {
+        "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/DENZEL_RADIO.jpg?v=1748623082&width=1400&crop=center",
+        "kind": "cover-generated",
+        "status": 200,
+        "content_type": "image/jpeg",
+        "content_length": "193885",
+        "accept_ranges": "bytes",
+        "access_control_allow_origin": "*"
+      },
+      {
+        "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/DENZEL_RADIO.jpg?v=1748623082&width=1600&crop=center",
+        "kind": "cover-generated",
+        "status": 200,
+        "content_type": "image/jpeg",
+        "content_length": "193885",
+        "accept_ranges": "bytes",
+        "access_control_allow_origin": "*"
+      },
+      {
+        "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/DENZEL_RADIO.jpg?v=1748623082&width=1800&crop=center",
+        "kind": "cover-generated",
+        "status": 200,
+        "content_type": "image/jpeg",
+        "content_length": "193885",
+        "accept_ranges": "bytes",
+        "access_control_allow_origin": "*"
+      },
+      {
+        "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/DENZEL_RADIO.jpg?v=1748623082&width=2000&crop=center",
+        "kind": "cover-generated",
+        "status": 200,
+        "content_type": "image/jpeg",
+        "content_length": "193885",
+        "accept_ranges": "bytes",
+        "access_control_allow_origin": "*"
+      },
+      {
+        "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/DENZEL_RADIO.jpg?v=1748623082&width=2200&crop=center",
+        "kind": "cover-generated",
+        "status": 200,
+        "content_type": "image/jpeg",
+        "content_length": "193885",
+        "accept_ranges": null,
+        "access_control_allow_origin": "*"
+      },
+      {
+        "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/DENZEL_RADIO.jpg?v=1748623082&width=2400&crop=center",
+        "kind": "cover-generated",
+        "status": 200,
+        "content_type": "image/jpeg",
+        "content_length": "193885",
+        "accept_ranges": "bytes",
+        "access_control_allow_origin": "*"
+      },
+      {
+        "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/DENZEL_RADIO.jpg?v=1748623082&width=2600&crop=center",
+        "kind": "cover-generated",
+        "status": 200,
+        "content_type": "image/jpeg",
+        "content_length": "193885",
+        "accept_ranges": "bytes",
+        "access_control_allow_origin": "*"
+      },
+      {
+        "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/DENZEL_RADIO.jpg?v=1748623082&width=2800&crop=center",
+        "kind": "cover-generated",
+        "status": 200,
+        "content_type": "image/jpeg",
+        "content_length": "193885",
+        "accept_ranges": "bytes",
+        "access_control_allow_origin": "*"
+      },
+      {
+        "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/DENZEL_RADIO.jpg?v=1748623082&width=3000&crop=center",
+        "kind": "cover-generated",
+        "status": 200,
+        "content_type": "image/jpeg",
+        "content_length": "193885",
+        "accept_ranges": null,
+        "access_control_allow_origin": "*"
+      },
+      {
+        "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/94E7D672-2243-440A-B87D-03E503AE72B3.jpg?v=1745604210&width=100&crop=center",
+        "kind": "cover-generated",
+        "status": 200,
+        "content_type": "image/jpeg",
+        "content_length": "3167",
+        "accept_ranges": "bytes",
+        "access_control_allow_origin": "*"
+      },
+      {
+        "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/94E7D672-2243-440A-B87D-03E503AE72B3.jpg?v=1745604210&width=200&crop=center",
+        "kind": "cover-generated",
+        "status": 200,
+        "content_type": "image/jpeg",
+        "content_length": "6522",
+        "accept_ranges": "bytes",
+        "access_control_allow_origin": "*"
+      },
+      {
+        "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/94E7D672-2243-440A-B87D-03E503AE72B3.jpg?v=1745604210&width=400&crop=center",
+        "kind": "cover-generated",
+        "status": 200,
+        "content_type": "image/jpeg",
+        "content_length": "15537",
+        "accept_ranges": null,
+        "access_control_allow_origin": "*"
+      },
+      {
+        "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/94E7D672-2243-440A-B87D-03E503AE72B3.jpg?v=1745604210&width=600&crop=center",
+        "kind": "cover-generated",
+        "status": 200,
+        "content_type": "image/jpeg",
+        "content_length": "24076",
+        "accept_ranges": "bytes",
+        "access_control_allow_origin": "*"
+      },
+      {
+        "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/94E7D672-2243-440A-B87D-03E503AE72B3.jpg?v=1745604210&width=800&crop=center",
+        "kind": "cover-generated",
+        "status": 200,
+        "content_type": "image/jpeg",
+        "content_length": "24076",
+        "accept_ranges": "bytes",
+        "access_control_allow_origin": "*"
+      },
+      {
+        "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/94E7D672-2243-440A-B87D-03E503AE72B3.jpg?v=1745604210&width=1000&crop=center",
+        "kind": "cover-generated",
+        "status": 200,
+        "content_type": "image/jpeg",
+        "content_length": "24076",
+        "accept_ranges": "bytes",
+        "access_control_allow_origin": "*"
+      },
+      {
+        "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/94E7D672-2243-440A-B87D-03E503AE72B3.jpg?v=1745604210&width=1200&crop=center",
+        "kind": "cover-generated",
+        "status": 200,
+        "content_type": "image/jpeg",
+        "content_length": "24076",
+        "accept_ranges": "bytes",
+        "access_control_allow_origin": "*"
+      },
+      {
+        "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/94E7D672-2243-440A-B87D-03E503AE72B3.jpg?v=1745604210&width=1400&crop=center",
+        "kind": "cover-generated",
+        "status": 200,
+        "content_type": "image/jpeg",
+        "content_length": "24076",
+        "accept_ranges": "bytes",
+        "access_control_allow_origin": "*"
+      },
+      {
+        "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/94E7D672-2243-440A-B87D-03E503AE72B3.jpg?v=1745604210&width=1600&crop=center",
+        "kind": "cover-generated",
+        "status": 200,
+        "content_type": "image/jpeg",
+        "content_length": "24076",
+        "accept_ranges": "bytes",
+        "access_control_allow_origin": "*"
+      },
+      {
+        "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/94E7D672-2243-440A-B87D-03E503AE72B3.jpg?v=1745604210&width=1800&crop=center",
+        "kind": "cover-generated",
+        "status": 200,
+        "content_type": "image/jpeg",
+        "content_length": "24076",
+        "accept_ranges": "bytes",
+        "access_control_allow_origin": "*"
+      },
+      {
+        "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/94E7D672-2243-440A-B87D-03E503AE72B3.jpg?v=1745604210&width=2000&crop=center",
+        "kind": "cover-generated",
+        "status": 200,
+        "content_type": "image/jpeg",
+        "content_length": "24076",
+        "accept_ranges": "bytes",
+        "access_control_allow_origin": "*"
+      },
+      {
+        "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/94E7D672-2243-440A-B87D-03E503AE72B3.jpg?v=1745604210&width=2200&crop=center",
+        "kind": "cover-generated",
+        "status": 200,
+        "content_type": "image/jpeg",
+        "content_length": "24076",
+        "accept_ranges": null,
+        "access_control_allow_origin": "*"
+      },
+      {
+        "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/94E7D672-2243-440A-B87D-03E503AE72B3.jpg?v=1745604210&width=2400&crop=center",
+        "kind": "cover-generated",
+        "status": 200,
+        "content_type": "image/jpeg",
+        "content_length": "24076",
+        "accept_ranges": "bytes",
+        "access_control_allow_origin": "*"
+      },
+      {
+        "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/94E7D672-2243-440A-B87D-03E503AE72B3.jpg?v=1745604210&width=2600&crop=center",
+        "kind": "cover-generated",
+        "status": 200,
+        "content_type": "image/jpeg",
+        "content_length": "24076",
+        "accept_ranges": "bytes",
+        "access_control_allow_origin": "*"
+      },
+      {
+        "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/94E7D672-2243-440A-B87D-03E503AE72B3.jpg?v=1745604210&width=2800&crop=center",
+        "kind": "cover-generated",
+        "status": 200,
+        "content_type": "image/jpeg",
+        "content_length": "24076",
+        "accept_ranges": null,
+        "access_control_allow_origin": "*"
+      },
+      {
+        "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/94E7D672-2243-440A-B87D-03E503AE72B3.jpg?v=1745604210&width=3000&crop=center",
+        "kind": "cover-generated",
+        "status": 200,
+        "content_type": "image/jpeg",
+        "content_length": "24076",
+        "accept_ranges": "bytes",
+        "access_control_allow_origin": "*"
+      },
+      {
+        "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/SNUFFBLOOD.jpg?v=1742774204&width=100&crop=center",
+        "kind": "cover-generated",
+        "status": 200,
+        "content_type": "image/jpeg",
+        "content_length": "3564",
+        "accept_ranges": null,
+        "access_control_allow_origin": "*"
+      },
+      {
+        "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/SNUFFBLOOD.jpg?v=1742774204&width=200&crop=center",
+        "kind": "cover-generated",
+        "status": 200,
+        "content_type": "image/jpeg",
+        "content_length": "7272",
+        "accept_ranges": "bytes",
+        "access_control_allow_origin": "*"
+      },
+      {
+        "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/SNUFFBLOOD.jpg?v=1742774204&width=400&crop=center",
+        "kind": "cover-generated",
+        "status": 200,
+        "content_type": "image/jpeg",
+        "content_length": "16575",
+        "accept_ranges": "bytes",
+        "access_control_allow_origin": "*"
+      },
+      {
+        "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/SNUFFBLOOD.jpg?v=1742774204&width=600&crop=center",
+        "kind": "cover-generated",
+        "status": 200,
+        "content_type": "image/jpeg",
+        "content_length": "28033",
+        "accept_ranges": "bytes",
+        "access_control_allow_origin": "*"
+      },
+      {
+        "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/SNUFFBLOOD.jpg?v=1742774204&width=800&crop=center",
+        "kind": "cover-generated",
+        "status": 200,
+        "content_type": "image/jpeg",
+        "content_length": "41164",
+        "accept_ranges": null,
+        "access_control_allow_origin": "*"
+      },
+      {
+        "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/SNUFFBLOOD.jpg?v=1742774204&width=1000&crop=center",
+        "kind": "cover-generated",
+        "status": 200,
+        "content_type": "image/jpeg",
+        "content_length": "54927",
+        "accept_ranges": "bytes",
+        "access_control_allow_origin": "*"
+      },
+      {
+        "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/SNUFFBLOOD.jpg?v=1742774204&width=1200&crop=center",
+        "kind": "cover-generated",
+        "status": 200,
+        "content_type": "image/jpeg",
+        "content_length": "61444",
+        "accept_ranges": null,
+        "access_control_allow_origin": "*"
+      },
+      {
+        "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/SNUFFBLOOD.jpg?v=1742774204&width=1400&crop=center",
+        "kind": "cover-generated",
+        "status": 200,
+        "content_type": "image/jpeg",
+        "content_length": "61444",
+        "accept_ranges": "bytes",
+        "access_control_allow_origin": "*"
+      },
+      {
+        "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/SNUFFBLOOD.jpg?v=1742774204&width=1600&crop=center",
+        "kind": "cover-generated",
+        "status": 200,
+        "content_type": "image/jpeg",
+        "content_length": "61444",
+        "accept_ranges": "bytes",
+        "access_control_allow_origin": "*"
+      },
+      {
+        "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/SNUFFBLOOD.jpg?v=1742774204&width=1800&crop=center",
+        "kind": "cover-generated",
+        "status": 200,
+        "content_type": "image/jpeg",
+        "content_length": "61444",
+        "accept_ranges": "bytes",
+        "access_control_allow_origin": "*"
+      },
+      {
+        "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/SNUFFBLOOD.jpg?v=1742774204&width=2000&crop=center",
+        "kind": "cover-generated",
+        "status": 200,
+        "content_type": "image/jpeg",
+        "content_length": "61444",
+        "accept_ranges": "bytes",
+        "access_control_allow_origin": "*"
+      },
+      {
+        "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/SNUFFBLOOD.jpg?v=1742774204&width=2200&crop=center",
+        "kind": "cover-generated",
+        "status": 200,
+        "content_type": "image/jpeg",
+        "content_length": "61444",
+        "accept_ranges": null,
+        "access_control_allow_origin": "*"
+      },
+      {
+        "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/SNUFFBLOOD.jpg?v=1742774204&width=2400&crop=center",
+        "kind": "cover-generated",
+        "status": 200,
+        "content_type": "image/jpeg",
+        "content_length": "61444",
+        "accept_ranges": "bytes",
+        "access_control_allow_origin": "*"
+      },
+      {
+        "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/SNUFFBLOOD.jpg?v=1742774204&width=2600&crop=center",
+        "kind": "cover-generated",
+        "status": 200,
+        "content_type": "image/jpeg",
+        "content_length": "61444",
+        "accept_ranges": "bytes",
+        "access_control_allow_origin": "*"
+      },
+      {
+        "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/SNUFFBLOOD.jpg?v=1742774204&width=2800&crop=center",
+        "kind": "cover-generated",
+        "status": 200,
+        "content_type": "image/jpeg",
+        "content_length": "61444",
+        "accept_ranges": "bytes",
+        "access_control_allow_origin": "*"
+      },
+      {
+        "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/SNUFFBLOOD.jpg?v=1742774204&width=3000&crop=center",
+        "kind": "cover-generated",
+        "status": 200,
+        "content_type": "image/jpeg",
+        "content_length": "61444",
+        "accept_ranges": "bytes",
+        "access_control_allow_origin": "*"
+      },
+      {
+        "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/BULLY.jpg?v=1742579741&width=100&crop=center",
+        "kind": "cover-generated",
+        "status": 200,
+        "content_type": "image/jpeg",
+        "content_length": "2571",
+        "accept_ranges": "bytes",
+        "access_control_allow_origin": "*"
+      },
+      {
+        "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/BULLY.jpg?v=1742579741&width=200&crop=center",
+        "kind": "cover-generated",
+        "status": 200,
+        "content_type": "image/jpeg",
+        "content_length": "6929",
+        "accept_ranges": null,
+        "access_control_allow_origin": "*"
+      },
+      {
+        "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/BULLY.jpg?v=1742579741&width=400&crop=center",
+        "kind": "cover-generated",
+        "status": 200,
+        "content_type": "image/jpeg",
+        "content_length": "24190",
+        "accept_ranges": "bytes",
+        "access_control_allow_origin": "*"
+      },
+      {
+        "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/BULLY.jpg?v=1742579741&width=600&crop=center",
+        "kind": "cover-generated",
+        "status": 200,
+        "content_type": "image/jpeg",
+        "content_length": "42128",
+        "accept_ranges": "bytes",
+        "access_control_allow_origin": "*"
+      },
+      {
+        "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/BULLY.jpg?v=1742579741&width=800&crop=center",
+        "kind": "cover-generated",
+        "status": 200,
+        "content_type": "image/jpeg",
+        "content_length": "60626",
+        "accept_ranges": "bytes",
+        "access_control_allow_origin": "*"
+      },
+      {
+        "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/BULLY.jpg?v=1742579741&width=1000&crop=center",
+        "kind": "cover-generated",
+        "status": 200,
+        "content_type": "image/jpeg",
+        "content_length": "79886",
+        "accept_ranges": null,
+        "access_control_allow_origin": "*"
+      },
+      {
+        "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/BULLY.jpg?v=1742579741&width=1200&crop=center",
+        "kind": "cover-generated",
+        "status": 200,
+        "content_type": "image/jpeg",
+        "content_length": "88584",
+        "accept_ranges": "bytes",
+        "access_control_allow_origin": "*"
+      },
+      {
+        "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/BULLY.jpg?v=1742579741&width=1400&crop=center",
+        "kind": "cover-generated",
+        "status": 200,
+        "content_type": "image/jpeg",
+        "content_length": "88584",
+        "accept_ranges": "bytes",
+        "access_control_allow_origin": "*"
+      },
+      {
+        "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/BULLY.jpg?v=1742579741&width=1600&crop=center",
+        "kind": "cover-generated",
+        "status": 200,
+        "content_type": "image/jpeg",
+        "content_length": "88584",
+        "accept_ranges": "bytes",
+        "access_control_allow_origin": "*"
+      },
+      {
+        "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/BULLY.jpg?v=1742579741&width=1800&crop=center",
+        "kind": "cover-generated",
+        "status": 200,
+        "content_type": "image/jpeg",
+        "content_length": "88584",
+        "accept_ranges": "bytes",
+        "access_control_allow_origin": "*"
+      },
+      {
+        "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/BULLY.jpg?v=1742579741&width=2000&crop=center",
+        "kind": "cover-generated",
+        "status": 200,
+        "content_type": "image/jpeg",
+        "content_length": "88584",
+        "accept_ranges": null,
+        "access_control_allow_origin": "*"
+      },
+      {
+        "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/BULLY.jpg?v=1742579741&width=2200&crop=center",
+        "kind": "cover-generated",
+        "status": 200,
+        "content_type": "image/jpeg",
+        "content_length": "88584",
+        "accept_ranges": "bytes",
+        "access_control_allow_origin": "*"
+      },
+      {
+        "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/BULLY.jpg?v=1742579741&width=2400&crop=center",
+        "kind": "cover-generated",
+        "status": 200,
+        "content_type": "image/jpeg",
+        "content_length": "88584",
+        "accept_ranges": "bytes",
+        "access_control_allow_origin": "*"
+      },
+      {
+        "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/BULLY.jpg?v=1742579741&width=2600&crop=center",
+        "kind": "cover-generated",
+        "status": 200,
+        "content_type": "image/jpeg",
+        "content_length": "88584",
+        "accept_ranges": "bytes",
+        "access_control_allow_origin": "*"
+      },
+      {
+        "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/BULLY.jpg?v=1742579741&width=2800&crop=center",
+        "kind": "cover-generated",
+        "status": 200,
+        "content_type": "image/jpeg",
+        "content_length": "88584",
+        "accept_ranges": "bytes",
+        "access_control_allow_origin": "*"
+      },
+      {
+        "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/BULLY.jpg?v=1742579741&width=3000&crop=center",
+        "kind": "cover-generated",
+        "status": 200,
+        "content_type": "image/jpeg",
+        "content_length": "88584",
+        "accept_ranges": null,
+        "access_control_allow_origin": "*"
+      },
+      {
+        "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/DISCO_copy.jpg?v=1742656642&width=100&crop=center",
+        "kind": "cover-generated",
+        "status": 200,
+        "content_type": "image/jpeg",
+        "content_length": "3267",
+        "accept_ranges": "bytes",
+        "access_control_allow_origin": "*"
+      },
+      {
+        "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/DISCO_copy.jpg?v=1742656642&width=200&crop=center",
+        "kind": "cover-generated",
+        "status": 200,
+        "content_type": "image/jpeg",
+        "content_length": "6971",
+        "accept_ranges": null,
+        "access_control_allow_origin": "*"
+      },
+      {
+        "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/DISCO_copy.jpg?v=1742656642&width=400&crop=center",
+        "kind": "cover-generated",
+        "status": 200,
+        "content_type": "image/jpeg",
+        "content_length": "18088",
+        "accept_ranges": "bytes",
+        "access_control_allow_origin": "*"
+      },
+      {
+        "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/DISCO_copy.jpg?v=1742656642&width=600&crop=center",
+        "kind": "cover-generated",
+        "status": 200,
+        "content_type": "image/jpeg",
+        "content_length": "33151",
+        "accept_ranges": "bytes",
+        "access_control_allow_origin": "*"
+      },
+      {
+        "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/DISCO_copy.jpg?v=1742656642&width=800&crop=center",
+        "kind": "cover-generated",
+        "status": 200,
+        "content_type": "image/jpeg",
+        "content_length": "50833",
+        "accept_ranges": "bytes",
+        "access_control_allow_origin": "*"
+      },
+      {
+        "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/DISCO_copy.jpg?v=1742656642&width=1000&crop=center",
+        "kind": "cover-generated",
+        "status": 200,
+        "content_type": "image/jpeg",
+        "content_length": "69437",
+        "accept_ranges": "bytes",
+        "access_control_allow_origin": "*"
+      },
+      {
+        "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/DISCO_copy.jpg?v=1742656642&width=1200&crop=center",
+        "kind": "cover-generated",
+        "status": 200,
+        "content_type": "image/jpeg",
+        "content_length": "78999",
+        "accept_ranges": null,
+        "access_control_allow_origin": "*"
+      },
+      {
+        "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/DISCO_copy.jpg?v=1742656642&width=1400&crop=center",
+        "kind": "cover-generated",
+        "status": 200,
+        "content_type": "image/jpeg",
+        "content_length": "78999",
+        "accept_ranges": null,
+        "access_control_allow_origin": "*"
+      },
+      {
+        "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/DISCO_copy.jpg?v=1742656642&width=1600&crop=center",
+        "kind": "cover-generated",
+        "status": 200,
+        "content_type": "image/jpeg",
+        "content_length": "78999",
+        "accept_ranges": null,
+        "access_control_allow_origin": "*"
+      },
+      {
+        "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/DISCO_copy.jpg?v=1742656642&width=1800&crop=center",
+        "kind": "cover-generated",
+        "status": 200,
+        "content_type": "image/jpeg",
+        "content_length": "78999",
+        "accept_ranges": null,
+        "access_control_allow_origin": "*"
+      },
+      {
+        "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/DISCO_copy.jpg?v=1742656642&width=2000&crop=center",
+        "kind": "cover-generated",
+        "status": 200,
+        "content_type": "image/jpeg",
+        "content_length": "78999",
+        "accept_ranges": null,
+        "access_control_allow_origin": "*"
+      },
+      {
+        "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/DISCO_copy.jpg?v=1742656642&width=2200&crop=center",
+        "kind": "cover-generated",
+        "status": 200,
+        "content_type": "image/jpeg",
+        "content_length": "78999",
+        "accept_ranges": "bytes",
+        "access_control_allow_origin": "*"
+      },
+      {
+        "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/DISCO_copy.jpg?v=1742656642&width=2400&crop=center",
+        "kind": "cover-generated",
+        "status": 200,
+        "content_type": "image/jpeg",
+        "content_length": "78999",
+        "accept_ranges": "bytes",
+        "access_control_allow_origin": "*"
+      },
+      {
+        "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/DISCO_copy.jpg?v=1742656642&width=2600&crop=center",
+        "kind": "cover-generated",
+        "status": 200,
+        "content_type": "image/jpeg",
+        "content_length": "78999",
+        "accept_ranges": "bytes",
+        "access_control_allow_origin": "*"
+      },
+      {
+        "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/DISCO_copy.jpg?v=1742656642&width=2800&crop=center",
+        "kind": "cover-generated",
+        "status": 200,
+        "content_type": "image/jpeg",
+        "content_length": "78999",
+        "accept_ranges": null,
+        "access_control_allow_origin": "*"
+      },
+      {
+        "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/DISCO_copy.jpg?v=1742656642&width=3000&crop=center",
+        "kind": "cover-generated",
+        "status": 200,
+        "content_type": "image/jpeg",
+        "content_length": "78999",
+        "accept_ranges": "bytes",
+        "access_control_allow_origin": "*"
+      },
+      {
+        "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/BURMA.jpg?v=1742654100&width=100&crop=center",
+        "kind": "cover-generated",
+        "status": 200,
+        "content_type": "image/jpeg",
+        "content_length": "4132",
+        "accept_ranges": "bytes",
+        "access_control_allow_origin": "*"
+      },
+      {
+        "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/BURMA.jpg?v=1742654100&width=200&crop=center",
+        "kind": "cover-generated",
+        "status": 200,
+        "content_type": "image/jpeg",
+        "content_length": "13810",
+        "accept_ranges": "bytes",
+        "access_control_allow_origin": "*"
+      },
+      {
+        "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/BURMA.jpg?v=1742654100&width=400&crop=center",
+        "kind": "cover-generated",
+        "status": 200,
+        "content_type": "image/jpeg",
+        "content_length": "42570",
+        "accept_ranges": "bytes",
+        "access_control_allow_origin": "*"
+      },
+      {
+        "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/BURMA.jpg?v=1742654100&width=600&crop=center",
+        "kind": "cover-generated",
+        "status": 200,
+        "content_type": "image/jpeg",
+        "content_length": "75881",
+        "accept_ranges": "bytes",
+        "access_control_allow_origin": "*"
+      },
+      {
+        "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/BURMA.jpg?v=1742654100&width=800&crop=center",
+        "kind": "cover-generated",
+        "status": 200,
+        "content_type": "image/jpeg",
+        "content_length": "111228",
+        "accept_ranges": "bytes",
+        "access_control_allow_origin": "*"
+      },
+      {
+        "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/BURMA.jpg?v=1742654100&width=1000&crop=center",
+        "kind": "cover-generated",
+        "status": 200,
+        "content_type": "image/jpeg",
+        "content_length": "148443",
+        "accept_ranges": "bytes",
+        "access_control_allow_origin": "*"
+      },
+      {
+        "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/BURMA.jpg?v=1742654100&width=1200&crop=center",
+        "kind": "cover-generated",
+        "status": 200,
+        "content_type": "image/jpeg",
+        "content_length": "165751",
+        "accept_ranges": "bytes",
+        "access_control_allow_origin": "*"
+      },
+      {
+        "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/BURMA.jpg?v=1742654100&width=1400&crop=center",
+        "kind": "cover-generated",
+        "status": 200,
+        "content_type": "image/jpeg",
+        "content_length": "165751",
+        "accept_ranges": "bytes",
+        "access_control_allow_origin": "*"
+      },
+      {
+        "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/BURMA.jpg?v=1742654100&width=1600&crop=center",
+        "kind": "cover-generated",
+        "status": 200,
+        "content_type": "image/jpeg",
+        "content_length": "165751",
+        "accept_ranges": null,
+        "access_control_allow_origin": "*"
+      },
+      {
+        "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/BURMA.jpg?v=1742654100&width=1800&crop=center",
+        "kind": "cover-generated",
+        "status": 200,
+        "content_type": "image/jpeg",
+        "content_length": "165751",
+        "accept_ranges": "bytes",
+        "access_control_allow_origin": "*"
+      },
+      {
+        "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/BURMA.jpg?v=1742654100&width=2000&crop=center",
+        "kind": "cover-generated",
+        "status": 200,
+        "content_type": "image/jpeg",
+        "content_length": "165751",
+        "accept_ranges": "bytes",
+        "access_control_allow_origin": "*"
+      },
+      {
+        "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/BURMA.jpg?v=1742654100&width=2200&crop=center",
+        "kind": "cover-generated",
+        "status": 200,
+        "content_type": "image/jpeg",
+        "content_length": "165751",
+        "accept_ranges": "bytes",
+        "access_control_allow_origin": "*"
+      },
+      {
+        "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/BURMA.jpg?v=1742654100&width=2400&crop=center",
+        "kind": "cover-generated",
+        "status": 200,
+        "content_type": "image/jpeg",
+        "content_length": "165751",
+        "accept_ranges": null,
+        "access_control_allow_origin": "*"
+      },
+      {
+        "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/BURMA.jpg?v=1742654100&width=2600&crop=center",
+        "kind": "cover-generated",
+        "status": 200,
+        "content_type": "image/jpeg",
+        "content_length": "165751",
+        "accept_ranges": "bytes",
+        "access_control_allow_origin": "*"
+      },
+      {
+        "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/BURMA.jpg?v=1742654100&width=2800&crop=center",
+        "kind": "cover-generated",
+        "status": 200,
+        "content_type": "image/jpeg",
+        "content_length": "165751",
+        "accept_ranges": "bytes",
+        "access_control_allow_origin": "*"
+      },
+      {
+        "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/BURMA.jpg?v=1742654100&width=3000&crop=center",
+        "kind": "cover-generated",
+        "status": 200,
+        "content_type": "image/jpeg",
+        "content_length": "165751",
+        "accept_ranges": "bytes",
+        "access_control_allow_origin": "*"
+      },
+      {
+        "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/DEREK_PRISON.jpg?v=1741827755&width=100&crop=center",
+        "kind": "cover-generated",
+        "status": 200,
+        "content_type": "image/jpeg",
+        "content_length": "3162",
+        "accept_ranges": "bytes",
+        "access_control_allow_origin": "*"
+      },
+      {
+        "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/DEREK_PRISON.jpg?v=1741827755&width=200&crop=center",
+        "kind": "cover-generated",
+        "status": 200,
+        "content_type": "image/jpeg",
+        "content_length": "7543",
+        "accept_ranges": null,
+        "access_control_allow_origin": "*"
+      },
+      {
+        "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/DEREK_PRISON.jpg?v=1741827755&width=400&crop=center",
+        "kind": "cover-generated",
+        "status": 200,
+        "content_type": "image/jpeg",
+        "content_length": "22937",
+        "accept_ranges": "bytes",
+        "access_control_allow_origin": "*"
+      },
+      {
+        "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/DEREK_PRISON.jpg?v=1741827755&width=600&crop=center",
+        "kind": "cover-generated",
+        "status": 200,
+        "content_type": "image/jpeg",
+        "content_length": "44629",
+        "accept_ranges": "bytes",
+        "access_control_allow_origin": "*"
+      },
+      {
+        "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/DEREK_PRISON.jpg?v=1741827755&width=800&crop=center",
+        "kind": "cover-generated",
+        "status": 200,
+        "content_type": "image/jpeg",
+        "content_length": "67387",
+        "accept_ranges": "bytes",
+        "access_control_allow_origin": "*"
+      },
+      {
+        "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/DEREK_PRISON.jpg?v=1741827755&width=1000&crop=center",
+        "kind": "cover-generated",
+        "status": 200,
+        "content_type": "image/jpeg",
+        "content_length": "90564",
+        "accept_ranges": "bytes",
+        "access_control_allow_origin": "*"
+      },
+      {
+        "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/DEREK_PRISON.jpg?v=1741827755&width=1200&crop=center",
+        "kind": "cover-generated",
+        "status": 200,
+        "content_type": "image/jpeg",
+        "content_length": "101218",
+        "accept_ranges": "bytes",
+        "access_control_allow_origin": "*"
+      },
+      {
+        "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/DEREK_PRISON.jpg?v=1741827755&width=1400&crop=center",
+        "kind": "cover-generated",
+        "status": 200,
+        "content_type": "image/jpeg",
+        "content_length": "101218",
+        "accept_ranges": "bytes",
+        "access_control_allow_origin": "*"
+      },
+      {
+        "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/DEREK_PRISON.jpg?v=1741827755&width=1600&crop=center",
+        "kind": "cover-generated",
+        "status": 200,
+        "content_type": "image/jpeg",
+        "content_length": "101218",
+        "accept_ranges": "bytes",
+        "access_control_allow_origin": "*"
+      },
+      {
+        "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/DEREK_PRISON.jpg?v=1741827755&width=1800&crop=center",
+        "kind": "cover-generated",
+        "status": 200,
+        "content_type": "image/jpeg",
+        "content_length": "101218",
+        "accept_ranges": "bytes",
+        "access_control_allow_origin": "*"
+      },
+      {
+        "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/DEREK_PRISON.jpg?v=1741827755&width=2000&crop=center",
+        "kind": "cover-generated",
+        "status": 200,
+        "content_type": "image/jpeg",
+        "content_length": "101218",
+        "accept_ranges": "bytes",
+        "access_control_allow_origin": "*"
+      },
+      {
+        "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/DEREK_PRISON.jpg?v=1741827755&width=2200&crop=center",
+        "kind": "cover-generated",
+        "status": 200,
+        "content_type": "image/jpeg",
+        "content_length": "101218",
+        "accept_ranges": "bytes",
+        "access_control_allow_origin": "*"
+      },
+      {
+        "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/DEREK_PRISON.jpg?v=1741827755&width=2400&crop=center",
+        "kind": "cover-generated",
+        "status": 200,
+        "content_type": "image/jpeg",
+        "content_length": "101218",
+        "accept_ranges": "bytes",
+        "access_control_allow_origin": "*"
+      },
+      {
+        "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/DEREK_PRISON.jpg?v=1741827755&width=2600&crop=center",
+        "kind": "cover-generated",
+        "status": 200,
+        "content_type": "image/jpeg",
+        "content_length": "101218",
+        "accept_ranges": null,
+        "access_control_allow_origin": "*"
+      },
+      {
+        "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/DEREK_PRISON.jpg?v=1741827755&width=2800&crop=center",
+        "kind": "cover-generated",
+        "status": 200,
+        "content_type": "image/jpeg",
+        "content_length": "101218",
+        "accept_ranges": "bytes",
+        "access_control_allow_origin": "*"
+      },
+      {
+        "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/DEREK_PRISON.jpg?v=1741827755&width=3000&crop=center",
+        "kind": "cover-generated",
+        "status": 200,
+        "content_type": "image/jpeg",
+        "content_length": "101218",
+        "accept_ranges": "bytes",
+        "access_control_allow_origin": "*"
+      },
+      {
+        "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/REGGAEE_RADIO.jpg?v=1741720982&width=100&crop=center",
+        "kind": "cover-generated",
+        "status": 200,
+        "content_type": "image/jpeg",
+        "content_length": "2913",
+        "accept_ranges": null,
+        "access_control_allow_origin": "*"
+      },
+      {
+        "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/REGGAEE_RADIO.jpg?v=1741720982&width=200&crop=center",
+        "kind": "cover-generated",
+        "status": 200,
+        "content_type": "image/jpeg",
+        "content_length": "6811",
+        "accept_ranges": null,
+        "access_control_allow_origin": "*"
+      },
+      {
+        "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/REGGAEE_RADIO.jpg?v=1741720982&width=400&crop=center",
+        "kind": "cover-generated",
+        "status": 200,
+        "content_type": "image/jpeg",
+        "content_length": "19706",
+        "accept_ranges": null,
+        "access_control_allow_origin": "*"
+      },
+      {
+        "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/REGGAEE_RADIO.jpg?v=1741720982&width=600&crop=center",
+        "kind": "cover-generated",
+        "status": 200,
+        "content_type": "image/jpeg",
+        "content_length": "38514",
+        "accept_ranges": "bytes",
+        "access_control_allow_origin": "*"
+      },
+      {
+        "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/REGGAEE_RADIO.jpg?v=1741720982&width=800&crop=center",
+        "kind": "cover-generated",
+        "status": 200,
+        "content_type": "image/jpeg",
+        "content_length": "64263",
+        "accept_ranges": null,
+        "access_control_allow_origin": "*"
+      },
+      {
+        "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/REGGAEE_RADIO.jpg?v=1741720982&width=1000&crop=center",
+        "kind": "cover-generated",
+        "status": 200,
+        "content_type": "image/jpeg",
+        "content_length": "98051",
+        "accept_ranges": "bytes",
+        "access_control_allow_origin": "*"
+      },
+      {
+        "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/REGGAEE_RADIO.jpg?v=1741720982&width=1200&crop=center",
+        "kind": "cover-generated",
+        "status": 200,
+        "content_type": "image/jpeg",
+        "content_length": "115683",
+        "accept_ranges": "bytes",
+        "access_control_allow_origin": "*"
+      },
+      {
+        "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/REGGAEE_RADIO.jpg?v=1741720982&width=1400&crop=center",
+        "kind": "cover-generated",
+        "status": 200,
+        "content_type": "image/jpeg",
+        "content_length": "115683",
+        "accept_ranges": "bytes",
+        "access_control_allow_origin": "*"
+      },
+      {
+        "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/REGGAEE_RADIO.jpg?v=1741720982&width=1600&crop=center",
+        "kind": "cover-generated",
+        "status": 200,
+        "content_type": "image/jpeg",
+        "content_length": "115683",
+        "accept_ranges": "bytes",
+        "access_control_allow_origin": "*"
+      },
+      {
+        "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/REGGAEE_RADIO.jpg?v=1741720982&width=1800&crop=center",
+        "kind": "cover-generated",
+        "status": 200,
+        "content_type": "image/jpeg",
+        "content_length": "115683",
+        "accept_ranges": "bytes",
+        "access_control_allow_origin": "*"
+      },
+      {
+        "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/REGGAEE_RADIO.jpg?v=1741720982&width=2000&crop=center",
+        "kind": "cover-generated",
+        "status": 200,
+        "content_type": "image/jpeg",
+        "content_length": "115683",
+        "accept_ranges": null,
+        "access_control_allow_origin": "*"
+      },
+      {
+        "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/REGGAEE_RADIO.jpg?v=1741720982&width=2200&crop=center",
+        "kind": "cover-generated",
+        "status": 200,
+        "content_type": "image/jpeg",
+        "content_length": "115683",
+        "accept_ranges": null,
+        "access_control_allow_origin": "*"
+      },
+      {
+        "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/REGGAEE_RADIO.jpg?v=1741720982&width=2400&crop=center",
+        "kind": "cover-generated",
+        "status": 200,
+        "content_type": "image/jpeg",
+        "content_length": "115683",
+        "accept_ranges": "bytes",
+        "access_control_allow_origin": "*"
+      },
+      {
+        "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/REGGAEE_RADIO.jpg?v=1741720982&width=2600&crop=center",
+        "kind": "cover-generated",
+        "status": 200,
+        "content_type": "image/jpeg",
+        "content_length": "115683",
+        "accept_ranges": "bytes",
+        "access_control_allow_origin": "*"
+      },
+      {
+        "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/REGGAEE_RADIO.jpg?v=1741720982&width=2800&crop=center",
+        "kind": "cover-generated",
+        "status": 200,
+        "content_type": "image/jpeg",
+        "content_length": "115683",
+        "accept_ranges": "bytes",
+        "access_control_allow_origin": "*"
+      },
+      {
+        "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/REGGAEE_RADIO.jpg?v=1741720982&width=3000&crop=center",
+        "kind": "cover-generated",
+        "status": 200,
+        "content_type": "image/jpeg",
+        "content_length": "115683",
+        "accept_ranges": "bytes",
+        "access_control_allow_origin": "*"
+      },
+      {
+        "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/BANKS.jpg?v=1726252511&width=100&crop=center",
+        "kind": "cover-generated",
+        "status": 200,
+        "content_type": "image/jpeg",
+        "content_length": "3129",
+        "accept_ranges": "bytes",
+        "access_control_allow_origin": "*"
+      },
+      {
+        "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/BANKS.jpg?v=1726252511&width=200&crop=center",
+        "kind": "cover-generated",
+        "status": 200,
+        "content_type": "image/jpeg",
+        "content_length": "7809",
+        "accept_ranges": "bytes",
+        "access_control_allow_origin": "*"
+      },
+      {
+        "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/BANKS.jpg?v=1726252511&width=400&crop=center",
+        "kind": "cover-generated",
+        "status": 200,
+        "content_type": "image/jpeg",
+        "content_length": "24689",
+        "accept_ranges": "bytes",
+        "access_control_allow_origin": "*"
+      },
+      {
+        "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/BANKS.jpg?v=1726252511&width=600&crop=center",
+        "kind": "cover-generated",
+        "status": 200,
+        "content_type": "image/jpeg",
+        "content_length": "50779",
+        "accept_ranges": "bytes",
+        "access_control_allow_origin": "*"
+      },
+      {
+        "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/BANKS.jpg?v=1726252511&width=800&crop=center",
+        "kind": "cover-generated",
+        "status": 200,
+        "content_type": "image/jpeg",
+        "content_length": "84009",
+        "accept_ranges": "bytes",
+        "access_control_allow_origin": "*"
+      },
+      {
+        "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/BANKS.jpg?v=1726252511&width=1000&crop=center",
+        "kind": "cover-generated",
+        "status": 200,
+        "content_type": "image/jpeg",
+        "content_length": "120453",
+        "accept_ranges": "bytes",
+        "access_control_allow_origin": "*"
+      },
+      {
+        "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/BANKS.jpg?v=1726252511&width=1200&crop=center",
+        "kind": "cover-generated",
+        "status": 200,
+        "content_type": "image/jpeg",
+        "content_length": "137809",
+        "accept_ranges": null,
+        "access_control_allow_origin": "*"
+      },
+      {
+        "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/BANKS.jpg?v=1726252511&width=1400&crop=center",
+        "kind": "cover-generated",
+        "status": 200,
+        "content_type": "image/jpeg",
+        "content_length": "137809",
+        "accept_ranges": "bytes",
+        "access_control_allow_origin": "*"
+      },
+      {
+        "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/BANKS.jpg?v=1726252511&width=1600&crop=center",
+        "kind": "cover-generated",
+        "status": 200,
+        "content_type": "image/jpeg",
+        "content_length": "137809",
+        "accept_ranges": null,
+        "access_control_allow_origin": "*"
+      },
+      {
+        "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/BANKS.jpg?v=1726252511&width=1800&crop=center",
+        "kind": "cover-generated",
+        "status": 200,
+        "content_type": "image/jpeg",
+        "content_length": "137809",
+        "accept_ranges": "bytes",
+        "access_control_allow_origin": "*"
+      },
+      {
+        "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/BANKS.jpg?v=1726252511&width=2000&crop=center",
+        "kind": "cover-generated",
+        "status": 200,
+        "content_type": "image/jpeg",
+        "content_length": "137809",
+        "accept_ranges": "bytes",
+        "access_control_allow_origin": "*"
+      },
+      {
+        "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/BANKS.jpg?v=1726252511&width=2200&crop=center",
+        "kind": "cover-generated",
+        "status": 200,
+        "content_type": "image/jpeg",
+        "content_length": "137809",
+        "accept_ranges": null,
+        "access_control_allow_origin": "*"
+      },
+      {
+        "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/BANKS.jpg?v=1726252511&width=2400&crop=center",
+        "kind": "cover-generated",
+        "status": 200,
+        "content_type": "image/jpeg",
+        "content_length": "137809",
+        "accept_ranges": "bytes",
+        "access_control_allow_origin": "*"
+      },
+      {
+        "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/BANKS.jpg?v=1726252511&width=2600&crop=center",
+        "kind": "cover-generated",
+        "status": 200,
+        "content_type": "image/jpeg",
+        "content_length": "137809",
+        "accept_ranges": "bytes",
+        "access_control_allow_origin": "*"
+      },
+      {
+        "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/BANKS.jpg?v=1726252511&width=2800&crop=center",
+        "kind": "cover-generated",
+        "status": 200,
+        "content_type": "image/jpeg",
+        "content_length": "137809",
+        "accept_ranges": "bytes",
+        "access_control_allow_origin": "*"
+      },
+      {
+        "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/BANKS.jpg?v=1726252511&width=3000&crop=center",
+        "kind": "cover-generated",
+        "status": 200,
+        "content_type": "image/jpeg",
+        "content_length": "137809",
+        "accept_ranges": "bytes",
+        "access_control_allow_origin": "*"
+      },
+      {
+        "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/POPPY_DAY_DREAM.jpg?v=1721435227&width=100&crop=center",
+        "kind": "cover-generated",
+        "status": 200,
+        "content_type": "image/jpeg",
+        "content_length": "4187",
+        "accept_ranges": "bytes",
+        "access_control_allow_origin": "*"
+      },
+      {
+        "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/POPPY_DAY_DREAM.jpg?v=1721435227&width=200&crop=center",
+        "kind": "cover-generated",
+        "status": 200,
+        "content_type": "image/jpeg",
+        "content_length": "12726",
+        "accept_ranges": "bytes",
+        "access_control_allow_origin": "*"
+      },
+      {
+        "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/POPPY_DAY_DREAM.jpg?v=1721435227&width=400&crop=center",
+        "kind": "cover-generated",
+        "status": 200,
+        "content_type": "image/jpeg",
+        "content_length": "56334",
+        "accept_ranges": "bytes",
+        "access_control_allow_origin": "*"
+      },
+      {
+        "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/POPPY_DAY_DREAM.jpg?v=1721435227&width=600&crop=center",
+        "kind": "cover-generated",
+        "status": 200,
+        "content_type": "image/jpeg",
+        "content_length": "144008",
+        "accept_ranges": "bytes",
+        "access_control_allow_origin": "*"
+      },
+      {
+        "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/POPPY_DAY_DREAM.jpg?v=1721435227&width=800&crop=center",
+        "kind": "cover-generated",
+        "status": 200,
+        "content_type": "image/jpeg",
+        "content_length": "270692",
+        "accept_ranges": null,
+        "access_control_allow_origin": "*"
+      },
+      {
+        "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/POPPY_DAY_DREAM.jpg?v=1721435227&width=1000&crop=center",
+        "kind": "cover-generated",
+        "status": 200,
+        "content_type": "image/jpeg",
+        "content_length": "398126",
+        "accept_ranges": "bytes",
+        "access_control_allow_origin": "*"
+      },
+      {
+        "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/POPPY_DAY_DREAM.jpg?v=1721435227&width=1200&crop=center",
+        "kind": "cover-generated",
+        "status": 200,
+        "content_type": "image/jpeg",
+        "content_length": "454746",
+        "accept_ranges": "bytes",
+        "access_control_allow_origin": "*"
+      },
+      {
+        "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/POPPY_DAY_DREAM.jpg?v=1721435227&width=1400&crop=center",
+        "kind": "cover-generated",
+        "status": 200,
+        "content_type": "image/jpeg",
+        "content_length": "454746",
+        "accept_ranges": "bytes",
+        "access_control_allow_origin": "*"
+      },
+      {
+        "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/POPPY_DAY_DREAM.jpg?v=1721435227&width=1600&crop=center",
+        "kind": "cover-generated",
+        "status": 200,
+        "content_type": "image/jpeg",
+        "content_length": "454746",
+        "accept_ranges": null,
+        "access_control_allow_origin": "*"
+      },
+      {
+        "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/POPPY_DAY_DREAM.jpg?v=1721435227&width=1800&crop=center",
+        "kind": "cover-generated",
+        "status": 200,
+        "content_type": "image/jpeg",
+        "content_length": "454746",
+        "accept_ranges": null,
+        "access_control_allow_origin": "*"
+      },
+      {
+        "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/POPPY_DAY_DREAM.jpg?v=1721435227&width=2000&crop=center",
+        "kind": "cover-generated",
+        "status": 200,
+        "content_type": "image/jpeg",
+        "content_length": "454746",
+        "accept_ranges": "bytes",
+        "access_control_allow_origin": "*"
+      },
+      {
+        "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/POPPY_DAY_DREAM.jpg?v=1721435227&width=2200&crop=center",
+        "kind": "cover-generated",
+        "status": 200,
+        "content_type": "image/jpeg",
+        "content_length": "454746",
+        "accept_ranges": "bytes",
+        "access_control_allow_origin": "*"
+      },
+      {
+        "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/POPPY_DAY_DREAM.jpg?v=1721435227&width=2400&crop=center",
+        "kind": "cover-generated",
+        "status": 200,
+        "content_type": "image/jpeg",
+        "content_length": "454746",
+        "accept_ranges": "bytes",
+        "access_control_allow_origin": "*"
+      },
+      {
+        "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/POPPY_DAY_DREAM.jpg?v=1721435227&width=2600&crop=center",
+        "kind": "cover-generated",
+        "status": 200,
+        "content_type": "image/jpeg",
+        "content_length": "454746",
+        "accept_ranges": "bytes",
+        "access_control_allow_origin": "*"
+      },
+      {
+        "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/POPPY_DAY_DREAM.jpg?v=1721435227&width=2800&crop=center",
+        "kind": "cover-generated",
+        "status": 200,
+        "content_type": "image/jpeg",
+        "content_length": "454746",
+        "accept_ranges": "bytes",
+        "access_control_allow_origin": "*"
+      },
+      {
+        "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/POPPY_DAY_DREAM.jpg?v=1721435227&width=3000&crop=center",
+        "kind": "cover-generated",
+        "status": 200,
+        "content_type": "image/jpeg",
+        "content_length": "454746",
+        "accept_ranges": "bytes",
+        "access_control_allow_origin": "*"
+      },
+      {
+        "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/BELLA_FUCT_RADIO.jpg?v=1720466020&width=100&crop=center",
+        "kind": "cover-generated",
+        "status": 200,
+        "content_type": "image/jpeg",
+        "content_length": "2868",
+        "accept_ranges": "bytes",
+        "access_control_allow_origin": "*"
+      },
+      {
+        "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/BELLA_FUCT_RADIO.jpg?v=1720466020&width=200&crop=center",
+        "kind": "cover-generated",
+        "status": 200,
+        "content_type": "image/jpeg",
+        "content_length": "7682",
+        "accept_ranges": null,
+        "access_control_allow_origin": "*"
+      },
+      {
+        "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/BELLA_FUCT_RADIO.jpg?v=1720466020&width=400&crop=center",
+        "kind": "cover-generated",
+        "status": 200,
+        "content_type": "image/jpeg",
+        "content_length": "24642",
+        "accept_ranges": "bytes",
+        "access_control_allow_origin": "*"
+      },
+      {
+        "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/BELLA_FUCT_RADIO.jpg?v=1720466020&width=600&crop=center",
+        "kind": "cover-generated",
+        "status": 200,
+        "content_type": "image/jpeg",
+        "content_length": "46423",
+        "accept_ranges": "bytes",
+        "access_control_allow_origin": "*"
+      },
+      {
+        "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/BELLA_FUCT_RADIO.jpg?v=1720466020&width=800&crop=center",
+        "kind": "cover-generated",
+        "status": 200,
+        "content_type": "image/jpeg",
+        "content_length": "70301",
+        "accept_ranges": "bytes",
+        "access_control_allow_origin": "*"
+      },
+      {
+        "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/BELLA_FUCT_RADIO.jpg?v=1720466020&width=1000&crop=center",
+        "kind": "cover-generated",
+        "status": 200,
+        "content_type": "image/jpeg",
+        "content_length": "95656",
+        "accept_ranges": "bytes",
+        "access_control_allow_origin": "*"
+      },
+      {
+        "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/BELLA_FUCT_RADIO.jpg?v=1720466020&width=1200&crop=center",
+        "kind": "cover-generated",
+        "status": 200,
+        "content_type": "image/jpeg",
+        "content_length": "107380",
+        "accept_ranges": "bytes",
+        "access_control_allow_origin": "*"
+      },
+      {
+        "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/BELLA_FUCT_RADIO.jpg?v=1720466020&width=1400&crop=center",
+        "kind": "cover-generated",
+        "status": 200,
+        "content_type": "image/jpeg",
+        "content_length": "107380",
+        "accept_ranges": "bytes",
+        "access_control_allow_origin": "*"
+      },
+      {
+        "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/BELLA_FUCT_RADIO.jpg?v=1720466020&width=1600&crop=center",
+        "kind": "cover-generated",
+        "status": 200,
+        "content_type": "image/jpeg",
+        "content_length": "107380",
+        "accept_ranges": "bytes",
+        "access_control_allow_origin": "*"
+      },
+      {
+        "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/BELLA_FUCT_RADIO.jpg?v=1720466020&width=1800&crop=center",
+        "kind": "cover-generated",
+        "status": 200,
+        "content_type": "image/jpeg",
+        "content_length": "107380",
+        "accept_ranges": "bytes",
+        "access_control_allow_origin": "*"
+      },
+      {
+        "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/BELLA_FUCT_RADIO.jpg?v=1720466020&width=2000&crop=center",
+        "kind": "cover-generated",
+        "status": 200,
+        "content_type": "image/jpeg",
+        "content_length": "107380",
+        "accept_ranges": "bytes",
+        "access_control_allow_origin": "*"
+      },
+      {
+        "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/BELLA_FUCT_RADIO.jpg?v=1720466020&width=2200&crop=center",
+        "kind": "cover-generated",
+        "status": 200,
+        "content_type": "image/jpeg",
+        "content_length": "107380",
+        "accept_ranges": "bytes",
+        "access_control_allow_origin": "*"
+      },
+      {
+        "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/BELLA_FUCT_RADIO.jpg?v=1720466020&width=2400&crop=center",
+        "kind": "cover-generated",
+        "status": 200,
+        "content_type": "image/jpeg",
+        "content_length": "107380",
+        "accept_ranges": "bytes",
+        "access_control_allow_origin": "*"
+      },
+      {
+        "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/BELLA_FUCT_RADIO.jpg?v=1720466020&width=2600&crop=center",
+        "kind": "cover-generated",
+        "status": 200,
+        "content_type": "image/jpeg",
+        "content_length": "107380",
+        "accept_ranges": "bytes",
+        "access_control_allow_origin": "*"
+      },
+      {
+        "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/BELLA_FUCT_RADIO.jpg?v=1720466020&width=2800&crop=center",
+        "kind": "cover-generated",
+        "status": 200,
+        "content_type": "image/jpeg",
+        "content_length": "107380",
+        "accept_ranges": "bytes",
+        "access_control_allow_origin": "*"
+      },
+      {
+        "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/BELLA_FUCT_RADIO.jpg?v=1720466020&width=3000&crop=center",
+        "kind": "cover-generated",
+        "status": 200,
+        "content_type": "image/jpeg",
+        "content_length": "107380",
+        "accept_ranges": "bytes",
+        "access_control_allow_origin": "*"
+      },
+      {
+        "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/PAISABOYS.jpg?v=1719601113&width=100&crop=center",
+        "kind": "cover-generated",
+        "status": 200,
+        "content_type": "image/jpeg",
+        "content_length": "3964",
+        "accept_ranges": null,
+        "access_control_allow_origin": "*"
+      },
+      {
+        "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/PAISABOYS.jpg?v=1719601113&width=200&crop=center",
+        "kind": "cover-generated",
+        "status": 200,
+        "content_type": "image/jpeg",
+        "content_length": "10295",
+        "accept_ranges": "bytes",
+        "access_control_allow_origin": "*"
+      },
+      {
+        "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/PAISABOYS.jpg?v=1719601113&width=400&crop=center",
+        "kind": "cover-generated",
+        "status": 200,
+        "content_type": "image/jpeg",
+        "content_length": "38345",
+        "accept_ranges": "bytes",
+        "access_control_allow_origin": "*"
+      },
+      {
+        "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/PAISABOYS.jpg?v=1719601113&width=600&crop=center",
+        "kind": "cover-generated",
+        "status": 200,
+        "content_type": "image/jpeg",
+        "content_length": "93844",
+        "accept_ranges": null,
+        "access_control_allow_origin": "*"
+      },
+      {
+        "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/PAISABOYS.jpg?v=1719601113&width=800&crop=center",
+        "kind": "cover-generated",
+        "status": 200,
+        "content_type": "image/jpeg",
+        "content_length": "172943",
+        "accept_ranges": "bytes",
+        "access_control_allow_origin": "*"
+      },
+      {
+        "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/PAISABOYS.jpg?v=1719601113&width=1000&crop=center",
+        "kind": "cover-generated",
+        "status": 200,
+        "content_type": "image/jpeg",
+        "content_length": "268160",
+        "accept_ranges": "bytes",
+        "access_control_allow_origin": "*"
+      },
+      {
+        "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/PAISABOYS.jpg?v=1719601113&width=1200&crop=center",
+        "kind": "cover-generated",
+        "status": 200,
+        "content_type": "image/jpeg",
+        "content_length": "320449",
+        "accept_ranges": "bytes",
+        "access_control_allow_origin": "*"
+      },
+      {
+        "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/PAISABOYS.jpg?v=1719601113&width=1400&crop=center",
+        "kind": "cover-generated",
+        "status": 200,
+        "content_type": "image/jpeg",
+        "content_length": "320449",
+        "accept_ranges": "bytes",
+        "access_control_allow_origin": "*"
+      },
+      {
+        "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/PAISABOYS.jpg?v=1719601113&width=1600&crop=center",
+        "kind": "cover-generated",
+        "status": 200,
+        "content_type": "image/jpeg",
+        "content_length": "320449",
+        "accept_ranges": null,
+        "access_control_allow_origin": "*"
+      },
+      {
+        "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/PAISABOYS.jpg?v=1719601113&width=1800&crop=center",
+        "kind": "cover-generated",
+        "status": 200,
+        "content_type": "image/jpeg",
+        "content_length": "320449",
+        "accept_ranges": "bytes",
+        "access_control_allow_origin": "*"
+      },
+      {
+        "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/PAISABOYS.jpg?v=1719601113&width=2000&crop=center",
+        "kind": "cover-generated",
+        "status": 200,
+        "content_type": "image/jpeg",
+        "content_length": "320449",
+        "accept_ranges": "bytes",
+        "access_control_allow_origin": "*"
+      },
+      {
+        "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/PAISABOYS.jpg?v=1719601113&width=2200&crop=center",
+        "kind": "cover-generated",
+        "status": 200,
+        "content_type": "image/jpeg",
+        "content_length": "320449",
+        "accept_ranges": null,
+        "access_control_allow_origin": "*"
+      },
+      {
+        "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/PAISABOYS.jpg?v=1719601113&width=2400&crop=center",
+        "kind": "cover-generated",
+        "status": 200,
+        "content_type": "image/jpeg",
+        "content_length": "320449",
+        "accept_ranges": "bytes",
+        "access_control_allow_origin": "*"
+      },
+      {
+        "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/PAISABOYS.jpg?v=1719601113&width=2600&crop=center",
+        "kind": "cover-generated",
+        "status": 200,
+        "content_type": "image/jpeg",
+        "content_length": "320449",
+        "accept_ranges": "bytes",
+        "access_control_allow_origin": "*"
+      },
+      {
+        "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/PAISABOYS.jpg?v=1719601113&width=2800&crop=center",
+        "kind": "cover-generated",
+        "status": 200,
+        "content_type": "image/jpeg",
+        "content_length": "320449",
+        "accept_ranges": "bytes",
+        "access_control_allow_origin": "*"
+      },
+      {
+        "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/PAISABOYS.jpg?v=1719601113&width=3000&crop=center",
+        "kind": "cover-generated",
+        "status": 200,
+        "content_type": "image/jpeg",
+        "content_length": "320449",
+        "accept_ranges": "bytes",
+        "access_control_allow_origin": "*"
+      },
+      {
+        "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/DCHARDCORE.jpg?v=1717120695&width=100&crop=center",
+        "kind": "cover-generated",
+        "status": 200,
+        "content_type": "image/jpeg",
+        "content_length": "3737",
+        "accept_ranges": "bytes",
+        "access_control_allow_origin": "*"
+      },
+      {
+        "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/DCHARDCORE.jpg?v=1717120695&width=200&crop=center",
+        "kind": "cover-generated",
+        "status": 200,
+        "content_type": "image/jpeg",
+        "content_length": "9177",
+        "accept_ranges": "bytes",
+        "access_control_allow_origin": "*"
+      },
+      {
+        "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/DCHARDCORE.jpg?v=1717120695&width=400&crop=center",
+        "kind": "cover-generated",
+        "status": 200,
+        "content_type": "image/jpeg",
+        "content_length": "25932",
+        "accept_ranges": "bytes",
+        "access_control_allow_origin": "*"
+      },
+      {
+        "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/DCHARDCORE.jpg?v=1717120695&width=600&crop=center",
+        "kind": "cover-generated",
+        "status": 200,
+        "content_type": "image/jpeg",
+        "content_length": "47225",
+        "accept_ranges": "bytes",
+        "access_control_allow_origin": "*"
+      },
+      {
+        "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/DCHARDCORE.jpg?v=1717120695&width=800&crop=center",
+        "kind": "cover-generated",
+        "status": 200,
+        "content_type": "image/jpeg",
+        "content_length": "70978",
+        "accept_ranges": "bytes",
+        "access_control_allow_origin": "*"
+      },
+      {
+        "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/DCHARDCORE.jpg?v=1717120695&width=1000&crop=center",
+        "kind": "cover-generated",
+        "status": 200,
+        "content_type": "image/jpeg",
+        "content_length": "95683",
+        "accept_ranges": "bytes",
+        "access_control_allow_origin": "*"
+      },
+      {
+        "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/DCHARDCORE.jpg?v=1717120695&width=1200&crop=center",
+        "kind": "cover-generated",
+        "status": 200,
+        "content_type": "image/jpeg",
+        "content_length": "107069",
+        "accept_ranges": null,
+        "access_control_allow_origin": "*"
+      },
+      {
+        "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/DCHARDCORE.jpg?v=1717120695&width=1400&crop=center",
+        "kind": "cover-generated",
+        "status": 200,
+        "content_type": "image/jpeg",
+        "content_length": "107069",
+        "accept_ranges": "bytes",
+        "access_control_allow_origin": "*"
+      },
+      {
+        "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/DCHARDCORE.jpg?v=1717120695&width=1600&crop=center",
+        "kind": "cover-generated",
+        "status": 200,
+        "content_type": "image/jpeg",
+        "content_length": "107069",
+        "accept_ranges": "bytes",
+        "access_control_allow_origin": "*"
+      },
+      {
+        "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/DCHARDCORE.jpg?v=1717120695&width=1800&crop=center",
+        "kind": "cover-generated",
+        "status": 200,
+        "content_type": "image/jpeg",
+        "content_length": "107069",
+        "accept_ranges": "bytes",
+        "access_control_allow_origin": "*"
+      },
+      {
+        "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/DCHARDCORE.jpg?v=1717120695&width=2000&crop=center",
+        "kind": "cover-generated",
+        "status": 200,
+        "content_type": "image/jpeg",
+        "content_length": "107069",
+        "accept_ranges": "bytes",
+        "access_control_allow_origin": "*"
+      },
+      {
+        "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/DCHARDCORE.jpg?v=1717120695&width=2200&crop=center",
+        "kind": "cover-generated",
+        "status": 200,
+        "content_type": "image/jpeg",
+        "content_length": "107069",
+        "accept_ranges": "bytes",
+        "access_control_allow_origin": "*"
+      },
+      {
+        "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/DCHARDCORE.jpg?v=1717120695&width=2400&crop=center",
+        "kind": "cover-generated",
+        "status": 200,
+        "content_type": "image/jpeg",
+        "content_length": "107069",
+        "accept_ranges": "bytes",
+        "access_control_allow_origin": "*"
+      },
+      {
+        "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/DCHARDCORE.jpg?v=1717120695&width=2600&crop=center",
+        "kind": "cover-generated",
+        "status": 200,
+        "content_type": "image/jpeg",
+        "content_length": "107069",
+        "accept_ranges": null,
+        "access_control_allow_origin": "*"
+      },
+      {
+        "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/DCHARDCORE.jpg?v=1717120695&width=2800&crop=center",
+        "kind": "cover-generated",
+        "status": 200,
+        "content_type": "image/jpeg",
+        "content_length": "107069",
+        "accept_ranges": "bytes",
+        "access_control_allow_origin": "*"
+      },
+      {
+        "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/DCHARDCORE.jpg?v=1717120695&width=3000&crop=center",
+        "kind": "cover-generated",
+        "status": 200,
+        "content_type": "image/jpeg",
+        "content_length": "107069",
+        "accept_ranges": "bytes",
+        "access_control_allow_origin": "*"
+      },
+      {
+        "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/BENEBENE.jpg?v=1716429578&width=100&crop=center",
+        "kind": "cover-generated",
+        "status": 200,
+        "content_type": "image/jpeg",
+        "content_length": "3399",
+        "accept_ranges": "bytes",
+        "access_control_allow_origin": "*"
+      },
+      {
+        "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/BENEBENE.jpg?v=1716429578&width=200&crop=center",
+        "kind": "cover-generated",
+        "status": 200,
+        "content_type": "image/jpeg",
+        "content_length": "10105",
+        "accept_ranges": "bytes",
+        "access_control_allow_origin": "*"
+      },
+      {
+        "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/BENEBENE.jpg?v=1716429578&width=400&crop=center",
+        "kind": "cover-generated",
+        "status": 200,
+        "content_type": "image/jpeg",
+        "content_length": "33889",
+        "accept_ranges": null,
+        "access_control_allow_origin": "*"
+      },
+      {
+        "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/BENEBENE.jpg?v=1716429578&width=600&crop=center",
+        "kind": "cover-generated",
+        "status": 200,
+        "content_type": "image/jpeg",
+        "content_length": "68731",
+        "accept_ranges": null,
+        "access_control_allow_origin": "*"
+      },
+      {
+        "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/BENEBENE.jpg?v=1716429578&width=800&crop=center",
+        "kind": "cover-generated",
+        "status": 200,
+        "content_type": "image/jpeg",
+        "content_length": "110544",
+        "accept_ranges": "bytes",
+        "access_control_allow_origin": "*"
+      },
+      {
+        "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/BENEBENE.jpg?v=1716429578&width=1000&crop=center",
+        "kind": "cover-generated",
+        "status": 200,
+        "content_type": "image/jpeg",
+        "content_length": "154348",
+        "accept_ranges": null,
+        "access_control_allow_origin": "*"
+      },
+      {
+        "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/BENEBENE.jpg?v=1716429578&width=1200&crop=center",
+        "kind": "cover-generated",
+        "status": 200,
+        "content_type": "image/jpeg",
+        "content_length": "176280",
+        "accept_ranges": "bytes",
+        "access_control_allow_origin": "*"
+      },
+      {
+        "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/BENEBENE.jpg?v=1716429578&width=1400&crop=center",
+        "kind": "cover-generated",
+        "status": 200,
+        "content_type": "image/jpeg",
+        "content_length": "176280",
+        "accept_ranges": "bytes",
+        "access_control_allow_origin": "*"
+      },
+      {
+        "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/BENEBENE.jpg?v=1716429578&width=1600&crop=center",
+        "kind": "cover-generated",
+        "status": 200,
+        "content_type": "image/jpeg",
+        "content_length": "176280",
+        "accept_ranges": "bytes",
+        "access_control_allow_origin": "*"
+      },
+      {
+        "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/BENEBENE.jpg?v=1716429578&width=1800&crop=center",
+        "kind": "cover-generated",
+        "status": 200,
+        "content_type": "image/jpeg",
+        "content_length": "176280",
+        "accept_ranges": "bytes",
+        "access_control_allow_origin": "*"
+      },
+      {
+        "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/BENEBENE.jpg?v=1716429578&width=2000&crop=center",
+        "kind": "cover-generated",
+        "status": 200,
+        "content_type": "image/jpeg",
+        "content_length": "176280",
+        "accept_ranges": null,
+        "access_control_allow_origin": "*"
+      },
+      {
+        "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/BENEBENE.jpg?v=1716429578&width=2200&crop=center",
+        "kind": "cover-generated",
+        "status": 200,
+        "content_type": "image/jpeg",
+        "content_length": "176280",
+        "accept_ranges": "bytes",
+        "access_control_allow_origin": "*"
+      },
+      {
+        "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/BENEBENE.jpg?v=1716429578&width=2400&crop=center",
+        "kind": "cover-generated",
+        "status": 200,
+        "content_type": "image/jpeg",
+        "content_length": "176280",
+        "accept_ranges": null,
+        "access_control_allow_origin": "*"
+      },
+      {
+        "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/BENEBENE.jpg?v=1716429578&width=2600&crop=center",
+        "kind": "cover-generated",
+        "status": 200,
+        "content_type": "image/jpeg",
+        "content_length": "176280",
+        "accept_ranges": "bytes",
+        "access_control_allow_origin": "*"
+      },
+      {
+        "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/BENEBENE.jpg?v=1716429578&width=2800&crop=center",
+        "kind": "cover-generated",
+        "status": 200,
+        "content_type": "image/jpeg",
+        "content_length": "176280",
+        "accept_ranges": null,
+        "access_control_allow_origin": "*"
+      },
+      {
+        "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/BENEBENE.jpg?v=1716429578&width=3000&crop=center",
+        "kind": "cover-generated",
+        "status": 200,
+        "content_type": "image/jpeg",
+        "content_length": "176280",
+        "accept_ranges": "bytes",
+        "access_control_allow_origin": "*"
+      },
+      {
+        "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/Screen_Shot_2024-05-14_at_7.20.34_PM.png?v=1715728906&width=100&crop=center",
+        "kind": "cover-generated",
+        "status": 200,
+        "content_type": "image/png",
+        "content_length": "12680",
+        "accept_ranges": "bytes",
+        "access_control_allow_origin": "*"
+      },
+      {
+        "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/Screen_Shot_2024-05-14_at_7.20.34_PM.png?v=1715728906&width=200&crop=center",
+        "kind": "cover-generated",
+        "status": 200,
+        "content_type": "image/png",
+        "content_length": "39998",
+        "accept_ranges": null,
+        "access_control_allow_origin": "*"
+      },
+      {
+        "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/Screen_Shot_2024-05-14_at_7.20.34_PM.png?v=1715728906&width=400&crop=center",
+        "kind": "cover-generated",
+        "status": 200,
+        "content_type": "image/png",
+        "content_length": "123905",
+        "accept_ranges": "bytes",
+        "access_control_allow_origin": "*"
+      },
+      {
+        "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/Screen_Shot_2024-05-14_at_7.20.34_PM.png?v=1715728906&width=600&crop=center",
+        "kind": "cover-generated",
+        "status": 200,
+        "content_type": "image/png",
+        "content_length": "240577",
+        "accept_ranges": "bytes",
+        "access_control_allow_origin": "*"
+      },
+      {
+        "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/Screen_Shot_2024-05-14_at_7.20.34_PM.png?v=1715728906&width=800&crop=center",
+        "kind": "cover-generated",
+        "status": 200,
+        "content_type": "image/png",
+        "content_length": "382333",
+        "accept_ranges": null,
+        "access_control_allow_origin": "*"
+      },
+      {
+        "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/Screen_Shot_2024-05-14_at_7.20.34_PM.png?v=1715728906&width=1000&crop=center",
+        "kind": "cover-generated",
+        "status": 200,
+        "content_type": "image/png",
+        "content_length": "545418",
+        "accept_ranges": "bytes",
+        "access_control_allow_origin": "*"
+      },
+      {
+        "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/Screen_Shot_2024-05-14_at_7.20.34_PM.png?v=1715728906&width=1200&crop=center",
+        "kind": "cover-generated",
+        "status": 200,
+        "content_type": "image/png",
+        "content_length": "732002",
+        "accept_ranges": null,
+        "access_control_allow_origin": "*"
+      },
+      {
+        "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/Screen_Shot_2024-05-14_at_7.20.34_PM.png?v=1715728906&width=1400&crop=center",
+        "kind": "cover-generated",
+        "status": 200,
+        "content_type": "image/png",
+        "content_length": "935732",
+        "accept_ranges": null,
+        "access_control_allow_origin": "*"
+      },
+      {
+        "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/Screen_Shot_2024-05-14_at_7.20.34_PM.png?v=1715728906&width=1600&crop=center",
+        "kind": "cover-generated",
+        "status": 200,
+        "content_type": "image/png",
+        "content_length": "807614",
+        "accept_ranges": "bytes",
+        "access_control_allow_origin": "*"
+      },
+      {
+        "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/Screen_Shot_2024-05-14_at_7.20.34_PM.png?v=1715728906&width=1800&crop=center",
+        "kind": "cover-generated",
+        "status": 200,
+        "content_type": "image/png",
+        "content_length": "807614",
+        "accept_ranges": "bytes",
+        "access_control_allow_origin": "*"
+      },
+      {
+        "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/Screen_Shot_2024-05-14_at_7.20.34_PM.png?v=1715728906&width=2000&crop=center",
+        "kind": "cover-generated",
+        "status": 200,
+        "content_type": "image/png",
+        "content_length": "807614",
+        "accept_ranges": "bytes",
+        "access_control_allow_origin": "*"
+      },
+      {
+        "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/Screen_Shot_2024-05-14_at_7.20.34_PM.png?v=1715728906&width=2200&crop=center",
+        "kind": "cover-generated",
+        "status": 200,
+        "content_type": "image/png",
+        "content_length": "807614",
+        "accept_ranges": null,
+        "access_control_allow_origin": "*"
+      },
+      {
+        "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/Screen_Shot_2024-05-14_at_7.20.34_PM.png?v=1715728906&width=2400&crop=center",
+        "kind": "cover-generated",
+        "status": 200,
+        "content_type": "image/png",
+        "content_length": "807614",
+        "accept_ranges": "bytes",
+        "access_control_allow_origin": "*"
+      },
+      {
+        "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/Screen_Shot_2024-05-14_at_7.20.34_PM.png?v=1715728906&width=2600&crop=center",
+        "kind": "cover-generated",
+        "status": 200,
+        "content_type": "image/png",
+        "content_length": "807614",
+        "accept_ranges": null,
+        "access_control_allow_origin": "*"
+      },
+      {
+        "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/Screen_Shot_2024-05-14_at_7.20.34_PM.png?v=1715728906&width=2800&crop=center",
+        "kind": "cover-generated",
+        "status": 200,
+        "content_type": "image/png",
+        "content_length": "807614",
+        "accept_ranges": null,
+        "access_control_allow_origin": "*"
+      },
+      {
+        "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/Screen_Shot_2024-05-14_at_7.20.34_PM.png?v=1715728906&width=3000&crop=center",
+        "kind": "cover-generated",
+        "status": 200,
+        "content_type": "image/png",
+        "content_length": "807614",
+        "accept_ranges": null,
+        "access_control_allow_origin": "*"
+      },
+      {
+        "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/SOLDIER_a407e057-82fc-4856-9dd5-1a66229ac92b.jpg?v=1713628248&width=100&crop=center",
+        "kind": "cover-generated",
+        "status": 200,
+        "content_type": "image/jpeg",
+        "content_length": "2414",
+        "accept_ranges": "bytes",
+        "access_control_allow_origin": "*"
+      },
+      {
+        "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/SOLDIER_a407e057-82fc-4856-9dd5-1a66229ac92b.jpg?v=1713628248&width=200&crop=center",
+        "kind": "cover-generated",
+        "status": 200,
+        "content_type": "image/jpeg",
+        "content_length": "4990",
+        "accept_ranges": "bytes",
+        "access_control_allow_origin": "*"
+      },
+      {
+        "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/SOLDIER_a407e057-82fc-4856-9dd5-1a66229ac92b.jpg?v=1713628248&width=400&crop=center",
+        "kind": "cover-generated",
+        "status": 200,
+        "content_type": "image/jpeg",
+        "content_length": "14107",
+        "accept_ranges": "bytes",
+        "access_control_allow_origin": "*"
+      },
+      {
+        "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/SOLDIER_a407e057-82fc-4856-9dd5-1a66229ac92b.jpg?v=1713628248&width=600&crop=center",
+        "kind": "cover-generated",
+        "status": 200,
+        "content_type": "image/jpeg",
+        "content_length": "29278",
+        "accept_ranges": "bytes",
+        "access_control_allow_origin": "*"
+      },
+      {
+        "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/SOLDIER_a407e057-82fc-4856-9dd5-1a66229ac92b.jpg?v=1713628248&width=800&crop=center",
+        "kind": "cover-generated",
+        "status": 200,
+        "content_type": "image/jpeg",
+        "content_length": "48161",
+        "accept_ranges": "bytes",
+        "access_control_allow_origin": "*"
+      },
+      {
+        "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/SOLDIER_a407e057-82fc-4856-9dd5-1a66229ac92b.jpg?v=1713628248&width=1000&crop=center",
+        "kind": "cover-generated",
+        "status": 200,
+        "content_type": "image/jpeg",
+        "content_length": "68603",
+        "accept_ranges": "bytes",
+        "access_control_allow_origin": "*"
+      },
+      {
+        "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/SOLDIER_a407e057-82fc-4856-9dd5-1a66229ac92b.jpg?v=1713628248&width=1200&crop=center",
+        "kind": "cover-generated",
+        "status": 200,
+        "content_type": "image/jpeg",
+        "content_length": "77703",
+        "accept_ranges": "bytes",
+        "access_control_allow_origin": "*"
+      },
+      {
+        "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/SOLDIER_a407e057-82fc-4856-9dd5-1a66229ac92b.jpg?v=1713628248&width=1400&crop=center",
+        "kind": "cover-generated",
+        "status": 200,
+        "content_type": "image/jpeg",
+        "content_length": "77703",
+        "accept_ranges": null,
+        "access_control_allow_origin": "*"
+      },
+      {
+        "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/SOLDIER_a407e057-82fc-4856-9dd5-1a66229ac92b.jpg?v=1713628248&width=1600&crop=center",
+        "kind": "cover-generated",
+        "status": 200,
+        "content_type": "image/jpeg",
+        "content_length": "77703",
+        "accept_ranges": "bytes",
+        "access_control_allow_origin": "*"
+      },
+      {
+        "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/SOLDIER_a407e057-82fc-4856-9dd5-1a66229ac92b.jpg?v=1713628248&width=1800&crop=center",
+        "kind": "cover-generated",
+        "status": 200,
+        "content_type": "image/jpeg",
+        "content_length": "77703",
+        "accept_ranges": "bytes",
+        "access_control_allow_origin": "*"
+      },
+      {
+        "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/SOLDIER_a407e057-82fc-4856-9dd5-1a66229ac92b.jpg?v=1713628248&width=2000&crop=center",
+        "kind": "cover-generated",
+        "status": 200,
+        "content_type": "image/jpeg",
+        "content_length": "77703",
+        "accept_ranges": "bytes",
+        "access_control_allow_origin": "*"
+      },
+      {
+        "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/SOLDIER_a407e057-82fc-4856-9dd5-1a66229ac92b.jpg?v=1713628248&width=2200&crop=center",
+        "kind": "cover-generated",
+        "status": 200,
+        "content_type": "image/jpeg",
+        "content_length": "77703",
+        "accept_ranges": null,
+        "access_control_allow_origin": "*"
+      },
+      {
+        "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/SOLDIER_a407e057-82fc-4856-9dd5-1a66229ac92b.jpg?v=1713628248&width=2400&crop=center",
+        "kind": "cover-generated",
+        "status": 200,
+        "content_type": "image/jpeg",
+        "content_length": "77703",
+        "accept_ranges": "bytes",
+        "access_control_allow_origin": "*"
+      },
+      {
+        "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/SOLDIER_a407e057-82fc-4856-9dd5-1a66229ac92b.jpg?v=1713628248&width=2600&crop=center",
+        "kind": "cover-generated",
+        "status": 200,
+        "content_type": "image/jpeg",
+        "content_length": "77703",
+        "accept_ranges": null,
+        "access_control_allow_origin": "*"
+      },
+      {
+        "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/SOLDIER_a407e057-82fc-4856-9dd5-1a66229ac92b.jpg?v=1713628248&width=2800&crop=center",
+        "kind": "cover-generated",
+        "status": 200,
+        "content_type": "image/jpeg",
+        "content_length": "77703",
+        "accept_ranges": "bytes",
+        "access_control_allow_origin": "*"
+      },
+      {
+        "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/SOLDIER_a407e057-82fc-4856-9dd5-1a66229ac92b.jpg?v=1713628248&width=3000&crop=center",
+        "kind": "cover-generated",
+        "status": 200,
+        "content_type": "image/jpeg",
+        "content_length": "77703",
+        "accept_ranges": "bytes",
+        "access_control_allow_origin": "*"
+      },
+      {
+        "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/EYEDDRESS_b85120ff-fbe7-4d49-abc4-47a6498237ce.jpg?v=1712341425&width=100&crop=center",
+        "kind": "cover-generated",
+        "status": 200,
+        "content_type": "image/jpeg",
+        "content_length": "6732",
+        "accept_ranges": "bytes",
+        "access_control_allow_origin": "*"
+      },
+      {
+        "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/EYEDDRESS_b85120ff-fbe7-4d49-abc4-47a6498237ce.jpg?v=1712341425&width=200&crop=center",
+        "kind": "cover-generated",
+        "status": 200,
+        "content_type": "image/jpeg",
+        "content_length": "21735",
+        "accept_ranges": "bytes",
+        "access_control_allow_origin": "*"
+      },
+      {
+        "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/EYEDDRESS_b85120ff-fbe7-4d49-abc4-47a6498237ce.jpg?v=1712341425&width=400&crop=center",
+        "kind": "cover-generated",
+        "status": 200,
+        "content_type": "image/jpeg",
+        "content_length": "68759",
+        "accept_ranges": "bytes",
+        "access_control_allow_origin": "*"
+      },
+      {
+        "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/EYEDDRESS_b85120ff-fbe7-4d49-abc4-47a6498237ce.jpg?v=1712341425&width=600&crop=center",
+        "kind": "cover-generated",
+        "status": 200,
+        "content_type": "image/jpeg",
+        "content_length": "126489",
+        "accept_ranges": null,
+        "access_control_allow_origin": "*"
+      },
+      {
+        "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/EYEDDRESS_b85120ff-fbe7-4d49-abc4-47a6498237ce.jpg?v=1712341425&width=800&crop=center",
+        "kind": "cover-generated",
+        "status": 200,
+        "content_type": "image/jpeg",
+        "content_length": "188570",
+        "accept_ranges": "bytes",
+        "access_control_allow_origin": "*"
+      },
+      {
+        "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/EYEDDRESS_b85120ff-fbe7-4d49-abc4-47a6498237ce.jpg?v=1712341425&width=1000&crop=center",
+        "kind": "cover-generated",
+        "status": 200,
+        "content_type": "image/jpeg",
+        "content_length": "255380",
+        "accept_ranges": "bytes",
+        "access_control_allow_origin": "*"
+      },
+      {
+        "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/EYEDDRESS_b85120ff-fbe7-4d49-abc4-47a6498237ce.jpg?v=1712341425&width=1200&crop=center",
+        "kind": "cover-generated",
+        "status": 200,
+        "content_type": "image/jpeg",
+        "content_length": "323569",
+        "accept_ranges": "bytes",
+        "access_control_allow_origin": "*"
+      },
+      {
+        "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/EYEDDRESS_b85120ff-fbe7-4d49-abc4-47a6498237ce.jpg?v=1712341425&width=1400&crop=center",
+        "kind": "cover-generated",
+        "status": 200,
+        "content_type": "image/jpeg",
+        "content_length": "396111",
+        "accept_ranges": null,
+        "access_control_allow_origin": "*"
+      },
+      {
+        "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/EYEDDRESS_b85120ff-fbe7-4d49-abc4-47a6498237ce.jpg?v=1712341425&width=1600&crop=center",
+        "kind": "cover-generated",
+        "status": 200,
+        "content_type": "image/jpeg",
+        "content_length": "468557",
+        "accept_ranges": "bytes",
+        "access_control_allow_origin": "*"
+      },
+      {
+        "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/EYEDDRESS_b85120ff-fbe7-4d49-abc4-47a6498237ce.jpg?v=1712341425&width=1800&crop=center",
+        "kind": "cover-generated",
+        "status": 200,
+        "content_type": "image/jpeg",
+        "content_length": "550049",
+        "accept_ranges": "bytes",
+        "access_control_allow_origin": "*"
+      },
+      {
+        "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/EYEDDRESS_b85120ff-fbe7-4d49-abc4-47a6498237ce.jpg?v=1712341425&width=2000&crop=center",
+        "kind": "cover-generated",
+        "status": 200,
+        "content_type": "image/jpeg",
+        "content_length": "380488",
+        "accept_ranges": "bytes",
+        "access_control_allow_origin": "*"
+      },
+      {
+        "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/EYEDDRESS_b85120ff-fbe7-4d49-abc4-47a6498237ce.jpg?v=1712341425&width=2200&crop=center",
+        "kind": "cover-generated",
+        "status": 200,
+        "content_type": "image/jpeg",
+        "content_length": "380488",
+        "accept_ranges": null,
+        "access_control_allow_origin": "*"
+      },
+      {
+        "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/EYEDDRESS_b85120ff-fbe7-4d49-abc4-47a6498237ce.jpg?v=1712341425&width=2400&crop=center",
+        "kind": "cover-generated",
+        "status": 200,
+        "content_type": "image/jpeg",
+        "content_length": "380488",
+        "accept_ranges": "bytes",
+        "access_control_allow_origin": "*"
+      },
+      {
+        "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/EYEDDRESS_b85120ff-fbe7-4d49-abc4-47a6498237ce.jpg?v=1712341425&width=2600&crop=center",
+        "kind": "cover-generated",
+        "status": 200,
+        "content_type": "image/jpeg",
+        "content_length": "380488",
+        "accept_ranges": "bytes",
+        "access_control_allow_origin": "*"
+      },
+      {
+        "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/EYEDDRESS_b85120ff-fbe7-4d49-abc4-47a6498237ce.jpg?v=1712341425&width=2800&crop=center",
+        "kind": "cover-generated",
+        "status": 200,
+        "content_type": "image/jpeg",
+        "content_length": "380488",
+        "accept_ranges": "bytes",
+        "access_control_allow_origin": "*"
+      },
+      {
+        "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/EYEDDRESS_b85120ff-fbe7-4d49-abc4-47a6498237ce.jpg?v=1712341425&width=3000&crop=center",
+        "kind": "cover-generated",
+        "status": 200,
+        "content_type": "image/jpeg",
+        "content_length": "380488",
+        "accept_ranges": "bytes",
+        "access_control_allow_origin": "*"
+      },
+      {
+        "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/SALSA_MIX.jpg?v=1711235811&width=100&crop=center",
+        "kind": "cover-generated",
+        "status": 200,
+        "content_type": "image/jpeg",
+        "content_length": "3443",
+        "accept_ranges": "bytes",
+        "access_control_allow_origin": "*"
+      },
+      {
+        "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/SALSA_MIX.jpg?v=1711235811&width=200&crop=center",
+        "kind": "cover-generated",
+        "status": 200,
+        "content_type": "image/jpeg",
+        "content_length": "7686",
+        "accept_ranges": "bytes",
+        "access_control_allow_origin": "*"
+      },
+      {
+        "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/SALSA_MIX.jpg?v=1711235811&width=400&crop=center",
+        "kind": "cover-generated",
+        "status": 200,
+        "content_type": "image/jpeg",
+        "content_length": "19127",
+        "accept_ranges": "bytes",
+        "access_control_allow_origin": "*"
+      },
+      {
+        "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/SALSA_MIX.jpg?v=1711235811&width=600&crop=center",
+        "kind": "cover-generated",
+        "status": 200,
+        "content_type": "image/jpeg",
+        "content_length": "33489",
+        "accept_ranges": null,
+        "access_control_allow_origin": "*"
+      },
+      {
+        "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/SALSA_MIX.jpg?v=1711235811&width=800&crop=center",
+        "kind": "cover-generated",
+        "status": 200,
+        "content_type": "image/jpeg",
+        "content_length": "52678",
+        "accept_ranges": "bytes",
+        "access_control_allow_origin": "*"
+      },
+      {
+        "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/SALSA_MIX.jpg?v=1711235811&width=1000&crop=center",
+        "kind": "cover-generated",
+        "status": 200,
+        "content_type": "image/jpeg",
+        "content_length": "77354",
+        "accept_ranges": "bytes",
+        "access_control_allow_origin": "*"
+      },
+      {
+        "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/SALSA_MIX.jpg?v=1711235811&width=1200&crop=center",
+        "kind": "cover-generated",
+        "status": 200,
+        "content_type": "image/jpeg",
+        "content_length": "109977",
+        "accept_ranges": "bytes",
+        "access_control_allow_origin": "*"
+      },
+      {
+        "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/SALSA_MIX.jpg?v=1711235811&width=1400&crop=center",
+        "kind": "cover-generated",
+        "status": 200,
+        "content_type": "image/jpeg",
+        "content_length": "149217",
+        "accept_ranges": "bytes",
+        "access_control_allow_origin": "*"
+      },
+      {
+        "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/SALSA_MIX.jpg?v=1711235811&width=1600&crop=center",
+        "kind": "cover-generated",
+        "status": 200,
+        "content_type": "image/jpeg",
+        "content_length": "172950",
+        "accept_ranges": null,
+        "access_control_allow_origin": "*"
+      },
+      {
+        "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/SALSA_MIX.jpg?v=1711235811&width=1800&crop=center",
+        "kind": "cover-generated",
+        "status": 200,
+        "content_type": "image/jpeg",
+        "content_length": "172950",
+        "accept_ranges": "bytes",
+        "access_control_allow_origin": "*"
+      },
+      {
+        "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/SALSA_MIX.jpg?v=1711235811&width=2000&crop=center",
+        "kind": "cover-generated",
+        "status": 200,
+        "content_type": "image/jpeg",
+        "content_length": "172950",
+        "accept_ranges": "bytes",
+        "access_control_allow_origin": "*"
+      },
+      {
+        "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/SALSA_MIX.jpg?v=1711235811&width=2200&crop=center",
+        "kind": "cover-generated",
+        "status": 200,
+        "content_type": "image/jpeg",
+        "content_length": "172950",
+        "accept_ranges": "bytes",
+        "access_control_allow_origin": "*"
+      },
+      {
+        "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/SALSA_MIX.jpg?v=1711235811&width=2400&crop=center",
+        "kind": "cover-generated",
+        "status": 200,
+        "content_type": "image/jpeg",
+        "content_length": "172950",
+        "accept_ranges": "bytes",
+        "access_control_allow_origin": "*"
+      },
+      {
+        "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/SALSA_MIX.jpg?v=1711235811&width=2600&crop=center",
+        "kind": "cover-generated",
+        "status": 200,
+        "content_type": "image/jpeg",
+        "content_length": "172950",
+        "accept_ranges": "bytes",
+        "access_control_allow_origin": "*"
+      },
+      {
+        "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/SALSA_MIX.jpg?v=1711235811&width=2800&crop=center",
+        "kind": "cover-generated",
+        "status": 200,
+        "content_type": "image/jpeg",
+        "content_length": "172950",
+        "accept_ranges": "bytes",
+        "access_control_allow_origin": "*"
+      },
+      {
+        "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/SALSA_MIX.jpg?v=1711235811&width=3000&crop=center",
+        "kind": "cover-generated",
+        "status": 200,
+        "content_type": "image/jpeg",
+        "content_length": "172950",
+        "accept_ranges": "bytes",
+        "access_control_allow_origin": "*"
+      },
+      {
+        "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/IMG_4378.heic?v=1711070856&width=100&crop=center",
+        "kind": "cover-generated",
+        "status": 200,
+        "content_type": "image/jpeg",
+        "content_length": "3728",
+        "accept_ranges": null,
+        "access_control_allow_origin": "*"
+      },
+      {
+        "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/IMG_4378.heic?v=1711070856&width=200&crop=center",
+        "kind": "cover-generated",
+        "status": 200,
+        "content_type": "image/jpeg",
+        "content_length": "8499",
+        "accept_ranges": "bytes",
+        "access_control_allow_origin": "*"
+      },
+      {
+        "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/IMG_4378.heic?v=1711070856&width=400&crop=center",
+        "kind": "cover-generated",
+        "status": 200,
+        "content_type": "image/jpeg",
+        "content_length": "19195",
+        "accept_ranges": "bytes",
+        "access_control_allow_origin": "*"
+      },
+      {
+        "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/IMG_4378.heic?v=1711070856&width=600&crop=center",
+        "kind": "cover-generated",
+        "status": 200,
+        "content_type": "image/jpeg",
+        "content_length": "19195",
+        "accept_ranges": "bytes",
+        "access_control_allow_origin": "*"
+      },
+      {
+        "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/IMG_4378.heic?v=1711070856&width=800&crop=center",
+        "kind": "cover-generated",
+        "status": 200,
+        "content_type": "image/jpeg",
+        "content_length": "19195",
+        "accept_ranges": "bytes",
+        "access_control_allow_origin": "*"
+      },
+      {
+        "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/IMG_4378.heic?v=1711070856&width=1000&crop=center",
+        "kind": "cover-generated",
+        "status": 200,
+        "content_type": "image/jpeg",
+        "content_length": "19195",
+        "accept_ranges": "bytes",
+        "access_control_allow_origin": "*"
+      },
+      {
+        "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/IMG_4378.heic?v=1711070856&width=1200&crop=center",
+        "kind": "cover-generated",
+        "status": 200,
+        "content_type": "image/jpeg",
+        "content_length": "19195",
+        "accept_ranges": "bytes",
+        "access_control_allow_origin": "*"
+      },
+      {
+        "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/IMG_4378.heic?v=1711070856&width=1400&crop=center",
+        "kind": "cover-generated",
+        "status": 200,
+        "content_type": "image/jpeg",
+        "content_length": "19195",
+        "accept_ranges": "bytes",
+        "access_control_allow_origin": "*"
+      },
+      {
+        "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/IMG_4378.heic?v=1711070856&width=1600&crop=center",
+        "kind": "cover-generated",
+        "status": 200,
+        "content_type": "image/jpeg",
+        "content_length": "19195",
+        "accept_ranges": "bytes",
+        "access_control_allow_origin": "*"
+      },
+      {
+        "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/IMG_4378.heic?v=1711070856&width=1800&crop=center",
+        "kind": "cover-generated",
+        "status": 200,
+        "content_type": "image/jpeg",
+        "content_length": "19195",
+        "accept_ranges": "bytes",
+        "access_control_allow_origin": "*"
+      },
+      {
+        "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/IMG_4378.heic?v=1711070856&width=2000&crop=center",
+        "kind": "cover-generated",
+        "status": 200,
+        "content_type": "image/jpeg",
+        "content_length": "19195",
+        "accept_ranges": "bytes",
+        "access_control_allow_origin": "*"
+      },
+      {
+        "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/IMG_4378.heic?v=1711070856&width=2200&crop=center",
+        "kind": "cover-generated",
+        "status": 200,
+        "content_type": "image/jpeg",
+        "content_length": "19195",
+        "accept_ranges": "bytes",
+        "access_control_allow_origin": "*"
+      },
+      {
+        "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/IMG_4378.heic?v=1711070856&width=2400&crop=center",
+        "kind": "cover-generated",
+        "status": 200,
+        "content_type": "image/jpeg",
+        "content_length": "19195",
+        "accept_ranges": "bytes",
+        "access_control_allow_origin": "*"
+      },
+      {
+        "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/IMG_4378.heic?v=1711070856&width=2600&crop=center",
+        "kind": "cover-generated",
+        "status": 200,
+        "content_type": "image/jpeg",
+        "content_length": "19195",
+        "accept_ranges": "bytes",
+        "access_control_allow_origin": "*"
+      },
+      {
+        "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/IMG_4378.heic?v=1711070856&width=2800&crop=center",
+        "kind": "cover-generated",
+        "status": 200,
+        "content_type": "image/jpeg",
+        "content_length": "19195",
+        "accept_ranges": null,
+        "access_control_allow_origin": "*"
+      },
+      {
+        "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/IMG_4378.heic?v=1711070856&width=3000&crop=center",
+        "kind": "cover-generated",
+        "status": 200,
+        "content_type": "image/jpeg",
+        "content_length": "19195",
+        "accept_ranges": "bytes",
+        "access_control_allow_origin": "*"
+      },
+      {
+        "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/AFTERHOUR_RADIO.jpg?v=1710798625&width=100&crop=center",
+        "kind": "cover-generated",
+        "status": 200,
+        "content_type": "image/jpeg",
+        "content_length": "2559",
+        "accept_ranges": "bytes",
+        "access_control_allow_origin": "*"
+      },
+      {
+        "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/AFTERHOUR_RADIO.jpg?v=1710798625&width=200&crop=center",
+        "kind": "cover-generated",
+        "status": 200,
+        "content_type": "image/jpeg",
+        "content_length": "5717",
+        "accept_ranges": "bytes",
+        "access_control_allow_origin": "*"
+      },
+      {
+        "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/AFTERHOUR_RADIO.jpg?v=1710798625&width=400&crop=center",
+        "kind": "cover-generated",
+        "status": 200,
+        "content_type": "image/jpeg",
+        "content_length": "20725",
+        "accept_ranges": "bytes",
+        "access_control_allow_origin": "*"
+      },
+      {
+        "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/AFTERHOUR_RADIO.jpg?v=1710798625&width=600&crop=center",
+        "kind": "cover-generated",
+        "status": 200,
+        "content_type": "image/jpeg",
+        "content_length": "40459",
+        "accept_ranges": null,
+        "access_control_allow_origin": "*"
+      },
+      {
+        "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/AFTERHOUR_RADIO.jpg?v=1710798625&width=800&crop=center",
+        "kind": "cover-generated",
+        "status": 200,
+        "content_type": "image/jpeg",
+        "content_length": "62384",
+        "accept_ranges": "bytes",
+        "access_control_allow_origin": "*"
+      },
+      {
+        "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/AFTERHOUR_RADIO.jpg?v=1710798625&width=1000&crop=center",
+        "kind": "cover-generated",
+        "status": 200,
+        "content_type": "image/jpeg",
+        "content_length": "84820",
+        "accept_ranges": "bytes",
+        "access_control_allow_origin": "*"
+      },
+      {
+        "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/AFTERHOUR_RADIO.jpg?v=1710798625&width=1200&crop=center",
+        "kind": "cover-generated",
+        "status": 200,
+        "content_type": "image/jpeg",
+        "content_length": "96162",
+        "accept_ranges": "bytes",
+        "access_control_allow_origin": "*"
+      },
+      {
+        "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/AFTERHOUR_RADIO.jpg?v=1710798625&width=1400&crop=center",
+        "kind": "cover-generated",
+        "status": 200,
+        "content_type": "image/jpeg",
+        "content_length": "96162",
+        "accept_ranges": null,
+        "access_control_allow_origin": "*"
+      },
+      {
+        "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/AFTERHOUR_RADIO.jpg?v=1710798625&width=1600&crop=center",
+        "kind": "cover-generated",
+        "status": 200,
+        "content_type": "image/jpeg",
+        "content_length": "96162",
+        "accept_ranges": "bytes",
+        "access_control_allow_origin": "*"
+      },
+      {
+        "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/AFTERHOUR_RADIO.jpg?v=1710798625&width=1800&crop=center",
+        "kind": "cover-generated",
+        "status": 200,
+        "content_type": "image/jpeg",
+        "content_length": "96162",
+        "accept_ranges": "bytes",
+        "access_control_allow_origin": "*"
+      },
+      {
+        "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/AFTERHOUR_RADIO.jpg?v=1710798625&width=2000&crop=center",
+        "kind": "cover-generated",
+        "status": 200,
+        "content_type": "image/jpeg",
+        "content_length": "96162",
+        "accept_ranges": "bytes",
+        "access_control_allow_origin": "*"
+      },
+      {
+        "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/AFTERHOUR_RADIO.jpg?v=1710798625&width=2200&crop=center",
+        "kind": "cover-generated",
+        "status": 200,
+        "content_type": "image/jpeg",
+        "content_length": "96162",
+        "accept_ranges": "bytes",
+        "access_control_allow_origin": "*"
+      },
+      {
+        "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/AFTERHOUR_RADIO.jpg?v=1710798625&width=2400&crop=center",
+        "kind": "cover-generated",
+        "status": 200,
+        "content_type": "image/jpeg",
+        "content_length": "96162",
+        "accept_ranges": "bytes",
+        "access_control_allow_origin": "*"
+      },
+      {
+        "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/AFTERHOUR_RADIO.jpg?v=1710798625&width=2600&crop=center",
+        "kind": "cover-generated",
+        "status": 200,
+        "content_type": "image/jpeg",
+        "content_length": "96162",
+        "accept_ranges": "bytes",
+        "access_control_allow_origin": "*"
+      },
+      {
+        "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/AFTERHOUR_RADIO.jpg?v=1710798625&width=2800&crop=center",
+        "kind": "cover-generated",
+        "status": 200,
+        "content_type": "image/jpeg",
+        "content_length": "96162",
+        "accept_ranges": null,
+        "access_control_allow_origin": "*"
+      },
+      {
+        "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/AFTERHOUR_RADIO.jpg?v=1710798625&width=3000&crop=center",
+        "kind": "cover-generated",
+        "status": 200,
+        "content_type": "image/jpeg",
+        "content_length": "96162",
+        "accept_ranges": "bytes",
+        "access_control_allow_origin": "*"
+      },
+      {
+        "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/IMG_4160.heic?v=1709768347&width=100&crop=center",
+        "kind": "cover-generated",
+        "status": 200,
+        "content_type": "image/jpeg",
+        "content_length": "3271",
+        "accept_ranges": "bytes",
+        "access_control_allow_origin": "*"
+      },
+      {
+        "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/IMG_4160.heic?v=1709768347&width=200&crop=center",
+        "kind": "cover-generated",
+        "status": 200,
+        "content_type": "image/jpeg",
+        "content_length": "8235",
+        "accept_ranges": "bytes",
+        "access_control_allow_origin": "*"
+      },
+      {
+        "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/IMG_4160.heic?v=1709768347&width=400&crop=center",
+        "kind": "cover-generated",
+        "status": 200,
+        "content_type": "image/jpeg",
+        "content_length": "25982",
+        "accept_ranges": null,
+        "access_control_allow_origin": "*"
+      },
+      {
+        "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/IMG_4160.heic?v=1709768347&width=600&crop=center",
+        "kind": "cover-generated",
+        "status": 200,
+        "content_type": "image/jpeg",
+        "content_length": "51978",
+        "accept_ranges": "bytes",
+        "access_control_allow_origin": "*"
+      },
+      {
+        "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/IMG_4160.heic?v=1709768347&width=800&crop=center",
+        "kind": "cover-generated",
+        "status": 200,
+        "content_type": "image/jpeg",
+        "content_length": "88036",
+        "accept_ranges": "bytes",
+        "access_control_allow_origin": "*"
+      },
+      {
+        "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/IMG_4160.heic?v=1709768347&width=1000&crop=center",
+        "kind": "cover-generated",
+        "status": 200,
+        "content_type": "image/jpeg",
+        "content_length": "134590",
+        "accept_ranges": "bytes",
+        "access_control_allow_origin": "*"
+      },
+      {
+        "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/IMG_4160.heic?v=1709768347&width=1200&crop=center",
+        "kind": "cover-generated",
+        "status": 200,
+        "content_type": "image/jpeg",
+        "content_length": "189289",
+        "accept_ranges": "bytes",
+        "access_control_allow_origin": "*"
+      },
+      {
+        "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/IMG_4160.heic?v=1709768347&width=1400&crop=center",
+        "kind": "cover-generated",
+        "status": 200,
+        "content_type": "image/jpeg",
+        "content_length": "251950",
+        "accept_ranges": "bytes",
+        "access_control_allow_origin": "*"
+      },
+      {
+        "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/IMG_4160.heic?v=1709768347&width=1600&crop=center",
+        "kind": "cover-generated",
+        "status": 200,
+        "content_type": "image/jpeg",
+        "content_length": "303963",
+        "accept_ranges": "bytes",
+        "access_control_allow_origin": "*"
+      },
+      {
+        "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/IMG_4160.heic?v=1709768347&width=1800&crop=center",
+        "kind": "cover-generated",
+        "status": 200,
+        "content_type": "image/jpeg",
+        "content_length": "303963",
+        "accept_ranges": "bytes",
+        "access_control_allow_origin": "*"
+      },
+      {
+        "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/IMG_4160.heic?v=1709768347&width=2000&crop=center",
+        "kind": "cover-generated",
+        "status": 200,
+        "content_type": "image/jpeg",
+        "content_length": "303963",
+        "accept_ranges": "bytes",
+        "access_control_allow_origin": "*"
+      },
+      {
+        "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/IMG_4160.heic?v=1709768347&width=2200&crop=center",
+        "kind": "cover-generated",
+        "status": 200,
+        "content_type": "image/jpeg",
+        "content_length": "303963",
+        "accept_ranges": "bytes",
+        "access_control_allow_origin": "*"
+      },
+      {
+        "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/IMG_4160.heic?v=1709768347&width=2400&crop=center",
+        "kind": "cover-generated",
+        "status": 200,
+        "content_type": "image/jpeg",
+        "content_length": "303963",
+        "accept_ranges": null,
+        "access_control_allow_origin": "*"
+      },
+      {
+        "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/IMG_4160.heic?v=1709768347&width=2600&crop=center",
+        "kind": "cover-generated",
+        "status": 200,
+        "content_type": "image/jpeg",
+        "content_length": "303963",
+        "accept_ranges": "bytes",
+        "access_control_allow_origin": "*"
+      },
+      {
+        "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/IMG_4160.heic?v=1709768347&width=2800&crop=center",
+        "kind": "cover-generated",
+        "status": 200,
+        "content_type": "image/jpeg",
+        "content_length": "303963",
+        "accept_ranges": null,
+        "access_control_allow_origin": "*"
+      },
+      {
+        "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/IMG_4160.heic?v=1709768347&width=3000&crop=center",
+        "kind": "cover-generated",
+        "status": 200,
+        "content_type": "image/jpeg",
+        "content_length": "303963",
+        "accept_ranges": "bytes",
+        "access_control_allow_origin": "*"
+      },
+      {
+        "url": "https://fonts.gstatic.com/s/firamono/v16/N0bX2SlFPv1weGeLZDtQIQ.ttf",
+        "kind": "font",
+        "status": 200,
+        "content_type": "font/ttf",
+        "content_length": "162472",
+        "accept_ranges": "bytes",
+        "access_control_allow_origin": "*"
+      }
+    ],
+    "bounded_range_get": {
+      "url": "https://d11rox2ve9bkk5.cloudfront.net/Kenny%20Hoopla.mp3",
+      "kind": "bounded-audio-range",
+      "method": "GET",
+      "requested_range": "bytes=0-255",
+      "read_limit": 256,
+      "description": "GUEST MIX: KENNY HOOPLA",
+      "status": 206,
+      "final_url": "https://d11rox2ve9bkk5.cloudfront.net/Kenny%20Hoopla.mp3",
+      "bytes_read": 256,
+      "first_16_bytes_hex": "49443304000000000066545858580000",
+      "content_type": "audio/mp3",
+      "content_length": "256",
+      "accept_ranges": null,
+      "content_range": "bytes 0-255/63204316",
+      "access_control_allow_origin": null,
+      "access_control_allow_methods": null,
+      "access_control_expose_headers": null,
+      "range_honored": true
+    },
+    "summary": {
+      "statuses": {
+        "200": 505
+      },
+      "audio_statuses": {
+        "200": 28
+      },
+      "cover_statuses": {
+        "200": 476
+      }
+    },
+    "limitations": [
+      "HEAD metadata and a short byte range verify endpoint availability/headers, not complete decoding or full-track playback.",
+      "CORS header observations are for the supplied GitHub Pages Origin header and may differ without Origin.",
+      "Spaces in media URL paths were percent-encoded; surrounding source whitespace was trimmed."
+    ]
+  },
+  "runtime": "Audio, covers, fonts and four playback SVG icons remain externally hosted. No complete music file was copied into this repository. Native HTMLAudioElement does not set crossOrigin or require fetch/AudioContext CORS access."
+}

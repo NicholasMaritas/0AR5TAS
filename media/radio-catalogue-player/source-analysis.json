@@ -1,0 +1,505 @@
+{
+  "name": "Radio catalogue + player",
+  "source_url": "https://fuct.com/us/radio",
+  "catalogue": {
+    "task": "FUCT RADIO catalogue data extraction",
+    "scope": "Catalogue and browser-player data only; no publishing or Pages edits.",
+    "source": {
+      "file": "source.html",
+      "bytes": 193891,
+      "sha256": "c9a23140fdd4352edf44902ff9dba066403a2f6a4467018a8a9cef28f14017a8",
+      "remix_assignment_character_offset": 178337,
+      "loader_pointer": "window.__remixContext.state.loaderData.root.radioTracks.metaobjects.nodes",
+      "loader_node_count": 28,
+      "rendered_card_count": 28,
+      "loader_field_keys": [
+        "date",
+        "description",
+        "genres",
+        "image",
+        "image_url",
+        "url"
+      ]
+    },
+    "ordering": {
+      "loader_source_order": [
+        "FUCT MIX 001",
+        "FUCT MIX 002",
+        "FUCT MIX 003",
+        "FUCT MIX 004",
+        "GUEST MIX: EYEDRESS",
+        "GUEST MIX: SOLDIER",
+        "FUCT MIX 005",
+        "GUEST MIX: GIORGIO DI SALVO",
+        "FUCT MIX 006 DC HARDCORE",
+        "GUEST MIX: PAISA BOYS",
+        "GUEST MIX: BELLA",
+        "GUEST MIX: POPPY DAYDREAM by NATHANIEL MATTHEWS",
+        "GUEST MIX: BANKS VIOLETTE",
+        "FUCT MIX 007",
+        "GUEST MIX: DEREK SNODGRASS",
+        "GUEST MIX: JORDAN HARTIGAN",
+        "FUCT MIX 008",
+        "BULLY",
+        "GUEST MIX: SNUFF MAGAZINE",
+        "GUEST MIX: RYBQAH",
+        "GUEST MIX: STORAGEBASED",
+        "FUCT MIX 009",
+        "GUEST MIX: MTV JESSE",
+        "GUEST MIX: GAIA MINESI",
+        "GUEST MIX: ANGELA WHITE",
+        "FUCT MIX 010",
+        "FUCT MIX 011",
+        "GUEST MIX: KENNY HOOPLA"
+      ],
+      "rendered_source_order": [
+        "GUEST MIX: KENNY HOOPLA",
+        "FUCT MIX 011",
+        "FUCT MIX 010",
+        "GUEST MIX: ANGELA WHITE",
+        "GUEST MIX: GAIA MINESI",
+        "GUEST MIX: MTV JESSE",
+        "FUCT MIX 009",
+        "GUEST MIX: STORAGEBASED",
+        "GUEST MIX: RYBQAH",
+        "GUEST MIX: SNUFF MAGAZINE",
+        "BULLY",
+        "FUCT MIX 008",
+        "GUEST MIX: JORDAN HARTIGAN",
+        "GUEST MIX: DEREK SNODGRASS",
+        "FUCT MIX 007",
+        "GUEST MIX: BANKS VIOLETTE",
+        "GUEST MIX: POPPY DAYDREAM by NATHANIEL MATTHEWS",
+        "GUEST MIX: BELLA",
+        "GUEST MIX: PAISA BOYS",
+        "FUCT MIX 006 DC HARDCORE",
+        "GUEST MIX: GIORGIO DI SALVO",
+        "FUCT MIX 005",
+        "GUEST MIX: SOLDIER",
+        "GUEST MIX: EYEDRESS",
+        "FUCT MIX 004",
+        "FUCT MIX 003",
+        "FUCT MIX 002",
+        "FUCT MIX 001"
+      ],
+      "rendered_source_indices": [
+        27,
+        26,
+        25,
+        24,
+        23,
+        22,
+        21,
+        20,
+        19,
+        18,
+        17,
+        16,
+        15,
+        14,
+        13,
+        12,
+        11,
+        10,
+        9,
+        8,
+        7,
+        6,
+        5,
+        4,
+        3,
+        2,
+        1,
+        0
+      ],
+      "rendered_exact_reverse_of_loader": true,
+      "equal_date_case": {
+        "date": "2025-03-22",
+        "loader_order": [
+          "GUEST MIX: JORDAN HARTIGAN",
+          "FUCT MIX 008",
+          "BULLY"
+        ],
+        "rendered_order": [
+          "BULLY",
+          "FUCT MIX 008",
+          "GUEST MIX: JORDAN HARTIGAN"
+        ],
+        "instruction": "Preserve captured order; a stable descending-date sort alone would retain the wrong order for these three entries."
+      }
+    },
+    "validation": {
+      "all_titles_unique": true,
+      "all_audio_urls_unique": true,
+      "all_rendered_dates_match_loader": true,
+      "all_raw_rendered_genres_match_loader": true,
+      "titles_dates_and_genres_preserved_exactly": true,
+      "network_media_requests_performed": false,
+      "browser_audio_playback_verified": false
+    },
+    "url_normalizations": [
+      {
+        "source_index": 27,
+        "title": "GUEST MIX: KENNY HOOPLA",
+        "raw": "https://d11rox2ve9bkk5.cloudfront.net/Kenny Hoopla.mp3",
+        "normalized": "https://d11rox2ve9bkk5.cloudfront.net/Kenny%20Hoopla.mp3",
+        "changes": [
+          "percent-encoded URL path spaces"
+        ]
+      },
+      {
+        "source_index": 13,
+        "title": "FUCT MIX 007",
+        "raw": "https://d11rox2ve9bkk5.cloudfront.net/App Recording 20250311 1333.mp3",
+        "normalized": "https://d11rox2ve9bkk5.cloudfront.net/App%20Recording%2020250311%201333.mp3",
+        "changes": [
+          "percent-encoded URL path spaces"
+        ]
+      },
+      {
+        "source_index": 1,
+        "title": "FUCT MIX 002",
+        "raw": "https://d11rox2ve9bkk5.cloudfront.net/01 MIX_002.wav",
+        "normalized": "https://d11rox2ve9bkk5.cloudfront.net/01%20MIX_002.wav",
+        "changes": [
+          "percent-encoded URL path spaces"
+        ]
+      },
+      {
+        "source_index": 0,
+        "title": "FUCT MIX 001",
+        "raw": "https://d11rox2ve9bkk5.cloudfront.net/MIX_001_HARDCORE.wav ",
+        "normalized": "https://d11rox2ve9bkk5.cloudfront.net/MIX_001_HARDCORE.wav",
+        "changes": [
+          "trimmed outer whitespace"
+        ]
+      }
+    ],
+    "genre_whitespace": [
+      {
+        "source_index": 4,
+        "title": "GUEST MIX: EYEDRESS",
+        "exact_genres": [
+          "SHOEGAZE ",
+          "PUNK",
+          "NO WAVE",
+          "SOUL"
+        ],
+        "rendered_collapsed_labels": [
+          "SHOEGAZE",
+          "PUNK",
+          "NO WAVE",
+          "SOUL"
+        ]
+      }
+    ],
+    "media": {
+      "audio_extension_hints": {
+        "mp3": 15,
+        "wav": 13
+      },
+      "image_extension_hints": {
+        "heic": 2,
+        "jpg": 25,
+        "png": 1
+      },
+      "heic_images": [
+        {
+          "source_index": 0,
+          "title": "FUCT MIX 001",
+          "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/IMG_4160.heic?v=1709768347"
+        },
+        {
+          "source_index": 2,
+          "title": "FUCT MIX 003",
+          "url": "https://cdn.shopify.com/s/files/1/2068/4441/files/IMG_4378.heic?v=1711070856"
+        }
+      ],
+      "audio_duration_metadata_present": false,
+      "audio_codec_metadata_present": false,
+      "considerations": [
+        "The first loader audio URL has a trailing ASCII space. Trim outer whitespace before URL encoding; encoding that trailing space as %20 would address a different object.",
+        "Three audio filenames have interior spaces. catalogue.json audio_url percent-encodes path spaces; audio_url_source preserves exact loader values.",
+        "Thirteen audio filenames end in .wav and fifteen in .mp3. The extensions do not verify actual codec/container or browser support; response headers and audio metadata need validation.",
+        "Two image filenames end in .heic. SSR uses Shopify resized/cropped CDN URLs, which may negotiate a browser-compatible response. Verify response Content-Type and decoding rather than assuming the filename extension is the transmitted format.",
+        "Seeking/duration depend on audio metadata and server response. Check a small Range: bytes=0-1023 request for 206/Content-Range without downloading a full mix, together with Accept-Ranges, Content-Length and Content-Type. This extraction does not claim range support.",
+        "Native cross-origin audio playback differs from JavaScript fetch/Web Audio in CORS requirements. If the reused player fetches audio or attaches Web Audio, inspect Access-Control-Allow-Origin. Do not infer a need to add crossOrigin.",
+        "Captured loader data contains no duration, waveform, encoding, file byte size or response/range headers; none has been invented."
+      ]
+    },
+    "normalized_catalogue_fields": {
+      "title": "Exact loader description / rendered title",
+      "date": "Exact ISO date",
+      "date_display": "Exact rendered MM.DD.YYYY",
+      "genres": "Parsed loader JSON; preserves exact case, order and trailing whitespace",
+      "image_gid": "Exact Shopify MediaImage reference",
+      "image_url_source": "Exact loader image URL",
+      "image_url": "URL-normalized image URL",
+      "image_display_src": "Exact decoded SSR image src",
+      "image_srcset": "Exact decoded SSR URL/descriptor pairs",
+      "audio_url_source": "Exact loader audio URL, including whitespace",
+      "audio_url": "Trimmed, path-percent-encoded playback URL",
+      "source_index": "Original loader position",
+      "display_index": "Original rendered position"
+    },
+    "deduplication_note": "Per-card image variants live in catalogue.json, exact catalogue markup in source/catalogue.original.html, and request records in asset-manifest.json."
+  },
+  "player": {
+    "source_site": "https://fuct.com/radio",
+    "inspection": "Static source extraction only; browser/asset-availability verification belongs to parent task.",
+    "source_files": [
+      {
+        "file": "assets/chunk-Q3OFGS3M.js",
+        "bytes": 22074,
+        "characters": 22074,
+        "sha256": "eb6f923677631ec403a83d581c8c9b09ebd18d9e2fec93465bdd639ef4a36f10",
+        "direct_imports": [
+          "https://cdn.shopify.com/oxygen-v2/29569/17180/35458/1808845/build/_shared/chunk-U43PBJBX.js",
+          "https://cdn.shopify.com/oxygen-v2/29569/17180/35458/1808845/build/_shared/chunk-PZUHJ4WO.js"
+        ]
+      },
+      {
+        "file": "assets/chunk-H6HP6E5F.js",
+        "bytes": 27838,
+        "characters": 27838,
+        "sha256": "7cce30eb95b7dc34eee4ef41cfd59f73f2534b4e216fe4e92facadbd40c20201",
+        "direct_imports": [
+          "https://cdn.shopify.com/oxygen-v2/29569/17180/35458/1808845/build/_shared/chunk-OYVGDRQE.js",
+          "https://cdn.shopify.com/oxygen-v2/29569/17180/35458/1808845/build/_shared/chunk-COPU5TY7.js",
+          "https://cdn.shopify.com/oxygen-v2/29569/17180/35458/1808845/build/_shared/chunk-Q3OFGS3M.js",
+          "https://cdn.shopify.com/oxygen-v2/29569/17180/35458/1808845/build/_shared/chunk-EDNXUYOC.js",
+          "https://cdn.shopify.com/oxygen-v2/29569/17180/35458/1808845/build/_shared/chunk-DWIS4GRQ.js",
+          "https://cdn.shopify.com/oxygen-v2/29569/17180/35458/1808845/build/_shared/chunk-U43PBJBX.js",
+          "https://cdn.shopify.com/oxygen-v2/29569/17180/35458/1808845/build/_shared/chunk-VVLE5XDI.js",
+          "https://cdn.shopify.com/oxygen-v2/29569/17180/35458/1808845/build/_shared/chunk-PZUHJ4WO.js"
+        ]
+      },
+      {
+        "file": "assets/($locale).radio-BVA3KXHD.js",
+        "bytes": 3185,
+        "characters": 3185,
+        "sha256": "e41954bdcf739f7d2710fd215fab403a7a95dabff6f6fdba03ef6a3edfc7f3db",
+        "direct_imports": [
+          "https://cdn.shopify.com/oxygen-v2/29569/17180/35458/1808845/build/_shared/chunk-H6HP6E5F.js",
+          "https://cdn.shopify.com/oxygen-v2/29569/17180/35458/1808845/build/_shared/chunk-OYVGDRQE.js",
+          "https://cdn.shopify.com/oxygen-v2/29569/17180/35458/1808845/build/_shared/chunk-COPU5TY7.js",
+          "https://cdn.shopify.com/oxygen-v2/29569/17180/35458/1808845/build/_shared/chunk-Q3OFGS3M.js",
+          "https://cdn.shopify.com/oxygen-v2/29569/17180/35458/1808845/build/_shared/chunk-EDNXUYOC.js",
+          "https://cdn.shopify.com/oxygen-v2/29569/17180/35458/1808845/build/_shared/chunk-DWIS4GRQ.js",
+          "https://cdn.shopify.com/oxygen-v2/29569/17180/35458/1808845/build/_shared/chunk-U43PBJBX.js",
+          "https://cdn.shopify.com/oxygen-v2/29569/17180/35458/1808845/build/_shared/chunk-VVLE5XDI.js",
+          "https://cdn.shopify.com/oxygen-v2/29569/17180/35458/1808845/build/_shared/chunk-PZUHJ4WO.js"
+        ]
+      }
+    ],
+    "exact_references": [
+      {
+        "file": "source/audio-context.original.js",
+        "purpose": "Exact React AudioPlayerProvider and useAudioPlayer hook compiled slice; referenced imported aliases are required.",
+        "source_file": "assets/chunk-Q3OFGS3M.js",
+        "source_url": "https://cdn.shopify.com/oxygen-v2/29569/17180/35458/1808845/build/_shared/chunk-Q3OFGS3M.js",
+        "character_offsets_zero_based_half_open": [
+          21400,
+          21898
+        ],
+        "utf8_byte_offsets_zero_based_half_open": [
+          21400,
+          21898
+        ],
+        "sha256": "505a20d26d5165cd4221708e1da9f50d6c8010ba25182e6233ab89f85d36b542",
+        "exact_slice_verified": true
+      },
+      {
+        "file": "source/global-player.original.js",
+        "purpose": "Exact global audio player compiled slice with icon URLs and native audio element; imported aliases are required.",
+        "source_file": "assets/chunk-H6HP6E5F.js",
+        "source_url": "https://cdn.shopify.com/oxygen-v2/29569/17180/35458/1808845/build/_shared/chunk-H6HP6E5F.js",
+        "character_offsets_zero_based_half_open": [
+          16309,
+          18678
+        ],
+        "utf8_byte_offsets_zero_based_half_open": [
+          16309,
+          18678
+        ],
+        "sha256": "871cd1bc22b7193f20b08b8590580e2bbc8403507040e157be5b0ce5b7fdd46f",
+        "exact_slice_verified": true
+      },
+      {
+        "file": "source/layout-provider.original.js",
+        "purpose": "Exact layout function showing nested provider placement around main route and global player. References unrelated layout components; evidence only.",
+        "source_file": "assets/chunk-H6HP6E5F.js",
+        "source_url": "https://cdn.shopify.com/oxygen-v2/29569/17180/35458/1808845/build/_shared/chunk-H6HP6E5F.js",
+        "character_offsets_zero_based_half_open": [
+          22261,
+          23038
+        ],
+        "utf8_byte_offsets_zero_based_half_open": [
+          22261,
+          23038
+        ],
+        "sha256": "55e261c16e03c8be6d33fe14a1a65522875424634cb39759b4fa80a594b95ee3",
+        "exact_slice_verified": true
+      },
+      {
+        "file": "source/radio-route.original.js",
+        "purpose": "Exact complete small radio route module including imports, initial selection and card selection behavior.",
+        "source_file": "assets/($locale).radio-BVA3KXHD.js",
+        "source_url": "https://cdn.shopify.com/oxygen-v2/29569/17180/35458/1808845/build/routes/($locale).radio-BVA3KXHD.js",
+        "character_offsets_zero_based_half_open": [
+          0,
+          3185
+        ],
+        "utf8_byte_offsets_zero_based_half_open": [
+          0,
+          3185
+        ],
+        "sha256": "e41954bdcf739f7d2710fd215fab403a7a95dabff6f6fdba03ef6a3edfc7f3db",
+        "exact_slice_verified": true
+      }
+    ],
+    "export_aliases": {
+      "context_chunk": "Ml exported as a = AudioPlayerProvider; Dl exported as b = useAudioPlayer",
+      "layout_import": "AudioPlayerProvider imported as ne; useAudioPlayer imported as Ce in chunk-H6HP6E5F.js",
+      "route_import": "useAudioPlayer imported as v in radio route",
+      "global_player": "ir aliased as ot locally, embedded in layout me; not independently exported."
+    },
+    "provider_state": {
+      "initial": {
+        "currentTrack": null,
+        "isPlaying": false,
+        "isPlayerFullSize": true
+      },
+      "actions": {
+        "playPause": "Functional toggle of isPlaying.",
+        "resizePlayer": "Functional toggle of isPlayerFullSize.",
+        "setPlay": "Direct React isPlaying setter.",
+        "setTrack": "Direct React currentTrack setter.",
+        "toggleResize": "Direct React isPlayerFullSize setter (despite its toggle-like name)."
+      },
+      "state_fields_for_track": [
+        "url",
+        "image_url",
+        "description",
+        "date"
+      ],
+      "guard": "useAudioPlayer throws Developer Error if context is absent.",
+      "persistence": "In-memory React state only. Layout me contains an outer AudioPlayerProvider and an inner provider enclosing the main route and player. The inner provider connects radio cards and global player; it can retain state across client route changes while mounted. Reload/remount resets state. The root layout key includes country/locale, so locale-key changes can remount.",
+      "storage": "No localStorage/sessionStorage in the provider or radio route. localStorage calls elsewhere in H6HP6E5F are currentLocale country-selector logic, not player persistence."
+    },
+    "radio_route_selection": {
+      "catalogue": "radioTracks.metaobjects.nodes fields are flattened with C(i); a fresh array is reversed for card rendering.",
+      "on_mount": "Effect with [] chooses Math.floor(Math.random()*r.length); only when currentTrack is absent, sets a random track. Does not set isPlaying=true, so initial random selection is not explicit autoplay.",
+      "different_url_click": "setTrack(card); if card.url differs from currentTrack?.url, setPlay(false), then setTimeout(()=>setPlay(true)) with no explicit delay.",
+      "same_url_click": "setTrack(card), then functional toggle of isPlaying.",
+      "card_icon": "Pause icon iff matching selected URL and isPlaying, otherwise play icon.",
+      "hover_overlay": "CSS hides playback overlay on desktop until hover, shows it on narrow layouts. Overlay has pointer-events:none; radio-item-cta handles the click.",
+      "text_overflow": "Mount effect measures each .radio-description-wrapper and adds text-animate to an overwide child span.",
+      "date_format": "MM.DD.YYYY on cards; MM-DD-YYYY in global player.",
+      "selection_function_offsets": [
+        1935
+      ]
+    },
+    "global_player": {
+      "native_media": "Single <audio ref=d src=currentTrack.url> exists only when a currentTrack exists. No native controls, autoplay attribute, loop attribute or preload setting is declared in JSX.",
+      "play_pause": "Effect depending only on [isPlaying] adds a timeupdate listener, then calls audio.play() when true or audio.pause() when false. The UI play/pause button only toggles provider state.",
+      "progress": "timeupdate computes currentTime/duration*100 and sets progress. DOM bar width uses that percentage, height10px, #E6E6E6, width0.3s ease-in-out.",
+      "end_behavior": "No ended-event listener or next-track action. If computed progress is EXACTLY100, the listener toggles playPause() and resets displayed progress to0. It does not assign audio.currentTime=0.",
+      "seeking": "No custom seek handler and no visible native audio controls. Progress bar is display-only in this source.",
+      "volume": "No explicit volume/mute state, setter or UI in the inspected source. Playback uses browser/system audio settings.",
+      "next_previous": "Absent. No queue, shuffle control or auto-advance at track end; random selection is mount-only when no track exists.",
+      "collapse": "resizePlayer toggles full-size flag and .open class. Collapse changes layout; it does not pause audio or clear track.",
+      "route_visibility": "Player wrapper visibility is visible when pathname.search matches /radio, products, /policies, /contact, /shop, /looks or /account/login. Otherwise CSS visibility:hidden is used; player/audio is not conditionally unmounted by this route check, so hiding it alone does not stop playback.",
+      "overflow_caption": "On isPlaying changes, measures .track-description-copy and adds text-animate when child span is wider.",
+      "media_session": "No navigator.mediaSession, MediaMetadata or media-session action handlers in any of the three inspected files.",
+      "responsive_css": {
+        "source": "assets/global-player-B4RKHMDX.css",
+        "height_px": 51,
+        "narrow_min_320px": "Fixed bottom-right, expanded width100%, collapsed width71px.",
+        "desktop_min_1280px": "Fixed top80px right0, expanded width25%, collapsed width70px.",
+        "controls": "Artwork40px, play/pause40x40px, resize30x40px; expanded title/date each20px high; progress10px."
+      },
+      "important_offsets": {
+        "currentTrack": [
+          16562
+        ],
+        "timeupdate": [
+          16849
+        ],
+        "currentTime": [
+          16748
+        ],
+        "duration": [
+          16770
+        ],
+        "Z===100": [
+          16788
+        ],
+        "className:\"player-resize-button\"": [
+          18090
+        ],
+        "\"audio\",{ref:d,src:t.url}": [
+          18639
+        ]
+      }
+    },
+    "compiled_dependencies": {
+      "context": "React/createContext/useState/useContext and JSX runtime from U43PBJBX, CommonJS interop c/te from PZUHJ4WO. Earlier Lodash code in Q3OFGS3M is unrelated to this context slice.",
+      "player": "React hooks via imported U43PBJBX exporta, JSX runtime via exportz, useLocation via exportc, initialization helper via exportk; context exportb; Hydrogen Image component from DWIS4GRQ exportb; PZUHJ4WO exportc interop.",
+      "styles": [
+        "assets/global-player-B4RKHMDX.css",
+        "assets/radio-PKNDW5SQ.css",
+        "assets/app-BCRHPTW2.css",
+        "assets/reset-YB72SZRB.css"
+      ],
+      "icons": [
+        "https://cdn.shopify.com/oxygen-v2/29569/17180/35458/1808845/build/_assets/playIcon-NNYMEOZA.svg",
+        "https://cdn.shopify.com/oxygen-v2/29569/17180/35458/1808845/build/_assets/pauseIcon-JDPGQUFH.svg",
+        "https://cdn.shopify.com/oxygen-v2/29569/17180/35458/1808845/build/_assets/whitePlayIcon-CU3UURRN.svg",
+        "https://cdn.shopify.com/oxygen-v2/29569/17180/35458/1808845/build/_assets/whitePauseIcon-OU3QAV73.svg"
+      ],
+      "reference_file_limit": "Compiled exact slices are evidence, not dependency-free standalone modules. Original CDN import graph/React/Remix/Hydrogen and root loader data are required to run original components."
+    },
+    "source_limitations_not_fixed": [
+      "timeupdate listeners are added on every isPlaying effect without any cleanup, so handlers can accumulate and cause repeated end toggles.",
+      "Effect dependency is only isPlaying, not currentTrack; track-switch handler deliberately drives false→timeout→true to invoke playback for new URL.",
+      "audio.play() return Promise is not caught; blocked playback can leave React isPlaying=true while native media remains paused.",
+      "End detection uses floating percentage equality100 rather than native ended and does not advance tracks.",
+      "No finite/zero duration guard around percentage calculation.",
+      "Initial random selection assumes non-empty catalogue; an empty array would yield undefined.",
+      "No timer cleanup for pending setPlay(true) on route unmount appears in the radio component."
+    ],
+    "absence_search": {
+      "chunk-Q3OFGS3M.js": {
+        "sessionStorage": 0,
+        "mediaSession": 0,
+        "MediaMetadata": 0,
+        "volume": 0,
+        "ended": 0
+      },
+      "chunk-H6HP6E5F.js": {
+        "sessionStorage": 0,
+        "mediaSession": 0,
+        "MediaMetadata": 0,
+        "volume": 0,
+        "ended": 0
+      },
+      "($locale).radio-BVA3KXHD.js": {
+        "sessionStorage": 0,
+        "mediaSession": 0,
+        "MediaMetadata": 0,
+        "volume": 0,
+        "ended": 0
+      }
+    }
+  },
+  "source_maps": "All15 CSS source-map URLs referenced by fetched styles returned404. Feature styles and compiled route/context/player code were available and inspected.",
+  "scope": "Reusable feature extraction; no shop header, cart, footer, route shell, account integration or active Pages entry change.",
+  "framework_context": {
+    "skill": "shopify:shopify",
+    "reference": "Hydrogen reference read to identify React/Remix provider and loader boundaries. Reusable port uses native DOM/audio without generated Hydrogen API code.",
+    "documentation": [
+      "https://shopify.dev/docs/storefronts/headless/legacy/hydrogen/cookbook/metaobjects"
+    ]
+  }
+}
