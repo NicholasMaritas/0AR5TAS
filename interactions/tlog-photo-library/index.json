@@ -64,6 +64,12 @@
     "entry": "../../testing/",
     "link": "Six",
     "query": "embed=testing",
-    "validation": "../../testing/photo-validation.json"
+    "validation": "../../testing/photo-validation.json",
+    "publication": {
+      "status": "verified",
+      "runtime_commit": "e90bd32ad266a8df4aec7b431c7eea90da56bf08",
+      "pages_workflow_id": 44400500186,
+      "validation": "../../testing/photo-validation.json"
+    }
   }
 }

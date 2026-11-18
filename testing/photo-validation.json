@@ -45,7 +45,76 @@
     "CDN media/font availability remains external; full duration of all audio/video was not retested."
   ],
   "publication": {
-    "status": "pending",
-    "test_url": "https://nicholasmaritas.github.io/0AR5TAS/testing/"
+    "status": "verified",
+    "runtime_commit": "e90bd32ad266a8df4aec7b431c7eea90da56bf08",
+    "pages_workflow_id": 44400500186,
+    "pages_workflow_conclusion": "success",
+    "test_url": "https://nicholasmaritas.github.io/0AR5TAS/testing/",
+    "main_readback": "All13 changed/new runtime-commit files matched contents.",
+    "live_assets": [
+      {
+        "file": "testing/index.html",
+        "status": 200,
+        "matches": true,
+        "bytes": 635,
+        "sha256": "3ed4e1ab026e7fdc87c5060aa469f1a9e9d801c2be056be915036b2248ee5fd4"
+      },
+      {
+        "file": "testing/testing.js",
+        "status": 200,
+        "matches": true,
+        "bytes": 5686,
+        "sha256": "e468c83d39bb19e2e7b413aaa5fe3f3844a7fd43217f4faf85369331b97eef5a"
+      },
+      {
+        "file": "testing/testing.css",
+        "status": 200,
+        "matches": true,
+        "bytes": 1879,
+        "sha256": "3fcd74c4c28b905a4ef4b294394b2f72482e49b20039e0b6b437e5fbed69cac3"
+      },
+      {
+        "file": "testing/navigation.html",
+        "status": 200,
+        "matches": true,
+        "bytes": 2553,
+        "sha256": "85e17cd8894007f260b96adebb269f1334d3ff0fc3648ff1175fa007d1112860"
+      },
+      {
+        "file": "testing/photo-section.js",
+        "status": 200,
+        "matches": true,
+        "bytes": 2916,
+        "sha256": "6767d2d28c5c469e8ecd371a4129158584bb30ba8329898b2d13ec77d3ca3378"
+      },
+      {
+        "file": "interactions/tlog-photo-library/index.html",
+        "status": 200,
+        "matches": true,
+        "bytes": 56811,
+        "sha256": "7fb0a18d24aa3343c2f1e743ed4f12d2d71b9ca2798dbd434b04faef1c03602c"
+      },
+      {
+        "file": "interactions/tlog-photo-library/tlog.js",
+        "status": 200,
+        "matches": true,
+        "bytes": 61845,
+        "sha256": "7b7775d3ce67353d32d72fb93ac2de586362b53c6ad8f099ba8e3a97a4ea8292"
+      }
+    ],
+    "root": "Still redirects to testing/."
+  },
+  "public_browser": {
+    "viewport": [
+      1344,
+      797
+    ],
+    "results": [
+      "Fresh Testing document starts with zero frames and original default state.",
+      "Music MP3 time0.325695s -> Six14.919584s -> Music16.930051s, paused=false throughout; one active card, no player bar.",
+      "Six rendered231media and opened requested first photo; viewer Back returned to grid.",
+      "Repeated Six visits reused one frame with preserved library state. Test audio paused after checks."
+    ],
+    "screenshot": "/workspace/shared/testing-tlog.jpg"
   }
 }
