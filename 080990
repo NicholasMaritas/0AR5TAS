@@ -274,3 +274,5 @@ The agent handling a task must update this file after each task to preserve cont
 
 ### Task 022 — Remove mobile menu surfaces
 - STARTED — 2026-11-17. Removed background fills, borders, corner rounding and shadows from mobile bottom menu and expanded More panel; removed expanded More fill. Black dots/text, large targets, fixed positioning and keyboard focus indicators retained. Publication pending.
+
+- COMPLETED — Task022: Pages workflow44212700323 deployed04b5b98edea26d7df455a5576faeaea46e2d8f47 successfully. Three changed files read back identically. Live500px viewport verified expanded menu/bottom bar/More control backgrounds rgba(0,0,0,0), borders0px, shadows none, text black. Screenshot confirmed only black dots and black labels on page; larger tap areas retained.
