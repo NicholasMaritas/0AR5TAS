@@ -8,7 +8,10 @@
     "Neighbors faded; middle emphasized.",
     "Smooth infinite cyclic scrolling with flow.",
     "Updated repository code and matching GitHub Pages test URL.",
-    "Keep the mobile menu on rotated phones; update repository code without changing the live Pages version."
+    "Keep the mobile menu on rotated phones; update repository code without changing the live Pages version.",
+    "Allow closed trigger to slide smoothly to either side for handedness; menu opens on the opposite side.",
+    "Do not allow trigger sliding while menu is open.",
+    "Keep desktop dots visible and at identical viewport positions while scrolling."
   ],
   "geometry": {
     "row_and_hit_area_px": 56,
@@ -21,7 +24,19 @@
   "reference": "Original menu source preserved at ../numbered-left-menu/source-extract.json; supplied thumb-radius PDF used for reach and minimum target guidance. This loop interaction is newly implemented from user instructions, not claimed extracted from the original site.",
   "scope": "Mobile behavior replaced; desktop original vertical source layout preserved. No photographs, caption effects, blog/article transitions or unrelated demos on this testing page.",
   "external_links": "Original Home/CDG/Junya Watanabe/Noir/Stores/Subscribe/Recruitment source destinations preserved. Project-specific routes not supplied.",
-  "validation_limits": "Landscape correction checked against12 media-query scenarios and synchronized across CSS, JavaScript and no-script fallback. Existing motion module unchanged. Physical phone rotation not tested. This branch is not deployed to Pages.",
+  "validation_limits": "Landscape correction checked against12 media-query scenarios and synchronized across CSS, JavaScript and no-script fallback. Existing motion module unchanged. Physical phone rotation not tested. This branch is not deployed to Pages. Handedness addition verified by nine gesture tests and local mouse/keyboard browser checks. Physical touch/notch behavior not claimed.",
   "responsive_query": "(max-width:767px), (hover:none) and (pointer:coarse) and (max-height:600px)",
-  "responsive_policy": "Keep the existing767px width rule, plus touch-first (primary coarse pointer and no hover) screens up to600px tall. Do not classify wide fine-pointer desktops as mobile just because their window is short."
+  "responsive_policy": "Keep the existing767px width rule, plus touch-first (primary coarse pointer and no hover) screens up to600px tall. Do not classify wide fine-pointer desktops as mobile just because their window is short.",
+  "handedness": {
+    "initial_side": "right",
+    "release": "Nearest edge or projected short-flick direction",
+    "closed_motion": "Direct horizontal drag followed by360ms CSS transform easing; no overshoot",
+    "open": "No drag movement and no accidental toggle from drag attempt",
+    "panel": "Opposite side; mirrored labels face inward; Home remains level with trigger",
+    "tap_areas": "56px trigger and rows retained;12px dot unchanged",
+    "keyboard": "ArrowLeft/Right on closed trigger; normal Enter/Space toggles",
+    "persistence": "Current page only",
+    "safe_area": "Endpoints measured from actual CSS/env safe-area geometry"
+  },
+  "desktop_scroll": "position:fixed preserved; seven dot rectangles identical before and after757px local-fixture scroll."
 }

@@ -1,0 +1,113 @@
+{
+  "feature": "Movable closed trigger and fixed desktop navigation",
+  "tests": {
+    "command": "node --test trigger-slide.test.mjs",
+    "passed": 9,
+    "coverage": [
+      "Nearest edge and velocity-assisted release",
+      "Closed trigger follows drag and suppresses accidental click",
+      "Round-trip handedness switching",
+      "Open gesture lock without closing menu",
+      "Normal taps still open/close",
+      "Vertical gesture rejection",
+      "Pointer cancellation",
+      "Closed-only keyboard ArrowLeft/Right",
+      "Resize, settling and cleanup"
+    ]
+  },
+  "local_browser": {
+    "viewport": [
+      500,
+      757
+    ],
+    "initial_trigger_button": {
+      "left": 426,
+      "width": 56,
+      "height": 56
+    },
+    "left_trigger_button": {
+      "left": 18,
+      "width": 56,
+      "height": 56
+    },
+    "mirrored_panel": {
+      "left": 222,
+      "width": 260,
+      "height": 168
+    },
+    "alignment": {
+      "trigger_dot_top": 649,
+      "home_dot_top": 649,
+      "dot_width": 12
+    },
+    "gesture_checks": [
+      "Pointer drag changed right to left without opening",
+      "Opening displayed labeled rows on right with row-reverse alignment",
+      "Dragging open trigger left-to-right left side and open state unchanged",
+      "Closing allowed reverse slide back right",
+      "Keyboard ArrowLeft moved closed trigger left",
+      "Native wheel in mirrored right panel advanced Home to CDG while body scroll stayed0"
+    ],
+    "transition": "360ms transform easing; no transition during direct drag or open state; reduced-motion transition:none",
+    "desktop": {
+      "fixture": "Temporary local page using actual menu assets and body min-height:300vh; not included in production/test deployment",
+      "viewport": [
+        1180,
+        757
+      ],
+      "scroll_before": 0,
+      "scroll_after": 757,
+      "exact_positions_unchanged": true,
+      "dots": [
+        {
+          "x": 36,
+          "y": 64,
+          "width": 12,
+          "height": 12
+        },
+        {
+          "x": 36,
+          "y": 104,
+          "width": 12,
+          "height": 12
+        },
+        {
+          "x": 36,
+          "y": 144,
+          "width": 12,
+          "height": 12
+        },
+        {
+          "x": 36,
+          "y": 184,
+          "width": 12,
+          "height": 12
+        },
+        {
+          "x": 36,
+          "y": 224,
+          "width": 12,
+          "height": 12
+        },
+        {
+          "x": 36,
+          "y": 264,
+          "width": 12,
+          "height": 12
+        },
+        {
+          "x": 36,
+          "y": 304,
+          "width": 12,
+          "height": 12
+        }
+      ],
+      "position": "fixed"
+    }
+  },
+  "limitations": [
+    "Browser pointer/mouse and keyboard verified; physical touch/notch devices not tested.",
+    "Choice remains in current page state; no persistent storage added."
+  ],
+  "deployment": "Code branch only; main and live Pages must remain unchanged"
+}

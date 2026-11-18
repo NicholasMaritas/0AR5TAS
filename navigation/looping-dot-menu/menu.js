@@ -1,4 +1,5 @@
 import {LoopMotion, rowOffset, rowOpacity} from './motion.js?v=1';
+import {createSlidingTrigger} from './trigger-slide.js?v=1';
 
 export function createLoopMenu(root) {
   const button = root.querySelector('.loop-toggle');
@@ -45,6 +46,8 @@ export function createLoopMenu(root) {
   }
   function setOpen(value, keyboard = false) {
     if (!mobile.matches) return;
+    if (value) sliding.settle();
+    else sliding.cancel();
     stopFrames(); releaseCapture(); motion.reset(); focusAtRest = false; suppressClick = false;
     open = value; root.dataset.open = String(open);
     button.setAttribute('aria-expanded', String(open));
@@ -121,6 +124,7 @@ export function createLoopMenu(root) {
   function layout() {
     const focusWasInPanel = panel.contains(document.activeElement);
     const focusWasOnButton = document.activeElement === button;
+    sliding.settle();
     stopFrames(); releaseCapture(); motion.reset(); open = false; focusAtRest = false;
     root.dataset.open = 'false'; button.setAttribute('aria-expanded','false');
     button.setAttribute('aria-label','Open navigation');
@@ -139,6 +143,9 @@ export function createLoopMenu(root) {
     if (reduced.matches) { stopFrames(); motion.settleImmediately(); paint(); }
   }
   function visibility() { if (document.hidden && mobile.matches) setOpen(false); }
+  const sliding = createSlidingTrigger(root, button, {
+    isEnabled:() => mobile.matches, isOpen:() => open
+  });
   const listeners = [
     [button,'click',toggle], [panel,'pointerdown',down], [panel,'pointermove',move,{passive:false}],
     [panel,'pointerup',up], [panel,'pointercancel',cancel], [panel,'click',click,true],
@@ -149,6 +156,7 @@ export function createLoopMenu(root) {
   layout();
   return {destroy() {
     destroyed = true; stopFrames(); releaseCapture();
+    sliding.destroy();
     listeners.forEach(([target,name,handler,options]) => target.removeEventListener(name,handler,options));
     mobile.removeEventListener('change',layout); reduced.removeEventListener('change',preference);
   }};
@@ -156,3 +164,4 @@ export function createLoopMenu(root) {
 
 const navigation = document.querySelector('.loop-nav');
 if (navigation) createLoopMenu(navigation);
+

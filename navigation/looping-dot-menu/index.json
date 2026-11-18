@@ -9,13 +9,16 @@
     "motion.js": "Pure infinite cyclic position, exponential flick decay and velocity-continuous critically damped alignment.",
     "motion.test.mjs": "node --test motion.test.mjs;13 behavior/physics tests.",
     "requirements.json": "Requested behavior, integration decisions and verification limits.",
-    "landscape-validation.json": "Twelve evaluated media-query scenarios, synchronized CSS/JS/no-script rule, verification limits."
+    "landscape-validation.json": "Twelve evaluated media-query scenarios, synchronized CSS/JS/no-script rule, verification limits.",
+    "trigger-slide.js": "Closed-only horizontal trigger dragging; CSS safe-area endpoint measurement, edge settling, open lock, click suppression and keyboard side selection.",
+    "trigger-slide.test.mjs": "node --test trigger-slide.test.mjs; nine gesture, cancellation and lock tests.",
+    "handedness-validation.json": "Gesture and desktop fixed-scroll verification, geometry and limitations."
   },
   "integration": "Load menu.css, use .loop-nav/.loop-toggle/.loop-panel/.loop-link markup from index.html, and load menu.js as a module. No external JavaScript, fonts or image dependencies. Seven existing source-site hrefs retained; replace with project destinations when supplied.",
-  "mobile": "Narrow viewports <=767px, or hover:none + pointer:coarse + height<=600px: retain the mobile looping menu, including landscape phones wider than767px. Large fine-pointer desktops retain vertical navigation. Geometry/gestures unchanged.",
-  "desktop": "Existing fixed vertical source-style dots retained; mobile interaction is the requested scope.",
+  "mobile": "Narrow viewports <=767px, or hover:none + pointer:coarse + height<=600px: retain the mobile looping menu, including landscape phones wider than767px. Large fine-pointer desktops retain vertical navigation. Geometry/gestures unchanged. Closed trigger can be dragged to either edge; menu mirrors to opposite side. Open trigger stays locked. Chosen side remains for the current page session.",
+  "desktop": "Seven source-style dots remain position:fixed at left30px/top50px while the document scrolls; verified with 757px body scrolling and exact unchanged dot bounds.",
   "motion": "Drag follows pointer, release decelerates into aligned row. Wheel/trackpad deltas are smoothed and gently aligned without injecting a second inertial tail. New input interrupts motion immediately; wrapping occurs outside clipped window.",
-  "accessibility": "Native links/button/region; only centered link in tab order; ArrowUp/Down cycle following visual direction; Home/End; Enter; Escape returns focus to trigger. Resizing moves focus out of newly hidden content. Reduced-motion avoids coast and alignment animation. Pinch zoom allowed in touch region.",
+  "accessibility": "Native links/button/region; only centered link in tab order; ArrowUp/Down cycle following visual direction; Home/End; Enter; Escape returns focus to trigger. Resizing moves focus out of newly hidden content. Reduced-motion avoids coast and alignment animation. Pinch zoom allowed in touch region. While closed, focus trigger and use ArrowLeft/Right to choose handedness; hidden help documents the gesture. Trigger settling respects reduced motion.",
   "validation": {
     "automated": "13 pure motion tests passed; JS syntax passed.",
     "local_browser": "500x757:12px closed/open dot;1px hollow border;Home/trigger center655px;CDG599px andRecruitment711px at0.28opacity. Mouse drag and wheel both directions exercised without navigation; body scroll remains0; integer settled opacity1 observed. Additional333x505 CSS viewport checked using browser zoom: aligned centers402.667px, full labels fit and no horizontal overflow. At1180px desktop all seven original links remain tabbable with no transforms; resizing to500px closes menu and restores focus to trigger. A full seven-key cycle returns toHome with opacity1 and focus.",
@@ -27,13 +30,13 @@
       "query": "(max-width:767px), (hover:none) and (pointer:coarse) and (max-height:600px)",
       "browser": "Local narrow layout checked. Device emulation unavailable because managed browser blocks DevTools; no physical rotation claim.",
       "runtime_dependencies_added": false
-    }
+    },
+    "handedness": "Nine new gesture tests passed. Local500x757 checked pointer drag both ways, opposite panel, open lock, normal taps, keyboard side control; desktop1180x757 scrolled757px with all seven dot bounds unchanged. Physical touch/notch devices not tested."
   },
   "deployment": {
     "status": "not_deployed",
-    "reason": "User requested code update only; leave GitHub Pages as is.",
+    "reason": "Continue code-only branch update; live Pages left unchanged as requested in preceding instruction.",
     "branch": "fix/looping-dot-menu-landscape",
-    "base_main_commit": "ee134918bb162830e1cd14b72e5bacceba1753c6",
     "retained_live_runtime_commit": "d54ca6aab91ed39828019e88ebe71765a4e8aebc"
   },
   "test_url_note": "Live URL remains the existing main-branch version; this branch correction is not served there."
