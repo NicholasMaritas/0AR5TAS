@@ -26,13 +26,13 @@
     "source/radio.original.css": "Exact extracted source evidence.",
     "source-analysis.json": "Reusable code, data or documentation.",
     "usage.json": "Reusable code, data or documentation.",
-    "validation.json": "Reusable code, data or documentation."
+    "validation.json": "Reusable code, data or documentation.",
+    "index.html": "Active standalone Pages test.",
+    "layout-validation.json": "Circle alignment and all-width bottom-player validation."
   },
   "publication": {
-    "mode": "library only",
-    "active_pages_changed": false,
-    "status": "verified on main",
-    "reference_commit": "7ba652aa7c0fda0fcc0c6933e5adef4d79e89393",
-    "existing_code_blobs_unchanged": 94
+    "mode": "active Pages test",
+    "test_url": "https://nicholasmaritas.github.io/0AR5TAS/media/radio-catalogue-player/",
+    "status": "updated layout; deployment verification pending"
   }
 }

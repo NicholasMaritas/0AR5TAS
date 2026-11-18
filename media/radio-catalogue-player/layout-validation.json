@@ -1,0 +1,74 @@
+{
+  "date": "2026-11-18",
+  "request": "Center circle behind artwork play/pause icon and use mobile bottom player on desktop too.",
+  "changes": [
+    "Moved circle/icon layers inside positioned artwork button.",
+    "Both overlays use inset0,100%width/height and no independent aspect ratio.",
+    "Expanded player full-width at bottom; collapsed71px at bottom-right at all breakpoints.",
+    "53px total height contains40px controls,12px progress and1px border. Safe-area inset and page bottom clearance included."
+  ],
+  "local_browser": {
+    "desktop_viewport": [
+      1352,
+      797
+    ],
+    "icon_center": [
+      168.96875,
+      214.5625
+    ],
+    "circle_center": [
+      168.96875,
+      214.5625
+    ],
+    "expanded_bar": {
+      "x": 0,
+      "y": 744,
+      "width": 1337,
+      "height": 53
+    },
+    "progress": {
+      "y": 785,
+      "height": 12,
+      "bottom": 797
+    },
+    "collapsed_bar": {
+      "x": 1266,
+      "y": 744,
+      "width": 71,
+      "height": 53
+    },
+    "after_scroll_y": 797,
+    "after_scroll_bar_bottom": 797,
+    "collapse_kept_playback": true,
+    "narrow_viewport": [
+      500,
+      797
+    ],
+    "narrow_first_three_center_deltas": [
+      {
+        "dx": 0,
+        "dy": 0
+      },
+      {
+        "dx": 0,
+        "dy": 0
+      },
+      {
+        "dx": 0,
+        "dy": 0
+      }
+    ],
+    "narrow_bar": {
+      "x": 0,
+      "y": 744,
+      "width": 485,
+      "height": 53
+    },
+    "narrow_scroll_width": 485
+  },
+  "limits": [
+    "Resized desktop browser; physical mobile safe-area inset not exercised.",
+    "Original source styles preserved in source/; current layout intentionally differs per user request."
+  ],
+  "publication": "pending"
+}

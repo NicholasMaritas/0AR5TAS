@@ -153,7 +153,8 @@ export function mountRadioCatalogue(root, { tracks, initialIndex } = {}) {
     const genres = el('div', 'radio-genre-item');
     for (const genre of track.genres) genres.append(el('div', 'radio-genre-title', genre));
     metadata.append(genres, el('div', 'radio-track-date', track.date_display));
-    card.append(button, overlay, blur, title, metadata);
+    button.append(blur, overlay);
+    card.append(button, title, metadata);
     grid.append(card);
     return { button, icon, title };
   });
