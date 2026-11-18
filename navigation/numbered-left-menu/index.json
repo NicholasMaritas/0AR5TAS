@@ -1,5 +1,5 @@
 {
-  "name": "black dot left navigation",
+  "name": "dot navigation source archive",
   "source": "https://www.comme-des-garcons.com/",
   "files": [
     "numbered-menu.html",
@@ -7,8 +7,10 @@
     "source-extract.json"
   ],
   "integration": "Insert HTML and load CSS. Original relative hrefs preserved; replace with project destinations when integrating. No JavaScript required.",
-  "pages": "Standalone black-dot test only; former photo test URL redirects here.",
+  "pages": "Current test is the looping dot menu; original extracted sources and prior variants remain archived here.",
   "limitations": "No font dependency for dots. Original numbered source preserved in source-extract.json; visual browser validation not performed.",
   "variant": "Seven black12px circular dots,40px vertical spacing; original link destinations and fixed positioning retained.",
-  "test_url": "https://nicholasmaritas.github.io/0AR5TAS/navigation/black-dots/"
+  "test_url": "https://nicholasmaritas.github.io/0AR5TAS/navigation/looping-dot-menu/",
+  "current_feature": "looping dot menu",
+  "current_index": "../looping-dot-menu/index.json"
 }

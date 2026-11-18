@@ -1,0 +1,21 @@
+:root{font-family:Arial,Helvetica,sans-serif;color:#000;background:#fff;--row:56px;--dot:12px;--edge: max(18px, env(safe-area-inset-bottom))}
+*{box-sizing:border-box}html,body{margin:0;min-height:100%;background:#fff;color:#000}
+.loop-toggle{display:none}
+.loop-panel{position:fixed;top:50px;left:30px;z-index:9}
+.loop-link{display:flex;width:24px;height:40px;align-items:center;justify-content:center;color:#000;text-decoration:none}
+.dot{display:block;flex:none;width:var(--dot);height:var(--dot);border:1px solid #000;border-radius:50%;background:#000}
+.link-name{display:none}
+.loop-link:focus-visible{outline:1px dotted #000;outline-offset:-2px}
+.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip-path:inset(50%);white-space:nowrap}
+@media(max-width:767px){
+  .loop-toggle{display:grid;place-items:center;position:fixed;right:max(18px,env(safe-area-inset-right));bottom:calc(var(--edge) + var(--row));width:var(--row);height:var(--row);padding:0;border:0;background:transparent;color:#000;cursor:pointer;z-index:10;-webkit-tap-highlight-color:transparent}
+  .loop-toggle[aria-expanded="true"] .dot{background:transparent}
+  .loop-toggle:focus-visible{outline:1px dotted #000;outline-offset:-6px}
+  .loop-panel{left:max(18px,env(safe-area-inset-left));top:auto;bottom:var(--edge);width:min(260px,calc(100vw - 112px));height:calc(3 * var(--row));overflow:hidden;overscroll-behavior:contain;touch-action:pinch-zoom;user-select:none;-webkit-user-select:none;background:transparent;border:0;box-shadow:none}
+  .loop-panel[hidden]{display:none}
+  .loop-link{position:absolute;left:0;top:50%;margin-top:calc(var(--row) / -2);width:100%;height:var(--row);min-width:44px;min-height:44px;padding:0 12px;justify-content:flex-start;gap:14px;will-change:transform,opacity;-webkit-tap-highlight-color:transparent}
+  .link-name{display:block;font-size:13px;line-height:1.2}.desktop-name{display:none}
+  .loop-link[data-centered]{opacity:1}
+  .loop-panel:focus-visible{outline:1px dotted #000;outline-offset:2px}
+}
+@media(prefers-reduced-motion:reduce){.loop-link{will-change:auto}}

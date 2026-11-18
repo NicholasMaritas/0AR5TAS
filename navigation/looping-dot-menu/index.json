@@ -1,0 +1,27 @@
+{
+  "name": "looping dot menu",
+  "category": "navigation/looping-dot-menu",
+  "test_url": "https://nicholasmaritas.github.io/0AR5TAS/navigation/looping-dot-menu/",
+  "files": {
+    "index.html": "Standalone current human test, seven real named links and accessible trigger.",
+    "menu.css": "Transparent three-row mobile window,56px targets,12px same-size solid/hollow trigger; original vertical desktop layout.",
+    "menu.js": "createLoopMenu(root), returning destroy(); pointer/wheel/keyboard controller with responsive and reduced-motion lifecycle.",
+    "motion.js": "Pure infinite cyclic position, exponential flick decay and velocity-continuous critically damped alignment.",
+    "motion.test.mjs": "node --test motion.test.mjs;13 behavior/physics tests.",
+    "requirements.json": "Requested behavior, integration decisions and verification limits."
+  },
+  "integration": "Load menu.css, use .loop-nav/.loop-toggle/.loop-panel/.loop-link markup from index.html, and load menu.js as a module. No external JavaScript, fonts or image dependencies. Seven existing source-site hrefs retained; replace with project destinations when supplied.",
+  "mobile": "<=767px: only bottom-right trigger before opening; left three-row infinite menu when opened; Home aligned with trigger, next above and last below; labels retained; above/below opacity0.28; selected item opacity1;56px link and trigger hit areas;12px thin hollow open trigger.",
+  "desktop": "Existing fixed vertical source-style dots retained; mobile interaction is the requested scope.",
+  "motion": "Drag follows pointer, release decelerates into aligned row. Wheel/trackpad deltas are smoothed and gently aligned without injecting a second inertial tail. New input interrupts motion immediately; wrapping occurs outside clipped window.",
+  "accessibility": "Native links/button/region; only centered link in tab order; ArrowUp/Down cycle following visual direction; Home/End; Enter; Escape returns focus to trigger. Resizing moves focus out of newly hidden content. Reduced-motion avoids coast and alignment animation. Pinch zoom allowed in touch region.",
+  "validation": {
+    "automated": "13 pure motion tests passed; JS syntax passed.",
+    "local_browser": "500x757:12px closed/open dot;1px hollow border;Home/trigger center655px;CDG599px andRecruitment711px at0.28opacity. Mouse drag and wheel both directions exercised without navigation; body scroll remains0; integer settled opacity1 observed.",
+    "public_pages": "pending",
+    "physical_touch": "not tested"
+  },
+  "deployment": {
+    "status": "pending"
+  }
+}
