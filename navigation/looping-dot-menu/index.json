@@ -25,9 +25,9 @@
   "validation": {
     "automated": "55 tests passed:32 trigger docking,10 shared menu input and13 motion/physics. JavaScript syntax passed.",
     "local_browser": "500x757:12px closed/open dot;1px hollow border;Home/trigger center655px;CDG599px andRecruitment711px at0.28opacity. Mouse drag and wheel both directions exercised without navigation; body scroll remains0; integer settled opacity1 observed. Additional333x505 CSS viewport checked using browser zoom: aligned centers402.667px, full labels fit and no horizontal overflow. At1180px desktop all seven original links remain tabbable with no transforms; resizing to500px closes menu and restores focus to trigger. A full seven-key cycle returns toHome with opacity1 and focus.",
-    "public_pages": "New docking/expanded scroll version publication pending.",
+    "public_pages": "Workflow44316815523 deployed the exact runtime commit successfully. All four changed live runtime files returned200 and matched committed bytes. Public718x757 browser verified upward middle docking, right/left mirror, vertical scrolling over outlined trigger and gap without closing/docking/body scrolling, normal tap closing and Home reopening.",
     "physical_touch": "not tested",
-    "github_readback": "All12 original files and follow-up startup HTML read back identically.",
+    "github_readback": "All10 Task028 changed/new files read back identically from main.",
     "landscape_correction": {
       "status": "12 media-query scenarios passed; JavaScript syntax and three responsive-query copies checked",
       "query": "(max-width:767px), (hover:none) and (pointer:coarse) and (max-height:600px)",
@@ -40,7 +40,9 @@
     "docking": "Local browser500x757 and718x757: middle Y378.5;718px width centers35.9/682.1 equal5%/95%; menu and trigger centers level. Expanded bands mirror panel far edge through trigger hit area. Vertical drags over outlined trigger and empty gap, plus gap wheel input, scroll links while remaining open and body scroll stays0. Closed horizontal midpoint flick changes sides. Physical touch remains untested."
   },
   "deployment": {
-    "status": "pending"
+    "status": "success",
+    "commit": "acf187e02df3511e2795d159cfd9c7257cfb8bd2",
+    "workflow_run": 44316815523
   },
-  "test_url_note": "Live Pages now includes the landscape and sliding-trigger corrections."
+  "test_url_note": "Current Pages includes four-dock trigger and extended open scroll input."
 }
