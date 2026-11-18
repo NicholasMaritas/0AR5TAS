@@ -14,7 +14,9 @@
     "select(index) switches and plays; selecting the current mix toggles play/pause. select(index,false) changes without autoplay.",
     "getState() returns selected index, track, playing, expanded, progress percentage and error.",
     "destroy() removes owned DOM/listeners, pauses/releases audio and preserves an existing data-fuct-radio marker. Remount uses a new call.",
-    "createRadioController(audio,tracks,onChange,options) is the independent native transport layer used by the component and tests."
+    "createRadioController(audio,tracks,onChange,options) is the independent native transport layer used by the component and tests.",
+    "mountRadioCatalogue accepts showPlayer:false to omit the player bar and append its audio directly to the root. Default true preserves standalone behavior.",
+    "refresh() remeasures title overflow after a hidden catalogue is shown. destroy() also releases/removes an audio node moved to a persistent host."
   ],
   "preserved_behavior": [
     "28 music choices with artwork, titles, exact genre values and source-reversed catalogue ordering.",
@@ -32,7 +34,8 @@
     "Native button names/keyboard behavior, focus styling and reduced-motion fallback added.",
     "preload=metadata requests metadata rather than the default automatic preload. No local/session storage added.",
     "Play icon and blur-circle layers share the artwork button as their positioning container, removing mismatched responsive overlay widths.",
-    "Player is bottom-docked at every width, full-width when expanded and71px wide at bottom-right when collapsed. Height includes the complete progress bar and bottom safe-area inset; catalogue clearance is reserved."
+    "Player is bottom-docked at every width, full-width when expanded and71px wide at bottom-right when collapsed. Height includes the complete progress bar and bottom safe-area inset; catalogue clearance is reserved.",
+    "Optional bar-free presentation reuses the same card controls/transport; disabled bar artwork is not fetched or rendered."
   ],
   "not_in_source": [
     "No seeking/scrubbing, volume slider, next/previous, shuffle control, automatic next mix, playlist persistence or Media Session controls. Progress is display-only."

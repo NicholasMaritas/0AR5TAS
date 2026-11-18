@@ -1,5 +1,7 @@
 import {createArchiveSelector} from '../interactions/archive-media-selector/archive-selector.js';
 import {createLoopMenu} from '../navigation/looping-dot-menu/menu.js?v=7';
+import {mountRadioCatalogue} from '../media/radio-catalogue-player/radio-player.js?v=3';
+import {createMusicSession} from './music-session.js?v=1';
 
 export const options = [
   {label:'One', id:'1595381799430'},
@@ -8,7 +10,7 @@ export const options = [
   {label:'Four', id:'1595403925337'},
   {label:'Five', id:'1595449047435'},
   {label:'Six', id:'1595535440673'},
-  {label:'Seven', id:'1595537714238'},
+  {label:'Music', id:'1595537714238'},
 ];
 
 export function mountTesting(host, archiveMarkup, navigationMarkup) {
@@ -40,6 +42,37 @@ export function mountTesting(host, archiveMarkup, navigationMarkup) {
   host.append(root);
   const archive = createArchiveSelector(root);
   const menu = createLoopMenu(navigation);
+  const music = doc.createElement('section');
+  music.className = 'testing-music';
+  music.setAttribute('aria-label', 'Music catalogue');
+  music.hidden = true;
+  const musicStatus = doc.createElement('p');
+  musicStatus.className = 'music-loading';
+  musicStatus.setAttribute('role', 'status');
+  music.append(musicStatus);
+  root.append(music);
+  const musicSession = createMusicSession({
+    visible(value) {
+      music.hidden = !value;
+      root.dataset.musicActive = String(value);
+    },
+    async load() {
+      const response = await fetch('../media/radio-catalogue-player/catalogue.json');
+      if (!response.ok) throw new Error('Music catalogue unavailable.');
+      return response.json();
+    },
+    loading() { musicStatus.textContent = 'Loading music…'; },
+    failed() { musicStatus.textContent = 'Music could not load. Select Music to retry.'; },
+    mount(catalogue) {
+      const radio = mountRadioCatalogue(music, {tracks:catalogue.tracks, initialIndex:0, showPlayer:false});
+      // Keep the same audio node outside the visual section when it is hidden.
+      const audio = music.querySelector('audio');
+      audio.setAttribute('aria-hidden', 'true');
+      root.append(audio);
+      musicStatus.textContent = '';
+      return radio;
+    },
+  });
   const activated = event => {
     const link = event.target.closest?.('.loop-link[data-ticker-item]');
     if (!link || !navigation.contains(link)) return;
@@ -48,6 +81,7 @@ export function mountTesting(host, archiveMarkup, navigationMarkup) {
     for (const item of links) item.toggleAttribute('aria-current', item === link);
     link.setAttribute('aria-current', 'page');
     root.dataset.selected = link.dataset.id;
+    musicSession.setActive(link.dataset.id === options[6].id);
   };
   root.addEventListener('click', activated);
   let destroyed = false;
@@ -55,7 +89,7 @@ export function mountTesting(host, archiveMarkup, navigationMarkup) {
     if (destroyed) return;
     destroyed = true;
     root.removeEventListener('click', activated);
-    menu.destroy(); archive.destroy(); root.remove();
+    musicSession.destroy(); menu.destroy(); archive.destroy(); root.remove();
   }};
 }
 

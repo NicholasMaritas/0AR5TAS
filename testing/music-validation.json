@@ -1,0 +1,48 @@
+{
+  "date": "2026-11-18",
+  "requirements": [
+    "Seventh link Music uses unchanged background1595537714238.",
+    "Catalogue overlays background; player bar omitted.",
+    "Card play/pause reflects currently playing mix.",
+    "Audio continues on other dots and returns without restarting."
+  ],
+  "implementation": {
+    "radio_option": "showPlayer:false (defaulttrue retained)",
+    "audio": "Single nativeaudio moved outside hidden Musicsection.",
+    "loading": "Lazy single mount; cached data; late-load/destroy guards; retryable local failure.",
+    "presentation": "Fixed transparent independently scrollable catalogue below navigation; white cards; original Music archive caption hidden."
+  },
+  "automated": {
+    "music_session_tests": 7,
+    "existing_audio_tests": 7,
+    "failed": 0,
+    "syntax": "Passed"
+  },
+  "local_browser": {
+    "narrow": [
+      500,
+      797
+    ],
+    "desktop": [
+      1352,
+      797
+    ],
+    "results": [
+      "Seven labels One,Two,Three,Four,Five,Six,Music.",
+      "Music selected same archive background1595537714238; host background rgba(0,0,0,0).",
+      "28 cards, zero player bars, single audio node outside catalogue.",
+      "Kenny Hoopla nativeMP3 readyState4; pauseicon and Pause label witharia-pressedtrue.",
+      "LeavingMusic forOne hid catalogue and retained audio pausedfalse, time advanced0.357786->1.392571s.",
+      "ReturningMusic retained same source/time21.799703s,28cards and one pauseicon.",
+      "Selecting FUCT MIX011 changed soleaudio source to222.mp3 and active pauseicon; selecting again paused and restored Play.",
+      "Desktop catalogue scrollTop63->697 while body scroll0 and dotrect x30,y50,w24,h40 unchanged.",
+      "Standalone default mode retained28cards, oneaudio and onebar.",
+      "Desktop active pauseicon remained display:flex after moving pointer back to Music navigation; zero player bars."
+    ]
+  },
+  "limits": [
+    "Resized desktop browser; physical phone/background OS behavior not tested.",
+    "Cross-dot persistence is within the current document; full reload/navigation unloads audio."
+  ],
+  "publication": "pending"
+}

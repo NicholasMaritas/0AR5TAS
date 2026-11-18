@@ -2,13 +2,16 @@
   "name": "Testing",
   "category": "testing",
   "test_url": "https://nicholasmaritas.github.io/0AR5TAS/testing/",
-  "description": "Looping dot menu selects seven archive media states; central ticker removed.",
+  "description": "Looping dots select archive media, with a persistent radio catalogue on Music.",
   "files": {
     "index.html": "Active standalone Pages test.",
     "testing.js": "Manual composition/mount and seven ID-linked dot choices.",
     "testing.css": "Shared page reset and menu layering.",
     "navigation.html": "Seven One–Seven links using the preserved loop structure.",
-    "validation.json": "Integration checks and publication evidence."
+    "validation.json": "Integration checks and publication evidence.",
+    "music-session.js": "Lazy one-instance catalogue lifecycle and playback persistence across section changes.",
+    "music-session.test.mjs": "Seven load/race/lifecycle tests.",
+    "music-validation.json": "Music integration, audio persistence and publication checks."
   },
   "components": {
     "archive": "../interactions/archive-media-selector/archive-selector.js",
@@ -17,7 +20,10 @@
     "menu": "../navigation/looping-dot-menu/menu.js?v=7",
     "menu_styles": "../navigation/looping-dot-menu/menu.css?v=7",
     "motion": "../navigation/looping-dot-menu/motion.js?v=1",
-    "trigger": "../navigation/looping-dot-menu/trigger-slide.js?v=5"
+    "trigger": "../navigation/looping-dot-menu/trigger-slide.js?v=5",
+    "radio": "../media/radio-catalogue-player/radio-player.js?v=3",
+    "radio_styles": "../media/radio-catalogue-player/radio-player.css?v=2",
+    "catalogue": "../media/radio-catalogue-player/catalogue.json"
   },
   "mapping": [
     {
@@ -69,27 +75,30 @@
       "thumbnails": 2
     },
     {
-      "label": "Seven",
+      "label": "Music",
       "id": "1595537714238",
       "title": [
         "SNEEZE MULAN & PRINCESS JASMINE SKATEBOARDS"
       ],
-      "thumbnails": 2
+      "thumbnails": 2,
+      "foreground": "28-item radio catalogue; original archive caption hidden while Music is active."
     }
   ],
   "initial_state": "Original separate sneeze22-bg default background; no selected option, thumbnails or caption. Reload restores this state.",
   "behavior": [
     "Only7 options exist in the mounted interface; central ticker is removed in an inert template before insertion. Other14 captions/backgrounds are pruned.",
     "Dot activation changes associated background image/video, thumbnails and text through the archive controller.",
-    "Mobile labels One–Seven; existing infinite loop, fade, cardinal docking and landscape constraints are retained. Desktop dots remain fixed.",
+    "Mobile labels One–Six and Music; existing loop/docking and desktop fixed dots retained.",
     "Loop scrolling only positions choices. Selection happens on click/tap/Enter, with drag-click suppression intact.",
-    "Caption thumbnail zoom is preserved. Hidden videos pause on selection change."
+    "Caption thumbnail zoom is preserved. Hidden videos pause on selection change.",
+    "Music retains background1595537714238 while overlaying the radio catalogue. Music foreground replaces that option's old caption/thumbs.",
+    "Catalogue mounts once on first Music visit. Its single audio node remains outside the hidden visual section and continues playing on other dot selections.",
+    "Player bar is omitted. Only the playing card shows pause; clicking it pauses, and selecting another mix switches playback.",
+    "Loading completion cannot reopen Music after leaving; failed loading can be retried by reselecting Music."
   ],
   "integration": "Load index.html as an isolated document. testing.js imports the existing controllers, fetches archive markup and navigation.html, and mounts once. mountTesting(host,archiveMarkup,navigationMarkup) returns destroy(). No external JavaScript dependencies added.",
   "publication": {
-    "status": "published and verified",
-    "active_test": "Testing",
-    "runtime_commit": "0c0e968ee60ec17e384b3b3a1b12f2244f9759f3",
-    "pages_workflow": 44387516905
+    "status": "updated Music implementation; deployment verification pending",
+    "active_test": "Testing"
   }
 }

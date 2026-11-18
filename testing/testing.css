@@ -2,3 +2,16 @@ html,body{margin:0;width:100%;height:100%;background:#000;color:#fff;overflow-x:
 [data-testing-host]{min-height:100vh;min-height:100dvh}
 .loop-nav{position:relative;z-index:200;font-family:Arial,Helvetica,sans-serif}
 .archive-media-selector .ticker{display:none}
+.testing-music{position:fixed;inset:0;z-index:150;overflow-y:auto;overflow-x:hidden;overscroll-behavior:contain;touch-action:pan-y pinch-zoom;padding:20px 15px max(20px,env(safe-area-inset-bottom));background:transparent}
+.testing-music[hidden]{display:none!important}
+.testing-music[data-fuct-radio]{background:transparent}
+.testing-music .radio-page-wrapper{margin:0;min-height:0}
+.testing-music .radio-item-wrapper{width:100%;margin:0;padding:0}
+.testing-music .radio-page-col{background:#fff}
+.testing-music .radio-page-col:has(.radio-item-cta[aria-pressed="true"]) .radio-playback-buttons,
+.testing-music .radio-page-col:has(.radio-item-cta[aria-pressed="true"]) .radio-playback-bg-wrapper{display:flex}
+.archive-media-selector[data-music-active="true"] [data-ticker-caption]{display:none}
+.testing-music .radio-status{position:static;margin-top:12px;max-width:100%}
+.music-loading{color:#000;background:#fff;font:12px Courier New,monospace}
+.music-loading:empty{display:none}
+@media(min-width:768px){.testing-music{padding-left:84px}}

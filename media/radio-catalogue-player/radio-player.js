@@ -94,7 +94,7 @@ export function createRadioController(audio, tracks, onChange = () => {}, option
   };
 }
 
-export function mountRadioCatalogue(root, { tracks, initialIndex } = {}) {
+export function mountRadioCatalogue(root, { tracks, initialIndex, showPlayer = true } = {}) {
   if (!root || root.hasAttribute('data-radio-mounted')) {
     throw new TypeError('Provide an empty, unmounted radio root.');
   }
@@ -176,12 +176,12 @@ export function mountRadioCatalogue(root, { tracks, initialIndex } = {}) {
   const audio = el('audio');
   const status = el('p', 'radio-status'); status.setAttribute('role', 'status');
   player.append(image, description, toggle, resize, progress, audio);
-  root.append(page, player, status);
+  root.append(page, showPlayer ? player : audio, status);
   let lastSelected = -1;
   let disposed = false;
   function measureTitles() {
     if (disposed) return;
-    for (const wrapper of [...cards.map(c => c.title), title]) {
+    for (const wrapper of [...cards.map(c => c.title), ...(showPlayer ? [title] : [])]) {
       const span = wrapper.firstElementChild;
       span.classList.toggle('text-animate', wrapper.clientWidth < span.scrollWidth);
     }
@@ -189,19 +189,23 @@ export function mountRadioCatalogue(root, { tracks, initialIndex } = {}) {
   function render(state) {
     if (lastSelected !== state.selected) {
       lastSelected = state.selected;
-      image.replaceChildren(artwork(state.track, 'player-image', '2vw'));
-      titleText.textContent = state.track.title;
-      const [year, month, day] = state.track.date.split('-');
-      date.textContent = `${month}-${day}-${year}`;
+      if (showPlayer) {
+        image.replaceChildren(artwork(state.track, 'player-image', '2vw'));
+        titleText.textContent = state.track.title;
+        const [year, month, day] = state.track.date.split('-');
+        date.textContent = `${month}-${day}-${year}`;
+      }
       view.requestAnimationFrame(measureTitles);
     }
-    player.classList.toggle('open', state.expanded);
-    toggleIcon.src = state.playing ? asset.pause : asset.play;
-    toggle.setAttribute('aria-label', state.playing ? 'Pause radio' : 'Play radio');
-    resize.setAttribute('aria-label', state.expanded ? 'Collapse player' : 'Expand player');
-    resize.setAttribute('aria-expanded', String(state.expanded));
-    bar.style.width = `${state.progress}%`;
-    progress.setAttribute('aria-valuenow', String(Math.round(state.progress)));
+    if (showPlayer) {
+      player.classList.toggle('open', state.expanded);
+      toggleIcon.src = state.playing ? asset.pause : asset.play;
+      toggle.setAttribute('aria-label', state.playing ? 'Pause radio' : 'Play radio');
+      resize.setAttribute('aria-label', state.expanded ? 'Collapse player' : 'Expand player');
+      resize.setAttribute('aria-expanded', String(state.expanded));
+      bar.style.width = `${state.progress}%`;
+      progress.setAttribute('aria-valuenow', String(Math.round(state.progress)));
+    }
     status.textContent = state.error;
     cards.forEach((card, i) => {
       const active = i === state.selected && state.playing;
@@ -211,19 +215,22 @@ export function mountRadioCatalogue(root, { tracks, initialIndex } = {}) {
     });
   }
   const controller = createRadioController(audio, tracks, render, { initialIndex });
-  listen(toggle, 'click', () => controller.toggle());
-  listen(resize, 'click', () => { controller.toggleExpanded(); measureTitles(); });
+  if (showPlayer) {
+    listen(toggle, 'click', () => controller.toggle());
+    listen(resize, 'click', () => { controller.toggleExpanded(); measureTitles(); });
+  }
   listen(view, 'resize', measureTitles);
   doc.fonts?.ready.then(measureTitles);
   measureTitles();
   return {
     ...controller,
+    refresh: measureTitles,
     destroy() {
       if (disposed) return;
       disposed = true;
       for (const cleanup of cleanups) cleanup();
       controller.destroy();
-      page.remove(); player.remove(); status.remove();
+      page.remove(); player.remove(); audio.remove(); status.remove();
       root.removeAttribute('data-radio-mounted');
       if (ownsScope) root.removeAttribute('data-fuct-radio');
     },
