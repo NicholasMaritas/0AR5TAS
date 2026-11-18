@@ -1,2 +1,5 @@
-.no { font-size:34px; line-height:40px; font-family: 'HelveticaNeueW01-95Blac', "Helvetica Neue CE 95 Black", "Helvetica Neue LT 95 Black", "Helvetica Neue 95 Black", "HelveticaNeue-Black", "Helvetica Neue Black", "Helvetica Neue CE 85 Heavy", "Helvetica Neue LT 85 Heavy", "Helvetica Neue 85 Heavy", "HelveticaNeue-Heavy", "Helvetica Neue Heavy", "Helvetica Neue CE 75 Bold", "Helvetica Neue LT 75 Bold", "Helvetica Neue 75 Bold", "HelveticaNeue-Bold", "Helvetica Neue Bold", "Helvetica Neue", 'HelveticaNeueW01-85Heav', Arial, "Lucida Grande", sans-serif; }
-.no a:link,.no a:visited,.no a:hover {text-decoration:none;border-bottom:none;}
+.no { display:flex; flex-direction:column; gap:0; }
+.no br { display:none; }
+.no a { display:flex; align-items:center; justify-content:center; width:24px; height:40px; text-decoration:none; border:0; }
+.no .menu-dot { display:block; width:12px; height:12px; border-radius:50%; background:#000; }
+.no a:focus-visible { outline:2px solid #000; outline-offset:3px; }

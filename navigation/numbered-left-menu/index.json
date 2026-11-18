@@ -1,5 +1,5 @@
 {
-  "name": "numbered left navigation",
+  "name": "black dot left navigation",
   "source": "https://www.comme-des-garcons.com/",
   "files": [
     "numbered-menu.html",
@@ -8,5 +8,6 @@
   ],
   "integration": "Insert HTML and load CSS. Original relative hrefs preserved; replace with project destinations when integrating. No JavaScript required.",
   "pages": "Library only; existing Pages runtime untouched.",
-  "limitations": "Original commercial font service returned403; system fallback stack preserved. Live visual comparison not performed."
+  "limitations": "No font dependency for dots. Original numbered source preserved in source-extract.json; visual browser validation not performed.",
+  "variant": "Seven black12px circular dots,40px vertical spacing; original link destinations and fixed positioning retained."
 }

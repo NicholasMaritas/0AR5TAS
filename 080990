@@ -252,3 +252,7 @@ The agent handling a task must update this file after each task to preserve cont
 - COMPLETED — 2026-11-17. Extracted seven original anchors and required typography/link CSS into navigation/numbered-left-menu/{numbered-menu.html,numbered-menu.css,index.json,source-extract.json}. Uploaded HTML and public source dependencies inspected; CSS/scripts returned200; commercial font service returned403. Original fallback font stack and relative hrefs preserved. Menu has no JavaScript dependency; background slideshow excluded.
 - Validation: Seven anchors and source styles verified. No live visual comparison; original webfont unavailable. Research/dependency evidence stored as JSON. Existing GitHub Pages runtime and test files untouched; library-only collection.
 - Pending: None for extraction and indexing; integration not requested.
+
+### Task 018 — Replace menu numbers with black dots
+- COMPLETED — 2026-11-17. Updated extracted menu HTML/CSS and index: seven12px black CSS circles,40px vertical spacing, original fixed position and hrefs retained; accessible link labels and keyboard focus outline. Original numbered reference remains in source-extract.json. No font dependency for dots.
+- Validation: Seven original destinations retained; seven labeled links and circular markers verified in generated markup/styles. Browser visual check not performed. Existing Pages runtime untouched.
