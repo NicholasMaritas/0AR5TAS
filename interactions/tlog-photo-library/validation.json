@@ -38,9 +38,66 @@
   },
   "limits": [
     "Physical touch gestures, pinch behavior and native mobile Share sheet not tested.",
-    "No full-site/header/cart recreation claim."
+    "No full-site/header/cart recreation claim.",
+    "Responsive browser check used a resized desktop window, not mobile device emulation or a physical phone."
   ],
   "deployment": {
-    "status": "pending"
+    "status": "verified",
+    "runtime_commit": "c640a23c6f1da8bd8d93a2c85beaa842726c0528",
+    "pages_workflow_id": 44350081241,
+    "pages_workflow_conclusion": "success",
+    "test_url": "https://nicholasmaritas.github.io/0AR5TAS/interactions/tlog-photo-library/",
+    "example_url": "https://nicholasmaritas.github.io/0AR5TAS/interactions/tlog-photo-library/#photo-41886163075244",
+    "main_readback": "All17 runtime commit files matched committed contents.",
+    "live_assets": [
+      {
+        "file": "index.html",
+        "bytes": 56806,
+        "matches": true,
+        "sha256": "739f5c317294fd3a491d163482bd7a5764a1092c3df4f4946caf0c126efa3be5"
+      },
+      {
+        "file": "host.css",
+        "bytes": 1248,
+        "matches": true,
+        "sha256": "1f413ce8a0ad741c285abf9dc312f243271e3ff5c531f0a8878f3cfa7a64eac2"
+      },
+      {
+        "file": "tlog.css",
+        "bytes": 20960,
+        "matches": true,
+        "sha256": "01d5dbf8e8a154b11a6f27cc3f68715ef80f42730b8ae40629b4682d8f0359dd"
+      },
+      {
+        "file": "tlog.js",
+        "bytes": 61471,
+        "matches": true,
+        "sha256": "a8fb88f5b64320d9492ed8793211fbccb86e6938485e2cc7fc337008a99fce6a"
+      },
+      {
+        "file": "root index.html",
+        "redirects_to_current_test": true
+      }
+    ]
+  },
+  "public_browser": {
+    "viewer": "Requested photo id41886163075244 loaded from deployed Pages;231 grid media buttons present.",
+    "narrow_viewport": [
+      500,
+      757
+    ],
+    "narrow_verified": [
+      "Viewer initializes with decoded requested photo and no document horizontal overflow.",
+      "Info panel toggles and shows Photo1of231 metadata.",
+      "Back returns to complete231media library grid with no document horizontal overflow."
+    ],
+    "desktop_preview_viewport": [
+      1176,
+      745
+    ],
+    "screenshot": "/workspace/shared/tlog-photo-library.jpg",
+    "observations": [
+      "Resizing an already-open desktop viewer to narrow width retained old viewer geometry until reloading. Reloaded narrow layout initialized correctly."
+    ]
   }
 }
